@@ -1,10 +1,10 @@
 === WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels ===
 Contributors: WebToffee
-Version: 4.6.2
+Version: 4.7.0
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, print invoice
 Requires at least: 3.0.1
 Tested up to: 6.6
-Stable tag: 4.6.2
+Stable tag: 4.7.0
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -277,6 +277,13 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 17. Invoice general settings
 
 == Changelog ==
+
+= 4.7.0 2024-10-23 =
+* [New] - Introduced the Beta version of UBL (XML) invoice support.
+* [Enhancement] - Extended UBL invoice support for PEPPOL, Romania, Austria, the Netherlands, Italy, and Spain
+* [Enhancement] - Updated the invoice PDF attachment to be based on the order email rather than the order status in the form wizard and invoice settings.
+* [Enhancement] - Added a dedicated button for UBL invoice printing on the order listing and details pages.
+* [Enhancement] - Introduced an option to request new features.
 
 = 4.6.2 2024-09-26 =
 * [Fix] - Compatibility issues with the WOOCS Currency Switcher.
@@ -1003,8 +1010,9 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
  
 == Upgrade Notice ==
 
-= 4.6.2 =
-* [Fix] - Compatibility issues with the WOOCS Currency Switcher.
-* [Fix] - JavaScript conflicts with the WebToffee Import/Export plugin.
-* [Fix] - Print preview issue on mobile devices.
-* [Compatibility] - Tested OK with WooCommerce v9.3.3
+= 4.7.0 =
+* [New] - Introduced the Beta version of UBL (XML) invoice support.
+* [Enhancement] - Extended UBL invoice support for PEPPOL, Romania, Austria, the Netherlands, Italy, and Spain
+* [Enhancement] - Updated the invoice PDF attachment to be based on the order email rather than the order status in the form wizard and invoice settings.
+* [Enhancement] - Added a dedicated button for UBL invoice printing on the order listing and details pages.
+* [Enhancement] - Introduced an option to request new features.

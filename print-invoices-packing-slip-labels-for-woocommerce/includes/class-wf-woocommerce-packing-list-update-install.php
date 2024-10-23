@@ -136,6 +136,40 @@ class Wf_Woocommerce_Packing_List_Update_Install
                 Wf_Woocommerce_Packing_List::update_option( 'woocommerce_wf_packinglist_preview', 'Yes' );
             }
         }
+
+        // invoice attachment for email classes
+        $invoice_module_id = Wf_Woocommerce_Packing_List::get_module_id( 'invoice' );
+        $invoice_options = get_option( $invoice_module_id );
+        if ( !empty( $invoice_options ) && is_array( $invoice_options ) && isset( $invoice_options['woocommerce_wf_generate_for_orderstatus'] ) && !empty( $invoice_options['woocommerce_wf_generate_for_orderstatus'] ) ) {    
+
+            if ( !isset( $invoice_options['wt_pdf_invoice_attachment_wc_email_classes'] ) && ( 
+                    ( isset( $invoice_options['woocommerce_wf_add_invoice_in_customer_mail'] ) && 
+                    !empty( $invoice_options['woocommerce_wf_add_invoice_in_customer_mail'] ) 
+                    ) ||
+                    ( isset( $invoice_options['woocommerce_wf_add_invoice_in_admin_mail'] ) && 
+                    !empty( $invoice_options['woocommerce_wf_add_invoice_in_admin_mail '] ) 
+                    ) 
+            )) {
+                $invoice_attachment_wc_email_classes = array();
+                if ( 'Yes' === $invoice_options['woocommerce_wf_add_invoice_in_admin_mail '] ) {
+                    $invoice_attachment_wc_email_classes[] = 'new_order';
+                    $invoice_attachment_wc_email_classes[] = 'new_renewal_order';
+                }
+
+                $order_status_wc_email_class_map_arr = Wt_Pklist_Common::wc_order_status_email_class_mapping();
+                $choosen_order_status = isset( $invoice_options['woocommerce_wf_add_invoice_in_customer_mail'] ) ? $invoice_options['woocommerce_wf_add_invoice_in_customer_mail'] : array();
+                if ( !empty( $choosen_order_status ) && is_array( $choosen_order_status ) && !empty( $order_status_wc_email_class_map_arr ) && is_array( $order_status_wc_email_class_map_arr ) ) {
+                    foreach ( $choosen_order_status as $order_status ) {
+                        if ( isset( $order_status_wc_email_class_map_arr[ $order_status ] ) ) {
+                            $invoice_attachment_wc_email_classes[] = $order_status_wc_email_class_map_arr[ $order_status ];
+                        }
+                    }
+                }
+                
+                $invoice_options['wt_pdf_invoice_attachment_wc_email_classes'] = $invoice_attachment_wc_email_classes;
+                update_option( $invoice_module_id, $invoice_options );
+            } 
+        }
     }
 }
 }

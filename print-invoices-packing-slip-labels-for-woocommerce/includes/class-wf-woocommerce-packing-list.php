@@ -116,8 +116,8 @@ class Wf_Woocommerce_Packing_List {
 			self::$base_version = WF_PKLIST_VERSION;
 		}else 
 		{
-			$this->version = '4.6.2';
-			self::$base_version = '4.6.2';
+			$this->version = '4.7.0';
+			self::$base_version = '4.7.0';
 		}
 		if(defined('WF_PKLIST_PLUGIN_NAME'))
 		{
@@ -202,6 +202,16 @@ class Wf_Woocommerce_Packing_List {
 		 * Includes review request class file
 		 */ 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/admin/class-wf-woocommerce-packing-list-admin_notices.php';
+
+		/**
+		 * Includes the Black Friday and Cyber Monday CTA banners for 2024
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-bfcm-twenty-twenty-four.php';
+
+		/**
+		 * Includes request a feature class file
+		 */ 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php';
 
 		include plugin_dir_path( dirname( __FILE__ ) )."admin/views/_form_field_generator_new.php";
 
@@ -403,7 +413,7 @@ class Wf_Woocommerce_Packing_List {
 		 * 
 		 *  @since 4.2.1
 		 */
-		$this->loader->add_filter( "wt_promotion_banner_screens", $this->plugin_admin, "wt_promotion_banner_screens" );
+		$this->loader->add_filter( "wt_bfcm_banner_screens", $this->plugin_admin, "wt_bfcm_banner_screens" );
 
 		/**
 		 * Update the version migrated values when updating the settings.
