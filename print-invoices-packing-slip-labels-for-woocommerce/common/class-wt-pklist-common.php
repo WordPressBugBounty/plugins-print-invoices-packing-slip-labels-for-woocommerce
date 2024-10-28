@@ -36,7 +36,7 @@ class Wt_Pklist_Common
     private $version;
     private static $instance = null;
     public static $modules = array(
-        'wt_wc_product'
+        'wt-wc-product'
     );
     private static $hpos_enabled = null;
     private static $default_meta_values = array();

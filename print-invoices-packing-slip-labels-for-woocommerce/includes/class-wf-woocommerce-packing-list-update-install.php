@@ -28,65 +28,65 @@ class Wf_Woocommerce_Packing_List_Update_Install
 		return self::$instance;
 	}
 
-    public function do_update_or_install()
-    {
-        $wt_pklist_ver = get_option('wfpklist_basic_version');
-        // 
-        if(false === $wt_pklist_ver || empty($wt_pklist_ver))
-        {
-            update_option('wfpklist_basic_version_prev','0');
-            self::install_tables();
-            self::wt_pklist_action_scheduler_for_saving_default_templates(1);
-            update_option('wfpklist_basic_version',WF_PKLIST_VERSION);
-            update_option( 'wt_pklist_new_install' , 1);
-        }
-        elseif( !empty($wt_pklist_ver) && version_compare(trim($wt_pklist_ver),WF_PKLIST_VERSION) < 0)
-        {   
-            update_option( 'wt_pklist_new_install' , 0);
-            update_option('wfpklist_basic_version_prev',$wt_pklist_ver);
-            self::install_tables();
-            self::wt_pklist_action_scheduler_for_saving_default_templates(0);
-            self::use_migrate_values();
-            do_action('wt_pklist_update_settings_module_wise_on_update');
-            update_option('wfpklist_basic_version',WF_PKLIST_VERSION);
-        }
-    }
+    public function do_update_or_install() {
 
-    public static function wt_pklist_action_scheduler_for_saving_default_templates($new_install)
-    {
-        $group = "wt_pklist_save_default_templates_group";
-		if(false === as_next_scheduled_action( 'wt_pklist_save_default_templates' )){
-            as_schedule_single_action( time(), 'wt_pklist_save_default_templates', array($new_install), $group );
-		}
+        $wt_pklist_save_default_templates = get_option('wt_pklist_save_default_templates');
+        $new_install = get_option( 'wt_pklist_new_install' );
+        $new_install = ( 1 === absint( $new_install )) ? 1 : 0;
+        
+        if( false === $wt_pklist_save_default_templates || empty( $wt_pklist_save_default_templates ) ) {
+
+            $group = "wt_pklist_save_default_templates_group";
+            if(false === as_next_scheduled_action( 'wt_pklist_save_default_templates' ) ){
+                as_schedule_single_action( time(), 'wt_pklist_save_default_templates', array($new_install), $group );
+            }
+            
+        }
     }
 
     public function wt_pklist_save_default_templates_func($new_install){
         $new_install = is_array($new_install) ? $new_install[0] : $new_install;
         $template_path = plugin_dir_path(WF_PKLIST_PLUGIN_FILENAME).'public/modules/';
-        
-		$saved = get_option('wt_pklist_save_default_templates');
+        $wt_pklist_common_modules   = get_option('wt_pklist_common_modules');
 
-		if(false === $saved || 0 === absint($saved)){
-			$wt_pklist_common_modules   = get_option('wt_pklist_common_modules');
-			if(!empty($wt_pklist_common_modules)){
-				$customizer_obj     = Wf_Woocommerce_Packing_List::load_modules('customizer'); 
-				foreach($wt_pklist_common_modules as $base => $base_val){
-                    if(1 === absint($base_val)){
-                        $path = '';
-                        if('invoice' === $base){
-                            if(isset($new_install) && 1 === absint($new_install)){
-                                $path = $template_path.$base.'/data/data.templates.php';
-                            }else{
-                                $path = $template_path.$base.'/data/data.templates-prev-version.php';
-                            }
+        if(!empty($wt_pklist_common_modules)){
+            $customizer_obj     = Wf_Woocommerce_Packing_List::load_modules('customizer'); 
+            foreach($wt_pklist_common_modules as $base => $base_val){
+                if(1 === absint($base_val)){
+                    $path = '';
+                    if('invoice' === $base){
+                        if(isset($new_install) && 1 === absint($new_install)){
+                            $path = $template_path.$base.'/data/data.templates.php';
+                        }else{
+                            $path = $template_path.$base.'/data/data.templates-prev-version.php';
                         }
-                        $customizer_obj->save_default_template($base,$path);
                     }
-				}
-				update_option('wt_pklist_save_default_templates',1);
-			}
-		}
+                    $customizer_obj->save_default_template($base,$path);
+                }
+            }
+            update_option('wt_pklist_save_default_templates',1);
+        }
 	}
+
+    
+    public  function do_update_things() {
+        $wt_pklist_ver = get_option('wfpklist_basic_version');
+
+        // new install
+        if ( false === $wt_pklist_ver || empty($wt_pklist_ver) ) {
+            self::install_tables();
+            update_option('wfpklist_basic_version',WF_PKLIST_VERSION);
+            update_option( 'wt_pklist_new_install' , 1);
+        } else {
+            // update
+            self::install_tables();
+            self::use_migrate_values();
+            do_action('wt_pklist_update_settings_module_wise_on_update');
+            update_option( 'wt_pklist_new_install' , 0);
+            update_option('wfpklist_basic_version_prev',$wt_pklist_ver);
+            update_option('wfpklist_basic_version',WF_PKLIST_VERSION);
+        }
+    }
 
     public static function install_tables()
 	{
@@ -126,6 +126,7 @@ class Wf_Woocommerce_Packing_List_Update_Install
 	}
 
     public function use_migrate_values() {
+        
         $show_preview = Wf_Woocommerce_Packing_List::get_option( 'woocommerce_wf_packinglist_preview' );
         if ( !empty( $show_preview )
             && ( 'enabled' === $show_preview || 'disabled' === $show_preview )
@@ -137,11 +138,12 @@ class Wf_Woocommerce_Packing_List_Update_Install
             }
         }
 
+        
         // invoice attachment for email classes
         $invoice_module_id = Wf_Woocommerce_Packing_List::get_module_id( 'invoice' );
         $invoice_options = get_option( $invoice_module_id );
         if ( !empty( $invoice_options ) && is_array( $invoice_options ) && isset( $invoice_options['woocommerce_wf_generate_for_orderstatus'] ) && !empty( $invoice_options['woocommerce_wf_generate_for_orderstatus'] ) ) {    
-
+            
             if ( !isset( $invoice_options['wt_pdf_invoice_attachment_wc_email_classes'] ) && ( 
                     ( isset( $invoice_options['woocommerce_wf_add_invoice_in_customer_mail'] ) && 
                     !empty( $invoice_options['woocommerce_wf_add_invoice_in_customer_mail'] ) 
@@ -150,6 +152,7 @@ class Wf_Woocommerce_Packing_List_Update_Install
                     !empty( $invoice_options['woocommerce_wf_add_invoice_in_admin_mail '] ) 
                     ) 
             )) {
+                
                 $invoice_attachment_wc_email_classes = array();
                 if ( 'Yes' === $invoice_options['woocommerce_wf_add_invoice_in_admin_mail '] ) {
                     $invoice_attachment_wc_email_classes[] = 'new_order';
@@ -166,9 +169,11 @@ class Wf_Woocommerce_Packing_List_Update_Install
                     }
                 }
                 
-                $invoice_options['wt_pdf_invoice_attachment_wc_email_classes'] = $invoice_attachment_wc_email_classes;
-                update_option( $invoice_module_id, $invoice_options );
-            } 
+                if ( !empty( $invoice_attachment_wc_email_classes ) ) {
+                    $invoice_options['wt_pdf_invoice_attachment_wc_email_classes'] = $invoice_attachment_wc_email_classes;  
+                    update_option( $invoice_module_id, $invoice_options );
+                }   
+            }
         }
     }
 }
