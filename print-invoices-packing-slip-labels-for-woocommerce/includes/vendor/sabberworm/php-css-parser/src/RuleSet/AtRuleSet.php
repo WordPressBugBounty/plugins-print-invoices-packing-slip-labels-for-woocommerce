@@ -62,7 +62,7 @@ class AtRuleSet extends RuleSet implements AtRule
     /**
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat = null)
     {
         $sResult = $oOutputFormat->comments($this);
         $sArgs = $this->sArgs;

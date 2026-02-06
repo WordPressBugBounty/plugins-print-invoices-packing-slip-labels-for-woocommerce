@@ -535,6 +535,25 @@ if ( !class_exists( '\\Wtpdf\\UBL\\Invoice\\Formats\\UblCiusAt' ) ) {
                                 ),
                             ),
                         ),
+                        array(
+                            'name'  => 'cac:Price',
+                            'value' => array(
+                                array(
+                                    'name'       => 'cbc:PriceAmount',
+                                    'value'      => round( $item->get_quantity() > 0 ? ( $item->get_total() / $item->get_quantity() ) : $item->get_total(), 2 ),
+                                    'attributes' => array(
+                                        'currencyID' => $this->order->get_currency(),
+                                    ),
+                                ),
+                                array(
+                                    'name'       => 'cbc:BaseQuantity',
+                                    'value'      => 1,
+                                    'attributes' => array(  
+                                        'unitCode' => apply_filters( 'wtpdf_ubl_invoice_line_quantity_unit', 'EA', $item, $this->order, $this->ubl_format_name, 'ublinvoice' ),
+                                    ),
+                                ),
+                            ),
+                        ),
                     ),
                 );
                 

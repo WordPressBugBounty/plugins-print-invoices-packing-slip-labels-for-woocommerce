@@ -239,6 +239,10 @@ class Wt_Pklist_Common
         if(self::is_wc_hpos_enabled())
         {
             $order = self::get_order($order);
+            if(is_null($order) || !is_a($order, 'WC_Order'))
+            {
+                return;
+            }
             $order->update_meta_data($meta_key, $value);
 
             /**
@@ -253,6 +257,10 @@ class Wt_Pklist_Common
         }else
         {
             $order = self::get_order($order);
+            if(is_null($order) || !is_a($order, 'WC_Order'))
+            {
+                return;
+            }
             $order_id = self::get_order_id($order);
             update_post_meta($order_id, $meta_key, $value);
             $order->save();
@@ -281,6 +289,10 @@ class Wt_Pklist_Common
         if(self::is_wc_hpos_enabled())
         {
             $order = self::get_order($order);
+            if(is_null($order) || !is_a($order, 'WC_Order'))
+            {
+                return;
+            }
             $order->delete_meta_data($meta_key);
             $order->save();
 
@@ -292,6 +304,10 @@ class Wt_Pklist_Common
 
             //fallback
             $order = wc_get_order($order_id);
+            if(is_null($order) || !is_a($order, 'WC_Order'))
+            {
+                return;
+            }
             $order->delete_meta_data($meta_key);
             $order->save();
         }
@@ -560,10 +576,14 @@ class Wt_Pklist_Common
             /**
              * Conditions
              * shipping method should not be empty
-             * shipping method count is 1 and method id is local pickup
+             * shipping method count is 1 and method id is local pickup (old: local_pickup, new: pickup_location)
              * or all shipping method are local pickup
              */
-            if( !empty( $shipping_method_id_arr ) && ( ( 1 === count( $shipping_method_id_arr ) && "local_pickup" === $shipping_method_id_arr[0] ) || ( 1 < count( $shipping_method_id_arr ) && 1 === count( array_unique( $shipping_method_id_arr ) ) && "local_pickup" === array_unique( $shipping_method_id_arr )[0] ) ) ) {
+            $local_pickup_methods = array('local_pickup', 'pickup_location');
+            if( !empty( $shipping_method_id_arr ) && ( 
+                ( 1 === count( $shipping_method_id_arr ) && in_array( $shipping_method_id_arr[0], $local_pickup_methods ) ) || 
+                ( 1 < count( $shipping_method_id_arr ) && 1 === count( array_unique( $shipping_method_id_arr ) ) && in_array( array_unique( $shipping_method_id_arr )[0], $local_pickup_methods ) ) 
+            ) ) {
                 return true;
             }
         }
@@ -740,6 +760,12 @@ class Wt_Pklist_Common
             return false;
         }
         return true;
+    }
+
+    public static function get_payment_methods() {
+        $wc_payment_gateways       = WC()->payment_gateways()->get_available_payment_gateways();
+        $available_payment_methods = wp_list_pluck($wc_payment_gateways, 'title', 'id');
+        return $available_payment_methods;
     }
 }
 }

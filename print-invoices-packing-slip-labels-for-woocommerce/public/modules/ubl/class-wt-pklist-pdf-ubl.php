@@ -87,6 +87,10 @@ class WtPdfUblGenerator {
                 if ( is_array( $value ) ) {
                     $data[ $key ] = $this->sanitize_nested_array_data( $value );
                 } else {
+                    // Only skip null values - preserve empty strings and zero values for tax elements
+                    if ( is_null( $value ) ) {
+                        continue;
+                    }
                     // Sanitize based on type of value (text, email, url, etc.)
                     if ( is_string( $value ) || is_numeric( $value ) ) {
                         $data[ $key ] = sanitize_text_field( $value ); // You can use other sanitizers depending on the type

@@ -116,8 +116,8 @@ class Wf_Woocommerce_Packing_List {
 			self::$base_version = WF_PKLIST_VERSION;
 		}else 
 		{
-			$this->version = '4.8.4';
-			self::$base_version = '4.8.4';
+			$this->version = '4.9.0';
+			self::$base_version = '4.9.0';
 		}
 		if(defined('WF_PKLIST_PLUGIN_NAME'))
 		{
@@ -206,15 +206,19 @@ class Wf_Woocommerce_Packing_List {
 		/**
 		 * Includes the Black Friday and Cyber Monday CTA banners for 2024
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-bfcm-twenty-twenty-four.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php';
 
 		/**
 		 * Includes the CTA banners for smart coupon, Pdf invoice and product import export for woocommerce
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-p-iew-cta-banner.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-pklist-cta-banner.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-smart-coupon-cta-banner.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/cross-promotion-banners/class-wbte-cross-promotion-banners.php';
+
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-mpdf-language-banner.php';
+
+		/**
+		 * Includes the GDPR CTA banner
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-gdpr-cta-banner.php';
 
 		/**
 		 * Includes request a feature class file
@@ -691,6 +695,7 @@ class Wf_Woocommerce_Packing_List {
 			'active_pdf_library'								=> 'dompdf',
 			'woocommerce_wf_generate_for_taxstatus'				=> $wt_tax,
 			'wf_additional_data_fields'							=> array(),
+			'wf_product_meta_fields'							=> array('_global_unique_id' => 'GTIN, UPC, EAN'),
 			'wt_pklist_auto_temp_clear'							=> 'No',
 			'wt_pklist_auto_temp_clear_interval'				=> '1440', //one day
 			'wt_pklist_print_button_access_for'					=> 'logged_in',

@@ -106,9 +106,9 @@ if (!$newsletter_banner_hidden) :
                             'class' => 'woocommerce_wf_enable_invoice',
                             'name' => 'woocommerce_wf_enable_invoice',
                             'value' => "Yes",
-                            'checkbox_fields' => array('Yes'=> __("Enable to print, download, and mail invoices.","print-invoices-packing-slip-labels-for-woocommerce")),
+                            'checkbox_fields' => array('Yes'=> __('Enable to print, download, and mail invoices.','print-invoices-packing-slip-labels-for-woocommerce')),
                             'label' => array(
-                                'text' => __('Enable Invoice',"print-invoices-packing-slip-labels-for-woocommerce"),
+                                'text' => __('Enable Invoice','print-invoices-packing-slip-labels-for-woocommerce'),
                                 'style' => "font-weight:bold;",
                             ),
                             'tooltip' => true,
@@ -124,21 +124,21 @@ if (!$newsletter_banner_hidden) :
                         'wt_sub_head_inv_gen_general' => array(
                             'type' => 'wt_sub_head',
                             'class' => 'wt_pklist_field_group_hd_sub',
-                            'label' => __("General",'print-invoices-packing-slip-labels-for-woocommerce'),
+                            'label' => __('General','print-invoices-packing-slip-labels-for-woocommerce'),
                             'heading_number' => 1,
                             'ref_id' => 'wt_sub_head_1'
                         ),
 
                         'woocommerce_wf_orderdate_as_invoicedate' => array(
                             'type' => 'wt_radio',
-                            'label' => __("Invoice date","print-invoices-packing-slip-labels-for-woocommerce"),
+                            'label' => __('Invoice date','print-invoices-packing-slip-labels-for-woocommerce'),
                             'id' => '',
                             'class' => 'woocommerce_wf_orderdate_as_invoicedate',
                             'name' => 'woocommerce_wf_orderdate_as_invoicedate',
                             'value' => '',
                             'radio_fields' => array(
                                     'Yes'=>__('Order date','print-invoices-packing-slip-labels-for-woocommerce'),
-                                    'No'=>__('Invoiced date','print-invoices-packing-slip-labels-for-woocommerce')
+                                    'No'=>__('Invoiced date','print-invoices-packing-slip-labels-for-woocommerce'),
                                 ),
                             'col' => 3,
                             'tooltip' => true,
@@ -148,32 +148,47 @@ if (!$newsletter_banner_hidden) :
 
                         'woocommerce_wf_generate_for_orderstatus' => array(
                             'type' => 'wt_select2_checkbox',
-                            'label' => __("Automate invoice creation","print-invoices-packing-slip-labels-for-woocommerce"),
+                            'label' => __('Automate invoice creation','print-invoices-packing-slip-labels-for-woocommerce'),
                             'name' => 'woocommerce_wf_generate_for_orderstatus',
                             'id' => 'woocommerce_wf_generate_for_orderstatus_st',
                             'value' => $order_statuses,
                             'checkbox_fields' => $order_statuses,
                             'class' => 'woocommerce_wf_generate_for_orderstatus',
                             'col' => 3,
-                            'placeholder' => __("Choose order status","print-invoices-packing-slip-labels-for-woocommerce"),
-                            'help_text' => __("Automatically creates invoices for selected order statuses.","print-invoices-packing-slip-labels-for-woocommerce"),
+                            'placeholder' => __('Choose order status','print-invoices-packing-slip-labels-for-woocommerce'),
+                            'help_text' => __('Automatically creates invoices for selected order statuses.','print-invoices-packing-slip-labels-for-woocommerce'),
                             'alignment' => 'vertical_with_label',
                             'ref_id' => 'woocommerce_wf_generate_for_orderstatus',
                         ),
 
                         'wt_pdf_invoice_attachment_wc_email_classes' => array(
                             'type' => 'wt_select2_checkbox',
-                            'label' => __("Attach invoice PDF to selected WooCommerce emails.","print-invoices-packing-slip-labels-for-woocommerce"),
+                            'label' => __('Attach invoice PDF to selected WooCommerce emails.','print-invoices-packing-slip-labels-for-woocommerce'),
                             'name' => 'wt_pdf_invoice_attachment_wc_email_classes',
                             'id' => 'wt_pdf_invoice_attachment_wc_email_classes_st',
                             'value' => $invoice_attachment_wc_email_classes,
                             'checkbox_fields' => Wt_Pklist_Common::wt_pdf_get_wc_email_classes(),
                             'class' => 'wt_pdf_invoice_attachment_wc_email_classes',
                             'col' => 3,
-                            'placeholder' => __("Choose email classes","print-invoices-packing-slip-labels-for-woocommerce"),
+                            'placeholder' => __('Choose email classes','print-invoices-packing-slip-labels-for-woocommerce'),
                             'help_text' => __("Select email types corresponding to the order statuses under Automate invoice creation option. If none are selected, invoices must be generated manually to be attached to emails.","print-invoices-packing-slip-labels-for-woocommerce"),
                             'alignment' => 'vertical_with_label',
                             'ref_id' => 'wt_pdf_invoice_attachment_wc_email_classes',
+                        ),
+
+                        'wt_pklist_restrict_invoice_attachment_for' => array(
+                            'type' => 'wt_select2_checkbox',
+                            'label' => __("Disable invoice attachment for","print-invoices-packing-slip-labels-for-woocommerce"),
+                            'name' => 'wt_pklist_restrict_invoice_attachment_for',
+                            'id' => 'wt_pklist_restrict_invoice_attachment_for',
+                            'value' => '',
+                            'checkbox_fields' => Wt_Pklist_Common::get_payment_methods(),
+                            'class' => 'wt_pklist_restrict_invoice_attachment_for',
+                            'col' => 3,
+                            'placeholder' => __('Choose payment methods','print-invoices-packing-slip-labels-for-woocommerce'),
+                            'help_text' => __('Select payment methods corresponding to the order statuses under the Automate invoice creation option for which the invoice attachment should be restricted. If none are selected, the invoice will be attached for all payment methods.','print-invoices-packing-slip-labels-for-woocommerce'),
+                            'alignment' => 'vertical_with_label',
+                            'ref_id' => 'wt_pklist_restrict_invoice_attachment_for',
                         ),
 
                         'wf_woocommerce_invoice_show_print_button' => array(
@@ -234,6 +249,15 @@ if (!$newsletter_banner_hidden) :
                             'module_base' => $this->module_base,
                             'ref_id' => 'wt_additional_fields_invoice',
                             'help_text' => __("Select/add order meta to display additional information related to the order on the invoice.","print-invoices-packing-slip-labels-for-woocommerce"),
+                        ),
+
+                        'wf_invoice_product_meta_fields' => array(
+                            'type'=>"wt_product_meta_fields",
+                            'label'=>__("Product metadata", 'print-invoices-packing-slip-labels-for-woocommerce'),
+                            'name'=>'wf_'.$this->module_base.'_product_meta',
+                            'module_base' => $this->module_base,
+                            'ref_id' => 'wt_product_meta_fields_invoice',
+                            'help_text' => __("Select/add product meta to display additional information related to the product on the invoice.","print-invoices-packing-slip-labels-for-woocommerce"),
                         ),
 
                         'woocommerce_wf_packinglist_logo' => array(

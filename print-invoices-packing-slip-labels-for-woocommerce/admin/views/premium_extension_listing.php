@@ -370,6 +370,19 @@ $premium_ext_lists = array(
                     __("Granular consent based on cookie categories","print-invoices-packing-slip-labels-for-woocommerce"),              
                 ),    
             ),
+            'accssibility_plus' => array(
+                'file_path' => 'accessibility-plus-pro/accessibility-plus-pro.php',
+                'logo' => $wf_admin_img_path_os.'/accessibility-plus.png',
+                'title' => __('Accessibility Tool Kit: WP Accessibility for WCAG, Section 508, ADA, EAA Compliance', 'print-invoices-packing-slip-labels-for-woocommerce'),
+                'page_link' => 'https://www.webyes.com/',
+                'features_list' => array(
+                    __("Build an accessible WordPress site that works for everyone","print-invoices-packing-slip-labels-for-woocommerce"),
+                    __("Scan for accessibility issues","print-invoices-packing-slip-labels-for-woocommerce"),
+                    __("Get fix recommendations","print-invoices-packing-slip-labels-for-woocommerce"),
+                    __("Ensure WCAG compliance","print-invoices-packing-slip-labels-for-woocommerce"),
+                    __("Inclusive web design made simple","print-invoices-packing-slip-labels-for-woocommerce"),
+                ),
+            ),
         ),
     ),
 );

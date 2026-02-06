@@ -30,11 +30,12 @@ function wt_pklist_gen_customize_form_field_sub($arg)
 	}
 	$width=isset($arg['width']) ? 'width:'.$arg['width'].'; ' : '';
 	$float=isset($arg['float']) ? 'float:'.$arg['float'].'; ' : '';
+	$frmgrp_class=isset($arg['frmgrp_class']) ? ' '.$arg['frmgrp_class'] : '';
 
 	$elm_props=$css_prop.$trgt_elm.$preview_elm.$unit.$default_data.$refresh_html;
 	$frmgrp_style_props=$width.$float;
 	?>
-	<div class="wf_side_panel_frmgrp" style="<?php echo esc_attr($frmgrp_style_props);?>">
+	<div class="wf_side_panel_frmgrp<?php echo esc_attr($frmgrp_class);?>" style="<?php echo esc_attr($frmgrp_style_props);?>">
 		<label><?php echo esc_html($label);?></label>
 	<?php
 	if("text" === $field_type)
@@ -46,6 +47,7 @@ function wt_pklist_gen_customize_form_field_sub($arg)
 	{
 		$select_options=isset($arg['select_options']) ? $arg['select_options'] : array();
 		$disabled_options = isset($arg['disabled_options']) ? $arg['disabled_options'] : array();
+		$default_value = isset($arg['default_data']) ? $arg['default_data'] : '';
 		?>
 		<select class="wf_sidepanel_sele <?php echo esc_attr($event_class);?>" <?php echo wp_kses_post($elm_props);?> >
 			<?php
@@ -56,8 +58,9 @@ function wt_pklist_gen_customize_form_field_sub($arg)
 				}else{
 					$disabled_attr = ''; 
 				}
+				$selected_attr = ($select_optionK === $default_value) ? 'selected' : '';
 				?>
-				<option value="<?php echo esc_attr($select_optionK);?>" <?php echo esc_attr($disabled_attr); ?>><?php echo wp_kses_post($select_optionV);?></option>
+				<option value="<?php echo esc_attr($select_optionK);?>" <?php echo esc_attr($disabled_attr); ?> <?php echo esc_attr($selected_attr); ?>><?php echo wp_kses_post($select_optionV);?></option>
 				<?php
 			}
 			?>
@@ -234,9 +237,35 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'event_class'=>'wf_cst_click',
 			),
 		);
-	}elseif("invoice_date" === $type || "order_date" === $type || "dispatch_date" === $type || "proforma_invoice_date" === $type || "creditnote_date" === $type)
+	}elseif("due_date" === $type || "invoice_date" === $type || "order_date" === $type || "dispatch_date" === $type || "proforma_invoice_date" === $type || "creditnote_date" === $type)
 	{
-		$fields=array(
+		if("due_date" === $type){
+			$fields = array(	
+				array(
+					'label'=>__('Due Date Period','print-invoices-packing-slip-labels-for-woocommerce'),
+					'type'=>'select',
+					'select_options'=>array(
+						'7_days'=>__('7 days','print-invoices-packing-slip-labels-for-woocommerce'),
+						'15_days'=>__('15 days','print-invoices-packing-slip-labels-for-woocommerce'),
+						'30_days'=>__('30 days','print-invoices-packing-slip-labels-for-woocommerce'),
+						'custom_days'=>__('Custom (enter manually)','print-invoices-packing-slip-labels-for-woocommerce'),
+					),
+					'css_prop'=>'attr-data-due-date-period',
+					'trgt_elm'=>'due_date',
+					'event_class'=>'wf_due_date_period_sele wf_cst_change',
+					'default_data'=>'30_days',
+				),
+				array(
+					'label'=>__('Custom Days','print-invoices-packing-slip-labels-for-woocommerce'),
+					'type'=>'text',
+					'css_prop'=>'attr-data-due-date-custom-days',
+					'trgt_elm'=>'due_date',
+					'event_class'=>'wf_due_date_custom_days_input wf_cst_keyup',
+					'frmgrp_class'=>'wf_due_date_custom_days_wrapper',
+				),
+			);
+		}
+		$fields = array_merge($fields, array(
 			array(
 				'label'=>__('Text','print-invoices-packing-slip-labels-for-woocommerce'),
 				'css_prop'=>'html',
@@ -285,7 +314,7 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'trgt_elm'=>$type,
 				'event_class'=>'wf_cst_click',
 			),
-		);
+		));
 	}elseif("from_address" === $type || "billing_address" === $type || "shipping_address" === $type || "return_address" === $type)
 	{
 		$fields=array(
@@ -459,6 +488,29 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'select_options'=>Wf_Woocommerce_Packing_List_Customizer::get_customizer_presets('text-align'),
 				'css_prop'=>'text-align',
 				'trgt_elm'=>'product_table_head_product',
+				'event_class'=>'wf_cst_change',
+				'width'=>'44%',
+				'float'=>'right',
+			),
+			array(
+				'label'=>'&nbsp;',
+				'type'=>'checkbox',
+				'trgt_elm'=>'product_table_head_gtin',
+				'event_class'=>'wf_cst_toggler',
+				'width'=>'10%',
+			),
+			array(
+				'label'=>__('GTIN label','print-invoices-packing-slip-labels-for-woocommerce'),
+				'css_prop'=>'html',
+				'trgt_elm'=>'product_table_head_gtin',
+				'width'=>'44%',
+			),
+			array(
+				'label'=>__('GTIN text align','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'select',
+				'select_options'=>Wf_Woocommerce_Packing_List_Customizer::get_customizer_presets('text-align'),
+				'css_prop'=>'text-align',
+				'trgt_elm'=>'product_table_head_gtin',
 				'event_class'=>'wf_cst_change',
 				'width'=>'44%',
 				'float'=>'right',

@@ -4,6 +4,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <div class="wf-tab-content" data-id="<?php echo esc_attr($target_id);?>">
+    <div class="wf-tab-content-inner">
         <form method="post" class="wf_settings_form">
         <input type="hidden" value="<?php echo esc_attr($this->module_base); ?>" class="wf_settings_base" />
         <input type="hidden" value="wf_save_settings" class="wf_settings_action" />
@@ -85,5 +86,70 @@ if (!defined('ABSPATH')) {
             //settings form fields for module
             do_action('wf_pklist_document_settings_form');?>  
     </form>
+    <?php
+        if(false === $pro_installed){
+            $sidebar_pro_link = 'https://www.webtoffee.com/product/woocommerce-shipping-labels-delivery-notes/?utm_source=free_plugin_sidebar&utm_medium=pdf_basic&utm_campaign=Shipping_Label&utm_content='.WF_PKLIST_VERSION;
+            $dl_pro_feature_list = array(
+                __("Multiple templates to personalize the label","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Add a print label button to the order email","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Show different taxes in separate columns","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Add order & product meta fields","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Add product attributes","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Show variation data for variable products","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Sort order items in the product table","print-invoices-packing-slip-labels-for-woocommerce"),
+                __("Generate shipping labels and delivery notes","print-invoices-packing-slip-labels-for-woocommerce"),
+            );
+        ?>
+        <div style="position:relative;width:30%;float:left;">
+            <div class="wt_pro_addon_tile_doc" style="<?php echo is_rtl() ? 'left:0;' : 'right:0;'; ?>">
+                <div class="wt_pro_addon_widget_doc">
+                <?php
+                    /**
+                     * @since 4.7.0 - Add offer for Black Friday Cyber Monday 2024
+                     */
+                    if( Wt_Pklist_Common::is_bfcm_season() ) {
+                       ?>
+                <div class="bfcm_doc_settings">
+                    <img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'admin/modules/banner/assets/images/bfcm-doc-settings-coupon.svg'); ?>">
+                </div>
+                       <?php
+                    }
+                ?>
+                    <div class="wt_pro_addon_widget_wrapper_doc">
+                        <p><?php esc_html_e('Get advanced features for your','print-invoices-packing-slip-labels-for-woocommerce'); ?></p>
+                        <div class="wt_pro_addon_widget_wrapper_doc_logo_title">
+                            <div class="wt_pro_addon_widget_wrapper_doc_logo_title_col_1">
+                                <img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'admin/images/wt_sdd_logo.png'); ?>">
+                            </div>
+                            <div class="wt_pro_addon_widget_wrapper_doc_logo_title_col_2">
+                                <h4><?php echo esc_html__("Shipping labels, Dispatch labels and Delivery notes","print-invoices-packing-slip-labels-for-woocommerce"); ?></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wt_pro_addon_features_list_doc">
+                        <ul>
+                            <?php
+                                foreach($dl_pro_feature_list as $p_feature){
+                                    ?>
+                                    <li><?php echo esc_html($p_feature); ?></li>
+                                    <?php
+                                }
+                            ?>
+                        </ul>
+                    </div>
+                    <div class="wt_pro_show_more_less_doc">
+                        <a class="wt_pro_addon_show_more_doc"><p><?php echo esc_html__("Show More","print-invoices-packing-slip-labels-for-woocommerce"); ?></p></a>
+                        <a class="wt_pro_addon_show_less_doc"><p><?php echo esc_html__("Show Less","print-invoices-packing-slip-labels-for-woocommerce"); ?></p></a>
+                    </div>
+                    <a class="wt_pro_addon_premium_link_div_doc" href="<?php echo esc_url($sidebar_pro_link); ?>" target="_blank">
+                        <?php esc_html_e("View add-on","print-invoices-packing-slip-labels-for-woocommerce"); ?> <span class="dashicons dashicons-arrow-right-alt"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php
+        }
+        ?>
+    </div>
 </div>
 <?php do_action('wf_pklist_document_out_settings_form');?>

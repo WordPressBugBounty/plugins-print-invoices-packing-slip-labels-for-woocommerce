@@ -21,18 +21,6 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
             $this->ubl_order = $order;
             $this->elements = array(
 
-                // BT-24: Specification identifier or Customization identifier.
-                'specification' => array(
-                    'enabled' => true,
-                    'value_arr' => $this->get_formatted_specification(),
-                ),
-
-                // BT-23: Profile identifier.
-                'profile_identifier' => array(
-                    'enabled' => true,
-                    'value_arr' => $this->get_formatted_profile_identifier()
-                ),
-
                 // BT-1: Invoice number.
                 'invoice_number' => array(
                     'enabled' => true,
@@ -159,7 +147,7 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
                     'enabled' => true,
                     'value_arr' => $this->get_formatted_invoice_lines(),
                 ),
-            );
+            );  
         }
         
         /**
@@ -208,67 +196,6 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
          */
         public function get_formatted_elements() {
             return apply_filters( 'wtpdf_ubl_format_elements', $this->elements, $this->ubl_order, $this->ubl_format_name, 'ublinvoice' );
-        }
-        
-        /**
-         * Retrieves the specification string for the UBL PEPPOL format.
-         *
-         * This method returns a string that specifies the compliance and billing
-         * format for UBL PEPPOL invoices.
-         *
-         * @return string The specification string for UBL PEPPOL format.
-         */
-        public function get_specification(): string {
-            return "urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0";
-        }
-
-        /**
-         * Retrieves the formatted specification for the UBL PEPPOL invoice.
-         *
-         * This method returns an associative array containing the name and value
-         * of the UBL PEPPOL invoice specification. The 'name' key is set to 
-         * 'cbc:CustomizationID', which is the XML element name for the specification
-         * identifier in UBL. The 'value' key is set to the result of the 
-         * get_specification() method, which provides the actual specification string.
-         *
-         * @return array An associative array with 'name' and 'value' keys representing
-         *               the formatted specification for UBL PEPPOL invoices.
-         */
-        public function get_formatted_specification(): array {
-            return array(
-                'name' => 'cbc:CustomizationID',
-                'value' => $this->get_specification(),
-            );
-        }
-
-        /**
-         * Retrieves the formatted specification for the UBL Peppol invoice.
-         *
-         * This method returns an associative array containing the name and value
-         * of the UBL Peppol invoice specification. The 'name' key is set to 
-         * 'cbc:CustomizationID', and the 'value' key is set to the result of 
-         * the get_specification() method.
-         *
-         * @return array An associative array with 'name' and 'value' keys.
-         */
-        public function get_formatted_profile_identifier(): array {
-            return array(
-                'name' => 'cbc:ProfileID',
-                'value' => $this->get_profile_identifier(),
-            );
-        }
-
-        /**
-         * Retrieves the profile identifier for the UBL PEPPOL invoice.
-         *
-         * This method returns a string that represents the profile identifier
-         * used in UBL PEPPOL invoices. The profile identifier specifies the
-         * business process and transaction for which the invoice is intended.
-         *
-         * @return string The profile identifier for UBL PEPPOL invoices.
-         */
-        public function get_profile_identifier(): string {
-            return "urn:fdc:peppol.eu:2017:poacc:billing:01:1.0";
         }
 
         /**
@@ -380,7 +307,7 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
          */
         public function get_formatted_tax_subtotal_details() {
             $formatted_tax_array = array_map( function( $item ) {
-                return array(
+                $tax_arr = array(
                     'enabled' => true,
                     'name'  => 'cac:TaxSubtotal',
                     'value' => array(
@@ -393,7 +320,7 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
                         ),
                         array(
                             'name'       => 'cbc:TaxAmount',
-                            'value'      => round( $item['total_tax'], 2 ),
+                            'value'      => !empty($item['total_tax']) ? round( $item['total_tax'], 2 ) : 0,
                             'attributes' => array(
                                 'currencyID' => $this->ubl_order->get_currency(),
                             ),
@@ -426,21 +353,40 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
                         ),
                     ),
                 );
+                return $tax_arr;
             }, $this->get_current_wc_order_tax_rates( $this->ubl_order ) );
 
             $formatted_tax_array = array_values( $formatted_tax_array );
+            
+            // Ensure TaxAmount always has a valid numeric value (required by UBL schema)
+            $total_tax = round( $this->ubl_order->get_total_tax(), 2 );
+            if ( ! is_numeric( $total_tax ) ) {
+                $total_tax = 0;
+            }
+            
+            // Build TaxTotal value array - TaxAmount is required
+            $taxTotalValue = array(
+                array(
+                    'name'       => 'cbc:TaxAmount',
+                    'value'      => $total_tax,
+                    'attributes' => array(
+                        'currencyID' => $this->ubl_order->get_currency(),
+                    ),
+                ),
+            );
+            
+            // Add tax subtotals if they exist - include even if empty to allow zero tax amounts
+            if ( ! empty( $formatted_tax_array ) && is_array( $formatted_tax_array ) ) {
+                foreach ( $formatted_tax_array as $tax_subtotal ) {
+                    if ( isset( $tax_subtotal['value'] ) ) {
+                        $taxTotalValue[] = $tax_subtotal;
+                    }
+                }
+            }
+            
             $tax_total_arr = array(
                 'name'  => 'cac:TaxTotal',
-                'value' => array(
-                    array(
-                        'name'       => 'cbc:TaxAmount',
-                        'value'      => round( $this->ubl_order->get_total_tax(), 2 ),
-                        'attributes' => array(
-                            'currencyID' => $this->ubl_order->get_currency(),
-                        ),
-                    ),
-                    $formatted_tax_array,
-                ),
+                'value' => $taxTotalValue,
             );
             return $tax_total_arr;
         }
@@ -577,6 +523,28 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
                     );
                 }
 
+                // Build TaxTotal value array - ensure TaxAmount is always present
+                $item_total_tax = round( $item->get_total_tax(), 2 );
+                $taxTotalValue = array(
+                    array(
+                        'name'       => 'cbc:TaxAmount',
+                        'value'      => $item_total_tax,
+                        'attributes' => array(
+                            'currencyID' => $this->ubl_order->get_currency(),
+                        ),
+                    ),
+                );
+                
+                // Only add tax subtotals if they exist - include even if empty to allow zero tax amounts
+                if ( ! empty( $taxSubtotal ) && is_array( $taxSubtotal ) ) {
+                    // Filter out disabled tax subtotals and ensure they have valid structure
+                    foreach ( $taxSubtotal as $subtotal ) {
+                        if ( isset( $subtotal['value'] ) ) {
+                            $taxTotalValue[] = $subtotal;
+                        }
+                    }
+                }
+
                 $invoiceLine = array(
                     'enabled' => false,
                     'name'  => 'cac:InvoiceLine',
@@ -600,6 +568,10 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
                             ),
                         ),
                         array(
+                            'name'  => 'cac:TaxTotal',
+                            'value' => $taxTotalValue,
+                        ),
+                        array(
                             'name'  => 'cac:Item',
                             'value' => array(
                                 array(
@@ -609,16 +581,22 @@ if ( !class_exists( '\\Wtpdf\\Ubl\\Invoice\\Formats\\UblPeppol' ) ) {
                             ),
                         ),
                         array(
-                            'name'  => 'cac:TaxTotal',
+                            'name'  => 'cac:Price',
                             'value' => array(
                                 array(
-                                    'name'       => 'cbc:TaxAmount',
-                                    'value'      => round( $item->get_total_tax(), 2),
+                                    'name'       => 'cbc:PriceAmount',
+                                    'value'      => round( $item->get_quantity() > 0 ? ( $item->get_total() / $item->get_quantity() ) : $item->get_total(), 2 ),
                                     'attributes' => array(
                                         'currencyID' => $this->ubl_order->get_currency(),
                                     ),
                                 ),
-                                $taxSubtotal,
+                                array(
+                                    'name'       => 'cbc:BaseQuantity',
+                                    'value'      => 1,
+                                    'attributes' => array(
+                                        'unitCode' => apply_filters( 'wtpdf_ubl_invoice_line_quantity_unit', 'EA', $item, $this->ubl_order, $this->ubl_format_name, 'ublinvoice' ),
+                                    ),
+                                ),
                             ),
                         ),
                         

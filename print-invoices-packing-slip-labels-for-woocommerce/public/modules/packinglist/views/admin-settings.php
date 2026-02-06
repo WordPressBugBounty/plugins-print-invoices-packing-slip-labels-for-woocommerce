@@ -3,9 +3,16 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-$tab_items=array(
-    "general"=>__("General", 'print-invoices-packing-slip-labels-for-woocommerce')
+$tab_items = array(
+    'general'      => __( 'General', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+    'customize_pro' => sprintf(
+        '%s <img src="%s" alt="%s" style="padding: 3px !important; width: 18px; height: 18px; margin-left: 4px;">',
+        __( 'Customize', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+        esc_url( WF_PKLIST_PLUGIN_URL . 'assets/images/Crown.png' ),
+        esc_attr__( 'Crown', 'print-invoices-packing-slip-labels-for-woocommerce' )
+    ),
 );
+
 $tab_items = apply_filters('wt_pklist_add_additional_tab_item_into_module',$tab_items,$this->module_base,$this->module_id);
 
 $pro_installed = true;
@@ -45,18 +52,12 @@ $pro_installed = false;
     </div>
     <div class="nav-tab-wrapper wp-clearfix wf-tab-head">
     	<?php Wf_Woocommerce_Packing_List::generate_settings_tabhead($tab_items, 'module'); ?>
-        <?php 
-            if(!is_plugin_active($pro_invoice_path)){
-                echo '<div class="wt_customizer_promotion_popup_btn wt_customizer_promotion_tab">
-                <div style="display:flex;">'. esc_html__( 'Customize', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '<img src="'. esc_url(WF_PKLIST_PLUGIN_URL.'admin/images/promote_crown.png') .'" style="width: 12px;height: 12px;background: #FFA800;padding: 5px;margin-left: 4px;border-radius: 25px;"></div>
-                </div>';
-            }
-        ?>
+
     </div>
     <div class="wf-tab-container">
-    	<?php
+    	<?php 
     		foreach($tab_items as $target_id => $tab_item){
-    			$settings_view=plugin_dir_path( __FILE__ ).$target_id.'.php';
+    			$settings_view=plugin_dir_path( __FILE__ ).$target_id.'.php'; 
                 if(file_exists($settings_view))
                 {
                     include $settings_view;

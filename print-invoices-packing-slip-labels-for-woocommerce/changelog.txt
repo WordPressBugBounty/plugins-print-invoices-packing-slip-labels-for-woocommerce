@@ -1,13 +1,49 @@
 == Changelog ==
 
+= 4.8.9 2025-12-02 =
+* [Add] – Added an option to restrict invoices attachments based on payment method.
+* [Fix] - Fixed PHP warning: Attempt to read property "post_type" on null.
+* [Tweak] - Default the invoice email attachment status to “Completed” in the setup wizard.
+* [Compatibility] - WordPress 6.9
+
+= 4.8.8 2025-11-20 =
+* [Fix] - Fixed UBL validation issues.
+* [Fix] - Fixed tax rounding discrepancy in invoice tax column.
+* [Fix] - Fixed the cropped bottom section of the dispatch label in the Customizer tab.
+* [Tweak] - Updated the Black Friday CTA banner link.
+
+= 4.8.7 2025-11-14 =
+* [Add] – Added customizer tab to preview packing slip, dispatch label and delivery note documents.
+* [Fix] - Fixed division by zero error in UBL invoice for free orders.
+* [Fix] - Cross-promotion banners conflicting with banners from other plugins.
+* [Fix] - Fixed Sabberworm CSS parser error.
+* [Tweak] Restrict script loading on the frontend when the print button is disabled.
+* [Compatibility] - Tested OK with WooCommerce 10.3.5
+* [Compatibility] – Tested OK with WordPress 6.8.3
+
+= 4.8.6 2025-10-27 =
+* [Compatibility] - Tested OK with WooCommerce 10.3.3
+
+= 4.8.5 2025-10-22 =
+* [Add] – Compatibility with Woo Product Add-Ons by WooCommerce.
+* [Add] – Option to include product metadata in invoice settings.
+* [Fix] – Extra product options not displaying correctly.
+* [Compatibility] – Tested OK with WooCommerce 10.2.2
+
+= 4.8.4 2025-09-24 =
+* [Add] - Compatibility with WPML Multilingual & Multicurrency for WooCommerce.
+* [Add]: Show popup to notify users when skipping the setup wizard.
+* [Fix] - Invoice PDF rendering issue when using Mpdf.
+* [Tweak]: Prevent loading assets on the frontend when the print invoice button is disabled.
+
 = 4.8.3 2025-09-04 =
-* [Fix]: Print invoice button not working in order listing and order email.
+* [Fix] - Print invoice button not working in order listing and order email.
 
 = 4.8.2 2025-08-29 =
-* [Fix]: Fixed error message “Invalid access key and mail ID” when attempting to print or download documents.
+* [Fix] - Fixed error message “Invalid access key and mail ID” when attempting to print or download documents.
 
 = 4.8.1 2025-08-28 =
-* [Add]: Automatically installs and activates the Mpdf plugin when the user clicks on the Mpdf plugin link.
+* [Add] - Automatically installs and activates the Mpdf plugin when the user clicks on the Mpdf plugin link.
 * [Compatibility] – PCP check
 * [Compatibility] – Tested OK with WooCommerce 10.1.2
 

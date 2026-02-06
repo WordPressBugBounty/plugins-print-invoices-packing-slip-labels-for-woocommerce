@@ -486,6 +486,11 @@ var pklist_customize = {};
 							pklist_customize.readHTML();
 						}
 
+						/* Reset fields to default values when loading a new template */
+						if (0 === pklist_customize.template_id || "0" === pklist_customize.template_id) {
+							pklist_customize.resetFieldsToDefault();
+						}
+
 						// move to the customizer property when hovering the respective element
 						$(".wfte_template_element").hover(function () {
 							var req_elem = $(this);
@@ -680,6 +685,12 @@ var pklist_customize = {};
 								vl = tgt_elm.attr(prop);
 								if (typeof vl !== 'undefined') {
 									elm.val(vl);
+								} else {
+									/* Use default value if attribute is not set */
+									var default_val = elm.attr('data-default');
+									if (typeof default_val !== 'undefined') {
+										elm.val(default_val);
+									}
 								}
 							} else {
 								vl = tgt_elm.css(prop);
@@ -726,6 +737,18 @@ var pklist_customize = {};
 			if (pklist_customize.open_first_panel) {
 				jQuery('.wf_side_panel .wf_side_panel_hd:eq(0)').trigger('click');
 				pklist_customize.open_first_panel = false; /* only first time */
+			}
+		},
+		resetFieldsToDefault: function () {
+			/* Reset Due Date Period select to default value (30_days) */
+			var dueDateSelect = $('.wf_due_date_period_sele');
+			if (dueDateSelect.length > 0) {
+				dueDateSelect.val('30_days');
+				/* Update the template element attribute */
+				var tgt_elm = $('.wf_customize_container').find('.wfte_due_date');
+				if (tgt_elm.length > 0) {
+					tgt_elm.attr('data-due-date-period', '30_days');
+				}
 			}
 		},
 		missingWarning: function () {

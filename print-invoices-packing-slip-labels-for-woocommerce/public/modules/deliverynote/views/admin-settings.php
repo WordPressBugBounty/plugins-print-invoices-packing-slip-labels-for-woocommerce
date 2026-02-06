@@ -5,6 +5,12 @@ if (!defined('ABSPATH')) {
 
 $tab_items=array(
     "general"=>__("General", 'print-invoices-packing-slip-labels-for-woocommerce'),
+    'customize_pro' => sprintf(
+        '%s <img src="%s" alt="%s" style="padding: 3px !important; width: 18px; height: 18px; margin-left: 4px;">',
+        __( 'Customize', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+        esc_url( WF_PKLIST_PLUGIN_URL . 'assets/images/Crown.png' ),
+        esc_attr__( 'Crown', 'print-invoices-packing-slip-labels-for-woocommerce' )
+    ),
 );
 $tab_items = apply_filters('wt_pklist_add_additional_tab_item_into_module',$tab_items,$this->module_base,$this->module_id);
 $pro_installed = true;
@@ -13,24 +19,26 @@ if(!is_plugin_active($pro_sl_path)){
 $pro_installed = false;
 ?>
 <style type="text/css">
-.spinner{<?php echo is_rtl() ? 'float:right;':'float:left;'; ?>margin-top: 25px !important;}
-.wf_settings_form .button{margin: 10px -2px;}
-.wf-tab-content{width: 70%;<?php echo is_rtl() ? 'float:right;':''; ?>}
-.wt_pro_addon_tile_doc{width: 100%;position: inherit;}
-.wt_pro_addon_features_list_doc ul li:nth-child(n + 4){display: none;}
-.wt_pro_addon_features_list_doc li{font-style: normal;font-weight: 500;font-size: 13px;line-height: 17px;color: #001A69;list-style: none;position: relative;padding-left: 49px;margin: 0 15px 15px 0;display: flex;align-items: center;}
-.wt_pro_addon_features_list_doc li:before{content: '';position: absolute;height: 15px;width: 15px;background-image: url(<?php echo esc_url($wf_admin_img_path.'/tick.svg'); ?>);background-size: contain;background-repeat: no-repeat;background-position: center;left: 15px;}
-.wt_pro_addon_widget_doc{border:1.3px solid #E8E8E8;margin-top: 1em;border-radius: 0px 7px 0px 0px;}
+    .wf-tab-container{padding: 15px !important;}
+    .spinner{<?php echo is_rtl() ? 'float:right;':'float:left;'; ?>margin-top: 25px !important;}
+    .wf_settings_form .button{margin: 10px -2px;}
+    .wf-tab-content-inner{display: flex;}
+    .wf-tab-content-inner .wf_settings_form{ width: 70%;}
+    .wf-tab-content-inner .wt_pro_plugin_promotion{ width: 28%;}
+
+    /* Promotion banner style*/
+    .wt_pro_addon_tile_doc{width: 100%;position: inherit;}
+    .wt_pro_addon_features_list_doc ul li:nth-child(n + 4){display: none;}
+    .wt_pro_addon_features_list_doc li{font-style: normal;font-weight: 500;font-size: 13px;line-height: 17px;color: #001A69;list-style: none;position: relative;padding-left: 49px;margin: 0 15px 15px 0;display: flex;align-items: center;}
+    .wt_pro_addon_features_list_doc li:before{content: '';position: absolute;height: 15px;width: 15px;background-image: url(<?php echo esc_url($wf_admin_img_path.'/tick.svg'); ?>);background-size: contain;background-repeat: no-repeat;background-position: center;left: 15px;}
+    .wt_pro_addon_widget_doc{border:1.3px solid #E8E8E8;margin-top: 1em;border-radius: 0px 7px 0px 0px;}
+    .wt_customizer_promotion_tab{ margin-left: .5em; padding: 5px 10px; font-size: 14px; line-height: 1.71428571; font-weight: 600; color: #50575e; text-decoration: none; white-space: nowrap; cursor: pointer; display: inline-block; }
+    .wrap{ background: #fff; }
+	.wp-heading-inline{margin-left: 16px !important;}
 </style>
 <?php
 }
 ?>
-<style type="text/css">
-	.wrap{
-		background: #fff;
-	}
-	.wp-heading-inline{margin-left: 16px !important;}
-</style>
 <div class="wt_wrap">
     <div class="wt_heading_section">
         <h2 class="wp-heading-inline">
@@ -59,70 +67,5 @@ $pro_installed = false;
         <?php do_action('wf_pklist_module_out_settings_form',array(
             'module_id'=>$this->module_base
         ));?>
-        <?php
-        if(false === $pro_installed){
-            $sidebar_pro_link = 'https://www.webtoffee.com/product/woocommerce-shipping-labels-delivery-notes/?utm_source=free_plugin_sidebar&utm_medium=pdf_basic&utm_campaign=Shipping_Label&utm_content='.WF_PKLIST_VERSION;
-            $deli_pro_feature_list = array(
-                __("Multiple templates to personalize the document","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Add a print delivery note button to the order email","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Sort order items in the product table","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Group products by category","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Show variation data for variable products","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Add product & order meta fields","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Add product attributes","print-invoices-packing-slip-labels-for-woocommerce"),
-                __("Generate shipping labels and dispatch labels","print-invoices-packing-slip-labels-for-woocommerce"),
-
-            );
-        ?>
-        <div style="position:relative;width:30%;float:left;">
-            <div class="wt_pro_addon_tile_doc" style="<?php echo is_rtl() ? 'left:0;' : 'right:0;'; ?>">
-                <div class="wt_pro_addon_widget_doc">
-                <?php
-                    /**
-                     * @since 4.7.0 - Add offer for Black Friday Cyber Monday 2024
-                     */
-                    if( Wt_Pklist_Common::is_bfcm_season() ) {
-                       ?>
-                <div class="bfcm_doc_settings">
-                    <img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'admin/modules/banner/assets/images/bfcm-doc-settings-coupon.svg'); ?>">
-                </div>
-                       <?php
-                    }
-                ?>
-                    <div class="wt_pro_addon_widget_wrapper_doc">
-                        <p><?php esc_html_e('Get advanced features for your','print-invoices-packing-slip-labels-for-woocommerce'); ?></p>
-                        <div class="wt_pro_addon_widget_wrapper_doc_logo_title">
-                            <div class="wt_pro_addon_widget_wrapper_doc_logo_title_col_1">
-                                <img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'admin/images/wt_sdd_logo.png'); ?>">
-                            </div>
-                            <div class="wt_pro_addon_widget_wrapper_doc_logo_title_col_2">
-                                <h4><?php echo esc_html__("Shipping labels, Dispatch labels and Delivery notes","print-invoices-packing-slip-labels-for-woocommerce"); ?></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wt_pro_addon_features_list_doc">
-                        <ul>
-                            <?php
-                                foreach($deli_pro_feature_list as $p_feature){
-                                    ?>
-                                    <li><?php echo esc_html($p_feature); ?></li>
-                                    <?php
-                                }
-                            ?>
-                        </ul>
-                    </div>
-                    <div class="wt_pro_show_more_less_doc">
-                        <a class="wt_pro_addon_show_more_doc"><p><?php echo esc_html__("Show More","print-invoices-packing-slip-labels-for-woocommerce"); ?></p></a>
-                        <a class="wt_pro_addon_show_less_doc"><p><?php echo esc_html__("Show Less","print-invoices-packing-slip-labels-for-woocommerce"); ?></p></a>
-                    </div>
-                    <a class="wt_pro_addon_premium_link_div_doc" href="<?php echo esc_url($sidebar_pro_link); ?>" target="_blank">
-                        <?php esc_html_e("View add-on","print-invoices-packing-slip-labels-for-woocommerce"); ?> <span class="dashicons dashicons-arrow-right-alt"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <?php
-        }
-        ?>
     </div>
 </div>

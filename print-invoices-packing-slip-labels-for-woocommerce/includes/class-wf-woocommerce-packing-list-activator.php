@@ -75,7 +75,22 @@ class Wf_Woocommerce_Packing_List_Activator {
 
     public static function do_update(){
         self::install_tables();
+        self::update_cross_promo_banner_version();
     }
+
+    /**
+		 *  Check and update the cross promotion banner version.
+		 */
+		public static function update_cross_promo_banner_version() {
+			$current_latest = get_option( 'wbfte_promotion_banner_version' );
+
+			if ( false === $current_latest || // User is installing the plugin first time.
+				version_compare( $current_latest, WBTE_PKLIST_CROSS_PROMO_BANNER_VERSION, '<' ) // $current_latest is lesser than the installed version in this plugin.
+			) {
+				update_option( 'wbfte_promotion_banner_version', WBTE_PKLIST_CROSS_PROMO_BANNER_VERSION );
+			}
+		}
+        
     /**
     *   @since 2.7.0
     *   Update store address from Woo   

@@ -20,12 +20,6 @@ if ( !class_exists( '\\Wtpdf\\UBL\\Invoice\\Formats\\UblCiusNl' ) ) {
             $this->order = $order;
             $this->elements = array(
                 
-                // BT-24: Specification identifier or Customization identifier.
-                'specification' => array(
-                    'enabled' => true,
-                    'value_arr' => $this->get_formatted_specification(),
-                ),
-
                 // BT-23: Profile identifier is not available for this format.
                 'profile_identifier' => array(
                     'enabled' => false,
@@ -203,31 +197,6 @@ if ( !class_exists( '\\Wtpdf\\UBL\\Invoice\\Formats\\UblCiusNl' ) ) {
          */
         public function get_formatted_elements() {
             return apply_filters( 'wtpdf_ubl_format_elements', $this->elements, $this->order, 'ublinvoice' );
-        }
-        
-        /**
-         * Retrieves the specification string for the UBL CIUS NL format.
-         *
-         * @return string The specification string indicating compliance with EN 16931:2017 and NL CIUS v1.0.
-         */
-        public function get_specification(): string {
-            return "urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0";
-        }
-
-        /**
-         * Retrieves the formatted specification for the UBL CIUS NL invoice.
-         *
-         * This method returns an associative array containing the name and value
-         * of the specification. The 'name' key is set to 'cbc:CustomizationID',
-         * and the 'value' key is set to the result of the get_specification() method.
-         *
-         * @return array An associative array with 'name' and 'value' keys.
-         */
-        public function get_formatted_specification(): array {
-            return array(
-                'name' => 'cbc:CustomizationID',
-                'value' => $this->get_specification(),
-            );
         }
 
         /**
@@ -534,6 +503,25 @@ if ( !class_exists( '\\Wtpdf\\UBL\\Invoice\\Formats\\UblCiusNl' ) ) {
                                 array(
                                     'name'  => 'cbc:Name',
                                     'value' => $item->get_name(),
+                                ),
+                            ),
+                        ),
+                        array(
+                            'name'  => 'cac:Price',
+                            'value' => array(
+                                array(
+                                    'name'       => 'cbc:PriceAmount',
+                                    'value'      => round( $item->get_quantity() > 0 ? ( $item->get_total() / $item->get_quantity() ) : $item->get_total(), 2 ),
+                                    'attributes' => array(  
+                                        'currencyID' => $this->order->get_currency(),
+                                    ),
+                                ),
+                                array(
+                                    'name'       => 'cbc:BaseQuantity',
+                                    'value'      => 1,
+                                    'attributes' => array(
+                                        'unitCode' => apply_filters( 'wtpdf_ubl_invoice_line_quantity_unit', 'EA', $item, $this->order, $this->ubl_format_name, 'ublinvoice' ),
+                                    ),
                                 ),
                             ),
                         ),

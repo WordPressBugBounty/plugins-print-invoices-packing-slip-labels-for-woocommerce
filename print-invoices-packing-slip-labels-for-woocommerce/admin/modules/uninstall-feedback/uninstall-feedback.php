@@ -33,7 +33,7 @@ class Wf_Woocommerce_Packing_List_Uninstall_Feedback
     private function get_uninstall_reasons()
     {
         $mpdf_plugin_data = Wf_Woocommerce_Packing_List_Admin::get_mpdf_plugin_data();
-        $mpdf_url = isset($mpdf_plugin_data['placeholder_arr']) ? $mpdf_plugin_data['placeholder_arr'] : '';
+        $mpdf_url = isset($mpdf_plugin_data['mpdf_action_url']) ? $mpdf_plugin_data['mpdf_action_url'] : '';
         
         $reasons = array(
             array(
@@ -175,7 +175,7 @@ class Wf_Woocommerce_Packing_List_Uninstall_Feedback
                     </div>
                 </div>
                 <div class="wfinvoice-modal-footer">
-                    <a class="button-primary" href="https://www.webtoffee.com/support/" target="_blank">
+                    <a class="button-primary" href="https://wordpress.org/support/plugin/print-invoices-packing-slip-labels-for-woocommerce/#new-topic-0" target="_blank">
                         <span class="dashicons dashicons-external" style="margin-top:3px;"></span> 
                         <?php esc_html_e('Go to support', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></a>
                     <button class="button-primary wfinvoice-model-submit"><?php esc_html_e('Submit & Deactivate', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></button>

@@ -1110,10 +1110,12 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 		if ( ( 'amount' === $total_tax_column_display_option ) || ( 'amount-rate' === $total_tax_column_display_option ) ) {
 			$product_total = (float) ( version_compare($wc_version, '2.7.0', '<') ? $order->get_item_meta( $order_item_id, '_line_total', true ) : $order->get_line_subtotal( $order_item, false, true ) );
 
-			if ( abs( $tax_rate ) > 0 ) {
+			if ( isset( $order_item['line_subtotal_tax'] ) && '' !== $order_item['line_subtotal_tax'] ) {
+				$item_tax = (float) $order_item['line_subtotal_tax'];
+			} elseif ( abs( $tax_rate ) > 0 ) {
 				$item_tax = $product_total * ( $tax_rate / 100 );
 			} else {
-				$item_tax = (float) $order_item['line_subtotal_tax'];
+				$item_tax = 0;
 			}
 
 			if ( abs( $item_tax ) > 0 ) {

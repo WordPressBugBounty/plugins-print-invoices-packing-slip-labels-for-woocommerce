@@ -540,9 +540,16 @@ if (!class_exists('\\Wtpdf\\Ubl\\Documents\\Invoice')) {
                 $actual_data = array();
 
                 foreach ($data as $key => $item) {
-                    // Check if 'enabled' is set to 1 and 'value_arr' is not empty
-                    if (isset($item['enabled']) && true === $item['enabled'] && !empty($item['value_arr'])) {
-                        $actual_data[] = $item['value_arr']; // Add 'value' to $data array
+                    // Check if 'enabled' is set to 1
+                    if (isset($item['enabled']) && true === $item['enabled']) {
+                        // Always include tax_subtotal and legal_monitory_tax_total even if empty
+                        if (in_array($key, array('tax_subtotal', 'legal_monitory_tax_total'))) {
+                            if (isset($item['value_arr'])) {
+                                $actual_data[] = $item['value_arr'];
+                            }
+                        } elseif (!empty($item['value_arr'])) {
+                            $actual_data[] = $item['value_arr']; // Add 'value' to $data array
+                        }
                     }
                 }
 
@@ -620,7 +627,18 @@ if (!class_exists('\\Wtpdf\\Ubl\\Documents\\Invoice')) {
         public function get_issue_date($order)
         {
             $date_format = apply_filters('wt_pklist_ubl_invoice_date_format', 'Y-m-d', 'issue_date', $order);
-            return !empty(\Wt_Pklist_Common::get_order_meta($order, 'wf_invoice_date', true)) ? gmdate($date_format, \Wt_Pklist_Common::get_order_meta($order, 'wf_invoice_date', true)) : '';
+            
+            $invoice_date = \Wt_Pklist_Common::get_order_meta($order, 'wf_invoice_date', true);
+            
+            if (empty($invoice_date)) {
+                $invoice_date = \Wt_Pklist_Common::get_order_meta($order, '_wf_invoice_date', true);
+            }
+            
+            if (empty($invoice_date) && is_a($order, 'WC_Order')) {
+                $invoice_date = $order->get_meta('_wf_invoice_date', true);
+            }
+            
+            return !empty($invoice_date) ? gmdate($date_format, $invoice_date) : '';
         }
 
         /**
@@ -941,7 +959,7 @@ if (!class_exists('\\Wtpdf\\Ubl\\Documents\\Invoice')) {
         {
             return array(
                 array(
-                    'name' => 'cac:party',
+                    'name' => 'cac:Party',
                     'value' => $this->get_formatted_seller_address($order, $ubl_format),
                 )
             );
@@ -991,7 +1009,7 @@ if (!class_exists('\\Wtpdf\\Ubl\\Documents\\Invoice')) {
                         ),
                         array(
                             'name' => 'cbc:CompanyID',
-                            'value' => null,
+                            'value' => '',
                         ),
                     ),
                 ),
@@ -1157,7 +1175,7 @@ if (!class_exists('\\Wtpdf\\Ubl\\Documents\\Invoice')) {
                         ),
                         array(
                             'name' => 'cbc:CompanyID',
-                            'value' => null,
+                            'value' => '',
                         ),
                     ),
                 ),
@@ -1264,8 +1282,14 @@ if (!class_exists('\\Wtpdf\\Ubl\\Documents\\Invoice')) {
          */
         public function get_percentage_from_fallback($tax_data, $rate_id)
         {
-            $percentage = (0 !== $tax_data['total_ex']) ? ($tax_data['total_tax'] / $tax_data['total_ex']) * 100 : 0;
-
+            $total_ex   = floatval($tax_data['total_ex']);
+            $total_tax  = floatval($tax_data['total_tax']);
+            if ($total_ex > 0) {
+                $percentage = ($total_tax / $total_ex) * 100;
+            } else {
+                $percentage = 0;
+            }
+            
             if (class_exists('\WC_TAX') && is_callable(array('\WC_TAX', '_get_tax_rate'))) {
                 $tax_rate = \WC_Tax::_get_tax_rate($rate_id, OBJECT);
 

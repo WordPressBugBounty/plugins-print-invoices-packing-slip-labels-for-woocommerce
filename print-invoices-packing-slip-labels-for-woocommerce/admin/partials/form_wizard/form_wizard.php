@@ -468,7 +468,12 @@ $current_invoice_number_in_db = $current_invoice_number = ($current_invoice_numb
                             <div class="wt_form_wizard_field_col_2 wt_form_wizard_field_col">
                                 <?php
                                 foreach ($wc_email_classes as $or_st => $or_st_label) {
-                                    $checked = in_array($or_st, $attach_invoice) ? 'checked' : '';
+                                    // Check 'customer_completed_order' by default.
+                                    if (empty($attach_invoice)) {
+                                        $checked = ($or_st === 'customer_completed_order') ? 'checked' : '';
+                                    } else {
+                                        $checked = in_array($or_st, $attach_invoice) ? 'checked' : '';
+                                    }
                                 ?>
                                     <div class="wt_pklist_checkbox_div">
                                         <input type="checkbox" name="wt_pdf_invoice_attachment_wc_email_classes[]" value="<?php echo esc_attr($or_st); ?>" id="<?php echo esc_attr('wt_pdf_invoice_attachment_wc_email_classes_label_' . $or_st); ?>" <?php echo esc_attr($checked); ?>>
