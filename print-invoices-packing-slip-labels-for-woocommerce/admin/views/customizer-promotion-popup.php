@@ -66,6 +66,28 @@ if ( $template_type === 'packinglist' ) {
 			),
 			'link'		=> 'https://www.webtoffee.com/product/woocommerce-shipping-labels-delivery-notes/?utm_source=free_plugin_customizesection&utm_medium=pdf_basic&utm_campaign=Shipping_Label&utm_content='.WF_PKLIST_VERSION,
 		),
+
+		'deliverynote' => array(
+			'title' 	=> sprintf( '%1$s <span> %2$s </span>', __( 'Get advanced customization options for', 'print-invoices-packing-slip-labels-for-woocommerce' ), __( 'shipping labels, dispatch labels, and delivery notes.', 'print-invoices-packing-slip-labels-for-woocommerce' ) ),
+			'features' 	=> array(
+				__('Add additional fields to shipping labels', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				__('Multiple pre-built templates','print-invoices-packing-slip-labels-for-woocommerce'),
+				__('Customize using Code Editor','print-invoices-packing-slip-labels-for-woocommerce'),
+				__('More customization options', 'print-invoices-packing-slip-labels-for-woocommerce'),
+			),
+			'link'		=> 'https://www.webtoffee.com/product/woocommerce-shipping-labels-delivery-notes/?utm_source=free_plugin_customizesection&utm_medium=pdf_basic&utm_campaign=Shipping_Label&utm_content='.WF_PKLIST_VERSION,
+		),
+
+		'dispatchlabel' => array(
+			'title' 	=> sprintf( '%1$s <span> %2$s </span>', __( 'Get advanced customization options for', 'print-invoices-packing-slip-labels-for-woocommerce' ), __( 'shipping labels, dispatch labels, and delivery notes.', 'print-invoices-packing-slip-labels-for-woocommerce' ) ),
+			'features' 	=> array(
+				__('Add additional fields to shipping labels', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				__('Multiple pre-built templates','print-invoices-packing-slip-labels-for-woocommerce'),
+				__('Customize using Code Editor','print-invoices-packing-slip-labels-for-woocommerce'),
+				__('More customization options', 'print-invoices-packing-slip-labels-for-woocommerce'),
+			),
+			'link'		=> 'https://www.webtoffee.com/product/woocommerce-shipping-labels-delivery-notes/?utm_source=free_plugin_customizesection&utm_medium=pdf_basic&utm_campaign=Shipping_Label&utm_content='.WF_PKLIST_VERSION,
+		),
 	);
 	$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_'.$template_type,false,$template_type);
 	if ( false === $is_pro_customizer && isset( $customizer_promotion_content[$template_type] ) ) {

@@ -88,18 +88,6 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
                     <span class="wfte_shipping_method_label">__[Shipping Method:]__ </span>
                     <span class="wfte_shipping_method_val">[wfte_shipping_method]</span>
                 </div>
-                <div class="wfte_tracking_number wfte_template_element" data-hover-id="tracking_number">
-                    <span class="wfte_tracking_number_label">__[Tracking number:]__</span>
-                    <span class="wfte_tracking_number_val">[wfte_tracking_number]</span>
-                </div>
-                <div class="wfte_ssn_number wfte_template_element" data-hover-id="ssn_number">
-                    <span class="wfte_ssn_number_label">__[SSN:]__ </span> 
-                    <span class="wfte_ssn_number_val">[wfte_ssn_number]</span>
-                </div>
-                <div class="wfte_vat_number wfte_template_element" data-hover-id="vat_number">
-                    <span class="wfte_vat_number_label">__[VAT:]__ </span> 
-                    <span class="wfte_vat_number_val">[wfte_vat_number]</span>
-                </div>
                 <div class="wfte_order_item_meta">[wfte_order_item_meta]</div>
                 [wfte_extra_fields]
             </div>
@@ -161,7 +149,7 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
                 <tr>
                     <th class="wfte_product_table_head_serial_no wfte_product_table_head_bg wfte_table_head_color" col-type="serial_no">__[S.No]__</th>
                     <th class="wfte_product_table_head_image wfte_product_table_head_bg wfte_table_head_color" col-type="image" data-img-width="50px">__[Image]__</th>
-                    <th class="wfte_product_table_head_sku wfte_product_table_head_bg wfte_table_head_color" col-type="-sku">__[SKU]__</th>
+                    <th class="wfte_product_table_head_sku wfte_product_table_head_bg wfte_table_head_color" col-type="sku">__[SKU]__</th>
                     <th class="wfte_product_table_head_product wfte_product_table_head_bg wfte_table_head_color" col-type="product">__[Product]__</th>
                     <th class="wfte_product_table_head_quantity wfte_product_table_head_bg wfte_table_head_color wfte_text_center" col-type="quantity">__[Quantity]__</th>
                     <th class="wfte_product_table_head_total_weight wfte_table_head_color wfte_product_table_head_bg" col-type="-total_weight">__[Total weight]__</th>

@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels ===
 Contributors: WebToffee
-Version: 4.9.0
+Version: 4.9.1
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
 Requires at least: 3.0.1
 Tested up to: 6.9
-Stable tag: 4.9.0
+Stable tag: 4.9.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -73,7 +73,7 @@ For international sales, many countries require invoices as part of their standa
 Beyond compliance, these documents enhance customer experience by adding a human touch and serving as an additional communication channel between you and your buyer.
 
 
-&#9989; Tested OK with WooCommerce 10.4.2
+&#9989; Tested OK with WooCommerce 10.5.0
 &#9989; Tested OK up to PHP 8.2
 
 
@@ -295,21 +295,21 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 4.9.0 2025-12-17 =
-* [Fix] - Fixed error 'call to a member function update_meta_data()'.
-* [Fix] - Fixed division by zero error in UBL invoice.
-* [Tweak] - Translation update.
-* [Tweak] - Add safe file locking with automatic fallback for VIP-hosted.
-* [Compatibility] - WooCommerce 10.4.2
+= 4.9.1 2026-02-10 =
+* [Fix] - Prevent fatal error array before calling in_array() in packing slip.
+* [Tweak] - Keep SKU enabled by default in invoice and packing slip documents.
+* [Add] - Added live preview for packing slip, dispatch label, and delivery note documents.
+* [Compatibility] - WooCommerce 10.5.0
+* [Compatibility] - WordPress 6.9.1
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 4.9.0 =
-* [Fix] - Fixed error 'call to a member function update_meta_data()'.
-* [Fix] - Fixed division by zero error in UBL invoice.
-* [Tweak] - Translation update.
-* [Tweak] - Add safe file locking with automatic fallback for VIP-hosted.
-* [Compatibility] - WooCommerce 10.4.2
+= 4.9.1 =
+* [Fix] - Prevent fatal error array before calling in_array() in packing slip.
+* [Tweak] - Keep SKU enabled by default in invoice and packing slip documents.
+* [Add] - Added live preview for packing slip, dispatch label, and delivery note documents.
+* [Compatibility] - WooCommerce 10.5.0
+* [Compatibility] - WordPress 6.9.1

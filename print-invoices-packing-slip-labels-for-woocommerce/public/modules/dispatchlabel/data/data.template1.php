@@ -152,14 +152,6 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
                 </div>
             </div>
             <div class="wfte_invoice_data">
-                <div class="wfte_tracking_number wfte_template_element" data-hover-id="tracking_number">
-                    <span class="wfte_tracking_number_label">__[Tracking number:]__</span>
-                    <span class="wfte_tracking_number_val">[wfte_tracking_number]</span>
-                </div>
-                <div class="wfte_ssn_number wfte_template_element" data-hover-id="ssn_number">
-                    <span class="wfte_ssn_number_label">__[SSN:]__</span>
-                    <span class="wfte_ssn_number_val">[wfte_ssn_number]</span>
-                </div>
                 [wfte_extra_fields]
             </div>
         </div>
@@ -237,6 +229,17 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
     <div class="clearfix"></div>
     <div class="wfte_row clearfix">
         <div class="wfte_col-1">
+            <div class="wfte_invoice_data">
+                <div class="wfte_customer_note wfte_template_element" data-hover-id="customer_note">
+                    <span class="wfte_customer_note_label wfte_order_fields_label">__[Customer note:]__ </span> 
+                    <span class="wfte_customer_note_val wfte_order_fields_val">[wfte_customer_note]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="wfte_row clearfix">
+        <div class="wfte_col-1">
             <div class="wfte_return_policy clearfix wfte_template_element" data-hover-id="return_policy">
                 [wfte_return_policy]
             </div>
@@ -245,8 +248,10 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
     <div class="clearfix"></div>
     <div class="wfte_row clearfix">
         <div class="wfte_col-1">
-            <div class="wfte_footer clearfix wfte_template_element" data-hover-id="footer">
-                [wfte_footer]
+            <div class="wfte_col-1 float_left">
+                <div class="wfte_footer clearfix wfte_template_element" data-hover-id="footer">
+                    [wfte_footer]
+                </div>
             </div>
         </div>
     </div>

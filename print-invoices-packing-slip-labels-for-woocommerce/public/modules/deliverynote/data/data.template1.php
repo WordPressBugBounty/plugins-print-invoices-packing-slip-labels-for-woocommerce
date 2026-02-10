@@ -94,6 +94,10 @@ table.wfte_product_table th, table.wfte_product_table td{ line-height: 1.6; padd
                     <span class="wfte_shipping_method_label">__[Shipping Method:]__ </span>
                     <span class="wfte_shipping_method_val">[wfte_shipping_method]</span>
                 </div>
+                <div class="wfte_customer_note wfte_template_element" data-hover-id="customer_note">
+                    <span class="wfte_customer_note_label wfte_order_fields_label">__[Customer note:]__ </span> 
+                    <span class="wfte_customer_note_val wfte_order_fields_val">[wfte_customer_note]</span>
+                </div>
                 <div class="wfte_order_item_meta">[wfte_order_item_meta]</div>
                 [wfte_extra_fields]
             </div>

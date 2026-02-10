@@ -13,14 +13,14 @@
  * Requires Plugins:  woocommerce
  * Plugin URI:        https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
  * Description:       Prints Packing List,Invoice,Delivery Note and Shipping Label.
- * Version:           4.9.0
+ * Version:           4.9.1
  * Author:            WebToffee
  * Author URI:        https://www.webtoffee.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       print-invoices-packing-slip-labels-for-woocommerce
  * Domain Path:       /languages
- * WC tested up to:   10.4.2
+ * WC tested up to:   10.5.0
  */
 // If this file is called directly, abort.
 if (! defined('WPINC')) {
@@ -71,7 +71,7 @@ if (!defined('WF_PKLIST_VERSION')) //check plugin file already included
     /**
      * Currently plugin version.
      */
-    define('WF_PKLIST_VERSION', '4.9.0');
+    define('WF_PKLIST_VERSION', '4.9.1');
 
     if ( ! defined( 'WBTE_PKLIST_CROSS_PROMO_BANNER_VERSION' ) ) {
         // This constant must be unique for each plugin. Update this value when updating to a new banner.
@@ -85,38 +85,39 @@ if (!defined('WF_PKLIST_VERSION')) //check plugin file already included
  *  Changelog in plugins page
  */
 
-add_action('in_plugin_update_message-print-invoices-packing-slip-labels-for-woocommerce/print-invoices-packing-slip-labels-for-woocommerce.php', 'wbte_packing_list_update_message', 10, 2);
+ if ( ! function_exists( 'wbte_packing_list_update_message' ) && ! function_exists( 'wbte_packing_list_plugin_screen_update_js' ) ) {
+    add_action('in_plugin_update_message-print-invoices-packing-slip-labels-for-woocommerce/print-invoices-packing-slip-labels-for-woocommerce.php', 'wbte_packing_list_update_message', 10, 2);
 
-function wbte_packing_list_update_message($data, $response)
-{
-    if (isset($data['upgrade_notice'])) {
-        add_action('admin_print_footer_scripts', 'wbte_packing_list_plugin_screen_update_js');
+    function wbte_packing_list_update_message($data, $response)
+    {
+        if (isset($data['upgrade_notice'])) {
+            add_action('admin_print_footer_scripts', 'wbte_packing_list_plugin_screen_update_js');
 
-        $msg = str_replace(array('<p>', '</p>'), array('<div>', '</div>'), $data['upgrade_notice']);
-        echo '<style type="text/css">
-             #print-invoices-packing-slip-labels-for-woocommerce-update .update-message p:last-child { display: none; }
-             #print-invoices-packing-slip-labels-for-woocommerce-update ul { list-style: disc; margin-left: 30px; }
-             .wf-update-message { padding-left: 30px; }
-         </style>
-         <div class="update-message wf-update-message">' . wp_kses_post(wpautop($msg)) . '</div>';
+            $msg = str_replace(array('<p>', '</p>'), array('<div>', '</div>'), $data['upgrade_notice']);
+            echo '<style type="text/css">
+                #print-invoices-packing-slip-labels-for-woocommerce-update .update-message p:last-child { display: none; }
+                #print-invoices-packing-slip-labels-for-woocommerce-update ul { list-style: disc; margin-left: 30px; }
+                .wf-update-message { padding-left: 30px; }
+            </style>
+            <div class="update-message wf-update-message">' . wp_kses_post(wpautop($msg)) . '</div>';
+        }
     }
-}
 
-function wbte_packing_list_plugin_screen_update_js()
-{
-?>
-    <script>
-        (function($) {
-            var updateDiv = $('#print-invoices-packing-slip-labels-for-woocommerce-update');
-            updateDiv.find('.wf-update-message').next('p').remove();
-            updateDiv.find('a.update-link:eq(0)').click(function() {
-                $('.wf-update-message').remove();
-            });
-        })(jQuery);
-    </script>
-    <?php
-}
-
+    function wbte_packing_list_plugin_screen_update_js()
+    {
+    ?>
+        <script>
+            (function($) {
+                var updateDiv = $('#print-invoices-packing-slip-labels-for-woocommerce-update');
+                updateDiv.find('.wf-update-message').next('p').remove();
+                updateDiv.find('a.update-link:eq(0)').click(function() {
+                    $('.wf-update-message').remove();
+                });
+            })(jQuery);
+        </script>
+        <?php
+    }
+ }
 
 /**
  * The code that runs during plugin activation.

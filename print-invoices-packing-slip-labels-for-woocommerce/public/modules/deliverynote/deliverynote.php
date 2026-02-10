@@ -27,6 +27,11 @@ class Wf_Woocommerce_Packing_List_Deliverynote
 		add_filter('wt_admin_menu', array($this, 'add_admin_pages'), 10, 1);
 		add_filter('wf_module_default_settings', array($this, 'default_settings'), 10, 2);
 
+		add_filter('wf_module_customizable_items', array($this, 'get_customizable_items'), 10, 2);
+		add_filter('wf_module_non_options_fields', array($this, 'get_non_options_fields'), 10, 2);
+		add_filter('wf_module_non_disable_fields', array($this, 'get_non_disable_fields'), 10, 2);
+		add_filter('wf_module_convert_to_design_view_html_for_' . $this->module_base, array($this, 'convert_to_design_view_html'), 10, 3);
+
 		//hook to generate template html
 		add_filter('wf_module_generate_template_html_for_' . $this->module_base, array($this, 'generate_template_html'), 10, 6);
 
@@ -41,6 +46,8 @@ class Wf_Woocommerce_Packing_List_Deliverynote
 
 		//alter product table column
 		add_filter('wf_pklist_alter_product_table_head', array($this, 'alter_product_table_head'), 10, 3);
+
+		add_filter('wt_pklist_customizer_preview_only', array($this, 'enable_preview_only_mode'), 10, 2);
 
 		//initializing customizer		
 		$this->customizer = Wf_Woocommerce_Packing_List::load_modules('customizer');
@@ -167,6 +174,74 @@ class Wf_Woocommerce_Packing_List_Deliverynote
 		return $hide_on_empty_fields;
 	}
 
+	public function enable_preview_only_mode($preview_only, $template_type)
+	{
+		if ($template_type === $this->module_base) {
+			$pro_sl_path = 'wt-woocommerce-shippinglabel-addon/wt-woocommerce-shippinglabel-addon.php';
+			if (!is_plugin_active($pro_sl_path)) {
+				return true; 
+			}
+			return false; 
+		}
+		return $preview_only;
+	}
+
+	public function get_customizable_items($settings, $base_id)
+	{
+		$is_pro_customizer = is_plugin_active('wt-woocommerce-shippinglabel-addon/wt-woocommerce-shippinglabel-addon.php');
+		if ($base_id === $this->module_id && !$is_pro_customizer) {
+			$only_pro_html = '<span class="wt_customizer_pro_text" style="color:red;"> (' . __('Pro version', 'print-invoices-packing-slip-labels-for-woocommerce') . ')</span>';
+			$settings = array(
+				'product_table' => __('Product Table', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'shipping_address' => __('Shipping Address', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'customer_note' => __('Customer note', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'footer' => __('Footer', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'ssn_number_pro_element' => __('SSN number', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'vat_number_pro_element' => __('VAT number', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'tracking_number_pro_element' => __('Tracking Number', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'signature_pro_element' => __('Signature', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'return_policy_pro_element' => __('Return policy', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'barcode_pro_element' => __('Bar code', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+			);
+		}
+		return $settings;
+	}
+
+	public function get_non_options_fields($settings, $base_id)
+	{
+		if ($base_id === $this->module_id) {
+			return array(
+				'footer',
+			);
+		}
+		return $settings;
+	}
+
+	public function get_non_disable_fields($settings, $base_id)
+	{
+		if ($base_id === $this->module_id) {
+			return array();
+		}
+		return $settings;
+	}
+
+	public function convert_to_design_view_html($find_replace, $html, $template_type)
+	{
+		$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_' . $template_type, false, $template_type);
+		if ($template_type === $this->module_base && !$is_pro_customizer) {
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_billing_address($find_replace, $template_type);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_shipping_address($find_replace, $template_type);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_default_order_fields($find_replace, $template_type, $html);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_product_table($find_replace, $template_type, $html);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_other_data($find_replace, $template_type, $html);
+			
+			// Hide pro elements when pro addon is not active
+			$find_replace['wfte_vat_number'] = 'wfte_hidden';
+			$find_replace['wfte_signature'] = 'wfte_hidden';
+		}
+		return $find_replace;
+	}
+
 	public function admin_settings_page()
 	{
 		wp_enqueue_script('wc-enhanced-select');
@@ -175,6 +250,11 @@ class Wf_Woocommerce_Packing_List_Deliverynote
 		do_action('wt_pklist_customizer_enable', $this->module_id, $this->module_base);
 		$template_type = $this->module_base;
 		include_once WF_PKLIST_PLUGIN_PATH . '/admin/views/premium_extension_listing.php';
+
+		if (!is_null($this->customizer) && true === apply_filters('wt_pklist_switch_to_classic_customizer_' . $this->module_base, true, $this->module_base)) {
+			$this->customizer->init($this->module_base);
+		}
+
 		include(plugin_dir_path(__FILE__) . 'views/admin-settings.php');
 	}
 

@@ -239,7 +239,7 @@ class Wt_Pklist_Common
         if(self::is_wc_hpos_enabled())
         {
             $order = self::get_order($order);
-            if(is_null($order) || !is_a($order, 'WC_Order'))
+            if(is_null($order) || !is_a($order, 'WC_Abstract_Order'))
             {
                 return;
             }
@@ -257,7 +257,7 @@ class Wt_Pklist_Common
         }else
         {
             $order = self::get_order($order);
-            if(is_null($order) || !is_a($order, 'WC_Order'))
+            if(is_null($order) || !is_a($order, 'WC_Abstract_Order'))
             {
                 return;
             }
@@ -289,7 +289,7 @@ class Wt_Pklist_Common
         if(self::is_wc_hpos_enabled())
         {
             $order = self::get_order($order);
-            if(is_null($order) || !is_a($order, 'WC_Order'))
+            if(is_null($order) || !is_a($order, 'WC_Abstract_Order'))
             {
                 return;
             }
@@ -304,7 +304,7 @@ class Wt_Pklist_Common
 
             //fallback
             $order = wc_get_order($order_id);
-            if(is_null($order) || !is_a($order, 'WC_Order'))
+            if(is_null($order) || !is_a($order, 'WC_Abstract_Order'))
             {
                 return;
             }

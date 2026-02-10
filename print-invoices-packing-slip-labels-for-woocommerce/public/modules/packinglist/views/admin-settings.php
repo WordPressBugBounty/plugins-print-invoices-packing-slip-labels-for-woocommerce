@@ -5,12 +5,6 @@ if (!defined('ABSPATH')) {
 
 $tab_items = array(
     'general'      => __( 'General', 'print-invoices-packing-slip-labels-for-woocommerce' ),
-    'customize_pro' => sprintf(
-        '%s <img src="%s" alt="%s" style="padding: 3px !important; width: 18px; height: 18px; margin-left: 4px;">',
-        __( 'Customize', 'print-invoices-packing-slip-labels-for-woocommerce' ),
-        esc_url( WF_PKLIST_PLUGIN_URL . 'assets/images/Crown.png' ),
-        esc_attr__( 'Crown', 'print-invoices-packing-slip-labels-for-woocommerce' )
-    ),
 );
 
 $tab_items = apply_filters('wt_pklist_add_additional_tab_item_into_module',$tab_items,$this->module_base,$this->module_id);

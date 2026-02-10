@@ -47,6 +47,7 @@ class Wf_Woocommerce_Packing_List_Migrator
 		),
 		'packinglist'=>array(
 			'woocommerce_wf_attach_image_packinglist'=>'woocommerce_wf_attach_image_packinglist',
+			'woocommerce_wf_attach_sku_packinglist'=>'woocommerce_wf_attach_sku_packinglist',
 			'woocommerce_wf_add_customer_note_in_packinglist'=>"woocommerce_wf_add_customer_note_in_packinglist",
 			'woocommerce_wf_packinglist_footer_pk'=>"woocommerce_wf_packinglist_footer_pk",
 		),
@@ -104,6 +105,7 @@ class Wf_Woocommerce_Packing_List_Migrator
 		),
 		'packinglist'=>array(
 			'woocommerce_wf_attach_image_packinglist'=>'Yes',
+			'woocommerce_wf_attach_sku_packinglist'=>'Yes',
 			'woocommerce_wf_add_customer_note_in_packinglist'=>'No',
 			'woocommerce_wf_packinglist_footer_pk'=>'No',
 			'wf_packinglist_contactno_email'=>array('contact_number','email'),

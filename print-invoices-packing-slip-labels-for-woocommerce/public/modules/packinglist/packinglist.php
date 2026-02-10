@@ -30,6 +30,15 @@ class Wf_Woocommerce_Packing_List_Packinglist
 		add_filter('wt_admin_menu', array($this, 'add_admin_pages'), 10, 1);
 
 		add_filter('wf_module_default_settings', array($this, 'default_settings'), 10, 2);
+		
+		add_filter('wf_module_customizable_items', array($this, 'get_customizable_items'), 10, 2);
+		add_filter('wf_module_non_options_fields', array($this, 'get_non_options_fields'), 10, 2);
+		add_filter('wf_module_non_disable_fields', array($this, 'get_non_disable_fields'), 10, 2);
+		
+		add_filter('wt_pklist_customizer_preview_only', array($this, 'enable_preview_only_mode'), 10, 2);
+		
+		add_filter('wf_module_convert_to_design_view_html_for_' . $this->module_base, array($this, 'convert_to_design_view_html'), 10, 3);
+		
 		//hook to generate template html
 		add_filter('wf_module_generate_template_html_for_' . $this->module_base, array($this, 'generate_template_html'), 10, 6);
 		add_action('wt_print_doc', array($this, 'print_it'), 10, 2);
@@ -107,19 +116,27 @@ class Wf_Woocommerce_Packing_List_Packinglist
 	{
 		$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_' . $this->module_base, false, $this->module_base);
 		if ($template_type === $this->module_base && !$is_pro_customizer) {
-			$is_image_enabled = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_attach_image_' . $this->module_base, $this->module_id);
-			if ("No" === $is_image_enabled) {
-				if (isset($columns_list_arr['image'])) //image column exists
-				{
-					$columns_list_arr['-image'] = $columns_list_arr['image'];
-					unset($columns_list_arr['image']);
+			$columns_config = array(
+				'image' => array('option' => 'woocommerce_wf_attach_image_', 'default' => 'Image'),
+				'sku'   => array('option' => 'woocommerce_wf_attach_sku_', 'default' => 'SKU'),
+			);
+
+			foreach ($columns_config as $column_key => $config) {
+				$is_enabled = Wf_Woocommerce_Packing_List::get_option($config['option'] . $this->module_base, $this->module_id);
+				$hidden_key = '-' . $column_key;
+				$from_key = ("No" === $is_enabled) ? $column_key : $hidden_key;
+				$to_key = ("No" === $is_enabled) ? $hidden_key : $column_key;
+
+				if (isset($columns_list_arr[$from_key])) {
+					// Rebuild array to preserve position when swapping keys
+					$new_arr = array();
+					foreach ($columns_list_arr as $k => $v) {
+						$new_arr[$k === $from_key ? $to_key : $k] = $v;
+					}
+					$columns_list_arr = $new_arr;
+				} elseif ("No" !== $is_enabled && !isset($columns_list_arr[$column_key])) {
+					$columns_list_arr[$column_key] = $config['default'];
 				}
-			} else {
-				if (!isset($columns_list_arr['image'])) //image column exists
-				{
-					$columns_list_arr['image'] = isset($columns_list_arr['-image']) ? $columns_list_arr['-image'] : 'Image';
-				}
-				unset($columns_list_arr['-image']); //if exists
 			}
 		}
 		return $columns_list_arr;
@@ -172,6 +189,69 @@ class Wf_Woocommerce_Packing_List_Packinglist
 		return $hide_on_empty_fields;
 	}
 
+	public function convert_to_design_view_html($find_replace, $html, $template_type)
+	{
+		$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_' . $template_type, false, $template_type);
+		if ($template_type === $this->module_base && !$is_pro_customizer) {
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_billing_address($find_replace, $template_type);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_shipping_address($find_replace, $template_type);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_default_order_fields($find_replace, $template_type, $html);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_product_table($find_replace, $template_type, $html);
+			$find_replace = Wf_Woocommerce_Packing_List_CustomizerLib::set_other_data($find_replace, $template_type, $html);
+		}
+		return $find_replace;
+	}
+
+	public function get_customizable_items($settings, $base_id)
+	{
+		$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_' . $this->module_base, false, $this->module_base);
+		if ($base_id === $this->module_id && !$is_pro_customizer) {
+			$only_pro_html = '<span class="wt_customizer_pro_text" style="color:red;"> (' . __('Pro version', 'print-invoices-packing-slip-labels-for-woocommerce') . ')</span>';
+			//these fields are the classname in template Eg: `company_logo` will point to `wfte_company_logo`
+			$settings = array(
+				'product_table' => __('Product Table', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'shipping_address' => __('Shipping Address', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'customer_note' => __('Customer note', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				'footer' => __('Footer', 'print-invoices-packing-slip-labels-for-woocommerce'),
+				// Working features with Pro label (fully functional)
+				'ssn_number_pro_element' => __('SSN number', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'vat_number_pro_element' => __('VAT number', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+				'tracking_number_pro_element' => __('Tracking Number', 'print-invoices-packing-slip-labels-for-woocommerce') . $only_pro_html,
+			);
+		}
+		return $settings;
+	}
+
+	public function get_non_options_fields($settings, $base_id)
+	{
+		if ($base_id === $this->module_id) {
+			return array(
+				'footer',
+			);
+		}
+		return $settings;
+	}
+
+	public function get_non_disable_fields($settings, $base_id)
+	{
+		if ($base_id === $this->module_id) {
+			return array();
+		}
+		return $settings;
+	}
+
+	public function enable_preview_only_mode($preview_only, $template_type)
+	{
+		if ($template_type === $this->module_base) {
+			$pro_invoice_path = 'wt-woocommerce-invoice-addon/wt-woocommerce-invoice-addon.php';
+			if (!is_plugin_active($pro_invoice_path)) {
+				return true; 
+			}
+			return false; 
+		}
+		return $preview_only;
+	}
+
 	public function admin_settings_page()
 	{
 		wp_enqueue_script('wc-enhanced-select');
@@ -180,6 +260,11 @@ class Wf_Woocommerce_Packing_List_Packinglist
 		do_action('wt_pklist_customizer_enable', $this->module_id, $this->module_base);
 		$template_type = $this->module_base;
 		include_once WF_PKLIST_PLUGIN_PATH . '/admin/views/premium_extension_listing.php';
+		
+		if (!is_null($this->customizer) && true === apply_filters('wt_pklist_switch_to_classic_customizer_' . $this->module_base, true, $this->module_base)) {
+			$this->customizer->init($this->module_base);
+		}
+		
 		include(plugin_dir_path(__FILE__) . 'views/admin-settings.php');
 	}
 
@@ -209,6 +294,7 @@ class Wf_Woocommerce_Packing_List_Packinglist
 		if ($base_id === $this->module_id) {
 			return array(
 				'woocommerce_wf_attach_image_packinglist' => 'Yes',
+				'woocommerce_wf_attach_sku_packinglist' => 'Yes',
 				'woocommerce_wf_add_customer_note_in_packinglist' => 'No',
 				'woocommerce_wf_packinglist_footer_pk' => 'No',
 				'woocommerce_wf_packinglist_variation_data' => 'Yes', //Add product variation data
@@ -407,7 +493,7 @@ class Wf_Woocommerce_Packing_List_Packinglist
 				$order_docs			= Wt_Pklist_Common::get_order_meta($order_id, '_created_document', true);
 				$order_docs_old		= Wt_Pklist_Common::get_order_meta($order_id, '_created_document_old', true);
 
-				if ((!empty($order_docs) && in_array($this->module_base, $order_docs)) || (!empty($order_docs_old) && in_array($this->module_base, $order_docs_old))) {
+				if ((!empty($order_docs) && is_array($order_docs) && in_array($this->module_base, $order_docs)) || (!empty($order_docs_old) && is_array($order_docs_old) && in_array($this->module_base, $order_docs_old))) {
 					$btn_action_name	= 'wt_pklist_print_document_' . $this->module_base;
 					$img_url 			= WF_PKLIST_PLUGIN_URL . 'admin/images/' . $this->module_base . '_logo.png';
 				}

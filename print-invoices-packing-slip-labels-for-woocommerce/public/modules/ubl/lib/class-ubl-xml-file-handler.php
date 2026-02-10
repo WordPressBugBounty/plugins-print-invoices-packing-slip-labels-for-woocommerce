@@ -31,6 +31,12 @@ class XmlFileHandler{
             $file_path = $upload_dir . '/'.$name.'.xml';
             $file_url = $upload_url . '/'.$name.'.xml';
            
+            // Extract directory path from file path in case $name contains subdirectories
+            $file_dir = dirname( $file_path );
+            if( !is_dir( $file_dir ) ) {
+                wp_mkdir_p( $file_dir );
+            }
+           
             // Write the XML content to the file locally
             file_put_contents($file_path, $xml_content);
             

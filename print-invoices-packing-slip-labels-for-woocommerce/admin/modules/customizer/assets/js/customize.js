@@ -733,6 +733,10 @@ var pklist_customize = {};
 
 			/* binding events */
 			this.regPanelEvents();
+
+			/* apply general settings restrictions */
+			this.applyGeneralSettingsRestrictions();
+
 			pklist_customize.pendingHtmlRead = 0;
 			if (pklist_customize.open_first_panel) {
 				jQuery('.wf_side_panel .wf_side_panel_hd:eq(0)').trigger('click');
@@ -748,6 +752,78 @@ var pklist_customize = {};
 				var tgt_elm = $('.wf_customize_container').find('.wfte_due_date');
 				if (tgt_elm.length > 0) {
 					tgt_elm.attr('data-due-date-period', '30_days');
+				}
+			}
+		},
+		applyGeneralSettingsRestrictions: function () {
+			var generalSettings = wf_woocommerce_packing_list_customizer.general_settings;
+			
+			if (typeof generalSettings === 'undefined' || !generalSettings) {
+				return;
+			}
+
+			if (typeof generalSettings.include_customer_note !== 'undefined' && generalSettings.include_customer_note === 'No') {
+				this.disableSidePanelByType('customer_note', 'customer_note');
+			}
+
+			if (typeof generalSettings.include_footer !== 'undefined' && generalSettings.include_footer === 'No') {
+				this.disableSidePanelByType('footer', 'footer');
+			}
+
+			if (typeof generalSettings.include_image !== 'undefined' && generalSettings.include_image === 'No') {
+				this.disableProductTableCheckbox('product_table_head_image', 'image');
+			}
+
+			if (typeof generalSettings.include_sku !== 'undefined' && generalSettings.include_sku === 'No') {
+				this.disableProductTableCheckbox('product_table_head_sku', 'sku');
+			}
+		},
+		disableSidePanelByType: function (panelType, settingName) {
+			var panel = $('.wf_side_panel[data-type="' + panelType + '"]');
+			if (panel.length > 0) {
+				panel.attr('data-general-toggled-off', 1);
+				
+				var toggle = panel.find('.wf_side_panel_toggle .wf_slide_switch');
+				toggle.prop('checked', false);
+				
+				var tgt_elm = $('.wf_customize_container').find('.wfte_' + panelType);
+				if (tgt_elm.length > 0) {
+					tgt_elm.addClass('wfte_hidden');
+				}
+				
+				var code_view_dom = this.getCodeViewHtmlDom();
+				var code_tgt_elm = code_view_dom.find('.wfte_' + panelType);
+				if (code_tgt_elm.length > 0) {
+					code_tgt_elm.addClass('wfte_hidden');
+					this.updateCodeViewHtml(code_view_dom);
+				}
+			}
+		},
+		disableProductTableCheckbox: function (checkboxElm, columnType) {
+			var checkbox = $('.wf_side_panel .wf_cst_toggler[data-elm="' + checkboxElm + '"]');
+			if (checkbox.length > 0) {
+				checkbox.prop('checked', false);
+				
+				var tgt_elm = $('.wf_customize_container').find('.wfte_' + checkboxElm);
+				if (tgt_elm.length > 0) {
+					var nodeName = tgt_elm.prop('nodeName').toLowerCase();
+					if ("th" === nodeName || "td" === nodeName) {
+						var ind = tgt_elm.index() + 1;
+						tgt_elm.parents('table').find('td:nth-child(' + ind + '),th:nth-child(' + ind + ')').addClass('wfte_hidden');
+					} else {
+						tgt_elm.addClass('wfte_hidden');
+					}
+				}
+				
+				var code_view_dom = this.getCodeViewHtmlDom();
+				var code_tgt_elm = code_view_dom.find('.wfte_' + checkboxElm);
+				if (code_tgt_elm.length > 0) {
+					var col_type = code_tgt_elm.attr('col-type');
+					if (col_type && "-" !== col_type.charAt(0)) {
+						col_type = '-' + col_type;
+						code_tgt_elm.attr('col-type', col_type);
+					}
+					this.updateCodeViewHtml(code_view_dom);
 				}
 			}
 		},
@@ -1319,7 +1395,64 @@ var pklist_customize = {};
 			}
 		}
 	}
-	/* sample pdf generation */
+
+	/* Packing List Pro Preview */
+	$(document).ready(function() {
+		if ($('#wt_packinglist_preview').length > 0) {
+			var hiddenClass = 'wfte_hidden';
+			var $preview = $('#wt_packinglist_preview');
+			
+			function getAttributItems(vl) {
+				var array = vl.split("|");
+				return array.filter(function(el) {
+					return el !== null && el !== "" && el !== " ";
+				});
+			}
+			
+			function toggleElement(elm, isInit) {
+				var targetElements = elm.attr('data-target-element');
+				if (typeof targetElements !== 'undefined') {
+					var elementsArr = getAttributItems(targetElements);
+					var isChecked = elm.is(':checked');
+					
+					for (var i = 0; i < elementsArr.length; i++) {
+						var elementClass = elementsArr[i].trim();
+						var $targetElm = $preview.find('.wfte_' + elementClass);
+						var $targetTd = $preview.find('.' + elementClass);
+						
+						if (isChecked) {
+							$targetElm.removeClass(hiddenClass);
+							$targetTd.removeClass(hiddenClass);
+							if (!isInit) {
+								highlightElement($targetElm);
+								highlightElement($targetTd);
+							}
+						} else {
+							$targetElm.addClass(hiddenClass);
+							$targetTd.addClass(hiddenClass);
+						}
+					}
+				}
+			}
+			
+			function highlightElement(elm) {
+				elm.addClass('wfte_highlight');
+				setTimeout(function() {
+					elm.removeClass('wfte_highlight');
+				}, 500);
+			}
+			
+			// Initialize toggle states
+			$('.wt_pklist_feature_toggle').each(function() {
+				toggleElement($(this), true);
+			});
+			
+			// Handle toggle change events
+			$('.wt_pklist_feature_toggle').on('change', function() {
+				toggleElement($(this), false);
+			});
+		}
+	});
 
 })(jQuery);
 if (wf_woocommerce_packing_list_customizer.enable_code_view) {

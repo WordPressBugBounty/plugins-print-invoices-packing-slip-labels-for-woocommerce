@@ -35,6 +35,21 @@ if (!defined('ABSPATH')) {
 										'tooltip' => true,
 										'alignment' => 'horizontal_with_label',
 									),
+								'woocommerce_wf_attach_sku_packinglist' => array(
+										'type' => 'wt_radio',
+										'label' => __("Include product SKU","print-invoices-packing-slip-labels-for-woocommerce"),
+										'id' => '',
+										'class' => 'woocommerce_wf_attach_sku_packinglist',
+										'name' => 'woocommerce_wf_attach_sku_packinglist',
+										'value' => '',
+										'radio_fields' => array(
+												'Yes'=>__('Yes','print-invoices-packing-slip-labels-for-woocommerce'),
+												'No'=>__('No','print-invoices-packing-slip-labels-for-woocommerce')
+											),
+										'col' => 3,
+										'tooltip' => true,
+										'alignment' => 'horizontal_with_label',
+									),
 								'woocommerce_wf_add_customer_note_in_packinglist' => array(
 										'type' => 'wt_radio',
 										'label' => __("Add customer note","print-invoices-packing-slip-labels-for-woocommerce"),

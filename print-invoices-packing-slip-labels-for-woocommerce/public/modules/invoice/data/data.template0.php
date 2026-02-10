@@ -206,7 +206,7 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
                     <tr>
                         <th class="wfte_product_table_head_serial_no wfte_product_table_head_bg wfte_table_head_color" col-type="serial_no">__[S.No]__</th>
                         <th class="wfte_product_table_head_image wfte_product_table_head_bg wfte_table_head_color" col-type="-image" data-img-width="50px">__[Image]__</th>
-                        <th class="wfte_product_table_head_sku wfte_product_table_head_bg wfte_table_head_color" col-type="-sku">__[SKU]__</th>
+                        <th class="wfte_product_table_head_sku wfte_product_table_head_bg wfte_table_head_color" col-type="sku">__[SKU]__</th>
                         <th class="wfte_product_table_head_product wfte_product_table_head_bg wfte_table_head_color" col-type="product">__[Product]__</th>
                         <th class="wfte_product_table_head_quantity wfte_product_table_head_bg wfte_table_head_color wfte_text_center" col-type="quantity">__[Quantity]__</th>
                         <th class="wfte_product_table_head_price wfte_product_table_head_bg wfte_table_head_color" col-type="price">__[Unit price]__</th>

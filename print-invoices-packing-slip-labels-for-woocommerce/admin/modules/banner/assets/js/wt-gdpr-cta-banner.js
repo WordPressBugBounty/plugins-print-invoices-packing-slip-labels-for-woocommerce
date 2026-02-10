@@ -9,38 +9,36 @@
 
             initDismissButton: function() {
                 // Handle WordPress dismissible notices for GDPR banner
-                $('.notice-dismiss').on('click', function(e) {
-                    e.preventDefault();
-                    var $this = $(this);
-                    var $banner = $this.closest('.notice');
-                    var bannerId = $banner.attr('id');
+                $('#wt_gdpr_cta_banner').on('click', '.notice-dismiss, .product-page-btn', function(e) {
+                    var $banner = $('#wt_gdpr_cta_banner');
                     
-                    // Only handle GDPR banner
-                    if (bannerId === 'wt_gdpr_cta_banner') {
-                        var ajaxData = {
-                            action: 'wt_dismiss_gdpr_cta_banner',
-                            nonce: typeof wt_gdpr_cta_banner_ajax !== 'undefined' ? wt_gdpr_cta_banner_ajax.nonce : ''
-                        };
-                        
-                        if (ajaxData.action && ajaxData.nonce) {
-                            $.ajax({
-                                url: ajaxurl,
-                                type: 'POST',
-                                data: ajaxData,
-                                success: function(response) {
-                                    if (response.success) {
-                                        $banner.fadeOut();
-                                    } else {
-                                        console.log('GDPR Banner Dismiss Error:', response.data);
-                                    }
-                                },
-                                error: function(xhr, status, error) {
-                                    console.log('GDPR Banner AJAX Error:', error);
+                    if ($(this).hasClass('notice-dismiss')) {
+                        e.preventDefault();
+                    }
+                    
+                    var ajaxData = {
+                        action: 'wt_dismiss_gdpr_cta_banner',
+                        nonce: typeof wt_gdpr_cta_banner_ajax !== 'undefined' ? wt_gdpr_cta_banner_ajax.nonce : ''
+                    };
+                    
+                    if (ajaxData.action && ajaxData.nonce) {
+                        $.ajax({
+                            url: ajaxurl,
+                            type: 'POST',
+                            data: ajaxData,
+                            success: function(response) {
+                                if (response.success) {
+                                    $banner.fadeOut();
+                                } else {
+                                    console.log('GDPR Banner Dismiss Error:', response.data);
                                 }
-                            });
-                        } else {
-                            console.log('GDPR Banner: Missing action or nonce');
-                        }
+                            },
+                            error: function(xhr, status, error) {
+                                console.log('GDPR Banner AJAX Error:', error);
+                            }
+                        });
+                    } else {
+                        console.log('GDPR Banner: Missing action or nonce');
                     }
                 });
             }

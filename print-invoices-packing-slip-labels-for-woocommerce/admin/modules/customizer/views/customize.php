@@ -584,6 +584,49 @@ if (!defined('ABSPATH')) {
 		padding-bottom: 0px;
 		margin-bottom: 10px;
 	}
+
+	/* Disabled state for fields controlled by General tab settings */
+	.wf_general_setting_disabled {
+		opacity: 0.5;
+		pointer-events: none;
+		position: relative;
+	}
+
+	.wf_general_setting_disabled::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(255, 255, 255, 0.3);
+		cursor: not-allowed;
+		z-index: 10;
+	}
+
+	.wf_general_setting_disabled .wf_side_panel_toggle .wf_slide_switch {
+		cursor: not-allowed !important;
+	}
+
+	.wf_general_setting_disabled .wf_side_panel_toggle .wf_slider {
+		background-color: #ccc !important;
+		cursor: not-allowed !important;
+	}
+
+	.wf_general_setting_disabled_checkbox {
+		cursor: not-allowed !important;
+		opacity: 0.5;
+	}
+
+	.wf_general_setting_disabled_row {
+		opacity: 0.6;
+	}
+
+	.wf_general_setting_disabled_row input,
+	.wf_general_setting_disabled_row select {
+		pointer-events: none;
+		background-color: #f5f5f5;
+	}
 </style>
 <div class="wf_cst_loader wf_loader_bg"></div>
 <div class="wf_my_template wf_pklist_popup">
@@ -768,9 +811,9 @@ if (!defined('ABSPATH')) {
 	?>
 </div>
 
-<div class="wf_cst_headbar">
+<div class="wf_cst_headbar"<?php echo (isset($preview_only) && $preview_only) ? ' style="height: 50px;"' : ''; ?>>
 	<div style="float:left; display:flex; align-items: center; height:100%; width:max-content; padding-left: 10px;">
-
+		<?php if (!isset($preview_only) || !$preview_only) : ?>
 		<?php $active_template_name_cleaned_string = str_replace(" (Active)", "", $active_template_name); ?>
 		<input type="text" class="wf_template_name_field" value="<?php echo esc_html($active_template_name_cleaned_string); ?>" style="padding: 4px 20px;min-width: 250px;font-size: 16px;">
 
@@ -778,7 +821,11 @@ if (!defined('ABSPATH')) {
 		$tooltip_conf = Wf_Woocommerce_Packing_List_Admin::get_tooltip_configs('create_new_template', Wf_Woocommerce_Packing_List_Customizer::$module_id_static);
 		?>
 		<a class="wf_pklist_new_template <?php echo esc_attr($tooltip_conf['class']); ?>" style="float:left; width:100%; padding-left:15px; cursor:pointer;" <?php echo wp_kses_post($tooltip_conf['text']); ?>><?php esc_html_e('Change template', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></a>
+		<?php else : ?>
+		<span style="margin-left: 15px; color: #666; font-size: 13px;"><?php esc_html_e('This preview reflects your current settings from the General tab.', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></span>
+		<?php endif; ?>
 	</div>
+	<?php if (!isset($preview_only) || !$preview_only) : ?>
 	<div style="float:right;  margin-right:-15px; display:flex;align-items: center;height: 100%; ">
 
 		<button type="button" name="" class="wf-btn-plain" onclick="window.location.reload(true);">
@@ -805,6 +852,7 @@ if (!defined('ABSPATH')) {
 			<li class="wf_pklist_my_templates"><?php esc_html_e('My templates', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></li>
 		</ul>
 	</div>
+	<?php endif; ?>
 </div>
 
 

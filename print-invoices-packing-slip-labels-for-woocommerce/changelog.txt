@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 4.9.0 2025-12-17 =
+* [Fix] - Fixed error 'call to a member function update_meta_data()'.
+* [Fix] - Fixed division by zero error in UBL invoice.
+* [Tweak] - Translation update.
+* [Tweak] - Add safe file locking with automatic fallback for VIP-hosted.
+* [Compatibility] - WooCommerce 10.4.2
+
 = 4.8.9 2025-12-02 =
 * [Add] – Added an option to restrict invoices attachments based on payment method.
 * [Fix] - Fixed PHP warning: Attempt to read property "post_type" on null.

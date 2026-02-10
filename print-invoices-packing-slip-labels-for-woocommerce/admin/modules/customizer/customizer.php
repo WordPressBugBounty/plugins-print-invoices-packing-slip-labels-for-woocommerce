@@ -222,6 +222,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 	{
 		$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_' . $this->to_customize, false, $this->to_customize);
 		$this->enable_code_view = apply_filters('wt_pklist_enable_code_editor', false, $this->to_customize);
+		$preview_only = apply_filters('wt_pklist_customizer_preview_only', false, $this->to_customize);
 		$active_theme_arr = $this->get_current_active_theme($this->to_customize);
 		$active_template_id = 0;
 		$template_is_active = 0;
@@ -245,6 +246,8 @@ class Wf_Woocommerce_Packing_List_Customizer
 
 		$to_customize_module_id = Wf_Woocommerce_Packing_List::get_module_id($this->to_customize);
 
+		$general_settings = $this->get_general_settings_for_customizer($this->to_customize, $to_customize_module_id);
+
 		$params = array(
 			'nonces' => array(
 				'main' => wp_create_nonce($this->module_id),
@@ -255,7 +258,9 @@ class Wf_Woocommerce_Packing_List_Customizer
 			'template_is_active' => $template_is_active,
 			'enable_code_view' => $this->enable_code_view,
 			'open_first_panel' => $this->open_first_panel,
+			'preview_only' => $preview_only,
 			'img_url_placeholders' => $img_url_placeholders,
+			'general_settings' => $general_settings,
 			'labels' => array(
 				'error' => __('Error', 'print-invoices-packing-slip-labels-for-woocommerce'),
 				'success' => __('Success', 'print-invoices-packing-slip-labels-for-woocommerce'),
@@ -314,6 +319,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 			'to_customize_id' => $this->to_customize_id,
 			'module_id' => $this->module_id,
 			'enable_code_view' => $this->enable_code_view,
+			'preview_only' => $preview_only,
 		);
 		Wf_Woocommerce_Packing_List_Admin::envelope_settings_tabcontent(WF_PKLIST_POST_TYPE . '-customize', $view_file, '', $params, 0);
 	}
@@ -341,6 +347,45 @@ class Wf_Woocommerce_Packing_List_Customizer
 		$settings = array();
 		return apply_filters('wf_module_non_customizable_items', $settings, $base);
 	}
+
+	/**
+	 * Get general settings for the customizer to determine which fields should be disabled
+	 * 
+	 * @since 4.5.0
+	 * @param string $template_type The template type (e.g., 'packinglist')
+	 * @param string $module_id The module ID
+	 * @return array Settings that affect customizer field states
+	 */
+	public function get_general_settings_for_customizer($template_type, $module_id)
+	{
+		$settings = array();
+		
+		// Get settings based on template type
+		if ('packinglist' === $template_type) {
+			$settings = array(
+				'include_image' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_attach_image_packinglist', $module_id),
+				'include_sku' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_attach_sku_packinglist', $module_id),
+				'include_customer_note' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_add_customer_note_in_packinglist', $module_id),
+				'include_footer' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_footer_pk', $module_id),
+			);
+		} elseif ('deliverynote' === $template_type) {
+			$settings = array(
+				'include_image' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_attach_image_deliverynote', $module_id),
+				'include_customer_note' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_add_customer_note_in_deliverynote', $module_id),
+				'include_footer' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_footer_dn', $module_id),
+			);
+		} elseif ('dispatchlabel' === $template_type) {
+			$settings = array(
+				'include_customer_note' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_add_customer_note_in_dispatchlabel', $module_id),
+				'include_footer' => Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_footer_dl', $module_id),
+			);
+		}
+		
+		$settings = apply_filters('wf_pklist_customizer_general_settings', $settings, $template_type, $module_id);
+		
+		return $settings;
+	}
+
 	public function get_current_active_theme($base)
 	{
 		global $wpdb;
@@ -499,7 +544,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 	}
 	private function convert_translation_string_for_design_view($match)
 	{
-		$ipc_td = 'wt_woocommerce_invoice_addon';
+		$ipc_td = 'wt-woocommerce-invoice-addon';
 		$sdd_td = 'wt-woocommerce-shippinglabel-addon';
 		$pi_td 	= 'wt-woocommerce-proforma-addon';
 		$pl_td	= 'wt-woocommerce-picklist-addon';
@@ -537,7 +582,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 	 */
 	private function convert_translation_strings($match)
 	{
-		$ipc_td = 'wt_woocommerce_invoice_addon';
+		$ipc_td = 'wt-woocommerce-invoice-addon';
 		$sdd_td = 'wt-woocommerce-shippinglabel-addon';
 		$pi_td 	= 'wt-woocommerce-proforma-addon';
 		$pl_td	= 'wt-woocommerce-picklist-addon';
