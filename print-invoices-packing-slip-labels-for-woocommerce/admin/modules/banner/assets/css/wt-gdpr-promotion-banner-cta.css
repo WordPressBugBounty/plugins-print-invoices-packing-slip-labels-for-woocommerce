@@ -16,7 +16,7 @@
     font-size: 15px;
     line-height: 34px;
     letter-spacing: 0%;
-    color: #0066FE;
+    color: #212121;
 }
 
 .wt-gdpr-promotion-banner-cta .wt-body-section .wt-body-text {
@@ -32,14 +32,13 @@
 }
 
 .wt-banner-clarity-inactive .wt-body-section .wt-body-content {
-    max-width: 670px;
+    max-width: 950px;
 }
 
 .wt-gdpr-promotion-banner-cta .wt-body-section .wt-button-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
 }
 
 .wt-gdpr-promotion-banner-cta .wt-body-section .wt-button-wrap .wt-button a {
@@ -64,10 +63,9 @@
 }
 
 .wt-gdpr-promotion-banner-cta .wt-body-section .wt-button-wrap .certificate-section-wrap .certificate-image img {
-    max-width: 100%;
-    max-height: 40px;
+    max-width: none;
     width: auto;
-    height: auto;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -123,7 +121,7 @@
     }
     
     .wt-gdpr-promotion-banner-cta .wt-body-section .wt-button-wrap .certificate-section-wrap .certificate-image img {
-        max-width: 50px;
-        max-height: 35px;
+        max-width: 80px;
+        max-height: 48px;
     }
 }

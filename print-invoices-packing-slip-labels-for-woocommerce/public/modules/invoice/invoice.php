@@ -1947,8 +1947,15 @@ class Wf_Woocommerce_Packing_List_Invoice
 
 		$style_regex = '/<style id="template_font_style"[^>]*>[\s\S]*?<\/style>/';
 		$updated_style = '<style id="template_font_style">*{font-family:"DeJaVu Sans", monospace;}.template_footer{/*position:absolute;bottom:0px;*/}</style>';
-
-		$footer_to_the_bottom = apply_filters('wt_pklist_footer_to_the_bottom', true, $order, $template_type);
+		
+		$footer_to_bottom = true;
+		$footer_text = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_footer');
+		$footer_text_word_count = str_word_count($footer_text);
+		if ($footer_text_word_count > 40) {
+			$footer_to_bottom = false;
+		}
+		
+		$footer_to_the_bottom = apply_filters('wt_pklist_footer_to_the_bottom', $footer_to_bottom, $order, $template_type);		
 		if ($footer_to_the_bottom) {
 			$updated_style = '<style id="template_font_style">*{font-family:"DeJaVu Sans", monospace;}.template_footer{position:absolute;bottom:0px;}</style>';
 
@@ -2036,8 +2043,14 @@ class Wf_Woocommerce_Packing_List_Invoice
 		$style_regex = '/<style id="template_font_style"[^>]*>[\s\S]*?<\/style>/';
 		$updated_style = '<style id="template_font_style">*{font-family:"DeJaVu Sans", monospace;}.template_footer{/*position:absolute;bottom:0px;*/}</style>';
 
-		$footer_to_the_bottom = apply_filters('wt_pklist_footer_to_the_bottom', true, $order, $template_type);
+		$footer_to_bottom = true;
+		$footer_text = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_footer');
+		$footer_text_word_count = str_word_count($footer_text);
+		if ($footer_text_word_count > 40) {
+			$footer_to_bottom = false;
+		}
 
+		$footer_to_the_bottom = apply_filters('wt_pklist_footer_to_the_bottom', $footer_to_bottom, $order, $template_type);
 		if ($footer_to_the_bottom) {
 			$updated_style = '<style id="template_font_style">*{font-family:"DeJaVu Sans", monospace;}.template_footer{position:absolute;bottom:0px;}</style>';
 

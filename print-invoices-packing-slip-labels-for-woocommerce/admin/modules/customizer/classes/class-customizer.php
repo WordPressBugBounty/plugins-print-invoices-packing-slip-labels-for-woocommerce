@@ -808,7 +808,9 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 			$style = 'max-width:30px; max-height:30px;';
 		}
 		$img_url = apply_filters( 'wt_pklist_alter_product_image_url', $img_url, $product_id, $variation_id, $parent_id );
-		return '<img src="' . esc_attr( $img_url ) . '" style="border-radius:25%;' . $style . '" class="wfte_product_image_thumb"/>';
+		$style   = apply_filters( 'wt_pklist_alter_product_image_style', $style, $product_id, $variation_id, $parent_id );
+
+		return '<img src="' . esc_attr( $img_url ) . '" style="border-radius:25%;' . esc_attr($style) . '" class="wfte_product_image_thumb"/>';
 	}
 
 

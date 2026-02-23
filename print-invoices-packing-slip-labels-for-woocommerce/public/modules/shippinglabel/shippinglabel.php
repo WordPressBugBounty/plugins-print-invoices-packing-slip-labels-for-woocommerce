@@ -583,7 +583,11 @@ class Wf_Woocommerce_Packing_List_Shippinglabel
 		if( !empty( $order ) && true === $show_print_button ) {
 			$order_id	= version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
 			
-			if( in_array( $this->module_base, Wf_Woocommerce_Packing_List::get_option( 'wt_pklist_separate_print_button_enable' ) ) ) {
+			$enabled_modules = Wf_Woocommerce_Packing_List::get_option('wt_pklist_separate_print_button_enable');
+			$enabled_modules = is_array($enabled_modules) ? $enabled_modules : (array) $enabled_modules;
+
+			if ( in_array($this->module_base, $enabled_modules, true) ) {
+							
 				$btn_action_name 	= 'wt_pklist_print_document_'.$this->module_base.'_not_yet';
 				$img_url 			= WF_PKLIST_PLUGIN_URL . 'admin/images/'.$this->module_base.'.png';
 				$order_docs			= Wt_Pklist_Common::get_order_meta( $order_id, '_created_document', true );

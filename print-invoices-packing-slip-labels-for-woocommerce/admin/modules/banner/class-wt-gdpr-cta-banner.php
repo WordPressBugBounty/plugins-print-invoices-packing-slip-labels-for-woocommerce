@@ -58,6 +58,13 @@ if ( ! class_exists( '\\Wtpdf\\Banners\\Wt_GDPR_Cta_Banner' ) ) {
         protected $clarity_plugin = 'microsoft-clarity/clarity.php';
 
         /**
+         * Google Site Kit plugin slug
+         *
+         * @var string
+         */
+        protected $sitekit_plugin = 'google-site-kit/google-site-kit.php';
+
+        /**
          * Promotion link for when Clarity is active
          * 
          * @var string 
@@ -72,6 +79,13 @@ if ( ! class_exists( '\\Wtpdf\\Banners\\Wt_GDPR_Cta_Banner' ) ) {
         private static $default_promotion_link = "https://www.webtoffee.com/product/gdpr-cookie-consent/?utm_source=free_plugin_pdf_invoice&utm_medium=pdf_invoice_premium&utm_campaign=GDPR";
 
         /**
+         * Promotion link for when Google Site Kit is active
+         *
+         * @var string
+         */
+        private static $sitekit_promotion_link = "https://www.webtoffee.com/product/gdpr-cookie-consent/?utm_source=free_plugin_pdf_invoice&utm_medium=pdf_invoice_premium&utm_campaign=GDPR_SiteKit";
+
+        /**
          * Current promotion link (set after conditions are checked)
          * 
          * @var string
@@ -79,44 +93,67 @@ if ( ! class_exists( '\\Wtpdf\\Banners\\Wt_GDPR_Cta_Banner' ) ) {
         protected $promotion_link = '';
 
         /**
-         * Banner text (set based on Clarity status)
-         * 
+         * Banner text (set based on Clarity/Site Kit status)
+         *
          * @var string
          */
         protected $banner_text = '';
 
         /**
          * Is Clarity active flag
-         * 
+         *
          * @var bool|null
          */
         protected $is_clarity_active = null;
 
         /**
+         * Is Google Site Kit active flag
+         *
+         * @var bool|null
+         */
+        protected $is_sitekit_active = null;
+
+        /**
          * Check if Microsoft Clarity plugin is active
-         * 
+         *
          * @return bool
          */
         protected function is_clarity_active() {
-            if ($this->is_clarity_active === null) {
-                $this->is_clarity_active = $this->is_plugin_active_anywhere($this->clarity_plugin);
+            if ( $this->is_clarity_active === null ) {
+                $this->is_clarity_active = $this->is_plugin_active_anywhere( $this->clarity_plugin );
             }
             return $this->is_clarity_active;
         }
 
         /**
-         * Set the appropriate promotion link and banner text based on Clarity status
-         * Called after all banner conditions are met
-         * 
+         * Check if Google Site Kit plugin is active
+         *
+         * @return bool
+         */
+        protected function is_sitekit_active() {
+            if ( $this->is_sitekit_active === null ) {
+                $this->is_sitekit_active = $this->is_plugin_active_anywhere( $this->sitekit_plugin );
+            }
+            return $this->is_sitekit_active;
+        }
+
+        /**
+         * Set the appropriate promotion link and banner text based on Clarity/Site Kit status.
+         * Priority: Site Kit (IAB TCF) > Clarity > default.
+         * Called after all banner conditions are met.
+         *
          * @return void
          */
         protected function set_banner_contents() {
-            if ($this->is_clarity_active()) {
+            if ( $this->is_sitekit_active() ) {
+                $this->promotion_link = self::$sitekit_promotion_link;
+                $this->banner_text = __( 'Under IAB Europe’s TCF policy, publishers participating in TCF must upgrade to TCF v2.3 by <b>28 February 2026</b> to remain compliant. <br>Ensure uninterrupted ad monetization with the <b>WebToffee GDPR Cookie Consent Plugin</b> – fully supporting <b>TCF v2.3</b>.', 'print-invoices-packing-slip-labels-for-woocommerce' );
+            } elseif ( $this->is_clarity_active() ) {
                 $this->promotion_link = self::$clarity_promotion_link;
-                $this->banner_text = __('<b>Important Update:</b> Starting October 31, 2025, Microsoft requires websites to use Clarity Consent V2 to continue collecting analytical data. Ensure compliance by upgrading to the GDPR Cookie Consent Plugin, now fully compatible with <b>Clarity Consent V2</b> and <b>Google Consent Mode</b>.', 'print-invoices-packing-slip-labels-for-woocommerce');
+                $this->banner_text = __( '<b>Important Update:</b> Starting October 31, 2025, Microsoft requires websites to use Clarity Consent V2 to continue collecting analytical data. <br>Ensure compliance by upgrading to the GDPR Cookie Consent Plugin, now fully compatible with <b>Clarity Consent V2</b> and <b>Google Consent Mode</b>.', 'print-invoices-packing-slip-labels-for-woocommerce' );
             } else {
                 $this->promotion_link = self::$default_promotion_link;
-                $this->banner_text = __('Stay compliant with GDPR and US Privacy Laws using our Google-certified CMP plugin—now with <b>Microsoft Clarity Consent V2</b>, <b>UET Consent Mode</b> and <b>Google Consent Mode</b> support.', 'print-invoices-packing-slip-labels-for-woocommerce');
+                $this->banner_text = __( 'Stay compliant with GDPR and US Privacy Laws using our Google-certified CMP plugin—now with <b>Microsoft Clarity Consent V2</b>, <br><b>UET Consent Mode</b> and <b>Google Consent Mode</b> support.', 'print-invoices-packing-slip-labels-for-woocommerce' );
             }
         }
 
@@ -256,7 +293,7 @@ if ( ! class_exists( '\\Wtpdf\\Banners\\Wt_GDPR_Cta_Banner' ) ) {
 			<div id="wt_gdpr_cta_banner" class="wt-gdpr-promotion-banner-cta notice notice-info is-dismissible <?php echo esc_attr($banner_variant_class); ?>">
                     <div class="wt-gdpr-promotion-banner-content-wrap">
                         <div class="wt-header-section">
-                            <p class="wt-header-title"><?php esc_html_e('Ensure Cookie Compliance for Your WordPress Website', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></p>
+                            <p class="wt-header-title"><?php echo esc_html( $this->is_sitekit_active() ? __( 'Are you running third-party ads?', 'print-invoices-packing-slip-labels-for-woocommerce' ) : __( 'Ensure Cookie Compliance for Your WordPress Website', 'print-invoices-packing-slip-labels-for-woocommerce' ) ); ?></p>
                         </div>
                         <div class="wt-body-section">
                             <div class="wt-body-content">
@@ -272,7 +309,7 @@ if ( ! class_exists( '\\Wtpdf\\Banners\\Wt_GDPR_Cta_Banner' ) ) {
                                 </div>
                                 <div class="certificate-section-wrap">
                                     <div class="certificate-image">
-                                        <img src="<?php echo esc_url(plugin_dir_url( __FILE__ ) . 'assets/images/gdpr.png'); ?>" alt="<?php echo esc_attr__('Certified Partner', 'print-invoices-packing-slip-labels-for-woocommerce'); ?>">
+                                        <img src="<?php echo esc_url(plugin_dir_url( __FILE__ ) . 'assets/images/gdpr.svg'); ?>" alt="<?php echo esc_attr__('Certified Partner', 'print-invoices-packing-slip-labels-for-woocommerce'); ?>">
                                     </div>
                                 </div>
                             </div>

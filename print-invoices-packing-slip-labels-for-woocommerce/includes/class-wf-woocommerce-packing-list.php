@@ -116,8 +116,8 @@ class Wf_Woocommerce_Packing_List {
 			self::$base_version = WF_PKLIST_VERSION;
 		}else 
 		{
-			$this->version = '4.9.1';
-			self::$base_version = '4.9.1';
+			$this->version = '4.9.2';
+			self::$base_version = '4.9.2';
 		}
 		if(defined('WF_PKLIST_PLUGIN_NAME'))
 		{
@@ -202,11 +202,6 @@ class Wf_Woocommerce_Packing_List {
 		 * Includes review request class file
 		 */ 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/admin/class-wf-woocommerce-packing-list-admin_notices.php';
-
-		/**
-		 * Includes the Black Friday and Cyber Monday CTA banners for 2024
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php';
 
 		/**
 		 * Includes the CTA banners for smart coupon, Pdf invoice and product import export for woocommerce

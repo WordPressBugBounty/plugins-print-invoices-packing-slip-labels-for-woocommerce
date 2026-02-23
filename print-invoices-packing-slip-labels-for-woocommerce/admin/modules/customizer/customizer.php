@@ -1203,6 +1203,12 @@ class Wf_Woocommerce_Packing_List_Customizer
 		$html = Wf_Woocommerce_Packing_List_CustomizerLib::hide_empty_elements($find_replace, $html, $template_type);
 		$html = $this->replace_placeholders($find_replace, $html, $template_type);
 		$html = Wf_Woocommerce_Packing_List_Admin::qrcode_barcode_visibility($html, $template_type);
+		
+		// Convert images to base64 for PDF generation to prevent slow downloads
+		if ($this->template_for_pdf) {
+			$html = $this->convert_images_to_base64($html);
+		}
+		
 		return apply_filters('wt_pklist_alter_final_order_template_html', $html, $template_type, $order, $box_packing, $order_package, $this->template_for_pdf);
 	}
 
@@ -1324,6 +1330,215 @@ class Wf_Woocommerce_Packing_List_Customizer
 		$find = array_keys($find_replace);
 		$replace = array_values($find_replace);
 		$html = str_replace($find, $replace, $html);
+		return $html;
+	}
+	
+	/**
+	 * Get image mime type (based on woocommerce-pdf-invoices-packing-slips)
+	 *
+	 * @param string $src
+	 * @param string|null $data Optional image data for remote files
+	 * @return string
+	 */
+	private function get_image_mime_type($src, $data = null)
+	{
+		$mime_type = '';
+
+		if (empty($src)) {
+			return $mime_type;
+		}
+
+		$is_remote = filter_var($src, FILTER_VALIDATE_URL);
+
+		// Check if 'getimagesize' function exists and try to get mime type for local files
+		if (function_exists('getimagesize') && !$is_remote) {
+			$image_info = @getimagesize($src);
+
+			if ($image_info && isset($image_info['mime'])) {
+				$mime_type = $image_info['mime'];
+			}
+		}
+
+		// Fallback to 'finfo_file' if mime type is empty for local files only
+		if (empty($mime_type) && function_exists('finfo_open') && !$is_remote) {
+			$finfo = finfo_open(FILEINFO_MIME_TYPE);
+
+			if ($finfo) {
+				$mime_type = finfo_file($finfo, $src);
+				
+				if (PHP_VERSION_ID < 80100) {
+					finfo_close($finfo);
+				}
+			}
+		}
+
+		// Handle remote files - try getimagesizefromstring if we have data
+		if (empty($mime_type) && $data !== null && function_exists('getimagesizefromstring')) {
+			$image_info = @getimagesizefromstring($data);
+
+			if ($image_info && isset($image_info['mime'])) {
+				$mime_type = $image_info['mime'];
+			}
+		}
+
+		// Handle remote files - try finfo_buffer if we have data
+		if (empty($mime_type) && $data !== null && function_exists('finfo_open')) {
+			$finfo = finfo_open(FILEINFO_MIME_TYPE);
+
+			if ($finfo) {
+				$mime_type = finfo_buffer($finfo, $data);
+				
+				if (PHP_VERSION_ID < 80100) {
+					finfo_close($finfo);
+				}
+			}
+		}
+
+		// Determine using WP functions
+		if (empty($mime_type)) {
+			$path = wp_parse_url($src, PHP_URL_PATH);
+			$file_info = wp_check_filetype($path);
+			$mime_type = isset($file_info['type']) ? $file_info['type'] : '';
+		}
+
+		// Last chance, determine from file extension
+		if (empty($mime_type)) {
+			$path = parse_url($src, PHP_URL_PATH);
+			$extension = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+
+			switch ($extension) {
+				case 'jpg':
+				case 'jpeg':
+					$mime_type = 'image/jpeg';
+					break;
+				case 'png':
+					$mime_type = 'image/png';
+					break;
+				case 'gif':
+					$mime_type = 'image/gif';
+					break;
+				case 'bmp':
+					$mime_type = 'image/bmp';
+					break;
+				case 'webp':
+					$mime_type = 'image/webp';
+					break;
+				case 'svg':
+					$mime_type = 'image/svg+xml';
+					break;
+			}
+		}
+
+		return $mime_type;
+	}
+
+	/**
+	 * Base64 encode file from local path (based on woocommerce-pdf-invoices-packing-slips)
+	 *
+	 * @param string $local_path
+	 * @return string|bool
+	 */
+	private function base64_encode_file($local_path)
+	{
+		if (empty($local_path)) {
+			return false;
+		}
+
+		$file_data = @file_get_contents($local_path);
+
+		return $file_data ? base64_encode($file_data) : false;
+	}
+
+	/**
+	 * Get image source in base64 format (based on woocommerce-pdf-invoices-packing-slips)
+	 *
+	 * @param string $src
+	 * @return string|array Returns array with 'mime' and 'data' keys, or false on failure
+	 */
+	private function get_image_src_in_base64($src)
+	{
+		if (empty($src)) {
+			return false;
+		}
+
+		// Skip if already base64 encoded
+		if (strpos($src, 'data:image') === 0 || strpos($src, 'base64') !== false || strpos($src, 'broken_image') !== false) {
+			return false;
+		}
+
+		$upload = wp_upload_dir();
+		$path = null;
+
+		// Try to convert URL to local path
+		if (strpos($src, $upload['baseurl']) !== false) {
+			$path = str_replace($upload['baseurl'], $upload['basedir'], $src);
+		} elseif (strpos($src, home_url()) !== false || strpos($src, '/') === 0) {
+			$parsed = parse_url($src);
+			$path = ABSPATH . ltrim(isset($parsed['path']) ? $parsed['path'] : $src, '/');
+		}
+
+		// Normalize path
+		if ($path) {
+			$path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
+		}
+
+		$image_data = null;
+		$local_src = $src;
+
+		// Try local file first (fastest)
+		if ($path && is_readable($path)) {
+			$image_data = @file_get_contents($path);
+			if ($image_data !== false) {
+				$local_src = $path;
+			}
+		}
+
+		// Fallback to remote URL if local file not found
+		if ($image_data === null && filter_var($src, FILTER_VALIDATE_URL)) {
+			$image_data = @file_get_contents($src);
+		}
+
+		if ($image_data === false || $image_data === null) {
+			return false;
+		}
+
+		$mime_type = $this->get_image_mime_type($local_src, $image_data);
+
+		if (empty($mime_type)) {
+			return false;
+		}
+
+		$image_base64 = base64_encode($image_data);
+
+		if (!$image_base64) {
+			return false;
+		}
+
+		return array('mime' => $mime_type, 'data' => $image_base64);
+	}
+
+	/**
+	 * Convert image URLs to base64 data URIs for PDF generation
+	 * Based on woocommerce-pdf-invoices-packing-slips approach
+	 * @param string $html Template HTML
+	 * @return string HTML with images converted to base64
+	 */
+	private function convert_images_to_base64($html)
+	{
+		$get_base64 = array($this, 'get_image_src_in_base64');
+
+		$html = preg_replace_callback('/<img([^>]*?)\s+src\s*=\s*["\']([^"\']+)["\']([^>]*?)>/i',
+			function ($m) use ($get_base64) {
+				$img = call_user_func($get_base64, trim($m[2]));
+				return $img ? '<img' . $m[1] . ' src="data:' . $img['mime'] . ';base64,' . $img['data'] . '"' . $m[3] . '>' : $m[0];
+			}, $html);
+
+		$html = preg_replace_callback('/background-image:\s*url\(["\']?([^"\']+)["\']?\)/i',
+			function ($m) use ($get_base64) {
+				$img = call_user_func($get_base64, trim($m[1]));
+				return $img ? 'background-image: url(data:' . $img['mime'] . ';base64,' . $img['data'] . ')' : $m[0];
+			}, $html);
+
 		return $html;
 	}
 
