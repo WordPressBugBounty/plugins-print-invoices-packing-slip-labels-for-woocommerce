@@ -1888,7 +1888,7 @@ td.wt_pklist_dash_btn_row {
   justify-content: flex-start;
   align-items: center;
   /* width: 315px; */
-  width: 350px;
+  width: 400px;
   border: 1px solid #BDC1C6;
   border-radius: 5px;
   margin-bottom: 29px;
@@ -1991,7 +1991,7 @@ td.wt_pklist_dash_btn_row {
   top: -30px !important;
   left: unset !important;
   margin-left: 0 !important;
-  padding: 10px 30px;
+  padding: 10px 10px;
   width: max-content !important;
   box-shadow: 0px 2px 5px #33333342 !important;
 }
@@ -2774,10 +2774,7 @@ height: 100px;
 .wt_pklist_premium_features_panel {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 16px;
-  width: 100%;
+  padding: 3px;
 }
 
 .wt_pklist_premium_features_header {

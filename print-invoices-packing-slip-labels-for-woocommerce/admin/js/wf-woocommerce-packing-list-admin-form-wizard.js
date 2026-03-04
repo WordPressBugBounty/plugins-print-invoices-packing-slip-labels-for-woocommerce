@@ -65,25 +65,42 @@
                     $(this).children('.date_format_add').html(add_text_html);
                 });
 
-                $('.wf_inv_num_frmt_fw_append_btn_tr').on('click', function () {
+                /* Store cursor/selection when user leaves prefix or suffix (so date format can be inserted at position). */
+                var wfInvNumCursorState = { field: null, start: 0, end: 0 };
+                $('[name="woocommerce_wf_invoice_number_prefix_pdf_fw"], [name="woocommerce_wf_invoice_number_postfix_pdf_fw"]').on('blur', function () {
+                    var el = this;
+                    wfInvNumCursorState = {
+                        field: el.name,
+                        start: el.selectionStart != null ? el.selectionStart : el.value.length,
+                        end: el.selectionEnd != null ? el.selectionEnd : el.value.length
+                    };
+                });
+
+                /* Use mousedown so the first user click adds the format (click can be lost to blur/overlay). */
+                $('.wf_inv_num_frmt_fw_append_btn_tr').on('mousedown', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     var trgt_elm_name = $(this).parents('.wf_inv_num_frmt_hlp_fw').attr('data-wf-trget');
                     var trgt_elm = $('[name="' + trgt_elm_name + '"]');
-                    var exst_vl = trgt_elm.val();
-                    // var cr_vl = $(this).children('td').children('.wf_inv_num_frmt_fw_append_btn').text();
-                    var cr_vl = $(this).children('td').children('.wf_inv_num_frmt_fw_append_btn').attr('data-format-val');
-
+                    var exst_vl = trgt_elm.val() || '';
+                    var cr_vl = $(this).children('td').children('.wf_inv_num_frmt_fw_append_btn').attr('data-format-val') || '';
 
                     if ($('[name="wf_inv_num_frmt_data_val_pdf_fw"]:checked').length > 0) {
                         var data_val = $('[name="wf_inv_num_frmt_data_val_pdf_fw"]:checked').val();
                         const regex = /\[(.*?)\]/gm;
                         cr_vl = cr_vl.replace(regex, "[$1 data-val='" + data_val + "']");
                     }
-                    // trgt_elm.val(exst_vl + cr_vl);              
-                    if (!exst_vl.includes(cr_vl)) {
-                        trgt_elm.val(cr_vl);
+                    /* Insert at stored cursor position (so user can put format in front), else append. */
+                    var newVal;
+                    if (wfInvNumCursorState.field === trgt_elm_name && typeof wfInvNumCursorState.start === 'number') {
+                        var pos = Math.min(wfInvNumCursorState.start, exst_vl.length);
+                        var end = Math.min(wfInvNumCursorState.end, exst_vl.length);
+                        newVal = exst_vl.substring(0, pos) + cr_vl + exst_vl.substring(end);
                     } else {
-                        trgt_elm.val(exst_vl + cr_vl);
+                        newVal = exst_vl + cr_vl;
                     }
+                    wfInvNumCursorState.field = null;
+                    trgt_elm.val(newVal);
 
                     wt_pklist_setup_wizard.get_invoice_no_format();
                     wt_pklist_setup_wizard.wf_do_invoice_number_preview();
@@ -124,18 +141,28 @@
 
 
                 $('.invoice-input-wrap .choose_date_div [name="woocommerce_wf_invoice_number_postfix_pdf_fw"]').on('click', function () {
-                    if ($(this).val() === "") {
-                        showingPopup();
-                    }
+                    var el = this;
+                    wfInvNumCursorState = { field: el.name, start: el.selectionStart != null ? el.selectionStart : el.value.length, end: el.selectionEnd != null ? el.selectionEnd : el.value.length };
+                    showingPopup('woocommerce_wf_invoice_number_postfix_pdf_fw');
                 });
                 $('.invoice-input-wrap-wizard .choose_date_div [name="woocommerce_wf_invoice_number_postfix_pdf_fw"]').on('click', function () {
-                    if ($(this).val() === "") {
-                        showingPopup();
-                    }
+                    var el = this;
+                    wfInvNumCursorState = { field: el.name, start: el.selectionStart != null ? el.selectionStart : el.value.length, end: el.selectionEnd != null ? el.selectionEnd : el.value.length };
+                    showingPopup('woocommerce_wf_invoice_number_postfix_pdf_fw');
+                });
+                $('.invoice-input-wrap .choose_date_div [name="woocommerce_wf_invoice_number_prefix_pdf_fw"]').on('click', function () {
+                    var el = this;
+                    wfInvNumCursorState = { field: el.name, start: el.selectionStart != null ? el.selectionStart : el.value.length, end: el.selectionEnd != null ? el.selectionEnd : el.value.length };
+                    showingPopup('woocommerce_wf_invoice_number_prefix_pdf_fw');
+                });
+                $('.invoice-input-wrap-wizard .choose_date_div [name="woocommerce_wf_invoice_number_prefix_pdf_fw"]').on('click', function () {
+                    var el = this;
+                    wfInvNumCursorState = { field: el.name, start: el.selectionStart != null ? el.selectionStart : el.value.length, end: el.selectionEnd != null ? el.selectionEnd : el.value.length };
+                    showingPopup('woocommerce_wf_invoice_number_prefix_pdf_fw');
                 });
 
-                function showingPopup() {
-                    var trgt_field = 'woocommerce_wf_invoice_number_postfix_pdf_fw';
+                function showingPopup(trgt_field) {
+                    trgt_field = trgt_field || 'woocommerce_wf_invoice_number_postfix_pdf_fw';
                     $('.wf_inv_num_frmt_hlp_fw').attr('data-wf-trget', trgt_field);
                     wf_popup.showPopup($('.wf_inv_num_frmt_hlp_fw'));
                     var currentUrl = window.location.href;
@@ -148,23 +175,17 @@
 
                 window.addEventListener("click", function (event) {
                     const invoiceModal = document.querySelector(".wt-invoice-popup .wf_pklist_popup");
-                    const nameInput = document.querySelector('.invoice-input-wrap [name="woocommerce_wf_invoice_number_postfix_pdf_fw"]');
-                    const wizardNameInput = document.querySelector('.wt_pklist_inv_no_suffix[name="woocommerce_wf_invoice_number_postfix_pdf_fw"]');
+                    const postfixInput = document.querySelector('.invoice-input-wrap [name="woocommerce_wf_invoice_number_postfix_pdf_fw"]');
+                    const wizardPostfixInput = document.querySelector('.wt_pklist_inv_no_suffix[name="woocommerce_wf_invoice_number_postfix_pdf_fw"]');
+                    const prefixInput = document.querySelector('.invoice-input-wrap [name="woocommerce_wf_invoice_number_prefix_pdf_fw"]');
+                    const wizardPrefixInput = document.querySelector('.invoice-input-wrap-wizard [name="woocommerce_wf_invoice_number_prefix_pdf_fw"]');
 
-                    if (invoiceModal && nameInput) {
-                        if (event.target !== invoiceModal && !invoiceModal.contains(event.target) && event.target !== nameInput) {
-                            if (invoiceModal.style.display === "block") {
-                                wf_popup.hidePopup($('.wf_inv_num_frmt_hlp_fw'));
-                            }
-                        }
-                    }
-                    if (invoiceModal && wizardNameInput) {
-                        if (event.target !== invoiceModal && !invoiceModal.contains(event.target) && event.target !== wizardNameInput) {
-                            if (invoiceModal.style.display === "block") {
-                                wf_popup.hidePopup($('.wf_inv_num_frmt_hlp_fw'));
-                            }
-                        }
+                    var isTriggerInput = event.target === invoiceModal || (invoiceModal && invoiceModal.contains(event.target)) ||
+                        event.target === postfixInput || event.target === wizardPostfixInput ||
+                        event.target === prefixInput || event.target === wizardPrefixInput;
 
+                    if (invoiceModal && !isTriggerInput && invoiceModal.style.display === "block") {
+                        wf_popup.hidePopup($('.wf_inv_num_frmt_hlp_fw'));
                     }
                 });
 

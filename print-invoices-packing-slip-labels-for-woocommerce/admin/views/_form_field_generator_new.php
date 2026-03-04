@@ -840,7 +840,7 @@ class WT_Form_Field_Builder
 							<tbody>
 								<tr class="invoice-input-wrap ">
 
-									<td style="width:20%;">
+									<td style="width:30%;">
 										<input type="hidden" id="woocommerce_wf_invoice_number_format"
 											name="woocommerce_wf_invoice_number_format_pdf_fw"
 											value="' . esc_attr($invoice_no_format) . '">

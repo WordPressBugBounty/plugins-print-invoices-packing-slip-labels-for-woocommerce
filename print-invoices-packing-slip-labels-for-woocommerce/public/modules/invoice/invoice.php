@@ -1955,6 +1955,19 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$footer_to_bottom = false;
 		}
 		
+		/**
+		 *  Alter footer to the bottom.
+		 *  When true, the footer is positioned at the bottom (absolute positioning).
+		 *  When false, the footer flows with the content.
+
+		 *   @param bool $footer_to_the_bottom The footer to the bottom.
+		 *   @param object $order The order.
+		 *   @param string $template_type The template type.
+		 *   @return bool The boolean value.
+		 * 
+		 *   @hook wt_pklist_footer_to_the_bottom
+		 */
+
 		$footer_to_the_bottom = apply_filters('wt_pklist_footer_to_the_bottom', $footer_to_bottom, $order, $template_type);		
 		if ($footer_to_the_bottom) {
 			$updated_style = '<style id="template_font_style">*{font-family:"DeJaVu Sans", monospace;}.template_footer{position:absolute;bottom:0px;}</style>';
@@ -2049,6 +2062,19 @@ class Wf_Woocommerce_Packing_List_Invoice
 		if ($footer_text_word_count > 40) {
 			$footer_to_bottom = false;
 		}
+
+		/**
+		 *  Alter footer to the bottom.
+		 *  When true, the footer is positioned at the bottom (absolute positioning).
+		 *  When false, the footer flows with the content.
+
+		 *   @param bool $footer_to_the_bottom The footer to the bottom.
+		 *   @param object $order The order.
+		 *   @param string $template_type The template type.
+		 *   @return bool The boolean value.
+		 * 
+		 *   @hook wt_pklist_footer_to_the_bottom
+		 */
 
 		$footer_to_the_bottom = apply_filters('wt_pklist_footer_to_the_bottom', $footer_to_bottom, $order, $template_type);
 		if ($footer_to_the_bottom) {

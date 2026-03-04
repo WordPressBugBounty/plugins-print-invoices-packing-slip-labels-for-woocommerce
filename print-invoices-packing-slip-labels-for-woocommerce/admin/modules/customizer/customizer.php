@@ -1204,8 +1204,9 @@ class Wf_Woocommerce_Packing_List_Customizer
 		$html = $this->replace_placeholders($find_replace, $html, $template_type);
 		$html = Wf_Woocommerce_Packing_List_Admin::qrcode_barcode_visibility($html, $template_type);
 		
-		// Convert images to base64 for PDF generation to prevent slow downloads
-		if ($this->template_for_pdf) {
+		// Convert images to base64 for PDF generation for MPDF to prevent slow downloads
+		$active_pdf_lib = Wf_Woocommerce_Packing_List::get_option('active_pdf_library');
+		if ($this->template_for_pdf && 'mpdf' !== $active_pdf_lib) {
 			$html = $this->convert_images_to_base64($html);
 		}
 		

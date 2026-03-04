@@ -926,8 +926,22 @@ if (!defined('ABSPATH')) {
 		$enable_pdf_preview = apply_filters('wf_pklist_intl_customizer_enable_pdf_preview', false, $template_type);
 		if ($enable_pdf_preview) {
 			include "_pdf_preview.php";
-		}
-		?>
+		} else { 
+			if ( 'shippinglabel' !== $template_type && 'creditnote' !== $template_type ) {
+				$template_display_name = get_template_display_name($template_type);
+			?>
+			<div class="wf_customizer_premium_feature wt_pklist_premium_features_panel">
+				<div class="wt_pklist_premium_features_header">
+					<img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'assets/images/Crown.png'); ?>" class="crown-icon" alt="">
+					<h3><?php esc_html_e('Premium features', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></h3>
+				</div>
+				<?php /* translators: %s: document type name (e.g. packing slip, invoice, credit note) */ ?>
+					<p class="wt_pklist_premium_features_desc"><?php echo sprintf( esc_html__( 'Toggle the pro features on and off to see how they transform your %s.', 'print-invoices-packing-slip-labels-for-woocommerce' ), esc_html( $template_display_name ) ); ?></p>
+			</div>
+				<?php
+				}
+			}
+			?>
 	</div>
 
 	<div class="wf_customize_container_main">

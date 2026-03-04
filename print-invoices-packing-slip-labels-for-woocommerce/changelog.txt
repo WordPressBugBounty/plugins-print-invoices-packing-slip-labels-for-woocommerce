@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 4.9.2 2026-02-23 =
+* [Fix] - Fixed TypeError in shipping label print button on order list page.
+* [Fix] - Prevent footer overlap in DOMPDF by disabling “stick to bottom” when footer exceeds 40 words.
+* [Tweak] - Optimize PDF generation by embedding images as base64 to avoid remote fetch delays.
+* [Compatibility] - WooCommerce 10.5.2
+
 = 4.9.1 2026-02-10 =
 * [Fix] - Prevent fatal error array before calling in_array() in packing slip.
 * [Tweak] - Keep SKU enabled by default in invoice and packing slip documents.
