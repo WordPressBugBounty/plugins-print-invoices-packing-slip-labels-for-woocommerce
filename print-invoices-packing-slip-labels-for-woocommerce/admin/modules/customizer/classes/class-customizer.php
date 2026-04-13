@@ -1872,7 +1872,9 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 
 		foreach ( $hide_on_empty_fields as $key => $value ) {
 			if ( isset( $find_replace[ '[' . $value . ']' ] ) ) {
-				if ( '' === trim($find_replace[ '[' . $value . ']' ]) ) {
+				$replace_value = $find_replace[ '[' . $value . ']' ];
+				$is_empty     = is_array( $replace_value ) ? empty( $replace_value ) : ( '' === trim( (string) $replace_value ) );
+				if ( $is_empty ) {
 					if ( 'wfte_company_logo_url' === $value ) {
 						$html = self::addClass( 'wfte_company_logo_img_box', $html, self::TO_HIDE_CSS );
 					} else {

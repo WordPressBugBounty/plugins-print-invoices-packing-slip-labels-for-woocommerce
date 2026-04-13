@@ -333,9 +333,13 @@ class Wf_Woocommerce_Packing_List_Invoice
 	{
 		if ($template_type === $this->module_base) {
 			if ("received_seal" === $type) {
+				$doc_href = esc_url( admin_url( 'admin.php?page=wf_woocommerce_packing_list#help#filters' ) );
 				$info_text = sprintf(
-					/* translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag */
-					__('You can control the visibility of the seal according to order status via filters. See filter documentation %1$s here. %2$s', 'print-invoices-packing-slip-labels-for-woocommerce'), '<a href="' . admin_url('admin.php?page=wf_woocommerce_packing_list#help#filters') . '" target="_blank">', '</a>');
+					/* translators: 1: Opening anchor tag for the documentation link, 2: Closing anchor tag. */
+					__( 'You can control the visibility of the seal according to order status via filters. See filter documentation %1$s here.%2$s', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					'<a href="' . $doc_href . '" target="_blank" rel="noopener noreferrer" class="wf_pklist_doc_link">',
+					'</a>'
+				);
 				if (Wf_Woocommerce_Packing_List_Admin::check_if_mpdf_used()) {
 					$info_text .= '<span style="color:red;">' . __('This feature might not work in mPDF.', 'print-invoices-packing-slip-labels-for-woocommerce') . '</span>';
 				}
@@ -1306,7 +1310,6 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$settings = array(
 				'doc_title' => __('Document title', 'print-invoices-packing-slip-labels-for-woocommerce'),
 				'company_logo' => __('Company Logo / Name', 'print-invoices-packing-slip-labels-for-woocommerce'),
-				//'barcode_disabled'=>__('Barcode','print-invoices-packing-slip-labels-for-woocommerce').$only_pro_html,
 				'invoice_number' => __('Invoice Number', 'print-invoices-packing-slip-labels-for-woocommerce'),
 				'order_number' => __('Order Number', 'print-invoices-packing-slip-labels-for-woocommerce'),
 				'invoice_date' => __('Invoice Date', 'print-invoices-packing-slip-labels-for-woocommerce'),
@@ -1364,7 +1367,6 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$template_type = $this->module_base;
 			$show_qrcode_placeholder = apply_filters('wt_pklist_show_qrcode_placeholder_in_template', false, $template_type);
 			return array(
-				'barcode',
 				'qrcode',
 				'footer',
 				'return_policy',

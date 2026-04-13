@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery "
 "Notes and Shipping Labels\n"
-"POT-Creation-Date: 2025-10-16 12:06+0530\n"
-"PO-Revision-Date: 2025-10-16 12:06+0530\n"
+"POT-Creation-Date: 2026-03-31 15:35+0530\n"
+"PO-Revision-Date: 2026-03-31 15:35+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_AF\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
@@ -21,88 +21,82 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: includes/vendor\n"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:135
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:62
+#: admin/class-wf-woocommerce-packing-list-admin.php:138
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:65
 msgid "Settings updated."
 msgstr "تنظیمات بروز شدند."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:136
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:63
+#: admin/class-wf-woocommerce-packing-list-admin.php:139
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:66
 msgid "All fields are mandatory"
 msgstr "تمام فیلد‌ها اجباری هستند"
 
 #. translators: 1$s: HTML line break, 2$s: HTML link opening tag, 3$s: HTML link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:138
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:65
-#, fuzzy, php-format
-#| msgid ""
-#| "Unable to update settings due to an internal error. %s To troubleshoot "
-#| "please click %s here. %s"
+#: admin/class-wf-woocommerce-packing-list-admin.php:141
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:68
+#, php-format
 msgid ""
 "Unable to update settings due to an internal error. %1$s To troubleshoot please "
 "click %2$s here. %3$s"
 msgstr ""
-"به دلیل خطای داخلی نمی توان تنظیمات را به روز کرد. %s برای عیب یابی لطفاً %s "
-"اینجا را کلیک کنید. %s"
+"به علت یک خطای داخلی قادر به به روز کردن تنظیمات نیست. %1$s برای عیب یابی لطفاً "
+"اینجا روی %2$s کلیک کنید. %3$s"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:139
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:66
+#: admin/class-wf-woocommerce-packing-list-admin.php:142
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:69
 msgid "You have to select order(s) first!"
 msgstr "اول باید سفارش/سفارشات را انتخاب کنید!"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:140
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:67
+#: admin/class-wf-woocommerce-packing-list-admin.php:143
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:70
 msgid "One or more order do not have invoice generated. Generate manually?"
 msgstr "برای یک یا چند سفارش فاکتور ایجاد نشده است. آیا بصورت دستی ایجاد شوند؟"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:141
-#: admin/class-wf-woocommerce-packing-list-admin.php:1751
-#: admin/class-wf-woocommerce-packing-list-admin.php:2393
-#: admin/class-wf-woocommerce-packing-list-admin.php:4707
-#: admin/class-wf-woocommerce-packing-list-admin.php:4825
-#: admin/class-wf-woocommerce-packing-list-admin.php:5016
+#: admin/class-wf-woocommerce-packing-list-admin.php:144
+#: admin/class-wf-woocommerce-packing-list-admin.php:1769
+#: admin/class-wf-woocommerce-packing-list-admin.php:2436
+#: admin/class-wf-woocommerce-packing-list-admin.php:4754
+#: admin/class-wf-woocommerce-packing-list-admin.php:4872
+#: admin/class-wf-woocommerce-packing-list-admin.php:5063
 #: admin/modules/customizer/customizer.php:59
-#: admin/modules/customizer/customizer.php:260
+#: admin/modules/customizer/customizer.php:268
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:132
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:68
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:88
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:71
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:91
 #: public/modules/invoice/invoice.php:201
 #: public/modules/shippinglabel/shippinglabel.php:267
 msgid "Error"
 msgstr "خطا"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:142
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:69
+#: admin/class-wf-woocommerce-packing-list-admin.php:145
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:72
 msgid "Please wait"
 msgstr "لطفا شکیبا باشید"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:143
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:70
+#: admin/class-wf-woocommerce-packing-list-admin.php:146
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:73
 msgid "is required"
 msgstr "اجباری"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:144
-#: admin/class-wf-woocommerce-packing-list-admin.php:4643
+#: admin/class-wf-woocommerce-packing-list-admin.php:147
+#: admin/class-wf-woocommerce-packing-list-admin.php:4690
 #: admin/views/documents.php:18 admin/views/freevspro.php:6
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:71
-#: public/class-wf-woocommerce-packing-list-public.php:149
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:74
 #: public/modules/invoice/invoice.php:149 public/modules/invoice/invoice.php:163
-#: public/modules/invoice/invoice.php:164 public/modules/invoice/invoice.php:1189
-#: public/modules/invoice/invoice.php:1217 public/modules/invoice/invoice.php:1521
-#: public/modules/invoice/invoice.php:2029
+#: public/modules/invoice/invoice.php:164 public/modules/invoice/invoice.php:1222
+#: public/modules/invoice/invoice.php:1250 public/modules/invoice/invoice.php:1554
+#: public/modules/invoice/invoice.php:2106
 #: public/modules/invoice/views/invoice-admin-settings.php:44
 msgid "Invoice"
 msgstr "فاکتور"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:145
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:72
-#: public/class-wf-woocommerce-packing-list-public.php:150
+#: admin/class-wf-woocommerce-packing-list-admin.php:148
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:75
 msgid "number has not been generated yet. Do you want to manually generate one ?"
 msgstr "تعداد هنوز ایجاد نشده است آیا می خواهید یکی را به صورت دستی ایجاد کنید؟"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:146
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:73
-#: public/class-wf-woocommerce-packing-list-public.php:146
+#: admin/class-wf-woocommerce-packing-list-admin.php:149
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:76
 msgid ""
 "‘Generate invoice for free orders’ is disabled in Invoice settings > Advanced. "
 "You are attempting to generate invoice for this free order. Proceed?"
@@ -110,8 +104,7 @@ msgstr ""
 "\"ایجاد فاکتور برای سفارشات رایگان\" در تنظیمات فاکتور> پیشرفته غیرفعال است. "
 "شما در حال تلاش برای ایجاد فاکتور برای این سفارش رایگان هستید. ادامه دهید؟"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:147
-#: public/class-wf-woocommerce-packing-list-public.php:147
+#: admin/class-wf-woocommerce-packing-list-admin.php:150
 msgid ""
 "Refund in this order seems not having credit number yet. Do you want to "
 "manually generate one ?"
@@ -119,235 +112,228 @@ msgstr ""
 "به نظر می رسد بازپرداخت در این سفارش هنوز شماره اعتباری ندارد. آیا می خواهید به "
 "صورت دستی یکی را تولید کنید؟"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:148
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:74
-#: public/class-wf-woocommerce-packing-list-public.php:148
+#: admin/class-wf-woocommerce-packing-list-admin.php:151
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:77
 msgid "Please fill the `from address` in the plugin's general settings."
 msgstr "لطفاً «از آدرس» را در تنظیمات عمومی افزونه پر کنید."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:149
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:75
+#: admin/class-wf-woocommerce-packing-list-admin.php:152
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:78
 msgid "Code Copied"
 msgstr "کد کپی شد"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:150
-#: admin/partials/form_wizard/form_wizard.php:686
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:76
+#: admin/class-wf-woocommerce-packing-list-admin.php:153
+#: admin/partials/form_wizard/form_wizard.php:691
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:79
 msgid "Close"
 msgstr "بسته"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:151
-#: admin/modules/customizer/views/customize.php:618
+#: admin/class-wf-woocommerce-packing-list-admin.php:154
+#: admin/modules/customizer/views/customize.php:750
 #: admin/views/admin-settings-debug.php:108
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:77
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:80
 msgid "Save"
 msgstr "ذخیره"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:152
-#: admin/class-wf-woocommerce-packing-list-admin.php:2394
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:78
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:89
+#: admin/class-wf-woocommerce-packing-list-admin.php:155
+#: admin/class-wf-woocommerce-packing-list-admin.php:2437
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:81
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:92
 msgid "Please enter mandatory fields"
 msgstr "لطفا رشته های اجباری را وارد کنید"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:153
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:79
+#: admin/class-wf-woocommerce-packing-list-admin.php:156
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:82
 msgid "You can add more than 1 order meta in"
 msgstr "می توانید بیش از 1 متای سفارش را به آن اضافه کنید"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:154
+#: admin/class-wf-woocommerce-packing-list-admin.php:157
 #: admin/views/_custom_field_editor_form.php:19
 #: admin/views/_custom_field_editor_form.php:24
 #: admin/views/_custom_field_editor_form_product.php:23
 #: admin/views/_custom_field_editor_form_product.php:28
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:80
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:83
 msgid "Edit"
 msgstr "ویرایش"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:155
+#: admin/class-wf-woocommerce-packing-list-admin.php:158
 #: admin/views/_custom_field_editor_form.php:42
 #: admin/views/_custom_field_editor_form_product.php:46
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:81
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:84
 msgid "You can edit an existing item by using its key."
 msgstr "شما می توانید یک مورد موجود را با استفاده از کلید آن ویرایش کنید."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:157
+#: admin/class-wf-woocommerce-packing-list-admin.php:160
 msgid "Add"
 msgstr "اضافه کردن"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:158
-#: public/class-wf-woocommerce-packing-list-public.php:152
-msgid "Request error."
-msgstr ""
-
-#: admin/class-wf-woocommerce-packing-list-admin.php:159
-#: public/class-wf-woocommerce-packing-list-public.php:153
-#, fuzzy
-#| msgid "Error uploading the file"
-msgid "Error loading data."
-msgstr "خطا در آپلود فایل"
-
-#: admin/class-wf-woocommerce-packing-list-admin.php:160
-#: public/class-wf-woocommerce-packing-list-public.php:154
-msgid "minimum value should be"
-msgstr ""
-
 #: admin/class-wf-woocommerce-packing-list-admin.php:161
-#: public/class-wf-woocommerce-packing-list-public.php:155
-#, fuzzy
-#| msgid "Generating"
-msgid "Generating document..."
-msgstr "در حال ایجاد"
+msgid "Request error."
+msgstr "خطای درخواست:"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:162
-#: public/class-wf-woocommerce-packing-list-public.php:156
+msgid "Error loading data."
+msgstr "خطا در بارگیری داده ها"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:163
+msgid "minimum value should be"
+msgstr "حداقل مقدار باید 3000 باشد"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:164
+msgid "Generating document..."
+msgstr "تولید سند..."
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:165
 msgid "Failed to open new tab. Please check your browser settings."
-msgstr ""
+msgstr "باز کردن زبانه جدید ناکام شد. لطفاً تنظیمات مرورگر تان را چک کنید."
 
 #. translators: %1$s: HTML link opening tag, %2$s: HTML link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:333
-#, fuzzy, php-format
-#| msgid "For better RTL integration in PDF documents, please use our"
+#: admin/class-wf-woocommerce-packing-list-admin.php:336
+#, php-format
 msgid ""
 "For better RTL integration in PDF documents, click the link to install the "
 "%1$smPDF add-on%2$s by WebToffee (free)."
-msgstr "برای ادغام بهتر RTL در اسناد PDF، لطفاً از ما استفاده کنید"
+msgstr ""
+"برای ادغام بهتر RTL در اسناد PDF، روی لینک کلیک کنید تا افزونه %1$smPDF%2$s "
+"توسط WebToffee (رایگان) نصب گردد."
 
 #. translators: %1$s: HTML link opening tag, %2$s: HTML link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:337
-#, fuzzy, php-format
-#| msgid "For better RTL integration in PDF documents, please use our"
+#: admin/class-wf-woocommerce-packing-list-admin.php:340
+#, php-format
 msgid ""
 "For better RTL integration in PDF documents, click the link to update the "
 "%1$smPDF add-on%2$s by WebToffee (free)."
-msgstr "برای ادغام بهتر RTL در اسناد PDF، لطفاً از ما استفاده کنید"
+msgstr ""
+"برای ادغام بهتر RTL در اسناد PDF، روی لینک کلیک کنید تا افزونه %1$smPDF%2$s "
+"توسط WebToffee (رایگان) به روز شود."
 
 #. translators: %1$s: HTML link opening tag, %2$s: HTML link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:341
-#, fuzzy, php-format
-#| msgid "For better RTL integration in PDF documents, please use our"
+#: admin/class-wf-woocommerce-packing-list-admin.php:344
+#, php-format
 msgid ""
 "For better RTL integration in PDF documents, click the link to activate the "
 "%1$smPDF add-on%2$s by WebToffee (free)."
-msgstr "برای ادغام بهتر RTL در اسناد PDF، لطفاً از ما استفاده کنید"
+msgstr ""
+"برای ادغام بهتر RTL در اسناد PDF، روی لینک کلیک کنید تا افزونه %1$smPDF%2$s "
+"توسط WebToffee (رایگان) فعال گردد."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:384
+#: admin/class-wf-woocommerce-packing-list-admin.php:387
 msgctxt "placeholder"
 msgid "Enter "
 msgstr "وارد‌کردن "
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:557
-#: admin/class-wf-woocommerce-packing-list-admin.php:875
+#: admin/class-wf-woocommerce-packing-list-admin.php:560
+#: admin/class-wf-woocommerce-packing-list-admin.php:878
 msgid "Invoice/Packing"
 msgstr "فاکتور/بسته‌بندی"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:559
+#: admin/class-wf-woocommerce-packing-list-admin.php:562
 msgid "WT PDF Invoice Debug"
 msgstr "اشکال زدایی فاکتور WT PDF"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:570
+#: admin/class-wf-woocommerce-packing-list-admin.php:573
 #: admin/partials/admin-settings.php:40
-#: public/modules/deliverynote/views/admin-settings.php:37
-#: public/modules/dispatchlabel/views/admin-settings.php:36
+#: public/modules/deliverynote/views/admin-settings.php:39
+#: public/modules/dispatchlabel/views/admin-settings.php:44
 #: public/modules/invoice/views/invoice-admin-settings.php:44
-#: public/modules/packinglist/views/admin-settings.php:39
+#: public/modules/packinglist/views/admin-settings.php:40
 #: public/modules/shippinglabel/views/admin-settings.php:30
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:571
+#: admin/class-wf-woocommerce-packing-list-admin.php:574
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:572
+#: admin/class-wf-woocommerce-packing-list-admin.php:575
 msgid "Review"
 msgstr "مرور"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:573 admin/views/help.php:46
+#: admin/class-wf-woocommerce-packing-list-admin.php:576 admin/views/help.php:46
 #: admin/views/help.php:49
 msgid "Documentation"
 msgstr "مستندات"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:579
+#: admin/class-wf-woocommerce-packing-list-admin.php:582
 msgid "PDF Invoices"
 msgstr "فاکتورهای PDF"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:583
+#: admin/class-wf-woocommerce-packing-list-admin.php:586
 msgid "Shipping labels"
 msgstr "برچسب های حمل و نقل"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:587
+#: admin/class-wf-woocommerce-packing-list-admin.php:590
 msgid "Pick lists"
 msgstr "لیست های انتخابی"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:591
+#: admin/class-wf-woocommerce-packing-list-admin.php:594
 msgid "Proforma invoices"
 msgstr "پیش فاکتورها"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:595
+#: admin/class-wf-woocommerce-packing-list-admin.php:598
 #: admin/views/documents.php:74
 msgid "Address labels"
 msgstr "برچسب های آدرس"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:598
+#: admin/class-wf-woocommerce-packing-list-admin.php:601
 msgid "Premium Extensions"
 msgstr "برنامه های افزودنی پریمیوم"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:636
+#: admin/class-wf-woocommerce-packing-list-admin.php:639
 msgid "Document details"
 msgstr "جزئیات سند"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:658
+#: admin/class-wf-woocommerce-packing-list-admin.php:661
 msgid "Print/Download"
 msgstr "چاپ/دانلود"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:874
-#: admin/class-wf-woocommerce-packing-list-admin.php:902
+#: admin/class-wf-woocommerce-packing-list-admin.php:877
+#: admin/class-wf-woocommerce-packing-list-admin.php:905
 msgid "General Settings"
 msgstr "تنظیمات عمومی"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:890
-#: admin/class-wf-woocommerce-packing-list-admin.php:891
+#: admin/class-wf-woocommerce-packing-list-admin.php:893
+#: admin/class-wf-woocommerce-packing-list-admin.php:894
 msgid "Extensions"
 msgstr "برنامه های افزودنی"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:990
-#: admin/class-wf-woocommerce-packing-list-admin.php:1000
+#: admin/class-wf-woocommerce-packing-list-admin.php:993
+#: admin/class-wf-woocommerce-packing-list-admin.php:1003
 msgid "You are not allowed to access this page"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1018
-#: admin/class-wf-woocommerce-packing-list-admin.php:1160
+#: admin/class-wf-woocommerce-packing-list-admin.php:1021
+#: admin/class-wf-woocommerce-packing-list-admin.php:1163
 msgid "You are not allowed to view this page."
 msgstr "شما مجاز به مشاهده این صفحه نیستید."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1019
+#: admin/class-wf-woocommerce-packing-list-admin.php:1022
 msgid "Access denied !!!."
 msgstr "دسترسی برای شما مجاز نیست !!!."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1037
-#: admin/class-wf-woocommerce-packing-list-admin.php:1087
-#: admin/class-wf-woocommerce-packing-list-admin.php:1179
-#: admin/class-wf-woocommerce-packing-list-admin.php:2785
-#: admin/class-wf-woocommerce-packing-list-admin.php:4271
-#: admin/class-wf-woocommerce-packing-list-admin.php:4384
-#: admin/class-wf-woocommerce-packing-list-admin.php:4435
-#: admin/class-wf-woocommerce-packing-list-admin.php:4555
+#: admin/class-wf-woocommerce-packing-list-admin.php:1040
+#: admin/class-wf-woocommerce-packing-list-admin.php:1090
+#: admin/class-wf-woocommerce-packing-list-admin.php:1182
+#: admin/class-wf-woocommerce-packing-list-admin.php:2832
+#: admin/class-wf-woocommerce-packing-list-admin.php:4318
+#: admin/class-wf-woocommerce-packing-list-admin.php:4431
+#: admin/class-wf-woocommerce-packing-list-admin.php:4482
+#: admin/class-wf-woocommerce-packing-list-admin.php:4602
 msgid "You are not allowed to do this action"
 msgstr "شما مجاز به انجام این عمل نیستید"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1045
-#: admin/class-wf-woocommerce-packing-list-admin.php:1187
+#: admin/class-wf-woocommerce-packing-list-admin.php:1048
+#: admin/class-wf-woocommerce-packing-list-admin.php:1190
 msgid "There is no order with this id"
 msgstr "هیچ سفارشی با این آیدی وجود ندارد"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1065
-#: admin/class-wf-woocommerce-packing-list-admin.php:1207
+#: admin/class-wf-woocommerce-packing-list-admin.php:1068
+#: admin/class-wf-woocommerce-packing-list-admin.php:1210
 msgid "It seems this order is not yours"
 msgstr "به نظر می رسد این دستور مال شما نیست"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1080
-#: admin/class-wf-woocommerce-packing-list-admin.php:1222
+#: admin/class-wf-woocommerce-packing-list-admin.php:1083
+#: admin/class-wf-woocommerce-packing-list-admin.php:1225
 msgid ""
 "It seems the products in this order were removed, we cannot proceed this actoin "
 "now."
@@ -355,51 +341,52 @@ msgstr ""
 "به نظر می رسد محصولات در این ترتیب حذف شده اند، اکنون نمی توانیم این اقدام را "
 "ادامه دهیم."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1084
-#: admin/class-wf-woocommerce-packing-list-admin.php:1226
+#: admin/class-wf-woocommerce-packing-list-admin.php:1087
+#: admin/class-wf-woocommerce-packing-list-admin.php:1229
 msgid "There is no items in this order."
 msgstr "هیچ موردی به این ترتیب وجود ندارد."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1146
+#: admin/class-wf-woocommerce-packing-list-admin.php:1149
 msgid "Invalid order id"
 msgstr "شناسه سفارش نامعتبر است"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1151
+#: admin/class-wf-woocommerce-packing-list-admin.php:1154
 msgid "Invalid access key and mail id"
 msgstr "کلید دسترسی و شناسه ایمیل نامعتبر است"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1159
+#: admin/class-wf-woocommerce-packing-list-admin.php:1162
 msgid "Empty order"
 msgstr "سفارش خالی"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1169
+#: admin/class-wf-woocommerce-packing-list-admin.php:1172
 msgid "It seems this order is not yours."
 msgstr "به نظر می رسد این دستور مال شما نیست."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1857
-#: admin/class-wf-woocommerce-packing-list-admin.php:5076
+#: admin/class-wf-woocommerce-packing-list-admin.php:1900
+#: admin/class-wf-woocommerce-packing-list-admin.php:5123
+#: admin/modules/customizer/customizer.php:471
 msgid "Settings Updated"
 msgstr "تنظیمات بروزرسانی شدند"
 
 #. translators: %s: method
 #. translators: %s: Shipping method name
-#: admin/class-wf-woocommerce-packing-list-admin.php:2321
-#: public/modules/invoice/invoice.php:1101
+#: admin/class-wf-woocommerce-packing-list-admin.php:2364
+#: public/modules/invoice/invoice.php:1113
 #, php-format
 msgid "via %s"
 msgstr "از طریق %s"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2326
+#: admin/class-wf-woocommerce-packing-list-admin.php:2369
 msgid "Free!"
 msgstr "رایگان!"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2483
-#: includes/class-wf-woocommerce-packing-list-basic-func.php:178
+#: admin/class-wf-woocommerce-packing-list-admin.php:2526
+#: includes/class-wf-woocommerce-packing-list-basic-func.php:181
 msgid "Item with same meta key already exists"
 msgstr "مورد با همان متا کلید از قبل وجود دارد"
 
 #. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:2558
+#: admin/class-wf-woocommerce-packing-list-admin.php:2601
 msgid ""
 "This will remove all invoice numbers created by WooCommerce PDF Invoices, "
 "Packing Slips, Delivery Notes & Shipping Labels by WebToffee."
@@ -407,11 +394,11 @@ msgstr ""
 "این کار تمام شماره فاکتورهای ایجاد شده توسط فاکتورهای PDF WooCommerce، برگه های "
 "بسته بندی، یادداشت های تحویل و برچسب های حمل و نقل توسط WebToffee را حذف می کند."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2558
+#: admin/class-wf-woocommerce-packing-list-admin.php:2601
 msgid "Note:"
 msgstr "توجه:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2558
+#: admin/class-wf-woocommerce-packing-list-admin.php:2601
 #, php-format
 msgid ""
 "Before using this tool, please make sure you followed the steps described in "
@@ -420,32 +407,32 @@ msgstr ""
 "قبل از استفاده از این ابزار، لطفاً مطمئن شوید که مراحل توضیح داده شده در این "
 "مقاله %1$s نحوه بازنشانی/حذف شماره فاکتورهای موجود%2$s را دنبال کرده اید."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2561
+#: admin/class-wf-woocommerce-packing-list-admin.php:2604
 msgid "Delete all generated invoice numbers"
 msgstr "تمام شماره فاکتورهای تولید شده را حذف کنید"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2562
-#: admin/modules/customizer/views/customize.php:803
+#: admin/class-wf-woocommerce-packing-list-admin.php:2605
+#: admin/modules/customizer/views/customize.php:939
 msgid "Delete"
 msgstr "حذف"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2800
+#: admin/class-wf-woocommerce-packing-list-admin.php:2847
 msgid "Updated"
 msgstr "به روز شد"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2807
+#: admin/class-wf-woocommerce-packing-list-admin.php:2854
 msgid "No modules"
 msgstr "بدون ماژول"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4192
-#: admin/class-wf-woocommerce-packing-list-admin.php:4223
+#: admin/class-wf-woocommerce-packing-list-admin.php:4239
+#: admin/class-wf-woocommerce-packing-list-admin.php:4270
 msgid "Do not show again"
 msgstr "دوباره نشان نده"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4198
-#: admin/class-wf-woocommerce-packing-list-admin.php:4211
-#: admin/class-wf-woocommerce-packing-list-admin.php:4229
-#: admin/modules/customizer/views/customize.php:785
+#: admin/class-wf-woocommerce-packing-list-admin.php:4245
+#: admin/class-wf-woocommerce-packing-list-admin.php:4258
+#: admin/class-wf-woocommerce-packing-list-admin.php:4276
+#: admin/modules/customizer/views/customize.php:921
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:182
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:113
 #: admin/views/admin-settings-debug.php:184
@@ -453,74 +440,74 @@ msgstr "دوباره نشان نده"
 msgid "Cancel"
 msgstr "لغو"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4201
-#: admin/class-wf-woocommerce-packing-list-admin.php:4232
+#: admin/class-wf-woocommerce-packing-list-admin.php:4248
+#: admin/class-wf-woocommerce-packing-list-admin.php:4279
 msgid "Generate"
 msgstr "تولید می کنند"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4208
+#: admin/class-wf-woocommerce-packing-list-admin.php:4255
 msgid "Generating the document..."
 msgstr ""
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4288
-#: admin/modules/customizer/customizer.php:261
+#: admin/class-wf-woocommerce-packing-list-admin.php:4335
+#: admin/modules/customizer/customizer.php:269
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:176
 msgid "Success"
 msgstr "موفق"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4290
+#: admin/class-wf-woocommerce-packing-list-admin.php:4337
 msgid "Cannot close this banner"
 msgstr "نمی توان این بنر را بست"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4461
+#: admin/class-wf-woocommerce-packing-list-admin.php:4508
 msgid "Settings are empty"
 msgstr "تنظیمات خالی است"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4501
+#: admin/class-wf-woocommerce-packing-list-admin.php:4548
 msgid "Imported successfully"
 msgstr "با موفقیت وارد شد"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4505
+#: admin/class-wf-woocommerce-packing-list-admin.php:4552
 msgid "Incorrect file"
 msgstr "فایل نادرست"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4509
+#: admin/class-wf-woocommerce-packing-list-admin.php:4556
 msgid "Error: Empty JSON file"
 msgstr "خطا: خالی کردن فایل JSON"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4513
+#: admin/class-wf-woocommerce-packing-list-admin.php:4560
 msgid "Error: Invalid JSON data"
 msgstr "خطا: داده های JSON نامعتبر است"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4517
+#: admin/class-wf-woocommerce-packing-list-admin.php:4564
 msgid "Error uploading the file"
 msgstr "خطا در آپلود فایل"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4588
+#: admin/class-wf-woocommerce-packing-list-admin.php:4635
 msgid "Error:"
 msgstr "خطا:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4588
+#: admin/class-wf-woocommerce-packing-list-admin.php:4635
 msgid "Truncation did not complete as expected."
 msgstr "برش آن طور که انتظار می رفت کامل نشد."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4642
+#: admin/class-wf-woocommerce-packing-list-admin.php:4689
 #: admin/views/general.php:345
 msgid "Total files"
 msgstr "مجموع فایل ها"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4644
+#: admin/class-wf-woocommerce-packing-list-admin.php:4691
 #: admin/views/documents.php:22 admin/views/freevspro.php:7
-#: public/modules/packinglist/packinglist.php:62
-#: public/modules/packinglist/packinglist.php:85
-#: public/modules/packinglist/packinglist.php:86
-#: public/modules/packinglist/packinglist.php:239
-#: public/modules/packinglist/packinglist.php:385
-#: public/modules/packinglist/views/admin-settings.php:39
+#: public/modules/packinglist/packinglist.php:71
+#: public/modules/packinglist/packinglist.php:94
+#: public/modules/packinglist/packinglist.php:95
+#: public/modules/packinglist/packinglist.php:325
+#: public/modules/packinglist/packinglist.php:471
+#: public/modules/packinglist/views/admin-settings.php:40
 msgid "Packing slip"
 msgstr "حواله ارسال"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4645
+#: admin/class-wf-woocommerce-packing-list-admin.php:4692
 #: admin/views/documents.php:39 admin/views/freevspro.php:9
 #: public/modules/shippinglabel/shippinglabel.php:67
 #: public/modules/shippinglabel/shippinglabel.php:238
@@ -530,52 +517,52 @@ msgstr "حواله ارسال"
 msgid "Shipping label"
 msgstr "برچسب حمل"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4646
+#: admin/class-wf-woocommerce-packing-list-admin.php:4693
 #: admin/views/documents.php:47 admin/views/freevspro.php:11
-#: public/modules/deliverynote/deliverynote.php:59
-#: public/modules/deliverynote/deliverynote.php:82
-#: public/modules/deliverynote/deliverynote.php:83
-#: public/modules/deliverynote/deliverynote.php:229
-#: public/modules/deliverynote/deliverynote.php:356
-#: public/modules/deliverynote/views/admin-settings.php:37
+#: public/modules/deliverynote/deliverynote.php:66
+#: public/modules/deliverynote/deliverynote.php:89
+#: public/modules/deliverynote/deliverynote.php:90
+#: public/modules/deliverynote/deliverynote.php:309
+#: public/modules/deliverynote/deliverynote.php:436
+#: public/modules/deliverynote/views/admin-settings.php:39
 msgid "Delivery note"
 msgstr "یادداشت تحویل"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4647
+#: admin/class-wf-woocommerce-packing-list-admin.php:4694
 #: admin/views/documents.php:43 admin/views/freevspro.php:10
-#: public/modules/dispatchlabel/dispatchlabel.php:57
-#: public/modules/dispatchlabel/dispatchlabel.php:80
-#: public/modules/dispatchlabel/dispatchlabel.php:81
-#: public/modules/dispatchlabel/dispatchlabel.php:326
-#: public/modules/dispatchlabel/views/admin-settings.php:36
+#: public/modules/dispatchlabel/dispatchlabel.php:66
+#: public/modules/dispatchlabel/dispatchlabel.php:89
+#: public/modules/dispatchlabel/dispatchlabel.php:90
+#: public/modules/dispatchlabel/dispatchlabel.php:402
+#: public/modules/dispatchlabel/views/admin-settings.php:44
 msgid "Dispatch label"
 msgstr "برچسب ارسال"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4648
+#: admin/class-wf-woocommerce-packing-list-admin.php:4695
 #: admin/views/documents.php:61
 msgid "Picklist"
 msgstr "لیست انتخاب"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4649
+#: admin/class-wf-woocommerce-packing-list-admin.php:4696
 #: admin/views/documents.php:87 admin/views/freevspro.php:12
 msgid "Proforma invoice"
 msgstr "پیش فاکتور"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4650
+#: admin/class-wf-woocommerce-packing-list-admin.php:4697
 #: admin/views/documents.php:26 admin/views/freevspro.php:8
 msgid "Credit note"
 msgstr "یادداشت اعتباری"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4846
+#: admin/class-wf-woocommerce-packing-list-admin.php:4893
 #: admin/views/_form_field_generator_new.php:675
 msgid "No temporary file found"
 msgstr "فایل موقتی پیدا نشد"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4851
+#: admin/class-wf-woocommerce-packing-list-admin.php:4898
 msgid "Successfully cleared all temp files."
 msgstr "همه فایل های موقت با موفقیت پاک شد."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4852
+#: admin/class-wf-woocommerce-packing-list-admin.php:4899
 msgid "No files found."
 msgstr "فایلی پیدا نشد."
 
@@ -583,7 +570,11 @@ msgstr "فایلی پیدا نشد."
 msgid "Order Details"
 msgstr "جزئیات سفارش"
 
-#: admin/data/data.filters-help.php:4 public/modules/invoice/invoice.php:1281
+#: admin/data/data.filters-help.php:4
+#: public/modules/deliverynote/deliverynote.php:195
+#: public/modules/dispatchlabel/dispatchlabel.php:174
+#: public/modules/invoice/invoice.php:1313
+#: public/modules/packinglist/packinglist.php:212
 msgid "Product Table"
 msgstr "جدول محصول"
 
@@ -591,7 +582,7 @@ msgstr "جدول محصول"
 msgid "Summary Table"
 msgstr "جدول جمع بندی"
 
-#: admin/data/data.filters-help.php:6 public/modules/invoice/views/general.php:267
+#: admin/data/data.filters-help.php:6 public/modules/invoice/views/general.php:282
 msgid "Others"
 msgstr "دیگران"
 
@@ -865,60 +856,59 @@ msgstr "قبل از شروع چاپ، پیش نمایش سند را فعال ک�
 msgid "The default library to be used PDF generation"
 msgstr "کتابخانه پیش فرض برای تولید PDF استفاده می شود"
 
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-four.php:67
-msgid "Never Miss This Deal"
-msgstr ""
-
-#. translators: 1$s: Discount percentage with HTML span tags
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-four.php:73
-#, php-format
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:150
 msgid ""
-"Your Last Chance to Avail %1$s on WebToffee Plugins. Grab the deal before it`s "
-"gone!"
+"Under IAB Europe’s TCF policy, publishers participating in TCF must upgrade to "
+"TCF v2.3 by <b>28 February 2026</b> to remain compliant. <br>Ensure "
+"uninterrupted ad monetization with the <b>WebToffee GDPR Cookie Consent Plugin</"
+"b> – fully supporting <b>TCF v2.3</b>."
 msgstr ""
+"تحت پالیسی TCF IAB اروپا، ناشران اشتراک کننده در TCF باید تا <b>28 فبروری 2026</"
+"b> به TCF v2.3 ارتقا دهند تا مطابقت داشته باشند.&#10; با <b>پلاگین رضایت کوکی "
+"WebToffee GDPR</b> – که کاملاً از <b>TCF v2.3</b> پشتیبانی میکند، اطمینان از پول "
+"درآمد بدون وقفه از تبلیغات اطمینان حاصل کنید."
 
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-four.php:74
-msgid "OFF"
-msgstr ""
-
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-four.php:79
-#, fuzzy
-#| msgid "Which plugin?"
-msgid "View plugins"
-msgstr "کدام افزونه؟"
-
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:116
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:153
 msgid ""
 "<b>Important Update:</b> Starting October 31, 2025, Microsoft requires websites "
-"to use Clarity Consent V2 to continue collecting analytical data. Ensure "
+"to use Clarity Consent V2 to continue collecting analytical data. <br>Ensure "
 "compliance by upgrading to the GDPR Cookie Consent Plugin, now fully compatible "
 "with <b>Clarity Consent V2</b> and <b>Google Consent Mode</b>."
 msgstr ""
+"<b>به روز رسانی مهم:</b> از 31 اکتوبر 2025، مایکروسافت از ویب سایت ها میخواهد "
+"تا از Clarity Consent V2 برای ادامه جمع آوری معلومات تحلیلی استفاده کنند.&#10; "
+"با ارتقای پلاگین رضایت کوکی GDPR که اکنون کاملاً با <b>Clarity Consent V2</b> و "
+"<b>حالت رضایت Google</b> سازگار است، از انطباق اطمینان حاصل کنید."
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:119
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:156
 msgid ""
 "Stay compliant with GDPR and US Privacy Laws using our Google-certified CMP "
-"plugin—now with <b>Microsoft Clarity Consent V2</b>, <b>UET Consent Mode</b> "
-"and <b>Google Consent Mode</b> support."
+"plugin—now with <b>Microsoft Clarity Consent V2</b>, <br><b>UET Consent Mode</"
+"b> and <b>Google Consent Mode</b> support."
 msgstr ""
+"با استفاده از پلاگین CMP تصدیق شده توسط Google ما، با GDPR و قوانین حریم خصوصی "
+"ایالات متحده مطابقت داشته باشید – اکنون با <b>Microsoft Clarity Consent V2</"
+"b> ،&#10; <b>حالت رضایت UET</b> و <b>حالت رضایت Google</b> پشتیبانی میکند."
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:259
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:296
+msgid "Are you running third-party ads?"
+msgstr "آیا شما تبلیغات شخص ثالث را اجرا میکنید؟"
+
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:296
 msgid "Ensure Cookie Compliance for Your WordPress Website"
-msgstr ""
+msgstr "اطمینان از انطباق کوکی برای ویب سایت وردپرس تان"
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:271
-#, fuzzy
-#| msgid "Get Plugin"
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:308
 msgid "Get plugin now"
-msgstr "دریافت پلاگین"
+msgstr "افزونه"
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:275
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:312
 msgid "Certified Partner"
-msgstr ""
+msgstr "شریک تصدیق شده"
 
 #: admin/modules/banner/class-wt-mpdf-language-banner.php:37
 msgid "Language Detection Notice"
-msgstr ""
+msgstr "اطلاعیه تشخیص زبان"
 
 #. translators: %s: Detected language name
 #: admin/modules/banner/class-wt-mpdf-language-banner.php:40
@@ -927,215 +917,242 @@ msgid ""
 "Your site language is detected as %s. For better compatibility with your "
 "language we recommend installing the mPDF add-on."
 msgstr ""
+"زبان سایت شما به عنوان %s تشخیص شده است. برای سازگاری بهتر با زبان شما ما توصیه "
+"میکنیم که افزونه mPDF را نصب کنید."
 
 #: admin/modules/banner/class-wt-mpdf-language-banner.php:44
 msgid "You may install the free mPDF add-on by clicking here."
-msgstr ""
+msgstr "شما میتوانید افزونه رایگان mPDF را با کلیک کردن اینجا نصب کنید."
 
 #: admin/modules/banner/class-wt-mpdf-language-banner.php:47
 msgid "Dismiss this notice"
+msgstr "این اطلاعیه را رد کنید"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:213
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:358
+msgid "Something went wrong. Please try again."
+msgstr "مشکلی پیش آمد لطفا دوباره تلاش کنید."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:217
+msgid "You do not have sufficient permissions to install plugins."
+msgstr "شما مجوز کافی برای به روز رسانی پلاگین برای این سایت ندارد."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:235
+msgid "Plugin download link not found."
+msgstr "لینک بارگیری پلاگین پیدا نشد."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:284
+msgid "You do not have sufficient permissions to activate plugins."
+msgstr "شما اجازه کافی برای فعال کردن پلاگین ها ندارید."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:292
+msgid "Activation failed."
+msgstr "فعال سازی با موفقیت انجام شد."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:312
+msgid "Accessibility Widget"
+msgstr "ویجت دسترسی"
+
+#. translators: 1: a tag opening, 2: a tag closing
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:318
+#, php-format
+msgid "Make your site inclusive with %1$s AccessYes accessibility widget. %2$s"
+msgstr "سایت خود را با %1$s ویجت دسترسی AccessYes فراگیر بسازید. %2$s"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:326
+msgid ""
+"A lightweight accessibility widget to improve accessibility and usability for "
+"every users. Set it up in minutes for free."
 msgstr ""
+"یک ویجت دسترسی سبک وزن برای بهبود دسترسی و قابلیت استفاده برای هر کاربر. آنرا "
+"در چند دقیقه بشکل رایگان تنظیم کنید."
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:105
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:94
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:335
+msgid "Install & activate"
+msgstr "نصب و فعال"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:339
+#: includes/class-wf-woocommerce-packing-list-review_request.php:67
+msgid "Remind me later"
+msgstr "بعدا یادآوری کن"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:343
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:125
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:137
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:125
+msgid "Dismiss"
+msgstr "رد"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:398
+msgid "Installing..."
+msgstr "در حال نصب..."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:492
+msgid "Plugin installed successfully."
+msgstr "افزونه با موفقیت نصب شد."
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:105
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:117
 msgid "Product Import Export"
-msgstr "واردات صادرات محصول"
+msgstr "درون ریزی-برون ریزی محصول"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:106
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:106
+msgid "WooCommerce PDF Invoices, Packing Slips and Credit Notes"
+msgstr "فاکتورهای WooCommerce PDF، برگه های بسته بندی و یادداشت های اعتباری"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:110
+msgid "Automatically generate PDF invoices, packing slips, and credit notes"
+msgstr "تولید خودکار فاکتورهای PDF، برگه های بسته بندی و یادداشت های اعتباری"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:111
+msgid "Use ready-made, customizable templates to match your brand"
+msgstr "از قالب های آماده و قابل تنظیم برای مطابقت با برند خود استفاده کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:112
+msgid "Print or download invoices individually or in bulk"
+msgstr "فاکتورها را به صورت انفرادی یا به صورت عمده چاپ یا بارگیری کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:113
+msgid "Set custom invoice numbering for better organization"
+msgstr "شماره گذاری فاکتور سفارشی را برای سازماندهی بهتر تنظیم کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:114
+msgid "Customize documents fully with visual or code editors"
+msgstr "اسناد را به طور کامل با ویرایشگرهای بصری یا کد سفارشی کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:115
+msgid "Include VAT, GST, ABN, and other tax details"
+msgstr "VAT، GST، ABN، و دیگر جزئیات مالیاتی را شامل کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:116
+msgid "Add \"Pay Now\" link on invoices"
+msgstr "لینک \"اکنون پرداخت کنید\" را در فاکتورها اضافه کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:117
+msgid "Add custom fields to any order document with ease"
+msgstr "بخش های سفارشی را به هر سند سفارش با آسانی اضافه کنید"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:122
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:134
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:122
+msgid "View all premium features"
+msgstr "مشاهده تمام ویژگی های پریمیوم"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:122
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:134
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:122
+msgid "Show less"
+msgstr "نمایش کمتر"
+
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:123
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:135
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:123
+msgid "Get the plugin"
+msgstr "پلاگین را بدست بیاورید"
+
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:89
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:118
 msgid "Product Import Export for WooCommerce"
-msgstr "واردات و صادرات محصول برای ووکامرس"
+msgstr "واردات صادرات محصول برای WooCommerce"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:110
-#, fuzzy
-#| msgid "Import Export Suite for WooCommerce"
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:122
 msgid "Import, export, or update WooCommerce products"
-msgstr "Import Export Suite برای WooCommerce"
+msgstr "واردات، صادرات یا به روز رسانی محصولات WooCommerce"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:111
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:123
 msgid ""
 "Supports all types of products (Simple, variable, subscription grouped, and "
 "external)"
-msgstr ""
+msgstr "تمام انواع محصولات (ساده، متغیر، اشتراک گروهی، و خارجی) را پشتیبانی میکند"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:112
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:124
 msgid "Multiple file formats - CSV, XML, Excel, and TSV"
-msgstr ""
+msgstr "چندین فارمت فایل - CSV، XML، اکسل، و TSV"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:113
-#, fuzzy
-#| msgid "Advanced filters and customizations for import & export"
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:125
 msgid "Advanced filters and customizations for better control"
-msgstr "فیلترها و سفارشی سازی های پیشرفته برای واردات و صادرات"
+msgstr "فیلترها و سفارشی سازی های پیشرفته برای کنترول بهتر"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:114
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:126
 msgid "Bulk update WooCommerce product data"
 msgstr "به‌روزرسانی انبوه داده‌های محصول ووکامرس"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:115
-#, fuzzy
-#| msgid "Export to FTP/SFTP"
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:127
 msgid "Import via FTP/SFTP and URL"
-msgstr "صادرات به FTP/SFTP"
+msgstr "وارد کردن از طریق FTP/SFTP و URL"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:116
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:128
 #: admin/views/premium_extension_listing.php:186
 #: admin/views/premium_extension_listing.php:221
 msgid "Schedule automated import & export"
 msgstr "واردات و صادرات خودکار را برنامه ریزی کنید"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:117
-#, fuzzy
-#| msgid "Export and import custom fields and third-party plugin fields"
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:129
 msgid "Export and Import custom fields and third-party plugin fields"
-msgstr "فیلدهای سفارشی و فیلدهای افزونه شخص ثالث را صادر و وارد کنید"
+msgstr "ساحات صادرات و واردات سفارشی و ساحات پلاگین شخص ثالث"
 
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:122
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:111
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:116
-msgid "View all premium features"
-msgstr ""
-
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:122
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:111
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:116
-#, fuzzy
-#| msgid "Show Less"
-msgid "Show less"
-msgstr "نمایش کمتر"
-
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:123
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:112
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:117
-#, fuzzy
-#| msgid "Get Plugin"
-msgid "Get the plugin"
-msgstr "دریافت پلاگین"
-
-#: admin/modules/banner/class-wt-p-iew-cta-banner.php:125
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:114
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:119
-msgid "Dismiss"
-msgstr ""
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:95
-#, fuzzy
-#| msgid "WooCommerce PDF Invoices, Packing Slips and Credit Notes plugin"
-msgid "WooCommerce PDF Invoices, Packing Slips and Credit Notes"
-msgstr "افزونه WooCommerce PDF Invoices, Packing Slips and Credit Notes"
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:99
-#, fuzzy
-#| msgid "Auto-generate invoices, packing slips, and credit notes"
-msgid "Automatically generate PDF invoices, packing slips, and credit notes"
-msgstr ""
-"فاکتورها، برگه های بسته بندی و یادداشت های اعتباری را به صورت خودکار تولید کنید"
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:100
-msgid "Use ready-made, customizable templates to match your brand"
-msgstr ""
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:101
-msgid "Print or download invoices individually or in bulk"
-msgstr ""
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:102
-msgid "Set custom invoice numbering for better organization"
-msgstr ""
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:103
-#, fuzzy
-#| msgid "Customize document layout & properties"
-msgid "Customize documents fully with visual or code editors"
-msgstr "طرح‌بندی و ویژگی‌های سند را سفارشی کنید"
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:104
-msgid "Include VAT, GST, ABN, and other tax details"
-msgstr ""
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:105
-#, fuzzy
-#| msgid "Add a payment link to invoice"
-msgid "Add \"Pay Now\" link on invoices"
-msgstr "پیوند پرداخت را به فاکتور اضافه کنید"
-
-#: admin/modules/banner/class-wt-pklist-cta-banner.php:106
-#, fuzzy
-#| msgid "Add custom data to documents"
-msgid "Add custom fields to any order document with ease"
-msgstr "داده های سفارشی را به اسناد اضافه کنید"
-
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:90
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:95
-#, fuzzy
-#| msgid "Smart Coupons for WooCommerce"
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:96
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:101
 msgid "Smart Coupons for WooCommerce Pro"
-msgstr "بارگذاری از ووکامرس"
+msgstr "کوپن های هوشمند برای WooCommerce Pro"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:91
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:97
 msgid "Create better coupon campaigns with advanced WooCommerce coupon features"
-msgstr ""
+msgstr "ایجاد کمپاین های کوپن بهتر با ویژگی های پیشرفته کوپن WooCommerce"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:99
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:105
 msgid "Auto-apply coupons"
-msgstr ""
+msgstr "کوپن های درخواست خودکار"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:100
-#, fuzzy
-#| msgid "Create attractive gift cards "
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:106
 msgid "Create attractive Buy X Get Y (BOGO) offers"
-msgstr "کارت های هدیه جذاب بسازید "
+msgstr "ایجاد پیشنهادات جذاب خرید X بدست بیاورید (BOGO)"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:101
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:107
 msgid "Create product quantity/subtotal based discounts"
 msgstr "ایجاد تخفیف بر اساس تعداد/جمع جزئی محصول"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:102
-#, fuzzy
-#| msgid "Offer store credits"
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:108
 msgid "Offer store credits and gift cards"
-msgstr "اعتبار فروشگاه را ارائه دهید"
+msgstr "اعتبارات فروشگاه و کارت های هدیه ارائه کنید"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:103
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:109
 msgid "Set up smart giveaway campaigns"
-msgstr ""
+msgstr "کمپاین های هدیه هوشمند را راه اندازی کنید"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:104
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:110
 msgid "Set advanced coupon rules and conditions"
-msgstr ""
+msgstr "قوانین و شرایط کوپن پیشرفته را تنظیم کنید"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:105
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:111
 #: admin/views/premium_extension_listing.php:330
 msgid "Bulk generate coupons"
 msgstr "تولید کوپن انبوه"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:106
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:112
 msgid "Shipping, purchase history, and payment method-based coupons"
-msgstr ""
+msgstr "کوپن های مبتنی بر ارسال، تاریخچه خرید و روش پرداخت"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:107
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:113
 msgid "Sign up coupons"
-msgstr ""
+msgstr "کوپن های ثبت نام"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:108
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:114
 #: admin/views/premium_extension_listing.php:328
 msgid "Cart abandonment coupons"
-msgstr "کوپن رها کردن سبد خرید"
+msgstr "کوپن های ترک کراچی"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:109
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:115
 msgid "Create day-specific deals"
-msgstr ""
+msgstr "ایجاد معاملات مشخص روزانه"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:110
-#, fuzzy
-#| msgid "Display options for bundled products"
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:116
 msgid "Display coupon banners and widgets"
-msgstr "گزینه های نمایش برای محصولات همراه"
+msgstr "نمایش بنرها و ویجت های کوپن"
 
-#: admin/modules/banner/class-wt-smart-coupon-cta-banner.php:111
-#, fuzzy
-#| msgid "Import and export coupons"
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:117
 msgid "Import coupons"
-msgstr "کوپن های واردات و صادرات"
+msgstr "وارد کردن کدهای تخفیف"
 
 #: admin/modules/customizer/classes/class-customizer.php:423
 msgid "Refund"
@@ -1146,11 +1163,11 @@ msgid "incl. tax"
 msgstr "شامل مالیات"
 
 #: admin/modules/customizer/classes/class-customizer.php:699
-#: admin/modules/customizer/classes/class-customizer.php:1241
+#: admin/modules/customizer/classes/class-customizer.php:1245
 msgid "n/a"
 msgstr "در دسترس نیست"
 
-#: admin/modules/customizer/classes/class-customizer.php:1958
+#: admin/modules/customizer/classes/class-customizer.php:1964
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas."
@@ -1158,7 +1175,7 @@ msgstr ""
 "‫Mauris dignissim neque ut sapien vulputate، eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas."
 
-#: admin/modules/customizer/classes/class-customizer.php:1976
+#: admin/modules/customizer/classes/class-customizer.php:1982
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus mollis "
@@ -1169,7 +1186,7 @@ msgstr ""
 "porttitor enim sit amet fringilla. Nulla sed ligula venenatis ، rutrum lectus "
 "vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:1981
+#: admin/modules/customizer/classes/class-customizer.php:1987
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
 "purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, et "
@@ -1189,31 +1206,30 @@ msgstr "هیچ سفارشی با این شناسه داده شده وجود ند
 
 #: admin/modules/customizer/customizer.php:203
 #: admin/modules/customizer/customizer.php:208
-#: public/modules/packinglist/views/admin-settings.php:51
 msgid "Customize"
 msgstr "شخصی‌سازی"
 
-#: admin/modules/customizer/customizer.php:262
+#: admin/modules/customizer/customizer.php:270
 msgid "You can't undo this action. Are you sure?"
 msgstr "این عمل قابل بازگشت نیست. آیا مطمئن هستید؟"
 
-#: admin/modules/customizer/customizer.php:263
+#: admin/modules/customizer/customizer.php:271
 msgid "Click here to add Company logo"
 msgstr "برای قراردادن لوگو/آرم/نشان تجاری اینجا کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:264
+#: admin/modules/customizer/customizer.php:272
 msgid "Click here to add Company name"
 msgstr "برای قراردادن نام شرکت/فروشگاه اینجا کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:265
+#: admin/modules/customizer/customizer.php:273
 msgid "Click here to add From address"
 msgstr "برای قراردادن فرم آدرس کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:266
+#: admin/modules/customizer/customizer.php:274
 msgid "Click here to add Signature"
 msgstr "برای قراردادن امضا کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:267
+#: admin/modules/customizer/customizer.php:275
 msgid ""
 "Please save all data before leaving this page. All unsaved data will be lost. "
 "Are you sure?"
@@ -1221,38 +1237,36 @@ msgstr ""
 "لطفا قبل از ترک این صفحه تمام اطلاعات را ذخیره کنید. تمام اطلاعات ذخیره نشده از "
 "دست خواهند رفت. آیا برای خروج مطمئن هستید؟"
 
-#: admin/modules/customizer/customizer.php:268
-#: admin/modules/customizer/views/customize.php:780
-#, fuzzy
-#| msgid "Create new template"
+#: admin/modules/customizer/customizer.php:276
+#: admin/modules/customizer/views/customize.php:912
 msgid "Change template"
-msgstr "ساخت قالب جدید"
+msgstr "تغییر تمپلیت"
 
-#: admin/modules/customizer/customizer.php:269
+#: admin/modules/customizer/customizer.php:277
 msgid "Change layout"
 msgstr "تغییر طرح"
 
-#: admin/modules/customizer/customizer.php:270
+#: admin/modules/customizer/customizer.php:278
 msgid "Saving"
 msgstr "در حال ذخیره"
 
-#: admin/modules/customizer/customizer.php:271
+#: admin/modules/customizer/customizer.php:279
 #: public/modules/invoice/invoice.php:199
 #: public/modules/shippinglabel/shippinglabel.php:265
 msgid "Please enter order number"
 msgstr "لطفا شماره سفارش را وارد کنید"
 
-#: admin/modules/customizer/customizer.php:272
+#: admin/modules/customizer/customizer.php:280
 #: public/modules/invoice/invoice.php:200
 #: public/modules/shippinglabel/shippinglabel.php:266
 msgid "Generating"
 msgstr "در حال ایجاد"
 
-#: admin/modules/customizer/customizer.php:273
+#: admin/modules/customizer/customizer.php:281
 msgid "This is premium template which is not compatible with the basic plugin"
 msgstr "این قالب پریمیوم است که با پلاگین اصلی سازگار نیست"
 
-#: admin/modules/customizer/customizer.php:274
+#: admin/modules/customizer/customizer.php:282
 msgid ""
 "This is basic template. In order to use premium feature, you need to switch and "
 "activate the premium template"
@@ -1260,119 +1274,293 @@ msgstr ""
 "این قالب پایه است. برای استفاده از ویژگی پریمیوم، باید قالب پریمیوم را تغییر "
 "داده و فعال کنید"
 
-#: admin/modules/customizer/customizer.php:275
-#, fuzzy
-#| msgid "Template created."
+#: admin/modules/customizer/customizer.php:283
 msgid "Template Name Required"
-msgstr "قالب ایجاد شد."
+msgstr "نام قالب ضروری است"
 
-#: admin/modules/customizer/customizer.php:322
-#: admin/modules/customizer/customizer.php:682
+#: admin/modules/customizer/customizer.php:338
+#: admin/modules/customizer/customizer.php:817
 msgid "Active"
 msgstr "فعال"
 
-#: admin/modules/customizer/customizer.php:658
+#: admin/modules/customizer/customizer.php:440
+msgid "Unable to update setting."
+msgstr "قادر به به روز کردن تنظیمات نیست."
+
+#: admin/modules/customizer/customizer.php:449
+msgid "Invalid value."
+msgstr "مقدار نا معتبر."
+
+#: admin/modules/customizer/customizer.php:793
 msgid "Error."
 msgstr "خطا."
 
-#: admin/modules/customizer/customizer.php:684
-#: admin/modules/customizer/views/customize.php:802
+#: admin/modules/customizer/customizer.php:819
+#: admin/modules/customizer/views/customize.php:938
 msgid "Activate"
 msgstr "فعال کن"
 
-#: admin/modules/customizer/customizer.php:710
+#: admin/modules/customizer/customizer.php:845
 msgid "No template found."
 msgstr "قالب پیدا نشد."
 
-#: admin/modules/customizer/customizer.php:727
+#: admin/modules/customizer/customizer.php:862
 msgid "Unable to save theme."
 msgstr "ذخیره تم ممکن نیست."
 
-#: admin/modules/customizer/customizer.php:746
+#: admin/modules/customizer/customizer.php:881
 msgid "Template with same name already exists."
 msgstr "الگویی با همین نام از قبل موجود است."
 
-#: admin/modules/customizer/customizer.php:788
+#: admin/modules/customizer/customizer.php:923
 msgid "Template created."
 msgstr "قالب ایجاد شد."
 
-#: admin/modules/customizer/customizer.php:794
+#: admin/modules/customizer/customizer.php:929
 msgid "Template created and activated."
 msgstr "قالب ایجاد و فعال شد."
 
-#: admin/modules/customizer/customizer.php:849
+#: admin/modules/customizer/customizer.php:984
 msgid "Template updated."
 msgstr "قالب بروزرسانی شد."
 
-#: admin/modules/customizer/customizer.php:852
+#: admin/modules/customizer/customizer.php:987
 msgid "Template updated and activated."
 msgstr "قالب آپدیت و فعال شد."
 
-#: admin/modules/customizer/customizer.php:900
+#: admin/modules/customizer/customizer.php:1035
 msgid "Unable to switch view."
 msgstr "تغییر دید ممکن نیست."
 
-#: admin/modules/customizer/customizer.php:1295
+#: admin/modules/customizer/customizer.php:1646
 msgid "Unable to load template."
 msgstr "بارگذاری قالب ممکن نیست."
 
-#: admin/modules/customizer/customizer.php:1346
+#: admin/modules/customizer/customizer.php:1697
 msgid "Untitled template"
 msgstr "قالب بدون نام"
 
-#: admin/modules/customizer/customizer.php:1492
+#: admin/modules/customizer/customizer.php:1845
+msgid "Add the order's"
+msgstr "سفارش را اضافه کنید"
+
+#: admin/modules/customizer/customizer.php:1845
+#: admin/modules/customizer/customizer.php:1855
+#: public/modules/deliverynote/deliverynote.php:201
+#: public/modules/dispatchlabel/dispatchlabel.php:181
+#: public/modules/invoice/invoice.php:1339
+#: public/modules/packinglist/packinglist.php:219
+#: public/modules/shippinglabel/shippinglabel.php:180
+msgid "Tracking Number"
+msgstr "شماره پیگیری"
+
+#: admin/modules/customizer/customizer.php:1845
+msgid "to your invoices so customers can easily view and track delivery details."
+msgstr ""
+"به فاکتورهای شما تا مشتریان بتوانند به آسانی جزئیات تحویل را مشاهده و ردیابی "
+"کنند."
+
+#: admin/modules/customizer/customizer.php:1846
+msgid "Display a combined"
+msgstr "نمایش یک ترکیبی"
+
+#: admin/modules/customizer/customizer.php:1846
+#: admin/modules/customizer/data/data.translation_strings.php:20
+#: admin/modules/customizer/views/_customize_properties.php:749
+#: public/modules/invoice/invoice.php:1344
+msgid "Total Tax"
+msgstr "جمع مالیات"
+
+#: admin/modules/customizer/customizer.php:1846
+msgid "amount on the invoice to simplify how tax breakdown appears for customers."
+msgstr ""
+"مقدار روی فاکتور برای ساده ساختن اینکه چگونه تجزیه مالیات برای مشتریان ظاهر "
+"میشود."
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "Show"
+msgstr "نمایش"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "Coupon Details"
+msgstr "اطلاعات کد تخفیف"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "to give customers a clear summary of the discounts applied to their order."
+msgstr "تا به مشتریان یک خلاصه واضح از تخفیف های اعمال شده در سفارش آنها بدهد."
+
+#: admin/modules/customizer/customizer.php:1853
+msgid "Add your"
+msgstr "اضافه شده توسط شما"
+
+#: admin/modules/customizer/customizer.php:1853
+#: admin/modules/customizer/views/_customize_properties.php:161
+#: public/modules/shippinglabel/shippinglabel.php:166
+msgid "Company Logo"
+msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
+
+#: admin/modules/customizer/customizer.php:1853
+msgid "to the shipping label for professional, branded packages."
+msgstr "به لیبل حمل و نقل برای بسته های مسلکی و مارک دار."
+
+#: admin/modules/customizer/customizer.php:1854
+#: admin/modules/customizer/customizer.php:1860
+#: admin/modules/customizer/customizer.php:1861
+msgid "Add a"
+msgstr "اضافه کردن یک"
+
+#: admin/modules/customizer/customizer.php:1854
+#: public/modules/invoice/invoice.php:1328
+#: public/modules/shippinglabel/shippinglabel.php:179
+msgid "Barcode"
+msgstr "بارکد"
+
+#: admin/modules/customizer/customizer.php:1854
+msgid "to your shipping label for quicker scanning and smoother order handling."
+msgstr "به لیبل حمل و نقل تان برای اسکن کردن سریعتر و رسیدگی هموارتر سفارش."
+
+#: admin/modules/customizer/customizer.php:1855
+#: admin/modules/customizer/customizer.php:1862
+msgid "Add the"
+msgstr "را اضافه کنید"
+
+#: admin/modules/customizer/customizer.php:1855
+#: admin/modules/customizer/customizer.php:1862
+msgid "to the shipping label for easy shipment tracking."
+msgstr "به لیبل حمل و نقل برای ردیابی آسان محموله."
+
+#: admin/modules/customizer/customizer.php:1856
+msgid "Show the"
+msgstr "نمایش بیوگرافی"
+
+#: admin/modules/customizer/customizer.php:1856
+#: public/modules/shippinglabel/shippinglabel.php:181
+msgid "Package Number"
+msgstr "شماره بسته"
+
+#: admin/modules/customizer/customizer.php:1856
+msgid "on each shipping label for accurate multi-package orders."
+msgstr "روی هر لیبل حمل و نقل برای سفارشات دقیق چند بسته بندی."
+
+#: admin/modules/customizer/customizer.php:1857
+msgid "Display the"
+msgstr "نمایش"
+
+#: admin/modules/customizer/customizer.php:1857
+#: public/modules/shippinglabel/shippinglabel.php:182
+msgid "Box name"
+msgstr "نام باکس"
+
+#: admin/modules/customizer/customizer.php:1857
+msgid "on the label so recipients can identify contents quickly."
+msgstr "روی لیبل تا دریافت کنندگان بتوانند محتویات را به سرعت شناسایی کنند."
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "Show how"
+msgstr "نشان دهید که چگونه"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "Many Items"
+msgstr "تعداد آیتم ها"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "are in the order on the shipping label."
+msgstr "به ترتیب روی لیبل حمل و نقل هستند."
+
+#: admin/modules/customizer/customizer.php:1859
+msgid "Mark packages as"
+msgstr "بسته ها را به عنوان"
+
+#: admin/modules/customizer/customizer.php:1859
+#: public/modules/shippinglabel/shippinglabel.php:184
+msgid "Fragile"
+msgstr "شکننده"
+
+#: admin/modules/customizer/customizer.php:1859
+msgid "so carriers know to handle them with extra care."
+msgstr "از اینرو حاملین میدانند که آنها را با احتیاط بیشتر اداره کنند."
+
+#: admin/modules/customizer/customizer.php:1860
+#: public/modules/shippinglabel/shippinglabel.php:185
+msgid "This way up"
+msgstr "به این سمت بالا"
+
+#: admin/modules/customizer/customizer.php:1860
+msgid "indicator to help prevent damage during shipping."
+msgstr "شاخص برای کمک به جلوگیری از تخریب در جریان حمل و نقل."
+
+#: admin/modules/customizer/customizer.php:1861
+#: public/modules/shippinglabel/shippinglabel.php:186
+msgid "Keep dry"
+msgstr "خشک نگه دارید"
+
+#: admin/modules/customizer/customizer.php:1861
+msgid "notice for moisture-sensitive shipments."
+msgstr "اطلاعیه برای محموله های حساس به رطوبت."
+
+#: admin/modules/customizer/customizer.php:1862
+#: public/modules/shippinglabel/shippinglabel.php:188
+msgid "Return Policy"
+msgstr "دستورالعمل بازگشت"
+
+#: admin/modules/customizer/customizer.php:1877
+#: admin/modules/customizer/views/customize.php:805
+msgid "Upgrade to Pro"
+msgstr "عضو ویژه شدن"
+
+#: admin/modules/customizer/customizer.php:1892
 msgid "Lighter"
 msgstr "باریک‌تر"
 
-#: admin/modules/customizer/customizer.php:1493
+#: admin/modules/customizer/customizer.php:1893
 msgid "Normal"
 msgstr "معمولی"
 
-#: admin/modules/customizer/customizer.php:1494
+#: admin/modules/customizer/customizer.php:1894
 msgid "Bold"
 msgstr "درشت"
 
-#: admin/modules/customizer/customizer.php:1495
+#: admin/modules/customizer/customizer.php:1895
 msgid "Bolder"
 msgstr "درشت‌تر"
 
-#: admin/modules/customizer/customizer.php:1507
+#: admin/modules/customizer/customizer.php:1907
 msgid "Select One"
 msgstr "یک مورد را انتخاب کنید"
 
-#: admin/modules/customizer/customizer.php:1525
+#: admin/modules/customizer/customizer.php:1925
 msgid "Left"
 msgstr "چپ"
 
-#: admin/modules/customizer/customizer.php:1526
+#: admin/modules/customizer/customizer.php:1926
 msgid "Right"
 msgstr "راست"
 
-#: admin/modules/customizer/customizer.php:1527
+#: admin/modules/customizer/customizer.php:1927
 msgid "Center"
 msgstr "مرکز"
 
-#: admin/modules/customizer/customizer.php:1528
+#: admin/modules/customizer/customizer.php:1928
 msgid "Start"
 msgstr "شروع"
 
-#: admin/modules/customizer/customizer.php:1529
+#: admin/modules/customizer/customizer.php:1929
 msgid "End"
 msgstr "پایان"
 
-#: admin/modules/customizer/customizer.php:1536
+#: admin/modules/customizer/customizer.php:1936
 msgid "None"
 msgstr "خالی"
 
-#: admin/modules/customizer/customizer.php:1548
+#: admin/modules/customizer/customizer.php:1948
 msgid "Solid"
 msgstr "خط ممتد"
 
-#: admin/modules/customizer/customizer.php:1549
+#: admin/modules/customizer/customizer.php:1949
 msgid "Dotted"
 msgstr "خط‌چین"
 
-#: admin/modules/customizer/customizer.php:1550
+#: admin/modules/customizer/customizer.php:1950
 msgid "Dashed"
 msgstr "نقطه‌چین"
 
@@ -1458,41 +1646,35 @@ msgid "Total Price"
 msgstr "قیمت کل"
 
 #: admin/modules/customizer/data/data.translation_strings.php:16
-#: admin/modules/customizer/views/_customize_properties.php:636
+#: admin/modules/customizer/views/_customize_properties.php:723
 #: admin/views/wt_ipc_free_pro.php:752 admin/views/wt_ipc_free_pro.php:794
-#: public/modules/invoice/invoice.php:1308
+#: public/modules/invoice/invoice.php:1340
 msgid "Subtotal"
 msgstr "زیر مجموعه"
 
 #: admin/modules/customizer/data/data.translation_strings.php:17
-#: admin/modules/customizer/views/_customize_properties.php:642
+#: admin/modules/customizer/views/_customize_properties.php:729
 #: admin/views/wt_ipc_free_pro.php:756 admin/views/wt_ipc_free_pro.php:798
-#: public/modules/invoice/invoice.php:1309
+#: public/modules/invoice/invoice.php:1341
 msgid "Shipping"
 msgstr "هزینه ارسال"
 
 #: admin/modules/customizer/data/data.translation_strings.php:18
-#: admin/modules/customizer/views/_customize_properties.php:649
-#: public/modules/invoice/invoice.php:1310
+#: admin/modules/customizer/views/_customize_properties.php:736
+#: public/modules/invoice/invoice.php:1342
 msgid "Cart Discount"
 msgstr "تخفیف سبد خرید"
 
 #: admin/modules/customizer/data/data.translation_strings.php:19
-#: admin/modules/customizer/views/_customize_properties.php:655
-#: public/modules/invoice/invoice.php:1311
+#: admin/modules/customizer/views/_customize_properties.php:742
+#: public/modules/invoice/invoice.php:1343
 msgid "Order Discount"
 msgstr "تخفیف سفارش"
 
-#: admin/modules/customizer/data/data.translation_strings.php:20
-#: admin/modules/customizer/views/_customize_properties.php:662
-#: public/modules/invoice/invoice.php:1312
-msgid "Total Tax"
-msgstr "جمع مالیات"
-
 #: admin/modules/customizer/data/data.translation_strings.php:21
-#: admin/modules/customizer/views/_customize_properties.php:668
+#: admin/modules/customizer/views/_customize_properties.php:755
 #: admin/views/wt_ipc_free_pro.php:768 admin/views/wt_ipc_free_pro.php:810
-#: public/modules/invoice/invoice.php:1313
+#: public/modules/invoice/invoice.php:1345
 msgid "Fee"
 msgstr "تخفیف ویژه"
 
@@ -1501,9 +1683,9 @@ msgid "Coupon Used"
 msgstr "کوپن‌های تخفیف استفاده شده"
 
 #: admin/modules/customizer/data/data.translation_strings.php:23
-#: admin/modules/customizer/views/_customize_properties.php:681
+#: admin/modules/customizer/views/_customize_properties.php:768
 #: admin/views/wt_ipc_free_pro.php:780 admin/views/wt_ipc_free_pro.php:822
-#: public/modules/invoice/invoice.php:1316
+#: public/modules/invoice/invoice.php:1348
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:68
 msgid "Total"
 msgstr "جمع"
@@ -1554,8 +1736,8 @@ msgid "Payment Method:"
 msgstr "روش پرداخت:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:35
-#: admin/modules/customizer/views/_customize_properties.php:675
-#: public/modules/invoice/invoice.php:1315
+#: admin/modules/customizer/views/_customize_properties.php:762
+#: public/modules/invoice/invoice.php:1347
 msgid "Payment Method"
 msgstr "روش پرداخت"
 
@@ -1656,7 +1838,10 @@ msgid "Customer note:"
 msgstr "یادداشت مشتری:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:61
-#: public/modules/invoice/invoice.php:1287
+#: public/modules/deliverynote/deliverynote.php:197
+#: public/modules/dispatchlabel/dispatchlabel.php:176
+#: public/modules/invoice/invoice.php:1319
+#: public/modules/packinglist/packinglist.php:214
 #: public/modules/shippinglabel/shippinglabel.php:177
 msgid "Customer note"
 msgstr "یادداشت مشتری"
@@ -1686,221 +1871,277 @@ msgid "Phone no:"
 msgstr "شماره تلفن:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:68
-#, fuzzy
-#| msgid "Shipping Method"
 msgid "Shipping Method:"
-msgstr "روش حمل و نقل"
+msgstr "روش حمل و نقل:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:69
-#, fuzzy
-#| msgid "Phone No:"
 msgid "Phone:"
-msgstr "شماره تلفن:"
+msgstr "تلفن:"
 
-#: admin/modules/customizer/views/_customize_properties.php:119
-#: admin/modules/customizer/views/_customize_properties.php:293
-#: admin/modules/customizer/views/_customize_properties.php:331
-#: admin/modules/customizer/views/_customize_properties.php:595
+#: admin/modules/customizer/views/_customize_properties.php:122
+#: admin/modules/customizer/views/_customize_properties.php:322
+#: admin/modules/customizer/views/_customize_properties.php:360
+#: admin/modules/customizer/views/_customize_properties.php:682
 #: admin/views/wt_ipc_free_pro.php:478 admin/views/wt_ipc_free_pro.php:492
 #: public/modules/shippinglabel/shippinglabel.php:114
 #: public/modules/shippinglabel/shippinglabel.php:139
 msgid "Title"
 msgstr "عنوان"
 
-#: admin/modules/customizer/views/_customize_properties.php:125
-#: admin/modules/customizer/views/_customize_properties.php:212
-#: admin/modules/customizer/views/_customize_properties.php:264
-#: admin/modules/customizer/views/_customize_properties.php:320
-#: admin/modules/customizer/views/_customize_properties.php:336
-#: admin/modules/customizer/views/_customize_properties.php:600
-#: public/modules/invoice/invoice.php:379
+#: admin/modules/customizer/views/_customize_properties.php:128
+#: admin/modules/customizer/views/_customize_properties.php:215
+#: admin/modules/customizer/views/_customize_properties.php:293
+#: admin/modules/customizer/views/_customize_properties.php:349
+#: admin/modules/customizer/views/_customize_properties.php:365
+#: admin/modules/customizer/views/_customize_properties.php:687
+#: public/modules/invoice/invoice.php:381
 msgid "Font size"
 msgstr "اندازه قلم"
 
-#: admin/modules/customizer/views/_customize_properties.php:132
-#: admin/modules/customizer/views/_customize_properties.php:305
+#: admin/modules/customizer/views/_customize_properties.php:135
+#: admin/modules/customizer/views/_customize_properties.php:334
 msgid "Text align"
 msgstr "تراز متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:142
+#: admin/modules/customizer/views/_customize_properties.php:145
 msgid "Text Color"
 msgstr "رنگ متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:154
+#: admin/modules/customizer/views/_customize_properties.php:157
 msgid "Display"
 msgstr "نمایش"
 
-#: admin/modules/customizer/views/_customize_properties.php:158
-#: public/modules/shippinglabel/shippinglabel.php:166
-msgid "Company Logo"
-msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
-
-#: admin/modules/customizer/views/_customize_properties.php:159
+#: admin/modules/customizer/views/_customize_properties.php:162
 msgid "Company Name"
 msgstr "نام شرکت/فروشگاه"
 
-#: admin/modules/customizer/views/_customize_properties.php:163
+#: admin/modules/customizer/views/_customize_properties.php:166
 msgid "Logo Width"
 msgstr "عرض لوگو"
 
-#: admin/modules/customizer/views/_customize_properties.php:170
+#: admin/modules/customizer/views/_customize_properties.php:173
 msgid "Logo Height"
 msgstr "ارتفاع لوگو/آرم/نشان تجاری"
 
-#: admin/modules/customizer/views/_customize_properties.php:178
+#: admin/modules/customizer/views/_customize_properties.php:181
 msgid "Company name font size"
 msgstr "اندازه قلم برای نام شرکت/فروشگاه"
 
-#: admin/modules/customizer/views/_customize_properties.php:184
+#: admin/modules/customizer/views/_customize_properties.php:187
 msgid "Extra Details"
 msgstr "جزئیات اضافی"
 
-#: admin/modules/customizer/views/_customize_properties.php:190
+#: admin/modules/customizer/views/_customize_properties.php:193
 msgid "Extra detail font size"
 msgstr "جزئیات اضافی اندازه قلم"
 
-#: admin/modules/customizer/views/_customize_properties.php:196
+#: admin/modules/customizer/views/_customize_properties.php:199
 msgid "Header Color"
 msgstr "رنگ سربرگ"
 
-#: admin/modules/customizer/views/_customize_properties.php:207
-#: admin/modules/customizer/views/_customize_properties.php:241
-#: public/modules/invoice/invoice.php:373
+#: admin/modules/customizer/views/_customize_properties.php:210
+#: admin/modules/customizer/views/_customize_properties.php:270
+#: public/modules/invoice/invoice.php:375
 msgid "Text"
 msgstr "متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:220
-#: admin/modules/customizer/views/_customize_properties.php:272
+#: admin/modules/customizer/views/_customize_properties.php:223
+#: admin/modules/customizer/views/_customize_properties.php:301
 msgid "Style"
 msgstr "سبک"
 
-#: admin/modules/customizer/views/_customize_properties.php:230
-#: admin/modules/customizer/views/_customize_properties.php:282
-#: admin/modules/customizer/views/_customize_properties.php:313
-#: admin/modules/customizer/views/_customize_properties.php:343
+#: admin/modules/customizer/views/_customize_properties.php:233
+#: admin/modules/customizer/views/_customize_properties.php:311
+#: admin/modules/customizer/views/_customize_properties.php:342
+#: admin/modules/customizer/views/_customize_properties.php:372
 msgid "Text color"
 msgstr "رنگ متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:246
-#: public/modules/invoice/views/general.php:375
+#: admin/modules/customizer/views/_customize_properties.php:245
+msgid "Due Date Period"
+msgstr "دوره تاریخ"
+
+#: admin/modules/customizer/views/_customize_properties.php:248
+msgid "7 days"
+msgstr "7 روز"
+
+#: admin/modules/customizer/views/_customize_properties.php:249
+msgid "15 days"
+msgstr "15 روز"
+
+#: admin/modules/customizer/views/_customize_properties.php:250
+msgid "30 days"
+msgstr "30 روز"
+
+#: admin/modules/customizer/views/_customize_properties.php:251
+msgid "Custom (enter manually)"
+msgstr "سفارشی (دستی وارد کنید)"
+
+#: admin/modules/customizer/views/_customize_properties.php:259
+msgid "Custom Days"
+msgstr "روزهای خاص"
+
+#: admin/modules/customizer/views/_customize_properties.php:275
+#: public/modules/invoice/views/general.php:390
 msgid "Format"
 msgstr "فرمت"
 
-#: admin/modules/customizer/views/_customize_properties.php:298
+#: admin/modules/customizer/views/_customize_properties.php:327
 #: public/modules/shippinglabel/shippinglabel.php:119
 #: public/modules/shippinglabel/shippinglabel.php:144
 msgid "Title font size"
 msgstr "اندازه قلم عنوان"
 
-#: admin/modules/customizer/views/_customize_properties.php:354
+#: admin/modules/customizer/views/_customize_properties.php:382
+#: admin/modules/customizer/views/customize.php:1002
+#: public/modules/deliverynote/deliverynote.php:193
+#: public/modules/dispatchlabel/dispatchlabel.php:172
+#: public/modules/invoice/invoice.php:1302
+#: public/modules/packinglist/packinglist.php:209
+#: public/modules/shippinglabel/shippinglabel.php:163
+msgid "Pro version"
+msgstr "نسخه حرفه‌ای"
+
+#: admin/modules/customizer/views/_customize_properties.php:384
+#: public/modules/invoice/invoice.php:1310
+#: public/modules/shippinglabel/shippinglabel.php:169
+msgid "Order Number"
+msgstr "شماره سفارش"
+
+#: admin/modules/customizer/views/_customize_properties.php:385
+#: public/modules/invoice/invoice.php:1309 public/modules/invoice/invoice.php:1579
+msgid "Invoice Number"
+msgstr "شماره فاکتور"
+
+#: admin/modules/customizer/views/_customize_properties.php:386
+msgid "Custom Meta"
+msgstr "متا سفارشی"
+
+#: admin/modules/customizer/views/_customize_properties.php:391
+msgid "Add barcode data"
+msgstr "معلومات بارکد را اضافه کنید"
+
+#: admin/modules/customizer/views/_customize_properties.php:404
+msgid "Custom Metadata"
+msgstr "میتا دیتا سفارشی"
+
+#: admin/modules/customizer/views/_customize_properties.php:418
 msgid "Table head background"
 msgstr "پس زمینه بالای جدول"
 
-#: admin/modules/customizer/views/_customize_properties.php:361
+#: admin/modules/customizer/views/_customize_properties.php:425
 msgid "Table head text color"
 msgstr "رنگ متن بالای جدول"
 
-#: admin/modules/customizer/views/_customize_properties.php:368
+#: admin/modules/customizer/views/_customize_properties.php:432
 msgid "Table body text color"
 msgstr "رنگ متن بدنه جدول"
 
-#: admin/modules/customizer/views/_customize_properties.php:382
+#: admin/modules/customizer/views/_customize_properties.php:446
 msgid "Serial No label"
 msgstr "برچسب شماره سریال"
 
-#: admin/modules/customizer/views/_customize_properties.php:388
+#: admin/modules/customizer/views/_customize_properties.php:452
 msgid "Serial no text align"
 msgstr "تراز سریال بدون متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:405
+#: admin/modules/customizer/views/_customize_properties.php:469
 msgid "Image label"
 msgstr "تصویر برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:411
+#: admin/modules/customizer/views/_customize_properties.php:475
 msgid "Image text align"
 msgstr "تراز متن تصویر"
 
-#: admin/modules/customizer/views/_customize_properties.php:428
+#: admin/modules/customizer/views/_customize_properties.php:492
 msgid "SKU label"
 msgstr "کد انبار برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:434
+#: admin/modules/customizer/views/_customize_properties.php:498
 msgid "SKU text align"
 msgstr "تراز متن کد انبار"
 
-#: admin/modules/customizer/views/_customize_properties.php:451
+#: admin/modules/customizer/views/_customize_properties.php:515
 msgid "Product label"
 msgstr "برچسب محصول"
 
-#: admin/modules/customizer/views/_customize_properties.php:457
+#: admin/modules/customizer/views/_customize_properties.php:521
 msgid "Product text align"
 msgstr "تراز متن محصول"
 
-#: admin/modules/customizer/views/_customize_properties.php:474
+#: admin/modules/customizer/views/_customize_properties.php:538
+msgid "GTIN label"
+msgstr "لیبل"
+
+#: admin/modules/customizer/views/_customize_properties.php:544
+msgid "GTIN text align"
+msgstr "تراز متن"
+
+#: admin/modules/customizer/views/_customize_properties.php:561
 msgid "Qty label"
 msgstr "تعداد برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:480
+#: admin/modules/customizer/views/_customize_properties.php:567
 msgid "Qty text align"
 msgstr "تراز مقدار متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:497
+#: admin/modules/customizer/views/_customize_properties.php:584
 msgid "Price label"
 msgstr "برچسب قیمت"
 
-#: admin/modules/customizer/views/_customize_properties.php:503
+#: admin/modules/customizer/views/_customize_properties.php:590
 msgid "Price text align"
 msgstr "تراز متن قیمت"
 
-#: admin/modules/customizer/views/_customize_properties.php:520
+#: admin/modules/customizer/views/_customize_properties.php:607
 msgid "Tax label"
 msgstr "برچسب مالیات"
 
-#: admin/modules/customizer/views/_customize_properties.php:526
+#: admin/modules/customizer/views/_customize_properties.php:613
 msgid "Tax text align"
 msgstr "تراز متن مالیات"
 
-#: admin/modules/customizer/views/_customize_properties.php:543
+#: admin/modules/customizer/views/_customize_properties.php:630
 msgid "Total weight label"
 msgstr "برچسب وزن کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:549
+#: admin/modules/customizer/views/_customize_properties.php:636
 msgid "Total weight text align"
 msgstr "تراز متن وزن کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:566
+#: admin/modules/customizer/views/_customize_properties.php:653
 msgid "Total label"
 msgstr "برچسب کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:572
+#: admin/modules/customizer/views/_customize_properties.php:659
 msgid "Total text align"
 msgstr "تراز متن برچسب کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:586
+#: admin/modules/customizer/views/_customize_properties.php:673
 msgid "Signature type"
 msgstr "نوع امضا"
 
-#: admin/modules/customizer/views/_customize_properties.php:590
+#: admin/modules/customizer/views/_customize_properties.php:677
 msgid "Manual Signature"
 msgstr "امضای دستی"
 
-#: admin/modules/customizer/views/_customize_properties.php:591
+#: admin/modules/customizer/views/_customize_properties.php:678
 msgid "Image Signature"
 msgstr "امضای تصویری"
 
-#: admin/modules/customizer/views/_customize_properties.php:608
+#: admin/modules/customizer/views/_customize_properties.php:695
 msgid "Align"
 msgstr "تراز"
 
-#: admin/modules/customizer/views/_customize_properties.php:625
+#: admin/modules/customizer/views/_customize_properties.php:712
 msgid "Label"
 msgstr "برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:704
+#: admin/modules/customizer/views/_customize_properties.php:791
 msgid "Note"
 msgstr "توجه داشته باشید"
 
-#: admin/modules/customizer/views/_customize_properties.php:705
+#: admin/modules/customizer/views/_customize_properties.php:792
 msgid ""
 "Displays customer`s VAT number saved in the order details by third-party "
 "plugins in this document. Supported meta keys are"
@@ -1908,35 +2149,35 @@ msgstr ""
 "شماره VAT مشتری ذخیره شده در جزئیات سفارش توسط افزونه های شخص ثالث در این سند "
 "را نشان می دهد. کلیدهای متا پشتیبانی می شوند"
 
-#: admin/modules/customizer/views/_customize_properties.php:707
+#: admin/modules/customizer/views/_customize_properties.php:794
 msgid "To add a different meta key"
 msgstr "برای افزودن یک متا کلید متفاوت"
 
-#: admin/modules/customizer/views/_customize_properties.php:708
+#: admin/modules/customizer/views/_customize_properties.php:795
 msgid "Upgrade to premium"
 msgstr "ارتقا به نسخه پرمیوم"
 
-#: admin/modules/customizer/views/_customize_properties.php:767
+#: admin/modules/customizer/views/_customize_properties.php:854
 #: admin/views/premium_extension_page.php:141
-#: public/modules/deliverynote/views/admin-settings.php:115
-#: public/modules/dispatchlabel/views/admin-settings.php:113
+#: public/modules/deliverynote/views/general.php:156
+#: public/modules/dispatchlabel/views/general.php:141
 #: public/modules/invoice/views/invoice-admin-settings.php:93
-#: public/modules/packinglist/views/general.php:159
+#: public/modules/packinglist/views/general.php:174
 #: public/modules/shippinglabel/views/admin-settings.php:110
 msgid "Show More"
 msgstr "بیشتر نشان بده، اطلاعات بیشتر"
 
-#: admin/modules/customizer/views/_customize_properties.php:768
+#: admin/modules/customizer/views/_customize_properties.php:855
 #: admin/views/premium_extension_page.php:142
-#: public/modules/deliverynote/views/admin-settings.php:116
-#: public/modules/dispatchlabel/views/admin-settings.php:114
+#: public/modules/deliverynote/views/general.php:157
+#: public/modules/dispatchlabel/views/general.php:142
 #: public/modules/invoice/views/invoice-admin-settings.php:94
-#: public/modules/packinglist/views/general.php:160
+#: public/modules/packinglist/views/general.php:175
 #: public/modules/shippinglabel/views/admin-settings.php:111
 msgid "Show Less"
 msgstr "نمایش کمتر"
 
-#: admin/modules/customizer/views/_customize_properties.php:772
+#: admin/modules/customizer/views/_customize_properties.php:859
 #: admin/views/premium_extension_page.php:146
 msgid "Checkout Premium"
 msgstr "پرداخت حق بیمه"
@@ -1955,108 +2196,104 @@ msgstr "سفارش"
 
 #: admin/modules/customizer/views/_pdf_preview.php:34
 #: admin/modules/customizer/views/_pdf_preview.php:35
-#: admin/partials/form_wizard/form_wizard.php:503
+#: admin/partials/form_wizard/form_wizard.php:508
 #: admin/views/_form_field_generator_new.php:860
 #: public/modules/invoice/views/qrcode_promote.php:37
 msgid "Order number"
 msgstr "شماره سفارش"
 
-#: admin/modules/customizer/views/customize.php:591
+#: admin/modules/customizer/views/customize.php:723
 #: admin/views/admin-settings-debug.php:159
 msgid "Templates"
 msgstr "قالب‌ها"
 
-#: admin/modules/customizer/views/customize.php:596
+#: admin/modules/customizer/views/customize.php:728
 msgid "Type template name to search"
 msgstr "برای جستجو نام قالب را تایپ کنید"
 
-#: admin/modules/customizer/views/customize.php:608
+#: admin/modules/customizer/views/customize.php:740
 msgid "Choose a layout."
 msgstr "یک طرح را انتخاب کنید."
 
-#: admin/modules/customizer/views/customize.php:614
+#: admin/modules/customizer/views/customize.php:746
 msgid "All unsaved changes will be lost upon switching to a new layout."
 msgstr "تمام تغییرات ذخیره نشده با تغییر به یک طرح جدید از دست خواهند رفت."
 
-#: admin/modules/customizer/views/customize.php:616
+#: admin/modules/customizer/views/customize.php:748
 msgid "Save before you proceed."
 msgstr "قبل از ادامه اقدام به ذخیره کنید."
 
-#: admin/modules/customizer/views/customize.php:617
+#: admin/modules/customizer/views/customize.php:749
 msgid "Saving..."
 msgstr "درحال ذخیره…"
 
-#: admin/modules/customizer/views/customize.php:660
-#, fuzzy
-#| msgid "Generate custom-sized shipping labels"
+#: admin/modules/customizer/views/customize.php:792
 msgid "Get access to more shipping label templates."
-msgstr "برچسب های حمل و نقل با اندازه سفارشی ایجاد کنید"
-
-#: admin/modules/customizer/views/customize.php:661
-msgid "Get access to more invoice templates."
-msgstr ""
-
-#: admin/modules/customizer/views/customize.php:673
-#, fuzzy
-#| msgid "Upgrade to premium"
-msgid "Upgrade to Pro"
-msgstr "ارتقا به نسخه پرمیوم"
-
-#: admin/modules/customizer/views/customize.php:787
-#, fuzzy
-#| msgid "Untitled template"
-msgid "Update template"
-msgstr "قالب بدون نام"
-
-#: admin/modules/customizer/views/customize.php:790
-#, fuzzy
-#| msgid "My templates"
-msgid "Save template"
-msgstr "قالب‌های من"
+msgstr "به قالب های لیبل حمل و نقل بیشتر دسترسی پیدا کنید."
 
 #: admin/modules/customizer/views/customize.php:793
+msgid "Get access to more invoice templates."
+msgstr "به قالب های بیشتر فاکتور دسترسی پیدا کنید."
+
+#: admin/modules/customizer/views/customize.php:914
+msgid "This preview reflects your current settings from the General tab."
+msgstr "این پیش نمایش تنظیمات فعلی شما را از زبانه عمومی منعکس میسازد."
+
+#: admin/modules/customizer/views/customize.php:923
+msgid "Update template"
+msgstr "بروزرسانی قالب"
+
+#: admin/modules/customizer/views/customize.php:926
+msgid "Save template"
+msgstr "ذخیره قالب"
+
+#: admin/modules/customizer/views/customize.php:929
 msgid "Save and activate"
 msgstr "ذخیره و فعال کنید"
 
-#: admin/modules/customizer/views/customize.php:804
+#: admin/modules/customizer/views/customize.php:940
 msgid "Create new"
 msgstr "ساختن جدید"
 
-#: admin/modules/customizer/views/customize.php:805
+#: admin/modules/customizer/views/customize.php:941
 msgid "My templates"
 msgstr "قالب‌های من"
 
-#: admin/modules/customizer/views/customize.php:814
+#: admin/modules/customizer/views/customize.php:951
 msgid "This template is not comaptible with QR Code addon plugin"
 msgstr "این قالب با افزونه کد QR سازگار نیست"
 
 #. translators: %s: Template display name (invoice, packing list, etc.)
-#: admin/modules/customizer/views/customize.php:843
-#, fuzzy, php-format
-#| msgid ""
-#| "Unlock limitless possibilities of invoice customization with the addon -"
+#: admin/modules/customizer/views/customize.php:980
+#, php-format
 msgid "Unlock limitless possibilities of %s customization with the addon -"
-msgstr "باز کردن امکانات بی حد و حصر سفارشی سازی فاکتور با افزونه -"
+msgstr "امکانات بی حد و حصر سفارشی سازی %s را با افزونه باز کنید -"
 
-#: admin/modules/customizer/views/customize.php:844
+#: admin/modules/customizer/views/customize.php:981
 msgid "Customizer for WooCommerce PDF Invoices Plugin"
 msgstr "سفارشی ساز برای افزونه فاکتورهای PDF WooCommerce"
 
-#: admin/modules/customizer/views/customize.php:851
-#: admin/modules/customizer/views/customize.php:862
+#: admin/modules/customizer/views/customize.php:988
+#: admin/modules/customizer/views/customize.php:999
 msgid "Visual"
 msgstr "دیداری"
 
-#: admin/modules/customizer/views/customize.php:852
-#: admin/modules/customizer/views/customize.php:865
+#: admin/modules/customizer/views/customize.php:989
+#: admin/modules/customizer/views/customize.php:1002
 msgid "Code"
 msgstr "کد"
 
-#: admin/modules/customizer/views/customize.php:865
-#: public/modules/invoice/invoice.php:1269
-#: public/modules/shippinglabel/shippinglabel.php:163
-msgid "Pro version"
-msgstr "نسخه حرفه‌ای"
+#: admin/modules/customizer/views/customize.php:1025
+msgid "Premium features"
+msgstr "امکانات نسخه پریمیوم"
+
+#. translators: %s: document type name (e.g. packing slip, invoice, credit note)
+#: admin/modules/customizer/views/customize.php:1028
+#, php-format
+msgid "Toggle the pro features on and off to see how they transform your %s."
+msgstr ""
+"ویژگی های حرفه ای را روشن و خاموش کنید تا ببینید که چگونه آنها %s شما را تغییر "
+"می دهند."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:41
 msgid "I couldn't understand how to make it work"
@@ -2086,17 +2323,14 @@ msgid ""
 msgstr "از دست رفتن پشتیبانی زبان (مانند چینی، عربی و غیره) برای سند PDF."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:59
-#, fuzzy, php-format
-#| msgid "Already tried the free %s WebToffee mPDF addon %s."
+#, php-format
 msgid "Already tried the free %1$s WebToffee mPDF addon %2$s."
-msgstr ""
-"آیا قبلا %s برنامه افزودنی WebToffee mPDF addon ( لازمه استفاده از زبان‌های "
-"راست‌چین) %s را امتحان کردید."
+msgstr "قبلاً افزونه رایگان %1$s WebToffee mPDF %2$s را امتحان کرده اید."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:59
 msgid ""
 " Click the link to activate the plugin and try printing the document again."
-msgstr ""
+msgstr "برای فعال کردن پلاگین روی لینک کلیک کنید و سند را دوباره چاپ کنید."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:67
 msgid "I am unable to add customer VAT(or GSTIN or ABN or any other tax id etc)"
@@ -2160,21 +2394,17 @@ msgstr ""
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:163
 msgid "WebToffee can contact me about this feedback."
-msgstr ""
+msgstr "WebToffee میتواند در مورد این بازخورد با من تماس بگیرد."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:166
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:106
-#, fuzzy
-#| msgid "Alter billing address"
 msgid "Enter your email address."
-msgstr "آدرس صورتحساب را تغییر دهید"
+msgstr "آدرس ایمیل خود را وارد کنید."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:168
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:107
-#, fuzzy
-#| msgid "Alter billing address"
 msgid "Enter email address"
-msgstr "آدرس صورتحساب را تغییر دهید"
+msgstr "آدرس ایمیل خود را وارد کنید"
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:171
 msgid "Delete all the settings made by this plugin"
@@ -2205,85 +2435,73 @@ msgid "I rather wouldn't say"
 msgstr "ترجیح می‌دهم که نگویم"
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:309
-#, fuzzy
-#| msgid "Please enter mandatory fields"
 msgid "Please enter a valid email address."
-msgstr "لطفا رشته های اجباری را وارد کنید"
+msgstr "لطفا یک آدرس ایمیل معتبر وارد کنید."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:72
-#, fuzzy
-#| msgid "Please enter name"
 msgid "Please enter a message"
-msgstr "لطفا نام را وارد کنید"
+msgstr "لطفا یک پیام بگذارید"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:73
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:149
 msgid "We need your email address to contact you back."
-msgstr ""
+msgstr "ما به ایمیل آدرس شما نیاز داریم تا با شما تماس بگیریم."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:74
-#, fuzzy
-#| msgid "Saving..."
 msgid "Sending..."
-msgstr "درحال ذخیره…"
+msgstr "درحال ارسال..."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:75
 msgid "Unable to submit. Please try again later."
-msgstr ""
+msgstr "قادر به ارسال نیست. لطفاً بعداً دوباره امتحان کنید."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:76
 msgid "Thank you for your valuable suggestion."
-msgstr ""
+msgstr "تشکر از پیشنهاد ارزشمند تان."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:85
 msgid "Looking for a feature we don't have?"
-msgstr ""
+msgstr "آیا به دنبال یک ویژگی هستید که نداریم؟"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:85
-#, fuzzy
-#| msgid "Required"
 msgid "Request it here"
-msgstr "مورد نیاز"
+msgstr "اینجا درخواست کنید"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:89
 msgid "Missing a feature?"
-msgstr ""
+msgstr "آیا یک ویژگی را از دست میدهید؟"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:90
 msgid "Drop a message to let us know!"
-msgstr ""
+msgstr "یک پیام بگذارید تا ما را مطلع سازید!"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:98
-#, fuzzy
-#| msgid "Would you like us to assist you?"
 msgid "What would you like to add as a new feature?"
-msgstr "آیا دوست دارید ما به شما کمک کنیم؟"
+msgstr "شما میخواهید چه چیزی را منحیث یک ویژگی جدید اضافه کنید؟"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:99
 msgid "More the details you share, the better."
-msgstr ""
+msgstr "جزئیات بیشتری که شما به اشتراک بگذارید، بهتر است."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:100
 msgid "I would like..."
-msgstr ""
+msgstr "من دوست دارم كه."
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:102
 msgid "WebToffee can contact me about this feedback"
-msgstr ""
+msgstr "WebToffee میتواند در مورد این بازخورد با من تماس بگیرد"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:112
 msgid "Send feature request"
-msgstr ""
+msgstr "تقاضای ویژه ارسال"
 
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:145
-#, fuzzy
-#| msgid "Please enter order number"
 msgid "Please enter your message."
-msgstr "لطفا شماره سفارش را وارد کنید"
+msgstr "لطفا پیام خود را وارد کنید."
 
 #: admin/partials/admin-settings.php:19
 msgid "Documents"
-msgstr "اسناد"
+msgstr "مستندات"
 
 #: admin/partials/admin-settings.php:20
 #: public/modules/deliverynote/views/admin-settings.php:7
@@ -2386,7 +2604,7 @@ msgid "Recommended size is 150x50px."
 msgstr "اندازه پیشنهادی 150x50px است."
 
 #: admin/partials/form_wizard/form_wizard.php:460
-#: admin/partials/form_wizard/form_wizard.php:481
+#: admin/partials/form_wizard/form_wizard.php:486
 msgid "Next"
 msgstr "بعدی"
 
@@ -2406,58 +2624,56 @@ msgstr ""
 "ایمیل های سفارشی را انتخاب کنید که می خواهید فاکتورهای مشتریان خود را به آنها "
 "پیوست کنید"
 
-#: admin/partials/form_wizard/form_wizard.php:482
-#: admin/partials/form_wizard/form_wizard.php:666
+#: admin/partials/form_wizard/form_wizard.php:487
+#: admin/partials/form_wizard/form_wizard.php:671
 msgid "Back"
 msgstr "شاته"
 
-#: admin/partials/form_wizard/form_wizard.php:486
+#: admin/partials/form_wizard/form_wizard.php:491
 msgid "Create your unique invoice numbering system"
 msgstr "سیستم شماره گذاری فاکتور منحصر به فرد خود را ایجاد کنید"
 
-#: admin/partials/form_wizard/form_wizard.php:489
+#: admin/partials/form_wizard/form_wizard.php:494
 msgid "Complete the invoice number format to suit your requirements"
 msgstr "فرمت شماره فاکتور را مطابق با نیاز خود تکمیل کنید"
 
-#: admin/partials/form_wizard/form_wizard.php:504
+#: admin/partials/form_wizard/form_wizard.php:509
 #: admin/views/_form_field_generator_new.php:864
 msgid "Custom number"
 msgstr "سفارشی"
 
-#: admin/partials/form_wizard/form_wizard.php:516
+#: admin/partials/form_wizard/form_wizard.php:521
 #: admin/views/_form_field_generator_new.php:738
 msgid "Type in prefix/ suffix / date format if required"
 msgstr "در صورت نیاز فرمت پیشوند / پسوند / تاریخ را تایپ کنید"
 
-#: admin/partials/form_wizard/form_wizard.php:529
+#: admin/partials/form_wizard/form_wizard.php:534
 #: admin/views/_form_field_generator_new.php:774
-#, fuzzy
-#| msgid "Supported address types"
 msgid "Supported shortcodes for date"
-msgstr "انواع آدرس های پشتیبانی شده"
+msgstr "کدهای کوتاه پشتیبانی شده برای تاریخ"
 
-#: admin/partials/form_wizard/form_wizard.php:591
+#: admin/partials/form_wizard/form_wizard.php:596
 msgid "What should be the starting number for your invoices?"
 msgstr "شماره شروع فاکتورهای شما چقدر باید باشد؟"
 
-#: admin/partials/form_wizard/form_wizard.php:601
+#: admin/partials/form_wizard/form_wizard.php:606
 msgid "What length would you prefer for your invoice number"
 msgstr "چه طولی را برای شماره فاکتور خود ترجیح می دهید"
 
-#: admin/partials/form_wizard/form_wizard.php:633
+#: admin/partials/form_wizard/form_wizard.php:638
 #: admin/views/_form_field_generator_new.php:920
 #: public/modules/invoice/views/invoice_number_preview.php:30
 msgid "PREVIEW"
 msgstr "پیش نمایش"
 
-#: admin/partials/form_wizard/form_wizard.php:639
+#: admin/partials/form_wizard/form_wizard.php:644
 #: admin/views/_form_field_generator_new.php:926
 #: public/modules/invoice/views/invoice_number_preview.php:33
 msgid "If the order number is"
 msgstr "اگر شماره سفارش باشد"
 
 #. translators: %s: Document type (invoice, packing list, etc.)
-#: admin/partials/form_wizard/form_wizard.php:644
+#: admin/partials/form_wizard/form_wizard.php:649
 #: admin/views/_form_field_generator_new.php:931
 #: public/modules/invoice/views/invoice_number_preview.php:37
 #, php-format
@@ -2465,116 +2681,96 @@ msgid "the %s number would be"
 msgstr "شماره %s خواهد بود"
 
 #. translators: %s: Document type (invoice, packing list, etc.)
-#: admin/partials/form_wizard/form_wizard.php:652
+#: admin/partials/form_wizard/form_wizard.php:657
 #: admin/views/_form_field_generator_new.php:939
 #: public/modules/invoice/views/invoice_number_preview.php:42
 #, php-format
 msgid "Your next %s number would be"
 msgstr "شماره %s بعدی شما خواهد بود"
 
-#: admin/partials/form_wizard/form_wizard.php:665
-#: admin/partials/form_wizard/form_wizard.php:709
+#: admin/partials/form_wizard/form_wizard.php:670
+#: admin/partials/form_wizard/form_wizard.php:714
 msgid "Finish setup"
 msgstr "راه اندازی را تمام کنید"
 
-#: admin/partials/form_wizard/form_wizard.php:683
+#: admin/partials/form_wizard/form_wizard.php:688
 msgid "Invoice setup successfully"
 msgstr "تنظیم فاکتور با موفقیت انجام شد"
 
-#: admin/partials/form_wizard/form_wizard.php:695
-#, fuzzy
-#| msgid "Skip invoice setup"
-msgid "Skip setup?"
-msgstr "رد شدن از تنظیم فاکتور"
-
 #: admin/partials/form_wizard/form_wizard.php:700
+msgid "Skip setup?"
+msgstr "بی خیال شدن راه اندازی"
+
+#: admin/partials/form_wizard/form_wizard.php:705
 msgid "We recommend completing the setup to ensure the plugin works properly."
 msgstr ""
+"ما توصیه میکنیم که تنظیم را تکمیل کنید تا مطمئن شوید که پلاگین به درستی کار "
+"میکند."
 
-#: admin/partials/form_wizard/form_wizard.php:706
+#: admin/partials/form_wizard/form_wizard.php:711
 msgid "Skip anyway"
-msgstr ""
+msgstr "به هر حال بپرید"
 
 #: admin/partials/marketing-cta/marketing-cta.php:36
 #: admin/partials/marketing-cta/marketing-cta.php:63
-#, fuzzy
-#| msgid "Invoice No:"
 msgid "Invoice Icons"
-msgstr "شماره فاکتور:"
+msgstr "آیکون های فاکتور"
 
 #: admin/partials/marketing-cta/marketing-cta.php:40
 msgid "All-in-One WooCommerce Invoice & Shipping Documents Bundle"
-msgstr ""
+msgstr "بسته اسناد و اسناد حمل و نقل همه در یک WooCommerce"
 
 #: admin/partials/marketing-cta/marketing-cta.php:41
 msgid ""
 "Generate and print all essential WooCommerce documents, including invoices, "
 "packing slips, shipping labels, and more—all in one powerful invoice bundle."
 msgstr ""
+"تمام اسناد ضروری WooCommerce را تولید و چاپ کنید، بشمول فاکتورها، برگه های بسته "
+"بندی، لیبل های حمل و نقل، و موارد دیگر—همه در یک بسته فاکتور قوی."
 
 #: admin/partials/marketing-cta/marketing-cta.php:44
-#, fuzzy
-#| msgid "Invoice"
 msgid "Invoices"
-msgstr "فاکتور"
+msgstr "فاکتورها"
 
 #: admin/partials/marketing-cta/marketing-cta.php:45
-#, fuzzy
-#| msgid "Packing slip"
 msgid "Packing Slips"
-msgstr "حواله ارسال"
+msgstr "خطاهای بسته بندی"
 
 #: admin/partials/marketing-cta/marketing-cta.php:46
-#, fuzzy
-#| msgid "Credit note"
 msgid "Credit Notes"
-msgstr "یادداشت اعتباری"
+msgstr "یادداشت های بستانکاری"
 
 #: admin/partials/marketing-cta/marketing-cta.php:47
-#, fuzzy
-#| msgid "Address labels"
 msgid "Address Labels"
-msgstr "برچسب های آدرس"
+msgstr "لیبل های آدرس"
 
 #: admin/partials/marketing-cta/marketing-cta.php:48
-#, fuzzy
-#| msgid "Delivery note"
 msgid "Delivery Notes"
-msgstr "یادداشت تحویل"
+msgstr "یادداشت های تحویل"
 
 #: admin/partials/marketing-cta/marketing-cta.php:49
-#, fuzzy
-#| msgid "Dispatch Label"
 msgid "Dispatch Labels"
-msgstr "برچسب ارسال"
+msgstr "لیبل های ارسال"
 
 #: admin/partials/marketing-cta/marketing-cta.php:50
-#, fuzzy
-#| msgid "Shipping Label"
 msgid "Shipping Labels"
-msgstr "برچسب حمل"
+msgstr "لیبل های حمل و نقل"
 
 #: admin/partials/marketing-cta/marketing-cta.php:51
-#, fuzzy
-#| msgid "Pick lists"
 msgid "Picklists"
-msgstr "لیست های انتخابی"
+msgstr "لیست های انتخاب"
 
 #: admin/partials/marketing-cta/marketing-cta.php:52
-#, fuzzy
-#| msgid "Proforma invoices"
 msgid "Proforma Invoices"
 msgstr "پیش فاکتورها"
 
 #: admin/partials/marketing-cta/marketing-cta.php:55
 msgid "Get Bundle Now"
-msgstr ""
+msgstr "حالا بندل را بدست بیاورید"
 
 #: admin/partials/marketing-cta/marketing-cta.php:60
-#, fuzzy
-#| msgid "Invoice date"
 msgid "Invoice Bundle"
-msgstr "تاریخ فاکتور"
+msgstr "بسته فاکتور"
 
 #: admin/views/_custom_field_editor_form.php:19
 #: admin/views/_custom_field_editor_form.php:22
@@ -2669,10 +2865,8 @@ msgid "Invoice number format"
 msgstr "فرمت شماره فاکتور"
 
 #: admin/views/_form_field_generator_new.php:739
-#, fuzzy
-#| msgid "Invoice number"
 msgid "Invoice starting number"
-msgstr "شماره فاکتور"
+msgstr "شماره شروع فاکتور"
 
 #: admin/views/_form_field_generator_new.php:740
 msgid "Invoice number length"
@@ -2844,9 +3038,9 @@ msgstr "کد را کپی کنید"
 
 #: admin/views/admin-settings-save-button-form-wizard.php:6
 #: admin/views/admin-settings-save-button.php:6
-#: public/modules/deliverynote/views/general.php:91
-#: public/modules/dispatchlabel/views/general.php:77
-#: public/modules/packinglist/views/general.php:93
+#: public/modules/deliverynote/views/general.php:92
+#: public/modules/dispatchlabel/views/general.php:78
+#: public/modules/packinglist/views/general.php:108
 #: public/modules/shippinglabel/views/general.php:63
 msgid "Update Settings"
 msgstr "به روز رسانی تنظیمات"
@@ -2886,13 +3080,11 @@ msgstr "برای اجرای بهتر توصیه می شود"
 
 #: admin/views/admin-settings-system-info.php:46
 msgid "Required when using .webp images"
-msgstr ""
+msgstr "هنگام استفاده از تصاویر .webp مورد نیاز است"
 
 #: admin/views/admin-settings-system-info.php:49
-#, fuzzy
-#| msgid "Required if you have images in your documents"
 msgid "Required if you have .webp images in your documents"
-msgstr "در صورت داشتن تصاویر در اسناد خود الزامی است"
+msgstr "اگر شما در اسناد تان تصاویر .webp دارید نیاز است"
 
 #: admin/views/admin-settings-system-info.php:52
 msgid "To compress PDF documents"
@@ -2909,11 +3101,11 @@ msgstr "برای اجرای بهتر"
 #: admin/views/admin-settings-system-info.php:64
 msgid ""
 "Required to detect custom templates and to clear the temp folder periodically"
-msgstr ""
+msgstr "برای تشخیص قالب های سفارشی و پاک کردن پوشه موقت بشکل دوره ای نیاز است"
 
 #: admin/views/admin-settings-system-info.php:67
 msgid "Check PHP disable_functions"
-msgstr ""
+msgstr "PHP disable_functions را چک کنید"
 
 #: admin/views/admin-settings-system-info.php:70
 msgid "Recommended 128MB or more"
@@ -2921,11 +3113,11 @@ msgstr "128 مگابایت یا بیشتر توصیه می شود"
 
 #: admin/views/admin-settings-system-info.php:75
 msgid "Necessary to verify the MIME type of local images."
-msgstr ""
+msgstr "برای تأیید نوع MIME تصاویر محلی ضروری است."
 
 #: admin/views/admin-settings-system-info.php:78
 msgid "fileinfo disabled"
-msgstr ""
+msgstr "معلومات فایل غیر فعال شده است"
 
 #: admin/views/admin-settings-system-info.php:81
 msgid "Allow remote stylesheets and images"
@@ -2936,8 +3128,6 @@ msgid "allow_url_fopen disabled"
 msgstr "allow_url_fopen غیرفعال است"
 
 #: admin/views/admin-settings-system-info.php:87
-#, fuzzy
-#| msgid "Writtable"
 msgid "Writable"
 msgstr "قابل نوشتن"
 
@@ -2951,57 +3141,51 @@ msgstr "حاضر"
 
 #: admin/views/customizer-promotion-popup.php:37
 #: admin/views/customizer-promotion-popup.php:60
-#, fuzzy
-#| msgid "Advanced filters and customizations for import and export"
+#: admin/views/customizer-promotion-popup.php:71
+#: admin/views/customizer-promotion-popup.php:82
 msgid "Get advanced customization options for"
-msgstr "فیلترها و سفارشی سازی های پیشرفته برای واردات و صادرات"
+msgstr "گزینه های سفارشی سازی پیشرفته را برای"
 
 #: admin/views/customizer-promotion-popup.php:37
-#, fuzzy
-#| msgid "Invoices, Packing slips and Credit notes"
 msgid "invoices, packing slips, and credit notes."
-msgstr "فاکتورها، برگه های بسته بندی و یادداشت های اعتباری"
+msgstr "فاکتورها، برگه های بسته بندی، و یادداشت های کریدت."
 
 #: admin/views/customizer-promotion-popup.php:39
-#, fuzzy
-#| msgid "Add additional data to invoice layout"
 msgid "Add additional fields to invoices"
-msgstr "داده های اضافی را به طرح فاکتور اضافه کنید"
+msgstr "بخش های اضافی را به فاکتور ها اضافه کنید"
 
 #: admin/views/customizer-promotion-popup.php:40
 #: admin/views/customizer-promotion-popup.php:63
-#, fuzzy
-#| msgid "Multiple pre-built layouts"
+#: admin/views/customizer-promotion-popup.php:74
+#: admin/views/customizer-promotion-popup.php:85
 msgid "Multiple pre-built templates"
-msgstr "چند طرح از پیش ساخته شده"
+msgstr "چندین قالب از قبل ساخته شده"
 
 #: admin/views/customizer-promotion-popup.php:41
 #: admin/views/customizer-promotion-popup.php:64
-#, fuzzy
-#| msgid "Customize shipping label size"
+#: admin/views/customizer-promotion-popup.php:75
+#: admin/views/customizer-promotion-popup.php:86
 msgid "Customize using Code Editor"
-msgstr "اندازه برچسب حمل و نقل را سفارشی کنید"
+msgstr "با استفاده از ویرایشگر کود سفارشی کنید"
 
 #: admin/views/customizer-promotion-popup.php:42
 #: admin/views/customizer-promotion-popup.php:65
-#, fuzzy
-#| msgid "View sample customization demo"
+#: admin/views/customizer-promotion-popup.php:76
+#: admin/views/customizer-promotion-popup.php:87
 msgid "More customization options"
-msgstr "مشاهده نسخه نمایشی سفارشی سازی"
+msgstr "شخصی‌سازی تنظیم‌ها"
 
 #: admin/views/customizer-promotion-popup.php:48
 msgid "Upgrade for more customization on packing slip"
-msgstr ""
+msgstr "برای سفارشی سازی بیشتر در برگه بسته بندی ارتقا دهید"
 
 #: admin/views/customizer-promotion-popup.php:50
-#, fuzzy
-#| msgid "Add custom footers to packing slips"
 msgid "Advanced customization option for packing slip templates"
-msgstr "فوترهای سفارشی را به برگه های بسته بندی اضافه کنید"
+msgstr "گزینه سفارشی سازی پیشرفته برای قالب های لغزش بسته بندی"
 
 #: admin/views/customizer-promotion-popup.php:51
 msgid "Show/hide fields like billing address, weight, product image etc"
-msgstr ""
+msgstr "نمایش/پنهان کردن بخش ها مانند آدرس صورت حساب، وزن، تصویر محصول و غیره"
 
 #: admin/views/customizer-promotion-popup.php:52
 msgid ""
@@ -3014,24 +3198,22 @@ msgid "Group and sort product table based on different conditions"
 msgstr "گروه بندی و مرتب سازی جدول محصولات بر اساس شرایط مختلف"
 
 #: admin/views/customizer-promotion-popup.php:54
-#, fuzzy
-#| msgid "View sample customization demo"
 msgid "Many more customization options"
-msgstr "مشاهده نسخه نمایشی سفارشی سازی"
+msgstr "گزینه های بیشتر سفارشی سازی"
 
 #: admin/views/customizer-promotion-popup.php:60
-#, fuzzy
-#| msgid "Shipping labels, Dispatch labels and Delivery notes"
+#: admin/views/customizer-promotion-popup.php:71
+#: admin/views/customizer-promotion-popup.php:82
 msgid "shipping labels, dispatch labels, and delivery notes."
-msgstr "برچسب های حمل و نقل، برچسب های ارسال و یادداشت های تحویل"
+msgstr "لیبل های حمل و نقل، لیبل های ارسال، و یادداشت های تحویل."
 
 #: admin/views/customizer-promotion-popup.php:62
-#, fuzzy
-#| msgid "Add order meta fields to shipping labels"
+#: admin/views/customizer-promotion-popup.php:73
+#: admin/views/customizer-promotion-popup.php:84
 msgid "Add additional fields to shipping labels"
-msgstr "فیلدهای متا سفارش را به برچسب های حمل و نقل اضافه کنید"
+msgstr "بخش های اضافی را به لیبل های حمل و نقل اضافه کنید"
 
-#: admin/views/customizer-promotion-popup.php:124 admin/views/freevspro.php:146
+#: admin/views/customizer-promotion-popup.php:146 admin/views/freevspro.php:146
 msgid "Upgrade To Premium"
 msgstr "ارتقا به نسخه پرمیوم"
 
@@ -3077,7 +3259,7 @@ msgstr "افزودنی را دریافت کنید"
 
 #: admin/views/documents.php:212
 msgid "30% OFF"
-msgstr ""
+msgstr "30% off"
 
 #: admin/views/freevspro.php:13
 msgid "Pick list"
@@ -3087,15 +3269,15 @@ msgstr "لیست انتخاب"
 msgid "Address label"
 msgstr "برچسب‌های آدرس"
 
-#: admin/views/freevspro.php:15 public/modules/invoice/views/general.php:187
+#: admin/views/freevspro.php:15 public/modules/invoice/views/general.php:202
 msgid "My account - Order lists page"
 msgstr "حساب من - صفحه فهرست های سفارش"
 
-#: admin/views/freevspro.php:16 public/modules/invoice/views/general.php:188
+#: admin/views/freevspro.php:16 public/modules/invoice/views/general.php:203
 msgid "My account - Order details page"
 msgstr "حساب من - صفحه جزئیات سفارش"
 
-#: admin/views/freevspro.php:17 public/modules/invoice/views/general.php:189
+#: admin/views/freevspro.php:17 public/modules/invoice/views/general.php:204
 msgid "Order email"
 msgstr "سفارش ایمیل"
 
@@ -3184,8 +3366,10 @@ msgstr ""
 "شناسه مالیات شرکت خود را مشخص کنید. برای مثال شما می توانید به عنوان مالیات بر "
 "ارزش افزوده وارد کنید: GB123456789 ، GSTIN: 0948745 یا ABN: 51 824 753 556"
 
-#: admin/views/general.php:79 public/modules/invoice/invoice.php:1298
-#: public/modules/invoice/invoice.php:1302
+#: admin/views/general.php:79 public/modules/deliverynote/deliverynote.php:198
+#: public/modules/dispatchlabel/dispatchlabel.php:177
+#: public/modules/invoice/invoice.php:1330 public/modules/invoice/invoice.php:1334
+#: public/modules/packinglist/packinglist.php:215
 #: public/modules/shippinglabel/shippinglabel.php:178
 msgid "Footer"
 msgstr "پابرگ"
@@ -3303,25 +3487,27 @@ msgstr "مسیر فایل"
 msgid "Automatic cleanup"
 msgstr "پاکسازی خودکار"
 
-#: admin/views/general.php:354 public/modules/deliverynote/views/general.php:29
-#: public/modules/deliverynote/views/general.php:44
-#: public/modules/deliverynote/views/general.php:59
-#: public/modules/dispatchlabel/views/general.php:30
-#: public/modules/dispatchlabel/views/general.php:45
-#: public/modules/packinglist/views/general.php:31
-#: public/modules/packinglist/views/general.php:46
-#: public/modules/packinglist/views/general.php:61
-msgid "Yes"
-msgstr "بله"
-
-#: admin/views/general.php:355 public/modules/deliverynote/views/general.php:30
+#: admin/views/general.php:354 public/modules/deliverynote/views/general.php:30
 #: public/modules/deliverynote/views/general.php:45
 #: public/modules/deliverynote/views/general.php:60
 #: public/modules/dispatchlabel/views/general.php:31
 #: public/modules/dispatchlabel/views/general.php:46
+#: public/modules/packinglist/views/general.php:31
+#: public/modules/packinglist/views/general.php:46
+#: public/modules/packinglist/views/general.php:61
+#: public/modules/packinglist/views/general.php:76
+msgid "Yes"
+msgstr "بله"
+
+#: admin/views/general.php:355 public/modules/deliverynote/views/general.php:31
+#: public/modules/deliverynote/views/general.php:46
+#: public/modules/deliverynote/views/general.php:61
+#: public/modules/dispatchlabel/views/general.php:32
+#: public/modules/dispatchlabel/views/general.php:47
 #: public/modules/packinglist/views/general.php:32
 #: public/modules/packinglist/views/general.php:47
 #: public/modules/packinglist/views/general.php:62
+#: public/modules/packinglist/views/general.php:77
 msgid "No"
 msgstr "نه"
 
@@ -4171,6 +4357,32 @@ msgstr "حذف مبتنی بر مکان برای بنر"
 msgid "Granular consent based on cookie categories"
 msgstr "رضایت کامل بر اساس دسته‌های کوکی"
 
+#: admin/views/premium_extension_listing.php:376
+msgid ""
+"Accessibility Tool Kit: WP Accessibility for WCAG, Section 508, ADA, EAA "
+"Compliance"
+msgstr "کیت ابزار دسترسی: دسترسی WP برای WCAG، بخش 508، ADA، انطباق EAA"
+
+#: admin/views/premium_extension_listing.php:379
+msgid "Build an accessible WordPress site that works for everyone"
+msgstr "یک سایت وردپرس قابل دسترس بسازید که برای همه کار کند"
+
+#: admin/views/premium_extension_listing.php:380
+msgid "Scan for accessibility issues"
+msgstr "برای مشکلات دسترسی اسکن کنید"
+
+#: admin/views/premium_extension_listing.php:381
+msgid "Get fix recommendations"
+msgstr "توصیه های اصلاح را بدست بیاورید"
+
+#: admin/views/premium_extension_listing.php:382
+msgid "Ensure WCAG compliance"
+msgstr "اطمینان از انطباق WCAG"
+
+#: admin/views/premium_extension_listing.php:383
+msgid "Inclusive web design made simple"
+msgstr "طرح ویب فراگیر ساده ساخته شده است"
+
 #: admin/views/premium_extension_page.php:81
 msgid "You are covered by our 30-Day Money Back Guarantee"
 msgstr "شما تحت پوشش 30 روز ضمانت برگشت وجه ما هستید"
@@ -4237,7 +4449,7 @@ msgid "Generate invoices for old orders"
 msgstr "برای سفارشات قدیمی فاکتور ایجاد کنید"
 
 #: admin/views/wt_ipc_free_pro.php:352
-#: public/modules/invoice/views/general.php:285
+#: public/modules/invoice/views/general.php:300
 msgid "Generate invoices for free orders"
 msgstr "برای سفارشات رایگان فاکتور ایجاد کنید"
 
@@ -4298,13 +4510,13 @@ msgstr "فیلدهای متا محصول را اضافه کنید"
 
 #: admin/views/wt_ipc_free_pro.php:567 admin/views/wt_pi_free_pro.php:178
 #: admin/views/wt_sdd_free_pro.php:200
-#: public/modules/deliverynote/views/admin-settings.php:72
-#: public/modules/dispatchlabel/views/admin-settings.php:69
+#: public/modules/deliverynote/views/general.php:113
+#: public/modules/dispatchlabel/views/general.php:97
 msgid "Add product attributes"
 msgstr "ویژگی های محصول را اضافه کنید"
 
 #: admin/views/wt_ipc_free_pro.php:598
-#: public/modules/invoice/views/general.php:250
+#: public/modules/invoice/views/general.php:265
 msgid "Custom logo for invoice"
 msgstr "لوگو/آرم/نشان/تجاری سفارشی برای فاکتور"
 
@@ -4358,7 +4570,7 @@ msgid "Order discount"
 msgstr "تخفیف سفارش"
 
 #: admin/views/wt_ipc_free_pro.php:772 admin/views/wt_ipc_free_pro.php:814
-#: public/modules/invoice/invoice.php:1314
+#: public/modules/invoice/invoice.php:1346
 msgid "Coupon info"
 msgstr "جزئیات کوپن تخفیف"
 
@@ -4379,7 +4591,7 @@ msgstr "پیش فاکتور به صورت خودکار برای وضعیت ها�
 msgid "Attach invoice PDF to order emails"
 msgstr "برای سفارش ایمیل، PDF فاکتور را پیوست کنید"
 
-#: admin/views/wt_pi_free_pro.php:38 public/modules/invoice/views/general.php:181
+#: admin/views/wt_pi_free_pro.php:38 public/modules/invoice/views/general.php:196
 msgid "Show print invoice button for customers"
 msgstr "نمایش دکمه چاپ فاکتور برای مشتریان"
 
@@ -4560,6 +4772,8 @@ msgid "Company logo"
 msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
 
 #: admin/views/wt_sdd_free_pro.php:328 admin/views/wt_sdd_free_pro.php:338
+#: public/modules/deliverynote/deliverynote.php:203
+#: public/modules/dispatchlabel/dispatchlabel.php:178
 msgid "Return policy"
 msgstr "دستورالعمل بازگشت"
 
@@ -4568,16 +4782,16 @@ msgid "Include product image in delivery note"
 msgstr "درج تصویر محصول در یادداشت تحویل"
 
 #: admin/views/wt_sdd_free_pro.php:358
-#: public/modules/deliverynote/views/general.php:38
-#: public/modules/dispatchlabel/views/general.php:24
-#: public/modules/packinglist/views/general.php:40
+#: public/modules/deliverynote/views/general.php:39
+#: public/modules/dispatchlabel/views/general.php:25
+#: public/modules/packinglist/views/general.php:55
 msgid "Add customer note"
 msgstr "درج یادداشت مشتری"
 
 #: admin/views/wt_sdd_free_pro.php:382
-#: public/modules/deliverynote/views/general.php:53
-#: public/modules/dispatchlabel/views/general.php:39
-#: public/modules/packinglist/views/general.php:55
+#: public/modules/deliverynote/views/general.php:54
+#: public/modules/dispatchlabel/views/general.php:40
+#: public/modules/packinglist/views/general.php:70
 msgid "Add footer"
 msgstr "درج پابرگ"
 
@@ -4588,35 +4802,33 @@ msgstr ""
 "ستون مالیات را در جدول محصول برای چندین گزینه مالیاتی در برچسب های ارسال جدا "
 "کنید"
 
-#: common/class-wt-pklist-common.php:663
-#, fuzzy
-#| msgid "Order email"
-msgid "Admin email"
-msgstr "سفارش ایمیل"
-
-#: common/class-wt-pklist-common.php:666
-msgid "Manual email"
-msgstr ""
-
-#: common/class-wt-pklist-common.php:678
-msgid "Admin email (Renewal order)"
-msgstr ""
-
 #: common/class-wt-pklist-common.php:679
-msgid "Manual email (Renewal order)"
-msgstr ""
-
-#: common/class-wt-pklist-common.php:680
-msgid "Order on-hold (Renewal order)"
-msgstr ""
-
-#: common/class-wt-pklist-common.php:681
-msgid "Order processing (Renewal order)"
-msgstr ""
+msgid "Admin email"
+msgstr "ایمیل ادمین"
 
 #: common/class-wt-pklist-common.php:682
+msgid "Manual email"
+msgstr "ایمیل دستی"
+
+#: common/class-wt-pklist-common.php:694
+msgid "Admin email (Renewal order)"
+msgstr "ایمیل مدیر (سفارش تمدید)"
+
+#: common/class-wt-pklist-common.php:695
+msgid "Manual email (Renewal order)"
+msgstr "ایمیل دستی (سفارش تمدید)"
+
+#: common/class-wt-pklist-common.php:696
+msgid "Order on-hold (Renewal order)"
+msgstr "سفارش در حال انتظار (سفارش تمدید)"
+
+#: common/class-wt-pklist-common.php:697
+msgid "Order processing (Renewal order)"
+msgstr "پروسس کردن سفارش (سفارش تمدید)"
+
+#: common/class-wt-pklist-common.php:698
 msgid "Order completed (Renewal order)"
-msgstr ""
+msgstr "سفارش تکمیل شد (سفارش تمدید)"
 
 #: includes/admin/class-wf-woocommerce-packing-list-admin_notices.php:29
 msgid "Invoice Generation In Progress"
@@ -4650,41 +4862,34 @@ msgstr ""
 
 #. translators: 1$s: Star emoji, 2$s: HTML span opening tag, 3$s: HTML span closing tag, 4$s: HTML span opening tag, 5$s: HTML span closing tag
 #: includes/class-wf-woocommerce-packing-list-review_request.php:64
-#, fuzzy, php-format
-#| msgid ""
-#| "WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels"
+#, php-format
 msgid ""
 "%1$s  %2$s  Loving %3$s  WooCommerce PDF Invoices, Packing Slips, Delivery "
 "Notes and Shipping Labels plugin? %4$s  Share Your Feedback! %5$s"
 msgstr ""
-"فاکتورهای PDF WooCommerce، برگه های بسته بندی، یادداشت های تحویل و برچسب های "
-"حمل و نقل"
-
-#: includes/class-wf-woocommerce-packing-list-review_request.php:67
-msgid "Remind me later"
-msgstr "بعدا یادآوری کن"
+"%1$s %2$s عاشق %3$s فاکتورهای WooCommerce PDF، برگه های بسته بندی، یادداشت های "
+"تحویل و پلاگین لیبل های حمل و نقل هستید؟ %4$s نظریات خود را به اشتراک بگذارید! "
+"%5$s"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:68
 msgid "Not interested"
-msgstr "مایل نیستم"
+msgstr "خوشم نیومد."
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:69
 msgid "Review now"
-msgstr "هم‌اکنون مرور می‌کنم"
+msgstr "بررسی کنید"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:70
 msgid "You deserve it"
-msgstr ""
+msgstr "سزاوار آن هستید. "
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:71
-#, fuzzy
-#| msgid "Remind me later"
 msgid "Nope, maybe later"
-msgstr "بعدا یادآوری کن"
+msgstr "نه ، شاید بعدا"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:72
 msgid "I already did"
-msgstr ""
+msgstr "انجام شده"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:80
 msgid "Knock, Knock!"
@@ -4706,26 +4911,20 @@ msgstr ""
 "حمل و نقل"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:85
-#, fuzzy
-#| msgid ""
-#| "That’s awesome! We’d love it if you take a moment to share what you think "
-#| "and help spread the word."
 msgid ""
 "That's awesome! We'd love it if you take a moment to share what you think and "
 "help spread the word."
 msgstr ""
-"این عالی است! خوشحال می شویم اگر لحظه ای نظر خود را به اشتراک بگذارید و به "
-"انتشار آن کمک کنید."
+"عالیه! خوشحال میشیم اگه یه لحظه وقت بذارید و نظرتون رو با ما در میون بذارید و "
+"به گسترش این موضوع کمک کنید."
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:87
 msgid "Rate us now"
 msgstr "اکنون به ما امتیاز دهید"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:190
-#, fuzzy
-#| msgid "Other"
 msgid "there"
-msgstr "سایر"
+msgstr "اونجا"
 
 #. translators: 1$s: User name in bold HTML, 2$s: HTML line break, 3$s: HTML bold opening tag, 4$s: HTML bold closing tag, 5$s: HTML bold opening tag, 6$s: HTML bold closing tag, 7$s: Double HTML line break, 8$s: HTML bold opening tag, 9$s: HTML bold closing tag, 10$s: Double HTML line break, 11$s: HTML line break with bold opening tag, 12$s: HTML bold closing tag
 #: includes/class-wf-woocommerce-packing-list-review_request.php:192
@@ -4738,54 +4937,52 @@ msgid ""
 "%8$s 5-star review. %9$s It would mean the world to us. %10$s Warm regards, "
 "%11$s Team WebToffee %12$s"
 msgstr ""
+"سلام %1$s، %2$s از اینکه می‌بینیم از افزونه‌ی فاکتورهای PDF ووکامرس، برگه‌های "
+"بسته‌بندی، یادداشت‌های تحویل و برچسب‌های حمل و نقل ما به خوبی استفاده می‌کنید، "
+"بسیار هیجان‌زده‌ایم! ماموریت ما این است که صدور فاکتور %3$s را تا حد امکان برای "
+"شما بی‌نقص و کارآمد کنیم. %7$s اگر این افزونه برای شما مفید بود، لطفاً یک نظر 5 "
+"ستاره‌ی %8$s برای ما بنویسید. %9$s این برای ما بسیار ارزشمند خواهد بود. %10$s با "
+"احترام، %11$s تیم WebToffee %12$s"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:428
 msgid "Did you know?"
-msgstr ""
+msgstr "میدانستید؟"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:429
 msgid ""
 "You can now bulk export PDF invoices, packing slips, and credit notes of "
 "WooCommerce orders with custom filters."
 msgstr ""
+"شما حالا میتوانید فاکتورهای PDF، برگه های بسته بندی، و یادداشت های کریدت "
+"سفارشات WooCommerce را با فیلترهای سفارشی به صورت عمده صادر کنید."
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:433
-#, fuzzy
-#| msgid "Checkout Premium"
 msgid "Checkout"
-msgstr "پرداخت حق بیمه"
+msgstr "Checkout"
 
 #. translators: 1$s: Active plugin name, 2$s: Current plugin name
 #: print-invoices-packing-slip-labels-for-woocommerce.php:51
-#, fuzzy, php-format
-#| msgid ""
-#| "The plugins %s and %s cannot be active in your store at the same time. "
-#| "Kindly deactivate one of these prior to activating the other."
+#, php-format
 msgid ""
 "The plugins %1$s and %2$s cannot be active in your store at the same time. "
 "Kindly deactivate one of these prior to activating the other."
 msgstr ""
-"افزونه های %s و %s نمی توانند همزمان در فروشگاه شما فعال باشند. لطفاً قبل از "
-"فعال سازی دیگری ، یکی از این موارد را غیرفعال کنید."
+"پلاگین های %1$s و %2$s نمیتوانند همزمان در فروشگاه شما فعال باشند. لطفاً یکی از "
+"اینها را قبل از فعال کردن دیگری غیرفعال کنید."
 
 #: print-invoices-packing-slip-labels-for-woocommerce.php:51
 msgid "Go to plugins page"
 msgstr "برو به صفحه افزونه ها"
 
 #. translators: 1$s: Plugin name, 2$s: Plugin name, 3$s: WooCommerce link opening tag, 4$s: WooCommerce link closing tag
-#: print-invoices-packing-slip-labels-for-woocommerce.php:208
-#, fuzzy, php-format
-#| msgid ""
-#| "%s WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels "
-#| "(Basic) %s is enabled but not effective. It requires %s WooCommerce %s in "
-#| "order to work."
+#: print-invoices-packing-slip-labels-for-woocommerce.php:214
+#, php-format
 msgid ""
 "%1$s %2$s is enabled but not effective. It requires %3$s WooCommerce %4$s in "
 "order to work."
 msgstr ""
-"%s فاکتورهای PDF WooCommerce ، برگه های بسته بندی ، یادداشت های تحویل و برچسب "
-"های حمل و نقل (عمومی) %s فعال است اما موثر نیست. برای کار نیاز به %s "
-"WooCommerce %s دارد."
+"%1$s %2$s فعال است مگر موثر نیست. این برای کار کردن نیاز به %3$s WooCommerce "
+"%4$s دارد."
 
 #: public/modules/deliverynote/data/data.templates.php:5
 msgid "Classic"
@@ -4804,100 +5001,131 @@ msgstr "یادداشت مشتری را به یادداشت تحویل اضافه
 msgid "Adds Footer to the delivery note"
 msgstr "پاورقی را به یادداشت تحویل اضافه می کند"
 
-#: public/modules/deliverynote/deliverynote.php:217
-#: public/modules/deliverynote/deliverynote.php:236
-#: public/modules/deliverynote/deliverynote.php:246
-#: public/modules/deliverynote/deliverynote.php:247
+#: public/modules/deliverynote/deliverynote.php:196
+#: public/modules/dispatchlabel/dispatchlabel.php:175
+#: public/modules/invoice/invoice.php:1316
+#: public/modules/packinglist/packinglist.php:213
+msgid "Shipping Address"
+msgstr "گیرنده"
+
+#: public/modules/deliverynote/deliverynote.php:199
+#: public/modules/dispatchlabel/dispatchlabel.php:179
+#: public/modules/invoice/invoice.php:1320
+#: public/modules/packinglist/packinglist.php:217
+#: public/modules/shippinglabel/shippinglabel.php:176
+msgid "SSN number"
+msgstr "شماره SSN"
+
+#: public/modules/deliverynote/deliverynote.php:200
+#: public/modules/dispatchlabel/dispatchlabel.php:180
+#: public/modules/invoice/invoice.php:1321
+#: public/modules/packinglist/packinglist.php:218
+#: public/modules/shippinglabel/shippinglabel.php:175
+msgid "VAT number"
+msgstr "شماره مالیات بر ارزش افزوده"
+
+#: public/modules/deliverynote/deliverynote.php:202
+msgid "Signature"
+msgstr "امضا"
+
+#: public/modules/deliverynote/deliverynote.php:204
+msgid "Bar code"
+msgstr "بارکد"
+
+#: public/modules/deliverynote/deliverynote.php:297
+#: public/modules/deliverynote/deliverynote.php:316
+#: public/modules/deliverynote/deliverynote.php:326
+#: public/modules/deliverynote/deliverynote.php:327
 msgid "Print Delivery note"
 msgstr "چاپ یادداشت تحویل"
 
-#: public/modules/deliverynote/deliverynote.php:230
+#: public/modules/deliverynote/deliverynote.php:310
 msgid "Print/Download Delivery note"
 msgstr "چاپ/دانلود یادداشت تحویل"
 
-#: public/modules/deliverynote/deliverynote.php:235
-#: public/modules/deliverynote/deliverynote.php:389
-#: public/modules/dispatchlabel/dispatchlabel.php:227
-#: public/modules/dispatchlabel/dispatchlabel.php:368
-#: public/modules/invoice/invoice.php:1508 public/modules/invoice/invoice.php:2063
-#: public/modules/packinglist/packinglist.php:245
-#: public/modules/packinglist/packinglist.php:418
+#: public/modules/deliverynote/deliverynote.php:315
+#: public/modules/deliverynote/deliverynote.php:469
+#: public/modules/dispatchlabel/dispatchlabel.php:303
+#: public/modules/dispatchlabel/dispatchlabel.php:444
+#: public/modules/invoice/invoice.php:1541 public/modules/invoice/invoice.php:2140
+#: public/modules/packinglist/packinglist.php:331
+#: public/modules/packinglist/packinglist.php:504
 #: public/modules/shippinglabel/shippinglabel.php:380
-#: public/modules/shippinglabel/shippinglabel.php:599
+#: public/modules/shippinglabel/shippinglabel.php:603
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:360
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:436
 msgid "Print"
 msgstr "چاپ یادداشت تحویل"
 
-#: public/modules/deliverynote/deliverynote.php:319
+#: public/modules/deliverynote/deliverynote.php:399
 msgid "Unable to print Delivery note. Please check the items in the order."
 msgstr "چاپ یادداشت تحویل میسر نشد. لطفا مورد را در سفارش بررسی نمایید."
 
-#: public/modules/deliverynote/views/admin-settings.php:66
+#: public/modules/deliverynote/views/general.php:12
+msgid "Configure the general settings required for the delivery note."
+msgstr "تنظیمات کلی مورد نیاز برای یادداشت تحویل را پیکربندی کنید."
+
+#: public/modules/deliverynote/views/general.php:24
+#: public/modules/packinglist/views/general.php:25
+msgid "Include product image"
+msgstr "شامل تصویر محصول"
+
+#: public/modules/deliverynote/views/general.php:107
 msgid "Multiple templates to personalize the document"
 msgstr "چندین الگو برای شخصی سازی سند"
 
-#: public/modules/deliverynote/views/admin-settings.php:67
+#: public/modules/deliverynote/views/general.php:108
 msgid "Add a print delivery note button to the order email"
 msgstr "یک دکمه یادداشت تحویل چاپ را به ایمیل سفارش اضافه کنید"
 
-#: public/modules/deliverynote/views/admin-settings.php:68
-#: public/modules/dispatchlabel/views/admin-settings.php:71
-#: public/modules/packinglist/views/general.php:112
+#: public/modules/deliverynote/views/general.php:109
+#: public/modules/dispatchlabel/views/general.php:99
+#: public/modules/packinglist/views/general.php:127
 msgid "Sort order items in the product table"
 msgstr "اقلام سفارش را در جدول محصول مرتب کنید"
 
-#: public/modules/deliverynote/views/admin-settings.php:69
+#: public/modules/deliverynote/views/general.php:110
 #: public/modules/invoice/views/invoice-admin-settings.php:24
-#: public/modules/packinglist/views/general.php:111
+#: public/modules/packinglist/views/general.php:126
 msgid "Group products by category"
 msgstr "گروه بندی محصولات بر اساس دسته بندی"
 
-#: public/modules/deliverynote/views/admin-settings.php:70
-#: public/modules/dispatchlabel/views/admin-settings.php:70
+#: public/modules/deliverynote/views/general.php:111
+#: public/modules/dispatchlabel/views/general.php:98
 #: public/modules/invoice/views/invoice-admin-settings.php:26
-#: public/modules/packinglist/views/general.php:113
+#: public/modules/packinglist/views/general.php:128
 msgid "Show variation data for variable products"
 msgstr "نمایش داده های تنوع برای محصولات متغیر"
 
-#: public/modules/deliverynote/views/admin-settings.php:71
+#: public/modules/deliverynote/views/general.php:112
 msgid "Add product & order meta fields"
 msgstr "فیلدهای متا محصول و سفارش را اضافه کنید"
 
-#: public/modules/deliverynote/views/admin-settings.php:73
+#: public/modules/deliverynote/views/general.php:114
 msgid "Generate shipping labels and dispatch labels"
 msgstr "برچسب های حمل و نقل و برچسب های ارسال را تولید کنید"
 
-#: public/modules/deliverynote/views/admin-settings.php:93
-#: public/modules/dispatchlabel/views/admin-settings.php:91
+#: public/modules/deliverynote/views/general.php:134
+#: public/modules/dispatchlabel/views/general.php:119
 #: public/modules/invoice/views/invoice-admin-settings.php:71
-#: public/modules/packinglist/views/general.php:137
+#: public/modules/packinglist/views/general.php:152
 #: public/modules/shippinglabel/views/admin-settings.php:88
 msgid "Get advanced features for your"
 msgstr "ویژگی های پیشرفته را برای خود دریافت کنید"
 
-#: public/modules/deliverynote/views/admin-settings.php:99
-#: public/modules/dispatchlabel/views/admin-settings.php:97
+#: public/modules/deliverynote/views/general.php:140
+#: public/modules/dispatchlabel/views/general.php:125
 #: public/modules/shippinglabel/views/admin-settings.php:94
 msgid "Shipping labels, Dispatch labels and Delivery notes"
 msgstr "برچسب های حمل و نقل، برچسب های ارسال و یادداشت های تحویل"
 
-#: public/modules/deliverynote/views/admin-settings.php:119
-#: public/modules/dispatchlabel/views/admin-settings.php:117
+#: public/modules/deliverynote/views/general.php:160
+#: public/modules/dispatchlabel/views/general.php:145
 #: public/modules/invoice/views/invoice-admin-settings.php:97
-#: public/modules/packinglist/views/general.php:163
+#: public/modules/packinglist/views/general.php:178
 #: public/modules/shippinglabel/views/admin-settings.php:114
 msgid "View add-on"
 msgstr "مشاهده افزونه"
-
-#: public/modules/deliverynote/views/general.php:11
-msgid "Configure the general settings required for the delivery note."
-msgstr "تنظیمات کلی مورد نیاز برای یادداشت تحویل را پیکربندی کنید."
-
-#: public/modules/deliverynote/views/general.php:23
-#: public/modules/packinglist/views/general.php:25
-msgid "Include product image"
-msgstr "شامل تصویر محصول"
 
 #: public/modules/dispatchlabel/data/data.templates.php:5
 msgid "Dispatch Label 1"
@@ -4911,47 +5139,47 @@ msgstr "یادداشت مشتری را در برچسب ارسال اضافه م�
 msgid "Adds footer in dispatch label"
 msgstr "فوتر را در برچسب ارسال اضافه می کند"
 
-#: public/modules/dispatchlabel/dispatchlabel.php:198
-#: public/modules/dispatchlabel/dispatchlabel.php:228
-#: public/modules/dispatchlabel/dispatchlabel.php:238
-#: public/modules/dispatchlabel/dispatchlabel.php:239
+#: public/modules/dispatchlabel/dispatchlabel.php:274
+#: public/modules/dispatchlabel/dispatchlabel.php:304
+#: public/modules/dispatchlabel/dispatchlabel.php:314
+#: public/modules/dispatchlabel/dispatchlabel.php:315
 msgid "Print Dispatch Label"
 msgstr "چاپ برچسب ارسال"
 
-#: public/modules/dispatchlabel/dispatchlabel.php:221
+#: public/modules/dispatchlabel/dispatchlabel.php:297
 msgid "Dispatch Label"
 msgstr "برچسب ارسال"
 
-#: public/modules/dispatchlabel/dispatchlabel.php:222
+#: public/modules/dispatchlabel/dispatchlabel.php:298
 msgid "Print/Download Dispatch Label"
 msgstr "چاپ/دانلود برچسب اعزام"
 
-#: public/modules/dispatchlabel/views/admin-settings.php:65
+#: public/modules/dispatchlabel/views/general.php:13
+msgid "Configure the general settings required for the dispatch label."
+msgstr "تنظیمات کلی مورد نیاز برای برچسب اعزام را پیکربندی کنید."
+
+#: public/modules/dispatchlabel/views/general.php:93
 #: public/modules/shippinglabel/views/admin-settings.php:60
 msgid "Multiple templates to personalize the label"
 msgstr "چندین قالب برای شخصی کردن برچسب"
 
-#: public/modules/dispatchlabel/views/admin-settings.php:66
+#: public/modules/dispatchlabel/views/general.php:94
 #: public/modules/shippinglabel/views/admin-settings.php:61
 msgid "Add a print label button to the order email"
 msgstr "دکمه چاپ برچسب را به ایمیل سفارش اضافه کنید"
 
-#: public/modules/dispatchlabel/views/admin-settings.php:67
+#: public/modules/dispatchlabel/views/general.php:95
 #: public/modules/invoice/views/invoice-admin-settings.php:23
 msgid "Show different taxes in separate columns"
 msgstr "مالیات های مختلف را در ستون های جداگانه نشان دهید"
 
-#: public/modules/dispatchlabel/views/admin-settings.php:68
+#: public/modules/dispatchlabel/views/general.php:96
 msgid "Add order & product meta fields"
 msgstr "فیلدهای متای سفارش و محصول را اضافه کنید"
 
-#: public/modules/dispatchlabel/views/admin-settings.php:72
+#: public/modules/dispatchlabel/views/general.php:100
 msgid "Generate shipping labels and delivery notes"
 msgstr "برچسب های حمل و نقل و یادداشت های تحویل را ایجاد کنید"
-
-#: public/modules/dispatchlabel/views/general.php:12
-msgid "Configure the general settings required for the dispatch label."
-msgstr "تنظیمات کلی مورد نیاز برای برچسب اعزام را پیکربندی کنید."
 
 #: public/modules/invoice/data/data.templates-prev-version.php:5
 #: public/modules/packinglist/data/data.templates.php:5
@@ -4992,197 +5220,157 @@ msgid "Download invoice"
 msgstr "دانلود فاکتور"
 
 #. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
-#: public/modules/invoice/invoice.php:336
-#, fuzzy, php-format
-#| msgid ""
-#| "You can control the visibility of the seal according to order status via "
-#| "filters. See filter documentation %s here. %s"
+#: public/modules/invoice/invoice.php:338
+#, php-format
 msgid ""
 "You can control the visibility of the seal according to order status via "
 "filters. See filter documentation %1$s here. %2$s"
 msgstr ""
-"شما می توانید دید مهر و موم را با توجه به وضعیت سفارش از طریق فیلترها کنترل "
-"کنید. اسناد فیلتر %s را اینجا ببینید. %s"
+"شما میتوانید دید مهر را نظر به وضعیت سفارش از طریق فیلترها کنترول کنید. اسناد "
+"فیلتر %1$s را اینجا ببینید. %2$s"
 
-#: public/modules/invoice/invoice.php:338
+#: public/modules/invoice/invoice.php:340
 msgid "This feature might not work in mPDF."
-msgstr ""
+msgstr "این ویژگی ممکن در mPDF کار نکند."
 
-#: public/modules/invoice/invoice.php:356
+#: public/modules/invoice/invoice.php:358
 msgid "Width"
 msgstr "عرض"
 
-#: public/modules/invoice/invoice.php:364
+#: public/modules/invoice/invoice.php:366
 msgid "Height"
 msgstr "ارتفاع"
 
-#: public/modules/invoice/invoice.php:388
+#: public/modules/invoice/invoice.php:390
 msgid "Border width"
 msgstr "عرض حاشیه"
 
-#: public/modules/invoice/invoice.php:396
+#: public/modules/invoice/invoice.php:398
 msgid "Line height"
 msgstr "ارتفاع خط"
 
-#: public/modules/invoice/invoice.php:404
+#: public/modules/invoice/invoice.php:406
 msgid "Opacity"
 msgstr "تیرگی"
 
-#: public/modules/invoice/invoice.php:425
+#: public/modules/invoice/invoice.php:427
 msgid "Border radius"
 msgstr "گردکردن گوشه‌ها"
 
-#: public/modules/invoice/invoice.php:433
+#: public/modules/invoice/invoice.php:435
 msgid "From left"
 msgstr "از چپ"
 
-#: public/modules/invoice/invoice.php:441
+#: public/modules/invoice/invoice.php:443
 msgid "From top"
 msgstr "از بالا"
 
-#: public/modules/invoice/invoice.php:449
+#: public/modules/invoice/invoice.php:451
 msgid "Angle"
 msgstr "فرشته"
 
-#: public/modules/invoice/invoice.php:456
+#: public/modules/invoice/invoice.php:458
 msgid "Color"
 msgstr "رنگ"
 
-#: public/modules/invoice/invoice.php:1270
+#: public/modules/invoice/invoice.php:1303
 msgid "Pro Add-on"
 msgstr "افزونه حرفه ای"
 
-#: public/modules/invoice/invoice.php:1274
+#: public/modules/invoice/invoice.php:1307
 msgid "Document title"
 msgstr "مستندات"
 
-#: public/modules/invoice/invoice.php:1275
+#: public/modules/invoice/invoice.php:1308
 msgid "Company Logo / Name"
 msgstr "آرم / نام شرکت"
 
-#: public/modules/invoice/invoice.php:1277 public/modules/invoice/invoice.php:1546
-msgid "Invoice Number"
-msgstr "شماره فاکتور"
-
-#: public/modules/invoice/invoice.php:1278
-#: public/modules/shippinglabel/shippinglabel.php:169
-msgid "Order Number"
-msgstr "شماره سفارش"
-
-#: public/modules/invoice/invoice.php:1279
+#: public/modules/invoice/invoice.php:1311
 msgid "Invoice Date"
 msgstr "تاریخ فاکتور"
 
-#: public/modules/invoice/invoice.php:1280
+#: public/modules/invoice/invoice.php:1312
 #: public/modules/shippinglabel/shippinglabel.php:170
 msgid "Order Date"
 msgstr "تاریخ سفارش"
 
-#: public/modules/invoice/invoice.php:1282
+#: public/modules/invoice/invoice.php:1314
 #: public/modules/shippinglabel/shippinglabel.php:167
 msgid "From Address"
 msgstr "فرستنده"
 
-#: public/modules/invoice/invoice.php:1283
+#: public/modules/invoice/invoice.php:1315
 msgid "Billing Address"
 msgstr "آدرس صورتحساب"
 
-#: public/modules/invoice/invoice.php:1284
-msgid "Shipping Address"
-msgstr "گیرنده"
-
-#: public/modules/invoice/invoice.php:1285
+#: public/modules/invoice/invoice.php:1317
 #: public/modules/shippinglabel/shippinglabel.php:173
 msgid "Email Field"
 msgstr "فیلد ایمیل"
 
-#: public/modules/invoice/invoice.php:1286
+#: public/modules/invoice/invoice.php:1318
 #: public/modules/shippinglabel/shippinglabel.php:174
 msgid "Tel Field"
 msgstr "فیلد تلفن"
 
-#: public/modules/invoice/invoice.php:1288
-#: public/modules/shippinglabel/shippinglabel.php:176
-msgid "SSN number"
-msgstr "شماره SSN"
-
-#: public/modules/invoice/invoice.php:1289
-#: public/modules/shippinglabel/shippinglabel.php:175
-msgid "VAT number"
-msgstr "شماره مالیات بر ارزش افزوده"
-
-#: public/modules/invoice/invoice.php:1291
+#: public/modules/invoice/invoice.php:1323
 msgid "Payment received stamp"
 msgstr "تاییدیه پرداخت"
 
-#: public/modules/invoice/invoice.php:1296
-#: public/modules/shippinglabel/shippinglabel.php:179
-msgid "Barcode"
-msgstr "بارکد"
-
-#: public/modules/invoice/invoice.php:1299
+#: public/modules/invoice/invoice.php:1331
 msgid "QR code"
 msgstr "کد QR"
 
-#: public/modules/invoice/invoice.php:1301
+#: public/modules/invoice/invoice.php:1333
 msgid "QR Code"
 msgstr "کد QR"
 
-#: public/modules/invoice/invoice.php:1307
-#: public/modules/shippinglabel/shippinglabel.php:180
-msgid "Tracking Number"
-msgstr "شماره پیگیری"
-
-#: public/modules/invoice/invoice.php:1454
+#: public/modules/invoice/invoice.php:1487
 msgid "Print Invoices"
 msgstr "چاپ فاکتورها"
 
-#: public/modules/invoice/invoice.php:1455
+#: public/modules/invoice/invoice.php:1488
 msgid "Download Invoices"
 msgstr "دانلود فاکتورها"
 
-#: public/modules/invoice/invoice.php:1494 public/modules/invoice/invoice.php:1531
+#: public/modules/invoice/invoice.php:1527 public/modules/invoice/invoice.php:1564
 msgid "Print Invoice"
 msgstr "چاپ فاکتور"
 
-#: public/modules/invoice/invoice.php:1502 public/modules/invoice/invoice.php:1532
+#: public/modules/invoice/invoice.php:1535 public/modules/invoice/invoice.php:1565
 msgid "Download Invoice"
 msgstr "دانلود فاکتور"
 
-#: public/modules/invoice/invoice.php:1509
-#: public/modules/packinglist/packinglist.php:252
+#: public/modules/invoice/invoice.php:1542
+#: public/modules/packinglist/packinglist.php:338
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:368
 msgid "Download"
 msgstr "دانلود"
 
-#: public/modules/invoice/invoice.php:1522
+#: public/modules/invoice/invoice.php:1555
 msgid "Print/Download Invoice"
 msgstr "چاپ/دانلود فاکتور"
 
-#: public/modules/invoice/invoice.php:1793
+#: public/modules/invoice/invoice.php:1831
 msgid "Customizer module is not active."
 msgstr "ماژول شخصی‌سازی فعال نیست."
 
 #: public/modules/invoice/views/general.php:41
 msgid "Subscribe to our newsletter for exclusive offers & updates"
-msgstr ""
+msgstr "برای پیشنهادات و به روز رسانی های انحصاری در خبرنامه ما مشترک شوید"
 
 #: public/modules/invoice/views/general.php:48
 #: public/modules/invoice/views/general.php:71
 msgid "Subscribe"
-msgstr ""
+msgstr "اشتراک"
 
 #: public/modules/invoice/views/general.php:49
-#, fuzzy
-#| msgid "is required"
 msgid "indicates required"
-msgstr "اجباری"
+msgstr "نشان می دهد ضروری است"
 
 #: public/modules/invoice/views/general.php:50
-#, fuzzy
-#| msgid "Alter billing address"
 msgid "Enter your email address"
-msgstr "آدرس صورتحساب را تغییر دهید"
+msgstr "آدرس ایمیل خود را وارد کنید"
 
 #: public/modules/invoice/views/general.php:57
 #, php-format
@@ -5190,6 +5378,8 @@ msgid ""
 "I consent to receive newsletters and exclusive offers from WebToffee and agree "
 "to the %1$sPrivacy Policy%2$s."
 msgstr ""
+"من موافقت میکنم که خبرنامه ها و پیشنهادات انحصاری را از WebToffee دریافت کنم و "
+"با پالیسی حریم خصوصی %1$s%2$s موافقت میکنم."
 
 #: public/modules/invoice/views/general.php:88
 msgid "Configure the general settings required for the invoice."
@@ -5231,56 +5421,67 @@ msgid "Automatically creates invoices for selected order statuses."
 msgstr "به صورت خودکار برای وضعیت های سفارش انتخاب شده فاکتور ایجاد می کند."
 
 #: public/modules/invoice/views/general.php:166
-#, fuzzy
-#| msgid "Attach invoice PDF to order emails"
 msgid "Attach invoice PDF to selected WooCommerce emails."
-msgstr "برای سفارش ایمیل، PDF فاکتور را پیوست کنید"
+msgstr "PDF فاکتور را به ایمیل های انتخاب شده WooCommerce ضمیمه کنید."
 
 #: public/modules/invoice/views/general.php:173
 msgid "Choose email classes"
 msgstr "کلاس های ایمیل را انتخاب کنید"
 
 #: public/modules/invoice/views/general.php:174
-#, fuzzy
-#| msgid ""
-#| "Select email classes that match the order statuses selected under the "
-#| "'Automate invoice creation option. If no order status is selected, you must "
-#| "manually generate invoice to attach it with these order emails."
 msgid ""
 "Select email types corresponding to the order statuses under Automate invoice "
 "creation option. If none are selected, invoices must be generated manually to "
 "be attached to emails."
 msgstr ""
-"کلاس‌های ایمیلی را انتخاب کنید که با وضعیت سفارش انتخاب شده در زیر گزینه «ایجاد "
-"فاکتور خودکار» مطابقت دارند. اگر وضعیت سفارش انتخاب نشده است، باید به صورت دستی "
-"فاکتور ایجاد کنید تا آن را به این ایمیل‌های سفارش پیوست کنید."
+"انواع ایمیل های مربوط به وضعیت سفارش را تحت گزینه ایجاد فاکتور خودکار انتخاب "
+"کنید. اگر هیچکدام انتخاب نشوند، فاکتورها باید بشکل دستی تولید گردند تا به ایمیل "
+"ها ضمیمه گردند."
 
-#: public/modules/invoice/views/general.php:206
+#: public/modules/invoice/views/general.php:181
+msgid "Disable invoice attachment for"
+msgstr "غیرفعال کردن ضمیمه فاکتور برای"
+
+#: public/modules/invoice/views/general.php:188
+msgid "Choose payment methods"
+msgstr "روش های پرداخت را انتخاب کنید"
+
+#: public/modules/invoice/views/general.php:189
+msgid ""
+"Select payment methods corresponding to the order statuses under the Automate "
+"invoice creation option for which the invoice attachment should be restricted. "
+"If none are selected, the invoice will be attached for all payment methods."
+msgstr ""
+"میتودهای پرداخت مربوط به وضعیت سفارش را تحت گزینه ایجاد فاکتور خودکار که ضمیمه "
+"فاکتور برای آن باید محدود گردد انتخاب کنید. اگر هیچکدام انتخاب نشوند، فاکتور "
+"برای تمام میتودهای پرداخت ضمیمه خواهد شد."
+
+#: public/modules/invoice/views/general.php:221
 #: public/modules/invoice/views/qrcode_promote.php:32
 #: public/modules/invoice/views/qrcode_promote.php:36
 msgid "Invoice number"
 msgstr "شماره فاکتور"
 
-#: public/modules/invoice/views/general.php:225
+#: public/modules/invoice/views/general.php:240
 msgid "Invoice details"
 msgstr "جزئیات فاکتور"
 
-#: public/modules/invoice/views/general.php:232
+#: public/modules/invoice/views/general.php:247
 msgid "Order meta fields"
 msgstr "فیلدهای متا برای سفارش"
 
-#: public/modules/invoice/views/general.php:236
+#: public/modules/invoice/views/general.php:251
 msgid ""
 "Select/add order meta to display additional information related to the order on "
 "the invoice."
 msgstr ""
 "انتخاب/افزودن متای سفارش برای نمایش اطلاعات اضافی مربوط به سفارش در فاکتور."
 
-#: public/modules/invoice/views/general.php:241
+#: public/modules/invoice/views/general.php:256
 msgid "Product metadata"
 msgstr "فراداده محصول"
 
-#: public/modules/invoice/views/general.php:245
+#: public/modules/invoice/views/general.php:260
 msgid ""
 "Select/add product meta to display additional information related to the "
 "product on the invoice."
@@ -5288,7 +5489,7 @@ msgstr ""
 "برای نمایش اطلاعات اضافی مربوط به محصول در فاکتور، متای محصول را انتخاب/اضافه "
 "کنید."
 
-#: public/modules/invoice/views/general.php:253
+#: public/modules/invoice/views/general.php:268
 msgid ""
 "If left blank, default to the logo from General settings. Ensure to select "
 "company logo from ‘Invoice > Customize > Company Logo’ to reflect on the "
@@ -5298,51 +5499,51 @@ msgstr ""
 "آرم شرکت را از «فاکتور > سفارشی کردن > نشان‌واره شرکت» انتخاب کرده‌اید تا روی "
 "فاکتور منعکس شود. اندازه پیشنهادی 150×50 پیکسل است."
 
-#: public/modules/invoice/views/general.php:274
+#: public/modules/invoice/views/general.php:289
 msgid "Generate invoices for existing orders"
 msgstr "برای سفارشات موجود فاکتور ایجاد کنید"
 
-#: public/modules/invoice/views/general.php:278
+#: public/modules/invoice/views/general.php:293
 msgid "Enable to create invoice for orders generated before plugin installation"
 msgstr "فعال کردن ایجاد فاکتور برای سفارشات تولید شده قبل از نصب افزونه"
 
-#: public/modules/invoice/views/general.php:289
+#: public/modules/invoice/views/general.php:304
 msgid "Enable to create invoices for free orders"
 msgstr "ایجاد فاکتور برای سفارشات رایگان را فعال کنید"
 
-#: public/modules/invoice/views/general.php:296
+#: public/modules/invoice/views/general.php:311
 msgid "Display free line items in the invoice"
 msgstr "موارد خط رایگان را در فاکتور نمایش دهید"
 
-#: public/modules/invoice/views/general.php:300
+#: public/modules/invoice/views/general.php:315
 msgid "Include free(priced as 0) line items in the invoice"
 msgstr "شامل موارد خط رایگان (با قیمت 0) در فاکتور"
 
-#: public/modules/invoice/views/general.php:303
+#: public/modules/invoice/views/general.php:318
 msgid "Enable to create invoices for free orders."
 msgstr "ایجاد فاکتور برای سفارشات رایگان را فعال کنید."
 
-#: public/modules/invoice/views/general.php:309
+#: public/modules/invoice/views/general.php:324
 msgid "PDF name format"
 msgstr "فرمت تاریخ"
 
-#: public/modules/invoice/views/general.php:314
+#: public/modules/invoice/views/general.php:329
 msgid "[prefix][order_no]"
 msgstr "[پیشوند] [سفارش_نه]"
 
-#: public/modules/invoice/views/general.php:315
+#: public/modules/invoice/views/general.php:330
 msgid "[prefix][invoice_no]"
 msgstr "[پیشوند] [invoice_no]"
 
-#: public/modules/invoice/views/general.php:319
+#: public/modules/invoice/views/general.php:334
 msgid "Select a name format for PDF invoice that includes invoice/order number."
 msgstr "قالب نامی برای فاکتور PDF انتخاب کنید که شامل فاکتور/شماره سفارش باشد."
 
-#: public/modules/invoice/views/general.php:325
+#: public/modules/invoice/views/general.php:340
 msgid "Custom PDF name prefix"
 msgstr "پیشوند نام PDF سفارشی"
 
-#: public/modules/invoice/views/general.php:327
+#: public/modules/invoice/views/general.php:342
 msgid ""
 "Input a custom prefix for ‘PDF name format’ that will appear at the beginning "
 "of the name. Defaulted to ‘Invoice_’."
@@ -5350,11 +5551,11 @@ msgstr ""
 "پیشوند سفارشی برای \"قالب نام PDF\" را وارد کنید که در ابتدای نام ظاهر می شود. "
 "به صورت پیش فرض روی \"فاکتور_\" تنظیم شده است."
 
-#: public/modules/invoice/views/general.php:333
+#: public/modules/invoice/views/general.php:348
 msgid "Use latest settings for invoice"
 msgstr "از آخرین تنظیمات برای فاکتور استفاده کنید"
 
-#: public/modules/invoice/views/general.php:340
+#: public/modules/invoice/views/general.php:355
 msgid ""
 "Enable to apply the most recent settings to previous order invoices. This will "
 "match the previous invoices with the upcoming invoices.Changing the company "
@@ -5366,11 +5567,11 @@ msgstr ""
 "دیگری در آینده ممکن است فاکتورهای ایجاد شده قبلی را با به روزترین اطلاعات "
 "بازنویسی کند."
 
-#: public/modules/invoice/views/general.php:368
+#: public/modules/invoice/views/general.php:383
 msgid "Date formats"
 msgstr "فرمت تاریخ"
 
-#: public/modules/invoice/views/general.php:375
+#: public/modules/invoice/views/general.php:390
 msgid "Output"
 msgstr "خروجی"
 
@@ -5395,7 +5596,7 @@ msgid "Sort order items in the product table "
 msgstr "اقلام سفارش را در جدول محصول مرتب کنید "
 
 #: public/modules/invoice/views/invoice-admin-settings.php:27
-#: public/modules/packinglist/views/general.php:114
+#: public/modules/packinglist/views/general.php:129
 msgid "Multiple display formats for bundled products"
 msgstr "فرمت های نمایش چندگانه برای محصولات همراه"
 
@@ -5404,7 +5605,7 @@ msgid "Generate packing slips and credit notes"
 msgstr "برگه های بسته بندی و یادداشت های اعتباری ایجاد کنید"
 
 #: public/modules/invoice/views/invoice-admin-settings.php:77
-#: public/modules/packinglist/views/general.php:143
+#: public/modules/packinglist/views/general.php:158
 msgid "Invoices, Packing slips and Credit notes"
 msgstr "فاکتورها، برگه های بسته بندی و یادداشت های اعتباری"
 
@@ -5462,65 +5663,71 @@ msgid "Get Plugin"
 msgstr "دریافت پلاگین"
 
 #: public/modules/packinglist/data/data.tooltip.php:4
+msgid "Adds product SKU to the line items in the product table"
+msgstr "SKU محصول را به موارد خط در جدول محصول اضافه میکند"
+
+#: public/modules/packinglist/data/data.tooltip.php:5
 msgid "Adds customer note to the packing slip"
 msgstr "یادداشت مشتری را به برگه بسته بندی اضافه می کند"
 
-#: public/modules/packinglist/data/data.tooltip.php:5
+#: public/modules/packinglist/data/data.tooltip.php:6
 msgid "Adds Footer to the packing slip"
 msgstr "پاورقی را به برگه بسته بندی اضافه می کند"
 
-#: public/modules/packinglist/packinglist.php:224
-#: public/modules/packinglist/packinglist.php:246
-#: public/modules/packinglist/packinglist.php:263
-#: public/modules/packinglist/packinglist.php:264
+#: public/modules/packinglist/packinglist.php:310
+#: public/modules/packinglist/packinglist.php:332
+#: public/modules/packinglist/packinglist.php:349
+#: public/modules/packinglist/packinglist.php:350
 msgid "Print Packing slip"
 msgstr "چاپ حواله بسته‌بندی"
 
-#: public/modules/packinglist/packinglist.php:240
+#: public/modules/packinglist/packinglist.php:326
 msgid "Print/Download Packing slip"
 msgstr "چاپ/دانلود برگه بسته بندی"
 
-#: public/modules/packinglist/packinglist.php:253
-#: public/modules/packinglist/packinglist.php:270
-#: public/modules/packinglist/packinglist.php:271
+#: public/modules/packinglist/packinglist.php:339
+#: public/modules/packinglist/packinglist.php:356
+#: public/modules/packinglist/packinglist.php:357
 msgid "Download Packing slip"
 msgstr "دانلود حواله بسته‌بندی"
 
-#: public/modules/packinglist/packinglist.php:348
-#, fuzzy
-#| msgid "Unable to print Packing slip. Please check the items in the order."
+#: public/modules/packinglist/packinglist.php:434
 msgid "Unable to print packling slip. Please check the items in the order."
-msgstr "چاپ حواله بسته‌بندی میسر نشد. لطفا سفارش را بررسی نمایید."
+msgstr "چاپ لیست بسته ممکن نیست. لطفا موارد را در سفارش بررسی کنید."
 
 #: public/modules/packinglist/views/general.php:12
 msgid "Configure the general settings required for the packing slip."
 msgstr "تنظیمات کلی مورد نیاز برای برگه بسته بندی را پیکربندی کنید."
 
-#: public/modules/packinglist/views/general.php:108
+#: public/modules/packinglist/views/general.php:40
+msgid "Include product SKU"
+msgstr "SKU محصول را شامل کنید"
+
+#: public/modules/packinglist/views/general.php:123
 msgid "Automatically attach packing slip with order email"
 msgstr "برگه بسته بندی را با ایمیل سفارش پیوست کنید"
 
-#: public/modules/packinglist/views/general.php:109
+#: public/modules/packinglist/views/general.php:124
 msgid "Built-in templates to personalize packing slip"
 msgstr "قالب های داخلی برای شخصی سازی برگه بسته بندی"
 
-#: public/modules/packinglist/views/general.php:110
+#: public/modules/packinglist/views/general.php:125
 msgid "Add a print packing slip button to My account page"
 msgstr "یک دکمه چاپ بسته بندی را به صفحه حساب من اضافه کنید"
 
-#: public/modules/packinglist/views/general.php:115
+#: public/modules/packinglist/views/general.php:130
 msgid "Add custom footers to packing slips"
 msgstr "فوترهای سفارشی را به برگه های بسته بندی اضافه کنید"
 
-#: public/modules/packinglist/views/general.php:116
+#: public/modules/packinglist/views/general.php:131
 msgid "Add additional order & product meta fields"
 msgstr "فیلدهای متای سفارش و محصول را اضافه کنید"
 
-#: public/modules/packinglist/views/general.php:117
+#: public/modules/packinglist/views/general.php:132
 msgid "Add additional product attributes"
 msgstr "ویژگی های محصول اضافی را اضافه کنید"
 
-#: public/modules/packinglist/views/general.php:118
+#: public/modules/packinglist/views/general.php:133
 msgid "Generate invoices and credits notes"
 msgstr "فاکتورها و یادداشت های اعتباری ایجاد کنید"
 
@@ -5548,33 +5755,9 @@ msgstr "وزن"
 msgid "Shipping Method"
 msgstr "روش حمل و نقل"
 
-#: public/modules/shippinglabel/shippinglabel.php:181
-msgid "Package Number"
-msgstr "شماره بسته"
-
-#: public/modules/shippinglabel/shippinglabel.php:182
-msgid "Box name"
-msgstr "نام جعبه"
-
 #: public/modules/shippinglabel/shippinglabel.php:183
 msgid "No of Items"
 msgstr "تعداد اقلام"
-
-#: public/modules/shippinglabel/shippinglabel.php:184
-msgid "Fragile"
-msgstr "شکننده"
-
-#: public/modules/shippinglabel/shippinglabel.php:185
-msgid "This way up"
-msgstr "به این سمت بالا"
-
-#: public/modules/shippinglabel/shippinglabel.php:186
-msgid "Keep dry"
-msgstr "خشک نگه دارید"
-
-#: public/modules/shippinglabel/shippinglabel.php:188
-msgid "Return Policy"
-msgstr "دستورالعمل بازگشت"
 
 #: public/modules/shippinglabel/shippinglabel.php:355
 #: public/modules/shippinglabel/shippinglabel.php:373
@@ -5589,10 +5772,8 @@ msgid "Shipping Label"
 msgstr "برچسب حمل"
 
 #: public/modules/shippinglabel/shippinglabel.php:524
-#, fuzzy
-#| msgid "Unable to print Packing slip. Please check the items in the order."
 msgid "Unable to print shipping label. Please check the items in the order."
-msgstr "چاپ حواله بسته‌بندی میسر نشد. لطفا سفارش را بررسی نمایید."
+msgstr "قادر به چاپ لیبل حمل و نقل نیست. لطفاً موارد را در سفارش چک کنید."
 
 #: public/modules/shippinglabel/views/admin-settings.php:62
 msgid "Generate custom-sized shipping labels"
@@ -5645,433 +5826,390 @@ msgstr "اندازه برچسب حمل و نقل را به صورت تمام ص�
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:80
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:376
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:399
-#, fuzzy
-#| msgid "Invoice"
 msgid "UBL Invoice"
-msgstr "فاکتور"
+msgstr "دانلود فاکتورs"
 
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:161
 msgid "UBL (Beta)"
-msgstr ""
+msgstr "UBL (بتا)"
 
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:193
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:211
 msgid "Default"
-msgstr ""
+msgstr "پیش فرض"
 
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:357
-#, fuzzy
-#| msgid "Print Invoice"
 msgid "Print UBL Invoice"
-msgstr "چاپ فاکتور"
+msgstr "چاپ فاکتور UBL"
 
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:365
-#, fuzzy
-#| msgid "Download Invoice"
 msgid "Download UBL Invoice"
-msgstr "دانلود فاکتور"
+msgstr "فاکتور UBL را بارگیری کنید"
 
 #: public/modules/ubl/invoice/views/settings.php:13
 msgid "Standard"
-msgstr ""
+msgstr "استاندارد"
 
 #: public/modules/ubl/invoice/views/settings.php:62
-#, fuzzy
-#| msgid "Enable to print, download, and mail invoices."
 msgid "Enable to print, download and attach UBL (XML) invoices"
-msgstr "چاپ، بارگیری و ارسال فاکتورها را فعال کنید."
+msgstr "فعال کردن چاپ، بارگیری و ضمیمه کردن فاکتورهای UBL (XML)"
 
 #: public/modules/ubl/invoice/views/settings.php:64
-#, fuzzy
-#| msgid "Enable Invoice"
 msgid "Enable UBL Invoice"
-msgstr "فعال‌سازی فاکتور"
+msgstr "فعال کردن فاکتور UBL"
 
 #: public/modules/ubl/invoice/views/settings.php:72
 msgid "Select UBL format"
-msgstr ""
+msgstr "فارمت UBL را انتخاب کنید"
 
 #: public/modules/ubl/invoice/views/settings.php:77
 msgid "PEPPOL"
-msgstr ""
+msgstr "PEPPOL"
 
 #: public/modules/ubl/invoice/views/settings.php:78
 msgid "Austrian"
-msgstr ""
+msgstr "اتریشی"
 
 #: public/modules/ubl/invoice/views/settings.php:79
 msgid "Italia"
-msgstr ""
+msgstr "ایتالیا."
 
 #: public/modules/ubl/invoice/views/settings.php:80
 msgid "Netherlands"
-msgstr ""
+msgstr "هلند"
 
 #: public/modules/ubl/invoice/views/settings.php:81
 msgid "Spanish"
-msgstr ""
+msgstr "اسپانیایی"
 
 #: public/modules/ubl/invoice/views/settings.php:82
 msgid "Romania"
-msgstr ""
+msgstr "روماني"
 
 #: public/modules/ubl/invoice/views/settings.php:91
 msgid "Select email(s) to attach UBL invoice"
-msgstr ""
+msgstr "ایمیل(ها) را برای ضمیمه کردن فاکتور UBL انتخاب کنید"
 
 #: public/modules/ubl/invoice/views/settings.php:99
-#, fuzzy
-#| msgid ""
-#| "Select email classes that match the order statuses selected under the "
-#| "'Automate invoice creation option. If no order status is selected, you must "
-#| "manually generate invoice to attach it with these order emails."
 msgid ""
 "Select email classes to send UBL invoice as attachment. This option depends on "
 "the order statuses selected under the `Automate invoice creation` (Invoice/"
 "Packing > Invoice >General) setting. Ensure that the selected email classes "
 "match the order statuses for the invoice to be sent correctly."
 msgstr ""
-"کلاس‌های ایمیلی را انتخاب کنید که با وضعیت سفارش انتخاب شده در زیر گزینه «ایجاد "
-"فاکتور خودکار» مطابقت دارند. اگر وضعیت سفارش انتخاب نشده است، باید به صورت دستی "
-"فاکتور ایجاد کنید تا آن را به این ایمیل‌های سفارش پیوست کنید."
+"صنف های ایمیل را انتخاب کنید تا فاکتور UBL را به عنوان ضمیمه ارسال کنید. این "
+"گزینه به وضعیت سفارش انتخاب شده تحت تنظیمات `ایجاد خودکار فاکتور` (فاکتور/بسته "
+"بندی > فاکتور > عمومی) بستگی دارد. اطمینان حاصل کنید که صنف های ایمیل انتخاب "
+"شده با وضعیت سفارش برای ارسال درست فاکتور مطابقت دارد."
 
 #: public/modules/ubl/invoice/views/settings.php:127
 msgid "Tax classification"
-msgstr ""
+msgstr "طبقه‌بندی شغلی"
 
 #: public/modules/ubl/invoice/views/settings.php:129
 msgid ""
 "Map your WooCommerce tax classes to the appropriate UBL tax categories and "
 "schemes"
 msgstr ""
+"صنف های مالیاتی WooCommerce خود را به دسته ها و طرح های مالیاتی UBL مناسب نقشه "
+"برداری کنید"
 
 #: public/modules/ubl/invoice/views/settings.php:162
 msgid "Country&nbsp;code"
-msgstr ""
+msgstr "Country&nbsp;code"
 
 #: public/modules/ubl/invoice/views/settings.php:163
-#, fuzzy
-#| msgid "Postal code"
 msgid "State code"
-msgstr "کد پستی"
+msgstr "کد کشورنام مالیات"
 
 #: public/modules/ubl/invoice/views/settings.php:164
-#, fuzzy
-#| msgid "Postal code"
 msgid "Postcode / ZIP"
 msgstr "کد پستی"
 
 #: public/modules/ubl/invoice/views/settings.php:166
 msgid "Rate&nbsp;%"
-msgstr ""
+msgstr "Rate&nbsp;%"
 
 #: public/modules/ubl/invoice/views/settings.php:169
 msgid "Tax Scheme"
-msgstr ""
+msgstr "ایجاد یک طرح رنگ"
 
 #: public/modules/ubl/invoice/views/settings.php:171
 #: public/modules/ubl/invoice/views/settings.php:179
 msgid "Learn more"
-msgstr ""
+msgstr "بیشتر بدانید"
 
 #: public/modules/ubl/invoice/views/settings.php:177
 msgid "Tax Category"
-msgstr ""
+msgstr "گروه بندی مالیاتی"
 
 #: public/modules/ubl/invoice/views/settings.php:228
 msgid "No taxes found for this class."
-msgstr ""
+msgstr "هیچ مالیه برای این صنف یافت نشده است."
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:19
 msgid "Standard rate"
-msgstr ""
+msgstr "نرخ استاندارد"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:20
 msgid "Lower rate"
-msgstr ""
+msgstr "نرخ پایین تر"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:21
 msgid "Zero rated goods"
-msgstr ""
+msgstr "امتیاز کالا صفر"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:22
 msgid "Mixed tax rate"
-msgstr ""
+msgstr "نرخ مالیات مختلط"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:23
 msgid "Exempt for resale"
-msgstr ""
+msgstr "معاف برای فروش مجدد"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:24
 msgid "Value Added Tax (VAT) not now due for payment"
-msgstr ""
+msgstr "مالیات بر ارزش افزوده در حال حاضر آماده پرداخت نیست"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:25
 msgid "Value Added Tax (VAT) due from a previous invoice"
-msgstr ""
+msgstr "مالیات بر ارزش افزوده طرح حاشیه - به موجب صورتحساب قبلی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:26
 msgid "Transferred (VAT)"
-msgstr ""
+msgstr "انتقال یافته (VAT)"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:27
 msgid "Duty paid by supplier"
-msgstr ""
+msgstr "وظیفه پرداخت شده توسط تهیه کننده"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:28
 msgid "Exempt from tax"
-msgstr ""
+msgstr "معاف از مالیات"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:29
 msgid "Free export item, tax not charged"
-msgstr ""
+msgstr "آیتم های صادراتی آزاد بدون پرداخت مالیات"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:30
 msgid "Higher rate"
-msgstr ""
+msgstr "نرخ بالاتر"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-category.php:31
 msgid "Services outside scope of tax"
-msgstr ""
+msgstr "خدمات خارج از محدوده مالیات"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:19
 msgid "Value added tax (VAT)"
-msgstr ""
+msgstr "مالیات: مالیات بر ارزش افزوده (VAT)."
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:20
 msgid "Goods and services tax (GST)"
-msgstr ""
+msgstr "مالیات کالاها و خدمات (GST)"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:21
 msgid "Petroleum tax"
-msgstr ""
+msgstr "مالیات بر نفت"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:22
 msgid "Provisional countervailing duty cash"
-msgstr ""
+msgstr "جبران خسارت وظیفه موقت نقدی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:23
 msgid "Provisional countervailing duty bond"
-msgstr ""
+msgstr "جبران خسارت وظیفه موقت تضمینی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:24
-#, fuzzy
-#| msgid "Total tax"
 msgid "Tobacco tax"
-msgstr "جمع مالیات"
+msgstr "مالیات تنباکو"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:25
-#, fuzzy
-#| msgid "Alter fee"
 msgid "Energy fee"
-msgstr "هزینه را تغییر دهید"
+msgstr "هزینه انرژی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:26
 msgid "Coffee tax"
-msgstr ""
+msgstr "مالیات قهوه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:27
 msgid "Harmonised sales tax, Canadian"
-msgstr ""
+msgstr "هماهنگی مالیات بر فروش کانادا"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:28
 msgid "Quebec sales tax"
-msgstr ""
+msgstr "مالیات بر فروش quebec"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:29
 msgid "Canadian provincial sales tax"
-msgstr ""
+msgstr "مالیات فروش ولایت کانادا"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:30
 msgid "Tax on replacement part"
-msgstr ""
+msgstr "مالیات در بخش جایگزینی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:31
 msgid "Mineral oil tax"
-msgstr ""
+msgstr "مالیات بر روغن معدنی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:32
-#, fuzzy
-#| msgid "Total tax"
 msgid "Special tax"
-msgstr "جمع مالیات"
+msgstr "مالیات ویژه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:33
 msgid "Anti-dumping duty"
-msgstr ""
+msgstr "وظیفه ضد تخلیه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:34
 msgid "Stamp duty (Imposta di Bollo)"
-msgstr ""
+msgstr "تمبر عوارض"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:35
 msgid "Agricultural levy"
-msgstr ""
+msgstr "مالیات زراعتی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:36
-#, fuzzy
-#| msgid "Total tax"
 msgid "Car tax"
-msgstr "جمع مالیات"
+msgstr "مالیات موتر"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:37
 msgid "Paper consortium tax (Italy)"
-msgstr ""
+msgstr "مالیات کنسرسیوم کاغذی (ایتالیا)"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:38
 msgid "Commodity specific tax"
-msgstr ""
+msgstr "مالیات خاص کالا"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:39
-#, fuzzy
-#| msgid "Custom"
 msgid "Customs duty"
-msgstr "مدیر فیلد پرداخت داخلی سفارشی"
+msgstr "محصول گمرکی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:40
 msgid "Countervailing duty"
-msgstr ""
+msgstr "جبران خسارت وظیفه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:41
-#, fuzzy
-#| msgid "Invoice total tax"
 msgid "Environmental tax"
-msgstr "مالیات کل فاکتور"
+msgstr "مالیات محیط زیست"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:42
 msgid "Excise duty"
-msgstr ""
+msgstr "مالیات غیر مستقیم وظیفه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:43
 msgid "Agricultural export rebate"
-msgstr ""
+msgstr "تخفیف صادرات زراعتی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:44
 msgid "Federal excise tax"
-msgstr ""
+msgstr "مالیات غیر مستقیم استانی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:46
-#, fuzzy
-#| msgid "General Settings"
 msgid "General construction tax"
-msgstr "تنظیمات عمومی"
+msgstr "مالیات ساخت و ساز عمومی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:47
 msgid "Illuminants tax"
-msgstr ""
+msgstr "کاهش مالیاتی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:48
-#, fuzzy
-#| msgid "Import"
 msgid "Import tax"
-msgstr "وارد کردن"
+msgstr "مالیات واردات"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:49
-#, fuzzy
-#| msgid "Invoice total tax"
 msgid "Individual tax"
-msgstr "مالیات کل فاکتور"
+msgstr "مالیات انفرادی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:50
 msgid "Business license fee"
-msgstr ""
+msgstr "فیس جواز تجارت"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:51
-#, fuzzy
-#| msgid "Instruction"
 msgid "Local construction tax"
-msgstr "دستورالعمل"
+msgstr "مالیات ساختمانی محلی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:52
 msgid "Light dues payable"
-msgstr ""
+msgstr "هزینه های قابل پرداخت"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:53
 msgid "Local sales tax"
-msgstr ""
+msgstr "مالیه فروشات محلی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:54
 msgid "Lust tax"
-msgstr ""
+msgstr "مالیه شهوت"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:55
 msgid "Monetary compensatory amount"
-msgstr ""
+msgstr "مبلغ جبران خسارت"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:56
 msgid "Miscellaneous cash deposit"
-msgstr ""
+msgstr "سپرده های نقدی متفرقه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:57
-#, fuzzy
-#| msgid "Others"
 msgid "Other taxes"
-msgstr "دیگران"
+msgstr "سایر مالیات ها"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:58
 msgid "Provisional duty bond"
-msgstr ""
+msgstr "وظیفه موقت تضمینی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:59
 msgid "Provisional duty cash"
-msgstr ""
+msgstr "پول نقد وظیفه موقت"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:60
 msgid "Preference duty"
-msgstr ""
+msgstr "مزایای وظیفه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:61
 msgid "Special construction tax"
-msgstr ""
+msgstr "مالیات ساختاری ویژه"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:62
 msgid "Shifted social securities"
-msgstr ""
+msgstr "امنیت های اجتماعی تغییر یافته"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:63
 msgid "State/provincial sales tax"
-msgstr ""
+msgstr "مالیات بر فروشات ایالتی/ولایتی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:64
 msgid "Suspended duty"
-msgstr ""
+msgstr "معلق"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:65
 msgid "Surtax"
-msgstr ""
+msgstr "اضافه ماليات"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:66
 msgid "Shifted wage tax"
-msgstr ""
+msgstr "مالیات دستمزد تغیریافته"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:67
 msgid "Alcohol mark tax"
-msgstr ""
+msgstr "مالیه مارک الکول"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:69
 msgid "Turnover tax"
-msgstr ""
+msgstr "مالیات بر گردش مالی"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:70
-#, fuzzy
-#| msgid "Total tax"
 msgid "Tonnage taxes"
-msgstr "جمع مالیات"
+msgstr "مالیات تناژ"
 
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:71
 msgid "Valuation deposit"
-msgstr ""
+msgstr "سپرده ارزیابی"
 
 #. Plugin Name of the plugin/theme
-#, fuzzy
-#| msgid ""
-#| "WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels"
 msgid ""
 "WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping "
 "Labels"
 msgstr ""
-"فاکتورهای PDF WooCommerce، برگه های بسته بندی، یادداشت های تحویل و برچسب های "
-"حمل و نقل"
+"فاکتورهای WebToffee WooCommerce PDF، برگه های بسته بندی، یادداشت های تحویل و "
+"لیبل های حمل و نقل"
 
 #. Plugin URI of the plugin/theme
 msgid "https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
@@ -6088,6 +6226,11 @@ msgstr "وب تافی"
 #. Author URI of the plugin/theme
 msgid "https://www.webtoffee.com/"
 msgstr "https://www.webtoffee.com/"
+
+#, fuzzy
+#~| msgid "Which plugin?"
+#~ msgid "View plugins"
+#~ msgstr "کدام افزونه؟"
 
 #~ msgid "Accepts payment using multiple Alternative Payment Methods (APM)"
 #~ msgstr "پرداخت را با استفاده از روش‌های پرداخت جایگزین (APM) می‌پذیرد"

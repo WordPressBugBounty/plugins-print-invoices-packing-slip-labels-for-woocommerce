@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes "
 "and Shipping Labels\n"
-"POT-Creation-Date: 2025-12-05 11:39+0530\n"
-"PO-Revision-Date: 2025-12-05 11:40+0530\n"
+"POT-Creation-Date: 2026-03-31 12:09+0530\n"
+"PO-Revision-Date: 2026-03-31 12:09+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
@@ -58,7 +58,7 @@ msgstr "এক বা একাধিক অর্ডারের চালা�
 #: admin/class-wf-woocommerce-packing-list-admin.php:4754
 #: admin/class-wf-woocommerce-packing-list-admin.php:4872
 #: admin/class-wf-woocommerce-packing-list-admin.php:5063
-#: admin/modules/customizer/customizer.php:59 admin/modules/customizer/customizer.php:260
+#: admin/modules/customizer/customizer.php:59 admin/modules/customizer/customizer.php:268
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:132
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:71
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:91
@@ -81,9 +81,9 @@ msgstr "দরকার"
 #: admin/class-wf-woocommerce-packing-list-admin.php:4690 admin/views/documents.php:18
 #: admin/views/freevspro.php:6 includes/class-wf-woocommerce-packing-list-basic-func.php:74
 #: public/modules/invoice/invoice.php:149 public/modules/invoice/invoice.php:163
-#: public/modules/invoice/invoice.php:164 public/modules/invoice/invoice.php:1201
-#: public/modules/invoice/invoice.php:1229 public/modules/invoice/invoice.php:1535
-#: public/modules/invoice/invoice.php:2048
+#: public/modules/invoice/invoice.php:164 public/modules/invoice/invoice.php:1222
+#: public/modules/invoice/invoice.php:1250 public/modules/invoice/invoice.php:1554
+#: public/modules/invoice/invoice.php:2106
 #: public/modules/invoice/views/invoice-admin-settings.php:44
 msgid "Invoice"
 msgstr "চালান"
@@ -126,7 +126,7 @@ msgid "Close"
 msgstr "বন্ধ"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:154
-#: admin/modules/customizer/views/customize.php:618
+#: admin/modules/customizer/views/customize.php:750
 #: admin/views/admin-settings-debug.php:108
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:80
 msgid "Save"
@@ -230,10 +230,10 @@ msgstr "WT PDF চালান ডিবাগ"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:573
 #: admin/partials/admin-settings.php:40
-#: public/modules/deliverynote/views/admin-settings.php:45
-#: public/modules/dispatchlabel/views/admin-settings.php:50
+#: public/modules/deliverynote/views/admin-settings.php:39
+#: public/modules/dispatchlabel/views/admin-settings.php:44
 #: public/modules/invoice/views/invoice-admin-settings.php:44
-#: public/modules/packinglist/views/admin-settings.php:46
+#: public/modules/packinglist/views/admin-settings.php:40
 #: public/modules/shippinglabel/views/admin-settings.php:30
 msgid "Settings"
 msgstr "বিন্যাস সমূহ"
@@ -357,6 +357,7 @@ msgstr "মনে হচ্ছে এই আদেশ আপনার নয়�
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:1900
 #: admin/class-wf-woocommerce-packing-list-admin.php:5123
+#: admin/modules/customizer/customizer.php:471
 msgid "Settings Updated"
 msgstr "সেটিংস আপডেট"
 
@@ -404,7 +405,7 @@ msgid "Delete all generated invoice numbers"
 msgstr "সমস্ত তৈরি করা চালান নম্বর মুছুন"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:2605
-#: admin/modules/customizer/views/customize.php:803
+#: admin/modules/customizer/views/customize.php:939
 msgid "Delete"
 msgstr "মুছে ফেলুন"
 
@@ -424,7 +425,7 @@ msgstr "আবার প্রদর্শন করো না"
 #: admin/class-wf-woocommerce-packing-list-admin.php:4245
 #: admin/class-wf-woocommerce-packing-list-admin.php:4258
 #: admin/class-wf-woocommerce-packing-list-admin.php:4276
-#: admin/modules/customizer/views/customize.php:785
+#: admin/modules/customizer/views/customize.php:921
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:182
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:113
 #: admin/views/admin-settings-debug.php:184 admin/views/admin-settings-debug.php:240
@@ -441,7 +442,7 @@ msgid "Generating the document..."
 msgstr "ডকুমেন্ট তৈরি করা হচ্ছে..."
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:4335
-#: admin/modules/customizer/customizer.php:261
+#: admin/modules/customizer/customizer.php:269
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:176
 msgid "Success"
 msgstr "সফল"
@@ -487,12 +488,12 @@ msgid "Total files"
 msgstr "মোট ফাইল"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:4691 admin/views/documents.php:22
-#: admin/views/freevspro.php:7 public/modules/packinglist/packinglist.php:62
-#: public/modules/packinglist/packinglist.php:85
-#: public/modules/packinglist/packinglist.php:86
-#: public/modules/packinglist/packinglist.php:239
-#: public/modules/packinglist/packinglist.php:385
-#: public/modules/packinglist/views/admin-settings.php:46
+#: admin/views/freevspro.php:7 public/modules/packinglist/packinglist.php:71
+#: public/modules/packinglist/packinglist.php:94
+#: public/modules/packinglist/packinglist.php:95
+#: public/modules/packinglist/packinglist.php:325
+#: public/modules/packinglist/packinglist.php:471
+#: public/modules/packinglist/views/admin-settings.php:40
 msgid "Packing slip"
 msgstr "প্যাকিং স্লিপ"
 
@@ -506,21 +507,21 @@ msgid "Shipping label"
 msgstr "প্রেরণ বার্তা"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:4693 admin/views/documents.php:47
-#: admin/views/freevspro.php:11 public/modules/deliverynote/deliverynote.php:59
-#: public/modules/deliverynote/deliverynote.php:82
-#: public/modules/deliverynote/deliverynote.php:83
-#: public/modules/deliverynote/deliverynote.php:229
-#: public/modules/deliverynote/deliverynote.php:356
-#: public/modules/deliverynote/views/admin-settings.php:45
+#: admin/views/freevspro.php:11 public/modules/deliverynote/deliverynote.php:66
+#: public/modules/deliverynote/deliverynote.php:89
+#: public/modules/deliverynote/deliverynote.php:90
+#: public/modules/deliverynote/deliverynote.php:309
+#: public/modules/deliverynote/deliverynote.php:436
+#: public/modules/deliverynote/views/admin-settings.php:39
 msgid "Delivery note"
 msgstr "চালান পত্র"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:4694 admin/views/documents.php:43
-#: admin/views/freevspro.php:10 public/modules/dispatchlabel/dispatchlabel.php:57
-#: public/modules/dispatchlabel/dispatchlabel.php:80
-#: public/modules/dispatchlabel/dispatchlabel.php:81
-#: public/modules/dispatchlabel/dispatchlabel.php:326
-#: public/modules/dispatchlabel/views/admin-settings.php:50
+#: admin/views/freevspro.php:10 public/modules/dispatchlabel/dispatchlabel.php:66
+#: public/modules/dispatchlabel/dispatchlabel.php:89
+#: public/modules/dispatchlabel/dispatchlabel.php:90
+#: public/modules/dispatchlabel/dispatchlabel.php:402
+#: public/modules/dispatchlabel/views/admin-settings.php:44
 msgid "Dispatch label"
 msgstr "প্রেরণ লেবেল"
 
@@ -555,7 +556,9 @@ msgstr "কোন ফাইল পাওয়া যায়নি."
 msgid "Order Details"
 msgstr "আদেশ বিবরণী"
 
-#: admin/data/data.filters-help.php:4 public/modules/invoice/invoice.php:1293
+#: admin/data/data.filters-help.php:4 public/modules/deliverynote/deliverynote.php:195
+#: public/modules/dispatchlabel/dispatchlabel.php:174
+#: public/modules/invoice/invoice.php:1313 public/modules/packinglist/packinglist.php:212
 msgid "Product Table"
 msgstr "পণ্য টেবিল"
 
@@ -832,60 +835,51 @@ msgstr "মুদ্রণ শুরু করার আগে নথির এ�
 msgid "The default library to be used PDF generation"
 msgstr "PDF জেনারেশন ব্যবহার করার জন্য ডিফল্ট লাইব্রেরি"
 
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:119
-msgid "Black Friday Cyber Monday 2025"
-msgstr "ব্ল্যাক ফ্রাইডে সাইবার সোমবার ২০২৫"
-
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:123
-msgid "Never Miss This Deal"
-msgstr "এই অফারটি কখনও মিস করবেন না"
-
-#. translators: 1: Discount text with span wrapper, e.g. <span>30% OFF</span>.
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:130
-#, php-format
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:150
 msgid ""
-"Your Last Chance to Avail %1$s on WebToffee Plugins. Grab the deal before it`s gone!"
-msgstr "WebToffee প্লাগইনগুলিতে %1$s পাওয়ার আপনার শেষ সুযোগ। শেষ হওয়ার আগেই ডিলটি লুফে নিন!"
+"Under IAB Europe’s TCF policy, publishers participating in TCF must upgrade to TCF v2.3 "
+"by <b>28 February 2026</b> to remain compliant. <br>Ensure uninterrupted ad monetization "
+"with the <b>WebToffee GDPR Cookie Consent Plugin</b> – fully supporting <b>TCF v2.3</b>."
+msgstr ""
+"IAB ইউরোপের TCF নীতির অধীনে, TCF-এ অংশগ্রহণকারী প্রকাশকদের অবশ্যই <b>28 ফেব্রুয়ারী 2026</b> "
+"এর মধ্যে TCF v2.3 এ আপগ্রেড করতে হবে । <br>ওয়েবটফি <b>জিডিপিআর কুকি কনসেন্ট প্লাগইন</b> দিয়ে "
+"নিরবচ্ছিন্ন বিজ্ঞাপন নগদীকরণ নিশ্চিত করুন – সম্পূর্ণ <b>TCF v2.3</b> সমর্থন করে ।"
 
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:131
-msgid "OFF"
-msgstr "বন্ধ রাখুন"
-
-#: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:137
-msgid "View plugins"
-msgstr "প্লাগইন দেখুন"
-
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:116
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:153
 msgid ""
 "<b>Important Update:</b> Starting October 31, 2025, Microsoft requires websites to use "
-"Clarity Consent V2 to continue collecting analytical data. Ensure compliance by "
+"Clarity Consent V2 to continue collecting analytical data. <br>Ensure compliance by "
 "upgrading to the GDPR Cookie Consent Plugin, now fully compatible with <b>Clarity "
 "Consent V2</b> and <b>Google Consent Mode</b>."
 msgstr ""
-"<b>গুরুত্বপূর্ণ আপডেট:</b> ৩১ অক্টোবর, ২০২৫ থেকে, মাইক্রোসফট ওয়েবসাইটগুলিকে বিশ্লেষণাত্মক তথ্য "
-"সংগ্রহ চালিয়ে যাওয়ার জন্য Clarity Consent V2 ব্যবহার করতে বাধ্য করবে। GDPR কুকি কনসেন্ট প্লাগইন "
-"আপগ্রেড করে সম্মতি নিশ্চিত করুন, যা এখন <b>Clarity Consent V2</b> এবং <b>Google Consent "
-"Mode</b> এর সাথে সম্পূর্ণরূপে সামঞ্জস্যপূর্ণ।"
+"<b>গুরুত্বপূর্ণ আপডেট:</b> 31 অক্টোবর, 2025 থেকে, বিশ্লেষণাত্মক তথ্য সংগ্রহ চালিয়ে যেতে Microsoft-"
+"এর ওয়েবসাইটগুলিকে Clarity Consent V2 ব্যবহার করতে হবে । <br>জিডিপিআর কুকি কনসেন্ট প্লাগইন "
+"আপগ্রেড করে সম্মতি নিশ্চিত করুন, এখন <b>ক্ল্যারিটি কনসেন্ট V2</b> এবং <b>গুগল কনসেন্ট মোডের</b> "
+"সাথে সম্পূর্ণরূপে সামঞ্জস্যপূর্ণ ।"
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:119
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:156
 msgid ""
 "Stay compliant with GDPR and US Privacy Laws using our Google-certified CMP plugin—now "
-"with <b>Microsoft Clarity Consent V2</b>, <b>UET Consent Mode</b> and <b>Google Consent "
-"Mode</b> support."
+"with <b>Microsoft Clarity Consent V2</b>, <br><b>UET Consent Mode</b> and <b>Google "
+"Consent Mode</b> support."
 msgstr ""
-"আমাদের Google-প্রত্যয়িত CMP প্লাগইন ব্যবহার করে GDPR এবং মার্কিন গোপনীয়তা আইন মেনে চলুন—এখন "
-"<b>Microsoft Clarity Consent V2</b> , <b>UET Consent Mode</b> এবং <b>Google Consent "
-"Mode</b> সাপোর্ট সহ।"
+"আমাদের Google-প্রত্যয়িত CMP প্লাগইন ব্যবহার করে GDPR এবং মার্কিন গোপনীয়তা আইনের সাথে সঙ্গতিপূর্ণ "
+"থাকুন- এখন <b>Microsoft ক্ল্যারিটি কনসেন্ট V2</b>, <br>UET<b> কনসেন্ট মোড</b> এবং <b>Google "
+"কনসেন্ট মোড</b> সমর্থন সহ ।"
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:259
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:296
+msgid "Are you running third-party ads?"
+msgstr "আপনি কি তৃতীয় পক্ষের বিজ্ঞাপন চালাচ্ছেন?"
+
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:296
 msgid "Ensure Cookie Compliance for Your WordPress Website"
 msgstr "আপনার ওয়ার্ডপ্রেস ওয়েবসাইটের জন্য কুকি সম্মতি নিশ্চিত করুন"
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:271
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:308
 msgid "Get plugin now"
 msgstr "এখনই প্লাগইন পান"
 
-#: admin/modules/banner/class-wt-gdpr-cta-banner.php:275
+#: admin/modules/banner/class-wt-gdpr-cta-banner.php:312
 msgid "Certified Partner"
 msgstr "সার্টিফাইড পার্টনার"
 
@@ -910,6 +904,69 @@ msgstr "আপনি এখানে ক্লিক করে বিনাম�
 #: admin/modules/banner/class-wt-mpdf-language-banner.php:47
 msgid "Dismiss this notice"
 msgstr "এই নোটিশ বাতিল কর"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:213
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:358
+msgid "Something went wrong. Please try again."
+msgstr "কিছু ভুল হয়েছে, আবার চেষ্টা করুন।"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:217
+msgid "You do not have sufficient permissions to install plugins."
+msgstr "প্লাগইন ইনস্টল করার জন্য আপনার কাছে পর্যাপ্ত অনুমতি নেই ।"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:235
+msgid "Plugin download link not found."
+msgstr "প্লাগইন ডাউনলোড লিঙ্ক পাওয়া যায় নি ।"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:284
+msgid "You do not have sufficient permissions to activate plugins."
+msgstr "প্লাগইন সক্রিয় করার জন্য আপনার কাছে পর্যাপ্ত অনুমতি নেই ।"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:292
+msgid "Activation failed."
+msgstr "অ্যাক্টিভেশন ব্যর্থ হয়েছে ।"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:312
+msgid "Accessibility Widget"
+msgstr "অ্যাক্সেসিবিলিটি উইজেট"
+
+#. translators: 1: a tag opening, 2: a tag closing
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:318
+#, php-format
+msgid "Make your site inclusive with %1$s AccessYes accessibility widget. %2$s"
+msgstr "%1$s AccessYes অ্যাক্সেসিবিলিটি উইজেট সহ আপনার সাইটকে অন্তর্ভুক্ত করুন । %2$s"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:326
+msgid ""
+"A lightweight accessibility widget to improve accessibility and usability for every "
+"users. Set it up in minutes for free."
+msgstr ""
+"প্রতিটি ব্যবহারকারীর জন্য অ্যাক্সেসিবিলিটি এবং ব্যবহারযোগ্যতা উন্নত করার জন্য একটি লাইটওয়েট "
+"অ্যাক্সেসিবিলিটি উইজেট । বিনামূল্যে কয়েক মিনিটের মধ্যে এটি সেট আপ করুন ।"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:335
+msgid "Install & activate"
+msgstr "ইনস্টল করুন এবং সক্রিয় করুন"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:339
+#: includes/class-wf-woocommerce-packing-list-review_request.php:67
+msgid "Remind me later"
+msgstr "এই প্রতিক্রিয়া সম্পর্কে WebToffee আমার সাথে যোগাযোগ করতে পারে"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:343
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:125
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:137
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:125
+msgid "Dismiss"
+msgstr "খারিজ করুন"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:398
+msgid "Installing..."
+msgstr "ইনস্টল করা হচ্ছে..."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:492
+msgid "Plugin installed successfully."
+msgstr "প্লাগইন সফলভাবে ইনস্টল করা হয়েছে ।"
 
 #: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:105
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:117
@@ -969,12 +1026,6 @@ msgstr "প্রদর্শন কম"
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:123
 msgid "Get the plugin"
 msgstr "প্লাগইন পান"
-
-#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:125
-#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:137
-#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:125
-msgid "Dismiss"
-msgstr "খারিজ করুন"
 
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:89
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:118
@@ -1088,11 +1139,11 @@ msgid "incl. tax"
 msgstr "সহ ট্যাক্স"
 
 #: admin/modules/customizer/classes/class-customizer.php:699
-#: admin/modules/customizer/classes/class-customizer.php:1243
+#: admin/modules/customizer/classes/class-customizer.php:1245
 msgid "n/a"
 msgstr "n/a"
 
-#: admin/modules/customizer/classes/class-customizer.php:1960
+#: admin/modules/customizer/classes/class-customizer.php:1964
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras porta "
 "lectus id augue interdum egestas."
@@ -1100,7 +1151,7 @@ msgstr ""
 "Mauris dignissim neque ut sapien vulputate, eu sempre tellus porttitor. Cras porta "
 "lectus id augue interdum egestas."
 
-#: admin/modules/customizer/classes/class-customizer.php:1978
+#: admin/modules/customizer/classes/class-customizer.php:1982
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras porta "
 "lectus id augue interdum egestas. Suspendisse potenti. Phasellus mollis porttitor enim "
@@ -1110,7 +1161,7 @@ msgstr ""
 "lectus id augue interdum egestas. সাসপেন্ডিস ক্ষমতা. Phasellus mollis porttitor enim sit "
 "amet fringilla. Nulla sed ligula venenatis, rutrum lectus vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:1983
+#: admin/modules/customizer/classes/class-customizer.php:1987
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula purus. Mauris "
 "tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, et interdum tellus "
@@ -1129,33 +1180,30 @@ msgid "There is no order with this given id"
 msgstr "এই প্রদত্ত আইডি দিয়ে কোন অর্ডার নেই"
 
 #: admin/modules/customizer/customizer.php:203 admin/modules/customizer/customizer.php:208
-#: public/modules/deliverynote/views/admin-settings.php:10
-#: public/modules/dispatchlabel/views/admin-settings.php:9
-#: public/modules/packinglist/views/admin-settings.php:10
 msgid "Customize"
 msgstr "কাস্টমাইজ করুন"
 
-#: admin/modules/customizer/customizer.php:262
+#: admin/modules/customizer/customizer.php:270
 msgid "You can't undo this action. Are you sure?"
 msgstr "আপনি এই ক্রিয়াটিকে পূর্বাবস্থায় ফেরাতে পারবেন না৷ তুমি কি নিশ্চিত?"
 
-#: admin/modules/customizer/customizer.php:263
+#: admin/modules/customizer/customizer.php:271
 msgid "Click here to add Company logo"
 msgstr "কোম্পানির লোগো যোগ করতে এখানে ক্লিক করুন"
 
-#: admin/modules/customizer/customizer.php:264
+#: admin/modules/customizer/customizer.php:272
 msgid "Click here to add Company name"
 msgstr "কোম্পানির নাম যোগ করতে এখানে ক্লিক করুন"
 
-#: admin/modules/customizer/customizer.php:265
+#: admin/modules/customizer/customizer.php:273
 msgid "Click here to add From address"
 msgstr "ঠিকানা থেকে যোগ করতে এখানে ক্লিক করুন"
 
-#: admin/modules/customizer/customizer.php:266
+#: admin/modules/customizer/customizer.php:274
 msgid "Click here to add Signature"
 msgstr "স্বাক্ষর যোগ করতে এখানে ক্লিক করুন"
 
-#: admin/modules/customizer/customizer.php:267
+#: admin/modules/customizer/customizer.php:275
 msgid ""
 "Please save all data before leaving this page. All unsaved data will be lost. Are you "
 "sure?"
@@ -1163,34 +1211,34 @@ msgstr ""
 "এই পৃষ্ঠাটি ছেড়ে যাওয়ার আগে অনুগ্রহ করে সমস্ত ডেটা সংরক্ষণ করুন। সমস্ত অসংরক্ষিত ডেটা হারিয়ে "
 "যাবে। তুমি কি নিশ্চিত?"
 
-#: admin/modules/customizer/customizer.php:268
-#: admin/modules/customizer/views/customize.php:780
+#: admin/modules/customizer/customizer.php:276
+#: admin/modules/customizer/views/customize.php:912
 msgid "Change template"
 msgstr "টেমপ্লেট পরিবর্তন করুন"
 
-#: admin/modules/customizer/customizer.php:269
+#: admin/modules/customizer/customizer.php:277
 msgid "Change layout"
 msgstr "লেআউট পরিবর্তন করুন"
 
-#: admin/modules/customizer/customizer.php:270
+#: admin/modules/customizer/customizer.php:278
 msgid "Saving"
 msgstr "সংরক্ষণ করা হচ্ছে"
 
-#: admin/modules/customizer/customizer.php:271 public/modules/invoice/invoice.php:199
+#: admin/modules/customizer/customizer.php:279 public/modules/invoice/invoice.php:199
 #: public/modules/shippinglabel/shippinglabel.php:265
 msgid "Please enter order number"
 msgstr "অর্ডার নম্বর লিখুন"
 
-#: admin/modules/customizer/customizer.php:272 public/modules/invoice/invoice.php:200
+#: admin/modules/customizer/customizer.php:280 public/modules/invoice/invoice.php:200
 #: public/modules/shippinglabel/shippinglabel.php:266
 msgid "Generating"
 msgstr "উৎপন্ন হচ্ছে"
 
-#: admin/modules/customizer/customizer.php:273
+#: admin/modules/customizer/customizer.php:281
 msgid "This is premium template which is not compatible with the basic plugin"
 msgstr "এটি প্রিমিয়াম টেমপ্লেট যা মৌলিক প্লাগইনের সাথে সামঞ্জস্যপূর্ণ নয়"
 
-#: admin/modules/customizer/customizer.php:274
+#: admin/modules/customizer/customizer.php:282
 msgid ""
 "This is basic template. In order to use premium feature, you need to switch and activate "
 "the premium template"
@@ -1198,116 +1246,286 @@ msgstr ""
 "এটি মৌলিক টেমপ্লেট। প্রিমিয়াম বৈশিষ্ট্য ব্যবহার করার জন্য, আপনাকে প্রিমিয়াম টেমপ্লেটটি স্যুইচ এবং "
 "সক্রিয় করতে হবে"
 
-#: admin/modules/customizer/customizer.php:275
+#: admin/modules/customizer/customizer.php:283
 msgid "Template Name Required"
 msgstr "টেমপ্লেটের নাম প্রয়োজন"
 
-#: admin/modules/customizer/customizer.php:322 admin/modules/customizer/customizer.php:682
+#: admin/modules/customizer/customizer.php:338 admin/modules/customizer/customizer.php:817
 msgid "Active"
 msgstr "সক্রিয়"
 
-#: admin/modules/customizer/customizer.php:658
+#: admin/modules/customizer/customizer.php:440
+msgid "Unable to update setting."
+msgstr "সেটিং আপডেট করা যাচ্ছে না ।"
+
+#: admin/modules/customizer/customizer.php:449
+msgid "Invalid value."
+msgstr "অবৈধ মান প্রকার"
+
+#: admin/modules/customizer/customizer.php:793
 msgid "Error."
 msgstr "ত্রুটি।"
 
-#: admin/modules/customizer/customizer.php:684
-#: admin/modules/customizer/views/customize.php:802
+#: admin/modules/customizer/customizer.php:819
+#: admin/modules/customizer/views/customize.php:938
 msgid "Activate"
 msgstr "সক্রিয় করা"
 
-#: admin/modules/customizer/customizer.php:710
+#: admin/modules/customizer/customizer.php:845
 msgid "No template found."
 msgstr "কোন টেমপ্লেট পাওয়া যায়নি."
 
-#: admin/modules/customizer/customizer.php:727
+#: admin/modules/customizer/customizer.php:862
 msgid "Unable to save theme."
 msgstr "থিম সংরক্ষণ করতে অক্ষম."
 
-#: admin/modules/customizer/customizer.php:746
+#: admin/modules/customizer/customizer.php:881
 msgid "Template with same name already exists."
 msgstr "একই নামের টেমপ্লেট ইতিমধ্যেই বিদ্যমান।"
 
-#: admin/modules/customizer/customizer.php:788
+#: admin/modules/customizer/customizer.php:923
 msgid "Template created."
 msgstr "টেমপ্লেট তৈরি করা হয়েছে।"
 
-#: admin/modules/customizer/customizer.php:794
+#: admin/modules/customizer/customizer.php:929
 msgid "Template created and activated."
 msgstr "টেমপ্লেট তৈরি এবং সক্রিয়."
 
-#: admin/modules/customizer/customizer.php:849
+#: admin/modules/customizer/customizer.php:984
 msgid "Template updated."
 msgstr "টেমপ্লেট আপডেট করা হয়েছে।"
 
-#: admin/modules/customizer/customizer.php:852
+#: admin/modules/customizer/customizer.php:987
 msgid "Template updated and activated."
 msgstr "টেমপ্লেট আপডেট এবং সক্রিয়."
 
-#: admin/modules/customizer/customizer.php:900
+#: admin/modules/customizer/customizer.php:1035
 msgid "Unable to switch view."
 msgstr "ভিউ স্যুইচ করতে অক্ষম।"
 
-#: admin/modules/customizer/customizer.php:1295
+#: admin/modules/customizer/customizer.php:1646
 msgid "Unable to load template."
 msgstr "টেমপ্লেট লোড করতে অক্ষম৷"
 
-#: admin/modules/customizer/customizer.php:1346
+#: admin/modules/customizer/customizer.php:1697
 msgid "Untitled template"
 msgstr "শিরোনামহীন টেমপ্লেট"
 
-#: admin/modules/customizer/customizer.php:1492
+#: admin/modules/customizer/customizer.php:1845
+msgid "Add the order's"
+msgstr "অর্ডারের পরিমাণ যোগ করুন"
+
+#: admin/modules/customizer/customizer.php:1845
+#: admin/modules/customizer/customizer.php:1855
+#: public/modules/deliverynote/deliverynote.php:201
+#: public/modules/dispatchlabel/dispatchlabel.php:181
+#: public/modules/invoice/invoice.php:1339 public/modules/packinglist/packinglist.php:219
+#: public/modules/shippinglabel/shippinglabel.php:180
+msgid "Tracking Number"
+msgstr "ট্র্যাকিং নম্বর"
+
+#: admin/modules/customizer/customizer.php:1845
+msgid "to your invoices so customers can easily view and track delivery details."
+msgstr "আপনার চালানগুলিতে যাতে গ্রাহকরা সহজেই ডেলিভারির বিবরণ দেখতে এবং ট্র্যাক করতে পারেন ।"
+
+#: admin/modules/customizer/customizer.php:1846
+msgid "Display a combined"
+msgstr "একটি সম্মিলিত প্রদর্শন করুন"
+
+#: admin/modules/customizer/customizer.php:1846
+#: admin/modules/customizer/data/data.translation_strings.php:20
+#: admin/modules/customizer/views/_customize_properties.php:749
+#: public/modules/invoice/invoice.php:1344
+msgid "Total Tax"
+msgstr "মোট ট্যাক্স"
+
+#: admin/modules/customizer/customizer.php:1846
+msgid "amount on the invoice to simplify how tax breakdown appears for customers."
+msgstr "গ্রাহকদের জন্য ট্যাক্স ব্রেকডাউন কীভাবে প্রদর্শিত হয় তা সহজ করার জন্য চালানের পরিমাণ ।"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "Show"
+msgstr "Göster"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "Coupon Details"
+msgstr "কুপনের বিবরণ"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "to give customers a clear summary of the discounts applied to their order."
+msgstr "গ্রাহকদের তাদের অর্ডারে প্রয়োগ করা ছাড়ের একটি স্পষ্ট সারাংশ দিতে ।"
+
+#: admin/modules/customizer/customizer.php:1853
+msgid "Add your"
+msgstr "আপনার যোগ করুন"
+
+#: admin/modules/customizer/customizer.php:1853
+#: admin/modules/customizer/views/_customize_properties.php:161
+#: public/modules/shippinglabel/shippinglabel.php:166
+msgid "Company Logo"
+msgstr "কোম্পানী লোগো"
+
+#: admin/modules/customizer/customizer.php:1853
+msgid "to the shipping label for professional, branded packages."
+msgstr "পেশাদার, ব্র্যান্ডেড প্যাকেজগুলির জন্য শিপিং লেবেলে ।"
+
+#: admin/modules/customizer/customizer.php:1854
+#: admin/modules/customizer/customizer.php:1860
+#: admin/modules/customizer/customizer.php:1861
+msgid "Add a"
+msgstr "যুক্ত কর একটি"
+
+#: admin/modules/customizer/customizer.php:1854 public/modules/invoice/invoice.php:1328
+#: public/modules/shippinglabel/shippinglabel.php:179
+msgid "Barcode"
+msgstr "বারকোড"
+
+#: admin/modules/customizer/customizer.php:1854
+msgid "to your shipping label for quicker scanning and smoother order handling."
+msgstr "দ্রুত স্ক্যানিং এবং মসৃণ অর্ডার হ্যান্ডলিংয়ের জন্য আপনার শিপিং লেবেলে ।"
+
+#: admin/modules/customizer/customizer.php:1855
+#: admin/modules/customizer/customizer.php:1862
+msgid "Add the"
+msgstr "যোগ করুন"
+
+#: admin/modules/customizer/customizer.php:1855
+#: admin/modules/customizer/customizer.php:1862
+msgid "to the shipping label for easy shipment tracking."
+msgstr "সহজ চালান ট্র্যাকিংয়ের জন্য শিপিং লেবেলে ।"
+
+#: admin/modules/customizer/customizer.php:1856
+msgid "Show the"
+msgstr "প্রদর্শন কম"
+
+#: admin/modules/customizer/customizer.php:1856
+#: public/modules/shippinglabel/shippinglabel.php:181
+msgid "Package Number"
+msgstr "প্যাকেজ নম্বর"
+
+#: admin/modules/customizer/customizer.php:1856
+msgid "on each shipping label for accurate multi-package orders."
+msgstr "সঠিক মাল্টি-প্যাকেজ অর্ডারের জন্য প্রতিটি শিপিং লেবেলে ।"
+
+#: admin/modules/customizer/customizer.php:1857
+msgid "Display the"
+msgstr "প্রদর্শন করুন"
+
+#: admin/modules/customizer/customizer.php:1857
+#: public/modules/shippinglabel/shippinglabel.php:182
+msgid "Box name"
+msgstr "বাক্সের নাম"
+
+#: admin/modules/customizer/customizer.php:1857
+msgid "on the label so recipients can identify contents quickly."
+msgstr "লেবেলে যাতে প্রাপকরা দ্রুত বিষয়বস্তু শনাক্ত করতে পারেন ।"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "Show how"
+msgstr "কীভাবে দেখান"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "Many Items"
+msgstr "অনেক আইটেম"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "are in the order on the shipping label."
+msgstr "শিপিং লেবেলের অর্ডারে রয়েছে ।"
+
+#: admin/modules/customizer/customizer.php:1859
+msgid "Mark packages as"
+msgstr "প্যাকেজগুলিকে হিসাবে চিহ্নিত করুন"
+
+#: admin/modules/customizer/customizer.php:1859
+#: public/modules/shippinglabel/shippinglabel.php:184
+msgid "Fragile"
+msgstr "ভঙ্গুর"
+
+#: admin/modules/customizer/customizer.php:1859
+msgid "so carriers know to handle them with extra care."
+msgstr "তাই বাহকরা অতিরিক্ত যত্নের সাথে তাদের পরিচালনা করতে জানেন ।"
+
+#: admin/modules/customizer/customizer.php:1860
+#: public/modules/shippinglabel/shippinglabel.php:185
+msgid "This way up"
+msgstr "এই পথের উপর"
+
+#: admin/modules/customizer/customizer.php:1860
+msgid "indicator to help prevent damage during shipping."
+msgstr "শিপিংয়ের সময় ক্ষতি রোধে সহায়তা করার জন্য নির্দেশক ।"
+
+#: admin/modules/customizer/customizer.php:1861
+#: public/modules/shippinglabel/shippinglabel.php:186
+msgid "Keep dry"
+msgstr "শুকনা রাখ"
+
+#: admin/modules/customizer/customizer.php:1861
+msgid "notice for moisture-sensitive shipments."
+msgstr "আর্দ্রতা-সংবেদনশীল শিপমেন্টের জন্য বিজ্ঞপ্তি ।"
+
+#: admin/modules/customizer/customizer.php:1862
+#: public/modules/shippinglabel/shippinglabel.php:188
+msgid "Return Policy"
+msgstr "প্রত্যাবর্তন নীতিমালা"
+
+#: admin/modules/customizer/customizer.php:1877
+#: admin/modules/customizer/views/customize.php:805
+msgid "Upgrade to Pro"
+msgstr "প্রো তে আপগ্রেড করুন"
+
+#: admin/modules/customizer/customizer.php:1892
 msgid "Lighter"
 msgstr "লাইটার"
 
-#: admin/modules/customizer/customizer.php:1493
+#: admin/modules/customizer/customizer.php:1893
 msgid "Normal"
 msgstr "স্বাভাবিক"
 
-#: admin/modules/customizer/customizer.php:1494
+#: admin/modules/customizer/customizer.php:1894
 msgid "Bold"
 msgstr "সাহসী"
 
-#: admin/modules/customizer/customizer.php:1495
+#: admin/modules/customizer/customizer.php:1895
 msgid "Bolder"
 msgstr "সাহসী"
 
-#: admin/modules/customizer/customizer.php:1507
+#: admin/modules/customizer/customizer.php:1907
 msgid "Select One"
 msgstr "একটা নির্বাচন করুন"
 
-#: admin/modules/customizer/customizer.php:1525
+#: admin/modules/customizer/customizer.php:1925
 msgid "Left"
 msgstr "বাম"
 
-#: admin/modules/customizer/customizer.php:1526
+#: admin/modules/customizer/customizer.php:1926
 msgid "Right"
 msgstr "ডান "
 
-#: admin/modules/customizer/customizer.php:1527
+#: admin/modules/customizer/customizer.php:1927
 msgid "Center"
 msgstr "মাঝখান"
 
-#: admin/modules/customizer/customizer.php:1528
+#: admin/modules/customizer/customizer.php:1928
 msgid "Start"
 msgstr "শুরু"
 
-#: admin/modules/customizer/customizer.php:1529
+#: admin/modules/customizer/customizer.php:1929
 msgid "End"
 msgstr "শেষ"
 
-#: admin/modules/customizer/customizer.php:1536
+#: admin/modules/customizer/customizer.php:1936
 msgid "None"
 msgstr "কোনোটিই নয়"
 
-#: admin/modules/customizer/customizer.php:1548
+#: admin/modules/customizer/customizer.php:1948
 msgid "Solid"
 msgstr "কঠিন"
 
-#: admin/modules/customizer/customizer.php:1549
+#: admin/modules/customizer/customizer.php:1949
 msgid "Dotted"
 msgstr "বিন্দুযুক্ত"
 
-#: admin/modules/customizer/customizer.php:1550
+#: admin/modules/customizer/customizer.php:1950
 msgid "Dashed"
 msgstr "ড্যাশড"
 
@@ -1391,41 +1609,35 @@ msgid "Total Price"
 msgstr "মোট দাম"
 
 #: admin/modules/customizer/data/data.translation_strings.php:16
-#: admin/modules/customizer/views/_customize_properties.php:659
+#: admin/modules/customizer/views/_customize_properties.php:723
 #: admin/views/wt_ipc_free_pro.php:752 admin/views/wt_ipc_free_pro.php:794
-#: public/modules/invoice/invoice.php:1320
+#: public/modules/invoice/invoice.php:1340
 msgid "Subtotal"
 msgstr "মোট"
 
 #: admin/modules/customizer/data/data.translation_strings.php:17
-#: admin/modules/customizer/views/_customize_properties.php:665
+#: admin/modules/customizer/views/_customize_properties.php:729
 #: admin/views/wt_ipc_free_pro.php:756 admin/views/wt_ipc_free_pro.php:798
-#: public/modules/invoice/invoice.php:1321
+#: public/modules/invoice/invoice.php:1341
 msgid "Shipping"
 msgstr "পাঠানো"
 
 #: admin/modules/customizer/data/data.translation_strings.php:18
-#: admin/modules/customizer/views/_customize_properties.php:672
-#: public/modules/invoice/invoice.php:1322
+#: admin/modules/customizer/views/_customize_properties.php:736
+#: public/modules/invoice/invoice.php:1342
 msgid "Cart Discount"
 msgstr "কার্ট ডিসকাউন্ট"
 
 #: admin/modules/customizer/data/data.translation_strings.php:19
-#: admin/modules/customizer/views/_customize_properties.php:678
-#: public/modules/invoice/invoice.php:1323
+#: admin/modules/customizer/views/_customize_properties.php:742
+#: public/modules/invoice/invoice.php:1343
 msgid "Order Discount"
 msgstr "ছাড়"
 
-#: admin/modules/customizer/data/data.translation_strings.php:20
-#: admin/modules/customizer/views/_customize_properties.php:685
-#: public/modules/invoice/invoice.php:1324
-msgid "Total Tax"
-msgstr "মোট ট্যাক্স"
-
 #: admin/modules/customizer/data/data.translation_strings.php:21
-#: admin/modules/customizer/views/_customize_properties.php:691
+#: admin/modules/customizer/views/_customize_properties.php:755
 #: admin/views/wt_ipc_free_pro.php:768 admin/views/wt_ipc_free_pro.php:810
-#: public/modules/invoice/invoice.php:1325
+#: public/modules/invoice/invoice.php:1345
 msgid "Fee"
 msgstr "ফি"
 
@@ -1434,9 +1646,9 @@ msgid "Coupon Used"
 msgstr "কুপন ব্যবহার করা হয়েছে"
 
 #: admin/modules/customizer/data/data.translation_strings.php:23
-#: admin/modules/customizer/views/_customize_properties.php:704
+#: admin/modules/customizer/views/_customize_properties.php:768
 #: admin/views/wt_ipc_free_pro.php:780 admin/views/wt_ipc_free_pro.php:822
-#: public/modules/invoice/invoice.php:1328
+#: public/modules/invoice/invoice.php:1348
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:68
 msgid "Total"
 msgstr "মোট"
@@ -1487,8 +1699,8 @@ msgid "Payment Method:"
 msgstr "মূল্যপরিশোধ পদ্ধতি:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:35
-#: admin/modules/customizer/views/_customize_properties.php:698
-#: public/modules/invoice/invoice.php:1327
+#: admin/modules/customizer/views/_customize_properties.php:762
+#: public/modules/invoice/invoice.php:1347
 msgid "Payment Method"
 msgstr "মূল্যপরিশোধ পদ্ধতি"
 
@@ -1589,7 +1801,9 @@ msgid "Customer note:"
 msgstr "গ্রাহক নোট:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:61
-#: public/modules/invoice/invoice.php:1299
+#: public/modules/deliverynote/deliverynote.php:197
+#: public/modules/dispatchlabel/dispatchlabel.php:176
+#: public/modules/invoice/invoice.php:1319 public/modules/packinglist/packinglist.php:214
 #: public/modules/shippinglabel/shippinglabel.php:177
 msgid "Customer note"
 msgstr "ক্রেতা নোট"
@@ -1626,218 +1840,269 @@ msgstr "পাঠানোর পদ্ধতি:"
 msgid "Phone:"
 msgstr "ফোন:"
 
-#: admin/modules/customizer/views/_customize_properties.php:119
-#: admin/modules/customizer/views/_customize_properties.php:293
-#: admin/modules/customizer/views/_customize_properties.php:331
-#: admin/modules/customizer/views/_customize_properties.php:618
+#: admin/modules/customizer/views/_customize_properties.php:122
+#: admin/modules/customizer/views/_customize_properties.php:322
+#: admin/modules/customizer/views/_customize_properties.php:360
+#: admin/modules/customizer/views/_customize_properties.php:682
 #: admin/views/wt_ipc_free_pro.php:478 admin/views/wt_ipc_free_pro.php:492
 #: public/modules/shippinglabel/shippinglabel.php:114
 #: public/modules/shippinglabel/shippinglabel.php:139
 msgid "Title"
 msgstr "খেতাব"
 
-#: admin/modules/customizer/views/_customize_properties.php:125
-#: admin/modules/customizer/views/_customize_properties.php:212
-#: admin/modules/customizer/views/_customize_properties.php:264
-#: admin/modules/customizer/views/_customize_properties.php:320
-#: admin/modules/customizer/views/_customize_properties.php:336
-#: admin/modules/customizer/views/_customize_properties.php:623
+#: admin/modules/customizer/views/_customize_properties.php:128
+#: admin/modules/customizer/views/_customize_properties.php:215
+#: admin/modules/customizer/views/_customize_properties.php:293
+#: admin/modules/customizer/views/_customize_properties.php:349
+#: admin/modules/customizer/views/_customize_properties.php:365
+#: admin/modules/customizer/views/_customize_properties.php:687
 #: public/modules/invoice/invoice.php:381
 msgid "Font size"
 msgstr "অক্ষরের আকার"
 
-#: admin/modules/customizer/views/_customize_properties.php:132
-#: admin/modules/customizer/views/_customize_properties.php:305
+#: admin/modules/customizer/views/_customize_properties.php:135
+#: admin/modules/customizer/views/_customize_properties.php:334
 msgid "Text align"
 msgstr "পাঠ্য সারিবদ্ধ করুন"
 
-#: admin/modules/customizer/views/_customize_properties.php:142
+#: admin/modules/customizer/views/_customize_properties.php:145
 msgid "Text Color"
 msgstr "লেখার রঙ"
 
-#: admin/modules/customizer/views/_customize_properties.php:154
+#: admin/modules/customizer/views/_customize_properties.php:157
 msgid "Display"
 msgstr "প্রদর্শন"
 
-#: admin/modules/customizer/views/_customize_properties.php:158
-#: public/modules/shippinglabel/shippinglabel.php:166
-msgid "Company Logo"
-msgstr "কোম্পানী লোগো"
-
-#: admin/modules/customizer/views/_customize_properties.php:159
+#: admin/modules/customizer/views/_customize_properties.php:162
 msgid "Company Name"
 msgstr "কোমপানির নাম"
 
-#: admin/modules/customizer/views/_customize_properties.php:163
+#: admin/modules/customizer/views/_customize_properties.php:166
 msgid "Logo Width"
 msgstr "লোগোর প্রস্থ"
 
-#: admin/modules/customizer/views/_customize_properties.php:170
+#: admin/modules/customizer/views/_customize_properties.php:173
 msgid "Logo Height"
 msgstr "লোগোর উচ্চতা"
 
-#: admin/modules/customizer/views/_customize_properties.php:178
+#: admin/modules/customizer/views/_customize_properties.php:181
 msgid "Company name font size"
 msgstr "কোম্পানির নামের ফন্ট সাইজ"
 
-#: admin/modules/customizer/views/_customize_properties.php:184
+#: admin/modules/customizer/views/_customize_properties.php:187
 msgid "Extra Details"
 msgstr "অতিরিক্ত বিবরণ"
 
-#: admin/modules/customizer/views/_customize_properties.php:190
+#: admin/modules/customizer/views/_customize_properties.php:193
 msgid "Extra detail font size"
 msgstr "অতিরিক্ত বিস্তারিত ফন্ট আকার"
 
-#: admin/modules/customizer/views/_customize_properties.php:196
+#: admin/modules/customizer/views/_customize_properties.php:199
 msgid "Header Color"
 msgstr "হেডারের রঙ"
 
-#: admin/modules/customizer/views/_customize_properties.php:207
-#: admin/modules/customizer/views/_customize_properties.php:241
+#: admin/modules/customizer/views/_customize_properties.php:210
+#: admin/modules/customizer/views/_customize_properties.php:270
 #: public/modules/invoice/invoice.php:375
 msgid "Text"
 msgstr "লেখা"
 
-#: admin/modules/customizer/views/_customize_properties.php:220
-#: admin/modules/customizer/views/_customize_properties.php:272
+#: admin/modules/customizer/views/_customize_properties.php:223
+#: admin/modules/customizer/views/_customize_properties.php:301
 msgid "Style"
 msgstr "স্টাইল"
 
-#: admin/modules/customizer/views/_customize_properties.php:230
-#: admin/modules/customizer/views/_customize_properties.php:282
-#: admin/modules/customizer/views/_customize_properties.php:313
-#: admin/modules/customizer/views/_customize_properties.php:343
+#: admin/modules/customizer/views/_customize_properties.php:233
+#: admin/modules/customizer/views/_customize_properties.php:311
+#: admin/modules/customizer/views/_customize_properties.php:342
+#: admin/modules/customizer/views/_customize_properties.php:372
 msgid "Text color"
 msgstr "লেখার রঙ"
 
-#: admin/modules/customizer/views/_customize_properties.php:246
+#: admin/modules/customizer/views/_customize_properties.php:245
+msgid "Due Date Period"
+msgstr "বকেয়া তারিখের সময়কাল"
+
+#: admin/modules/customizer/views/_customize_properties.php:248
+msgid "7 days"
+msgstr "7 দিন"
+
+#: admin/modules/customizer/views/_customize_properties.php:249
+msgid "15 days"
+msgstr "15 দিন"
+
+#: admin/modules/customizer/views/_customize_properties.php:250
+msgid "30 days"
+msgstr "30 দিন"
+
+#: admin/modules/customizer/views/_customize_properties.php:251
+msgid "Custom (enter manually)"
+msgstr "কাস্টম (ম্যানুয়ালি লিখুন)"
+
+#: admin/modules/customizer/views/_customize_properties.php:259
+msgid "Custom Days"
+msgstr "কাস্টম"
+
+#: admin/modules/customizer/views/_customize_properties.php:275
 #: public/modules/invoice/views/general.php:390
 msgid "Format"
 msgstr "বিন্যাস"
 
-#: admin/modules/customizer/views/_customize_properties.php:298
+#: admin/modules/customizer/views/_customize_properties.php:327
 #: public/modules/shippinglabel/shippinglabel.php:119
 #: public/modules/shippinglabel/shippinglabel.php:144
 msgid "Title font size"
 msgstr "শিরোনামের হরফের আকার"
 
-#: admin/modules/customizer/views/_customize_properties.php:354
+#: admin/modules/customizer/views/_customize_properties.php:382
+#: admin/modules/customizer/views/customize.php:1002
+#: public/modules/deliverynote/deliverynote.php:193
+#: public/modules/dispatchlabel/dispatchlabel.php:172
+#: public/modules/invoice/invoice.php:1302 public/modules/packinglist/packinglist.php:209
+#: public/modules/shippinglabel/shippinglabel.php:163
+msgid "Pro version"
+msgstr "প্রো সংস্করণ"
+
+#: admin/modules/customizer/views/_customize_properties.php:384
+#: public/modules/invoice/invoice.php:1310
+#: public/modules/shippinglabel/shippinglabel.php:169
+msgid "Order Number"
+msgstr "অর্ডার নম্বর"
+
+#: admin/modules/customizer/views/_customize_properties.php:385
+#: public/modules/invoice/invoice.php:1309 public/modules/invoice/invoice.php:1579
+msgid "Invoice Number"
+msgstr "চালান নম্বর"
+
+#: admin/modules/customizer/views/_customize_properties.php:386
+msgid "Custom Meta"
+msgstr "কাস্টম"
+
+#: admin/modules/customizer/views/_customize_properties.php:391
+msgid "Add barcode data"
+msgstr "বারকোড ডেটা যোগ করুন"
+
+#: admin/modules/customizer/views/_customize_properties.php:404
+msgid "Custom Metadata"
+msgstr "কাস্টম মেটাডেটা"
+
+#: admin/modules/customizer/views/_customize_properties.php:418
 msgid "Table head background"
 msgstr "টেবিল হেড ব্যাকগ্রাউন্ড"
 
-#: admin/modules/customizer/views/_customize_properties.php:361
+#: admin/modules/customizer/views/_customize_properties.php:425
 msgid "Table head text color"
 msgstr "টেবিল হেড টেক্সট রঙ"
 
-#: admin/modules/customizer/views/_customize_properties.php:368
+#: admin/modules/customizer/views/_customize_properties.php:432
 msgid "Table body text color"
 msgstr "টেবিলের বডি টেক্সটের রঙ"
 
-#: admin/modules/customizer/views/_customize_properties.php:382
+#: admin/modules/customizer/views/_customize_properties.php:446
 msgid "Serial No label"
 msgstr "সিরিয়াল কোন লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:388
+#: admin/modules/customizer/views/_customize_properties.php:452
 msgid "Serial no text align"
 msgstr "সিরিয়াল কোন টেক্সট সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:405
+#: admin/modules/customizer/views/_customize_properties.php:469
 msgid "Image label"
 msgstr "ছবির লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:411
+#: admin/modules/customizer/views/_customize_properties.php:475
 msgid "Image text align"
 msgstr "ইমেজ টেক্সট সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:428
+#: admin/modules/customizer/views/_customize_properties.php:492
 msgid "SKU label"
 msgstr "SKU লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:434
+#: admin/modules/customizer/views/_customize_properties.php:498
 msgid "SKU text align"
 msgstr "SKU পাঠ্য সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:451
+#: admin/modules/customizer/views/_customize_properties.php:515
 msgid "Product label"
 msgstr "পণ্য লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:457
+#: admin/modules/customizer/views/_customize_properties.php:521
 msgid "Product text align"
 msgstr "পণ্যের টেক্সট সারিবদ্ধকরণ"
 
-#: admin/modules/customizer/views/_customize_properties.php:474
+#: admin/modules/customizer/views/_customize_properties.php:538
 msgid "GTIN label"
 msgstr "GTIN লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:480
+#: admin/modules/customizer/views/_customize_properties.php:544
 msgid "GTIN text align"
 msgstr "GTIN টেক্সট সারিবদ্ধকরণ"
 
-#: admin/modules/customizer/views/_customize_properties.php:497
+#: admin/modules/customizer/views/_customize_properties.php:561
 msgid "Qty label"
 msgstr "পরিমাণ লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:503
+#: admin/modules/customizer/views/_customize_properties.php:567
 msgid "Qty text align"
 msgstr "পরিমাণ পাঠ্য সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:520
+#: admin/modules/customizer/views/_customize_properties.php:584
 msgid "Price label"
 msgstr "মূল্য লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:526
+#: admin/modules/customizer/views/_customize_properties.php:590
 msgid "Price text align"
 msgstr "মূল্য টেক্সট সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:543
+#: admin/modules/customizer/views/_customize_properties.php:607
 msgid "Tax label"
 msgstr "ট্যাক্স লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:549
+#: admin/modules/customizer/views/_customize_properties.php:613
 msgid "Tax text align"
 msgstr "ট্যাক্স টেক্সট সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:566
+#: admin/modules/customizer/views/_customize_properties.php:630
 msgid "Total weight label"
 msgstr "মোট ওজন লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:572
+#: admin/modules/customizer/views/_customize_properties.php:636
 msgid "Total weight text align"
 msgstr "মোট ওজন টেক্সট সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:589
+#: admin/modules/customizer/views/_customize_properties.php:653
 msgid "Total label"
 msgstr "মোট লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:595
+#: admin/modules/customizer/views/_customize_properties.php:659
 msgid "Total text align"
 msgstr "মোট পাঠ্য সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:609
+#: admin/modules/customizer/views/_customize_properties.php:673
 msgid "Signature type"
 msgstr "স্বাক্ষরের ধরন"
 
-#: admin/modules/customizer/views/_customize_properties.php:613
+#: admin/modules/customizer/views/_customize_properties.php:677
 msgid "Manual Signature"
 msgstr "ম্যানুয়াল স্বাক্ষর"
 
-#: admin/modules/customizer/views/_customize_properties.php:614
+#: admin/modules/customizer/views/_customize_properties.php:678
 msgid "Image Signature"
 msgstr "ছবি স্বাক্ষর"
 
-#: admin/modules/customizer/views/_customize_properties.php:631
+#: admin/modules/customizer/views/_customize_properties.php:695
 msgid "Align"
 msgstr "সারিবদ্ধ"
 
-#: admin/modules/customizer/views/_customize_properties.php:648
+#: admin/modules/customizer/views/_customize_properties.php:712
 msgid "Label"
 msgstr "লেবেল"
 
-#: admin/modules/customizer/views/_customize_properties.php:727
+#: admin/modules/customizer/views/_customize_properties.php:791
 msgid "Note"
 msgstr "বিঃদ্রঃ"
 
-#: admin/modules/customizer/views/_customize_properties.php:728
+#: admin/modules/customizer/views/_customize_properties.php:792
 msgid ""
 "Displays customer`s VAT number saved in the order details by third-party plugins in this "
 "document. Supported meta keys are"
@@ -1845,38 +2110,35 @@ msgstr ""
 "এই নথিতে তৃতীয় পক্ষের প্লাগইন দ্বারা অর্ডারের বিবরণে সংরক্ষিত গ্রাহকের ভ্যাট নম্বর প্রদর্শন করে। "
 "সমর্থিত মেটা কী হয়"
 
-#: admin/modules/customizer/views/_customize_properties.php:730
+#: admin/modules/customizer/views/_customize_properties.php:794
 msgid "To add a different meta key"
 msgstr "একটি ভিন্ন মেটা কী যোগ করতে"
 
-#: admin/modules/customizer/views/_customize_properties.php:731
-#: public/modules/deliverynote/views/customize_pro.php:71
-#: public/modules/dispatchlabel/views/customize_pro.php:72
-#: public/modules/packinglist/views/customize_pro.php:72
+#: admin/modules/customizer/views/_customize_properties.php:795
 msgid "Upgrade to premium"
 msgstr "প্রিমিয়ামে আপগ্রেড করুন"
 
-#: admin/modules/customizer/views/_customize_properties.php:790
+#: admin/modules/customizer/views/_customize_properties.php:854
 #: admin/views/premium_extension_page.php:141
 #: public/modules/deliverynote/views/general.php:156
 #: public/modules/dispatchlabel/views/general.php:141
 #: public/modules/invoice/views/invoice-admin-settings.php:93
-#: public/modules/packinglist/views/general.php:159
+#: public/modules/packinglist/views/general.php:174
 #: public/modules/shippinglabel/views/admin-settings.php:110
 msgid "Show More"
 msgstr "আরো দেখুন"
 
-#: admin/modules/customizer/views/_customize_properties.php:791
+#: admin/modules/customizer/views/_customize_properties.php:855
 #: admin/views/premium_extension_page.php:142
 #: public/modules/deliverynote/views/general.php:157
 #: public/modules/dispatchlabel/views/general.php:142
 #: public/modules/invoice/views/invoice-admin-settings.php:94
-#: public/modules/packinglist/views/general.php:160
+#: public/modules/packinglist/views/general.php:175
 #: public/modules/shippinglabel/views/admin-settings.php:111
 msgid "Show Less"
 msgstr "প্রদর্শন কম"
 
-#: admin/modules/customizer/views/_customize_properties.php:795
+#: admin/modules/customizer/views/_customize_properties.php:859
 #: admin/views/premium_extension_page.php:146
 msgid "Checkout Premium"
 msgstr "চেকআউট প্রিমিয়াম"
@@ -1901,91 +2163,96 @@ msgstr "অর্ডার"
 msgid "Order number"
 msgstr "অর্ডার নম্বর"
 
-#: admin/modules/customizer/views/customize.php:591
+#: admin/modules/customizer/views/customize.php:723
 #: admin/views/admin-settings-debug.php:159
 msgid "Templates"
 msgstr "টেমপ্লেট"
 
-#: admin/modules/customizer/views/customize.php:596
+#: admin/modules/customizer/views/customize.php:728
 msgid "Type template name to search"
 msgstr "অনুসন্ধান করতে টেমপ্লেটের নাম টাইপ করুন"
 
-#: admin/modules/customizer/views/customize.php:608
+#: admin/modules/customizer/views/customize.php:740
 msgid "Choose a layout."
 msgstr "একটি লেআউট চয়ন করুন."
 
-#: admin/modules/customizer/views/customize.php:614
+#: admin/modules/customizer/views/customize.php:746
 msgid "All unsaved changes will be lost upon switching to a new layout."
 msgstr "একটি নতুন লেআউটে স্যুইচ করার পরে সমস্ত অসংরক্ষিত পরিবর্তনগুলি হারিয়ে যাবে৷"
 
-#: admin/modules/customizer/views/customize.php:616
+#: admin/modules/customizer/views/customize.php:748
 msgid "Save before you proceed."
 msgstr "আপনি এগিয়ে যাওয়ার আগে সংরক্ষণ করুন."
 
-#: admin/modules/customizer/views/customize.php:617
+#: admin/modules/customizer/views/customize.php:749
 msgid "Saving..."
 msgstr "সংরক্ষণ করা হচ্ছে..."
 
-#: admin/modules/customizer/views/customize.php:660
+#: admin/modules/customizer/views/customize.php:792
 msgid "Get access to more shipping label templates."
 msgstr "আরও শিপিং লেবেল টেমপ্লেট অ্যাক্সেস পান।"
 
-#: admin/modules/customizer/views/customize.php:661
+#: admin/modules/customizer/views/customize.php:793
 msgid "Get access to more invoice templates."
 msgstr "আরও ইনভয়েস টেমপ্লেটের অ্যাক্সেস পান।"
 
-#: admin/modules/customizer/views/customize.php:673
-msgid "Upgrade to Pro"
-msgstr "প্রো তে আপগ্রেড করুন"
+#: admin/modules/customizer/views/customize.php:914
+msgid "This preview reflects your current settings from the General tab."
+msgstr "এই পূর্বরূপটি সাধারণ ট্যাব থেকে আপনার বর্তমান সেটিংসকে প্রতিফলিত করে ।"
 
-#: admin/modules/customizer/views/customize.php:787
+#: admin/modules/customizer/views/customize.php:923
 msgid "Update template"
 msgstr "টেমপ্লেট আপডেট করুন"
 
-#: admin/modules/customizer/views/customize.php:790
+#: admin/modules/customizer/views/customize.php:926
 msgid "Save template"
 msgstr "টেমপ্লেট সংরক্ষণ করুন"
 
-#: admin/modules/customizer/views/customize.php:793
+#: admin/modules/customizer/views/customize.php:929
 msgid "Save and activate"
 msgstr "সংরক্ষণ করুন এবং সক্রিয় করুন"
 
-#: admin/modules/customizer/views/customize.php:804
+#: admin/modules/customizer/views/customize.php:940
 msgid "Create new"
 msgstr "নতুন তৈরী করা"
 
-#: admin/modules/customizer/views/customize.php:805
+#: admin/modules/customizer/views/customize.php:941
 msgid "My templates"
 msgstr "আমার টেমপ্লেট"
 
-#: admin/modules/customizer/views/customize.php:814
+#: admin/modules/customizer/views/customize.php:951
 msgid "This template is not comaptible with QR Code addon plugin"
 msgstr "এই টেমপ্লেটটি QR কোড অ্যাডঅন প্লাগইনের সাথে সামঞ্জস্যপূর্ণ নয়"
 
 #. translators: %s: Template display name (invoice, packing list, etc.)
-#: admin/modules/customizer/views/customize.php:843
+#: admin/modules/customizer/views/customize.php:980
 #, php-format
 msgid "Unlock limitless possibilities of %s customization with the addon -"
 msgstr "অ্যাডঅনটির সাহায্যে %s কাস্টমাইজেশনের সীমাহীন সম্ভাবনা আনলক করুন -"
 
-#: admin/modules/customizer/views/customize.php:844
+#: admin/modules/customizer/views/customize.php:981
 msgid "Customizer for WooCommerce PDF Invoices Plugin"
 msgstr "WooCommerce পিডিএফ ইনভয়েস প্লাগইনের জন্য কাস্টমাইজার"
 
-#: admin/modules/customizer/views/customize.php:851
-#: admin/modules/customizer/views/customize.php:862
+#: admin/modules/customizer/views/customize.php:988
+#: admin/modules/customizer/views/customize.php:999
 msgid "Visual"
 msgstr "ভিজ্যুয়াল"
 
-#: admin/modules/customizer/views/customize.php:852
-#: admin/modules/customizer/views/customize.php:865
+#: admin/modules/customizer/views/customize.php:989
+#: admin/modules/customizer/views/customize.php:1002
 msgid "Code"
 msgstr "Code"
 
-#: admin/modules/customizer/views/customize.php:865 public/modules/invoice/invoice.php:1281
-#: public/modules/shippinglabel/shippinglabel.php:163
-msgid "Pro version"
-msgstr "প্রো সংস্করণ"
+#: admin/modules/customizer/views/customize.php:1025
+msgid "Premium features"
+msgstr "সমস্ত প্রিমিয়াম বৈশিষ্ট্য দেখুন"
+
+#. translators: %s: document type name (e.g. packing slip, invoice, credit note)
+#: admin/modules/customizer/views/customize.php:1028
+#, php-format
+msgid "Toggle the pro features on and off to see how they transform your %s."
+msgstr "প্রো ফিচারগুলি কীভাবে আপনার %s কে রূপান্তরিত করে তা দেখতে চালু এবং বন্ধ টগল করুন ।"
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:41
 msgid "I couldn't understand how to make it work"
@@ -2706,7 +2973,7 @@ msgstr "কোড কপি করুন"
 #: admin/views/admin-settings-save-button.php:6
 #: public/modules/deliverynote/views/general.php:92
 #: public/modules/dispatchlabel/views/general.php:78
-#: public/modules/packinglist/views/general.php:93
+#: public/modules/packinglist/views/general.php:108
 #: public/modules/shippinglabel/views/general.php:63
 msgid "Update Settings"
 msgstr "সেটিংস আপডেট করুন"
@@ -2806,6 +3073,8 @@ msgstr "বর্তমান"
 
 #: admin/views/customizer-promotion-popup.php:37
 #: admin/views/customizer-promotion-popup.php:60
+#: admin/views/customizer-promotion-popup.php:71
+#: admin/views/customizer-promotion-popup.php:82
 msgid "Get advanced customization options for"
 msgstr "জন্য উন্নত কাস্টমাইজেশন বিকল্প পান"
 
@@ -2819,16 +3088,22 @@ msgstr "ইনভয়েসে অতিরিক্ত ক্ষেত্র 
 
 #: admin/views/customizer-promotion-popup.php:40
 #: admin/views/customizer-promotion-popup.php:63
+#: admin/views/customizer-promotion-popup.php:74
+#: admin/views/customizer-promotion-popup.php:85
 msgid "Multiple pre-built templates"
 msgstr "একাধিক পূর্ব-নির্মিত টেমপ্লেট"
 
 #: admin/views/customizer-promotion-popup.php:41
 #: admin/views/customizer-promotion-popup.php:64
+#: admin/views/customizer-promotion-popup.php:75
+#: admin/views/customizer-promotion-popup.php:86
 msgid "Customize using Code Editor"
 msgstr "কোড এডিটর ব্যবহার করে কাস্টমাইজ করুন"
 
 #: admin/views/customizer-promotion-popup.php:42
 #: admin/views/customizer-promotion-popup.php:65
+#: admin/views/customizer-promotion-popup.php:76
+#: admin/views/customizer-promotion-popup.php:87
 msgid "More customization options"
 msgstr "আরও কাস্টমাইজেশন বিকল্প"
 
@@ -2857,14 +3132,18 @@ msgid "Many more customization options"
 msgstr "আরও অনেক কাস্টমাইজেশন বিকল্প"
 
 #: admin/views/customizer-promotion-popup.php:60
+#: admin/views/customizer-promotion-popup.php:71
+#: admin/views/customizer-promotion-popup.php:82
 msgid "shipping labels, dispatch labels, and delivery notes."
 msgstr "শিপিং লেবেল, ডিসপ্যাচ লেবেল এবং ডেলিভারি নোট।"
 
 #: admin/views/customizer-promotion-popup.php:62
+#: admin/views/customizer-promotion-popup.php:73
+#: admin/views/customizer-promotion-popup.php:84
 msgid "Add additional fields to shipping labels"
 msgstr "শিপিং লেবেলে অতিরিক্ত ক্ষেত্র যোগ করুন"
 
-#: admin/views/customizer-promotion-popup.php:124 admin/views/freevspro.php:146
+#: admin/views/customizer-promotion-popup.php:146 admin/views/freevspro.php:146
 msgid "Upgrade To Premium"
 msgstr "প্রিমিয়ামে আপগ্রেড করুন"
 
@@ -3013,8 +3292,10 @@ msgstr ""
 "আপনার কোম্পানির ট্যাক্স আইডি উল্লেখ করুন। যেমন, আপনি VAT হিসেবে লিখতে পারেন: GB123456789, "
 "GSTIN:0948745 বা ABN:51 824 753 556"
 
-#: admin/views/general.php:79 public/modules/invoice/invoice.php:1310
-#: public/modules/invoice/invoice.php:1314
+#: admin/views/general.php:79 public/modules/deliverynote/deliverynote.php:198
+#: public/modules/dispatchlabel/dispatchlabel.php:177
+#: public/modules/invoice/invoice.php:1330 public/modules/invoice/invoice.php:1334
+#: public/modules/packinglist/packinglist.php:215
 #: public/modules/shippinglabel/shippinglabel.php:178
 msgid "Footer"
 msgstr "ফুটার"
@@ -3139,6 +3420,7 @@ msgstr "স্বয়ংক্রিয় পরিস্কার"
 #: public/modules/packinglist/views/general.php:31
 #: public/modules/packinglist/views/general.php:46
 #: public/modules/packinglist/views/general.php:61
+#: public/modules/packinglist/views/general.php:76
 msgid "Yes"
 msgstr "হ্যাঁ"
 
@@ -3150,6 +3432,7 @@ msgstr "হ্যাঁ"
 #: public/modules/packinglist/views/general.php:32
 #: public/modules/packinglist/views/general.php:47
 #: public/modules/packinglist/views/general.php:62
+#: public/modules/packinglist/views/general.php:77
 msgid "No"
 msgstr "না"
 
@@ -4155,7 +4438,7 @@ msgid "Order discount"
 msgstr "অর্ডার ডিসকাউন্ট"
 
 #: admin/views/wt_ipc_free_pro.php:772 admin/views/wt_ipc_free_pro.php:814
-#: public/modules/invoice/invoice.php:1326
+#: public/modules/invoice/invoice.php:1346
 msgid "Coupon info"
 msgstr "কুপন তথ্য"
 
@@ -4353,6 +4636,8 @@ msgid "Company logo"
 msgstr "কোম্পানির লোগো"
 
 #: admin/views/wt_sdd_free_pro.php:328 admin/views/wt_sdd_free_pro.php:338
+#: public/modules/deliverynote/deliverynote.php:203
+#: public/modules/dispatchlabel/dispatchlabel.php:178
 msgid "Return policy"
 msgstr "রিটার্ন নীতিমালা"
 
@@ -4362,13 +4647,13 @@ msgstr "ডেলিভারি নোটে পণ্যের ছবি অ�
 
 #: admin/views/wt_sdd_free_pro.php:358 public/modules/deliverynote/views/general.php:39
 #: public/modules/dispatchlabel/views/general.php:25
-#: public/modules/packinglist/views/general.php:40
+#: public/modules/packinglist/views/general.php:55
 msgid "Add customer note"
 msgstr "অর্ডার মেটা ফিল্ড যোগ/সম্পাদনা করুন"
 
 #: admin/views/wt_sdd_free_pro.php:382 public/modules/deliverynote/views/general.php:54
 #: public/modules/dispatchlabel/views/general.php:40
-#: public/modules/packinglist/views/general.php:55
+#: public/modules/packinglist/views/general.php:70
 msgid "Add footer"
 msgstr "অর্ডার মেটা ফিল্ড যোগ/সম্পাদনা করুন"
 
@@ -4441,10 +4726,6 @@ msgid ""
 msgstr ""
 "%1$s %2$s কি %3$s WooCommerce PDF ইনভয়েস, প্যাকিং স্লিপ, ডেলিভারি নোট এবং শিপিং লেবেল "
 "প্লাগইন পছন্দ করেন? %4$s আপনার মতামত জানান! %5$s"
-
-#: includes/class-wf-woocommerce-packing-list-review_request.php:67
-msgid "Remind me later"
-msgstr "এই প্রতিক্রিয়া সম্পর্কে WebToffee আমার সাথে যোগাযোগ করতে পারে"
 
 #: includes/class-wf-woocommerce-packing-list-review_request.php:68
 msgid "Not interested"
@@ -4545,7 +4826,7 @@ msgid "Go to plugins page"
 msgstr "প্লাগইন পৃষ্ঠায় যান"
 
 #. translators: 1$s: Plugin name, 2$s: Plugin name, 3$s: WooCommerce link opening tag, 4$s: WooCommerce link closing tag
-#: print-invoices-packing-slip-labels-for-woocommerce.php:213
+#: print-invoices-packing-slip-labels-for-woocommerce.php:214
 #, php-format
 msgid ""
 "%1$s %2$s is enabled but not effective. It requires %3$s WooCommerce %4$s in order to "
@@ -4569,78 +4850,62 @@ msgstr "ডেলিভারি নোটে গ্রাহক নোট য�
 msgid "Adds Footer to the delivery note"
 msgstr "ডেলিভারি নোটে ফুটার যোগ করে"
 
-#: public/modules/deliverynote/deliverynote.php:217
-#: public/modules/deliverynote/deliverynote.php:236
-#: public/modules/deliverynote/deliverynote.php:246
-#: public/modules/deliverynote/deliverynote.php:247
+#: public/modules/deliverynote/deliverynote.php:196
+#: public/modules/dispatchlabel/dispatchlabel.php:175
+#: public/modules/invoice/invoice.php:1316 public/modules/packinglist/packinglist.php:213
+msgid "Shipping Address"
+msgstr "পাঠানোর ঠিকানা"
+
+#: public/modules/deliverynote/deliverynote.php:199
+#: public/modules/dispatchlabel/dispatchlabel.php:179
+#: public/modules/invoice/invoice.php:1320 public/modules/packinglist/packinglist.php:217
+#: public/modules/shippinglabel/shippinglabel.php:176
+msgid "SSN number"
+msgstr "SSN নম্বর"
+
+#: public/modules/deliverynote/deliverynote.php:200
+#: public/modules/dispatchlabel/dispatchlabel.php:180
+#: public/modules/invoice/invoice.php:1321 public/modules/packinglist/packinglist.php:218
+#: public/modules/shippinglabel/shippinglabel.php:175
+msgid "VAT number"
+msgstr "ভ্যাট নম্বর"
+
+#: public/modules/deliverynote/deliverynote.php:202
+msgid "Signature"
+msgstr "স্বাক্ষর"
+
+#: public/modules/deliverynote/deliverynote.php:204
+msgid "Bar code"
+msgstr "[বার কোড]"
+
+#: public/modules/deliverynote/deliverynote.php:297
+#: public/modules/deliverynote/deliverynote.php:316
+#: public/modules/deliverynote/deliverynote.php:326
+#: public/modules/deliverynote/deliverynote.php:327
 msgid "Print Delivery note"
 msgstr "চালান পত্র"
 
-#: public/modules/deliverynote/deliverynote.php:230
+#: public/modules/deliverynote/deliverynote.php:310
 msgid "Print/Download Delivery note"
 msgstr "পৃথকভাবে বা বাল্কে ইনভয়েস প্রিন্ট বা ডাউনলোড করুন"
 
-#: public/modules/deliverynote/deliverynote.php:235
-#: public/modules/deliverynote/deliverynote.php:389
-#: public/modules/dispatchlabel/dispatchlabel.php:227
-#: public/modules/dispatchlabel/dispatchlabel.php:368
-#: public/modules/invoice/invoice.php:1522 public/modules/invoice/invoice.php:2082
-#: public/modules/packinglist/packinglist.php:245
-#: public/modules/packinglist/packinglist.php:418
+#: public/modules/deliverynote/deliverynote.php:315
+#: public/modules/deliverynote/deliverynote.php:469
+#: public/modules/dispatchlabel/dispatchlabel.php:303
+#: public/modules/dispatchlabel/dispatchlabel.php:444
+#: public/modules/invoice/invoice.php:1541 public/modules/invoice/invoice.php:2140
+#: public/modules/packinglist/packinglist.php:331
+#: public/modules/packinglist/packinglist.php:504
 #: public/modules/shippinglabel/shippinglabel.php:380
-#: public/modules/shippinglabel/shippinglabel.php:599
+#: public/modules/shippinglabel/shippinglabel.php:603
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:360
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:436
 msgid "Print"
 msgstr "প্রিন্ট"
 
-#: public/modules/deliverynote/deliverynote.php:319
+#: public/modules/deliverynote/deliverynote.php:399
 msgid "Unable to print Delivery note. Please check the items in the order."
 msgstr "ডেলিভারি নোট প্রিন্ট করতে অক্ষম। অর্ডার আইটেম চেক করুন."
-
-#: public/modules/deliverynote/views/admin-settings.php:12
-#: public/modules/dispatchlabel/views/admin-settings.php:11
-#: public/modules/packinglist/views/admin-settings.php:12
-msgid "Crown"
-msgstr "মুকুট"
-
-#: public/modules/deliverynote/views/customize_pro.php:8
-msgid "Basic delivery note template"
-msgstr "বেসিক ডেলিভারি নোট টেমপ্লেট"
-
-#: public/modules/deliverynote/views/customize_pro.php:9
-msgid "Preview of your current delivery note template."
-msgstr "আপনার বর্তমান ডেলিভারি নোট টেমপ্লেটের পূর্বরূপ।"
-
-#: public/modules/deliverynote/views/customize_pro.php:14
-msgid "Delivery note Preview"
-msgstr "ডেলিভারি নোট প্রিভিউ"
-
-#: public/modules/deliverynote/views/customize_pro.php:28
-msgid "Pre-built templates"
-msgstr "নথি ব্যক্তিগতকৃত করতে একাধিক টেমপ্লেট"
-
-#: public/modules/deliverynote/views/customize_pro.php:29
-msgid "Sort and group products by category"
-msgstr "বিভাগ অনুসারে পণ্যগুলি সাজান এবং গ্রুপ করুন"
-
-#: public/modules/deliverynote/views/customize_pro.php:30
-msgid "Show product variations, attributes, SKUs, return policy and footer"
-msgstr "পণ্যের বৈচিত্র্য, বৈশিষ্ট্য, SKU, রিটার্ন নীতি এবং ফুটার দেখান"
-
-#: public/modules/deliverynote/views/customize_pro.php:31
-msgid "Add order meta, product meta, and customer notes"
-msgstr "একাধিক কাস্টম অর্ডার মেটা যোগ করতে,"
-
-#: public/modules/deliverynote/views/customize_pro.php:55
-#: public/modules/dispatchlabel/views/customize_pro.php:56
-#: public/modules/packinglist/views/customize_pro.php:55
-msgid "Unlock more customization"
-msgstr "আপনি যত বেশি তথ্য ভাগ করবেন, ততই ভালো।"
-
-#: public/modules/deliverynote/views/customize_pro.php:56
-msgid "Give your delivery team and customers the right details at a glance."
-msgstr "আপনার ডেলিভারি টিম এবং গ্রাহকদের এক নজরে সঠিক বিবরণ দিন।"
 
 #: public/modules/deliverynote/views/general.php:12
 msgid "Configure the general settings required for the delivery note."
@@ -4661,20 +4926,20 @@ msgstr "অর্ডার ইমেলে একটি প্রিন্ট �
 
 #: public/modules/deliverynote/views/general.php:109
 #: public/modules/dispatchlabel/views/general.php:99
-#: public/modules/packinglist/views/general.php:112
+#: public/modules/packinglist/views/general.php:127
 msgid "Sort order items in the product table"
 msgstr "পণ্য সারণীতে অর্ডার আইটেমগুলি সাজান"
 
 #: public/modules/deliverynote/views/general.php:110
 #: public/modules/invoice/views/invoice-admin-settings.php:24
-#: public/modules/packinglist/views/general.php:111
+#: public/modules/packinglist/views/general.php:126
 msgid "Group products by category"
 msgstr "বিভাগ অনুসারে পণ্যগুলিকে গ্রুপ করুন"
 
 #: public/modules/deliverynote/views/general.php:111
 #: public/modules/dispatchlabel/views/general.php:98
 #: public/modules/invoice/views/invoice-admin-settings.php:26
-#: public/modules/packinglist/views/general.php:113
+#: public/modules/packinglist/views/general.php:128
 msgid "Show variation data for variable products"
 msgstr "পরিবর্তনশীল পণ্যের জন্য পরিবর্তনশীল ডেটা দেখান"
 
@@ -4689,7 +4954,7 @@ msgstr "শিপিং লেবেল এবং ডিসপ্যাচ ল�
 #: public/modules/deliverynote/views/general.php:134
 #: public/modules/dispatchlabel/views/general.php:119
 #: public/modules/invoice/views/invoice-admin-settings.php:71
-#: public/modules/packinglist/views/general.php:137
+#: public/modules/packinglist/views/general.php:152
 #: public/modules/shippinglabel/views/admin-settings.php:88
 msgid "Get advanced features for your"
 msgstr "আপনার জন্য উন্নত বৈশিষ্ট্য পান"
@@ -4703,7 +4968,7 @@ msgstr "শিপিং লেবেল, ডিসপ্যাচ লেবে�
 #: public/modules/deliverynote/views/general.php:160
 #: public/modules/dispatchlabel/views/general.php:145
 #: public/modules/invoice/views/invoice-admin-settings.php:97
-#: public/modules/packinglist/views/general.php:163
+#: public/modules/packinglist/views/general.php:178
 #: public/modules/shippinglabel/views/admin-settings.php:114
 msgid "View add-on"
 msgstr "সমস্ত প্রিমিয়াম বৈশিষ্ট্য দেখুন"
@@ -4720,56 +4985,20 @@ msgstr "ডিসপ্যাচ লেবেলে গ্রাহক নোট
 msgid "Adds footer in dispatch label"
 msgstr "ডিসপ্যাচ লেবেলে ফুটার যোগ করে"
 
-#: public/modules/dispatchlabel/dispatchlabel.php:198
-#: public/modules/dispatchlabel/dispatchlabel.php:228
-#: public/modules/dispatchlabel/dispatchlabel.php:238
-#: public/modules/dispatchlabel/dispatchlabel.php:239
+#: public/modules/dispatchlabel/dispatchlabel.php:274
+#: public/modules/dispatchlabel/dispatchlabel.php:304
+#: public/modules/dispatchlabel/dispatchlabel.php:314
+#: public/modules/dispatchlabel/dispatchlabel.php:315
 msgid "Print Dispatch Label"
 msgstr "প্রিন্ট ডিসপ্যাচ লেবেল"
 
-#: public/modules/dispatchlabel/dispatchlabel.php:221
+#: public/modules/dispatchlabel/dispatchlabel.php:297
 msgid "Dispatch Label"
 msgstr "প্রেরণ লেবেল"
 
-#: public/modules/dispatchlabel/dispatchlabel.php:222
+#: public/modules/dispatchlabel/dispatchlabel.php:298
 msgid "Print/Download Dispatch Label"
 msgstr "ডিসপ্যাচ লেবেল প্রিন্ট/ডাউনলোড করুন"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:8
-msgid "Basic dispatch label template"
-msgstr "বেসিক ডিসপ্যাচ লেবেল টেমপ্লেট"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:9
-msgid "Preview of your dispatch label template."
-msgstr "আপনার ডিসপ্যাচ লেবেল টেমপ্লেটের পূর্বরূপ।"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:14
-msgid "Dispatch Label Preview"
-msgstr "প্রেরণ লেবেল"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:28
-msgid "Sort and group items in the product table"
-msgstr "পণ্য সারণীতে আইটেমগুলি সাজান এবং গ্রুপ করুন"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:29
-msgid "Display product variations, SKUs, and meta details"
-msgstr "পণ্যের বৈচিত্র্য, SKU এবং মেটা বিবরণ প্রদর্শন করুন"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:30
-msgid "Add additional product meta, order meta, product attributes & custom notes"
-msgstr "অতিরিক্ত পণ্য মেটা, অর্ডার মেটা, পণ্য বৈশিষ্ট্য এবং কাস্টম নোট যোগ করুন"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:31
-msgid "Customize document layout and add footer section"
-msgstr "ডকুমেন্ট লেআউট কাস্টমাইজ করুন এবং ফুটার বিভাগ যোগ করুন"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:32
-msgid "Add print button to order emails for faster access"
-msgstr "দ্রুত অ্যাক্সেসের জন্য ইমেল অর্ডার করতে প্রিন্ট বোতাম যোগ করুন"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:57
-msgid "Handle order fulfillment with more control and precision."
-msgstr "আরও নিয়ন্ত্রণ এবং নির্ভুলতার সাথে অর্ডার পূরণ পরিচালনা করুন।"
 
 #: public/modules/dispatchlabel/views/general.php:13
 msgid "Configure the general settings required for the dispatch label."
@@ -4887,117 +5116,84 @@ msgstr "কোণ"
 msgid "Color"
 msgstr "রঙ"
 
-#: public/modules/invoice/invoice.php:1282
+#: public/modules/invoice/invoice.php:1303
 msgid "Pro Add-on"
 msgstr "প্রো অ্যাড-অন"
 
-#: public/modules/invoice/invoice.php:1286
+#: public/modules/invoice/invoice.php:1307
 msgid "Document title"
 msgstr "নথির শিরোনাম"
 
-#: public/modules/invoice/invoice.php:1287
+#: public/modules/invoice/invoice.php:1308
 msgid "Company Logo / Name"
 msgstr "কোম্পানির লোগো/নাম"
 
-#: public/modules/invoice/invoice.php:1289 public/modules/invoice/invoice.php:1560
-msgid "Invoice Number"
-msgstr "চালান নম্বর"
-
-#: public/modules/invoice/invoice.php:1290
-#: public/modules/shippinglabel/shippinglabel.php:169
-msgid "Order Number"
-msgstr "অর্ডার নম্বর"
-
-#: public/modules/invoice/invoice.php:1291
+#: public/modules/invoice/invoice.php:1311
 msgid "Invoice Date"
 msgstr "চালান তারিখ"
 
-#: public/modules/invoice/invoice.php:1292
+#: public/modules/invoice/invoice.php:1312
 #: public/modules/shippinglabel/shippinglabel.php:170
 msgid "Order Date"
 msgstr "অর্ডারের তারিখ"
 
-#: public/modules/invoice/invoice.php:1294
+#: public/modules/invoice/invoice.php:1314
 #: public/modules/shippinglabel/shippinglabel.php:167
 msgid "From Address"
 msgstr "ঠিকানা থেকে"
 
-#: public/modules/invoice/invoice.php:1295
+#: public/modules/invoice/invoice.php:1315
 msgid "Billing Address"
 msgstr "বিলিং এর ঠিকানা"
 
-#: public/modules/invoice/invoice.php:1296
-msgid "Shipping Address"
-msgstr "পাঠানোর ঠিকানা"
-
-#: public/modules/invoice/invoice.php:1297
+#: public/modules/invoice/invoice.php:1317
 #: public/modules/shippinglabel/shippinglabel.php:173
 msgid "Email Field"
 msgstr "ইমেল ক্ষেত্র"
 
-#: public/modules/invoice/invoice.php:1298
+#: public/modules/invoice/invoice.php:1318
 #: public/modules/shippinglabel/shippinglabel.php:174
 msgid "Tel Field"
 msgstr "টেল ফিল্ড"
 
-#: public/modules/invoice/invoice.php:1300
-#: public/modules/shippinglabel/shippinglabel.php:176
-msgid "SSN number"
-msgstr "SSN নম্বর"
-
-#: public/modules/invoice/invoice.php:1301
-#: public/modules/shippinglabel/shippinglabel.php:175
-msgid "VAT number"
-msgstr "ভ্যাট নম্বর"
-
-#: public/modules/invoice/invoice.php:1303
+#: public/modules/invoice/invoice.php:1323
 msgid "Payment received stamp"
 msgstr "পেমেন্ট স্ট্যাম্প প্রাপ্ত"
 
-#: public/modules/invoice/invoice.php:1308
-#: public/modules/shippinglabel/shippinglabel.php:179
-msgid "Barcode"
-msgstr "বারকোড"
-
-#: public/modules/invoice/invoice.php:1311
+#: public/modules/invoice/invoice.php:1331
 msgid "QR code"
 msgstr "QR কোড"
 
-#: public/modules/invoice/invoice.php:1313
+#: public/modules/invoice/invoice.php:1333
 msgid "QR Code"
 msgstr "QR কোড"
 
-#: public/modules/invoice/invoice.php:1319
-#: public/modules/shippinglabel/shippinglabel.php:180
-msgid "Tracking Number"
-msgstr "ট্র্যাকিং নম্বর"
-
-#: public/modules/invoice/invoice.php:1468
+#: public/modules/invoice/invoice.php:1487
 msgid "Print Invoices"
 msgstr "চালান প্রিন্ট করুন"
 
-#: public/modules/invoice/invoice.php:1469
+#: public/modules/invoice/invoice.php:1488
 msgid "Download Invoices"
 msgstr "চালান ডাউনলোড করুন"
 
-#: public/modules/invoice/invoice.php:1508 public/modules/invoice/invoice.php:1545
+#: public/modules/invoice/invoice.php:1527 public/modules/invoice/invoice.php:1564
 msgid "Print Invoice"
 msgstr "চালান প্রিন্ট করুন"
 
-#: public/modules/invoice/invoice.php:1516 public/modules/invoice/invoice.php:1546
+#: public/modules/invoice/invoice.php:1535 public/modules/invoice/invoice.php:1565
 msgid "Download Invoice"
 msgstr "চালান ডাউনলোড করুন"
 
-#: public/modules/invoice/invoice.php:1523 public/modules/packinglist/packinglist.php:252
+#: public/modules/invoice/invoice.php:1542 public/modules/packinglist/packinglist.php:338
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:368
 msgid "Download"
 msgstr "ডাউনলোড"
 
-#: public/modules/invoice/invoice.php:1536
+#: public/modules/invoice/invoice.php:1555
 msgid "Print/Download Invoice"
 msgstr "চালান প্রিন্ট/ডাউনলোড করুন"
 
-#: public/modules/invoice/invoice.php:1812
+#: public/modules/invoice/invoice.php:1831
 msgid "Customizer module is not active."
 msgstr "কাস্টমাইজার মডিউল সক্রিয় নয়।"
 
@@ -5097,9 +5293,9 @@ msgid ""
 "creation option for which the invoice attachment should be restricted. If none are "
 "selected, the invoice will be attached for all payment methods."
 msgstr ""
-"\"অটোমেট ইনভয়েস তৈরি\" বিকল্পের অধীনে অর্ডার স্ট্যাটাসের সাথে সম্পর্কিত পেমেন্ট পদ্ধতি নির্বাচন "
-"করুন যার জন্য ইনভয়েস সংযুক্তি সীমাবদ্ধ করা উচিত। যদি কোনওটিই নির্বাচন না করা হয়, তাহলে সমস্ত "
-"পেমেন্ট পদ্ধতির জন্য ইনভয়েস সংযুক্ত করা হবে।"
+"\"অটোমেট ইনভয়েস তৈরি\" বিকল্পের অধীনে অর্ডার স্ট্যাটাসের সাথে সম্পর্কিত পেমেন্ট পদ্ধতি নির্বাচন "
+"করুন যার জন্য ইনভয়েস সংযুক্তি সীমাবদ্ধ করা উচিত। যদি কোনওটিই নির্বাচন না করা হয়, তাহলে সমস্ত "
+"পেমেন্ট পদ্ধতির জন্য ইনভয়েস সংযুক্ত করা হবে।"
 
 #: public/modules/invoice/views/general.php:221
 #: public/modules/invoice/views/qrcode_promote.php:32
@@ -5237,7 +5433,7 @@ msgid "Sort order items in the product table "
 msgstr "পণ্য সারণীতে অর্ডার আইটেমগুলি সাজান"
 
 #: public/modules/invoice/views/invoice-admin-settings.php:27
-#: public/modules/packinglist/views/general.php:114
+#: public/modules/packinglist/views/general.php:129
 msgid "Multiple display formats for bundled products"
 msgstr "বান্ডিলযুক্ত পণ্যের জন্য একাধিক প্রদর্শন ফর্ম্যাট"
 
@@ -5246,7 +5442,7 @@ msgid "Generate packing slips and credit notes"
 msgstr "প্যাকিং স্লিপ এবং ক্রেডিট নোট তৈরি করুন"
 
 #: public/modules/invoice/views/invoice-admin-settings.php:77
-#: public/modules/packinglist/views/general.php:143
+#: public/modules/packinglist/views/general.php:158
 msgid "Invoices, Packing slips and Credit notes"
 msgstr "চালান, প্যাকিং স্লিপ এবং ক্রেডিট নোট"
 
@@ -5303,100 +5499,71 @@ msgid "Get Plugin"
 msgstr "প্লাগইন পান"
 
 #: public/modules/packinglist/data/data.tooltip.php:4
+msgid "Adds product SKU to the line items in the product table"
+msgstr "প্রোডাক্ট টেবিলে লাইন আইটেমগুলিতে প্রোডাক্ট SKU যোগ করে"
+
+#: public/modules/packinglist/data/data.tooltip.php:5
 msgid "Adds customer note to the packing slip"
 msgstr "প্যাকিং স্লিপে গ্রাহক নোট যোগ করে"
 
-#: public/modules/packinglist/data/data.tooltip.php:5
+#: public/modules/packinglist/data/data.tooltip.php:6
 msgid "Adds Footer to the packing slip"
 msgstr "প্যাকিং স্লিপে ফুটার যোগ করে"
 
-#: public/modules/packinglist/packinglist.php:224
-#: public/modules/packinglist/packinglist.php:246
-#: public/modules/packinglist/packinglist.php:263
-#: public/modules/packinglist/packinglist.php:264
+#: public/modules/packinglist/packinglist.php:310
+#: public/modules/packinglist/packinglist.php:332
+#: public/modules/packinglist/packinglist.php:349
+#: public/modules/packinglist/packinglist.php:350
 msgid "Print Packing slip"
 msgstr "প্রিন্ট প্যাকিং স্লিপ"
 
-#: public/modules/packinglist/packinglist.php:240
+#: public/modules/packinglist/packinglist.php:326
 msgid "Print/Download Packing slip"
 msgstr "প্যাকিং স্লিপ প্রিন্ট/ডাউনলোড করুন"
 
-#: public/modules/packinglist/packinglist.php:253
-#: public/modules/packinglist/packinglist.php:270
-#: public/modules/packinglist/packinglist.php:271
+#: public/modules/packinglist/packinglist.php:339
+#: public/modules/packinglist/packinglist.php:356
+#: public/modules/packinglist/packinglist.php:357
 msgid "Download Packing slip"
 msgstr "প্যাকিং স্লিপ ডাউনলোড করুন"
 
-#: public/modules/packinglist/packinglist.php:348
+#: public/modules/packinglist/packinglist.php:434
 msgid "Unable to print packling slip. Please check the items in the order."
 msgstr "প্যাকিং স্লিপ প্রিন্ট করা যাচ্ছে না। অনুগ্রহ করে অর্ডারের আইটেমগুলি পরীক্ষা করুন।"
-
-#: public/modules/packinglist/views/customize_pro.php:8
-msgid "Basic packing slip template"
-msgstr "বেসিক প্যাকিং স্লিপ টেমপ্লেট"
-
-#: public/modules/packinglist/views/customize_pro.php:9
-msgid "Preview of your current packing slip template."
-msgstr "আপনার বর্তমান প্যাকিং স্লিপ টেমপ্লেটের পূর্বরূপ দেখুন।"
-
-#: public/modules/packinglist/views/customize_pro.php:14
-msgid "Packing Slip Preview"
-msgstr "প্যাকিং স্লিপ প্রিভিউ"
-
-#: public/modules/packinglist/views/customize_pro.php:28
-msgid "Professional templates for packing slip"
-msgstr "নথি ব্যক্তিগতকৃত করতে একাধিক টেমপ্লেট"
-
-#: public/modules/packinglist/views/customize_pro.php:29
-msgid "Show or hide fields like billing address, weight, product image, and more"
-msgstr "বিলিং ঠিকানা, ওজন, পণ্যের ছবি এবং আরও অনেক কিছুর মতো ক্ষেত্রগুলি দেখান বা লুকান"
-
-#: public/modules/packinglist/views/customize_pro.php:30
-msgid "Add extra details such as product meta, order info, or custom attributes"
-msgstr "পণ্য মেটা, অর্ডার তথ্য, অথবা কাস্টম অ্যাট্রিবিউটের মতো অতিরিক্ত বিবরণ যোগ করুন"
-
-#: public/modules/packinglist/views/customize_pro.php:31
-msgid "Group and sort products in the table using flexible conditions"
-msgstr "নমনীয় অবস্থা ব্যবহার করে টেবিলে পণ্যগুলিকে গ্রুপ করুন এবং সাজান।"
-
-#: public/modules/packinglist/views/customize_pro.php:56
-msgid "Create fully personalized packing slips that fit your brand — with Premium."
-msgstr ""
-"প্রিমিয়ামের সাহায্যে আপনার ব্র্যান্ডের সাথে মানানসই সম্পূর্ণ ব্যক্তিগতকৃত প্যাকিং স্লিপ তৈরি করুন।"
-
-#: public/modules/packinglist/views/customize_pro.php:70
-msgid "Plus, many more customization options"
-msgstr "এছাড়াও, আরও অনেক কাস্টমাইজেশন বিকল্প"
 
 #: public/modules/packinglist/views/general.php:12
 msgid "Configure the general settings required for the packing slip."
 msgstr "প্যাকিং স্লিপের জন্য প্রয়োজনীয় সাধারণ সেটিংস কনফিগার করুন।"
 
-#: public/modules/packinglist/views/general.php:108
+#: public/modules/packinglist/views/general.php:40
+msgid "Include product SKU"
+msgstr "প্রোডাক্ট SKU অন্তর্ভুক্ত করুন"
+
+#: public/modules/packinglist/views/general.php:123
 msgid "Automatically attach packing slip with order email"
 msgstr "অর্ডার ইমেলের সাথে স্বয়ংক্রিয়ভাবে প্যাকিং স্লিপ সংযুক্ত করুন"
 
-#: public/modules/packinglist/views/general.php:109
+#: public/modules/packinglist/views/general.php:124
 msgid "Built-in templates to personalize packing slip"
 msgstr "প্যাকিং স্লিপ ব্যক্তিগতকৃত করার জন্য অন্তর্নির্মিত টেমপ্লেট"
 
-#: public/modules/packinglist/views/general.php:110
+#: public/modules/packinglist/views/general.php:125
 msgid "Add a print packing slip button to My account page"
 msgstr "আমার অ্যাকাউন্ট পৃষ্ঠায় একটি প্রিন্ট প্যাকিং স্লিপ বোতাম যোগ করুন"
 
-#: public/modules/packinglist/views/general.php:115
+#: public/modules/packinglist/views/general.php:130
 msgid "Add custom footers to packing slips"
 msgstr "প্যাকিং স্লিপে কাস্টম ফুটার যোগ করুন"
 
-#: public/modules/packinglist/views/general.php:116
+#: public/modules/packinglist/views/general.php:131
 msgid "Add additional order & product meta fields"
 msgstr "অতিরিক্ত অর্ডার এবং পণ্য মেটা ক্ষেত্র যোগ করুন"
 
-#: public/modules/packinglist/views/general.php:117
+#: public/modules/packinglist/views/general.php:132
 msgid "Add additional product attributes"
 msgstr "অতিরিক্ত পণ্য বৈশিষ্ট্য যোগ করুন"
 
-#: public/modules/packinglist/views/general.php:118
+#: public/modules/packinglist/views/general.php:133
 msgid "Generate invoices and credits notes"
 msgstr "চালান এবং ক্রেডিট নোট তৈরি করুন"
 
@@ -5424,33 +5591,9 @@ msgstr "ওজন"
 msgid "Shipping Method"
 msgstr "পরিবহণ মাধ্যম"
 
-#: public/modules/shippinglabel/shippinglabel.php:181
-msgid "Package Number"
-msgstr "প্যাকেজ নম্বর"
-
-#: public/modules/shippinglabel/shippinglabel.php:182
-msgid "Box name"
-msgstr "বাক্সের নাম"
-
 #: public/modules/shippinglabel/shippinglabel.php:183
 msgid "No of Items"
 msgstr "আইটেম সংখ্যা"
-
-#: public/modules/shippinglabel/shippinglabel.php:184
-msgid "Fragile"
-msgstr "ভঙ্গুর"
-
-#: public/modules/shippinglabel/shippinglabel.php:185
-msgid "This way up"
-msgstr "এই পথের উপর"
-
-#: public/modules/shippinglabel/shippinglabel.php:186
-msgid "Keep dry"
-msgstr "শুকনা রাখ"
-
-#: public/modules/shippinglabel/shippinglabel.php:188
-msgid "Return Policy"
-msgstr "প্রত্যাবর্তন নীতিমালা"
 
 #: public/modules/shippinglabel/shippinglabel.php:355
 #: public/modules/shippinglabel/shippinglabel.php:373
@@ -5912,6 +6055,108 @@ msgstr "ওয়েবটফি"
 #. Author URI of the plugin/theme
 msgid "https://www.webtoffee.com/"
 msgstr "https://www.webtoffee.com/"
+
+#~ msgid "Black Friday Cyber Monday 2025"
+#~ msgstr "ব্ল্যাক ফ্রাইডে সাইবার সোমবার ২০২৫"
+
+#~ msgid "Never Miss This Deal"
+#~ msgstr "এই অফারটি কখনও মিস করবেন না"
+
+#, php-format
+#~ msgid ""
+#~ "Your Last Chance to Avail %1$s on WebToffee Plugins. Grab the deal before it`s gone!"
+#~ msgstr "WebToffee প্লাগইনগুলিতে %1$s পাওয়ার আপনার শেষ সুযোগ। শেষ হওয়ার আগেই ডিলটি লুফে নিন!"
+
+#~ msgid "OFF"
+#~ msgstr "বন্ধ রাখুন"
+
+#~ msgid "View plugins"
+#~ msgstr "প্লাগইন দেখুন"
+
+#~ msgid "Crown"
+#~ msgstr "মুকুট"
+
+#~ msgid "Basic delivery note template"
+#~ msgstr "বেসিক ডেলিভারি নোট টেমপ্লেট"
+
+#~ msgid "Preview of your current delivery note template."
+#~ msgstr "আপনার বর্তমান ডেলিভারি নোট টেমপ্লেটের পূর্বরূপ।"
+
+#~ msgid "Delivery note Preview"
+#~ msgstr "ডেলিভারি নোট প্রিভিউ"
+
+#~ msgid "Pre-built templates"
+#~ msgstr "নথি ব্যক্তিগতকৃত করতে একাধিক টেমপ্লেট"
+
+#~ msgid "Sort and group products by category"
+#~ msgstr "বিভাগ অনুসারে পণ্যগুলি সাজান এবং গ্রুপ করুন"
+
+#~ msgid "Show product variations, attributes, SKUs, return policy and footer"
+#~ msgstr "পণ্যের বৈচিত্র্য, বৈশিষ্ট্য, SKU, রিটার্ন নীতি এবং ফুটার দেখান"
+
+#~ msgid "Add order meta, product meta, and customer notes"
+#~ msgstr "একাধিক কাস্টম অর্ডার মেটা যোগ করতে,"
+
+#~ msgid "Unlock more customization"
+#~ msgstr "আপনি যত বেশি তথ্য ভাগ করবেন, ততই ভালো।"
+
+#~ msgid "Give your delivery team and customers the right details at a glance."
+#~ msgstr "আপনার ডেলিভারি টিম এবং গ্রাহকদের এক নজরে সঠিক বিবরণ দিন।"
+
+#~ msgid "Basic dispatch label template"
+#~ msgstr "বেসিক ডিসপ্যাচ লেবেল টেমপ্লেট"
+
+#~ msgid "Preview of your dispatch label template."
+#~ msgstr "আপনার ডিসপ্যাচ লেবেল টেমপ্লেটের পূর্বরূপ।"
+
+#~ msgid "Dispatch Label Preview"
+#~ msgstr "প্রেরণ লেবেল"
+
+#~ msgid "Sort and group items in the product table"
+#~ msgstr "পণ্য সারণীতে আইটেমগুলি সাজান এবং গ্রুপ করুন"
+
+#~ msgid "Display product variations, SKUs, and meta details"
+#~ msgstr "পণ্যের বৈচিত্র্য, SKU এবং মেটা বিবরণ প্রদর্শন করুন"
+
+#~ msgid "Add additional product meta, order meta, product attributes & custom notes"
+#~ msgstr "অতিরিক্ত পণ্য মেটা, অর্ডার মেটা, পণ্য বৈশিষ্ট্য এবং কাস্টম নোট যোগ করুন"
+
+#~ msgid "Customize document layout and add footer section"
+#~ msgstr "ডকুমেন্ট লেআউট কাস্টমাইজ করুন এবং ফুটার বিভাগ যোগ করুন"
+
+#~ msgid "Add print button to order emails for faster access"
+#~ msgstr "দ্রুত অ্যাক্সেসের জন্য ইমেল অর্ডার করতে প্রিন্ট বোতাম যোগ করুন"
+
+#~ msgid "Handle order fulfillment with more control and precision."
+#~ msgstr "আরও নিয়ন্ত্রণ এবং নির্ভুলতার সাথে অর্ডার পূরণ পরিচালনা করুন।"
+
+#~ msgid "Basic packing slip template"
+#~ msgstr "বেসিক প্যাকিং স্লিপ টেমপ্লেট"
+
+#~ msgid "Preview of your current packing slip template."
+#~ msgstr "আপনার বর্তমান প্যাকিং স্লিপ টেমপ্লেটের পূর্বরূপ দেখুন।"
+
+#~ msgid "Packing Slip Preview"
+#~ msgstr "প্যাকিং স্লিপ প্রিভিউ"
+
+#~ msgid "Professional templates for packing slip"
+#~ msgstr "নথি ব্যক্তিগতকৃত করতে একাধিক টেমপ্লেট"
+
+#~ msgid "Show or hide fields like billing address, weight, product image, and more"
+#~ msgstr "বিলিং ঠিকানা, ওজন, পণ্যের ছবি এবং আরও অনেক কিছুর মতো ক্ষেত্রগুলি দেখান বা লুকান"
+
+#~ msgid "Add extra details such as product meta, order info, or custom attributes"
+#~ msgstr "পণ্য মেটা, অর্ডার তথ্য, অথবা কাস্টম অ্যাট্রিবিউটের মতো অতিরিক্ত বিবরণ যোগ করুন"
+
+#~ msgid "Group and sort products in the table using flexible conditions"
+#~ msgstr "নমনীয় অবস্থা ব্যবহার করে টেবিলে পণ্যগুলিকে গ্রুপ করুন এবং সাজান।"
+
+#~ msgid "Create fully personalized packing slips that fit your brand — with Premium."
+#~ msgstr ""
+#~ "প্রিমিয়ামের সাহায্যে আপনার ব্র্যান্ডের সাথে মানানসই সম্পূর্ণ ব্যক্তিগতকৃত প্যাকিং স্লিপ তৈরি করুন।"
+
+#~ msgid "Plus, many more customization options"
+#~ msgstr "এছাড়াও, আরও অনেক কাস্টমাইজেশন বিকল্প"
 
 #~ msgid "How your delivery note will appear to customers."
 #~ msgstr "আপনার ডেলিভারি নোট গ্রাহকদের কাছে কেমন দেখাবে।"

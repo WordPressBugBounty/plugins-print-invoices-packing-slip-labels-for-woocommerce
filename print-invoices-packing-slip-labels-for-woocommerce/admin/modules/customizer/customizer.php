@@ -60,7 +60,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 		);
 		if (Wf_Woocommerce_Packing_List_Admin::check_write_access($this->module_id)) //no error then proceed
 		{
-			$allowed_actions = array('get_template_data', 'update_from_codeview', 'save_theme', 'my_templates', 'prepare_sample_pdf');
+			$allowed_actions = array('get_template_data', 'update_from_codeview', 'save_theme', 'my_templates', 'prepare_sample_pdf', 'sync_linked_general_option');
 			$customizer_action = (isset($_REQUEST['customizer_action'])) ? sanitize_text_field(wp_unslash($_REQUEST['customizer_action'])) : '';// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- This is a safe use of isset.
 			if (method_exists($this, $customizer_action)) {
 				$out = $this->{$customizer_action}();
@@ -94,7 +94,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 			$out['msg'] = __("There is no order with this given id", "print-invoices-packing-slip-labels-for-woocommerce");
 			echo json_encode($out);
 			exit();
-		}
+		} 
 
 		$template_type = isset($_POST['template_type']) ? sanitize_text_field(wp_unslash($_POST['template_type'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
@@ -247,6 +247,8 @@ class Wf_Woocommerce_Packing_List_Customizer
 		$to_customize_module_id = Wf_Woocommerce_Packing_List::get_module_id($this->to_customize);
 
 		$general_settings = $this->get_general_settings_for_customizer($this->to_customize, $to_customize_module_id);
+		$general_sync_map_full = self::get_customizer_to_general_option_sync_map();
+		$general_option_sync_map = isset($general_sync_map_full[ $this->to_customize ]) ? $general_sync_map_full[ $this->to_customize ] : array();
 
 		$params = array(
 			'nonces' => array(
@@ -261,6 +263,7 @@ class Wf_Woocommerce_Packing_List_Customizer
 			'preview_only' => $preview_only,
 			'img_url_placeholders' => $img_url_placeholders,
 			'general_settings' => $general_settings,
+			'general_option_sync_map' => $general_option_sync_map,
 			'labels' => array(
 				'error' => __('Error', 'print-invoices-packing-slip-labels-for-woocommerce'),
 				'success' => __('Success', 'print-invoices-packing-slip-labels-for-woocommerce'),
@@ -284,7 +287,14 @@ class Wf_Woocommerce_Packing_List_Customizer
 				'general_settings' => admin_url('admin.php?page=' . WF_PKLIST_POST_TYPE . '#general'),
 				'module_general_settings' => admin_url('admin.php?page=' . $to_customize_module_id . '#general'),
 			),
+			'pro_field_tooltip_active_types' => array('invoice', 'shippinglabel'),
+			'pro_field_tooltips' => array(),
+			'pro_field_tooltip_crown_url' => WF_PKLIST_PLUGIN_URL . 'assets/images/promotion_crown.png',
 		);
+
+		if (in_array($this->to_customize, $params['pro_field_tooltip_active_types'], true)) {
+			$params['pro_field_tooltips'] = self::get_pro_field_tooltips_for_template($this->to_customize);
+		}
 
 		if (!$is_pro_customizer) {
 			wp_enqueue_script($this->module_id, plugin_dir_url(__FILE__) . 'assets/js/customize.js', array('jquery'), WF_PKLIST_VERSION, false);
@@ -384,6 +394,86 @@ class Wf_Woocommerce_Packing_List_Customizer
 		$settings = apply_filters('wf_pklist_customizer_general_settings', $settings, $template_type, $module_id);
 		
 		return $settings;
+	}
+
+	/**
+	 * Map customizer panel keys (data-type / data-elm) to General tab option names for packing slip, delivery note, dispatch label.
+	 *
+	 * @since 4.9.4
+	 * @return array<string, array<string, string>> template_type => [ link_key => option_name ].
+	 */
+	public static function get_customizer_to_general_option_sync_map() {
+		$map = array(
+			'packinglist'   => array(
+				'customer_note'            => 'woocommerce_wf_add_customer_note_in_packinglist',
+				'footer'                   => 'woocommerce_wf_packinglist_footer_pk',
+				'product_table_head_image' => 'woocommerce_wf_attach_image_packinglist',
+				'product_table_head_sku'   => 'woocommerce_wf_attach_sku_packinglist',
+			),
+			'deliverynote'  => array(
+				'customer_note'            => 'woocommerce_wf_add_customer_note_in_deliverynote',
+				'footer'                   => 'woocommerce_wf_packinglist_footer_dn',
+				'product_table_head_image' => 'woocommerce_wf_attach_image_deliverynote',
+			),
+			'dispatchlabel' => array(
+				'customer_note' => 'woocommerce_wf_add_customer_note_in_dispatchlabel',
+				'footer'        => 'woocommerce_wf_packinglist_footer_dl',
+			),
+		);
+
+		/**
+		 * Alter link map for customizer → General settings sync.
+		 *
+		 * @param array $map Full map keyed by template_type.
+		 */
+		return apply_filters('wf_pklist_customizer_to_general_option_sync_map', $map);
+	}
+
+	/**
+	 * Persist a single General setting when the matching customizer visibility control changes.
+	 *
+	 * @return array
+	 */
+	public function sync_linked_general_option() {
+		$out = array(
+			'status'  => 0,
+			'msg'     => __('Unable to update setting.', 'print-invoices-packing-slip-labels-for-woocommerce'),
+			'skipped' => false,
+		);
+
+		$template_type = isset($_POST['template_type']) ? sanitize_text_field(wp_unslash($_POST['template_type'])) : '';// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$link_key      = isset($_POST['link_key']) ? sanitize_text_field(wp_unslash($_POST['link_key'])) : '';// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$option_value  = isset($_POST['option_value']) ? sanitize_text_field(wp_unslash($_POST['option_value'])) : '';// phpcs:ignore WordPress.Security.NonceVerification.Missing
+
+		if (!in_array($option_value, array('Yes', 'No'), true)) {
+			$out['msg'] = __('Invalid value.', 'print-invoices-packing-slip-labels-for-woocommerce');
+			return $out;
+		}
+
+		$full_map = self::get_customizer_to_general_option_sync_map();
+		if (!isset($full_map[ $template_type ][ $link_key ])) {
+			$out['status']  = 1;
+			$out['skipped'] = true;
+			$out['msg']     = '';
+			return $out;
+		}
+
+		$option_key = $full_map[ $template_type ][ $link_key ];
+		$module_id  = Wf_Woocommerce_Packing_List::get_module_id($template_type);
+
+		$the_options                 = Wf_Woocommerce_Packing_List::get_settings($module_id);
+		$the_options[ $option_key ]  = $option_value;
+		$the_options                 = apply_filters('wf_pklist_alter_settings', $the_options, $module_id);
+		Wf_Woocommerce_Packing_List::update_settings($the_options, $module_id);
+		do_action('wf_pklist_intl_after_setting_update', $the_options, $module_id);
+
+		$out['status']        = 1;
+		$out['msg']           = __('Settings Updated', 'print-invoices-packing-slip-labels-for-woocommerce');
+		$out['option_key']    = $option_key;
+		$out['option_value']  = $option_value;
+		$out['skipped']       = false;
+
+		return $out;
 	}
 
 	public function get_current_active_theme($base)
@@ -1737,6 +1827,55 @@ class Wf_Woocommerce_Packing_List_Customizer
 															} ?> ">
 		<?php
 			}
+		}
+
+		/**
+		 * Pro upgrade callout copy per sidebar field (invoice & shipping label, free customizer).
+		 *
+		 * @param string $template_type invoice|shippinglabel.
+		 * @return array<string, string> Keys match customizable item keys (e.g. tracking_number_pro_element).
+		 */
+		public static function get_pro_field_tooltips_for_template($template_type)
+		{
+			$invoice_upgrade_url = 'https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/?utm_source=free_plugin_customizesection_dialogue&utm_medium=pdf_basic&utm_campaign=PDF_invoice';
+			$shipping_upgrade_url = 'https://www.webtoffee.com/product/woocommerce-shipping-labels-delivery-notes/?utm_source=free_plugin_customizesection_dialogue&utm_medium=pdf_basic&utm_campaign=Shipping_Label';
+
+			if ('invoice' === $template_type) {
+				return array(
+					'tracking_number_pro_element' => self::pro_field_tooltip_sentence(__('Add the order\'s', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Tracking Number', 'print-invoices-packing-slip-labels-for-woocommerce'), __('to your invoices so customers can easily view and track delivery details.', 'print-invoices-packing-slip-labels-for-woocommerce'), $invoice_upgrade_url),
+					'product_table_total_tax_pro_element' => self::pro_field_tooltip_sentence(__('Display a combined', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Total Tax', 'print-invoices-packing-slip-labels-for-woocommerce'), __('amount on the invoice to simplify how tax breakdown appears for customers.', 'print-invoices-packing-slip-labels-for-woocommerce'), $invoice_upgrade_url),
+					'product_table_coupon_pro_element' => self::pro_field_tooltip_sentence(__('Show', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Coupon Details', 'print-invoices-packing-slip-labels-for-woocommerce'), __('to give customers a clear summary of the discounts applied to their order.', 'print-invoices-packing-slip-labels-for-woocommerce'), $invoice_upgrade_url),
+				);
+			}
+
+			if ('shippinglabel' === $template_type) {
+				return array(
+					'company_logo_pro_element' => self::pro_field_tooltip_sentence(__('Add your', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Company Logo', 'print-invoices-packing-slip-labels-for-woocommerce'), __('to the shipping label for professional, branded packages.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'barcode_pro_element' => self::pro_field_tooltip_sentence(__('Add a', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Barcode', 'print-invoices-packing-slip-labels-for-woocommerce'), __('to your shipping label for quicker scanning and smoother order handling.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'tracking_number_pro_element' => self::pro_field_tooltip_sentence(__('Add the', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Tracking Number', 'print-invoices-packing-slip-labels-for-woocommerce'), __('to the shipping label for easy shipment tracking.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'package_no_pro_element' => self::pro_field_tooltip_sentence(__('Show the', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Package Number', 'print-invoices-packing-slip-labels-for-woocommerce'), __('on each shipping label for accurate multi-package orders.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'box_name_pro_element' => self::pro_field_tooltip_sentence(__('Display the', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Box name', 'print-invoices-packing-slip-labels-for-woocommerce'), __('on the label so recipients can identify contents quickly.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'total_no_of_items_pro_element' => self::pro_field_tooltip_sentence(__('Show how', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Many Items', 'print-invoices-packing-slip-labels-for-woocommerce'), __('are in the order on the shipping label.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'fragile_pro_element' => self::pro_field_tooltip_sentence(__('Mark packages as', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Fragile', 'print-invoices-packing-slip-labels-for-woocommerce'), __('so carriers know to handle them with extra care.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'thiswayup_pro_element' => self::pro_field_tooltip_sentence(__('Add a', 'print-invoices-packing-slip-labels-for-woocommerce'), __('This way up', 'print-invoices-packing-slip-labels-for-woocommerce'), __('indicator to help prevent damage during shipping.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'keepdry_pro_element' => self::pro_field_tooltip_sentence(__('Add a', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Keep dry', 'print-invoices-packing-slip-labels-for-woocommerce'), __('notice for moisture-sensitive shipments.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+					'return_policy_pro_element' => self::pro_field_tooltip_sentence(__('Add the', 'print-invoices-packing-slip-labels-for-woocommerce'), __('Return Policy', 'print-invoices-packing-slip-labels-for-woocommerce'), __('to the shipping label for easy shipment tracking.', 'print-invoices-packing-slip-labels-for-woocommerce'), $shipping_upgrade_url),
+				);
+			}
+
+			return array();
+		}
+
+		/**
+		 * @param string $before    Text before bold phrase.
+		 * @param string $highlight Bold phrase.
+		 * @param string $after     Text before upgrade link.
+		 * @param string $upgrade_url External URL.
+		 */
+		private static function pro_field_tooltip_sentence($before, $highlight, $after, $upgrade_url)
+		{
+			$upgrade_label = __('Upgrade to Pro', 'print-invoices-packing-slip-labels-for-woocommerce');
+			return '<p class="wt_pklist_pro_field_tooltip_p">' . esc_html($before) . ' <strong>' . esc_html($highlight) . '</strong> ' . esc_html($after) . ' <a href="' . esc_url($upgrade_url) . '" target="_blank" rel="noopener noreferrer" class="wt_pklist_pro_field_tooltip_link">' . esc_html($upgrade_label) . '</a></p>';
 		}
 
 		/**

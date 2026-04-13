@@ -91,6 +91,7 @@ var pklist_customize = {};
 			}
 			this.regSaveTheme();
 		},
+
 		regCustomizeThemeClick: function () {
 			$(document).on("click", '.wf_customize_theme', function (event) {
 				pklist_customize.template_id = $(this).attr('data-id');
@@ -224,7 +225,7 @@ var pklist_customize = {};
 				}
 			});
 		},
-		saveTheme: function (do_current_theme_activate = false) {
+		saveTheme: function (do_current_theme_activate = false, silentSuccess = false, skipLoader = false) {
 			let templateName = $('.wf_template_name_field').val();
 			if (templateName === '') {
 				wf_notify_msg.error(wf_woocommerce_packing_list_customizer.labels.template_required);
@@ -240,14 +241,18 @@ var pklist_customize = {};
 				def_template: pklist_customize.template_base,
 				name: $('.wf_template_name_field').val(),
 			};
-			this.setLoader();
+			if (!skipLoader) {
+				this.setLoader();
+			}
 			$.ajax({
 				type: 'POST',
 				url: wf_woocommerce_packing_list_customizer.ajax_url,
 				data: data,
 				dataType: 'json',
 				success: function (data) {
-					pklist_customize.removeLoader();
+					if (!skipLoader) {
+						pklist_customize.removeLoader();
+					}
 
 					if (1 === data.status || "1" === data.status) {
 						pklist_customize.template_id = data.template_id;
@@ -258,7 +263,9 @@ var pklist_customize = {};
 						} else {
 							pklist_customize.setCurrentThemeActionBtns();
 							$('.wf_cst_theme_name').html(data.name);
-							wf_notify_msg.success(data.msg);
+							if (!silentSuccess) {
+								wf_notify_msg.success(data.msg);
+							}
 						}
 
 						if (data.new_entry === 1) {
@@ -271,7 +278,9 @@ var pklist_customize = {};
 					}
 				},
 				error: function () {
-					pklist_customize.removeLoader();
+					if (!skipLoader) {
+						pklist_customize.removeLoader();
+					}
 					wf_notify_msg.error(wf_woocommerce_packing_list_customizer.labels.error);
 				}
 			});
@@ -683,7 +692,7 @@ var pklist_customize = {};
 							if ("attr" === prop_ar[0]) /*  attribute not CSS */ {
 								prop = prop.substr(5);
 								vl = tgt_elm.attr(prop);
-								if (typeof vl !== 'undefined') {
+								 if (typeof vl !== 'undefined') {
 									elm.val(vl);
 								} else {
 									/* Use default value if attribute is not set */
@@ -858,12 +867,14 @@ var pklist_customize = {};
 		},
 		deRegPanelEvents: function () {
 			$('.wf_side_panel_toggle .wf_slide_switch, .wf_side_panel .wf_cst_click').unbind('click');
+			$('.wf_side_panel_toggle .wf_slide_switch').unbind('change');
 			$('.wf_side_panel .wf_cst_change, .wf_side_panel .wf_cst_switcher, .wf_inptgrp .addonblock input[type="text"]').unbind('change');
 			$('.wf_side_panel .wf_cst_keyup').unbind('keyup');
 			$('.wf_side_panel .wf_cst_keypress').unbind('keypress');
 		},
 		regPanelEvents: function () {
-			$('.wf_side_panel_toggle .wf_slide_switch').on('click', function () {
+			/* Use "change" so :checked matches the new state (click can run before the checkbox toggles). */
+			$('.wf_side_panel_toggle .wf_slide_switch').on('change', function () {
 				pklist_customize.toggleElement($(this), 0);
 			});
 
@@ -955,6 +966,7 @@ var pklist_customize = {};
 					code_tgt_elm.find('.wfte_' + cr_active_sub_elm_clss).removeClass(pklist_customize.to_hide_css);
 
 					this.updateCodeViewHtml(code_view_dom);
+					this.scheduleAutosaveAfterVisibilityToggle();
 
 					/* showing customizing options of active element */
 					var cr_toggling_elm = pklist_customize.getBoxTogglingELm(cr_active_sub_elm_clss);
@@ -1030,6 +1042,8 @@ var pklist_customize = {};
 							}
 						}
 						this.updateCodeViewHtml(code_view_dom);
+						this.pushLinkedGeneralForDataTypeAttribute(elm.attr('data-elm'), elm.is(':checked'));
+						this.scheduleAutosaveAfterVisibilityToggle();
 					}
 				} else {
 					/* hiding customizing options of inactive elements */
@@ -1092,6 +1106,8 @@ var pklist_customize = {};
 						this.toggleChildElmPanel(tgt_elm);
 					}
 					this.updateCodeViewHtml(code_view_dom);
+					this.pushLinkedGeneralForDataTypeAttribute(elm.attr('data-type'), elm.is(':checked'));
+					this.scheduleAutosaveAfterVisibilityToggle();
 				}
 			}
 		},
@@ -1251,6 +1267,110 @@ var pklist_customize = {};
 			var i = (haystack + '').indexOf(needle, (offset || 0));
 			return i === -1 ? false : i;
 		},
+		/**
+		 * Keep Code view / stored template HTML in sync when premium feature toggles change (packing slip, delivery note, dispatch label).
+		 */
+		syncPremiumToggleToCodeView: function ($checkbox) {
+			var targetElements = $checkbox.attr('data-target-element');
+			if (typeof targetElements === 'undefined') {
+				return;
+			}
+			var elementsArr = this.getAttributItems(targetElements);
+			var isChecked = $checkbox.is(':checked');
+			var code_view_dom = this.getCodeViewHtmlDom();
+			var e, elementClass, code_tgt_elm, tgt_elm;
+			for (e = 0; e < elementsArr.length; e++) {
+				elementClass = elementsArr[e].trim();
+				code_tgt_elm = code_view_dom.find('.wfte_' + elementClass);
+				tgt_elm = $('.wf_customize_container').find('.wfte_' + elementClass);
+				if (isChecked) {
+					tgt_elm.removeClass(this.to_hide_css);
+					code_tgt_elm.removeClass(this.to_hide_css);
+				} else {
+					tgt_elm.addClass(this.to_hide_css);
+					code_tgt_elm.addClass(this.to_hide_css);
+				}
+				this.toggleChildElmPanel(tgt_elm);
+			}
+			this.updateCodeViewHtml(code_view_dom);
+		},
+		/** When customizer show/hide matches a General tab option, persist it and refresh radios on the General tab. */
+		pushLinkedGeneralForDataTypeAttribute: function (attrVal, isVisible) {
+			if (!attrVal || typeof attrVal === 'undefined') {
+				return;
+			}
+			var docTypes = { packinglist: 1, deliverynote: 1, dispatchlabel: 1 };
+			var tt = wf_woocommerce_packing_list_customizer.template_type;
+			if (!docTypes[tt]) {
+				return;
+			}
+			var map = wf_woocommerce_packing_list_customizer.general_option_sync_map || {};
+			var keys = this.getAttributItems(attrVal);
+			var i, lk;
+			for (i = 0; i < keys.length; i++) {
+				lk = keys[i].trim();
+				if (map[lk]) {
+					this.ajaxSyncLinkedGeneralOption(lk, isVisible);
+					break;
+				}
+			}
+		},
+		ajaxSyncLinkedGeneralOption: function (linkKey, isVisible) {
+			var map = wf_woocommerce_packing_list_customizer.general_option_sync_map || {};
+			if (!map[linkKey]) {
+				return;
+			}
+			var val = isVisible ? 'Yes' : 'No';
+			$.ajax({
+				type: 'POST',
+				url: wf_woocommerce_packing_list_customizer.ajax_url,
+				dataType: 'json',
+				data: {
+					action: 'wfpklist_customizer_ajax',
+					customizer_action: 'sync_linked_general_option',
+					_wpnonce: wf_woocommerce_packing_list_customizer.nonces.main,
+					template_type: wf_woocommerce_packing_list_customizer.template_type,
+					link_key: linkKey,
+					option_value: val
+				},
+				success: function (data) {
+					if ((1 === data.status || '1' === data.status) && data.option_key && !data.skipped) {
+						pklist_customize.updateGeneralTabRadioInputs(data.option_key, data.option_value);
+					}
+				}
+			});
+		},
+		updateGeneralTabRadioInputs: function (optionKey, value) {
+			if (!optionKey) {
+				return;
+			}
+			var $yes = $('input[type="radio"][name="' + optionKey + '"][value="Yes"]');
+			var $no = $('input[type="radio"][name="' + optionKey + '"][value="No"]');
+			if ($yes.length && $no.length) {
+				if ('Yes' === value) {
+					$yes.prop('checked', true);
+				} else {
+					$no.prop('checked', true);
+				}
+			}
+		},
+		/** Debounced template save after show/hide toggles (sidebar switches + premium panel) for packing slip, delivery note, dispatch label */
+		_visibilityToggleAutosaveTimer: null,
+		scheduleAutosaveAfterVisibilityToggle: function () {
+			var autosaveTypes = { packinglist: 1, deliverynote: 1, dispatchlabel: 1 };
+			var tt = wf_woocommerce_packing_list_customizer.template_type;
+			if (!autosaveTypes[tt]) {
+				return;
+			}
+			if (!pklist_customize.template_id || 0 === pklist_customize.template_id || '0' === pklist_customize.template_id) {
+				return;
+			}
+			clearTimeout(pklist_customize._visibilityToggleAutosaveTimer);
+			pklist_customize._visibilityToggleAutosaveTimer = setTimeout(function () {
+				/* skipLoader: avoid full-screen overlay on each toggle; show standard success message from server */
+				pklist_customize.saveTheme(false, false, true);
+			}, 600);
+		},
 		render_page_properties_from_main_div: function () {
 			// temporary div for applying the page attributes from adc_main div
 			var adc_main_elm = $('.wf_customize_vis_container').find('.wfte_invoice_basic_main');
@@ -1396,62 +1516,74 @@ var pklist_customize = {};
 		}
 	}
 
-	/* Packing List Pro Preview */
-	$(document).ready(function() {
-		if ($('#wt_packinglist_preview').length > 0) {
-			var hiddenClass = 'wfte_hidden';
-			var $preview = $('#wt_packinglist_preview');
-			
-			function getAttributItems(vl) {
-				var array = vl.split("|");
-				return array.filter(function(el) {
-					return el !== null && el !== "" && el !== " ";
-				});
-			}
-			
-			function toggleElement(elm, isInit) {
-				var targetElements = elm.attr('data-target-element');
-				if (typeof targetElements !== 'undefined') {
-					var elementsArr = getAttributItems(targetElements);
-					var isChecked = elm.is(':checked');
-					
-					for (var i = 0; i < elementsArr.length; i++) {
-						var elementClass = elementsArr[i].trim();
-						var $targetElm = $preview.find('.wfte_' + elementClass);
-						var $targetTd = $preview.find('.' + elementClass);
-						
-						if (isChecked) {
-							$targetElm.removeClass(hiddenClass);
-							$targetTd.removeClass(hiddenClass);
-							if (!isInit) {
-								highlightElement($targetElm);
-								highlightElement($targetTd);
-							}
-						} else {
-							$targetElm.addClass(hiddenClass);
-							$targetTd.addClass(hiddenClass);
+	/* Premium feature toggles (packing slip, delivery note, dispatch label, etc.) */
+	$(document).ready(function () {
+		if ($('.wt_pklist_feature_toggle').length === 0) {
+			return;
+		}
+		var hiddenClass = 'wfte_hidden';
+		var $preview = $('#wt_packinglist_preview');
+		if ($preview.length === 0) {
+			$preview = $('.wf_customize_vis_container');
+		}
+		if ($preview.length === 0) {
+			return;
+		}
+
+		function getAttributItems(vl) {
+			var array = vl.split("|");
+			return array.filter(function (el) {
+				return el !== null && el !== "" && el !== " ";
+			});
+		}
+
+		function toggleElement(elm, isInit) {
+			var targetElements = elm.attr('data-target-element');
+			if (typeof targetElements !== 'undefined') {
+				var elementsArr = getAttributItems(targetElements);
+				var isChecked = elm.is(':checked');
+
+				for (var i = 0; i < elementsArr.length; i++) {
+					var elementClass = elementsArr[i].trim();
+					var $targetElm = $preview.find('.wfte_' + elementClass);
+					var $targetTd = $preview.find('.' + elementClass);
+
+					if (isChecked) {
+						$targetElm.removeClass(hiddenClass);
+						$targetTd.removeClass(hiddenClass);
+						if (!isInit) {
+							highlightElement($targetElm);
+							highlightElement($targetTd);
 						}
+					} else {
+						$targetElm.addClass(hiddenClass);
+						$targetTd.addClass(hiddenClass);
 					}
 				}
 			}
-			
-			function highlightElement(elm) {
-				elm.addClass('wfte_highlight');
-				setTimeout(function() {
-					elm.removeClass('wfte_highlight');
-				}, 500);
-			}
-			
-			// Initialize toggle states
-			$('.wt_pklist_feature_toggle').each(function() {
-				toggleElement($(this), true);
-			});
-			
-			// Handle toggle change events
-			$('.wt_pklist_feature_toggle').on('change', function() {
-				toggleElement($(this), false);
-			});
 		}
+
+		function highlightElement(elm) {
+			elm.addClass('wfte_highlight');
+			setTimeout(function () {
+				elm.removeClass('wfte_highlight');
+			}, 500);
+		}
+
+		$('.wt_pklist_feature_toggle').each(function () {
+			toggleElement($(this), true);
+		});
+
+		$(document).on('change', '.wt_pklist_feature_toggle', function () {
+			var $cb = $(this);
+			toggleElement($cb, false);
+			pklist_customize.syncPremiumToggleToCodeView($cb);
+			pklist_customize.pushLinkedGeneralForDataTypeAttribute($cb.attr('data-target-element'), $cb.is(':checked'));
+			$('.wf_side_panel_toggle .wf_slide_switch').each(function () {
+				pklist_customize.toggleElement($(this), 1);
+			});
+			pklist_customize.scheduleAutosaveAfterVisibilityToggle();
+		});
 	});
 
 })(jQuery);

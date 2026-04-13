@@ -605,7 +605,74 @@ var wf_accord =
 
 			// customizer promotion popup trigger.
 			if (jQuery(this).parents().hasClass('wt_pro_customizer_element')) {
-				jQuery('.wt_customizer_promotion_popup_btn').trigger('click');
+				var $panel      = jQuery(this).closest('.wf_side_panel');
+				var featureType = $panel.attr('data-type');
+
+				/* Only these specific features get the inline CTA tooltip.
+				   All other pro features fall back to the generic modal popup. */
+				var ctaWhitelist = [
+					'tracking_number_pro_element',
+					'product_table_total_tax_pro_element',
+					'product_table_coupon_pro_element',
+					'barcode_pro_element',
+					'total_no_of_items_pro_element',
+					'return_policy_pro_element'
+				];
+
+				if (ctaWhitelist.indexOf(featureType) === -1) {
+					jQuery('.wt_pklist_pro_inline_cta').remove();
+					jQuery('.wf_side_panel').removeData('wt_cta_open');
+					jQuery(document).off('click.wt_cta_outside');
+					wf_popup.showPopup(jQuery('.wt_pklist_customizer_promotion'));
+					return;
+				}
+
+				var tooltips = (typeof wf_woocommerce_packing_list_customizer !== 'undefined')
+					? (wf_woocommerce_packing_list_customizer.pro_field_tooltips || {}) : {};
+				var crownUrl = (typeof wf_woocommerce_packing_list_customizer !== 'undefined')
+					? (wf_woocommerce_packing_list_customizer.pro_field_tooltip_crown_url || '') : '';
+				var featureMsg = tooltips[featureType];
+
+				/* No tooltip content available — fall back to generic modal popup. */
+				if (!featureMsg) {
+					jQuery('.wt_pklist_pro_inline_cta').remove();
+					jQuery('.wf_side_panel').removeData('wt_cta_open');
+					jQuery(document).off('click.wt_cta_outside');
+					wf_popup.showPopup(jQuery('.wt_pklist_customizer_promotion'));
+					return;
+				}
+
+				/* Remove any open tooltip. */
+				jQuery('.wt_pklist_pro_inline_cta').remove();
+
+				/* Toggle: clicking the same row again just closes it. */
+				if ($panel.data('wt_cta_open')) {
+					$panel.removeData('wt_cta_open');
+					return;
+				}
+				jQuery('.wf_side_panel').removeData('wt_cta_open');
+				$panel.data('wt_cta_open', true);
+
+				/* Build and insert tooltip above the clicked panel. */
+				var $tooltip = jQuery(
+					'<div class="wt_pklist_pro_inline_cta">' +
+					'<img src="' + crownUrl + '" class="wt_pklist_pro_inline_cta_crown" alt="" />' +
+					'<div class="wt_pklist_pro_inline_cta_card">' +
+					'<div class="wt_pklist_pro_inline_cta_body">' + featureMsg + '</div>' +
+					'</div>' +
+					'</div>'
+				);
+				$panel.before($tooltip);
+
+				/* Close on outside click. */
+				jQuery(document).off('click.wt_cta_outside').on('click.wt_cta_outside', function (ev) {
+					if (!jQuery(ev.target).closest('.wt_pklist_pro_inline_cta, .wt_pro_customizer_element .wf_side_panel_hd').length) {
+						jQuery('.wt_pklist_pro_inline_cta').remove();
+						jQuery('.wf_side_panel').removeData('wt_cta_open');
+						jQuery(document).off('click.wt_cta_outside');
+					}
+				});
+				return;
 			}
 
 			if ("wf_side_panel_hd" === e.target.className || 'dashicons dashicons-arrow-right' === e.target.className || 'dashicons dashicons-arrow-down' === e.target.className) {
@@ -1617,9 +1684,9 @@ var wt_pklist_temp_files = {
 
 var wt_customizer_pro_fields_popup = {
 	Set: function () {
-		jQuery('.wt_customizer_promotion_popup_btn').on('click', function () {
-			var elm = jQuery('.wt_pklist_customizer_promotion');
-			wf_popup.showPopup(elm)
+		/* Code (Pro version) tab click — shows the generic promotion popup (existing behaviour). */
+		jQuery(document).on('click', '.wt_customizer_promotion_popup_btn', function () {
+			wf_popup.showPopup(jQuery('.wt_pklist_customizer_promotion'));
 		});
 	}
 }

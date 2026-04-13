@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 4.9.3 2026-03-04 =
+* [Add] - Bulgarian language support.
+* [Fix] - Prevent mPDF crash when processing large HTML content.
+* [Tweak] - Enhance the invoice number format setting.
+* [Compatibility] - WooCommerce 10.5.3
+
 = 4.9.2 2026-02-23 =
 * [Fix] - Fixed TypeError in shipping label print button on order list page.
 * [Fix] - Prevent footer overlap in DOMPDF by disabling “stick to bottom” when footer exceeds 40 words.

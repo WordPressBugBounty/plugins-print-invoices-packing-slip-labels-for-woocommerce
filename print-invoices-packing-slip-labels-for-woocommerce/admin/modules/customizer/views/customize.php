@@ -76,6 +76,87 @@ if (!defined('ABSPATH')) {
 		box-sizing: border-box;
 	}
 
+	/* Pro feature inline CTA tooltip (speech-bubble style) */
+	.wt_pklist_pro_inline_cta {
+		position: relative;
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+		padding-top: 0;
+		overflow: visible;
+		/* Cancels .wf_side_panel margin-bottom (10px) so the banner sits flush under the row above */
+		margin-top: -10px;
+	}
+	.wt_pklist_pro_inline_cta_card {
+		position: relative;
+		background: #FFFFFF;
+		border: 1px solid #E5E5E5;
+		border-radius: 16px;
+		padding: 15px 5px 15px 15px;
+		box-shadow: 0px 14px 24px 0px #00000026;
+	}
+	/* Tail border — bottom-right, points at the row toggle */
+	.wt_pklist_pro_inline_cta_card::before {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		right: 22px;
+		left: auto;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid #E5E5E5;
+		z-index: 0;
+	}
+	/* Tail fill — bottom-right */
+	.wt_pklist_pro_inline_cta_card::after {
+		content: '';
+		position: absolute;
+		bottom: -9px;
+		right: 33px;
+		left: auto;
+		border-left: 9px solid transparent;
+		border-right: 9px solid transparent;
+		border-top: 9px solid #FFFFFF;
+		z-index: 1;
+	}
+	/* Top-left of card; translate(-50%) centers badge on the preview/sidebar seam (see .wf_customize_sidebar) */
+	.wt_pklist_pro_inline_cta_crown {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: auto;
+		transform: translate(-50%, -50%);
+		width: 36px;
+		height: 36px;
+		margin: 0;
+		background: #FFFFFF;
+		border: 1px solid #E5E5E5;
+		border-radius: 50%;
+		padding: 6px;
+		box-sizing: border-box;
+		object-fit: contain;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+		z-index: 3;
+	}
+	.wt_pklist_pro_inline_cta_body p,
+	.wt_pklist_pro_inline_cta_body .wt_pklist_pro_field_tooltip_p {
+		margin: 0;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 140.69%;
+		color: #212121;
+	}
+	.wt_pklist_pro_inline_cta_body .wt_pklist_pro_field_tooltip_link {
+		display: block;
+		margin-top: 10px;
+		color: #2271b1;
+		font-weight: 600;
+		text-decoration: underline;
+	}
+	.wt_pklist_pro_inline_cta_body .wt_pklist_pro_field_tooltip_link:hover {
+		color: #135e96;
+	}
+
 	.wf_side_panel {
 		float: left;
 		width: 100%;
@@ -276,6 +357,8 @@ if (!defined('ABSPATH')) {
 		background: #f5f5f5;
 		border: solid 1px #e5e5e5;
 		margin-top: -1px;
+		position: relative;
+		z-index: 1;
 	}
 
 	.wf_customize_container {
@@ -466,8 +549,14 @@ if (!defined('ABSPATH')) {
 	.wf_customize_sidebar {
 		max-height: 1047px;
 		height: auto;
-		overflow: scroll;
+		overflow-y: auto;
+		overflow-x: visible;
 		margin-bottom: 1em;
+		margin-left: -18px;
+		padding-left: 18px;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 2;
 	}
 
 	.template_element_hover {

@@ -376,7 +376,44 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'event_class'=>'wf_cst_click',
 			),
 		);
-	}elseif("product_table" === $type)
+	}
+	elseif('barcode' === $type) {
+		$_invoice_addon_active      = is_plugin_active( 'wt-woocommerce-invoice-addon/wt-woocommerce-invoice-addon.php' );
+		$_shippinglabel_addon_active = is_plugin_active( 'wt-woocommerce-shippinglabel-addon/wt-woocommerce-shippinglabel-addon.php' );
+		$_pro_addon_active           = $_invoice_addon_active || $_shippinglabel_addon_active;
+		$_pro_suffix = $_pro_addon_active ? '' : ' (' . __( 'Pro version', 'print-invoices-packing-slip-labels-for-woocommerce' ) . ')';
+		$_barcode_select_options = array(
+			'order_number'   => __( 'Order Number', 'print-invoices-packing-slip-labels-for-woocommerce' ) . $_pro_suffix,
+			'invoice_number' => __( 'Invoice Number', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+			'custom_metadata'=> __( 'Custom Meta', 'print-invoices-packing-slip-labels-for-woocommerce' ) . $_pro_suffix,
+		);
+		$_barcode_disabled_options = $_pro_addon_active ? array() : array( 'order_number', 'custom_metadata' );
+		$fields=array(
+			array(
+				'label'=>__('Add barcode data','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'select',
+				'select_options'=>$_barcode_select_options,
+				'disabled_options'=>$_barcode_disabled_options,
+				'css_prop'=>'attr-data-barcode-add-field',
+				'trgt_elm'=>'barcode',
+				'event_class'=>'wf_barcode_add_field_dropdown wf_cst_change',
+				'default_data'=>'invoice_number',
+				'refresh_html'=>'0',
+			),
+		);
+		if ( $_pro_addon_active ) {
+			$fields[] = array(
+				'label'=>__('Custom Metadata','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'text',
+				'css_prop'=>'attr-data-barcode-custom-metadata',
+				'trgt_elm'=>'barcode',
+				'event_class'=>'wf_barcode_custom_metadata_input wf_cst_keyup',
+				'frmgrp_class'=>'wf_barcode_custom_metadata_wrapper',
+				'frmgrp_style'=>'display:none;',
+			);
+		}
+	}
+	elseif("product_table" === $type)
 	{
 		$fields=array(
 			array(

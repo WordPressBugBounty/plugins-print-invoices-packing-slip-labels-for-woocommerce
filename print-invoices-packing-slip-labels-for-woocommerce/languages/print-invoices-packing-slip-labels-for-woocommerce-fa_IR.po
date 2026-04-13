@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery "
 "Notes and Shipping Labels\n"
-"POT-Creation-Date: 2026-03-03 15:24+0530\n"
-"PO-Revision-Date: 2026-03-03 15:24+0530\n"
+"POT-Creation-Date: 2026-03-31 15:39+0530\n"
+"PO-Revision-Date: 2026-03-31 15:40+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
@@ -59,7 +59,7 @@ msgstr "برای یک یا چند سفارش فاکتور ایجاد نشده ا
 #: admin/class-wf-woocommerce-packing-list-admin.php:4872
 #: admin/class-wf-woocommerce-packing-list-admin.php:5063
 #: admin/modules/customizer/customizer.php:59
-#: admin/modules/customizer/customizer.php:265
+#: admin/modules/customizer/customizer.php:268
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:132
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:71
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:91
@@ -84,8 +84,8 @@ msgstr "اجباری"
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:74
 #: public/modules/invoice/invoice.php:149 public/modules/invoice/invoice.php:163
 #: public/modules/invoice/invoice.php:164 public/modules/invoice/invoice.php:1222
-#: public/modules/invoice/invoice.php:1250 public/modules/invoice/invoice.php:1556
-#: public/modules/invoice/invoice.php:2082
+#: public/modules/invoice/invoice.php:1250 public/modules/invoice/invoice.php:1554
+#: public/modules/invoice/invoice.php:2106
 #: public/modules/invoice/views/invoice-admin-settings.php:44
 msgid "Invoice"
 msgstr "فاکتور"
@@ -130,7 +130,7 @@ msgid "Close"
 msgstr "بستن"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:154
-#: admin/modules/customizer/views/customize.php:661
+#: admin/modules/customizer/views/customize.php:750
 #: admin/views/admin-settings-debug.php:108
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:80
 msgid "Save"
@@ -364,6 +364,7 @@ msgstr "به نظر می رسد این دستور مال شما نیست."
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:1900
 #: admin/class-wf-woocommerce-packing-list-admin.php:5123
+#: admin/modules/customizer/customizer.php:471
 msgid "Settings Updated"
 msgstr "تنظیمات بروزرسانی شدند"
 
@@ -411,7 +412,7 @@ msgid "Delete all generated invoice numbers"
 msgstr "تمام شماره فاکتورهای تولید شده را حذف کنید"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:2605
-#: admin/modules/customizer/views/customize.php:850
+#: admin/modules/customizer/views/customize.php:939
 msgid "Delete"
 msgstr "حذف"
 
@@ -431,7 +432,7 @@ msgstr "دوباره نشان نده"
 #: admin/class-wf-woocommerce-packing-list-admin.php:4245
 #: admin/class-wf-woocommerce-packing-list-admin.php:4258
 #: admin/class-wf-woocommerce-packing-list-admin.php:4276
-#: admin/modules/customizer/views/customize.php:832
+#: admin/modules/customizer/views/customize.php:921
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:182
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:113
 #: admin/views/admin-settings-debug.php:184 admin/views/admin-settings-debug.php:240
@@ -448,7 +449,7 @@ msgid "Generating the document..."
 msgstr "تولید سند ..."
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:4335
-#: admin/modules/customizer/customizer.php:266
+#: admin/modules/customizer/customizer.php:269
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:176
 msgid "Success"
 msgstr "موفق"
@@ -570,7 +571,7 @@ msgstr "جزئیات سفارش"
 #: admin/data/data.filters-help.php:4
 #: public/modules/deliverynote/deliverynote.php:195
 #: public/modules/dispatchlabel/dispatchlabel.php:174
-#: public/modules/invoice/invoice.php:1314
+#: public/modules/invoice/invoice.php:1313
 #: public/modules/packinglist/packinglist.php:212
 msgid "Product Table"
 msgstr "جدول محصول"
@@ -922,6 +923,69 @@ msgstr "شما می‌توانید افزونه‌ی رایگان mPDF را با
 msgid "Dismiss this notice"
 msgstr "این اطلاعیه را رد کنید"
 
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:213
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:358
+msgid "Something went wrong. Please try again."
+msgstr "مشکلی پیش آمد. لطفا دوباره تلاش کنید."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:217
+msgid "You do not have sufficient permissions to install plugins."
+msgstr "شما مجوز کافی برای به روز رسانی پلاگین برای این سایت ندارد."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:235
+msgid "Plugin download link not found."
+msgstr "لینک دانلود افزونه پیدا نشد."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:284
+msgid "You do not have sufficient permissions to activate plugins."
+msgstr "شما مجوز کافی برای فعال کردن افزونه‌ها را ندارید."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:292
+msgid "Activation failed."
+msgstr "فعال سازی با موفقیت انجام شد."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:312
+msgid "Accessibility Widget"
+msgstr "ویجت دسترسی"
+
+#. translators: 1: a tag opening, 2: a tag closing
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:318
+#, php-format
+msgid "Make your site inclusive with %1$s AccessYes accessibility widget. %2$s"
+msgstr "با استفاده از ویجت دسترسی %1$s AccessYes، سایت خود را فراگیر کنید. %2$s"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:326
+msgid ""
+"A lightweight accessibility widget to improve accessibility and usability for "
+"every users. Set it up in minutes for free."
+msgstr ""
+"یک ویجت دسترسی سبک برای بهبود دسترسی و قابلیت استفاده برای هر کاربر. آن را در عرض "
+"چند دقیقه به صورت رایگان تنظیم کنید."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:335
+msgid "Install & activate"
+msgstr "نصب و فعال"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:339
+#: includes/class-wf-woocommerce-packing-list-review_request.php:67
+msgid "Remind me later"
+msgstr "بعدا به من یادآوری کن"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:343
+#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:125
+#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:137
+#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:125
+msgid "Dismiss"
+msgstr "رد کردن"
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:398
+msgid "Installing..."
+msgstr "در حال نصب..."
+
+#: admin/modules/cross-promotion-banners/class-wbte-accessibility-banner.php:492
+msgid "Plugin installed successfully."
+msgstr "افزونه با موفقیت نصب شد."
+
 #: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:105
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:117
 msgid "Product Import Export"
@@ -981,12 +1045,6 @@ msgstr "نمایش کمتر"
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:123
 msgid "Get the plugin"
 msgstr "افزونه را دریافت کنید"
-
-#: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:125
-#: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:137
-#: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:125
-msgid "Dismiss"
-msgstr "رد کردن"
 
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:89
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:118
@@ -1105,7 +1163,7 @@ msgstr "شامل مالیات"
 msgid "n/a"
 msgstr "در دسترس نیست"
 
-#: admin/modules/customizer/classes/class-customizer.php:1962
+#: admin/modules/customizer/classes/class-customizer.php:1964
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras porta "
 "lectus id augue interdum egestas."
@@ -1113,7 +1171,7 @@ msgstr ""
 "‫Mauris dignissim neque ut sapien vulputate، eu semper tellus porttitor. Cras porta "
 "lectus id augue interdum egestas."
 
-#: admin/modules/customizer/classes/class-customizer.php:1980
+#: admin/modules/customizer/classes/class-customizer.php:1982
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras porta "
 "lectus id augue interdum egestas. Suspendisse potenti. Phasellus mollis porttitor "
@@ -1123,7 +1181,7 @@ msgstr ""
 "porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus mollis "
 "porttitor enim sit amet fringilla. Nulla sed ligula venenatis ، rutrum lectus vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:1985
+#: admin/modules/customizer/classes/class-customizer.php:1987
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula purus. "
 "Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, et interdum "
@@ -1147,27 +1205,27 @@ msgstr "سفارشی با این آیدی وجود ندارد"
 msgid "Customize"
 msgstr "سفارشی‌سازی"
 
-#: admin/modules/customizer/customizer.php:267
+#: admin/modules/customizer/customizer.php:270
 msgid "You can't undo this action. Are you sure?"
 msgstr "این عمل قابل بازگشت نیست. آیا مطمئن هستید؟"
 
-#: admin/modules/customizer/customizer.php:268
+#: admin/modules/customizer/customizer.php:271
 msgid "Click here to add Company logo"
 msgstr "برای قراردادن لوگو/آرم/نشان تجاری اینجا کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:269
+#: admin/modules/customizer/customizer.php:272
 msgid "Click here to add Company name"
 msgstr "برای قراردادن نام شرکت/فروشگاه اینجا کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:270
+#: admin/modules/customizer/customizer.php:273
 msgid "Click here to add From address"
 msgstr "برای قراردادن فرم آدرس کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:271
+#: admin/modules/customizer/customizer.php:274
 msgid "Click here to add Signature"
 msgstr "برای قراردادن امضا کلیک کنید"
 
-#: admin/modules/customizer/customizer.php:272
+#: admin/modules/customizer/customizer.php:275
 msgid ""
 "Please save all data before leaving this page. All unsaved data will be lost. Are "
 "you sure?"
@@ -1175,34 +1233,34 @@ msgstr ""
 "لطفا قبل از ترک این صفحه تمام اطلاعات را ذخیره کنید. تمام اطلاعات ذخیره نشده از "
 "دست خواهند رفت. آیا برای خروج مطمئن هستید؟"
 
-#: admin/modules/customizer/customizer.php:273
-#: admin/modules/customizer/views/customize.php:823
+#: admin/modules/customizer/customizer.php:276
+#: admin/modules/customizer/views/customize.php:912
 msgid "Change template"
 msgstr "تغییر قالب"
 
-#: admin/modules/customizer/customizer.php:274
+#: admin/modules/customizer/customizer.php:277
 msgid "Change layout"
 msgstr "تغییر طرح"
 
-#: admin/modules/customizer/customizer.php:275
+#: admin/modules/customizer/customizer.php:278
 msgid "Saving"
 msgstr "در حال ذخیره"
 
-#: admin/modules/customizer/customizer.php:276 public/modules/invoice/invoice.php:199
+#: admin/modules/customizer/customizer.php:279 public/modules/invoice/invoice.php:199
 #: public/modules/shippinglabel/shippinglabel.php:265
 msgid "Please enter order number"
 msgstr "لطفا شماره سفارش را وارد کنید"
 
-#: admin/modules/customizer/customizer.php:277 public/modules/invoice/invoice.php:200
+#: admin/modules/customizer/customizer.php:280 public/modules/invoice/invoice.php:200
 #: public/modules/shippinglabel/shippinglabel.php:266
 msgid "Generating"
 msgstr "در حال ایجاد"
 
-#: admin/modules/customizer/customizer.php:278
+#: admin/modules/customizer/customizer.php:281
 msgid "This is premium template which is not compatible with the basic plugin"
 msgstr "این قالب پریمیوم است که با پلاگین اصلی سازگار نیست"
 
-#: admin/modules/customizer/customizer.php:279
+#: admin/modules/customizer/customizer.php:282
 msgid ""
 "This is basic template. In order to use premium feature, you need to switch and "
 "activate the premium template"
@@ -1210,117 +1268,293 @@ msgstr ""
 "این قالب پایه است. برای استفاده از ویژگی پریمیوم، باید قالب پرمیوم را تغییر داده و "
 "فعال کنید"
 
-#: admin/modules/customizer/customizer.php:280
+#: admin/modules/customizer/customizer.php:283
 msgid "Template Name Required"
 msgstr "نام قالب ضروری است"
 
-#: admin/modules/customizer/customizer.php:328
-#: admin/modules/customizer/customizer.php:727
+#: admin/modules/customizer/customizer.php:338
+#: admin/modules/customizer/customizer.php:817
 msgid "Active"
 msgstr "فعال"
 
-#: admin/modules/customizer/customizer.php:703
+#: admin/modules/customizer/customizer.php:440
+msgid "Unable to update setting."
+msgstr "به‌روزرسانی تنظیمات امکان‌پذیر نیست."
+
+#: admin/modules/customizer/customizer.php:449
+msgid "Invalid value."
+msgstr "مقدار نامعتبر"
+
+#: admin/modules/customizer/customizer.php:793
 msgid "Error."
 msgstr "خطا."
 
-#: admin/modules/customizer/customizer.php:729
-#: admin/modules/customizer/views/customize.php:849
+#: admin/modules/customizer/customizer.php:819
+#: admin/modules/customizer/views/customize.php:938
 msgid "Activate"
 msgstr "فعال کن"
 
-#: admin/modules/customizer/customizer.php:755
+#: admin/modules/customizer/customizer.php:845
 msgid "No template found."
 msgstr "قالب پیدا نشد."
 
-#: admin/modules/customizer/customizer.php:772
+#: admin/modules/customizer/customizer.php:862
 msgid "Unable to save theme."
 msgstr "ذخیره تم ممکن نیست."
 
-#: admin/modules/customizer/customizer.php:791
+#: admin/modules/customizer/customizer.php:881
 msgid "Template with same name already exists."
 msgstr "قالب با نام یکسان از قبل موجود می‌باشد."
 
-#: admin/modules/customizer/customizer.php:833
+#: admin/modules/customizer/customizer.php:923
 msgid "Template created."
 msgstr "قالب ساخته شد."
 
-#: admin/modules/customizer/customizer.php:839
+#: admin/modules/customizer/customizer.php:929
 msgid "Template created and activated."
 msgstr "قالب ایجاد و فعال شد."
 
-#: admin/modules/customizer/customizer.php:894
+#: admin/modules/customizer/customizer.php:984
 msgid "Template updated."
 msgstr "قالب بروزرسانی شد."
 
-#: admin/modules/customizer/customizer.php:897
+#: admin/modules/customizer/customizer.php:987
 msgid "Template updated and activated."
 msgstr "قالب آپدیت و فعال شد"
 
-#: admin/modules/customizer/customizer.php:945
+#: admin/modules/customizer/customizer.php:1035
 msgid "Unable to switch view."
 msgstr "تغییر دید ممکن نیست."
 
-#: admin/modules/customizer/customizer.php:1556
+#: admin/modules/customizer/customizer.php:1646
 msgid "Unable to load template."
 msgstr "بارگذاری قالب ممکن نیست."
 
-#: admin/modules/customizer/customizer.php:1607
+#: admin/modules/customizer/customizer.php:1697
 msgid "Untitled template"
 msgstr "قالب بدون نام"
 
-#: admin/modules/customizer/customizer.php:1753
+#: admin/modules/customizer/customizer.php:1845
+msgid "Add the order's"
+msgstr "سفارش‌ها را اضافه کنید"
+
+#: admin/modules/customizer/customizer.php:1845
+#: admin/modules/customizer/customizer.php:1855
+#: public/modules/deliverynote/deliverynote.php:201
+#: public/modules/dispatchlabel/dispatchlabel.php:181
+#: public/modules/invoice/invoice.php:1339
+#: public/modules/packinglist/packinglist.php:219
+#: public/modules/shippinglabel/shippinglabel.php:180
+msgid "Tracking Number"
+msgstr "شماره پیگیری"
+
+#: admin/modules/customizer/customizer.php:1845
+msgid "to your invoices so customers can easily view and track delivery details."
+msgstr ""
+"به فاکتورهای شما اضافه شود تا مشتریان بتوانند به راحتی جزئیات تحویل را مشاهده و "
+"پیگیری کنند."
+
+#: admin/modules/customizer/customizer.php:1846
+msgid "Display a combined"
+msgstr "نمایش ترکیبی"
+
+#: admin/modules/customizer/customizer.php:1846
+#: admin/modules/customizer/data/data.translation_strings.php:20
+#: admin/modules/customizer/views/_customize_properties.php:749
+#: public/modules/invoice/invoice.php:1344
+msgid "Total Tax"
+msgstr "جمع مالیات"
+
+#: admin/modules/customizer/customizer.php:1846
+msgid "amount on the invoice to simplify how tax breakdown appears for customers."
+msgstr "مبلغ روی فاکتور برای ساده‌سازی نحوه نمایش جزئیات مالیاتی برای مشتریان."
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "Show"
+msgstr "نمایش"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "Coupon Details"
+msgstr "مشخصات کوپن"
+
+#: admin/modules/customizer/customizer.php:1847
+msgid "to give customers a clear summary of the discounts applied to their order."
+msgstr "تا خلاصه‌ای واضح از تخفیف‌های اعمال شده بر سفارش مشتریان به آنها ارائه شود."
+
+#: admin/modules/customizer/customizer.php:1853
+msgid "Add your"
+msgstr "اضافه شده توسط شما"
+
+#: admin/modules/customizer/customizer.php:1853
+#: admin/modules/customizer/views/_customize_properties.php:161
+#: public/modules/shippinglabel/shippinglabel.php:166
+msgid "Company Logo"
+msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
+
+#: admin/modules/customizer/customizer.php:1853
+msgid "to the shipping label for professional, branded packages."
+msgstr "به برچسب حمل و نقل برای بسته‌های حرفه‌ای و برنددار."
+
+#: admin/modules/customizer/customizer.php:1854
+#: admin/modules/customizer/customizer.php:1860
+#: admin/modules/customizer/customizer.php:1861
+msgid "Add a"
+msgstr "افزودن یک"
+
+#: admin/modules/customizer/customizer.php:1854
+#: public/modules/invoice/invoice.php:1328
+#: public/modules/shippinglabel/shippinglabel.php:179
+msgid "Barcode"
+msgstr "بارکد"
+
+#: admin/modules/customizer/customizer.php:1854
+msgid "to your shipping label for quicker scanning and smoother order handling."
+msgstr ""
+"برای اسکن سریع‌تر و رسیدگی آسان‌تر به سفارش، به برچسب حمل و نقل خود اضافه کنید."
+
+#: admin/modules/customizer/customizer.php:1855
+#: admin/modules/customizer/customizer.php:1862
+msgid "Add the"
+msgstr "اضافه کردن"
+
+#: admin/modules/customizer/customizer.php:1855
+#: admin/modules/customizer/customizer.php:1862
+msgid "to the shipping label for easy shipment tracking."
+msgstr "به برچسب حمل و نقل برای بسته‌های حرفه‌ای و برنددار."
+
+#: admin/modules/customizer/customizer.php:1856
+msgid "Show the"
+msgstr "نمایش بیوگرافی"
+
+#: admin/modules/customizer/customizer.php:1856
+#: public/modules/shippinglabel/shippinglabel.php:181
+msgid "Package Number"
+msgstr "شماره بسته"
+
+#: admin/modules/customizer/customizer.php:1856
+msgid "on each shipping label for accurate multi-package orders."
+msgstr "روی هر برچسب حمل و نقل برای سفارش‌های چند بسته‌ای دقیق."
+
+#: admin/modules/customizer/customizer.php:1857
+msgid "Display the"
+msgstr "نمایش"
+
+#: admin/modules/customizer/customizer.php:1857
+#: public/modules/shippinglabel/shippinglabel.php:182
+msgid "Box name"
+msgstr "نام جعبه"
+
+#: admin/modules/customizer/customizer.php:1857
+msgid "on the label so recipients can identify contents quickly."
+msgstr "روی برچسب قرار دهید تا گیرندگان بتوانند به سرعت محتویات را شناسایی کنند."
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "Show how"
+msgstr "نشان دهید چگونه"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "Many Items"
+msgstr "تعداد آیتم ها"
+
+#: admin/modules/customizer/customizer.php:1858
+msgid "are in the order on the shipping label."
+msgstr "به ترتیب روی برچسب حمل و نقل هستند."
+
+#: admin/modules/customizer/customizer.php:1859
+msgid "Mark packages as"
+msgstr "علامت گذاری بسته ها به عنوان"
+
+#: admin/modules/customizer/customizer.php:1859
+#: public/modules/shippinglabel/shippinglabel.php:184
+msgid "Fragile"
+msgstr "شکستنی است"
+
+#: admin/modules/customizer/customizer.php:1859
+msgid "so carriers know to handle them with extra care."
+msgstr ""
+"بنابراین شرکت‌های حمل و نقل می‌دانند که باید با احتیاط بیشتری با آنها برخورد کنند."
+
+#: admin/modules/customizer/customizer.php:1860
+#: public/modules/shippinglabel/shippinglabel.php:185
+msgid "This way up"
+msgstr "این طرف، سمت بالا است"
+
+#: admin/modules/customizer/customizer.php:1860
+msgid "indicator to help prevent damage during shipping."
+msgstr "نشانگر برای جلوگیری از آسیب در حین حمل و نقل."
+
+#: admin/modules/customizer/customizer.php:1861
+#: public/modules/shippinglabel/shippinglabel.php:186
+msgid "Keep dry"
+msgstr "به رطوبت حساس است"
+
+#: admin/modules/customizer/customizer.php:1861
+msgid "notice for moisture-sensitive shipments."
+msgstr "اطلاعیه برای محموله‌های حساس به رطوبت."
+
+#: admin/modules/customizer/customizer.php:1862
+#: public/modules/shippinglabel/shippinglabel.php:188
+msgid "Return Policy"
+msgstr "دستورالعمل بازگشت (استرداد، مرجوعی)"
+
+#: admin/modules/customizer/customizer.php:1877
+#: admin/modules/customizer/views/customize.php:805
+msgid "Upgrade to Pro"
+msgstr "ارتقا به پرو"
+
+#: admin/modules/customizer/customizer.php:1892
 msgid "Lighter"
 msgstr "باریک‌تر"
 
-#: admin/modules/customizer/customizer.php:1754
+#: admin/modules/customizer/customizer.php:1893
 msgid "Normal"
 msgstr "معمولی"
 
-#: admin/modules/customizer/customizer.php:1755
+#: admin/modules/customizer/customizer.php:1894
 msgid "Bold"
 msgstr "درشت"
 
-#: admin/modules/customizer/customizer.php:1756
+#: admin/modules/customizer/customizer.php:1895
 msgid "Bolder"
 msgstr "درشت‌تر"
 
-#: admin/modules/customizer/customizer.php:1768
+#: admin/modules/customizer/customizer.php:1907
 msgid "Select One"
 msgstr "یک مورد را انتخاب کنید"
 
-#: admin/modules/customizer/customizer.php:1786
+#: admin/modules/customizer/customizer.php:1925
 msgid "Left"
 msgstr "چپ"
 
-#: admin/modules/customizer/customizer.php:1787
+#: admin/modules/customizer/customizer.php:1926
 msgid "Right"
 msgstr "راست"
 
-#: admin/modules/customizer/customizer.php:1788
+#: admin/modules/customizer/customizer.php:1927
 msgid "Center"
 msgstr "مرکز"
 
-#: admin/modules/customizer/customizer.php:1789
+#: admin/modules/customizer/customizer.php:1928
 msgid "Start"
 msgstr "شروع"
 
-#: admin/modules/customizer/customizer.php:1790
+#: admin/modules/customizer/customizer.php:1929
 msgid "End"
 msgstr "پایان"
 
-#: admin/modules/customizer/customizer.php:1797
+#: admin/modules/customizer/customizer.php:1936
 msgid "None"
 msgstr "خالی"
 
-#: admin/modules/customizer/customizer.php:1809
+#: admin/modules/customizer/customizer.php:1948
 msgid "Solid"
 msgstr "خط ممتد"
 
-#: admin/modules/customizer/customizer.php:1810
+#: admin/modules/customizer/customizer.php:1949
 msgid "Dotted"
 msgstr "خط‌چین"
 
-#: admin/modules/customizer/customizer.php:1811
+#: admin/modules/customizer/customizer.php:1950
 msgid "Dashed"
 msgstr "نقطه‌چین"
 
@@ -1386,7 +1620,6 @@ msgid "SSN:"
 msgstr "کد ملی:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:11
-#: public/modules/packinglist/views/customize_pro.php:101
 msgid "SKU"
 msgstr "شناسه"
 
@@ -1407,41 +1640,35 @@ msgid "Total Price"
 msgstr "قیمت کل"
 
 #: admin/modules/customizer/data/data.translation_strings.php:16
-#: admin/modules/customizer/views/_customize_properties.php:688
+#: admin/modules/customizer/views/_customize_properties.php:723
 #: admin/views/wt_ipc_free_pro.php:752 admin/views/wt_ipc_free_pro.php:794
-#: public/modules/invoice/invoice.php:1341
+#: public/modules/invoice/invoice.php:1340
 msgid "Subtotal"
 msgstr "جمع کل"
 
 #: admin/modules/customizer/data/data.translation_strings.php:17
-#: admin/modules/customizer/views/_customize_properties.php:694
+#: admin/modules/customizer/views/_customize_properties.php:729
 #: admin/views/wt_ipc_free_pro.php:756 admin/views/wt_ipc_free_pro.php:798
-#: public/modules/invoice/invoice.php:1342
+#: public/modules/invoice/invoice.php:1341
 msgid "Shipping"
 msgstr "هزینه حمل"
 
 #: admin/modules/customizer/data/data.translation_strings.php:18
-#: admin/modules/customizer/views/_customize_properties.php:701
-#: public/modules/invoice/invoice.php:1343
+#: admin/modules/customizer/views/_customize_properties.php:736
+#: public/modules/invoice/invoice.php:1342
 msgid "Cart Discount"
 msgstr "تخفیف سبد خرید"
 
 #: admin/modules/customizer/data/data.translation_strings.php:19
-#: admin/modules/customizer/views/_customize_properties.php:707
-#: public/modules/invoice/invoice.php:1344
+#: admin/modules/customizer/views/_customize_properties.php:742
+#: public/modules/invoice/invoice.php:1343
 msgid "Order Discount"
 msgstr "تخفیف سفارش"
 
-#: admin/modules/customizer/data/data.translation_strings.php:20
-#: admin/modules/customizer/views/_customize_properties.php:714
-#: public/modules/invoice/invoice.php:1345
-msgid "Total Tax"
-msgstr "جمع مالیات"
-
 #: admin/modules/customizer/data/data.translation_strings.php:21
-#: admin/modules/customizer/views/_customize_properties.php:720
+#: admin/modules/customizer/views/_customize_properties.php:755
 #: admin/views/wt_ipc_free_pro.php:768 admin/views/wt_ipc_free_pro.php:810
-#: public/modules/invoice/invoice.php:1346
+#: public/modules/invoice/invoice.php:1345
 msgid "Fee"
 msgstr "تخفیف ویژه"
 
@@ -1450,9 +1677,9 @@ msgid "Coupon Used"
 msgstr "کوپن‌های تخفیف استفاده شده"
 
 #: admin/modules/customizer/data/data.translation_strings.php:23
-#: admin/modules/customizer/views/_customize_properties.php:733
+#: admin/modules/customizer/views/_customize_properties.php:768
 #: admin/views/wt_ipc_free_pro.php:780 admin/views/wt_ipc_free_pro.php:822
-#: public/modules/invoice/invoice.php:1349
+#: public/modules/invoice/invoice.php:1348
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:68
 msgid "Total"
 msgstr "جمع"
@@ -1503,8 +1730,8 @@ msgid "Payment Method:"
 msgstr "روش پرداخت :"
 
 #: admin/modules/customizer/data/data.translation_strings.php:35
-#: admin/modules/customizer/views/_customize_properties.php:727
-#: public/modules/invoice/invoice.php:1348
+#: admin/modules/customizer/views/_customize_properties.php:762
+#: public/modules/invoice/invoice.php:1347
 msgid "Payment Method"
 msgstr "روش پرداخت"
 
@@ -1565,12 +1792,10 @@ msgid "Email"
 msgstr "ایمیل"
 
 #: admin/modules/customizer/data/data.translation_strings.php:51
-#: public/modules/packinglist/views/customize_pro.php:103
 msgid "SSN"
 msgstr "کد ملی"
 
 #: admin/modules/customizer/data/data.translation_strings.php:52
-#: public/modules/packinglist/views/customize_pro.php:104
 msgid "VAT"
 msgstr "ارزش افزوده"
 
@@ -1609,7 +1834,7 @@ msgstr "یادداشت مشتری:"
 #: admin/modules/customizer/data/data.translation_strings.php:61
 #: public/modules/deliverynote/deliverynote.php:197
 #: public/modules/dispatchlabel/dispatchlabel.php:176
-#: public/modules/invoice/invoice.php:1320
+#: public/modules/invoice/invoice.php:1319
 #: public/modules/packinglist/packinglist.php:214
 #: public/modules/shippinglabel/shippinglabel.php:177
 msgid "Customer note"
@@ -1650,7 +1875,7 @@ msgstr "تلفن:"
 #: admin/modules/customizer/views/_customize_properties.php:122
 #: admin/modules/customizer/views/_customize_properties.php:322
 #: admin/modules/customizer/views/_customize_properties.php:360
-#: admin/modules/customizer/views/_customize_properties.php:647
+#: admin/modules/customizer/views/_customize_properties.php:682
 #: admin/views/wt_ipc_free_pro.php:478 admin/views/wt_ipc_free_pro.php:492
 #: public/modules/shippinglabel/shippinglabel.php:114
 #: public/modules/shippinglabel/shippinglabel.php:139
@@ -1662,7 +1887,7 @@ msgstr "عنوان"
 #: admin/modules/customizer/views/_customize_properties.php:293
 #: admin/modules/customizer/views/_customize_properties.php:349
 #: admin/modules/customizer/views/_customize_properties.php:365
-#: admin/modules/customizer/views/_customize_properties.php:652
+#: admin/modules/customizer/views/_customize_properties.php:687
 #: public/modules/invoice/invoice.php:381
 msgid "Font size"
 msgstr "اندازه قلم"
@@ -1679,11 +1904,6 @@ msgstr "رنگ متن"
 #: admin/modules/customizer/views/_customize_properties.php:157
 msgid "Display"
 msgstr "نمایش"
-
-#: admin/modules/customizer/views/_customize_properties.php:161
-#: public/modules/shippinglabel/shippinglabel.php:166
-msgid "Company Logo"
-msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
 
 #: admin/modules/customizer/views/_customize_properties.php:162
 msgid "Company Name"
@@ -1766,123 +1986,156 @@ msgstr "فرمت"
 msgid "Title font size"
 msgstr "اندازه قلمِ عنوان"
 
-#: admin/modules/customizer/views/_customize_properties.php:383
+#: admin/modules/customizer/views/_customize_properties.php:382
+#: admin/modules/customizer/views/customize.php:1002
+#: public/modules/deliverynote/deliverynote.php:193
+#: public/modules/dispatchlabel/dispatchlabel.php:172
+#: public/modules/invoice/invoice.php:1302
+#: public/modules/packinglist/packinglist.php:209
+#: public/modules/shippinglabel/shippinglabel.php:163
+msgid "Pro version"
+msgstr "نسخه حرفه‌ای"
+
+#: admin/modules/customizer/views/_customize_properties.php:384
+#: public/modules/invoice/invoice.php:1310
+#: public/modules/shippinglabel/shippinglabel.php:169
+msgid "Order Number"
+msgstr "شماره سفارش"
+
+#: admin/modules/customizer/views/_customize_properties.php:385
+#: public/modules/invoice/invoice.php:1309 public/modules/invoice/invoice.php:1579
+msgid "Invoice Number"
+msgstr "شماره فاکتور"
+
+#: admin/modules/customizer/views/_customize_properties.php:386
+msgid "Custom Meta"
+msgstr "متا سفارشی"
+
+#: admin/modules/customizer/views/_customize_properties.php:391
+msgid "Add barcode data"
+msgstr "اضافه کردن اطلاعات بارکد"
+
+#: admin/modules/customizer/views/_customize_properties.php:404
+msgid "Custom Metadata"
+msgstr "فراداده سفارشی"
+
+#: admin/modules/customizer/views/_customize_properties.php:418
 msgid "Table head background"
 msgstr "پس زمینه بالای جدول"
 
-#: admin/modules/customizer/views/_customize_properties.php:390
+#: admin/modules/customizer/views/_customize_properties.php:425
 msgid "Table head text color"
 msgstr "رنگ متن بالای جدول"
 
-#: admin/modules/customizer/views/_customize_properties.php:397
+#: admin/modules/customizer/views/_customize_properties.php:432
 msgid "Table body text color"
 msgstr "رنگ متن بدنه جدول"
 
-#: admin/modules/customizer/views/_customize_properties.php:411
+#: admin/modules/customizer/views/_customize_properties.php:446
 msgid "Serial No label"
 msgstr "سریال بدون برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:417
+#: admin/modules/customizer/views/_customize_properties.php:452
 msgid "Serial no text align"
 msgstr "سریال بدون تراز متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:434
+#: admin/modules/customizer/views/_customize_properties.php:469
 msgid "Image label"
 msgstr "تصویر برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:440
+#: admin/modules/customizer/views/_customize_properties.php:475
 msgid "Image text align"
 msgstr "تراز متن تصویر"
 
-#: admin/modules/customizer/views/_customize_properties.php:457
+#: admin/modules/customizer/views/_customize_properties.php:492
 msgid "SKU label"
 msgstr "برچسب شناسه"
 
-#: admin/modules/customizer/views/_customize_properties.php:463
+#: admin/modules/customizer/views/_customize_properties.php:498
 msgid "SKU text align"
 msgstr "تراز متن شناسه"
 
-#: admin/modules/customizer/views/_customize_properties.php:480
+#: admin/modules/customizer/views/_customize_properties.php:515
 msgid "Product label"
 msgstr "برچسب محصول"
 
-#: admin/modules/customizer/views/_customize_properties.php:486
+#: admin/modules/customizer/views/_customize_properties.php:521
 msgid "Product text align"
 msgstr "تراز متن محصول"
 
-#: admin/modules/customizer/views/_customize_properties.php:503
+#: admin/modules/customizer/views/_customize_properties.php:538
 msgid "GTIN label"
 msgstr "لیبل"
 
-#: admin/modules/customizer/views/_customize_properties.php:509
+#: admin/modules/customizer/views/_customize_properties.php:544
 msgid "GTIN text align"
 msgstr "تراز متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:526
+#: admin/modules/customizer/views/_customize_properties.php:561
 msgid "Qty label"
 msgstr "تعداد برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:532
+#: admin/modules/customizer/views/_customize_properties.php:567
 msgid "Qty text align"
 msgstr "تراز مقدار متن"
 
-#: admin/modules/customizer/views/_customize_properties.php:549
+#: admin/modules/customizer/views/_customize_properties.php:584
 msgid "Price label"
 msgstr "برچسب قیمت"
 
-#: admin/modules/customizer/views/_customize_properties.php:555
+#: admin/modules/customizer/views/_customize_properties.php:590
 msgid "Price text align"
 msgstr "تراز متن قیمت"
 
-#: admin/modules/customizer/views/_customize_properties.php:572
+#: admin/modules/customizer/views/_customize_properties.php:607
 msgid "Tax label"
 msgstr "برچسب مالیات"
 
-#: admin/modules/customizer/views/_customize_properties.php:578
+#: admin/modules/customizer/views/_customize_properties.php:613
 msgid "Tax text align"
 msgstr "تراز متن مالیات"
 
-#: admin/modules/customizer/views/_customize_properties.php:595
+#: admin/modules/customizer/views/_customize_properties.php:630
 msgid "Total weight label"
 msgstr "برچسب وزن کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:601
+#: admin/modules/customizer/views/_customize_properties.php:636
 msgid "Total weight text align"
 msgstr "تراز متن وزن کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:618
+#: admin/modules/customizer/views/_customize_properties.php:653
 msgid "Total label"
 msgstr "برچسب کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:624
+#: admin/modules/customizer/views/_customize_properties.php:659
 msgid "Total text align"
 msgstr "تراز متن برچسب کل"
 
-#: admin/modules/customizer/views/_customize_properties.php:638
+#: admin/modules/customizer/views/_customize_properties.php:673
 msgid "Signature type"
 msgstr "نوع امضا"
 
-#: admin/modules/customizer/views/_customize_properties.php:642
+#: admin/modules/customizer/views/_customize_properties.php:677
 msgid "Manual Signature"
 msgstr "امضای دستی"
 
-#: admin/modules/customizer/views/_customize_properties.php:643
+#: admin/modules/customizer/views/_customize_properties.php:678
 msgid "Image Signature"
 msgstr "امضای تصویری"
 
-#: admin/modules/customizer/views/_customize_properties.php:660
+#: admin/modules/customizer/views/_customize_properties.php:695
 msgid "Align"
 msgstr "تراز"
 
-#: admin/modules/customizer/views/_customize_properties.php:677
+#: admin/modules/customizer/views/_customize_properties.php:712
 msgid "Label"
 msgstr "برچسب"
 
-#: admin/modules/customizer/views/_customize_properties.php:756
+#: admin/modules/customizer/views/_customize_properties.php:791
 msgid "Note"
 msgstr "یادداشت"
 
-#: admin/modules/customizer/views/_customize_properties.php:757
+#: admin/modules/customizer/views/_customize_properties.php:792
 msgid ""
 "Displays customer`s VAT number saved in the order details by third-party plugins "
 "in this document. Supported meta keys are"
@@ -1890,17 +2143,15 @@ msgstr ""
 "شماره VAT مشتری ذخیره شده در جزئیات سفارش توسط افزونه های شخص ثالث در این سند را "
 "نشان می دهد. کلیدهای متا پشتیبانی می شوند"
 
-#: admin/modules/customizer/views/_customize_properties.php:759
+#: admin/modules/customizer/views/_customize_properties.php:794
 msgid "To add a different meta key"
 msgstr "برای افزودن یک متا کلید متفاوت"
 
-#: admin/modules/customizer/views/_customize_properties.php:760
-#: public/modules/deliverynote/views/customize_pro.php:71
-#: public/modules/dispatchlabel/views/customize_pro.php:72
+#: admin/modules/customizer/views/_customize_properties.php:795
 msgid "Upgrade to premium"
 msgstr "ارتقا به نسخه پرمیوم"
 
-#: admin/modules/customizer/views/_customize_properties.php:819
+#: admin/modules/customizer/views/_customize_properties.php:854
 #: admin/views/premium_extension_page.php:141
 #: public/modules/deliverynote/views/general.php:156
 #: public/modules/dispatchlabel/views/general.php:141
@@ -1910,7 +2161,7 @@ msgstr "ارتقا به نسخه پرمیوم"
 msgid "Show More"
 msgstr "نمایش بیشتر"
 
-#: admin/modules/customizer/views/_customize_properties.php:820
+#: admin/modules/customizer/views/_customize_properties.php:855
 #: admin/views/premium_extension_page.php:142
 #: public/modules/deliverynote/views/general.php:157
 #: public/modules/dispatchlabel/views/general.php:142
@@ -1920,7 +2171,7 @@ msgstr "نمایش بیشتر"
 msgid "Show Less"
 msgstr "نمایش کمتر"
 
-#: admin/modules/customizer/views/_customize_properties.php:824
+#: admin/modules/customizer/views/_customize_properties.php:859
 #: admin/views/premium_extension_page.php:146
 msgid "Checkout Premium"
 msgstr "تسویه حساب پریمیوم"
@@ -1945,109 +2196,96 @@ msgstr "سفارش"
 msgid "Order number"
 msgstr "شماره سفارش"
 
-#: admin/modules/customizer/views/customize.php:634
+#: admin/modules/customizer/views/customize.php:723
 #: admin/views/admin-settings-debug.php:159
 msgid "Templates"
 msgstr "قالب‌ها"
 
-#: admin/modules/customizer/views/customize.php:639
+#: admin/modules/customizer/views/customize.php:728
 msgid "Type template name to search"
 msgstr "برای جستجو نام قالب را تایپ کنید"
 
-#: admin/modules/customizer/views/customize.php:651
+#: admin/modules/customizer/views/customize.php:740
 msgid "Choose a layout."
 msgstr "یک طرح را انتخاب کنید."
 
-#: admin/modules/customizer/views/customize.php:657
+#: admin/modules/customizer/views/customize.php:746
 msgid "All unsaved changes will be lost upon switching to a new layout."
 msgstr "تمام تغییرات ذخیره نشده با تغییر به یک طرح جدید از دست خواهند رفت."
 
-#: admin/modules/customizer/views/customize.php:659
+#: admin/modules/customizer/views/customize.php:748
 msgid "Save before you proceed."
 msgstr "قبل از ادامه اقدام به ذخیره کنید."
 
-#: admin/modules/customizer/views/customize.php:660
+#: admin/modules/customizer/views/customize.php:749
 msgid "Saving..."
 msgstr "درحال ذخیره..."
 
-#: admin/modules/customizer/views/customize.php:703
+#: admin/modules/customizer/views/customize.php:792
 msgid "Get access to more shipping label templates."
 msgstr "به الگوهای برچسب حمل و نقل بیشتری دسترسی پیدا کنید."
 
-#: admin/modules/customizer/views/customize.php:704
+#: admin/modules/customizer/views/customize.php:793
 msgid "Get access to more invoice templates."
 msgstr "به قالب‌های فاکتور بیشتری دسترسی پیدا کنید."
 
-#: admin/modules/customizer/views/customize.php:716
-msgid "Upgrade to Pro"
-msgstr "ارتقا به پرو"
-
-#: admin/modules/customizer/views/customize.php:825
+#: admin/modules/customizer/views/customize.php:914
 msgid "This preview reflects your current settings from the General tab."
 msgstr "این پیش‌نمایش، تنظیمات فعلی شما را از برگه عمومی (General) نشان می‌دهد."
 
-#: admin/modules/customizer/views/customize.php:834
+#: admin/modules/customizer/views/customize.php:923
 msgid "Update template"
 msgstr "الگو را به‌روزرسانی کنید"
 
-#: admin/modules/customizer/views/customize.php:837
+#: admin/modules/customizer/views/customize.php:926
 msgid "Save template"
 msgstr "ذخیره قالب"
 
-#: admin/modules/customizer/views/customize.php:840
+#: admin/modules/customizer/views/customize.php:929
 msgid "Save and activate"
 msgstr "ذخیره و فعال کنید"
 
-#: admin/modules/customizer/views/customize.php:851
+#: admin/modules/customizer/views/customize.php:940
 msgid "Create new"
 msgstr "ساختن جدید"
 
-#: admin/modules/customizer/views/customize.php:852
+#: admin/modules/customizer/views/customize.php:941
 msgid "My templates"
 msgstr "قالب‌های من"
 
-#: admin/modules/customizer/views/customize.php:862
+#: admin/modules/customizer/views/customize.php:951
 msgid "This template is not comaptible with QR Code addon plugin"
 msgstr "این قالب با افزودنی QR کد سازگار نمی‌باشد"
 
 #. translators: %s: Template display name (invoice, packing list, etc.)
-#: admin/modules/customizer/views/customize.php:891
+#: admin/modules/customizer/views/customize.php:980
 #, php-format
 msgid "Unlock limitless possibilities of %s customization with the addon -"
 msgstr "با افزونه، امکانات نامحدود %s سفارشی‌سازی را آزاد کنید -"
 
-#: admin/modules/customizer/views/customize.php:892
+#: admin/modules/customizer/views/customize.php:981
 msgid "Customizer for WooCommerce PDF Invoices Plugin"
 msgstr "سفارشی ساز برای افزونه فاکتورهای PDF WooCommerce"
 
-#: admin/modules/customizer/views/customize.php:899
-#: admin/modules/customizer/views/customize.php:910
+#: admin/modules/customizer/views/customize.php:988
+#: admin/modules/customizer/views/customize.php:999
 msgid "Visual"
 msgstr "دیداری"
 
-#: admin/modules/customizer/views/customize.php:900
-#: admin/modules/customizer/views/customize.php:913
+#: admin/modules/customizer/views/customize.php:989
+#: admin/modules/customizer/views/customize.php:1002
 msgid "Code"
 msgstr "کد"
 
-#: admin/modules/customizer/views/customize.php:913
-#: public/modules/deliverynote/deliverynote.php:193
-#: public/modules/dispatchlabel/dispatchlabel.php:172
-#: public/modules/invoice/invoice.php:1302
-#: public/modules/packinglist/packinglist.php:209
-#: public/modules/shippinglabel/shippinglabel.php:163
-msgid "Pro version"
-msgstr "نسخه حرفه‌ای"
-
-#: admin/modules/customizer/views/customize.php:937
-#: public/modules/packinglist/views/customize_pro.php:133
+#: admin/modules/customizer/views/customize.php:1025
 msgid "Premium features"
 msgstr "امکانات نسخه پریمیوم"
 
-#: admin/modules/customizer/views/customize.php:939
-msgid "Toggle the pro features on and off to see how they transform your "
-msgstr ""
-"ویژگی‌های حرفه‌ای را روشن و خاموش کنید تا ببینید چگونه ظاهر شما را تغییر می‌دهند"
+#. translators: %s: document type name (e.g. packing slip, invoice, credit note)
+#: admin/modules/customizer/views/customize.php:1028
+#, php-format
+msgid "Toggle the pro features on and off to see how they transform your %s."
+msgstr "ویژگی‌های حرفه‌ای را روشن و خاموش کنید تا ببینید چگونه %s شما را تغییر می‌دهند."
 
 #: admin/modules/uninstall-feedback/uninstall-feedback.php:41
 msgid "I couldn't understand how to make it work"
@@ -2931,18 +3169,15 @@ msgid "Show/hide fields like billing address, weight, product image etc"
 msgstr "نمایش/پنهان کردن فیلدهایی مانند آدرس صورتحساب، وزن، تصویر محصول و غیره"
 
 #: admin/views/customizer-promotion-popup.php:52
-#: public/modules/packinglist/views/customize_pro.php:159
 msgid "Add additional data such as product meta, order meta, product attributes etc"
 msgstr ""
 "داده‌های اضافی مانند متای محصول، متای سفارش، ویژگی‌های محصول و غیره را اضافه کنید"
 
 #: admin/views/customizer-promotion-popup.php:53
-#: public/modules/packinglist/views/customize_pro.php:160
 msgid "Group and sort product table based on different conditions"
 msgstr "گروه بندی و مرتب سازی جدول محصولات بر اساس شرایط مختلف"
 
 #: admin/views/customizer-promotion-popup.php:54
-#: public/modules/packinglist/views/customize_pro.php:161
 msgid "Many more customization options"
 msgstr "گزینه‌های سفارشی‌سازی بسیار بیشتر"
 
@@ -2959,7 +3194,6 @@ msgid "Add additional fields to shipping labels"
 msgstr "فیلدهای اضافی را به برچسب‌های حمل و نقل اضافه کنید"
 
 #: admin/views/customizer-promotion-popup.php:146 admin/views/freevspro.php:146
-#: public/modules/packinglist/views/customize_pro.php:165
 msgid "Upgrade To Premium"
 msgstr "ارتقا به نسخه حرفه‌ای"
 
@@ -3111,7 +3345,7 @@ msgstr "شناسه مالیات شرکت خود را مشخص نمایید."
 
 #: admin/views/general.php:79 public/modules/deliverynote/deliverynote.php:198
 #: public/modules/dispatchlabel/dispatchlabel.php:177
-#: public/modules/invoice/invoice.php:1331 public/modules/invoice/invoice.php:1335
+#: public/modules/invoice/invoice.php:1330 public/modules/invoice/invoice.php:1334
 #: public/modules/packinglist/packinglist.php:215
 #: public/modules/shippinglabel/shippinglabel.php:178
 msgid "Footer"
@@ -4274,7 +4508,7 @@ msgid "Order discount"
 msgstr "تخفیف سفارش"
 
 #: admin/views/wt_ipc_free_pro.php:772 admin/views/wt_ipc_free_pro.php:814
-#: public/modules/invoice/invoice.php:1347
+#: public/modules/invoice/invoice.php:1346
 msgid "Coupon info"
 msgstr "جزئیات کوپن تخفیف"
 
@@ -4354,7 +4588,6 @@ msgid "Supported address types"
 msgstr "پشتیبانی از انواع آدرس"
 
 #: admin/views/wt_pi_free_pro.php:319
-#: public/modules/packinglist/views/customize_pro.php:100
 msgid "Shipping address"
 msgstr "آدرس حمل"
 
@@ -4573,10 +4806,6 @@ msgstr ""
 "%1$s %2$s افزونه‌ی فاکتورهای PDF ووکامرس، برگه‌های بسته‌بندی، یادداشت‌های تحویل و "
 "برچسب‌های حمل و نقل را دوست دارید؟ %4$s نظرات خود را به اشتراک بگذارید! %5$s"
 
-#: includes/class-wf-woocommerce-packing-list-review_request.php:67
-msgid "Remind me later"
-msgstr "بعدا یادآوری کن"
-
 #: includes/class-wf-woocommerce-packing-list-review_request.php:68
 msgid "Not interested"
 msgstr "مایل نیستم"
@@ -4706,14 +4935,14 @@ msgstr "درج پابرگ برای یادداشت تحویل"
 
 #: public/modules/deliverynote/deliverynote.php:196
 #: public/modules/dispatchlabel/dispatchlabel.php:175
-#: public/modules/invoice/invoice.php:1317
+#: public/modules/invoice/invoice.php:1316
 #: public/modules/packinglist/packinglist.php:213
 msgid "Shipping Address"
 msgstr "آدرس ارسال"
 
 #: public/modules/deliverynote/deliverynote.php:199
 #: public/modules/dispatchlabel/dispatchlabel.php:179
-#: public/modules/invoice/invoice.php:1321
+#: public/modules/invoice/invoice.php:1320
 #: public/modules/packinglist/packinglist.php:217
 #: public/modules/shippinglabel/shippinglabel.php:176
 msgid "SSN number"
@@ -4721,19 +4950,11 @@ msgstr "شماره SSN"
 
 #: public/modules/deliverynote/deliverynote.php:200
 #: public/modules/dispatchlabel/dispatchlabel.php:180
-#: public/modules/invoice/invoice.php:1322
+#: public/modules/invoice/invoice.php:1321
 #: public/modules/packinglist/packinglist.php:218
 #: public/modules/shippinglabel/shippinglabel.php:175
 msgid "VAT number"
 msgstr "شماره مالیات بر ارزش افزوده"
-
-#: public/modules/deliverynote/deliverynote.php:201
-#: public/modules/dispatchlabel/dispatchlabel.php:181
-#: public/modules/invoice/invoice.php:1340
-#: public/modules/packinglist/packinglist.php:219
-#: public/modules/shippinglabel/shippinglabel.php:180
-msgid "Tracking Number"
-msgstr "شماره پیگیری"
 
 #: public/modules/deliverynote/deliverynote.php:202
 msgid "Signature"
@@ -4758,7 +4979,7 @@ msgstr "چاپ/دانلود یادداشت تحویل"
 #: public/modules/deliverynote/deliverynote.php:469
 #: public/modules/dispatchlabel/dispatchlabel.php:303
 #: public/modules/dispatchlabel/dispatchlabel.php:444
-#: public/modules/invoice/invoice.php:1543 public/modules/invoice/invoice.php:2116
+#: public/modules/invoice/invoice.php:1541 public/modules/invoice/invoice.php:2140
 #: public/modules/packinglist/packinglist.php:331
 #: public/modules/packinglist/packinglist.php:504
 #: public/modules/shippinglabel/shippinglabel.php:380
@@ -4771,43 +4992,6 @@ msgstr "چاپ"
 #: public/modules/deliverynote/deliverynote.php:399
 msgid "Unable to print Delivery note. Please check the items in the order."
 msgstr "چاپ یادداشت تحویل میسر نشد. لطفا مورد را در سفارش بررسی نمایید."
-
-#: public/modules/deliverynote/views/customize_pro.php:8
-msgid "Basic delivery note template"
-msgstr "الگوی یادداشت تحویل پایه"
-
-#: public/modules/deliverynote/views/customize_pro.php:9
-msgid "Preview of your current delivery note template."
-msgstr "پیش‌نمایش الگوی فعلی رسید تحویل شما."
-
-#: public/modules/deliverynote/views/customize_pro.php:14
-msgid "Delivery note Preview"
-msgstr "پیش‌نمایش رسید تحویل"
-
-#: public/modules/deliverynote/views/customize_pro.php:28
-msgid "Pre-built templates"
-msgstr "قالب های از پیش ساخته شده"
-
-#: public/modules/deliverynote/views/customize_pro.php:29
-msgid "Sort and group products by category"
-msgstr "مرتب سازی و گروه بندی محصولات بر اساس دسته بندی"
-
-#: public/modules/deliverynote/views/customize_pro.php:30
-msgid "Show product variations, attributes, SKUs, return policy and footer"
-msgstr "نمایش تغییرات محصول، ویژگی‌ها، SKUها، سیاست بازگشت و پاورقی"
-
-#: public/modules/deliverynote/views/customize_pro.php:31
-msgid "Add order meta, product meta, and customer notes"
-msgstr "اضافه کردن متای سفارش، متای محصول و یادداشت‌های مشتری"
-
-#: public/modules/deliverynote/views/customize_pro.php:55
-#: public/modules/dispatchlabel/views/customize_pro.php:56
-msgid "Unlock more customization"
-msgstr "شخصی‌سازی‌های بیشتر را آزاد کنید"
-
-#: public/modules/deliverynote/views/customize_pro.php:56
-msgid "Give your delivery team and customers the right details at a glance."
-msgstr "جزئیات صحیح را در یک نگاه به تیم تحویل و مشتریان خود ارائه دهید."
 
 #: public/modules/deliverynote/views/general.php:12
 msgid "Configure the general settings required for the delivery note."
@@ -4901,42 +5085,6 @@ msgstr "برچسب ارسال"
 #: public/modules/dispatchlabel/dispatchlabel.php:298
 msgid "Print/Download Dispatch Label"
 msgstr "چاپ/دانلود برچسب ارسال"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:8
-msgid "Basic dispatch label template"
-msgstr "الگوی برچسب اعزام پایه"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:9
-msgid "Preview of your dispatch label template."
-msgstr "پیش‌نمایش الگوی برچسب اعزام شما."
-
-#: public/modules/dispatchlabel/views/customize_pro.php:14
-msgid "Dispatch Label Preview"
-msgstr "پیش‌نمایش برچسب اعزام"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:28
-msgid "Sort and group items in the product table"
-msgstr "مرتب‌سازی و گروه‌بندی اقلام در جدول محصولات"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:29
-msgid "Display product variations, SKUs, and meta details"
-msgstr "نمایش انواع محصولات، SKUها و جزئیات متا"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:30
-msgid "Add additional product meta, order meta, product attributes & custom notes"
-msgstr "اضافه کردن متای محصول، متای سفارش، ویژگی‌های محصول و یادداشت‌های سفارشی"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:31
-msgid "Customize document layout and add footer section"
-msgstr "طرح‌بندی سند را سفارشی کنید و بخش پاورقی را اضافه کنید"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:32
-msgid "Add print button to order emails for faster access"
-msgstr "برای دسترسی سریع‌تر، دکمه چاپ را به سفارش ایمیل‌ها اضافه کنید"
-
-#: public/modules/dispatchlabel/views/customize_pro.php:57
-msgid "Handle order fulfillment with more control and precision."
-msgstr "با کنترل و دقت بیشتری به انجام سفارشات رسیدگی کنید."
 
 #: public/modules/dispatchlabel/views/general.php:13
 msgid "Configure the general settings required for the dispatch label."
@@ -5069,87 +5217,73 @@ msgstr "عنوان سند"
 msgid "Company Logo / Name"
 msgstr "علامت تجاری (آرم، نشان)/ نام شرکت"
 
-#: public/modules/invoice/invoice.php:1310 public/modules/invoice/invoice.php:1581
-msgid "Invoice Number"
-msgstr "شماره فاکتور"
-
 #: public/modules/invoice/invoice.php:1311
-#: public/modules/shippinglabel/shippinglabel.php:169
-msgid "Order Number"
-msgstr "شماره سفارش"
-
-#: public/modules/invoice/invoice.php:1312
 msgid "Invoice Date"
 msgstr "تاریخ فاکتور"
 
-#: public/modules/invoice/invoice.php:1313
+#: public/modules/invoice/invoice.php:1312
 #: public/modules/shippinglabel/shippinglabel.php:170
 msgid "Order Date"
 msgstr "تاریخ سفارش"
 
-#: public/modules/invoice/invoice.php:1315
+#: public/modules/invoice/invoice.php:1314
 #: public/modules/shippinglabel/shippinglabel.php:167
 msgid "From Address"
 msgstr "فرستنده"
 
-#: public/modules/invoice/invoice.php:1316
+#: public/modules/invoice/invoice.php:1315
 msgid "Billing Address"
 msgstr "آدرس صورتحساب"
 
-#: public/modules/invoice/invoice.php:1318
+#: public/modules/invoice/invoice.php:1317
 #: public/modules/shippinglabel/shippinglabel.php:173
 msgid "Email Field"
 msgstr "فیلد ایمیل"
 
-#: public/modules/invoice/invoice.php:1319
+#: public/modules/invoice/invoice.php:1318
 #: public/modules/shippinglabel/shippinglabel.php:174
 msgid "Tel Field"
 msgstr "فیلد تلفن"
 
-#: public/modules/invoice/invoice.php:1324
+#: public/modules/invoice/invoice.php:1323
 msgid "Payment received stamp"
 msgstr "تاییدیه پرداخت"
 
-#: public/modules/invoice/invoice.php:1329
-#: public/modules/shippinglabel/shippinglabel.php:179
-msgid "Barcode"
-msgstr "بارکد"
-
-#: public/modules/invoice/invoice.php:1332
+#: public/modules/invoice/invoice.php:1331
 msgid "QR code"
 msgstr "QR کد"
 
-#: public/modules/invoice/invoice.php:1334
+#: public/modules/invoice/invoice.php:1333
 msgid "QR Code"
 msgstr "QR کد"
 
-#: public/modules/invoice/invoice.php:1489
+#: public/modules/invoice/invoice.php:1487
 msgid "Print Invoices"
 msgstr "چاپ فاکتورها"
 
-#: public/modules/invoice/invoice.php:1490
+#: public/modules/invoice/invoice.php:1488
 msgid "Download Invoices"
 msgstr "دانلود فاکتورها"
 
-#: public/modules/invoice/invoice.php:1529 public/modules/invoice/invoice.php:1566
+#: public/modules/invoice/invoice.php:1527 public/modules/invoice/invoice.php:1564
 msgid "Print Invoice"
 msgstr "چاپ فاکتور"
 
-#: public/modules/invoice/invoice.php:1537 public/modules/invoice/invoice.php:1567
+#: public/modules/invoice/invoice.php:1535 public/modules/invoice/invoice.php:1565
 msgid "Download Invoice"
 msgstr "دانلود فاکتور"
 
-#: public/modules/invoice/invoice.php:1544
+#: public/modules/invoice/invoice.php:1542
 #: public/modules/packinglist/packinglist.php:338
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:368
 msgid "Download"
 msgstr "دانلود"
 
-#: public/modules/invoice/invoice.php:1557
+#: public/modules/invoice/invoice.php:1555
 msgid "Print/Download Invoice"
 msgstr "چاپ/دانلود فاکتور"
 
-#: public/modules/invoice/invoice.php:1833
+#: public/modules/invoice/invoice.php:1831
 msgid "Customizer module is not active."
 msgstr "ماژول سفارشی‌سازی فعال نیست."
 
@@ -5493,45 +5627,6 @@ msgstr "دانلود حواله بسته‌بندی"
 msgid "Unable to print packling slip. Please check the items in the order."
 msgstr "چاپ لیست بسته ممکن نیست. لطفا موارد را در سفارش بررسی کنید."
 
-#: public/modules/packinglist/views/customize_pro.php:102
-msgid "Total weight"
-msgstr "مجموع وزن "
-
-#: public/modules/packinglist/views/customize_pro.php:114
-msgid "Your current packing slip"
-msgstr "رسید بسته‌بندی فعلی شما"
-
-#: public/modules/packinglist/views/customize_pro.php:115
-msgid "How your packing slip will appear to customers"
-msgstr "نحوه نمایش رسید بسته‌بندی شما برای مشتریان"
-
-#: public/modules/packinglist/views/customize_pro.php:122
-msgid "Packing Slip Preview"
-msgstr "پیش‌نمایش برگه بسته‌بندی"
-
-#: public/modules/packinglist/views/customize_pro.php:135
-msgid ""
-"Toggle the pro features on and off to see how they transform your packing slip"
-msgstr ""
-"ویژگی‌های حرفه‌ای را روشن و خاموش کنید تا ببینید چگونه برگه بسته‌بندی شما را تغییر "
-"می‌دهند"
-
-#: public/modules/packinglist/views/customize_pro.php:153
-msgid "Unlock full customization"
-msgstr "باز کردن قفل سفارشی‌سازی کامل"
-
-#: public/modules/packinglist/views/customize_pro.php:155
-msgid "Design packing slips that match your brand"
-msgstr "برگه‌های بسته‌بندی را طوری طراحی کنید که با برند شما مطابقت داشته باشند"
-
-#: public/modules/packinglist/views/customize_pro.php:157
-msgid "Advanced packing slip templates"
-msgstr "قالب‌های پیشرفته برگه بسته‌بندی"
-
-#: public/modules/packinglist/views/customize_pro.php:158
-msgid "Show, hide, rearrange fields"
-msgstr "نمایش، پنهان کردن، تنظیم مجدد فیلدها"
-
 #: public/modules/packinglist/views/general.php:12
 msgid "Configure the general settings required for the packing slip."
 msgstr "تنظیمات کلی مورد نیاز برای حواله بسته بندی را پیکربندی کنید."
@@ -5592,33 +5687,9 @@ msgstr "وزن"
 msgid "Shipping Method"
 msgstr "روش حمل"
 
-#: public/modules/shippinglabel/shippinglabel.php:181
-msgid "Package Number"
-msgstr "شماره بسته"
-
-#: public/modules/shippinglabel/shippinglabel.php:182
-msgid "Box name"
-msgstr "نام جعبه"
-
 #: public/modules/shippinglabel/shippinglabel.php:183
 msgid "No of Items"
 msgstr "تعداد موارد"
-
-#: public/modules/shippinglabel/shippinglabel.php:184
-msgid "Fragile"
-msgstr "شکستنی است"
-
-#: public/modules/shippinglabel/shippinglabel.php:185
-msgid "This way up"
-msgstr "این طرف، سمت بالا است"
-
-#: public/modules/shippinglabel/shippinglabel.php:186
-msgid "Keep dry"
-msgstr "به رطوبت حساس است"
-
-#: public/modules/shippinglabel/shippinglabel.php:188
-msgid "Return Policy"
-msgstr "دستورالعمل بازگشت (استرداد، مرجوعی)"
 
 #: public/modules/shippinglabel/shippinglabel.php:355
 #: public/modules/shippinglabel/shippinglabel.php:373
@@ -6085,6 +6156,90 @@ msgstr "وب تافی"
 #. Author URI of the plugin/theme
 msgid "https://www.webtoffee.com/"
 msgstr "‫https://www.webtoffee.com"
+
+#~ msgid "Basic delivery note template"
+#~ msgstr "الگوی یادداشت تحویل پایه"
+
+#~ msgid "Preview of your current delivery note template."
+#~ msgstr "پیش‌نمایش الگوی فعلی رسید تحویل شما."
+
+#~ msgid "Delivery note Preview"
+#~ msgstr "پیش‌نمایش رسید تحویل"
+
+#~ msgid "Pre-built templates"
+#~ msgstr "قالب های از پیش ساخته شده"
+
+#~ msgid "Sort and group products by category"
+#~ msgstr "مرتب سازی و گروه بندی محصولات بر اساس دسته بندی"
+
+#~ msgid "Show product variations, attributes, SKUs, return policy and footer"
+#~ msgstr "نمایش تغییرات محصول، ویژگی‌ها، SKUها، سیاست بازگشت و پاورقی"
+
+#~ msgid "Add order meta, product meta, and customer notes"
+#~ msgstr "اضافه کردن متای سفارش، متای محصول و یادداشت‌های مشتری"
+
+#~ msgid "Unlock more customization"
+#~ msgstr "شخصی‌سازی‌های بیشتر را آزاد کنید"
+
+#~ msgid "Give your delivery team and customers the right details at a glance."
+#~ msgstr "جزئیات صحیح را در یک نگاه به تیم تحویل و مشتریان خود ارائه دهید."
+
+#~ msgid "Basic dispatch label template"
+#~ msgstr "الگوی برچسب اعزام پایه"
+
+#~ msgid "Preview of your dispatch label template."
+#~ msgstr "پیش‌نمایش الگوی برچسب اعزام شما."
+
+#~ msgid "Dispatch Label Preview"
+#~ msgstr "پیش‌نمایش برچسب اعزام"
+
+#~ msgid "Sort and group items in the product table"
+#~ msgstr "مرتب‌سازی و گروه‌بندی اقلام در جدول محصولات"
+
+#~ msgid "Display product variations, SKUs, and meta details"
+#~ msgstr "نمایش انواع محصولات، SKUها و جزئیات متا"
+
+#~ msgid "Add additional product meta, order meta, product attributes & custom notes"
+#~ msgstr "اضافه کردن متای محصول، متای سفارش، ویژگی‌های محصول و یادداشت‌های سفارشی"
+
+#~ msgid "Customize document layout and add footer section"
+#~ msgstr "طرح‌بندی سند را سفارشی کنید و بخش پاورقی را اضافه کنید"
+
+#~ msgid "Add print button to order emails for faster access"
+#~ msgstr "برای دسترسی سریع‌تر، دکمه چاپ را به سفارش ایمیل‌ها اضافه کنید"
+
+#~ msgid "Handle order fulfillment with more control and precision."
+#~ msgstr "با کنترل و دقت بیشتری به انجام سفارشات رسیدگی کنید."
+
+#~ msgid "Total weight"
+#~ msgstr "مجموع وزن "
+
+#~ msgid "Your current packing slip"
+#~ msgstr "رسید بسته‌بندی فعلی شما"
+
+#~ msgid "How your packing slip will appear to customers"
+#~ msgstr "نحوه نمایش رسید بسته‌بندی شما برای مشتریان"
+
+#~ msgid "Packing Slip Preview"
+#~ msgstr "پیش‌نمایش برگه بسته‌بندی"
+
+#~ msgid ""
+#~ "Toggle the pro features on and off to see how they transform your packing slip"
+#~ msgstr ""
+#~ "ویژگی‌های حرفه‌ای را روشن و خاموش کنید تا ببینید چگونه برگه بسته‌بندی شما را تغییر "
+#~ "می‌دهند"
+
+#~ msgid "Unlock full customization"
+#~ msgstr "باز کردن قفل سفارشی‌سازی کامل"
+
+#~ msgid "Design packing slips that match your brand"
+#~ msgstr "برگه‌های بسته‌بندی را طوری طراحی کنید که با برند شما مطابقت داشته باشند"
+
+#~ msgid "Advanced packing slip templates"
+#~ msgstr "قالب‌های پیشرفته برگه بسته‌بندی"
+
+#~ msgid "Show, hide, rearrange fields"
+#~ msgstr "نمایش، پنهان کردن، تنظیم مجدد فیلدها"
 
 #~ msgid "Black Friday Cyber Monday 2025"
 #~ msgstr "جمعه سیاه، دوشنبه سایبری ۲۰۲۵"
