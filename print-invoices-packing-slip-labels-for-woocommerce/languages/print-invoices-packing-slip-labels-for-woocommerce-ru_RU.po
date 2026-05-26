@@ -888,7 +888,7 @@ msgstr ""
 
 #: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:119
 msgid "Black Friday Cyber Monday 2025"
-msgstr ""
+msgstr "Черная пятница Киберпонедельник 2025"
 
 #: admin/modules/banner/class-wt-bfcm-twenty-twenty-five.php:123
 msgid "Never Miss This Deal"

@@ -13,14 +13,14 @@
  * Requires Plugins:  woocommerce
  * Plugin URI:        https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
  * Description:       Prints Packing List,Invoice,Delivery Note and Shipping Label.
- * Version:           4.9.4
+ * Version:           4.9.5
  * Author:            WebToffee
  * Author URI:        https://www.webtoffee.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       print-invoices-packing-slip-labels-for-woocommerce
  * Domain Path:       /languages
- * WC tested up to:   10.6.2
+ * WC tested up to:   10.7.0
  */
 // If this file is called directly, abort.
 if (! defined('WPINC')) {
@@ -71,7 +71,7 @@ if (!defined('WF_PKLIST_VERSION')) //check plugin file already included
     /**
      * Currently plugin version.
      */
-    define('WF_PKLIST_VERSION', '4.9.4');
+    define('WF_PKLIST_VERSION', '4.9.5');
 
     if ( ! defined( 'WBTE_PKLIST_CROSS_PROMO_BANNER_VERSION' ) ) {
         // This constant must be unique for each plugin. Update this value when updating to a new banner.
@@ -150,6 +150,11 @@ if (!function_exists('deactivate_wf_woocommerce_packing_list')) {
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path(__FILE__) . 'includes/class-wf-woocommerce-packing-list.php';
+
+// Add dismissible server info for file restrictions
+include_once plugin_dir_path( __FILE__ ) . 'includes/class-wt-pklist-non-apache-info.php';
+$inform_server_secure               = new Wt_Pklist_Inform_Server_Secure( 'pklist' );
+$inform_server_secure->plugin_title = 'WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels';
 
 /**
  *  Declare compatibility with custom order tables for WooCommerce.

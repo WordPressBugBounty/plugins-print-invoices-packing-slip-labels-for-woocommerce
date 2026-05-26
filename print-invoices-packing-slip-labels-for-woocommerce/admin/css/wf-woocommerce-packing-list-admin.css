@@ -564,6 +564,12 @@ a.button.wc-action-button.wc-action-button-wf_pklist_print_document_packinglist_
   z-index: 100000002 !important;
 }
 
+/* Hide the sticky toolbar while a WordPress media modal is open so the
+   "Update Settings" button doesn't overlay the media library UI. */
+body.modal-open .wf-plugin-toolbar.bottom {
+  display: none !important;
+}
+
 .wf-plugin-toolbar.top {
   margin-top: -15px;
   background: #f5f5f5;

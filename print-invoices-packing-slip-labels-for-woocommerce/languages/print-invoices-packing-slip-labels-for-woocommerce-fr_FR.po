@@ -2333,7 +2333,7 @@ msgstr "Accédez à davantage de modèles de factures."
 
 #: admin/modules/customizer/views/customize.php:914
 msgid "This preview reflects your current settings from the General tab."
-msgstr ""
+msgstr "Cet aperçu reflète vos paramètres actuels de l'onglet Général."
 
 #: admin/modules/customizer/views/customize.php:923
 msgid "Update template"

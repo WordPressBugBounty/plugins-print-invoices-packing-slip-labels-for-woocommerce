@@ -536,6 +536,18 @@ class WT_Form_Field_Builder
 		$result = Wf_Woocommerce_Packing_List::get_option($name, $base_id);
 		$result = is_string($result) ? stripslashes($result) : $result;
 		$img_url = $result ? $result : $wf_admin_img_path;
+
+		// Allow per-field overrides of the upload button label and size recommendation text.
+		// Pass an empty string in `size_rec` to hide the recommendation line entirely.
+		$upload_label = isset( $args['upload_label'] ) && '' !== $args['upload_label']
+			? $args['upload_label']
+			: __( "Upload your image", "print-invoices-packing-slip-labels-for-woocommerce" );
+		$size_rec = array_key_exists( 'size_rec', $args )
+			? $args['size_rec']
+			: __( "Recommended size is 150x50px.", "print-invoices-packing-slip-labels-for-woocommerce" );
+
+		$size_rec_html = ( '' !== $size_rec ) ? sprintf( '<span class="size_rec">%s</span>', esc_html( $size_rec ) ) : '';
+
 		$html = sprintf(
 			'<td>
 							<input id="%1$s" type="hidden" name="%2$s" value="%3$s">
@@ -545,15 +557,15 @@ class WT_Form_Field_Builder
 									<img class="wf_image_preview_small" src="%4$s">
 								</div>
 								<p>%5$s</p>
-								<span class="size_rec">%6$s</span>
+								%6$s
 								<input type="button" name="upload_image" class="wf_button button button-primary wf_file_attacher" wf_file_attacher_target="#%1$s" value="Upload">
 							</div>',
 			esc_attr($id),
 			esc_attr($name),
 			esc_url($result),
 			esc_url($img_url),
-			__("Upload your image", "print-invoices-packing-slip-labels-for-woocommerce"),
-			__("Recommended size is 150x50px.", "print-invoices-packing-slip-labels-for-woocommerce")
+			esc_html( $upload_label ),
+			$size_rec_html
 		);
 		$html .= sprintf('%1$s</td><td></td>', $this->wt_add_help_text($help_text, $conditional_help_html, $after_form_field));
 		return $html;

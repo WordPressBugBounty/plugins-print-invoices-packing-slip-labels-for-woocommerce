@@ -333,7 +333,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 	{
 		if ($template_type === $this->module_base) {
 			if ("received_seal" === $type) {
-				$doc_href = esc_url( admin_url( 'admin.php?page=wf_woocommerce_packing_list#help#filters' ) );
+				$doc_href = admin_url( 'admin.php?page=wf_woocommerce_packing_list#help#filters' );
 				$info_text = sprintf(
 					/* translators: 1: Opening anchor tag for the documentation link, 2: Closing anchor tag. */
 					__( 'You can control the visibility of the seal according to order status via filters. See filter documentation %1$s here.%2$s', 'print-invoices-packing-slip-labels-for-woocommerce' ),
@@ -487,7 +487,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 		if (!Wt_Pklist_Common::get_order_meta($order_id, '_wt_thankyou_action_done', true)) {
 			// Get an instance of the WC_Order object
 			$order = wc_get_order($order_id);
-			$status = version_compare( WC()->version, '2.7.0', '<' ) ? $order->status : $order->get_status();
+			$status = $order->get_status();
 
 			$free_order_enable = Wf_Woocommerce_Packing_List::get_option('wf_woocommerce_invoice_free_orders', $this->module_id);
 			$invoice_creation = 1;
@@ -522,7 +522,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			return;
 		}
 		$order = wc_get_order($order_id);
-		$status	= version_compare( WC()->version, '2.7.0', '<' ) ? $order->status : $order->get_status();
+		$status	= $order->get_status();
 		$free_order_enable = Wf_Woocommerce_Packing_List::get_option('wf_woocommerce_invoice_free_orders', $this->module_id);
 		$invoice_creation = 1;
 
@@ -790,8 +790,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$new_total += $new_tax;
 			if ($new_total > 0) {
 				$old_product_formated = '<strike>' . $product_total_formated . '</strike>';
-				$wc_version = WC()->version;
-				$order_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $order->id : $order->get_id();
+				$order_id = $order->get_id();
 				$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 				$new_total = (float)$product_total - $new_total;
 				$product_total_formated = Wf_Woocommerce_Packing_List_Admin::wf_display_price($user_currency, $order, $new_total);
@@ -817,8 +816,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 
 			if ($refunded_tot_tax > 0) {
 				$old_item_tax_formated = '<strike>' . $item_tax_formated . '</strike>';
-				$wc_version = WC()->version;
-				$order_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $order->id : $order->get_id();
+				$order_id = $order->get_id();
 				$item_tax	= (float)$item_tax - $refunded_tot_tax;
 				$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 				$item_tax_formated = Wf_Woocommerce_Packing_List_Admin::wf_display_price($user_currency, $order, $item_tax);
@@ -853,8 +851,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$new_total += $new_tax;
 			if ($new_total > 0) {
 				$old_product_formated = '<strike>' . $product_total_formated . '</strike>';
-				$wc_version = WC()->version;
-				$order_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $order->id : $order->get_id();
+				$order_id = $order->get_id();
 				$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 				$new_total = (float)$product_total - $new_total;
 				$product_total_formated = Wf_Woocommerce_Packing_List_Admin::wf_display_price($user_currency, $order, $new_total);
@@ -902,8 +899,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 	 */
 	public function alter_sub_total_row($sub_total_formated, $template_type, $sub_total, $order, $incl_tax)
 	{
-		$wc_version = WC()->version;
-		$order_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $order->id : $order->get_id();
+		$order_id = $order->get_id();
 		$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 		$new_total = 0;
 		$new_tax = 0;
@@ -952,8 +948,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 	 */
 	public function alter_extra_tax_row($tax_amount, $tax_item, $order, $template_type)
 	{
-		$wc_version = WC()->version;
-		$order_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $order->id : $order->get_id();
+		$order_id = $order->get_id();
 		$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 		$tax_type = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_taxstatus');
 		$incl_tax = in_array('in_tax', $tax_type);
@@ -993,7 +988,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 						}
 					}
 				}
-				$refund_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $refund_order->id : $refund_order->get_id();
+				$refund_id = $refund_order->get_id();
 
 			}
 
@@ -1059,8 +1054,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 	 */
 	public function alter_shipping_row($shipping, $template_type, $order, $product_table)
 	{
-		$wc_version = WC()->version;
-		$order_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ? $order->id : $order->get_id();
+		$order_id = $order->get_id();
 		$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 		$incl_tax_text = '';
 		$tax_display = get_option('woocommerce_tax_display_cart');
@@ -1072,7 +1066,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 		if (!empty($all_refunds)) {
 			$new_shipping_amount = 0;
 			foreach ($all_refunds as $refund_order) {
-				$refund_id = ( version_compare( $wc_version, '2.7.0', '<' ) ) ?  $refund_order->id : $refund_order->get_id();
+				$refund_id = $refund_order->get_id();
 				$new_shipping_amount += (float) Wt_Pklist_Common::get_order_meta($refund_id, 'shipping_total', true);
 
 				if ($incl_tax) {
@@ -1153,7 +1147,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			return '';
 		}
 
-		$order_id = version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
+		$order_id = $order->get_id();
 		$wf_invoice_id = Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);
 
 		if (!empty($wf_invoice_id)) {
@@ -1240,8 +1234,8 @@ class Wf_Woocommerce_Packing_List_Invoice
 		}
 
 		if ("Invoice" === $column) {
-			$order_id = version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
-			$order_status = version_compare( WC()->version, '2.7.0', '<' ) ? $order->status : $order->get_status();
+			$order_id = $order->get_id();
+			$order_status = $order->get_status();
 			$generate_invoice_for = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_orderstatus', $this->module_id);
 			$force_generate = in_array('wc-' . $order_status, $generate_invoice_for) ? true : false;
 			$wf_invoice_id = Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);
@@ -1267,8 +1261,8 @@ class Wf_Woocommerce_Packing_List_Invoice
 			if (!empty($empty_invoice_order_ids)) {
 				foreach ($empty_invoice_order_ids as $this_order_id) {
 					$order = Wt_Pklist_Common::get_order($this_order_id);
-					$order_id = (int)(version_compare( WC()->version, '2.7.0', '<' )) ? $order->id : $order->get_id();
-					$order_status = version_compare( WC()->version, '2.7.0', '<' ) ? $order->status : $order->get_status();
+					$order_id = $order->get_id();
+					$order_status = $order->get_status();
 					$wf_invoice_id = Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);
 					if (empty($wf_invoice_id)) {
 						$generate_invoice_for = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_orderstatus', $this->module_id);
@@ -1427,6 +1421,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 				'woocommerce_wt_use_latest_settings_invoice' => 'Yes',
 				'wt_pdf_invoice_attachment_wc_email_classes' => array(),
 				'wt_pklist_restrict_invoice_attachment_for' => array(),
+				'wt_invoice_additional_attachment'         => '',
 			);
 			return $settings;
 		} else {
@@ -1504,7 +1499,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 		$free_order_enable = Wf_Woocommerce_Packing_List::get_option('wf_woocommerce_invoice_free_orders', $this->module_id);
 		$is_show = 0;
 		$is_show_prompt = 1;
-		$order_status = version_compare( WC()->version, '2.7.0', '<' ) ? $order->status : $order->get_status();
+		$order_status = $order->get_status();
 
 		if (in_array('wc-' . $order_status, $generate_invoice_for) || !empty($invoice_number)) {
 			$is_show_prompt = 0;
@@ -1610,8 +1605,8 @@ class Wf_Woocommerce_Packing_List_Invoice
 		$generate_invoice_for = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_orderstatus', $this->module_id);
 		$generate_invoice_for = apply_filters('wf_pklist_alter_' . $this->module_base . '_attachment_order_status', $generate_invoice_for, $order_id, $email_class_id, $order);
 		$restrict_invoice_attachment_for = Wf_Woocommerce_Packing_List::get_option('wt_pklist_restrict_invoice_attachment_for', $this->module_id);
-		$order_id = version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
-		$payment_method = ( version_compare( WC()->version, '2.7.0', '<' ) ? Wt_Pklist_Common_Ipc::get_order_meta( $order_id, '_payment_method', true ) : $order->get_payment_method()); 
+		$order_id = $order->get_id();
+		$payment_method = $order->get_payment_method();
 
 		/**
 		 * Check if the current email class and current order status are selected for attaching the invoice document.
@@ -1625,6 +1620,44 @@ class Wf_Woocommerce_Packing_List_Invoice
 					$attachments[] = $this->prepare_pdf_attachments($order_id);
 					if ( is_object( $order ) && is_a( $order, 'WC_Order' ) ) {
 						apply_filters('wt_upload_documets_to_cloud_storage', $order_id, $chosen_wc_email_classes, $this->module_base);
+					}
+
+					/**
+					 * WTWP-288: attach the user-uploaded additional document alongside the invoice PDF.
+					 *
+					 * Defence-in-depth:
+					 *   1. realpath() resolves both paths — bails on missing files or symlink escapes.
+					 *   2. strpos($real_path, $basedir_real) confines to the WP uploads dir.
+					 *   3. Extension whitelist (SVG intentionally excluded — XSS payload risk).
+					 *   4. wp_check_filetype() verifies the extension maps to a recognised WP MIME type
+					 *      (defence against renamed `.php` files masquerading as `.pdf`).
+					 */
+					$additional_attachment = Wf_Woocommerce_Packing_List::get_option( 'wt_invoice_additional_attachment', $this->module_id );
+					$additional_attachment = is_string( $additional_attachment ) ? esc_url_raw( trim( $additional_attachment ) ) : '';
+					if ( '' !== $additional_attachment ) {
+						$upload_dir   = wp_get_upload_dir();
+						$basedir_real = realpath( $upload_dir['basedir'] );
+						$file_path    = str_replace( $upload_dir['baseurl'], $upload_dir['basedir'], $additional_attachment );
+						$real_path    = realpath( $file_path );
+
+						$allowed_types = apply_filters(
+							'wt_pklist_invoice_additional_attachment_allowed_types',
+							array( 'pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'gif', 'webp' )
+						);
+						$ext            = strtolower( pathinfo( $file_path, PATHINFO_EXTENSION ) );
+						$check_filetype = $real_path ? wp_check_filetype( $real_path ) : array( 'ext' => false );
+
+						if (
+							$real_path
+							&& $basedir_real
+							&& 0 === strpos( $real_path, $basedir_real )
+							&& in_array( $ext, $allowed_types, true )
+							&& ! empty( $check_filetype['ext'] )
+							&& strtolower( $check_filetype['ext'] ) === $ext
+							&& is_readable( $real_path )
+						) {
+							$attachments[] = $real_path;
+						}
 					}
 				}
 			}
@@ -1674,7 +1707,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$show_print_button_arr = Wf_Woocommerce_Packing_List::get_option('wf_woocommerce_invoice_show_print_button', $this->module_id);
 
 			if (('Yes' === $show_on_frontend) && (in_array('order_email', $show_print_button_arr))) {
-				$order_id = version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
+				$order_id = $order->get_id();
 				$wf_invoice_id = Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);
 				$show_print_button_for = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_orderstatus', $this->module_id);
 				if ("" !== trim($wf_invoice_id) || in_array('wc-' . $order->get_status(), $show_print_button_for)) {
@@ -1706,7 +1739,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$show_on_frontend = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_frontend_info', $this->module_id);
 			$show_print_button_arr = Wf_Woocommerce_Packing_List::get_option('wf_woocommerce_invoice_show_print_button', $this->module_id);
 			if (('Yes' === $show_on_frontend) && (in_array('order_details', $show_print_button_arr))) {
-				$order_id = version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
+				$order_id = $order->get_id();
 				$wf_invoice_id = Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);
 				$generate_invoice_for = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_orderstatus', $this->module_id);
 				if ("" !== trim($wf_invoice_id) || in_array('wc-' . $order->get_status(), $generate_invoice_for)) {
@@ -1757,7 +1790,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 			$show_on_frontend = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_packinglist_frontend_info', $this->module_id);
 			$show_print_button_arr = Wf_Woocommerce_Packing_List::get_option('wf_woocommerce_invoice_show_print_button', $this->module_id);
 			if (('Yes' === $show_on_frontend) && (in_array('order_listing', $show_print_button_arr))) {
-				$order_id = version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
+				$order_id = $order->get_id();
 				$wf_invoice_id = Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);
 				$generate_invoice_for = Wf_Woocommerce_Packing_List::get_option('woocommerce_wf_generate_for_orderstatus', $this->module_id);
 				if ("" !== trim($wf_invoice_id) || in_array('wc-' . $order->get_status(), $generate_invoice_for)) {
@@ -1888,8 +1921,9 @@ class Wf_Woocommerce_Packing_List_Invoice
 		$upload_dir		= $upload_loc['path'];
 		$upload_url		= $upload_loc['url'];
 
+		$html_site_token = Wf_Woocommerce_Packing_List::get_site_pdf_token();
 		if (!empty($invoice_html)) {
-			$file_loc = $upload_dir . '/' . $template_type . '/' . $invoice_html;
+			$file_loc = $upload_dir . '/' . $template_type . '/' . $html_site_token . '/' . basename( $invoice_html );
 			if (!file_exists($file_loc)) {
 				$new_invoice_html_set = 1;
 			} else {
@@ -2000,12 +2034,19 @@ class Wf_Woocommerce_Packing_List_Invoice
 				@mkdir($upload_dir, 0700); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
 			}
 
+			// Site token subdirectory (WPPS-483)
+			$upload_dir .= '/' . $html_site_token;
+			$upload_url .= '/' . $html_site_token;
+			if (!is_dir($upload_dir)) {
+				wp_mkdir_p($upload_dir);
+				Wf_Woocommerce_Packing_List::ensure_secure_subdir($upload_dir);
+			}
+
 			//if directory successfully created
 			if (is_dir($upload_dir)) {
 				$file_name = $pdf_name . '.html';
 				$file_path = $upload_dir . '/' . $pdf_name . '.html';
 				$file_url = $upload_url . '/' . $pdf_name . '.html';
-				//$myfile = fopen($file_path, "w") or die("Unable to open file!");
 				$fh = @fopen($file_path, "w"); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
 				if (is_resource($fh)) {
 					fwrite($fh, $out); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fwrite
@@ -2124,7 +2165,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 		$show_print_button	= apply_filters('wt_pklist_show_document_print_button_action_column_free', true, $this->module_base, $order);
 
 		if (!empty($order) && true === $show_print_button) {
-			$order_id	= version_compare( WC()->version, '2.7.0', '<' ) ? $order->id : $order->get_id();
+			$order_id	= $order->get_id();
 
 			if (in_array($this->module_base, Wf_Woocommerce_Packing_List::get_option('wt_pklist_separate_print_button_enable'))) {
 				$invoice_number		= Wt_Pklist_Common::get_order_meta($order_id, 'wf_invoice_number', true);

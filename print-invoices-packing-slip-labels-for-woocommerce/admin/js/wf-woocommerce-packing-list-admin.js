@@ -760,6 +760,26 @@ var wt_pdf_field_group =
 
 
 function wf_Confirm_Notice_for_Manually_Creating_Invoicenumbers(given_url, a) {
+	// Order has not been saved yet (auto-draft). Block print so no invoice number is consumed.
+	if (99 === a || "99" === a) {
+		var msg = wf_pklist_params.msgs.invoice_number_prompt_order_not_created;
+		var elm = jQuery('.wt_doc_create_confirm_popup');
+		if (elm.length === 0) {
+			alert(msg);
+			return false;
+		}
+		elm.children().find('.message').html(msg);
+		elm.children().find('.wt_doc_create_confirm_popup_main,.wt_doc_create_confirm_popup_footer').show();
+		// Hide Generate button and "Do not show again" — only Cancel applies for unsaved orders.
+		elm.find('.wt_doc_create_confirm_popup_yes').hide();
+		elm.find('#wt_dont_show_again_doc_create_div').hide();
+		wf_popup.showPopup(elm);
+		// showPopup() sets max-height/overflow on the body assuming Generate + checkbox are visible;
+		// without them, the body collapses to the message and leaves the popup taller than needed.
+		elm.find('.wf_pklist_popup_body').css({ 'max-height': 'none', 'overflow': 'visible', 'min-height': '0' });
+		return false;
+	}
+
 	var url = '';
 	url = given_url;
 
@@ -811,6 +831,9 @@ function wf_Confirm_Notice_for_Manually_Creating_Invoicenumbers(given_url, a) {
 				// admin - order edit page print triggers
 				elm.children().find('.message').html(invoice_prompt);
 				elm.children().find('.wt_doc_create_confirm_popup_main,.wt_doc_create_confirm_popup_footer').show();
+				// Restore Generate button + "Do not show again" in case they were hidden by an earlier auto-draft (code 99) open.
+				elm.find('.wt_doc_create_confirm_popup_yes').show();
+				elm.find('#wt_dont_show_again_doc_create_div').show();
 				wf_popup.showPopup(elm);
 
 				jQuery('.wt_doc_create_confirm_popup_yes').on('click', function () {
@@ -848,6 +871,24 @@ function wf_Confirm_Notice_for_Manually_Creating_Invoicenumbers(given_url, a) {
 
 function wf_Confirm_Notice_for_Manually_Creating_Ubl_Invoicenumbers(given_url_ublinvoice,a)
 {
+	// Order has not been saved yet (auto-draft). Block print so no invoice number is consumed.
+	if (99 === a || "99" === a) {
+		var msg = wf_pklist_params.msgs.invoice_number_prompt_order_not_created;
+		var elm = jQuery('.wt_doc_create_confirm_popup_ublinvoice');
+		if (elm.length === 0) {
+			alert(msg);
+			return false;
+		}
+		elm.children().find('.message').html(msg);
+		elm.children().find('.wt_doc_create_confirm_popup_main_ublinvoice,.wt_doc_create_confirm_popup_ublinvoice_footer').show();
+		// Hide Generate button and "Do not show again" — only Cancel applies for unsaved orders.
+		elm.find('.wt_doc_create_confirm_popup_yes_ublinvoice').hide();
+		elm.find('#wt_dont_show_again_doc_create_div_ublinvoice').hide();
+		wf_popup.showPopup(elm);
+		elm.find('.wf_pklist_popup_body').css({ 'max-height': 'none', 'overflow': 'visible', 'min-height': '0' });
+		return false;
+	}
+
 	var url = '';
 	url = given_url_ublinvoice;
 	var is_this_print_button = (-1 !== url.indexOf('type=print_') && (-1 === url.indexOf('type=print_ubl')));
@@ -900,6 +941,9 @@ function wf_Confirm_Notice_for_Manually_Creating_Ubl_Invoicenumbers(given_url_ub
 				// admin - order edit page print triggers
 				elm.children().find('.message').html(invoice_prompt);
 				elm.children().find('.wt_doc_create_confirm_popup_main_ublinvoice,.wt_doc_create_confirm_popup_ublinvoice_footer').show();
+				// Restore Generate button + "Do not show again" in case they were hidden by an earlier auto-draft (code 99) open.
+				elm.find('.wt_doc_create_confirm_popup_yes_ublinvoice').show();
+				elm.find('#wt_dont_show_again_doc_create_div_ublinvoice').show();
 				wf_popup.showPopup(elm);
 
 				jQuery('.wt_doc_create_confirm_popup_yes_ublinvoice').on('click', function () {

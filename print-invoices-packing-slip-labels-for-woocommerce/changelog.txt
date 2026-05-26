@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 4.9.4 2026-04-13 =
+* [Add] - Slovak and Georgian language support.
+* [Fix] - Prevent redirection to help filters documentation link from invoice customizer tab when site language is Arabic
+* [Compatibility] - WordPress 7.0
+* [Compatibility] - WooCommerce 10.6.2
+
 = 4.9.3 2026-03-04 =
 * [Add] - Bulgarian language support.
 * [Fix] - Prevent mPDF crash when processing large HTML content.

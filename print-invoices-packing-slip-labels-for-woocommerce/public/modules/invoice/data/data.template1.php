@@ -208,7 +208,7 @@ body, html{margin:0px; padding:0px; font-family:"Helvetica Neue", Roboto, Arial,
                         <th class="wfte_product_table_head_quantity wfte_product_table_head_bg wfte_table_head_color wfte_text_center" col-type="quantity">__[Quantity]__</th>
                         <th class="wfte_product_table_head_price wfte_product_table_head_bg wfte_table_head_color" col-type="price">__[Price]__</th>
                         <th class="wfte_product_table_head_total_price wfte_product_table_head_bg wfte_table_head_color" col-type="total_price">__[Total price]__</th>
-                        <th class="wfte_product_table_head_tax wfte_product_table_head_bg wfte_table_head_color" col-type="-tax">__[Total Tax]__</th>
+                        <th class="wfte_product_table_head_tax wfte_product_table_head_bg wfte_table_head_color" col-type="tax">__[Total Tax]__</th>
                     </tr>
                 </thead>
                 <tbody class="wfte_product_table_body wfte_table_body_color">

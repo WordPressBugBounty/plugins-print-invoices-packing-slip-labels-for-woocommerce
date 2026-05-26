@@ -2278,7 +2278,7 @@ msgstr "Hankige juurdepääs rohkematele arvemallidele."
 
 #: admin/modules/customizer/views/customize.php:914
 msgid "This preview reflects your current settings from the General tab."
-msgstr ""
+msgstr "See eelvaade kajastab teie praeguseid sätteid vahekaardil Üldine."
 
 #: admin/modules/customizer/views/customize.php:923
 msgid "Update template"

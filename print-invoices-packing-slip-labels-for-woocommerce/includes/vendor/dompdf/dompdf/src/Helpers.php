@@ -579,7 +579,11 @@ class Helpers
     public static function record_warnings($errno, $errstr, $errfile, $errline)
     {
         // Not a warning or notice
-        if (!($errno & (E_WARNING | E_NOTICE | E_USER_NOTICE | E_USER_WARNING | E_STRICT | E_DEPRECATED | E_USER_DEPRECATED))) {
+        $levels = E_WARNING | E_NOTICE | E_USER_NOTICE | E_USER_WARNING | E_DEPRECATED | E_USER_DEPRECATED;
+        if (PHP_VERSION_ID < 80000) {
+            $levels |= 2048; // E_STRICT (deprecated in PHP 8.4+)
+        }
+        if (!($errno & $levels)) {
             throw new Exception($errstr . " $errno");
         }
 
@@ -602,7 +606,7 @@ class Helpers
      * @param string $encoding
      * @return int|false
      */
-    public static function uniord(string $c, string $encoding = null)
+    public static function uniord(string $c, ?string $encoding = null)
     {
         if (function_exists("mb_ord")) {
             if (PHP_VERSION_ID < 80000 && $encoding === null) {
@@ -678,7 +682,7 @@ class Helpers
      * @param string $encoding
      * @return string|false
      */
-    public static function unichr(int $c, string $encoding = null)
+    public static function unichr(int $c, ?string $encoding = null)
     {
         if (function_exists("mb_chr")) {
             if (PHP_VERSION_ID < 80000 && $encoding === null) {
@@ -1016,8 +1020,13 @@ class Helpers
                 if ($result !== false) {
                     $content = $result;
                 }
-                if (isset($http_response_header)) {
-                    $headers = $http_response_header;
+                if (function_exists('http_get_last_response_headers')) {
+                    $headers = http_get_last_response_headers();
+                } else {
+                    $local_vars = get_defined_vars();
+                    if (isset($local_vars['http_response_header'])) {
+                        $headers = $local_vars['http_response_header'];
+                    }
                 }
 
             } elseif ($can_use_curl && function_exists('curl_exec')) {

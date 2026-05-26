@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels ===
 Contributors: WebToffee
-Version: 4.9.4
+Version: 4.9.5
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
 Requires at least: 3.0.1
 Tested up to: 7.0
-Stable tag: 4.9.4
+Stable tag: 4.9.5
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -73,8 +73,8 @@ For international sales, many countries require invoices as part of their standa
 Beyond compliance, these documents enhance customer experience by adding a human touch and serving as an additional communication channel between you and your buyer.
 
 
-&#9989; Tested OK with WooCommerce 10.6.2
-&#9989; Tested OK up to PHP 8.2
+&#9989; Tested OK with WooCommerce 10.7.0
+&#9989; Tested OK up to PHP 8.4
 
 
 == Third Party Compatibility ==
@@ -296,19 +296,21 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 4.9.4 2026-04-13 =
-* [Add] - Slovak and Georgian language support.
-* [Fix] - Prevent redirection to help#filters documentation link from invoice customizer tab when site language is Arabic
-* [Compatibility] - WordPress 7.0
-* [Compatibility] - WooCommerce 10.6.2
+= 4.9.5 2026-05-26 =
+* [Add] - Option to include the "Email" field in the From Address section.
+* [Fix] - Vulnerability fix for Broken Access Control reported by Patchstack.
+* [Tweak] - Enable Total Tax column by default in the invoice product table.
+* [Compatibility] - WooCommerce 10.7.0
+* [Remove] - Dropped support for WooCommerce versions below 3.0.0.
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 4.9.4 =
-* [Add] - Slovak and Georgian language support.
-* [Fix] - Prevent redirection to help#filters documentation link from invoice customizer tab when site language is Arabic
-* [Compatibility] - WordPress 7.0
-* [Compatibility] - WooCommerce 10.6.2
+= 4.9.5 =
+* [Add] - Option to include the "Email" field in the From Address section.
+* [Fix] - Vulnerability fix for Broken Access Control reported by Patchstack.
+* [Tweak] - Enable Total Tax column by default in the invoice product table.
+* [Compatibility] - WooCommerce 10.7.0
+* [Remove] - Dropped support for WooCommerce versions below 3.0.0.

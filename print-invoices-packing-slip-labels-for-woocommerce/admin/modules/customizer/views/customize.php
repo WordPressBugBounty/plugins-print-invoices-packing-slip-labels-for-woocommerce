@@ -265,9 +265,11 @@ if (!defined('ABSPATH')) {
 		color: #4c535a;
 		text-align: center;
 		height: 32px;
-		line-height: 28px;
 		margin-left: -2px;
 		margin-top: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.wf_inptgrp .addonblock input[type="text"] {
@@ -276,9 +278,13 @@ if (!defined('ABSPATH')) {
 		box-shadow: none;
 		background: none;
 		outline: none;
-		height: 28px;
+		height: auto;
+		line-height: 1;
 		border: none;
-		width: 90%;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+		min-width: 0;
 	}
 
 	.wf_inptgrp .addonblock input[type="text"]:focus {
