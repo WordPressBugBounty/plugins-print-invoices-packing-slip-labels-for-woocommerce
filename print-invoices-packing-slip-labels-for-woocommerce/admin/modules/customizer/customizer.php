@@ -1214,9 +1214,7 @@ class Wf_Woocommerce_Packing_List_Customizer {
 				$name = $template_type . '_' . $order_ids[0];
 			}
 		}
-		$name       = apply_filters( 'wf_pklist_alter_pdf_file_name', $name, $template_type, $order_ids );
-		$hash_input = implode( '-', array_map( 'strval', $order_ids ) );
-		$name       = $name . '_' . substr( hash_hmac( 'sha256', $hash_input, wp_salt( 'auth' ) ), 0, 12 );
+		$name = apply_filters( 'wf_pklist_alter_pdf_file_name', $name, $template_type, $order_ids );
 		return sanitize_file_name( $name );
 	}
 	public function generate_template_pdf($html, $template_type, $name, $action)

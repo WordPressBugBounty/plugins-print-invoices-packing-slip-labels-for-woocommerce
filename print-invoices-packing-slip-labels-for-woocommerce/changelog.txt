@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 4.9.5 2026-05-26 =
+* [Add] - Option to include the "Email" field in the From Address section.
+* [Fix] - Vulnerability fix for Broken Access Control reported by Patchstack.
+* [Tweak] - Enable Total Tax column by default in the invoice product table.
+* [Compatibility] - WooCommerce 10.7.0
+* [Remove] - Dropped support for WooCommerce versions below 3.0.0.
+
 = 4.9.4 2026-04-13 =
 * [Add] - Slovak and Georgian language support.
 * [Fix] - Prevent redirection to help filters documentation link from invoice customizer tab when site language is Arabic
