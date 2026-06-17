@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.WP.EnqueuedResources,PluginCheck.CodeAnalysis.Offloading
 if (!defined('ABSPATH')) {
     exit;
 }
@@ -75,7 +76,8 @@ if (!$newsletter_banner_hidden) :
                 <?php 
                 // phpcs:ignore PluginCheck.CodeAnalysis.Offloading.OffloadedContent WordPress.WP.EnqueuedResources.NonEnqueuedScript @codingStandardsIgnoreStart
                 ?>
-                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='IS_BOARD';ftypes[7]='text';fnames[8]='IS_CONF';ftypes[8]='text';fnames[9]='IS_CONT';ftypes[9]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                <script type="text/javascript">/* Preserve WordPress's jQuery before Mailchimp's mc-validate.js loads its own bundled jQuery 1.9.0 and overwrites the global. */ window.wt_pklist_wp_jquery = window.jQuery; window.wt_pklist_wp_dollar = window.$;</script>
+                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='IS_BOARD';ftypes[7]='text';fnames[8]='IS_CONF';ftypes[8]='text';fnames[9]='IS_CONT';ftypes[9]='text';}(jQuery));var $mcj = jQuery; /* Restore WordPress's jQuery so admin scripts (color picker, jQuery UI, tipTip) keep working; $mcj retains Mailchimp's jQuery for form validation. */ if (window.wt_pklist_wp_jquery) { window.jQuery = window.wt_pklist_wp_jquery; window.$ = window.wt_pklist_wp_dollar; }</script>
                 <?php // phpcs:ignore PluginCheck.CodeAnalysis.Offloading.OffloadedContent WordPress.WP.EnqueuedResources.NonEnqueuedScript codingStandardsIgnoreEnd ?>
             </div>
         </div>

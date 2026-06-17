@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $arr = array(
 	'woocommerce_wf_add_customer_note_in_dispatchlabel' => __("Adds customer note in the dispatch label","print-invoices-packing-slip-labels-for-woocommerce"),
 	'woocommerce_wf_packinglist_footer_dl' => __("Adds footer in dispatch label","print-invoices-packing-slip-labels-for-woocommerce")

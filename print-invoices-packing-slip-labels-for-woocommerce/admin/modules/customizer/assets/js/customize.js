@@ -1168,20 +1168,34 @@ var pklist_customize = {};
 							prop = prop.substr(5);
 							/*var prop_val=elm.val()+elm.attr('data-unit'); */
 							var prop_val = elm.val().replace(/<\/?[^>]+(>|$)/g, "");
-							tgt_elm.attr(prop, prop_val);
-							code_tgt_elm.attr(prop, prop_val);
 
-							/*preview elm */
-							var prv_elm_class = elm.attr('data-preview_elm');
-							if (typeof prv_elm_class != 'undefined') {
-								if ("" !== prv_elm_class) {
-									$('.wfte_' + prv_elm_class).html(elm.val() + elm.attr('data-unit'));
+							if ("data-img-width" === prop || "data-img-height" === prop) /* product image size: store px value + live-resize preview image */ {
+								if ("" !== prop_val.toString().trim()) {
+									prop_val = parseFloat(prop_val) + 'px';
+								}
+								tgt_elm.attr(prop, prop_val);
+								code_tgt_elm.attr(prop, prop_val);
+								if ("th" === tgt_elm.prop('nodeName').toLowerCase()) {
+									var img_col_ind = tgt_elm.index() + 1;
+									var img_css_prop = ("data-img-width" === prop) ? 'width' : 'height';
+									tgt_elm.parents('table').find('td:nth-child(' + img_col_ind + ') img.wfte_product_image_thumb').css(img_css_prop, prop_val);
 								}
 							} else {
-								clearTimeout(pklist_customize.updt_frm_cde_vew_tmr);
-								this.updt_frm_cde_vew_tmr = setTimeout(function () {
-									pklist_customize.updateFromCodeView();
-								}, 1000);
+								tgt_elm.attr(prop, prop_val);
+								code_tgt_elm.attr(prop, prop_val);
+
+								/*preview elm */
+								var prv_elm_class = elm.attr('data-preview_elm');
+								if (typeof prv_elm_class != 'undefined') {
+									if ("" !== prv_elm_class) {
+										$('.wfte_' + prv_elm_class).html(elm.val() + elm.attr('data-unit'));
+									}
+								} else {
+									clearTimeout(pklist_customize.updt_frm_cde_vew_tmr);
+									this.updt_frm_cde_vew_tmr = setTimeout(function () {
+										pklist_customize.updateFromCodeView();
+									}, 1000);
+								}
 							}
 						} else {
 							if ("" !== elm.val().trim()) {

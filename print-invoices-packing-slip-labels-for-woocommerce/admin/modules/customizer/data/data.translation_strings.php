@@ -1,4 +1,8 @@
-<?php __('Invoice No:', 'print-invoices-packing-slip-labels-for-woocommerce');
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+__('Invoice No:', 'print-invoices-packing-slip-labels-for-woocommerce');
 __('Order Date:', 'print-invoices-packing-slip-labels-for-woocommerce');
 __('Dispatch Date:', 'print-invoices-packing-slip-labels-for-woocommerce');
 __('From Address:', 'print-invoices-packing-slip-labels-for-woocommerce');

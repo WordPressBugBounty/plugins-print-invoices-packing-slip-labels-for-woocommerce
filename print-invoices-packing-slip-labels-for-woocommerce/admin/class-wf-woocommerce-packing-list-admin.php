@@ -1,4 +1,9 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.WP.I18n
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * The admin-specific functionality of the plugin.
@@ -1383,7 +1388,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 				}
 			}
 			update_option( 'wt_pklist_common_modules', $wt_pklist_common_modules );
-			wp_redirect( $_SERVER['REQUEST_URI'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+			wp_safe_redirect( $_SERVER['REQUEST_URI'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 			exit();
 		}
 
@@ -1468,7 +1473,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 			}
 			update_option( 'wt_pklist_admin_modules', $wt_pklist_admin_modules );
 			update_option( 'wt_pklist_common_modules', $wt_pklist_common_modules );
-			wp_redirect( $_SERVER['REQUEST_URI'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+			wp_safe_redirect( $_SERVER['REQUEST_URI'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 			exit();
 		}
 
@@ -4362,7 +4367,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 
 			global $wpdb;
 			$table_name = $wpdb->prefix . Wf_Woocommerce_Packing_List::$template_data_tb;
-			$templates  = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name" ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+			$templates  = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name" ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 			foreach ( $templates as $temp ) {
 				$response['wfpklist_template_data'][] = array(
 					'template_name'    => $temp->template_name,
@@ -4432,17 +4437,17 @@ class Wf_Woocommerce_Packing_List_Admin {
 												global $wpdb;
 												$table_name = $wpdb->prefix . Wf_Woocommerce_Packing_List::$template_data_tb;
 												if ( 'override' === $template_import ) {
-													$wpdb->query( "TRUNCATE TABLE $table_name" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+													$wpdb->query( "TRUNCATE TABLE $table_name" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 												}
 												foreach ( $value as $row_key => $row_val ) {
-													$search_template_name = $wpdb->get_row( $wpdb->prepare( "SELECT `id_wfpklist_template_data` from $table_name WHERE `template_name` LIKE %s AND `template_type` LIKE %s", array( esc_sql( $row_val['template_name'] ), esc_sql( $row_val['template_type'] ) ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+													$search_template_name = $wpdb->get_row( $wpdb->prepare( "SELECT `id_wfpklist_template_data` from $table_name WHERE `template_name` LIKE %s AND `template_type` LIKE %s", array( esc_sql( $row_val['template_name'] ), esc_sql( $row_val['template_type'] ) ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 													if ( ! $search_template_name ) {
 														$template_name = $row_val['template_name'];
 													} else {
 														$template_name = $row_val['template_name'] . '_' . time();
 													}
 
-													$search_is_active = $wpdb->get_row( $wpdb->prepare( "SELECT `id_wfpklist_template_data` from $table_name WHERE `is_active` = %d AND `template_type` LIKE %s", array( esc_sql( $row_val['is_active'] ), esc_sql( $row_val['template_type'] ) ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+													$search_is_active = $wpdb->get_row( $wpdb->prepare( "SELECT `id_wfpklist_template_data` from $table_name WHERE `is_active` = %d AND `template_type` LIKE %s", array( esc_sql( $row_val['is_active'] ), esc_sql( $row_val['template_type'] ) ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 													$is_active        = ( ! $search_is_active ) ? $row_val['is_active'] : 0;
 													$insert_data      = array(
 														'template_name' => $template_name,
@@ -4539,7 +4544,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 				if ( ! isset( $_POST['dont_reset_template'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 					global $wpdb;
 					$table_name          = $wpdb->prefix . Wf_Woocommerce_Packing_List::$template_data_tb;
-					$delete_the_template = $wpdb->query( "TRUNCATE TABLE $table_name" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					$delete_the_template = $wpdb->query( "TRUNCATE TABLE $table_name" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter
 				} else {
 					$delete_the_template = 0;
 					update_option( 'wf_pklist_templates_migrated', 1 );

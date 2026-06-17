@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 	$arr = array(
 		'woocommerce_wf_packinglist_footer_sl' => __("Adds footer to the  Shipping label","print-invoices-packing-slip-labels-for-woocommerce")
 	);

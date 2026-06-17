@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $arr = array(
 	'woocommerce_wf_attach_image_packinglist' => __('Adds product image to the line items in the product table','print-invoices-packing-slip-labels-for-woocommerce'),
 	'woocommerce_wf_attach_sku_packinglist' => __('Adds product SKU to the line items in the product table','print-invoices-packing-slip-labels-for-woocommerce'),

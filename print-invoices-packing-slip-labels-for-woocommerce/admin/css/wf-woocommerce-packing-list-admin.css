@@ -2152,7 +2152,7 @@ input.woocommerce_wf_custom_radio_style[type="radio"]::after {
   );
 }
 
-.wt_newsletter_subscription_box #mc_embed_signup input[type=checkbox] {
+.wt_newsletter_subscription_box #mc_embed_signup input[type=checkbox]:not(:checked) {
   background-color: #FFFFFF;
 }
 

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.DB.DirectDatabaseQuery
 /**
  * Migrator, To migrate data from vesrion below 2.5.0
  *

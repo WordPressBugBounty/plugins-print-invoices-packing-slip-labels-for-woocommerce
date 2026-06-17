@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if(!class_exists('wf_order') && class_exists('WC_Order')){
 
 	class wf_order extends WC_Order{

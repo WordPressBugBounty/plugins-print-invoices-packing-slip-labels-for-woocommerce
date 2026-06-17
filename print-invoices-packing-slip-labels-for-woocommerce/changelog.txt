@@ -1,5 +1,14 @@
 == Changelog ==
 
+= 4.9.7 2026-06-17 =
+* [Add] - Added settings to alter product image width/height in invoice document.
+* [Fix] - Fixed PHP warning: Call to a member function get_content_box() on null.
+* [Compatibility] - Tested OK with Plugin Check plugin v1.9.0
+
+= 4.9.6 2026-05-29 =
+* [Fix] - Fix PDF filename suffix issue in generated invoices.
+* [Compatibility] - WooCommerce 10.8.1
+
 = 4.9.5 2026-05-26 =
 * [Add] - Option to include the "Email" field in the From Address section.
 * [Fix] - Vulnerability fix for Broken Access Control reported by Patchstack.

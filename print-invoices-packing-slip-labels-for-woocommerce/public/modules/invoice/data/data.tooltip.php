@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $arr=array(
 	"woocommerce_wf_enable_invoice" => __("Admins and customers both can leverage this feature wherever applicable. Disabling will remove all the provisions. Yet, the invoices are customizable.","print-invoices-packing-slip-labels-for-woocommerce"),
 	"woocommerce_wf_orderdate_as_invoicedate" => __("The date is displayed on the invoice. It can be either the order creation date or the invoiced date.","print-invoices-packing-slip-labels-for-woocommerce"),

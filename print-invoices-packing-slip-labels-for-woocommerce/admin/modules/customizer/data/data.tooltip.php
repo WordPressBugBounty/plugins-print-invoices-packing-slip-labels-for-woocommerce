@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $arr=array(
 	'create_new_template'=>__('Click to view predefined templates.','print-invoices-packing-slip-labels-for-woocommerce'),
 	'dropdown_menu'=>__('Create a new template or edit an existing template.','print-invoices-packing-slip-labels-for-woocommerce'),

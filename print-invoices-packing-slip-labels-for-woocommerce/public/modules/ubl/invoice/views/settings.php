@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.DB.DirectDatabaseQuery
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }

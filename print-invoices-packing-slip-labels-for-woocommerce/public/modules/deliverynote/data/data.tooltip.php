@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $arr = array(
 	'woocommerce_wf_attach_image_deliverynote' => __("Adds product image to the line items in the product table","print-invoices-packing-slip-labels-for-woocommerce"),
 	'woocommerce_wf_add_customer_note_in_deliverynote' => __("Adds customer note to the delivery note","print-invoices-packing-slip-labels-for-woocommerce"),

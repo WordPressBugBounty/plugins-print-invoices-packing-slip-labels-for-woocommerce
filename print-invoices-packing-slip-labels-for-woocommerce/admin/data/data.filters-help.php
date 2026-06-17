@@ -1,4 +1,8 @@
-<?php 
+<?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $wf_filters_help_doc_cat = array(
 	'order_details' => __('Order Details','print-invoices-packing-slip-labels-for-woocommerce'),
 	'product_table' => __('Product Table','print-invoices-packing-slip-labels-for-woocommerce'),

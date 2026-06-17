@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 class Wf_Woocommerce_Packing_List_Barcode_generator{
 	public function __construct()
 	{

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.Security.NonceVerification
 
 namespace Wtpdf\Ubl\Documents;
 

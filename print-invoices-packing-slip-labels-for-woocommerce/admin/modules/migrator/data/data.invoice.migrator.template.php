@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
 <div class="wfte_rtl_main wfte_invoice-main">
   <div class="wfte_invoice-header clearfix">
       <div class="wfte_invoice-header_top clearfix">

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -319,9 +320,9 @@ if ( ! class_exists( 'Wt_Pklist_Common' ) ) {
 				if ( true === $delete_from_order_table ) {
 					global $wpdb;
 					$table_name = $wpdb->prefix . 'wc_orders_meta';
-					if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name ) { // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name ) { // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter
 						$del_order_meta_query = "DELETE FROM $table_name WHERE `meta_key` IN('" . esc_sql( $meta_key ) . "')";
-						$wpdb->query( $del_order_meta_query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+						$wpdb->query( $del_order_meta_query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 					}
 				}
 			}
@@ -430,7 +431,7 @@ if ( ! class_exists( 'Wt_Pklist_Common' ) ) {
 		public static function meta_key_exists_in_wc_order_meta( $order_id, $meta_key ) {
 			global $wpdb;
 			$table_name = $wpdb->prefix . 'wc_orders_meta';
-			$search     = $wpdb->get_row( $wpdb->prepare( "SELECT `id` from $table_name WHERE `meta_key` IN (%s) AND `order_id` = %d", array( $meta_key, $order_id ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+			$search     = $wpdb->get_row( $wpdb->prepare( "SELECT `id` from $table_name WHERE `meta_key` IN (%s) AND `order_id` = %d", array( $meta_key, $order_id ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 			if ( ! $search ) {
 				return false;
 			} else {
@@ -441,7 +442,7 @@ if ( ! class_exists( 'Wt_Pklist_Common' ) ) {
 		public static function add_meta_to_wc_order_table( $order, $meta_key, $value ) {
 			global $wpdb;
 			$table_name = $wpdb->prefix . 'wc_orders_meta';
-			if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name ) { // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+			if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name ) { // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,PluginCheck.Security.DirectDB.UnescapedDBParameter
 				$order_id = self::get_order_id( $order );
 				$value    = maybe_serialize( $value );
 

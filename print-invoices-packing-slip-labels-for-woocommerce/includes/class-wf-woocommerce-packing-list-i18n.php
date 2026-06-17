@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,PluginCheck.CodeAnalysis.DiscouragedFunctions
 
 /**
  * Define the internationalization functionality

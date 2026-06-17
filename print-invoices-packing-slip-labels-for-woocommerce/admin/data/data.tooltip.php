@@ -1,4 +1,8 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 $arr=array(
 	"woocommerce_wf_packinglist_companyname" => __("Key in your company name.","print-invoices-packing-slip-labels-for-woocommerce"),
 	"woocommerce_wf_state_code_disable" => __("When enabled, replaces state code with state name in the from, return, billing and shipping addresses","print-invoices-packing-slip-labels-for-woocommerce"),

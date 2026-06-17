@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.Security.NonceVerification
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -118,8 +119,8 @@ class Wf_Woocommerce_Packing_List {
 			$this->version      = WF_PKLIST_VERSION;
 			self::$base_version = WF_PKLIST_VERSION;
 		} else {
-			$this->version      = '4.9.6';
-			self::$base_version = '4.9.6';
+			$this->version      = '4.9.7';
+			self::$base_version = '4.9.7';
 		}
 		if ( defined( 'WF_PKLIST_PLUGIN_NAME' ) ) {
 			$this->plugin_name = WF_PKLIST_PLUGIN_NAME;

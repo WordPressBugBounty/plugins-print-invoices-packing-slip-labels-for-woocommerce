@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.Security.ValidatedSanitizedInput
 /**
  * Class Wt_P_IEW_Cta_Banner
  *

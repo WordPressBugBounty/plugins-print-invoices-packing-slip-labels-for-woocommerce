@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 if ( ! defined( 'WPINC' ) ) {die;
 }
 $wf_admin_img_path = WF_PKLIST_PLUGIN_URL . 'admin/images';

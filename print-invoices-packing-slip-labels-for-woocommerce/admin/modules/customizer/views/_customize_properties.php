@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 if (!defined('ABSPATH')) {
     exit;
 }
@@ -480,6 +481,30 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'css_prop'=>'text-align',
 				'trgt_elm'=>'product_table_head_image',
 				'event_class'=>'wf_cst_change',
+				'width'=>'44%',
+				'float'=>'right',
+			),
+			array(
+				'label'=>'&nbsp;',
+				'type'=>'spacer',
+				'width'=>'10%',
+			),
+			array(
+				'label'=>__('Image width','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'text_inputgrp',
+				'css_prop'=>'attr-data-img-width',
+				'trgt_elm'=>'product_table_head_image',
+				'unit'=>'px',
+				'default_data'=>'50px',
+				'width'=>'44%',
+			),
+			array(
+				'label'=>__('Image height','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'text_inputgrp',
+				'css_prop'=>'attr-data-img-height',
+				'trgt_elm'=>'product_table_head_image',
+				'unit'=>'px',
+				'default_data'=>'50px',
 				'width'=>'44%',
 				'float'=>'right',
 			),

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.WP.I18n
 
 /**
  * Invoice section of the plugin

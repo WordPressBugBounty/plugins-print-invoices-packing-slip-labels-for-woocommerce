@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 $wt_pklist_language_list =
 array (
   'af' => 

@@ -186,6 +186,10 @@ class CPDF implements Canvas
         $this->_pdf->addInfo("CreationDate", "D:$time");
         $this->_pdf->addInfo("ModDate", "D:$time");
 
+        if ($this->_dompdf->getOptions()->isPdfAEnabled()) {
+            $this->_pdf->enablePdfACompliance();
+        }
+
         $this->_width = $size[2] - $size[0];
         $this->_height = $size[3] - $size[1];
 
@@ -616,7 +620,9 @@ class CPDF implements Canvas
                 $filename = "$tmp_name.png";
 
                 imagepng($im, $filename);
-                imagedestroy($im);
+                if (PHP_MAJOR_VERSION < 8) {
+                    imagedestroy($im);
+                }
             } else {
                 $filename = null;
             }
@@ -689,8 +695,8 @@ class CPDF implements Canvas
             $pdf->addForm();
         }
 
-        $ft = \Dompdf\Cpdf::ACROFORM_FIELD_CHOICE;
-        $ff = \Dompdf\Cpdf::ACROFORM_FIELD_CHOICE_COMBO;
+        $ft = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_CHOICE;
+        $ff = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_CHOICE_COMBO;
 
         $id = $pdf->addFormField($ft, rand(), $x, $this->y($y) - $h, $x + $w, $this->y($y), $ff, $size, $color);
         $pdf->setFormFieldOpt($id, $opts);
@@ -706,8 +712,8 @@ class CPDF implements Canvas
             $pdf->addForm();
         }
 
-        $ft = \Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
-        $ff = \Dompdf\Cpdf::ACROFORM_FIELD_TEXT_MULTILINE;
+        $ft = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
+        $ff = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_TEXT_MULTILINE;
 
         $pdf->addFormField($ft, rand(), $x, $this->y($y) - $h, $x + $w, $this->y($y), $ff, $size, $color);
     }
@@ -722,19 +728,19 @@ class CPDF implements Canvas
             $pdf->addForm();
         }
 
-        $ft = \Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
+        $ft = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
         $ff = 0;
 
         switch ($type) {
             case 'text':
-                $ft = \Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
+                $ft = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
                 break;
             case 'password':
-                $ft = \Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
-                $ff = \Dompdf\Cpdf::ACROFORM_FIELD_TEXT_PASSWORD;
+                $ft = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_TEXT;
+                $ff = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_TEXT_PASSWORD;
                 break;
             case 'submit':
-                $ft = \Dompdf\Cpdf::ACROFORM_FIELD_BUTTON;
+                $ft = \Wtpklistpdf\Dompdf\Cpdf::ACROFORM_FIELD_BUTTON;
                 break;
         }
 
@@ -967,7 +973,6 @@ class CPDF implements Canvas
         $debug = !$options['compress'];
         $tmp = ltrim($this->_pdf->output($debug));
 
-        header("Cache-Control: private");
         header("Content-Type: application/pdf");
         header("Content-Length: " . mb_strlen($tmp, "8bit"));
 

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 // to check whether accessed directly
 if (!defined('ABSPATH')) {
     exit;

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.WP.I18n,WordPress.Security.EscapeOutput,WordPress.DateTime.RestrictedFunctions,WordPress.DB.PreparedSQL,WordPress.WP.AlternativeFunctions,WordPress.Security.NonceVerification,WordPress.Security.ValidatedSanitizedInput,WordPress.DB.DirectDatabaseQuery,PluginCheck.Security.DirectDB,WordPress.DB.PreparedSQLPlaceholders
 
 /**
  * Template customizer

@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals,WordPress.WP.I18n,WordPress.DateTime.RestrictedFunctions
 /**
  * Necessary functions for customizer module
  *
@@ -523,6 +524,13 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 							$column_list_options_value[ $col_key ]['img-width'] = $img_style_match[1];
 						}
 
+						// check image height
+						$img_height_match = array();
+						$is_img_height    = preg_match( '/data-img-height="(.*?)"/', $th_single_html, $img_height_match );
+						if ( $is_img_height ) {
+							$column_list_options_value[ $col_key ]['img-height'] = $img_height_match[1];
+						}
+
 						$alter_col_key                               = ( '-' === $col_key[0] ) ? substr( $col_key, 1 ) : '-' . $col_key;
 						$column_list_options_value[ $alter_col_key ] = $column_list_options_value[ $col_key ];
 					}
@@ -799,18 +807,42 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 
 		$style = '';
 		if ( ! empty( $img_style ) && is_array( $img_style ) ) {
-			if ( isset( $img_style['img-width'] ) && '' !== trim( $img_style['img-width'] ) ) {
-				$style = 'width:' . $img_style['img-width'] . ';';
-			} else {
-				$style = 'max-width:30px; max-height:30px;';
+			$img_width  = isset( $img_style['img-width'] ) ? trim( $img_style['img-width'] ) : '';
+			$img_height = isset( $img_style['img-height'] ) ? trim( $img_style['img-height'] ) : '';
+			if ( '' !== $img_width ) {
+				$style .= 'width:' . self::get_image_dimension_css( $img_width ) . ';';
 			}
-		} else {
+			if ( '' !== $img_height ) {
+				$style .= 'height:' . self::get_image_dimension_css( $img_height ) . ';';
+			}
+		}
+		if ( '' === $style ) {
 			$style = 'max-width:30px; max-height:30px;';
 		}
 		$img_url = apply_filters( 'wt_pklist_alter_product_image_url', $img_url, $product_id, $variation_id, $parent_id );
 		$style   = apply_filters( 'wt_pklist_alter_product_image_style', $style, $product_id, $variation_id, $parent_id );
 
 		return '<img src="' . esc_attr( $img_url ) . '" style="border-radius:25%;' . esc_attr( $style ) . '" class="wfte_product_image_thumb"/>';
+	}
+
+	/**
+	 * Normalize a product image dimension to a CSS-safe value.
+	 *
+	 * The customizer stores the raw numeric value (e.g. "50") via the attr-*
+	 * preview handler, while legacy templates already include a unit
+	 * (e.g. "50px"). Append "px" only when the value is purely numeric so both
+	 * forms render valid CSS.
+	 *
+	 * @since 4.9.7
+	 * @param string $value Raw dimension value from the template attribute.
+	 * @return string CSS dimension value.
+	 */
+	private static function get_image_dimension_css( $value ) {
+		$value = trim( $value );
+		if ( is_numeric( $value ) ) {
+			return $value . 'px';
+		}
+		return $value;
 	}
 
 

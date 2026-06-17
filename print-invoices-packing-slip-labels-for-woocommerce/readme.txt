@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels ===
 Contributors: WebToffee
-Version: 4.9.6
+Version: 4.9.7
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
 Requires at least: 3.0.1
 Tested up to: 7.0
-Stable tag: 4.9.6
+Stable tag: 4.9.7
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,17 +13,20 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Auto-generate and attach WooCommerce PDF invoices and packing slips to order emails with customizable templates & bulk print options.
 
 == Description ==
-With the WebToffee WooCommerce PDF Invoices and Packing Slips plugin, your customers receive PDF invoices and packing slips automatically attached to their order confirmation emails. The plugin includes a customizable invoice template to get you started, and offers flexibility to edit or create your own WooCommerce custom invoice templates. You can easily download or print WooCommerce invoice PDFs, packing slips and shipping labels right from your WooCommerce order admin. 
+
+With the WebToffee WooCommerce PDF Invoices and Packing Slips plugin, your customers receive PDF invoices and packing slips automatically attached to their order confirmation emails. Get started with our pre-designed, customizable invoice template, and enjoy the flexibility to edit or create your own unique templates tailored to your brand and business needs.
+
+You can easily download or print WooCommerce invoice PDFs, packing slips and shipping labels right from your WooCommerce order admin. 
 
 Additionally, the WooCommerce invoice PDF and print packing slip plugin enables you to generate UBL and XML invoices, helping streamline your order fulfillment process.
 
 == PDF Invoices & Packing Slips for WooCommerce: An Overview ==
 
-WooCommerce Print PDF Invoices and Packing Slips Plugin helps generate PDF invoices, packing lists / packing slips, delivery notes, dispatch labels and shipping labels from the WooCommerce orders page. WooCommerce, by default, doesn't allow you to print any of these documents from your orders page. 
+WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels is a WooCommerce invoice plugin that helps store owners automate invoicing and order document generation.
 
-Beyond invoices and packing slips, the plugin makes it easy to create and print WooCommerce delivery notes that include essential details such as order items, customer information and shipping addresses. These documents help ensure accurate and smooth order handovers.
+WooCommerce, by default, doesn’t let you print invoices, packing slips, delivery notes, dispatch labels, or shipping labels from the Orders page. This plugin lets you create, print, download, and automatically email WooCommerce PDF invoices, packing slips, delivery notes, dispatch labels, and shipping labels directly from your WooCommerce Orders page.
 
-This free WooCommerce invoice plugin helps streamline your WordPress shipping and order fulfillment processes.
+You can bulk print WooCommerce invoices, customize invoice templates, set custom invoice numbers, generate UBL/XML invoices, add tax-ready invoice details, and let customers download invoices from the My Account page. Delivery notes can include order items, customer information, shipping addresses, and other details needed for smooth order fulfillment.
 
 === Why WebToffee's WooCommerce PDF Invoices Plugin is the Best Alternative to Free Invoice Generators? ===
 
@@ -32,7 +35,7 @@ Free invoice generators <strong>lack PDF support, branding options, and tax comp
 WebToffee’s plugin <strong>automates professional WooCommerce PDF invoice creation, supports UBL and XML formats, and includes packing slips, shipping labels, and delivery notes for complete order documentation.</strong> From generating and attaching to printing WooCommerce invoices, every step can be automated in just a few clicks with WebToffee’s powerful WooCommerce invoice generator.
 
 
-== Features of WooCommerce PDF Invoices & Packing Slips Plugin ==
+== Key Features of WooCommerce PDF Invoices & Packing Slips Plugin ==
 
 * <strong>Supported documents</strong>: Creates and prints following PDF documents from WooCommerce order page.
 &#8226; WooCommerce order invoices
@@ -43,7 +46,7 @@ WebToffee’s plugin <strong>automates professional WooCommerce PDF invoice crea
 &#8226; WooCommerce Credit Notes (Pro)
 * <strong>Download PDF invoice and packing slips</strong>: Easily download PDF invoices and packing slips from your WooCommerce order admin page. 
 * <strong>Generate UBL Invoices</strong>: Generate and print UBL and XML invoices for WooCommerce orders.
-* <strong>Customize free PDf invoice templates</strong>: Personalize your invoice template by adding your store logo, store name, and VAT, etc. Once configured, these details will automatically appear on all future WooCommerce invoice PDFs.
+* <strong>Customize free PDF invoice templates</strong>: Personalize your invoice template by adding your store logo, store name, and VAT, etc. Once configured, these details will automatically appear on all future WooCommerce invoice PDFs.
 * <strong>Customize and print WooCommerce shipping labels</strong>: Create and customize WooCommerce shipping labels with barcodes, tracking numbers, and more. 
 * <strong>Option to bulk print</strong>: Bulk download and print WooCommerce invoices and labels from orders page.
 * <strong>Send printable invoice PDF by email</strong>: Enable stores to send printable PDF invoices by email.
@@ -141,7 +144,7 @@ You only have to install the plugin that offers the documents that are required 
 <li> Customize the display of bundled product</li>
 <li> Integrate VAT or any other tax details like GST, ABN to invoices and other documents</li>
 <li> Auto-reset invoice number every year</li>
-<li> PrintNode Integration for remote printing invoices and packing slips</li>
+<li> PrintNode Integration for remote printing WooCommerce PDF invoices and packing slips</li>
 <li> Add custom fields to WooCommerce documents</li>
 </ul>
 
@@ -296,15 +299,17 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 4.9.6 2026-05-29 =
-* [Fix] - Fix PDF filename suffix issue in generated invoices.
-* [Compatibility] - WooCommerce 10.8.1
+= 4.9.7 2026-06-17 =
+* [Add] - Added settings to alter product image width/height in invoice document.
+* [Fix] - Fixed PHP warning: Call to a member function get_content_box() on null.
+* [Compatibility] - Tested OK with Plugin Check plugin v1.9.0
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 4.9.6 =
-* [Fix] - Fix PDF filename suffix issue in generated invoices.
-* [Compatibility] - WooCommerce 10.8.1
+= 4.9.7 =
+* [Add] - Added settings to alter product image width/height in invoice document.
+* [Fix] - Fixed PHP warning: Call to a member function get_content_box() on null.
+* [Compatibility] - Tested OK with Plugin Check plugin v1.9.0
