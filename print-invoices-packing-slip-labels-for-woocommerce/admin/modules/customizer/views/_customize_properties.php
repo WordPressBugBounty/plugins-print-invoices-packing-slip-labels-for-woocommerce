@@ -623,6 +623,38 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'width'=>'44%',
 				'float'=>'right',
 			),
+			// expose the tax-items column controls in the free version, placed
+			// directly above the Total Tax column. "Tax items value" offers only "Amount"
+			// here; the additional value modes stay a pro-only feature.
+			array(
+				'label'=>'&nbsp;',
+				'type'=>'checkbox',
+				'trgt_elm'=>'product_table_head_tax_items',
+				'event_class'=>'wf_cst_toggler',
+				'width'=>'10%',
+			),
+			array(
+				'label'=>__('Tax items value','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'select',
+				'select_options'=>array(
+					'amount'=>__('Amount','print-invoices-packing-slip-labels-for-woocommerce'),
+				),
+				'css_prop'=>'attr-data-ind-tax-display-option',
+				'trgt_elm'=>'product_table_head_tax_items',
+				'event_class'=>'wf_cst_change',
+				'default_data'=>'amount',
+				'width'=>'44%',
+			),
+			array(
+				'label'=>__('Tax items text align','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'select',
+				'select_options'=>Wf_Woocommerce_Packing_List_Customizer::get_customizer_presets('text-align'),
+				'css_prop'=>'text-align',
+				'trgt_elm'=>'product_table_head_tax_items',
+				'event_class'=>'wf_cst_change',
+				'width'=>'44%',
+				'float'=>'right',
+			),
 			array(
 				'label'=>'&nbsp;',
 				'type'=>'checkbox',
@@ -693,6 +725,16 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'float'=>'right',
 			),
 		);
+		// When the pro invoice addon is active it injects its own tax-items controls for
+		// the product table; drop the ones added here so the fields are not duplicated.
+		if ( is_plugin_active( 'wt-woocommerce-invoice-addon/wt-woocommerce-invoice-addon.php' ) ) {
+			foreach ( $fields as $field_key => $field_val ) {
+				if ( isset( $field_val['trgt_elm'] ) && 'product_table_head_tax_items' === $field_val['trgt_elm'] ) {
+					unset( $fields[ $field_key ] );
+				}
+			}
+			$fields = array_values( $fields );
+		}
 	}elseif("signature" === $type)
 	{
 		$fields=array(

@@ -211,6 +211,7 @@ table.wfte_payment_summary_table th, table.wfte_payment_summary_table td{ line-h
                         <th class="wfte_product_table_head_product wfte_product_table_head_bg wfte_table_head_color" col-type="product">__[Product]__</th>
                         <th class="wfte_product_table_head_quantity wfte_product_table_head_bg wfte_table_head_color wfte_text_center" col-type="quantity">__[Quantity]__</th>
                         <th class="wfte_product_table_head_price wfte_product_table_head_bg wfte_table_head_color" col-type="price">__[Unit price]__</th>
+                        <th class="wfte_product_table_head_tax_items wfte_product_table_head_bg wfte_table_head_color" col-type="tax_items" data-ind-tax-display-option="amount">__[Tax]__</th>
                         <th class="wfte_product_table_head_tax wfte_product_table_head_bg wfte_table_head_color" col-type="tax">__[Total Tax]__</th>
                         <th class="wfte_product_table_head_total_price wfte_product_table_head_bg wfte_table_head_color wfte_text_right" col-type="total_price">__[Total price]__</th>
                     </tr>

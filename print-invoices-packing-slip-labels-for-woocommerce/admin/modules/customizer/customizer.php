@@ -493,8 +493,16 @@ class Wf_Woocommerce_Packing_List_Customizer {
 		return plugin_dir_path( __FILE__ ) . 'data/data.template_footer.php';
 	}
 	protected function load_template_header_footer( $path, $template_type, $template, $page_title = '' ) {
-		include $path;
-		$template_path = plugin_dir_path( $path );
+		/*
+		 * $path can be `false`/empty when get_default_template_path() finds no template file
+		 * (e.g. a pro/custom `wt_pklist_default_template_path_pro` path that does not exist).
+		 * On PHP 8+ `include ''`/`include false` throws a fatal ValueError ("Path cannot be empty"),
+		 * so guard the include and fall back to the default header/footer. [WPPS-530]
+		 */
+		if ( ! empty( $path ) && file_exists( $path ) ) {
+			include $path;
+		}
+		$template_path = ! empty( $path ) ? plugin_dir_path( $path ) : '';
 		$file          = '';
 		$html          = '';
 		if ( 'header' === $template ) {
@@ -1626,7 +1634,7 @@ class Wf_Woocommerce_Packing_List_Customizer {
 		);
 
 		$template_check_arr = array(
-			'invoice' => 'wfte_product_table_head_tax_items',
+			'invoice' => 'wfte_product_table_tax_item_column_label',
 			'packinglist' => 'wfte_package_no',
 			'deliverynote' => 'wfte_package_no',
 			'dispatchlabel' => 'wfte_product_table_head_tax_items',
@@ -1951,10 +1959,37 @@ class Wf_Woocommerce_Packing_List_Customizer {
 			 */
 			$show_hidden_meta = false;
 			$show_hidden_meta = apply_filters('wt_pklist_show_hidden_order_item_meta', $show_hidden_meta, $order_item, $order, $template_type);
+
+			/**
+			 *	@since 4.9.8 Dynamically hide internal/technical order-item meta keys (e.g. keys added by third-party
+			 *	product addon plugins) from document output. Seeded from WooCommerce's own hidden order-item meta
+			 *	registry, which some addons populate, so no key names are hardcoded here. Store owners and
+			 *	integrations can hide further dynamic keys via the `wt_pklist_hidden_order_item_meta_keys` filter.
+			 */
+			$hidden_meta_keys = apply_filters('woocommerce_hidden_order_itemmeta', array());
+			$hidden_meta_keys = apply_filters('wt_pklist_hidden_order_item_meta_keys', $hidden_meta_keys, $order_item, $order, $template_type);
+			$hidden_meta_keys = is_array($hidden_meta_keys) ? $hidden_meta_keys : array();
+
 			$order_line_metas = $order_item->get_formatted_meta_data();
 			foreach ($order_item->get_meta_data() as $meta) {
 				/* show/hide hidden meta */
 				if (!$show_hidden_meta && "_" === substr($meta->key, 0, 1)) {
+					continue;
+					}
+
+				/**
+				 *	@since 4.9.8 Only render meta that WooCommerce itself treats as displayable.
+				 *	get_formatted_meta_data() drops empty/non-scalar values and lets addon plugins strip
+				 *	their internal keys via the `woocommerce_order_item_get_formatted_meta_data` filter
+				 *	(e.g. Smart Coupons free-product/coupon keys). Deferring to it hides such dynamic
+				 *	technical keys without hardcoding any key name, matching the WooCommerce order screen.
+				 */
+				if (!$show_hidden_meta && (!is_array($order_line_metas) || !isset($order_line_metas[$meta->id]))) {
+					continue;
+					}
+
+				/* skip internal/technical meta keys registered as hidden (addon-driven, dynamic) */
+				if (!$show_hidden_meta && in_array($meta->key, $hidden_meta_keys, true)) {
 					continue;
 					}
 

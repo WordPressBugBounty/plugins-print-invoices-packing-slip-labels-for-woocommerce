@@ -187,17 +187,17 @@ class Wf_Woocommerce_Packing_List_Uninstall_Feedback
         <style type="text/css">
             .wfinvoice-modal { position: fixed; z-index: 99999; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.5); display: none; }
             .wfinvoice-modal.modal-active {display: block;}
-            .wfinvoice-modal-wrap { width: 50%; position: relative;  margin: 10% auto; background: #fff; }
-            .wfinvoice-modal-header { border-bottom: 1px solid #eee; padding: 8px 20px; }
+            .wfinvoice-modal-wrap { width: 50%; position: relative;  margin: 5vh auto; background: #fff; max-height: 90vh; display: flex; flex-direction: column; }
+            .wfinvoice-modal-header { border-bottom: 1px solid #eee; padding: 8px 20px; flex: 0 0 auto; }
             .wfinvoice-modal-header h3 { line-height: 150%; margin: 0; }
-            .wfinvoice-modal-body {padding: 5px 20px 5px 20px;}
+            .wfinvoice-modal-body {padding: 5px 20px 5px 20px; flex: 1 1 auto; overflow-y: auto;}
             .wfinvoice-modal-body .input-text,.wfinvoice-modal-body textarea {width:75%;}
             .wfinvoice-modal-body .input-text::placeholder,.wfinvoice-modal-body textarea::placeholder{ font-size:12px; }
             .wfinvoice-modal-body .reason-input { margin-top: 5px; margin-left: 20px; }
             .wfinvoice-modal-body label:has(#wt_contact_me_checkbox) { padding-top: 8px; display: block; width: 100%; margin-bottom: 0; }
             .wfinvoice-modal-body label[for="wt_delete_all_settings"],
             .wfinvoice-modal-body label:has(#wt_delete_all_settings) { margin-top: 8px; }
-            .wfinvoice-modal-footer { border-top: 1px solid #eee; padding: 12px 20px; text-align: left; }
+            .wfinvoice-modal-footer { border-top: 1px solid #eee; padding: 12px 20px; text-align: left; flex: 0 0 auto; }
             .wt_pklist_policy_infobox{font-style:italic; text-align:left; font-size:12px; color:#aaa; line-height:14px; margin-top:15px;}
             .wt_pklist_policy_infobox a{ font-size:11px; color:#4b9cc3; text-decoration-color: #99c3d7; }
             .sub_reasons{ display:none; margin-left:15px; margin-top:10px; }

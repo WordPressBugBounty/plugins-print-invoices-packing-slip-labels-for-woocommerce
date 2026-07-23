@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels ===
 Contributors: WebToffee
-Version: 4.9.7
+Version: 4.9.8
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
 Requires at least: 3.0.1
 Tested up to: 7.0
-Stable tag: 4.9.7
+Stable tag: 4.9.8
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -59,7 +59,7 @@ WebToffee’s plugin <strong>automates professional WooCommerce PDF invoice crea
 * <strong>Support for RTL and Unicode languages</strong>: A free <strong><a href="https://wordpress.org/plugins/mpdf-addon-for-pdf-invoices/" target="_blank">add-on</a></strong> with the plugin will provide full compatibility with any RTL or unicode languages like Hebrew, Arabic etc. The add-on is equipped to handle almost 12 RTL languages including most of the Asian languages.
 * <strong>Disable invoices for free orders </strong>: Option to disable generating WooCommerce PDF invoices for free orders.
 * <strong>Display/hide free line items</strong>: Option to display/hide free line items in the invoice PDFs.
-* <strong>Show tax info easily in documents</strong>: Our plugin provides inbuilt support for all the major tax related plugins by populating pre-defined meta keys such _billing_vat, _billing_vat_number, _billing_eu_vat_number. As a result, it will be easier for you to display tax on invoices and other documents.
+* <strong>Show tax info easily in documents</strong>: Our plugin provides inbuilt support for all the major tax related plugins by populating pre-defined meta keys such _billing_vat, _billing_vat_number, _billing_eu_vat_number. This makes it easy to display tax information on invoices and other documents, including Tax Items - the tax amount applied to each product line, giving customers a clear and transparent tax breakdown.
 * <strong> Custom PDF file names for invoices</strong>: Assign custom PDF filenames for PDF invoices with prefix, order number etc.
 
 Read detailed instructions on how to set up the plugin in the [PDF invoice setup guide](https://www.webtoffee.com/woocommerce-pdf-invoices-packing-slips-delivery-notes-shipping-labels-userguide-free-version/).
@@ -76,7 +76,7 @@ For international sales, many countries require invoices as part of their standa
 Beyond compliance, these documents enhance customer experience by adding a human touch and serving as an additional communication channel between you and your buyer.
 
 
-&#9989; Tested OK with WooCommerce 10.8.1
+&#9989; Tested OK with WooCommerce 10.9.4
 &#9989; Tested OK up to PHP 8.4
 
 
@@ -299,17 +299,19 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 4.9.7 2026-06-17 =
-* [Add] - Added settings to alter product image width/height in invoice document.
-* [Fix] - Fixed PHP warning: Call to a member function get_content_box() on null.
-* [Compatibility] - Tested OK with Plugin Check plugin v1.9.0
+= 4.9.8 2026-07-23 =
+* [Add] - Added a Tax line item column to the product table in the invoice document.
+* [Add] - Added support for Gujarati, Portuguese, Chinese, Lithuanian, Latvian, Ukrainian, Vietnamese, and Finnish.
+* [Fix] - Hide internal/technical order item meta keys added by product add-ons.
+* [Compatibility] - WooCommerce 10.9.4 
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 4.9.7 =
-* [Add] - Added settings to alter product image width/height in invoice document.
-* [Fix] - Fixed PHP warning: Call to a member function get_content_box() on null.
-* [Compatibility] - Tested OK with Plugin Check plugin v1.9.0
+= 4.9.8 =
+* [Add] - Added a Tax line item column to the product table in the invoice document.
+* [Add] - Added support for Gujarati, Portuguese, Chinese, Lithuanian, Latvian, Ukrainian, Vietnamese, and Finnish.
+* [Fix] - Hide internal/technical order item meta keys added by product add-ons.
+* [Compatibility] - WooCommerce 10.9.4 

@@ -371,6 +371,15 @@ $wf_filters_help_doc_lists=array(
 			'description'=> __('Alter the variation data.','print-invoices-packing-slip-labels-for-woocommerce'),
 			'params'=>' $current_item, $meta_data, $id, $value'
 		),
+		'wt_pklist_hidden_order_item_meta_keys'=> array(
+			'description'=> __('Hide internal/technical order item meta keys from documents.','print-invoices-packing-slip-labels-for-woocommerce'),
+			'params'=>'$hidden_meta_keys, $order_item, $order, $template_type',
+			'function_name'=>'wt_pklist_hidden_order_item_meta_keys',
+			'function_code'=>'
+					/* hide an additional internal meta key from all documents */<br />
+					$hidden_meta_keys[] = \'_custom_order_item_meta\';<br />
+					return $hidden_meta_keys;<br />',
+		),
 		'wf_pklist_alter_settings'=> array(
 			'description'=> __('Alter the settings array','print-invoices-packing-slip-labels-for-woocommerce'),
 			'params'=>'$settings,$base_id',

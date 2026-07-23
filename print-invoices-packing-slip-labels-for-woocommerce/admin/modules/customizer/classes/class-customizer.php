@@ -556,6 +556,82 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 				}
 				$column_list_options = $column_list_option_modified;
 
+				// expand the single tax-items column into one column per tax rate
+				// (e.g. "VAT", "Tax-7"), matching how the order stores taxes. For a rendered
+				// invoice we clone the tax-items header/options once per rate and drop them in
+				// at the original column position. In the customizer preview ($order null, no
+				// rates) we keep a single column with a static "Tax" header.
+				$tax_items_col_key = '';
+				if ( isset( $columns_list_arr['tax_items'] ) ) {
+					$tax_items_col_key = 'tax_items';
+				} elseif ( isset( $columns_list_arr['-tax_items'] ) ) {
+					$tax_items_col_key = '-tax_items';
+				}
+				if ( '' !== $tax_items_col_key ) {
+					$tax_items_is_hidden = ( '-' === $tax_items_col_key[0] );
+					$tax_items_orig_th   = $columns_list_arr[ $tax_items_col_key ];
+					$tax_items_orig_opt  = isset( $column_list_options[ $tax_items_col_key ] ) ? $column_list_options[ $tax_items_col_key ] : array();
+					$tax_rate_cols       = is_null( $order ) ? array() : self::get_order_tax_rate_columns( $order );
+
+					if ( ! empty( $tax_rate_cols ) ) {
+						// Build one column per tax rate, cloning the tax-items header markup.
+						$tax_new_cols = array();
+						$tax_new_opts = array();
+						foreach ( $tax_rate_cols as $tax_rate_id => $tax_rate_label ) {
+							$tax_new_key = ( $tax_items_is_hidden ? '-' : '' ) . 'tax_items_rate_' . $tax_rate_id;
+							$tax_new_th  = preg_replace( '/col-type\s*=\s*"[^"]*"/', 'col-type="' . esc_attr( $tax_new_key ) . '"', $tax_items_orig_th, 1 );
+							$tax_new_th  = preg_replace_callback(
+								'/(<th\b[^>]*>).*?(<\/th>)/s',
+								function ( $m ) use ( $tax_rate_label ) {
+									return $m[1] . esc_html( $tax_rate_label ) . $m[2];
+								},
+								$tax_new_th
+							);
+							$tax_new_cols[ $tax_new_key ] = $tax_new_th;
+							$tax_new_opts[ $tax_new_key ] = $tax_items_orig_opt;
+						}
+						// Rebuild both arrays, replacing the tax-items key in place with the rate columns.
+						$rebuilt_cols = array();
+						foreach ( $columns_list_arr as $c_key => $c_val ) {
+							if ( $c_key === $tax_items_col_key ) {
+								foreach ( $tax_new_cols as $n_key => $n_val ) {
+									$rebuilt_cols[ $n_key ] = $n_val;
+								}
+							} else {
+								$rebuilt_cols[ $c_key ] = $c_val;
+							}
+						}
+						$columns_list_arr = $rebuilt_cols;
+
+						$rebuilt_opts = array();
+						foreach ( $column_list_options as $o_key => $o_val ) {
+							if ( $o_key === $tax_items_col_key ) {
+								foreach ( $tax_new_opts as $n_key => $n_val ) {
+									$rebuilt_opts[ $n_key ] = $n_val;
+								}
+							} else {
+								$rebuilt_opts[ $o_key ] = $o_val;
+							}
+						}
+						$column_list_options = $rebuilt_opts;
+					} else {
+						// No order / no tax rates — keep a single column with a static "Tax items"
+						// header (also self-heals a stored header that is the raw column key).
+						$tax_items_label = esc_html__( 'Tax items', 'print-invoices-packing-slip-labels-for-woocommerce' );
+						if ( false !== stripos( $tax_items_orig_th, '<th' ) ) {
+							$columns_list_arr[ $tax_items_col_key ] = preg_replace_callback(
+								'/(<th\b[^>]*>).*?(<\/th>)/s',
+								function ( $m ) use ( $tax_items_label ) {
+									return $m[1] . $tax_items_label . $m[2];
+								},
+								$tax_items_orig_th
+							);
+						} else {
+							$columns_list_arr[ $tax_items_col_key ] = $tax_items_label;
+						}
+					}
+				}
+
 				// replace for table head section
 				$find_replace[ $th_html ]                   = self::generate_product_table_head_html( $columns_list_arr, $template_type );
 				$find_replace['[wfte_product_table_start]'] = '';
@@ -994,6 +1070,12 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 
 						} elseif ( 'tax' === $columns_key || '-tax' === $columns_key ) {
 							$column_data = self::tax_column_in_product_table_row( $module_id, $template_type, $order, $order_item, $order_item_id, $_product );
+						} elseif ( preg_match( '/^-?tax_items_rate_(.+)$/', $columns_key, $tax_rate_match ) ) {
+							// per-tax-rate column — amount charged on this line for the rate.
+							$column_data = self::tax_items_rate_column_data( $order, $order_item, $tax_rate_match[1] );
+						} elseif ( 'tax_items' === $columns_key || '-tax_items' === $columns_key ) {
+							// fallback single per-item tax column (order has no tax rates).
+							$column_data = self::tax_column_in_product_table_row( $module_id, $template_type, $order, $order_item, $order_item_id, $_product );
 						} else // custom column by user
 						{
 							$column_data = '';
@@ -1040,6 +1122,12 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 
 						} elseif ( 'tax' === $columns_key || '-tax' === $columns_key ) {
 							$column_data = self::tax_column_in_product_table_row( $module_id, $template_type, $order, $order_item, $order_item_id );
+						} elseif ( preg_match( '/^-?tax_items_rate_(.+)$/', $columns_key, $tax_rate_match ) ) {
+							// per-tax-rate column — amount charged on this line for the rate.
+							$column_data = self::tax_items_rate_column_data( $order, $order_item, $tax_rate_match[1] );
+						} elseif ( 'tax_items' === $columns_key || '-tax_items' === $columns_key ) {
+							// fallback single per-item tax column (order has no tax rates).
+							$column_data = self::tax_column_in_product_table_row( $module_id, $template_type, $order, $order_item, $order_item_id );
 						} else // custom column by user
 						{
 							$column_data = '';
@@ -1079,6 +1167,50 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 		}
 
 		return $total_tax_column_display_option;
+	}
+
+	/**
+	 * Ordered map of the order's tax rates for the per-item tax columns.
+	 *
+	 * @param WC_Order $order The order being rendered.
+	 * @return array [ rate_id => rate_label ] preserving the order's tax item order.
+	 */
+	public static function get_order_tax_rate_columns( $order ) {
+		$rate_cols = array();
+		if ( $order ) {
+			foreach ( $order->get_items( 'tax' ) as $tax_line_item ) {
+				$rate_id = method_exists( $tax_line_item, 'get_rate_id' ) ? $tax_line_item->get_rate_id() : 0;
+				if ( empty( $rate_id ) ) {
+					continue;
+				}
+				$rate_label              = method_exists( $tax_line_item, 'get_label' ) ? $tax_line_item->get_label() : '';
+				$rate_cols[ $rate_id ] = ( '' !== $rate_label ? $rate_label : __( 'Tax', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
+			}
+		}
+		return apply_filters( 'wf_pklist_alter_tax_items_rate_columns', $rate_cols, $order );
+	}
+
+	/**
+	 * Per-item tax amount for a single tax rate column.
+	 *
+	 * Returns the formatted tax amount charged on this line for the given rate, or "-"
+	 * when the rate is not applied to the item (mirrors WooCommerce's order item display).
+	 *
+	 * @param WC_Order      $order      The order.
+	 * @param WC_Order_Item $order_item The line item.
+	 * @param int|string    $rate_id    The tax rate id.
+	 * @return string Formatted amount or "-".
+	 */
+	public static function tax_items_rate_column_data( $order, $order_item, $rate_id ) {
+		$item_taxes  = method_exists( $order_item, 'get_taxes' ) ? $order_item->get_taxes() : array();
+		$total_taxes = isset( $item_taxes['total'] ) ? $item_taxes['total'] : array();
+		if ( ! isset( $total_taxes[ $rate_id ] ) || '' === $total_taxes[ $rate_id ] ) {
+			return '-';
+		}
+		$order_id      = $order->get_id();
+		$user_currency = Wt_Pklist_Common::get_order_meta( $order_id, 'currency', true );
+		$tax_amount    = (float) $total_taxes[ $rate_id ];
+		return Wf_Woocommerce_Packing_List_Admin::wf_display_price( $user_currency, $order, $tax_amount );
 	}
 
 	public static function get_include_tax_value_in_array( $template_type, $order ) {
@@ -1176,6 +1308,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 			'total_price'  => '$100.00',
 			'total_weight' => '2 kg',
 			'tax'          => '$0.00',
+			'tax_items'    => '$2.00',
 		);
 		$html       = '<tr>';
 		foreach ( $columns_list_arr as $columns_key => $columns_value ) {

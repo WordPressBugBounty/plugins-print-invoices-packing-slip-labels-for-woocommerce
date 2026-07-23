@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 4.9.8 2026-07-23 =
+* [Add] - Added a Tax line item column to the product table in the invoice document.
+* [Add] - Added support for Gujarati, Portuguese, Chinese, Lithuanian, Latvian, Ukrainian, Vietnamese, and Finnish.
+* [Fix] - Hide internal/technical order item meta keys added by product add-ons.
+* [Compatibility] - WooCommerce 10.9.4 
+
 = 4.9.7 2026-06-17 =
 * [Add] - Added settings to alter product image width/height in invoice document.
 * [Fix] - Fixed PHP warning: Call to a member function get_content_box() on null.
