@@ -1023,7 +1023,9 @@ if (!defined('ABSPATH')) {
 		if ($enable_pdf_preview) {
 			include "_pdf_preview.php";
 		} else { 
-			if ( 'shippinglabel' !== $template_type && 'creditnote' !== $template_type ) {
+			$premium_addon_key = Wf_Woocommerce_Packing_List_Pro_Addons::wt_get_addon_key_by_template_type( $template_type );
+			$premium_addon_key = ( false === $premium_addon_key ) ? '' : $premium_addon_key;
+			if ( 'shippinglabel' !== $template_type && 'creditnote' !== $template_type && false === Wf_Woocommerce_Packing_List_Admin::wt_plugin_active( $premium_addon_key ) ) {
 				$template_display_name = get_template_display_name($template_type);
 			?>
 			<div class="wf_customizer_premium_feature wt_pklist_premium_features_panel">

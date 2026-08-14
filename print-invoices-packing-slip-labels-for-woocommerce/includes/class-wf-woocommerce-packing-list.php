@@ -119,8 +119,8 @@ class Wf_Woocommerce_Packing_List {
 			$this->version      = WF_PKLIST_VERSION;
 			self::$base_version = WF_PKLIST_VERSION;
 		} else {
-			$this->version      = '4.9.8';
-			self::$base_version = '4.9.8';
+			$this->version      = '5.0.0';
+			self::$base_version = '5.0.0';
 		}
 		if ( defined( 'WF_PKLIST_PLUGIN_NAME' ) ) {
 			$this->plugin_name = WF_PKLIST_PLUGIN_NAME;
@@ -219,6 +219,12 @@ class Wf_Woocommerce_Packing_List {
 		 */
 		require_once plugin_dir_path( __DIR__ ) . 'includes/class-wt-pklist-promo-banners.php';
 		new Wt_Pklist_Promo_Banners();
+
+		/**
+		 * Includes the Extensions page cross-sell listing
+		 */
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-wt-pklist-other-solutions.php';
+		new WT_PKLIST_Other_Solutions();
 
 		/**
 		 * Includes request a feature class file

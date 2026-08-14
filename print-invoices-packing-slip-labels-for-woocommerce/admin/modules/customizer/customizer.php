@@ -111,24 +111,25 @@ class Wf_Woocommerce_Packing_List_Customizer {
 
 
 	public static function get_post_id_by_meta_key_and_value( $key, $value ) {
-		global $wpdb;
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching @codingStandardsIgnoreLine -- This is a safe use of SELECT
-		$meta = $wpdb->get_results($wpdb->prepare("SELECT * FROM " . $wpdb->postmeta . " WHERE meta_key=%s AND meta_value=%s", esc_sql($key), esc_sql($value)));
-		if ( is_array( $meta ) && ! empty( $meta ) && isset( $meta[0] ) ) {
-			$meta = $meta[0];
+		$order_ids = wc_get_orders(
+			array(
+				'limit'      => 1,
+				'return'     => 'ids',
+				'meta_key'   => $key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				'meta_value' => $value, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			)
+		);
+
+		if ( ! empty( $order_ids ) ) {
+			return intval( $order_ids[0] );
 		}
 
-		if ( is_object( $meta ) ) {
-			return $meta->post_id;
-		} else {
-			$order_exists = wc_get_order( $value );
-			if ( ! empty( $order_exists ) ) {
-				return intval( $value );
-			} else {
-				return 'no_order_id';
-			}
-			return 0;
+		$order_exists = wc_get_order( $value );
+		if ( ! empty( $order_exists ) ) {
+			return intval( $value );
 		}
+
+		return 'no_order_id';
 	}
 
 	/**
@@ -1500,7 +1501,82 @@ class Wf_Woocommerce_Packing_List_Customizer {
 			}
 		}
 
+		/*
+		 * Only image types may be embedded. The detection fallbacks above (finfo, wp_check_filetype)
+		 * happily report a type for any readable file, so without this an arbitrary file could be
+		 * base64 encoded into the document.
+		 */
+		if (!in_array($mime_type, self::get_allowed_image_mime_types(), true)) {
+			$mime_type = '';
+		}
+
 		return $mime_type;
+	}
+
+	/**
+	 * Image MIME types that may be embedded into a document as a base64 data URI.
+	 *
+	 * @return array
+	 */
+	private static function get_allowed_image_mime_types()
+	{
+		return apply_filters(
+			'wt_pklist_allowed_image_mime_types',
+			array(
+				'image/jpeg',
+				'image/png',
+				'image/gif',
+				'image/bmp',
+				'image/webp',
+				'image/avif',
+				'image/tiff',
+				'image/x-icon',
+				'image/vnd.microsoft.icon',
+				'image/svg+xml',
+			)
+		);
+	}
+
+	/**
+	 * Whether a resolved local path is inside a directory documents may read images from.
+	 *
+	 * Templates legitimately reference uploads, theme and plugin assets, all of which live under
+	 * wp-content (or the configured uploads dir). Anything outside that — wp-config.php, wp-admin,
+	 * files above the web root — must never be read, however the path was arrived at.
+	 *
+	 * @param string $path Absolute, already-resolved filesystem path.
+	 * @return bool
+	 */
+	private static function is_readable_asset_path($path)
+	{
+		if (empty($path)) {
+			return false;
+		}
+
+		$upload = wp_upload_dir();
+
+		$allowed_dirs = array();
+		if (defined('WP_CONTENT_DIR')) {
+			$allowed_dirs[] = WP_CONTENT_DIR;
+		}
+		if (!empty($upload['basedir'])) {
+			$allowed_dirs[] = $upload['basedir'];
+		}
+
+		$allowed_dirs = apply_filters('wt_pklist_allowed_image_base_dirs', $allowed_dirs);
+
+		foreach ($allowed_dirs as $allowed_dir) {
+			$real_dir = realpath($allowed_dir);
+			if (false === $real_dir) {
+				continue;
+			}
+			$real_dir = rtrim(str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $real_dir), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
+			if (0 === strpos($path, $real_dir)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
@@ -1553,6 +1629,15 @@ class Wf_Woocommerce_Packing_List_Customizer {
 			$path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
 		}
 
+		/*
+		 * Resolve the path and confine it to the directories documents may read assets from.
+		 * realpath() collapses any ../ segments, so a traversal cannot escape the allowed roots.
+		 */
+		if ($path) {
+			$real_path = realpath($path);
+			$path      = (false !== $real_path && self::is_readable_asset_path($real_path)) ? $real_path : null;
+		}
+
 		$image_data = null;
 		$local_src = $src;
 
@@ -1564,8 +1649,17 @@ class Wf_Woocommerce_Packing_List_Customizer {
 			}
 		}
 
-		// Fallback to remote URL if local file not found
-		if ($image_data === null && filter_var($src, FILTER_VALIDATE_URL)) {
+		/*
+		 * Fallback to remote URL if local file not found.
+		 *
+		 * FILTER_VALIDATE_URL only validates the shape of the URL, not its scheme, so on its
+		 * own it lets through stream wrappers such as file:// — which file_get_contents()
+		 * honours regardless of allow_url_fopen. Those never reach the containment check
+		 * above (no local path is derived for them), so restrict this to the schemes that
+		 * are actually meant to be fetched.
+		 */
+		$scheme = strtolower((string) wp_parse_url($src, PHP_URL_SCHEME));
+		if ($image_data === null && in_array($scheme, array('http', 'https'), true) && filter_var($src, FILTER_VALIDATE_URL)) {
 			$image_data = @file_get_contents($src);
 		}
 
@@ -1604,10 +1698,32 @@ class Wf_Woocommerce_Packing_List_Customizer {
 				return $img ? '<img' . $m[1] . ' src="data:' . $img['mime'] . ';base64,' . $img['data'] . '"' . $m[3] . '>' : $m[0];
 			}, $html);
 
-		$html = preg_replace_callback('/background-image:\s*url\(["\']?([^"\']+)["\']?\)/i',
-			function ($m) use ($get_base64) {
-				$img = call_user_func($get_base64, trim($m[1]));
-				return $img ? 'background-image: url(data:' . $img['mime'] . ';base64,' . $img['data'] . ')' : $m[0];
+		/*
+		 * Only rewrite background-image inside real CSS - <style> blocks and style attributes.
+		 * Scanning the whole document also matched CSS-looking text in customer supplied content
+		 * such as order notes, which let that content name a file to embed.
+		 */
+		$replace_css_backgrounds = function ($css) use ($get_base64) {
+			return preg_replace_callback('/background-image:\s*url\(["\']?([^"\']+)["\']?\)/i',
+				function ($m) use ($get_base64) {
+					$img = call_user_func($get_base64, trim($m[1]));
+					return $img ? 'background-image: url(data:' . $img['mime'] . ';base64,' . $img['data'] . ')' : $m[0];
+				}, $css);
+		};
+
+		$html = preg_replace_callback('/(<style\b[^>]*>)(.*?)(<\/style>)/is',
+			function ($m) use ($replace_css_backgrounds) {
+				return $m[1] . $replace_css_backgrounds($m[2]) . $m[3];
+			}, $html);
+
+		$html = preg_replace_callback('/(\sstyle\s*=\s*")([^"]*)(")/i',
+			function ($m) use ($replace_css_backgrounds) {
+				return $m[1] . $replace_css_backgrounds($m[2]) . $m[3];
+			}, $html);
+
+		$html = preg_replace_callback("/(\sstyle\s*=\s*')([^']*)(')/i",
+			function ($m) use ($replace_css_backgrounds) {
+				return $m[1] . $replace_css_backgrounds($m[2]) . $m[3];
 			}, $html);
 
 		return $html;
@@ -1689,11 +1805,12 @@ class Wf_Woocommerce_Packing_List_Customizer {
 						}
 
 						$is_pro_customizer = apply_filters('wt_pklist_pro_customizer_' . $template_type, false, $template_type);
-						if (!$is_pro_customizer && "" !== trim($search_text) && false !== strpos($template_arr[$def_template]['html'], $search_text)) {
+						$version_check_html = $template_arr[$def_template]['codeview_html'];
+						if (!$is_pro_customizer && "" !== trim($search_text) && false !== strpos($version_check_html, $search_text)) {
 							$out['wt_template_version'] = 2; // template is pro version when basic plugin is active.
 						}
 
-						if ($is_pro_customizer && "" !== trim($search_text) && false === strpos($template_arr[$def_template]['html'], $search_text)) {
+						if ($is_pro_customizer && "" !== trim($search_text) && false === strpos($version_check_html, $search_text)) {
 							$out['wt_template_version'] = 1; // template is basic version when pro plugin is active
 						}
 					}

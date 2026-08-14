@@ -1,0 +1,988 @@
+/**
+ * Styles for the "Other solutions" section of the Extensions page.
+ *
+ * @package Print Invoices, Packing Slip, Delivery Note, Shipping Label for WooCommerce
+ * @since   4.9.9
+ */
+
+/* Page wrapper */
+.wt-pklist-os-page {
+	padding: 20px 20px 30px;
+	background: #FFFFFF;
+	margin: 10px -20px 0;
+	min-height: calc( 100vh - 100px );
+	font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+/* Page header (above the two-panel layout) */
+.wt-pklist-os-header {
+	margin: 0 0 39px;
+	padding: 0;
+}
+
+.wt-pklist-os-page-title {
+	font-size: 24px;
+	font-weight: 700;
+	color: #212121;
+	margin: 0 0 9px;
+	line-height: 1.21;
+	padding: 0;
+}
+
+.wt-pklist-os-page-subtitle {
+	font-size: 16px;
+	font-weight: 400;
+	color: #656565;
+	margin: 0;
+	line-height: 1.21;
+}
+
+/* Two-panel layout — sidebar 230px, 16px gap, content fills the rest */
+.wt-pklist-os-layout {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+/* Sidebar — 230px, radius 10, #ECECEC 1px, no shadow */
+.wt-pklist-os-sidebar {
+	/* Wide enough to keep the longest category label on one line. */
+	width: 264px;
+	flex-shrink: 0;
+	background: #FFFFFF;
+	border: 1px solid #ECECEC;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.wt-pklist-os-sidebar-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wt-pklist-os-sidebar-nav li {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #ECECEC;
+}
+
+/* Figma: 74px rows, icon in an 18px slot at 22px from the left, text at 54px */
+.wt-pklist-os-cat-link {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	min-height: 74px;
+	box-sizing: border-box;
+	padding: 12px 20px 12px 22px;
+	color: #212121;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: -0.14px;
+	line-height: 1.79;
+	cursor: pointer;
+	transition: color 0.15s ease;
+}
+
+/* Active state, per Figma: the text and icon flip to #2369FF and nothing else */
+.wt-pklist-os-cat-link.active,
+.wt-pklist-os-cat-link:hover,
+.wt-pklist-os-cat-link:focus {
+	color: #2369FF;
+	text-decoration: none;
+}
+
+/* Not designed — WP admin keyboard accessibility requires a visible focus ring. */
+.wt-pklist-os-cat-link:focus-visible {
+	outline: 2px solid #2369FF;
+	outline-offset: -2px;
+}
+
+.wt-pklist-os-cat-icon {
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+	display: block;
+}
+
+/* Recolours the black source SVGs to #2369FF for the active/hover state. */
+.wt-pklist-os-cat-link.active .wt-pklist-os-cat-icon,
+.wt-pklist-os-cat-link:hover .wt-pklist-os-cat-icon {
+	filter: invert(32%) sepia(82%) saturate(2956%) hue-rotate(213deg) brightness(101%) contrast(101%);
+}
+
+/* Trust badges — 58px badge, Roboto 500/12/lh 16.92 #606060 */
+.wt-pklist-os-trust-badges {
+	border-top: 1px solid #ECECEC;
+}
+
+.wt-pklist-os-trust-badge {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 18px 19px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #606060;
+	line-height: 1.41;
+	border-bottom: 1px solid #ECECEC;
+	box-sizing: border-box;
+}
+
+.wt-pklist-os-trust-badge:last-child {
+	border-bottom: none;
+}
+
+.wt-pklist-os-trust-badge img {
+	width: 58px;
+	height: 58px;
+	flex-shrink: 0;
+}
+
+/* Main content area */
+.wt-pklist-os-main {
+	flex: 1;
+	min-width: 0;
+}
+
+.wt-pklist-os-category-panel {
+	display: none;
+}
+
+.wt-pklist-os-category-panel.active {
+	display: block;
+}
+
+/* Shared icons */
+
+/* Feature bullet check — 15px #3CBB73 circle with a white 2px tick. */
+.wt-pklist-os-check {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	background: #3CBB73;
+	position: relative;
+	margin-top: 1.5px;
+}
+
+.wt-pklist-os-check::before {
+	content: "";
+	position: absolute;
+	left: 4px;
+	top: 4.5px;
+	width: 5px;
+	height: 2.5px;
+	border-left: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+	transform: rotate( -45deg );
+}
+
+/* Bundle pill tick — a bare 8 x 5 #44BF0E check, no circle. */
+.wt-pklist-os-pill-tick {
+	width: 8px;
+	height: 5px;
+	flex-shrink: 0;
+	border-left: 1.7px solid #44BF0E;
+	border-bottom: 1.7px solid #44BF0E;
+	transform: rotate( -45deg );
+	margin-top: -2px;
+}
+
+/* CTA crown — 13.7 x 11.4 white, 6px to the left of the label. */
+/* CTA star — sits before the button label. */
+.wt-pklist-os-btn-star {
+	flex-shrink: 0;
+	font-size: 14px;
+	line-height: 1;
+	color: #FFFFFF;
+}
+
+/* Bundle H2 external-link arrow — 11 x 11, #033BFF 2px stroke. */
+.wt-pklist-os-ext-arrow {
+	width: 11px;
+	height: 11px;
+	flex-shrink: 0;
+	background: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 11'%3E%3Cg fill='none' stroke='%23033BFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 8.5L8.5 2.5'/%3E%3Cpath d='M3.5 2.5h5v5'/%3E%3C/g%3E%3C/svg%3E" ) no-repeat center / contain;
+}
+
+/* Card grid — Figma: 3 x 292px, 24px column gap, 20px row gap */
+.wt-pklist-os-card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px 24px;
+	margin-bottom: 20px;
+	/* An expanded card grows on its own instead of stretching its row-mates. */
+	align-items: start;
+}
+
+/* Plain bullet card — 292 x 291, radius 10, #ECECEC 1px, no shadow */
+.wt-pklist-os-card {
+	background: #FFFFFF;
+	border: 1px solid #ECECEC;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.wt-pklist-os-card-body {
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.wt-pklist-os-card--with-image {
+	grid-column: span 2;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+/* Content-width text column, not a 50% split */
+.wt-pklist-os-card--with-image .wt-pklist-os-card-body {
+	flex: 0 0 auto;
+	width: 304px;
+	max-width: 100%;
+	min-width: 0;
+	background: #FFFFFF;
+}
+
+/* The with-image card does not share the plain card's header */
+.wt-pklist-os-card--with-image .wt-pklist-os-card-header {
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 6px;
+	min-height: 0;
+	background: #FFFFFF;
+	margin: 0 0 18px;
+	padding: 0 0 19px;
+}
+
+/* The title is a single line in Figma and is allowed to run past the 304px text */
+.wt-pklist-os-card--with-image .wt-pklist-os-card-header {
+	position: relative;
+	z-index: 1;
+}
+
+.wt-pklist-os-card--with-image .wt-pklist-os-card-icon-name {
+	width: max-content;
+	max-width: none;
+}
+
+.wt-pklist-os-card--with-image .wt-pklist-os-card-name {
+	white-space: nowrap;
+}
+
+/* 52px = the 13px icon inset + 39px icon, so the stars line up under the title. */
+.wt-pklist-os-card--with-image .wt-pklist-os-card-rating--stars {
+	margin-left: 52px;
+}
+
+/* Illustration column — roughly the right half of the card */
+.wt-pklist-os-card-image-side {
+	position: relative;
+	flex: 1 1 auto;
+	background: #FFFFFF;
+	min-width: 0;
+	overflow: hidden;
+}
+
+/* Fitted to the card's height, anchored left, bleeding off the right */
+.wt-pklist-os-card-image-side img {
+	position: absolute;
+	top: 50px;
+	left: 26px;
+	width: 334px;
+	/* Bottom lands on the CTA's line: 14px is .wt-pklist-os-card-body's bottom */
+	height: calc( 100% - 50px - 14px );
+	max-width: none;
+	transform: scale( var( --wt-pklist-os-zoom, 1 ) );
+	transform-origin: left top;
+	display: block;
+}
+
+/* Header strip: 75px tall, #F8F8FF, #ECECEC divider along the bottom. */
+.wt-pklist-os-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6px;
+	min-height: 75px;
+	box-sizing: border-box;
+	background: #F8F8FF;
+	margin: -14px -14px 18px;
+	padding: 13px;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.wt-pklist-os-card-icon-name {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	flex: 1;
+	min-width: 0;
+}
+
+/* Plugin icons are 39px, square, no radius and no background. */
+.wt-pklist-os-card-icon {
+	width: 39px;
+	height: 39px;
+	flex-shrink: 0;
+}
+
+/* Figma resized every card's title box by hand (144-295px) */
+.wt-pklist-os-card-name {
+	font-family: Roboto, Inter, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #000000;
+	line-height: 1.35;
+	flex: 1;
+	min-width: 0;
+}
+
+/* Numeric rating badge — plain cards only */
+.wt-pklist-os-card-rating {
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	font-family: Roboto, Inter, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #000000;
+	white-space: nowrap;
+	flex-shrink: 0;
+	background: #FFFFFF;
+	border: 1px solid #ECECEC;
+	border-radius: 6px;
+	padding: 4px 8px;
+}
+
+.wt-pklist-os-star {
+	color: #FFD703;
+	font-size: 13px;
+	line-height: 1;
+}
+
+/* Five-star rating — with-image and hero cards. 19px stars, 21px pitch. */
+.wt-pklist-os-card-rating--stars {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	gap: 2px;
+}
+
+.wt-pklist-os-card-rating--stars .wt-pklist-os-star {
+	font-size: 19px;
+}
+
+/* Feature bullets — Roboto 500/13 #363636, 15px row gap, 15px icon gap */
+.wt-pklist-os-card-features {
+	list-style: none;
+	margin: 0 0 18px;
+	padding: 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+.wt-pklist-os-card-features li {
+	font-family: Roboto, Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	color: #363636;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	line-height: 1.407;
+}
+
+/* Features beyond the third stay hidden until the toggle reveals them. */
+.wt-pklist-os-card-features .hidden-feature {
+	display: none;
+}
+
+/* Show More / Show Less toggle. */
+.wt-pklist-os-show-more-less {
+	text-align: center;
+	margin: 4px 0 12px;
+}
+
+.wt-pklist-os-cta-toggle {
+	display: inline-block;
+	color: #3171FB;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.wt-pklist-os-cta-toggle:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+/* CTA button */
+.wt-pklist-os-btn-premium {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	padding: 11px 12px;
+	background: #2369FF;
+	color: #FFFFFF;
+	border-radius: 3.28px;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+	margin-top: auto;
+	box-sizing: border-box;
+	transition: background 0.15s ease;
+}
+
+/* Not designed — Figma has only a rest state. */
+.wt-pklist-os-btn-premium:hover,
+.wt-pklist-os-btn-premium:focus {
+	background: #1B54D6;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.wt-pklist-os-btn-premium:focus-visible {
+	outline: 2px solid #2369FF;
+	outline-offset: 2px;
+}
+
+/* Image-only grid cell */
+.wt-pklist-os-card-image {
+	background: #FFFFFF;
+	border: 1px solid #ECECEC;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 312.96 / 252.74;
+	min-height: 0;
+}
+
+.wt-pklist-os-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+/* Hero / full-width card — 924 x 246 */
+.wt-pklist-os-hero-card {
+	background: #FFFFFF;
+	border: 1px solid #ECECEC;
+	border-radius: 10px;
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 20px;
+	min-height: 250px;
+}
+
+.wt-pklist-os-hero-left {
+	flex: 1;
+	padding: 15px 13px;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Illustration panel — Figma rounds it on the left side only (11px), flush to */
+/* position: relative + an absolutely positioned image */
+/* This box IS the tinted backing panel (332 x 194 in the design) */
+/*
+ * The illustrations have no backdrop of their own, so the tint is painted
+ * here and the artwork sits on top of it, overhanging to the left.
+ */
+.wt-pklist-os-hero-right {
+	position: relative;
+	width: 36%;
+	flex-shrink: 0;
+	margin: 24px 0;
+	border-radius: 11px 0 0 11px;
+	overflow: visible;
+}
+
+/* Flush variant: the panel fills the card's full height edge-to-edge, with the */
+.wt-pklist-os-hero-right--flush {
+	margin: 0;
+	border-radius: 0;
+}
+
+.wt-pklist-os-hero-right--privacy {
+	background: #D7F0FF;
+}
+
+.wt-pklist-os-hero-right--invoice {
+	background: #F9F1FF;
+}
+
+.wt-pklist-os-hero-right--marketing {
+	background: rgba( 234, 238, 255, 0.4 );
+}
+
+/* cover, not contain */
+/* Flush right, overhanging the panel to the left, vertically centred */
+/* Flush right, overhanging the tint panel to the left, vertically centred. */
+.wt-pklist-os-hero-right img {
+	position: absolute;
+	right: 0;
+	left: auto;
+	top: 52%;
+	transform: translateY( -50% );
+	width: var( --wt-pklist-os-hero-w, 100% );
+	height: auto;
+	max-width: none;
+	display: block;
+}
+
+.wt-pklist-os-hero-title-row {
+	display: flex;
+	align-items: center;
+	gap: 19px;
+	margin-bottom: 6px;
+}
+
+.wt-pklist-os-hero-icon {
+	width: 39px;
+	height: 39px;
+	flex-shrink: 0;
+}
+
+/* Hero titles are Inter 600/14 #212121 — the same size as a card title. */
+.wt-pklist-os-hero-name {
+	font-size: 14px;
+	font-weight: 600;
+	color: #212121;
+	line-height: 2;
+	margin: 0;
+	padding: 0;
+}
+
+.wt-pklist-os-hero-stars {
+	display: flex;
+	gap: 2px;
+	margin: 0 0 20px 58px;
+}
+
+.wt-pklist-os-hero-stars .wt-pklist-os-star {
+	font-size: 19px;
+}
+
+/* Divider under the title block, then the body paragraph. */
+.wt-pklist-os-hero-desc {
+	font-size: 14px;
+	font-weight: 400;
+	color: #434343;
+	margin: 0 0 23px;
+	padding-top: 19px;
+	border-top: 1px solid #ECECEC;
+	line-height: 1.786;
+	max-width: 488px;
+}
+
+.wt-pklist-os-btn-premium--block {
+	width: 263px;
+	max-width: 100%;
+	align-self: flex-start;
+	margin-top: auto;
+}
+
+/* Bundle card — 924 x 372/394 */
+.wt-pklist-os-bundle {
+	/* Figma draws a blurred #F7FFC6 blob bleeding out of the card's lower-right */
+	background: #FFFFFF radial-gradient( ellipse 70% 90% at 78% 85%, #F7FFC6 0%, rgba( 247, 255, 198, 0.45 ) 45%, rgba( 247, 255, 198, 0 ) 75% ) no-repeat;
+	border: 1px solid #ECECEC;
+	border-radius: 10px;
+	padding: 26px 21px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+.wt-pklist-os-bundle-content {
+	flex: 1;
+	min-width: 0;
+}
+
+.wt-pklist-os-bundle-illustration {
+	flex-shrink: 0;
+	width: 307px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wt-pklist-os-bundle-illustration img {
+	max-width: 100%;
+	max-height: 304px;
+	object-fit: contain;
+}
+
+/* Category pill — 36px tall, radius 10, Inter 500/13 #212121. */
+.wt-pklist-os-bundle-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	height: 36px;
+	box-sizing: border-box;
+	color: #212121;
+	border-radius: 10px;
+	padding: 0 18px;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.77;
+	margin-bottom: 21px;
+}
+
+.wt-pklist-os-bundle-tag--green {
+	background: #CEFFB6;
+}
+
+.wt-pklist-os-bundle-tag--yellow {
+	background: #FFF5BF;
+}
+
+.wt-pklist-os-bundle-tag-emoji {
+	font-size: 14px;
+	line-height: 1;
+}
+
+/* Bundle H2 — Inter 600/18 #000000, with the ↗ arrow trailing the link. */
+.wt-pklist-os-bundle-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #000000;
+	line-height: 1.33;
+	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.wt-pklist-os-bundle-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.wt-pklist-os-bundle-title a:hover,
+.wt-pklist-os-bundle-title a:focus {
+	color: #033BFF;
+}
+
+.wt-pklist-os-bundle-desc {
+	font-size: 13px;
+	font-weight: 400;
+	color: #000000;
+	letter-spacing: 0.066px;
+	margin-bottom: 18px;
+	line-height: 1.54;
+	max-width: 517px;
+}
+
+/* Feature pills — 27px, radius 40, #F1F5FF on #DDE6FF, Roboto 600/11 #000000. */
+.wt-pklist-os-bundle-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px 6px;
+	margin-bottom: 17px;
+}
+
+.wt-pklist-os-bundle-pill {
+	background: #F1F5FF;
+	border: 1px solid #DDE6FF;
+	border-radius: 40px;
+	height: 27px;
+	box-sizing: border-box;
+	padding: 0 13px;
+	font-family: Roboto, Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	color: #000000;
+	line-height: 1.35;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+/* Price row — "Total :" Inter 600/16 #000000, original price #727272 struck */
+.wt-pklist-os-bundle-pricing {
+	font-size: 16px;
+	font-weight: 600;
+	color: #000000;
+	line-height: 1.39;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.wt-pklist-os-bundle-pricing s {
+	color: #727272;
+	font-weight: 400;
+	text-decoration: line-through;
+	text-decoration-color: #FF0000;
+}
+
+.wt-pklist-os-bundle-pricing strong {
+	color: #0057FF;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.39;
+}
+
+.wt-pklist-os-savings {
+	color: #FF3700;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.43;
+}
+
+/* "View Bundle" — the same button as the CTA, minus the crown. */
+/* Same button as the CTA, minus the star. */
+.wt-pklist-os-btn-bundle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 263px;
+	max-width: 100%;
+	padding: 11px 12px;
+	background: #2369FF;
+	color: #FFFFFF;
+	border-radius: 3.28px;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+	box-sizing: border-box;
+	transition: background 0.15s ease;
+	align-self: flex-start;
+}
+
+.wt-pklist-os-btn-bundle:hover,
+.wt-pklist-os-btn-bundle:focus {
+	background: #1B54D6;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.wt-pklist-os-btn-bundle:focus-visible {
+	outline: 2px solid #2369FF;
+	outline-offset: 2px;
+}
+
+/* Standalone app card (EMA app) */
+.wt-pklist-os-standalone {
+	background: #FFFFFF;
+	border: 1px solid #ECECEC;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	display: flex;
+	overflow: hidden;
+}
+
+.wt-pklist-os-standalone-content {
+	flex: 1;
+	padding: 15px 13px;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.wt-pklist-os-standalone-header {
+	display: flex;
+	align-items: center;
+	gap: 19px;
+	padding-bottom: 19px;
+	margin-bottom: 19px;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.wt-pklist-os-standalone-icon {
+	width: 39px;
+	height: 39px;
+	flex-shrink: 0;
+}
+
+.wt-pklist-os-standalone-name {
+	font-size: 14px;
+	font-weight: 600;
+	color: #212121;
+	line-height: 1.71;
+	margin: 0;
+	padding: 0;
+}
+
+/* The illustration sets this card's height, so it is taller than its text */
+.wt-pklist-os-standalone-content .wt-pklist-os-btn-premium--block {
+	margin-top: 0;
+}
+
+.wt-pklist-os-standalone-desc {
+	font-size: 14px;
+	font-weight: 400;
+	color: #434343;
+	line-height: 1.786;
+	margin: 0 0 23px;
+	max-width: 488px;
+}
+
+/* The pale backing panel is drawn here, not in the artwork — the exported asset */
+/* Geometry derived from the two exported assets, not estimated from screenshots: */
+.wt-pklist-os-standalone-screenshot::before {
+	content: "";
+	position: absolute;
+	top: 50px;
+	/* -15px cancels this column's 15px bottom margin so the panel runs all the */
+	bottom: -15px;
+	left: 0;
+	right: auto;
+	width: auto;
+	/* Sized off the exported panel (330 x 196) so it tracks the artwork rather */
+	aspect-ratio: 330 / 196;
+	transform: translateX( -4.55% );
+	background: rgba( 234, 238, 255, 0.4 );
+	border-radius: 17px 0 0 0;
+	z-index: 0;
+}
+/* 36% of the card — Figma's proportion (332px panel in a 924px card), kept as a */
+/* overflow is visible so the backing panel can extend past this box's left edge, */
+/* 19px below the card top, bottom flush with the CTA */
+.wt-pklist-os-standalone-screenshot {
+	position: relative;
+	width: 30%;
+	flex-shrink: 0;
+	margin: 19px 0 15px;
+	overflow: visible;
+}
+
+/* Fills the panel width at its natural ratio, and is the one illustration left */
+/* Out of flow, so the panel's height comes from the card */
+.wt-pklist-os-standalone-screenshot img {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: left top;
+	display: block;
+}
+
+/* Hero feature list */
+.wt-pklist-os-hero-features {
+	flex: 0 0 auto;
+	margin: 0 0 23px;
+	padding-top: 19px;
+	border-top: 1px solid #ECECEC;
+}
+
+/* Responsive */
+@media ( max-width: 960px ) {
+	.wt-pklist-os-sidebar {
+		width: 230px;
+	}
+}
+
+@media ( max-width: 900px ) {
+	.wt-pklist-os-card-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.wt-pklist-os-hero-right {
+		display: none;
+	}
+
+	.wt-pklist-os-card--with-image {
+		flex-direction: column;
+	}
+
+	.wt-pklist-os-card--with-image .wt-pklist-os-card-image-side {
+		min-height: 180px;
+	}
+}
+
+@media ( max-width: 782px ) {
+	.wt-pklist-os-layout {
+		flex-direction: column;
+	}
+
+	.wt-pklist-os-sidebar {
+		width: 100%;
+	}
+
+	.wt-pklist-os-sidebar-nav {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 8px;
+		gap: 4px;
+	}
+
+	.wt-pklist-os-cat-link {
+		min-height: 0;
+		border-bottom: 3px solid transparent;
+		border-radius: 4px;
+		padding: 8px 12px;
+	}
+
+	.wt-pklist-os-cat-link.active {
+		border-bottom-color: #2369FF;
+	}
+
+	.wt-pklist-os-trust-badges {
+		display: none;
+	}
+
+	.wt-pklist-os-bundle {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.wt-pklist-os-bundle-illustration {
+		width: 100%;
+		max-height: 200px;
+	}
+
+	.wt-pklist-os-standalone {
+		flex-direction: column;
+	}
+
+	.wt-pklist-os-standalone-screenshot {
+		width: 100%;
+		max-height: 220px;
+		margin: 0;
+		border-radius: 0;
+	}
+}
+
+@media ( max-width: 600px ) {
+	.wt-pklist-os-card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wt-pklist-os-card-image {
+		display: none;
+	}
+
+	.wt-pklist-os-card--with-image {
+		grid-column: span 1;
+	}
+}

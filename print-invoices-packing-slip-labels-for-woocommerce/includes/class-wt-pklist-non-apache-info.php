@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
 /**
  * Admin banner shown on non-Apache servers (NGINX, IIS, etc.) where the
  * bundled .htaccess rules are not honored, advising the admin to manually

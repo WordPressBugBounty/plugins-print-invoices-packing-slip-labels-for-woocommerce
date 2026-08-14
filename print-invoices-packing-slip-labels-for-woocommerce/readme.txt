@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels ===
 Contributors: WebToffee
-Version: 4.9.8
+Version: 5.0.0
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
-Requires at least: 3.0.1
-Tested up to: 7.0
-Stable tag: 4.9.8
+Requires at least: 6.0
+Tested up to: 7.1
+Stable tag: 5.0.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -76,7 +76,7 @@ For international sales, many countries require invoices as part of their standa
 Beyond compliance, these documents enhance customer experience by adding a human touch and serving as an additional communication channel between you and your buyer.
 
 
-&#9989; Tested OK with WooCommerce 10.9.4
+&#9989; Tested OK with WooCommerce 11.0.1
 &#9989; Tested OK up to PHP 8.4
 
 
@@ -235,7 +235,7 @@ Key features of the plugin include customizable cookie banners, automated cookie
 = Minimum Requirements =
 
 * PHP 5.6 or higher is recommended
-* WordPress 3.0.1 or higher is recommended
+* WordPress 6.0 or higher is recommended
 
 = Steps to install the WooCommerce PDF Invoice plugin =
 
@@ -299,19 +299,21 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 4.9.8 2026-07-23 =
-* [Add] - Added a Tax line item column to the product table in the invoice document.
-* [Add] - Added support for Gujarati, Portuguese, Chinese, Lithuanian, Latvian, Ukrainian, Vietnamese, and Finnish.
-* [Fix] - Hide internal/technical order item meta keys added by product add-ons.
-* [Compatibility] - WooCommerce 10.9.4 
+= 5.0.0 2026-08-14 =
+* [Fix] - Vulnerability fix for Arbitrary File Read via Path Traversal reported by Wordfence.
+* [Fix] - Fixed invoice preview failing for orders that use sequential order numbers.
+* [Compatibility] - Tested OK with Plugin Check plugin v2.0.0
+* [Compatibility] - WooCommerce 11.0.1
+* [Compatibility] - WordPress 7.1
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 4.9.8 =
-* [Add] - Added a Tax line item column to the product table in the invoice document.
-* [Add] - Added support for Gujarati, Portuguese, Chinese, Lithuanian, Latvian, Ukrainian, Vietnamese, and Finnish.
-* [Fix] - Hide internal/technical order item meta keys added by product add-ons.
-* [Compatibility] - WooCommerce 10.9.4 
+= 5.0.0 =
+* [Fix] - Vulnerability fix for Arbitrary File Read via Path Traversal reported by Wordfence.
+* [Fix] - Fixed invoice preview failing for orders that use sequential order numbers.
+* [Compatibility] - Tested OK with Plugin Check plugin v2.0.0
+* [Compatibility] - WooCommerce 11.0.1
+* [Compatibility] - WordPress 7.1

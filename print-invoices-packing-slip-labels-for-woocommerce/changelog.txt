@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 5.0.0 2026-08-14 =
+* [Fix] - Vulnerability fix for Arbitrary File Read via Path Traversal reported by Wordfence.
+* [Fix] - Fixed invoice preview failing for orders that use sequential order numbers.
+* [Compatibility] - Tested OK with Plugin Check plugin v2.0.0
+* [Compatibility] - WooCommerce 11.0.1
+* [Compatibility] - WordPress 7.1
+
 = 4.9.8 2026-07-23 =
 * [Add] - Added a Tax line item column to the product table in the invoice document.
 * [Add] - Added support for Gujarati, Portuguese, Chinese, Lithuanian, Latvian, Ukrainian, Vietnamese, and Finnish.

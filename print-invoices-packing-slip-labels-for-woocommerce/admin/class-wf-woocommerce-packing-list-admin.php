@@ -1310,7 +1310,15 @@ class Wf_Woocommerce_Packing_List_Admin {
 	 */
 	public function admin_premium_extension_page() {
 		wp_enqueue_style( 'woocommerce_admin_styles' );
-		include_once WF_PKLIST_PLUGIN_PATH . 'admin/views/premium_extension_page.php';
+
+		/*
+		 * The listing's stylesheet expects the standard admin wrapper: it pulls
+		 * itself 20px wider on each side to sit flush, which relies on the
+		 * margin .wrap provides. Without it the page overflows to the right.
+		 */
+		echo '<div class="wrap">';
+		include WF_PKLIST_PLUGIN_PATH . 'admin/views/premium_extension_page.php';
+		echo '</div>';
 	}
 
 	/**
