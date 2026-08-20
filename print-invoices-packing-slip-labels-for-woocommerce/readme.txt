@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels ===
 Contributors: WebToffee
-Version: 5.0.0
+Version: 5.0.1
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 5.0.0
+Stable tag: 5.0.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -299,21 +299,13 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 5.0.0 2026-08-14 =
-* [Fix] - Vulnerability fix for Arbitrary File Read via Path Traversal reported by Wordfence.
-* [Fix] - Fixed invoice preview failing for orders that use sequential order numbers.
-* [Compatibility] - Tested OK with Plugin Check plugin v2.0.0
-* [Compatibility] - WooCommerce 11.0.1
-* [Compatibility] - WordPress 7.1
+= 5.0.1 2026-08-20 =
+* [Fix] - Bulk Printing Invoices not detecting selected orders from the Order Listing page.
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 5.0.0 =
-* [Fix] - Vulnerability fix for Arbitrary File Read via Path Traversal reported by Wordfence.
-* [Fix] - Fixed invoice preview failing for orders that use sequential order numbers.
-* [Compatibility] - Tested OK with Plugin Check plugin v2.0.0
-* [Compatibility] - WooCommerce 11.0.1
-* [Compatibility] - WordPress 7.1
+= 5.0.1 =
+* [Fix] - Bulk Printing Invoices not detecting selected orders from the Order Listing page.

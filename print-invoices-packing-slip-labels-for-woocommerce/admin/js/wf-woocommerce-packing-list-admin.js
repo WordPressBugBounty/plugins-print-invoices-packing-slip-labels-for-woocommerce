@@ -114,7 +114,8 @@
 			var action = $('select[name="' + actionselected + '"]').val();
 			if ($.inArray(action, wf_pklist_params.bulk_actions) !== -1) {
 				e.preventDefault();
-				var checked_orders = $('tbody th.check-column input[type="checkbox"]:checked');
+				/* Legacy orders table uses name="post[]"; the HPOS orders screen uses name="id[]". Match both. */
+				var checked_orders = $('tbody .check-column input[type="checkbox"][name="post[]"]:checked, tbody .check-column input[type="checkbox"][name="id[]"]:checked');
 				if (0 === checked_orders.length) {
 					alert(wf_pklist_params.msgs.select_orders_first);
 					return false;

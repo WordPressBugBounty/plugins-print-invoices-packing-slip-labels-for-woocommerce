@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 5.0.1 2026-08-20 =
+* [Fix] - Bulk Printing Invoices not detecting selected orders from the Order Listing page.
+
 = 5.0.0 2026-08-14 =
 * [Fix] - Vulnerability fix for Arbitrary File Read via Path Traversal reported by Wordfence.
 * [Fix] - Fixed invoice preview failing for orders that use sequential order numbers.
