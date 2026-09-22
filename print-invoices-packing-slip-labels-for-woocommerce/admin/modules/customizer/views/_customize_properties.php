@@ -439,6 +439,24 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 				'event_class'=>'wf_cst_click',
 			),
 			array(
+				'label'=>__('Table head font size','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'text_inputgrp',
+				'css_prop'=>'attr-data-head-font-size',
+				'trgt_elm'=>'product_table_head',
+				'unit'=>'px',
+				'width'=>'100%',
+				'default_data'=>'12',
+			),
+			array(
+				'label'=>__('Table body font size','print-invoices-packing-slip-labels-for-woocommerce'),
+				'type'=>'text_inputgrp',
+				'css_prop'=>'attr-data-body-font-size',
+				'trgt_elm'=>'product_table_body',
+				'unit'=>'px',
+				'width'=>'100%',
+				'default_data'=>'12',
+			),
+			array(
 				'label'=>'&nbsp;',
 				'type'=>'checkbox',
 				'trgt_elm'=>'product_table_head_serial_no',
@@ -487,6 +505,7 @@ function wt_pklist_get_customize_panel_html($type,$template_type)
 			array(
 				'label'=>'&nbsp;',
 				'type'=>'spacer',
+				'frmgrp_class'=>'wt_cst_spacer',
 				'width'=>'10%',
 			),
 			array(

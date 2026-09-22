@@ -367,11 +367,16 @@ $wt_pklist_os_categories = array(
 				'tint'      => 'privacy',
 				'panel'     => 'flush',
 				'features'  => array(
-					__( 'Add "Request Withdrawal" button to WooCommerce', 'print-invoices-packing-slip-labels-for-woocommerce' ),
-					__( 'Supports guest withdrawal option', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Add a "Request Withdrawal" button to WooCommerce orders', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Supports guest withdrawal without an account', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 					__( 'Two-step confirmation to prevent errors', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 					__( 'Full or partial order withdrawal support', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Set the withdrawal period to 2, 7, 14, or 30 days', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Exclude products, categories, and product types', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 					__( 'Dedicated admin dashboard for all requests', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Auto-approve requests, issue refunds, and restock items', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Show the withdrawal button only to EU customers', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					__( 'Generate a withdrawal terms and conditions page', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 					__( 'Send email confirmation to customers', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 				),
 				'url'       => 'https://www.webtoffee.com/product/eu-withdrawal-button/?utm_source=other_solution_page&utm_medium=free_plugin&utm_campaign=EU_Withdarawal_Button',
@@ -650,7 +655,7 @@ $wt_pklist_os_head  = $wt_pklist_os_categories[ $wt_pklist_os_first ];
 									target="_blank"
 									rel="noopener noreferrer"
 									class="wt-pklist-os-btn-premium wt-pklist-os-btn-premium--block">
-									<span class="wt-pklist-os-btn-star" aria-hidden="true">&#9733;</span>
+									<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL . 'admin/images/white-crown.svg' ); ?>" class="wt-pklist-os-btn-crown" alt="" aria-hidden="true" />
 									<?php esc_html_e( 'Get premium', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?>
 								</a>
 							</div>
@@ -728,7 +733,7 @@ $wt_pklist_os_head  = $wt_pklist_os_categories[ $wt_pklist_os_first ];
 													target="_blank"
 													rel="noopener noreferrer"
 													class="wt-pklist-os-btn-premium">
-													<span class="wt-pklist-os-btn-star" aria-hidden="true">&#9733;</span>
+													<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL . 'admin/images/white-crown.svg' ); ?>" class="wt-pklist-os-btn-crown" alt="" aria-hidden="true" />
 													<?php esc_html_e( 'Get premium', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?>
 												</a>
 											</div>
@@ -839,7 +844,7 @@ $wt_pklist_os_head  = $wt_pklist_os_categories[ $wt_pklist_os_first ];
 									class="wt-pklist-os-btn-premium wt-pklist-os-btn-premium--block">
 									<?php if ( empty( $wt_pklist_os_solo['cta_label'] ) ) : ?>
 										<?php /* The star marks a premium upsell; a custom CTA is not one. */ ?>
-										<span class="wt-pklist-os-btn-star" aria-hidden="true">&#9733;</span>
+										<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL . 'admin/images/white-crown.svg' ); ?>" class="wt-pklist-os-btn-crown" alt="" aria-hidden="true" />
 									<?php endif; ?>
 									<?php echo esc_html( $wt_pklist_os_cta ); ?>
 								</a>

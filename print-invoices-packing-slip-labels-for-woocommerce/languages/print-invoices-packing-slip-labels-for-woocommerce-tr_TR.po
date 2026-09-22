@@ -2,7 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, "
 "Delivery Notes and Shipping Labels\n"
-"POT-Creation-Date: 2026-07-17 12:21+0530\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/print-invoices-"
+"packing-slip-labels-for-woocommerce\n"
+"POT-Creation-Date: 2026-09-18T03:35:34+00:00\n"
 "PO-Revision-Date: 2026-07-17 12:25+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,6 +24,37 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: tests\n"
 "X-Poedit-SearchPathExcluded-2: includes/vendor\n"
 "X-Poedit-SearchPathExcluded-3: vendor\n"
+
+#. Plugin Name of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid ""
+"WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and "
+"Shipping Labels"
+msgstr ""
+"WebToffee WooCommerce PDF Faturaları, Paketleme Fişleri, Teslimat Notları ve "
+"Nakliye Etiketleri"
+
+#. Plugin URI of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+msgstr ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+
+#. Description of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "Prints Packing List,Invoice,Delivery Note and Shipping Label."
+msgstr "Paket Listesi, Fatura, İrsaliye ve Sevkiyat Etiketini yazdırır."
+
+#. Author of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "WebToffee"
+msgstr "Teknik Servis Uzmanı | Premium Servis Hizmeti"
+
+#. Author URI of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "https://www.webtoffee.com/"
+msgstr "https://www.webtoffee.com/"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:142
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:66
@@ -55,13 +88,13 @@ msgid "One or more order do not have invoice generated. Generate manually?"
 msgstr "Bir veya daha fazla siparişin faturası yok. Manuel olarak oluştur?"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:148
-#: admin/class-wf-woocommerce-packing-list-admin.php:1659
-#: admin/class-wf-woocommerce-packing-list-admin.php:2315
-#: admin/class-wf-woocommerce-packing-list-admin.php:4674
-#: admin/class-wf-woocommerce-packing-list-admin.php:4785
-#: admin/class-wf-woocommerce-packing-list-admin.php:4968
+#: admin/class-wf-woocommerce-packing-list-admin.php:1667
+#: admin/class-wf-woocommerce-packing-list-admin.php:2323
+#: admin/class-wf-woocommerce-packing-list-admin.php:4682
+#: admin/class-wf-woocommerce-packing-list-admin.php:4793
+#: admin/class-wf-woocommerce-packing-list-admin.php:4976
 #: admin/modules/customizer/customizer.php:58
-#: admin/modules/customizer/customizer.php:257
+#: admin/modules/customizer/customizer.php:258
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:132
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:72
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:92
@@ -81,8 +114,9 @@ msgid "is required"
 msgstr "gerekli"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:151
-#: admin/class-wf-woocommerce-packing-list-admin.php:4613
+#: admin/class-wf-woocommerce-packing-list-admin.php:4621
 #: admin/views/documents.php:19 admin/views/freevspro.php:7
+#: admin/views/premium_extension_page.php:187
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:75
 #: public/modules/invoice/invoice.php:150
 #: public/modules/invoice/invoice.php:164
@@ -146,7 +180,7 @@ msgid "Save"
 msgstr "Kaydet"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:160
-#: admin/class-wf-woocommerce-packing-list-admin.php:2317
+#: admin/class-wf-woocommerce-packing-list-admin.php:2325
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:82
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:93
 msgid "Please enter mandatory fields"
@@ -308,6 +342,7 @@ msgstr "Genel Ayarlar"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:884
 #: admin/class-wf-woocommerce-packing-list-admin.php:885
+#: admin/views/premium_extension_page.php:564
 msgid "Extensions"
 msgstr "Uzantılar"
 
@@ -328,11 +363,11 @@ msgstr "Erişim reddedildi !!!."
 #: admin/class-wf-woocommerce-packing-list-admin.php:1020
 #: admin/class-wf-woocommerce-packing-list-admin.php:1072
 #: admin/class-wf-woocommerce-packing-list-admin.php:1160
-#: admin/class-wf-woocommerce-packing-list-admin.php:2743
-#: admin/class-wf-woocommerce-packing-list-admin.php:4229
-#: admin/class-wf-woocommerce-packing-list-admin.php:4349
-#: admin/class-wf-woocommerce-packing-list-admin.php:4405
-#: admin/class-wf-woocommerce-packing-list-admin.php:4532
+#: admin/class-wf-woocommerce-packing-list-admin.php:2751
+#: admin/class-wf-woocommerce-packing-list-admin.php:4237
+#: admin/class-wf-woocommerce-packing-list-admin.php:4357
+#: admin/class-wf-woocommerce-packing-list-admin.php:4413
+#: admin/class-wf-woocommerce-packing-list-admin.php:4540
 msgid "You are not allowed to do this action"
 msgstr "Bu eylemi yapmanıza izin verilmiyor"
 
@@ -385,31 +420,31 @@ msgstr "Boş sipariş"
 msgid "It seems this order is not yours."
 msgstr "Görünüşe göre bu sipariş sana ait değil."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1788
-#: admin/class-wf-woocommerce-packing-list-admin.php:5028
-#: admin/modules/customizer/customizer.php:452
+#: admin/class-wf-woocommerce-packing-list-admin.php:1796
+#: admin/class-wf-woocommerce-packing-list-admin.php:5036
+#: admin/modules/customizer/customizer.php:454
 msgid "Settings Updated"
 msgstr "Ayarlar güncellendi"
 
 #. translators: %s: method
 #. translators: %s: Shipping method name
-#: admin/class-wf-woocommerce-packing-list-admin.php:2241
+#: admin/class-wf-woocommerce-packing-list-admin.php:2249
 #: public/modules/invoice/invoice.php:1112
 #, php-format
 msgid "via %s"
 msgstr "%s yolu ile"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2246
+#: admin/class-wf-woocommerce-packing-list-admin.php:2254
 msgid "Free!"
 msgstr "Ücretsiz!"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2404
+#: admin/class-wf-woocommerce-packing-list-admin.php:2412
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:182
 msgid "Item with same meta key already exists"
 msgstr "Aynı meta anahtara sahip öğe zaten var"
 
 #. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 msgid ""
 "This will remove all invoice numbers created by WooCommerce PDF Invoices, "
 "Packing Slips, Delivery Notes & Shipping Labels by WebToffee."
@@ -418,11 +453,13 @@ msgstr ""
 "Teslimat Notları ve Gönderi Etiketleri tarafından oluşturulan tüm fatura "
 "numaralarını kaldıracaktır."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 msgid "Note:"
 msgstr "Not:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 #, php-format
 msgid ""
 "Before using this tool, please make sure you followed the steps described in "
@@ -432,107 +469,107 @@ msgstr ""
 "sıfırlanacağı/silineceği%2$s makalesinde açıklanan adımları uyguladığınızdan "
 "emin olun."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2479
+#: admin/class-wf-woocommerce-packing-list-admin.php:2487
 msgid "Delete all generated invoice numbers"
 msgstr "Oluşturulan tüm fatura numaralarını sil"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2480
-#: admin/modules/customizer/views/customize.php:946
+#: admin/class-wf-woocommerce-packing-list-admin.php:2488
+#: admin/modules/customizer/views/customize.php:944
 msgid "Delete"
 msgstr "Sil"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2758
+#: admin/class-wf-woocommerce-packing-list-admin.php:2766
 msgid "Updated"
 msgstr "Güncellendi"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2764
+#: admin/class-wf-woocommerce-packing-list-admin.php:2772
 msgid "No modules"
 msgstr "Modül yok"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4149
-#: admin/class-wf-woocommerce-packing-list-admin.php:4180
+#: admin/class-wf-woocommerce-packing-list-admin.php:4157
+#: admin/class-wf-woocommerce-packing-list-admin.php:4188
 msgid "Do not show again"
 msgstr "Tekrar gösterme"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4155
-#: admin/class-wf-woocommerce-packing-list-admin.php:4168
-#: admin/class-wf-woocommerce-packing-list-admin.php:4186
-#: admin/modules/customizer/views/customize.php:928
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:182
+#: admin/class-wf-woocommerce-packing-list-admin.php:4163
+#: admin/class-wf-woocommerce-packing-list-admin.php:4176
+#: admin/class-wf-woocommerce-packing-list-admin.php:4194
+#: admin/modules/customizer/views/customize.php:926
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:183
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:113
 #: admin/views/admin-settings-debug.php:185
 #: admin/views/admin-settings-debug.php:241
 msgid "Cancel"
 msgstr "İptal"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4158
-#: admin/class-wf-woocommerce-packing-list-admin.php:4189
+#: admin/class-wf-woocommerce-packing-list-admin.php:4166
+#: admin/class-wf-woocommerce-packing-list-admin.php:4197
 msgid "Generate"
 msgstr "Oluştur"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4165
+#: admin/class-wf-woocommerce-packing-list-admin.php:4173
 msgid "Generating the document..."
 msgstr "Belge oluşturuluyor..."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4249
-#: admin/modules/customizer/customizer.php:258
+#: admin/class-wf-woocommerce-packing-list-admin.php:4257
+#: admin/modules/customizer/customizer.php:259
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:176
 msgid "Success"
 msgstr "Başarılı"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4254
+#: admin/class-wf-woocommerce-packing-list-admin.php:4262
 msgid "Cannot close this banner"
 msgstr "Bu banner kapatılamıyor"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4431
+#: admin/class-wf-woocommerce-packing-list-admin.php:4439
 msgid "Settings are empty"
 msgstr "Ayarlar boş"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4478
+#: admin/class-wf-woocommerce-packing-list-admin.php:4486
 msgid "Imported successfully"
 msgstr "Başarıyla içe aktarıldı"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4482
+#: admin/class-wf-woocommerce-packing-list-admin.php:4490
 msgid "Incorrect file"
 msgstr "Yanlış dosya"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4486
+#: admin/class-wf-woocommerce-packing-list-admin.php:4494
 msgid "Error: Empty JSON file"
 msgstr "Hata: JSON dosyasını boşaltın"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4490
+#: admin/class-wf-woocommerce-packing-list-admin.php:4498
 msgid "Error: Invalid JSON data"
 msgstr "Hata: Geçersiz JSON verileri"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4494
+#: admin/class-wf-woocommerce-packing-list-admin.php:4502
 msgid "Error uploading the file"
 msgstr "Dosya yüklenirken hata oluştu"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4564
+#: admin/class-wf-woocommerce-packing-list-admin.php:4572
 msgid "Error:"
 msgstr "Hata:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4564
+#: admin/class-wf-woocommerce-packing-list-admin.php:4572
 msgid "Truncation did not complete as expected."
 msgstr "Kesme işlemi beklendiği gibi tamamlanmadı."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4612
+#: admin/class-wf-woocommerce-packing-list-admin.php:4620
 #: admin/views/general.php:360
 msgid "Total files"
 msgstr "Toplam dosyalar"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4614
+#: admin/class-wf-woocommerce-packing-list-admin.php:4622
 #: admin/views/documents.php:23 admin/views/freevspro.php:8
 #: public/modules/packinglist/packinglist.php:70
 #: public/modules/packinglist/packinglist.php:92
 #: public/modules/packinglist/packinglist.php:93
-#: public/modules/packinglist/packinglist.php:310
-#: public/modules/packinglist/packinglist.php:453
+#: public/modules/packinglist/packinglist.php:311
+#: public/modules/packinglist/packinglist.php:454
 #: public/modules/packinglist/views/admin-settings.php:41
 msgid "Packing slip"
 msgstr "Ambalaj Kağıdı"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4615
+#: admin/class-wf-woocommerce-packing-list-admin.php:4623
 #: admin/views/documents.php:40 admin/views/freevspro.php:10
 #: public/modules/shippinglabel/shippinglabel.php:66
 #: public/modules/shippinglabel/shippinglabel.php:221
@@ -542,7 +579,7 @@ msgstr "Ambalaj Kağıdı"
 msgid "Shipping label"
 msgstr "Kargo etiketi"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4616
+#: admin/class-wf-woocommerce-packing-list-admin.php:4624
 #: admin/views/documents.php:48 admin/views/freevspro.php:12
 #: public/modules/deliverynote/deliverynote.php:65
 #: public/modules/deliverynote/deliverynote.php:87
@@ -553,7 +590,7 @@ msgstr "Kargo etiketi"
 msgid "Delivery note"
 msgstr "Teslimat notu"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4617
+#: admin/class-wf-woocommerce-packing-list-admin.php:4625
 #: admin/views/documents.php:44 admin/views/freevspro.php:11
 #: public/modules/dispatchlabel/dispatchlabel.php:65
 #: public/modules/dispatchlabel/dispatchlabel.php:87
@@ -563,31 +600,31 @@ msgstr "Teslimat notu"
 msgid "Dispatch label"
 msgstr "Sevk etiketi"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4618
+#: admin/class-wf-woocommerce-packing-list-admin.php:4626
 #: admin/views/documents.php:62
 msgid "Picklist"
 msgstr "Seçim listesi"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4619
+#: admin/class-wf-woocommerce-packing-list-admin.php:4627
 #: admin/views/documents.php:88 admin/views/freevspro.php:13
 msgid "Proforma invoice"
 msgstr "Proforma Fatura"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4620
+#: admin/class-wf-woocommerce-packing-list-admin.php:4628
 #: admin/views/documents.php:27 admin/views/freevspro.php:9
 msgid "Credit note"
 msgstr "Credit note"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4806
+#: admin/class-wf-woocommerce-packing-list-admin.php:4814
 #: admin/views/_form_field_generator_new.php:688
 msgid "No temporary file found"
 msgstr "Geçici dosya bulunamadı"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4811
+#: admin/class-wf-woocommerce-packing-list-admin.php:4819
 msgid "Successfully cleared all temp files."
 msgstr "Tüm geçici dosyalar başarıyla temizlendi."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4812
+#: admin/class-wf-woocommerce-packing-list-admin.php:4820
 msgid "No files found."
 msgstr "Dosya bulunamadı."
 
@@ -1043,9 +1080,9 @@ msgstr "Eklentiyi edinin"
 #: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:126
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:138
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:126
-#: includes/class-wt-pklist-promo-banners.php:104
-#: includes/class-wt-pklist-promo-banners.php:124
-#: includes/class-wt-pklist-promo-banners.php:155
+#: includes/class-wt-pklist-promo-banners.php:105
+#: includes/class-wt-pklist-promo-banners.php:125
+#: includes/class-wt-pklist-promo-banners.php:156
 msgid "Dismiss"
 msgstr "Reddet"
 
@@ -1083,6 +1120,8 @@ msgstr "FTP/SFTP ve URL üzerinden içe aktarma"
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:129
 #: admin/views/premium_extension_listing.php:187
 #: admin/views/premium_extension_listing.php:222
+#: admin/views/premium_extension_page.php:424
+#: admin/views/premium_extension_page.php:489
 msgid "Schedule automated import & export"
 msgstr "Otomatik içe ve dışa aktarmayı planlama"
 
@@ -1128,6 +1167,7 @@ msgstr "Gelişmiş kupon kurallarını ve koşullarını ayarlayın"
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:112
 #: admin/views/premium_extension_listing.php:331
+#: admin/views/premium_extension_page.php:232
 msgid "Bulk generate coupons"
 msgstr "Toplu kupon oluşturma"
 
@@ -1141,6 +1181,7 @@ msgstr "Kuponlara kaydolun"
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:115
 #: admin/views/premium_extension_listing.php:329
+#: admin/views/premium_extension_page.php:230
 msgid "Cart abandonment coupons"
 msgstr "Alışveriş sepetini terk etme kuponları"
 
@@ -1168,16 +1209,16 @@ msgstr "vergi dahil"
 msgid "Tax items"
 msgstr "Vergi kalemleri"
 
-#: admin/modules/customizer/classes/class-customizer.php:782
-#: admin/modules/customizer/classes/class-customizer.php:1405
+#: admin/modules/customizer/classes/class-customizer.php:783
+#: admin/modules/customizer/classes/class-customizer.php:1408
 msgid "n/a"
 msgstr "n/a"
 
-#: admin/modules/customizer/classes/class-customizer.php:1187
+#: admin/modules/customizer/classes/class-customizer.php:1190
 msgid "Tax"
 msgstr "Vergi"
 
-#: admin/modules/customizer/classes/class-customizer.php:2139
+#: admin/modules/customizer/classes/class-customizer.php:2142
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas."
@@ -1187,7 +1228,7 @@ msgstr ""
 "mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
 "lectus vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:2157
+#: admin/modules/customizer/classes/class-customizer.php:2160
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
@@ -1199,7 +1240,7 @@ msgstr ""
 "mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
 "lectus vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:2162
+#: admin/modules/customizer/classes/class-customizer.php:2165
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
 "purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, "
@@ -1217,32 +1258,32 @@ msgstr "Şablon yüklenemedi."
 msgid "There is no order with this given id"
 msgstr "Bu verilen kimliğe sahip sipariş yok"
 
-#: admin/modules/customizer/customizer.php:191
-#: admin/modules/customizer/customizer.php:196
+#: admin/modules/customizer/customizer.php:192
+#: admin/modules/customizer/customizer.php:197
 msgid "Customize"
 msgstr "Özelleştir"
 
-#: admin/modules/customizer/customizer.php:259
+#: admin/modules/customizer/customizer.php:260
 msgid "You can't undo this action. Are you sure?"
 msgstr "Bu işlemi geri alamazsınız. Emin misiniz?"
 
-#: admin/modules/customizer/customizer.php:260
+#: admin/modules/customizer/customizer.php:261
 msgid "Click here to add Company logo"
 msgstr "Şirket logosu eklemek için buraya tıklayın"
 
-#: admin/modules/customizer/customizer.php:261
+#: admin/modules/customizer/customizer.php:262
 msgid "Click here to add Company name"
 msgstr "Şirket adı eklemek için buraya tıklayın"
 
-#: admin/modules/customizer/customizer.php:262
+#: admin/modules/customizer/customizer.php:263
 msgid "Click here to add From address"
 msgstr "Kimden adresini eklemek için buraya tıklayın"
 
-#: admin/modules/customizer/customizer.php:263
+#: admin/modules/customizer/customizer.php:264
 msgid "Click here to add Signature"
 msgstr "İmza eklemek için buraya tıklayın"
 
-#: admin/modules/customizer/customizer.php:264
+#: admin/modules/customizer/customizer.php:265
 msgid ""
 "Please save all data before leaving this page. All unsaved data will be "
 "lost. Are you sure?"
@@ -1250,36 +1291,36 @@ msgstr ""
 "Lütfen bu sayfadan ayrılmadan önce tüm verileri kaydedin. Tüm kaydedilmemiş "
 "veriler kaybedilecek. Emin misiniz?"
 
-#: admin/modules/customizer/customizer.php:265
+#: admin/modules/customizer/customizer.php:266
 #: admin/modules/customizer/views/customize.php:919
 msgid "Change template"
 msgstr "Şablonu değiştir"
 
-#: admin/modules/customizer/customizer.php:266
+#: admin/modules/customizer/customizer.php:267
 msgid "Change layout"
 msgstr "Görünümü Değiştir"
 
-#: admin/modules/customizer/customizer.php:267
+#: admin/modules/customizer/customizer.php:268
 msgid "Saving"
 msgstr "Kaydediliyor"
 
-#: admin/modules/customizer/customizer.php:268
+#: admin/modules/customizer/customizer.php:269
 #: public/modules/invoice/invoice.php:200
 #: public/modules/shippinglabel/shippinglabel.php:248
 msgid "Please enter order number"
 msgstr "Lütfen isim giriniz"
 
-#: admin/modules/customizer/customizer.php:269
+#: admin/modules/customizer/customizer.php:270
 #: public/modules/invoice/invoice.php:201
 #: public/modules/shippinglabel/shippinglabel.php:249
 msgid "Generating"
 msgstr "Genel"
 
-#: admin/modules/customizer/customizer.php:270
+#: admin/modules/customizer/customizer.php:271
 msgid "This is premium template which is not compatible with the basic plugin"
 msgstr "Bu şablon, QR Code eklenti eklentisi ile uyumlu değil"
 
-#: admin/modules/customizer/customizer.php:271
+#: admin/modules/customizer/customizer.php:272
 msgid ""
 "This is basic template. In order to use premium feature, you need to switch "
 "and activate the premium template"
@@ -1287,308 +1328,312 @@ msgstr ""
 "Bu temel şablondur. Premium özelliğini kullanabilmek için premium şablonu "
 "değiştirip etkinleştirmeniz gerekir."
 
-#: admin/modules/customizer/customizer.php:272
+#: admin/modules/customizer/customizer.php:273
 msgid "Template Name Required"
 msgstr "Şablon Adı Gerekli"
 
-#: admin/modules/customizer/customizer.php:324
-#: admin/modules/customizer/customizer.php:789
+#: admin/modules/customizer/customizer.php:274
+msgid "Default template"
+msgstr ""
+
+#: admin/modules/customizer/customizer.php:326
+#: admin/modules/customizer/customizer.php:799
 msgid "Active"
 msgstr "Aktif"
 
-#: admin/modules/customizer/customizer.php:421
+#: admin/modules/customizer/customizer.php:423
 msgid "Unable to update setting."
 msgstr "Ayarlar güncellenemedi."
 
-#: admin/modules/customizer/customizer.php:430
+#: admin/modules/customizer/customizer.php:432
 msgid "Invalid value."
 msgstr "Geçersiz değer."
 
-#: admin/modules/customizer/customizer.php:765
+#: admin/modules/customizer/customizer.php:775
 msgid "Error."
 msgstr "Hata."
 
-#: admin/modules/customizer/customizer.php:791
-#: admin/modules/customizer/views/customize.php:945
+#: admin/modules/customizer/customizer.php:801
+#: admin/modules/customizer/views/customize.php:943
 msgid "Activate"
 msgstr "Etkinleştir"
 
-#: admin/modules/customizer/customizer.php:817
+#: admin/modules/customizer/customizer.php:827
 msgid "No template found."
 msgstr "Şablon bulunamadı."
 
-#: admin/modules/customizer/customizer.php:834
+#: admin/modules/customizer/customizer.php:844
 msgid "Unable to save theme."
 msgstr "Tema kaydedilemiyor."
 
-#: admin/modules/customizer/customizer.php:853
+#: admin/modules/customizer/customizer.php:863
 msgid "Template with same name already exists."
 msgstr "Aynı ada sahip şablon zaten var."
 
-#: admin/modules/customizer/customizer.php:895
+#: admin/modules/customizer/customizer.php:905
 msgid "Template created."
 msgstr "Şablon oluşturuldu."
 
-#: admin/modules/customizer/customizer.php:901
+#: admin/modules/customizer/customizer.php:911
 msgid "Template created and activated."
 msgstr "Şablon oluşturuldu."
 
-#: admin/modules/customizer/customizer.php:956
+#: admin/modules/customizer/customizer.php:973
 msgid "Template updated."
 msgstr "Şablon güncellendi."
 
-#: admin/modules/customizer/customizer.php:959
+#: admin/modules/customizer/customizer.php:976
 msgid "Template updated and activated."
 msgstr "Şablon güncellendi."
 
-#: admin/modules/customizer/customizer.php:1007
+#: admin/modules/customizer/customizer.php:1024
 msgid "Unable to switch view."
 msgstr "Görünüm değiştirilemiyor."
 
-#: admin/modules/customizer/customizer.php:1618
+#: admin/modules/customizer/customizer.php:1820
 msgid "Unable to load template."
 msgstr "Şablon yüklenemedi."
 
-#: admin/modules/customizer/customizer.php:1669
+#: admin/modules/customizer/customizer.php:1871
 msgid "Untitled template"
 msgstr "Adsız şablon"
 
-#: admin/modules/customizer/customizer.php:1817
+#: admin/modules/customizer/customizer.php:2020
 msgid "Add the order's"
 msgstr "Siparişin bilgilerini ekleyin."
 
-#: admin/modules/customizer/customizer.php:1817
-#: admin/modules/customizer/customizer.php:1827
+#: admin/modules/customizer/customizer.php:2020
+#: admin/modules/customizer/customizer.php:2030
 #: public/modules/deliverynote/deliverynote.php:186
 #: public/modules/dispatchlabel/dispatchlabel.php:169
 #: public/modules/invoice/invoice.php:1338
-#: public/modules/packinglist/packinglist.php:212
+#: public/modules/packinglist/packinglist.php:213
 #: public/modules/shippinglabel/shippinglabel.php:169
 msgid "Tracking Number"
 msgstr "Takip numarası"
 
-#: admin/modules/customizer/customizer.php:1817
+#: admin/modules/customizer/customizer.php:2020
 msgid ""
 "to your invoices so customers can easily view and track delivery details."
 msgstr ""
 "Müşterilerinizin teslimat detaylarını kolayca görüntüleyebilmesi ve takip "
 "edebilmesi için faturalarınıza ekleyin."
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 msgid "Display a combined"
 msgstr "Birleşik bir görüntü göster"
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 #: admin/modules/customizer/data/data.translation_strings.php:24
-#: admin/modules/customizer/views/_customize_properties.php:818
+#: admin/modules/customizer/views/_customize_properties.php:837
 #: public/modules/invoice/invoice.php:1343
 msgid "Total Tax"
 msgstr "Toplam Vergi"
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 msgid ""
 "amount on the invoice to simplify how tax breakdown appears for customers."
 msgstr ""
 "Faturadaki tutarı basitleştirerek müşteriler için vergi dökümünün nasıl "
 "görüneceğini kolaylaştırmak."
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid "Show"
 msgstr "Göster"
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid "Coupon Details"
 msgstr "Kupon Detayları"
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid ""
 "to give customers a clear summary of the discounts applied to their order."
 msgstr ""
 "Müşterilere siparişlerine uygulanan indirimlerin net bir özetini sunmak."
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 msgid "Add your"
 msgstr "Ekle"
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 #: admin/modules/customizer/views/_customize_properties.php:162
 #: public/modules/shippinglabel/shippinglabel.php:155
 msgid "Company Logo"
 msgstr "Şirket Logosu"
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 msgid "to the shipping label for professional, branded packages."
 msgstr "Profesyonel, markalı paketler için kargo etiketine."
 
-#: admin/modules/customizer/customizer.php:1826
-#: admin/modules/customizer/customizer.php:1832
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2029
+#: admin/modules/customizer/customizer.php:2035
+#: admin/modules/customizer/customizer.php:2036
 msgid "Add a"
 msgstr "Ekle"
 
-#: admin/modules/customizer/customizer.php:1826
+#: admin/modules/customizer/customizer.php:2029
 #: public/modules/invoice/invoice.php:1327
 #: public/modules/shippinglabel/shippinglabel.php:168
 msgid "Barcode"
 msgstr "Barkod"
 
-#: admin/modules/customizer/customizer.php:1826
+#: admin/modules/customizer/customizer.php:2029
 msgid ""
 "to your shipping label for quicker scanning and smoother order handling."
 msgstr ""
 "Daha hızlı tarama ve daha sorunsuz sipariş işlemleri için kargo etiketinizi "
 "güncelleyin."
 
-#: admin/modules/customizer/customizer.php:1827
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2030
+#: admin/modules/customizer/customizer.php:2037
 msgid "Add the"
 msgstr "Ekle"
 
-#: admin/modules/customizer/customizer.php:1827
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2030
+#: admin/modules/customizer/customizer.php:2037
 msgid "to the shipping label for easy shipment tracking."
 msgstr "Gönderi takibini kolaylaştırmak için kargo etiketine ekleyin."
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 msgid "Show the"
 msgstr "Göster"
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 #: public/modules/shippinglabel/shippinglabel.php:170
 msgid "Package Number"
 msgstr "Takip numarası"
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 msgid "on each shipping label for accurate multi-package orders."
 msgstr ""
 "Çoklu paket siparişlerinin doğru bir şekilde takip edilebilmesi için her bir "
 "gönderi etiketinde bu bilgi yer almalıdır."
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 msgid "Display the"
 msgstr "Görüntüle"
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 #: public/modules/shippinglabel/shippinglabel.php:171
 msgid "Box name"
 msgstr "Kutu adı"
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 msgid "on the label so recipients can identify contents quickly."
 msgstr ""
 "Alıcıların içeriği hızlıca belirleyebilmesi için etiket üzerinde bilgi yer "
 "almaktadır."
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "Show how"
 msgstr "Nasıl yapılacağını göster"
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "Many Items"
 msgstr "Birçok Ürün"
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "are in the order on the shipping label."
 msgstr "Gönderi etiketindeki sıraya göre sıralanmıştır."
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 msgid "Mark packages as"
 msgstr "Paketleri şu şekilde işaretle:"
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 #: public/modules/shippinglabel/shippinglabel.php:173
 msgid "Fragile"
 msgstr "Kırılabilir"
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 msgid "so carriers know to handle them with extra care."
 msgstr ""
 "Bu sayede taşıyıcılar, bu ürünleri ekstra özenle taşımaları gerektiğini "
 "bilirler."
 
-#: admin/modules/customizer/customizer.php:1832
+#: admin/modules/customizer/customizer.php:2035
 #: public/modules/shippinglabel/shippinglabel.php:174
 msgid "This way up"
 msgstr "Bu taraftan"
 
-#: admin/modules/customizer/customizer.php:1832
+#: admin/modules/customizer/customizer.php:2035
 msgid "indicator to help prevent damage during shipping."
 msgstr "Nakliye sırasında hasarı önlemeye yardımcı olan gösterge."
 
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2036
 #: public/modules/shippinglabel/shippinglabel.php:175
 msgid "Keep dry"
 msgstr "Kuru tut"
 
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2036
 msgid "notice for moisture-sensitive shipments."
 msgstr "Neme duyarlı gönderiler için uyarı."
 
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2037
 #: public/modules/shippinglabel/shippinglabel.php:177
 msgid "Return Policy"
 msgstr "İade politikasi"
 
-#: admin/modules/customizer/customizer.php:1849
+#: admin/modules/customizer/customizer.php:2052
 #: admin/modules/customizer/views/customize.php:812
-#: includes/class-wt-pklist-promo-banners.php:107
-#: includes/class-wt-pklist-promo-banners.php:131
+#: includes/class-wt-pklist-promo-banners.php:108
+#: includes/class-wt-pklist-promo-banners.php:132
 msgid "Upgrade to Pro"
 msgstr "Pro'ya yükselt"
 
-#: admin/modules/customizer/customizer.php:1864
+#: admin/modules/customizer/customizer.php:2067
 msgid "Lighter"
 msgstr "İnce"
 
-#: admin/modules/customizer/customizer.php:1865
+#: admin/modules/customizer/customizer.php:2068
 msgid "Normal"
 msgstr "Normal"
 
-#: admin/modules/customizer/customizer.php:1866
+#: admin/modules/customizer/customizer.php:2069
 msgid "Bold"
 msgstr "Kalın"
 
-#: admin/modules/customizer/customizer.php:1867
+#: admin/modules/customizer/customizer.php:2070
 msgid "Bolder"
 msgstr "Daha Kalın"
 
-#: admin/modules/customizer/customizer.php:1879
+#: admin/modules/customizer/customizer.php:2082
 msgid "Select One"
 msgstr "Birini seç"
 
-#: admin/modules/customizer/customizer.php:1897
+#: admin/modules/customizer/customizer.php:2100
 msgid "Left"
 msgstr "Sol"
 
-#: admin/modules/customizer/customizer.php:1898
+#: admin/modules/customizer/customizer.php:2101
 msgid "Right"
 msgstr "Sağ"
 
-#: admin/modules/customizer/customizer.php:1899
+#: admin/modules/customizer/customizer.php:2102
 msgid "Center"
 msgstr "Merkez"
 
-#: admin/modules/customizer/customizer.php:1900
+#: admin/modules/customizer/customizer.php:2103
 msgid "Start"
 msgstr "Başla"
 
-#: admin/modules/customizer/customizer.php:1901
+#: admin/modules/customizer/customizer.php:2104
 msgid "End"
 msgstr "Son"
 
-#: admin/modules/customizer/customizer.php:1908
+#: admin/modules/customizer/customizer.php:2111
 msgid "None"
 msgstr "Yok"
 
-#: admin/modules/customizer/customizer.php:1920
+#: admin/modules/customizer/customizer.php:2123
 msgid "Solid"
 msgstr "Katı"
 
-#: admin/modules/customizer/customizer.php:1921
+#: admin/modules/customizer/customizer.php:2124
 msgid "Dotted"
 msgstr "Noktalı"
 
-#: admin/modules/customizer/customizer.php:1922
+#: admin/modules/customizer/customizer.php:2125
 msgid "Dashed"
 msgstr "Kesik"
 
@@ -1676,33 +1721,33 @@ msgid "Total Price"
 msgstr "Toplam Fiyat"
 
 #: admin/modules/customizer/data/data.translation_strings.php:20
-#: admin/modules/customizer/views/_customize_properties.php:792
+#: admin/modules/customizer/views/_customize_properties.php:811
 #: admin/views/wt_ipc_free_pro.php:753 admin/views/wt_ipc_free_pro.php:795
 #: public/modules/invoice/invoice.php:1339
 msgid "Subtotal"
 msgstr "Ara Toplam"
 
 #: admin/modules/customizer/data/data.translation_strings.php:21
-#: admin/modules/customizer/views/_customize_properties.php:798
+#: admin/modules/customizer/views/_customize_properties.php:817
 #: admin/views/wt_ipc_free_pro.php:757 admin/views/wt_ipc_free_pro.php:799
 #: public/modules/invoice/invoice.php:1340
 msgid "Shipping"
 msgstr "Kargo"
 
 #: admin/modules/customizer/data/data.translation_strings.php:22
-#: admin/modules/customizer/views/_customize_properties.php:805
+#: admin/modules/customizer/views/_customize_properties.php:824
 #: public/modules/invoice/invoice.php:1341
 msgid "Cart Discount"
 msgstr "Sepet İndirimi"
 
 #: admin/modules/customizer/data/data.translation_strings.php:23
-#: admin/modules/customizer/views/_customize_properties.php:811
+#: admin/modules/customizer/views/_customize_properties.php:830
 #: public/modules/invoice/invoice.php:1342
 msgid "Order Discount"
 msgstr "Sipariş İndirimi"
 
 #: admin/modules/customizer/data/data.translation_strings.php:25
-#: admin/modules/customizer/views/_customize_properties.php:824
+#: admin/modules/customizer/views/_customize_properties.php:843
 #: admin/views/wt_ipc_free_pro.php:769 admin/views/wt_ipc_free_pro.php:811
 #: public/modules/invoice/invoice.php:1344
 msgid "Fee"
@@ -1713,7 +1758,7 @@ msgid "Coupon Used"
 msgstr "Kupon Kullanılmış"
 
 #: admin/modules/customizer/data/data.translation_strings.php:27
-#: admin/modules/customizer/views/_customize_properties.php:837
+#: admin/modules/customizer/views/_customize_properties.php:856
 #: admin/views/wt_ipc_free_pro.php:781 admin/views/wt_ipc_free_pro.php:823
 #: public/modules/invoice/invoice.php:1347
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:68
@@ -1766,7 +1811,7 @@ msgid "Payment Method:"
 msgstr "Ödeme Yöntemi:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:39
-#: admin/modules/customizer/views/_customize_properties.php:831
+#: admin/modules/customizer/views/_customize_properties.php:850
 #: public/modules/invoice/invoice.php:1346
 msgid "Payment Method"
 msgstr "Ödeme Yöntemi"
@@ -1872,7 +1917,7 @@ msgstr "Müşteri Notu"
 #: public/modules/deliverynote/deliverynote.php:182
 #: public/modules/dispatchlabel/dispatchlabel.php:164
 #: public/modules/invoice/invoice.php:1318
-#: public/modules/packinglist/packinglist.php:207
+#: public/modules/packinglist/packinglist.php:208
 #: public/modules/shippinglabel/shippinglabel.php:166
 msgid "Customer note"
 msgstr "Müşteri notu"
@@ -1909,10 +1954,98 @@ msgstr "Nakliye Yöntemi:"
 msgid "Phone:"
 msgstr "Telefon:"
 
+#: admin/modules/customizer/views/customize.php:730
+#: admin/views/admin-settings-debug.php:160
+msgid "Templates"
+msgstr "Şablonlar"
+
+#: admin/modules/customizer/views/customize.php:735
+msgid "Type template name to search"
+msgstr "Aranacak şablon adını yazın"
+
+#: admin/modules/customizer/views/customize.php:747
+msgid "Choose a layout."
+msgstr "Bir görünüm seçin."
+
+#: admin/modules/customizer/views/customize.php:753
+msgid "All unsaved changes will be lost upon switching to a new layout."
+msgstr ""
+"Yeni bir düzene geçildiğinde kaydedilmemiş tüm değişiklikler kaybolacak."
+
+#: admin/modules/customizer/views/customize.php:755
+msgid "Save before you proceed."
+msgstr "Devam etmeden önce kaydedin."
+
+#: admin/modules/customizer/views/customize.php:756
+msgid "Saving..."
+msgstr "Kaydediliyor..."
+
+#: admin/modules/customizer/views/customize.php:799
+msgid "Get access to more shipping label templates."
+msgstr "Daha fazla nakliye etiketi şablonuna erişin."
+
+#: admin/modules/customizer/views/customize.php:800
+msgid "Get access to more invoice templates."
+msgstr "Daha fazla fatura şablonuna erişin."
+
+#: admin/modules/customizer/views/customize.php:928
+msgid "Update template"
+msgstr "Şablonu güncelle"
+
+#: admin/modules/customizer/views/customize.php:931
+msgid "Save template"
+msgstr "Şablonu kaydet"
+
+#: admin/modules/customizer/views/customize.php:934
+msgid "Save and activate"
+msgstr "Gönder & Devre Dışı Bırak"
+
+#: admin/modules/customizer/views/customize.php:945
+msgid "Create new"
+msgstr "Yeni oluştur"
+
+#: admin/modules/customizer/views/customize.php:946
+msgid "My templates"
+msgstr "Şablonlarım"
+
+#: admin/modules/customizer/views/customize.php:956
+msgid "This template is not comaptible with QR Code addon plugin"
+msgstr "Bu şablon, QR Code eklenti eklentisi ile uyumlu değil"
+
+#. translators: %s: Template display name (invoice, packing list, etc.)
+#: admin/modules/customizer/views/customize.php:985
+#, php-format
+msgid "Unlock limitless possibilities of %s customization with the addon -"
+msgstr "Eklentiyle %s özelleştirmenin sınırsız olasılıklarının kilidini açın -"
+
+#: admin/modules/customizer/views/customize.php:986
+msgid "Customizer for WooCommerce PDF Invoices Plugin"
+msgstr "WooCommerce PDF Faturalar Eklentisi için Özelleştirici"
+
+#: admin/modules/customizer/views/customize.php:993
+#: admin/modules/customizer/views/customize.php:1004
+msgid "Visual"
+msgstr "Görsel"
+
+#: admin/modules/customizer/views/customize.php:994
+#: admin/modules/customizer/views/customize.php:1007
+msgid "Code"
+msgstr "Kod"
+
+#: admin/modules/customizer/views/customize.php:1007
+#: admin/modules/customizer/views/_customize_properties.php:385
+#: public/modules/deliverynote/deliverynote.php:178
+#: public/modules/dispatchlabel/dispatchlabel.php:160
+#: public/modules/invoice/invoice.php:1301
+#: public/modules/packinglist/packinglist.php:202
+#: public/modules/shippinglabel/shippinglabel.php:152
+msgid "Pro version"
+msgstr "Profesyonel sürüm"
+
 #: admin/modules/customizer/views/_customize_properties.php:123
 #: admin/modules/customizer/views/_customize_properties.php:323
 #: admin/modules/customizer/views/_customize_properties.php:361
-#: admin/modules/customizer/views/_customize_properties.php:751
+#: admin/modules/customizer/views/_customize_properties.php:770
 #: admin/views/wt_ipc_free_pro.php:479 admin/views/wt_ipc_free_pro.php:493
 #: public/modules/shippinglabel/shippinglabel.php:107
 #: public/modules/shippinglabel/shippinglabel.php:130
@@ -1924,7 +2057,7 @@ msgstr "Başlık"
 #: admin/modules/customizer/views/_customize_properties.php:294
 #: admin/modules/customizer/views/_customize_properties.php:350
 #: admin/modules/customizer/views/_customize_properties.php:366
-#: admin/modules/customizer/views/_customize_properties.php:756
+#: admin/modules/customizer/views/_customize_properties.php:775
 #: public/modules/invoice/invoice.php:386
 msgid "Font size"
 msgstr "Yazı Boyutu"
@@ -2023,16 +2156,6 @@ msgstr "Biçim"
 msgid "Title font size"
 msgstr "Başlık yazı tipi boyutu"
 
-#: admin/modules/customizer/views/_customize_properties.php:385
-#: admin/modules/customizer/views/customize.php:1009
-#: public/modules/deliverynote/deliverynote.php:178
-#: public/modules/dispatchlabel/dispatchlabel.php:160
-#: public/modules/invoice/invoice.php:1301
-#: public/modules/packinglist/packinglist.php:202
-#: public/modules/shippinglabel/shippinglabel.php:152
-msgid "Pro version"
-msgstr "Profesyonel sürüm"
-
 #: admin/modules/customizer/views/_customize_properties.php:387
 #: public/modules/invoice/invoice.php:1309
 #: public/modules/shippinglabel/shippinglabel.php:158
@@ -2069,131 +2192,139 @@ msgstr "Masa başı metin rengi"
 msgid "Table body text color"
 msgstr "Tablo gövdesi metin rengi"
 
-#: admin/modules/customizer/views/_customize_properties.php:449
+#: admin/modules/customizer/views/_customize_properties.php:442
+msgid "Table head font size"
+msgstr ""
+
+#: admin/modules/customizer/views/_customize_properties.php:451
+msgid "Table body font size"
+msgstr ""
+
+#: admin/modules/customizer/views/_customize_properties.php:467
 msgid "Serial No label"
 msgstr "Fiyat etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:455
+#: admin/modules/customizer/views/_customize_properties.php:473
 msgid "Serial no text align"
 msgstr "Fiyat metni hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:472
+#: admin/modules/customizer/views/_customize_properties.php:490
 msgid "Image label"
 msgstr "Fiyat etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:478
+#: admin/modules/customizer/views/_customize_properties.php:496
 msgid "Image text align"
 msgstr "Fiyat metni hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:493
+#: admin/modules/customizer/views/_customize_properties.php:512
 msgid "Image width"
 msgstr "Resim genişliği"
 
-#: admin/modules/customizer/views/_customize_properties.php:502
+#: admin/modules/customizer/views/_customize_properties.php:521
 msgid "Image height"
 msgstr "Resim yüksekliği"
 
-#: admin/modules/customizer/views/_customize_properties.php:519
+#: admin/modules/customizer/views/_customize_properties.php:538
 msgid "SKU label"
 msgstr "SKU etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:525
+#: admin/modules/customizer/views/_customize_properties.php:544
 msgid "SKU text align"
 msgstr "SKU metin hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:542
+#: admin/modules/customizer/views/_customize_properties.php:561
 msgid "Product label"
 msgstr "Çözüm Etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:548
+#: admin/modules/customizer/views/_customize_properties.php:567
 msgid "Product text align"
 msgstr "Ürün metni hizala"
 
-#: admin/modules/customizer/views/_customize_properties.php:565
+#: admin/modules/customizer/views/_customize_properties.php:584
 msgid "GTIN label"
 msgstr "GTIN etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:571
+#: admin/modules/customizer/views/_customize_properties.php:590
 msgid "GTIN text align"
 msgstr "GTIN metin hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:588
+#: admin/modules/customizer/views/_customize_properties.php:607
 msgid "Qty label"
 msgstr "Adet etiket"
 
-#: admin/modules/customizer/views/_customize_properties.php:594
+#: admin/modules/customizer/views/_customize_properties.php:613
 msgid "Qty text align"
 msgstr "Adet metin hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:611
+#: admin/modules/customizer/views/_customize_properties.php:630
 msgid "Price label"
 msgstr "Fiyat etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:617
+#: admin/modules/customizer/views/_customize_properties.php:636
 msgid "Price text align"
 msgstr "Fiyat metni hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:637
+#: admin/modules/customizer/views/_customize_properties.php:656
 msgid "Tax items value"
 msgstr "Vergi kalemlerinin değeri"
 
-#: admin/modules/customizer/views/_customize_properties.php:640
+#: admin/modules/customizer/views/_customize_properties.php:659
 msgid "Amount"
 msgstr "Tutar"
 
-#: admin/modules/customizer/views/_customize_properties.php:649
+#: admin/modules/customizer/views/_customize_properties.php:668
 msgid "Tax items text align"
 msgstr "Vergi kalemleri metin hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:666
+#: admin/modules/customizer/views/_customize_properties.php:685
 msgid "Tax label"
 msgstr "Toplam etiket"
 
-#: admin/modules/customizer/views/_customize_properties.php:672
+#: admin/modules/customizer/views/_customize_properties.php:691
 msgid "Tax text align"
 msgstr "Toplam metin hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:689
+#: admin/modules/customizer/views/_customize_properties.php:708
 msgid "Total weight label"
 msgstr "Toplam ağırlık etiketi"
 
-#: admin/modules/customizer/views/_customize_properties.php:695
+#: admin/modules/customizer/views/_customize_properties.php:714
 msgid "Total weight text align"
 msgstr "Toplam ağırlık metni hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:712
+#: admin/modules/customizer/views/_customize_properties.php:731
 msgid "Total label"
 msgstr "Toplam etiket"
 
-#: admin/modules/customizer/views/_customize_properties.php:718
+#: admin/modules/customizer/views/_customize_properties.php:737
 msgid "Total text align"
 msgstr "Toplam metin hizalaması"
 
-#: admin/modules/customizer/views/_customize_properties.php:742
+#: admin/modules/customizer/views/_customize_properties.php:761
 msgid "Signature type"
 msgstr "İmza türü"
 
-#: admin/modules/customizer/views/_customize_properties.php:746
+#: admin/modules/customizer/views/_customize_properties.php:765
 msgid "Manual Signature"
 msgstr "Manuel İmza"
 
-#: admin/modules/customizer/views/_customize_properties.php:747
+#: admin/modules/customizer/views/_customize_properties.php:766
 msgid "Image Signature"
 msgstr "İmza İmza"
 
-#: admin/modules/customizer/views/_customize_properties.php:764
+#: admin/modules/customizer/views/_customize_properties.php:783
 msgid "Align"
 msgstr "Hizalama"
 
-#: admin/modules/customizer/views/_customize_properties.php:781
+#: admin/modules/customizer/views/_customize_properties.php:800
 msgid "Label"
 msgstr "Etiket"
 
-#: admin/modules/customizer/views/_customize_properties.php:860
+#: admin/modules/customizer/views/_customize_properties.php:879
 msgid "Note"
 msgstr "Not"
 
-#: admin/modules/customizer/views/_customize_properties.php:861
+#: admin/modules/customizer/views/_customize_properties.php:880
 msgid ""
 "Displays customer`s VAT number saved in the order details by third-party "
 "plugins in this document. Supported meta keys are"
@@ -2201,16 +2332,17 @@ msgstr ""
 "Bu belgedeki üçüncü taraf eklentiler tarafından sipariş ayrıntılarında "
 "kaydedilen müşterinin KDV numarasını görüntüler. Desteklenen meta anahtarlar"
 
-#: admin/modules/customizer/views/_customize_properties.php:863
+#: admin/modules/customizer/views/_customize_properties.php:882
 msgid "To add a different meta key"
 msgstr "Farklı bir meta anahtar eklemek için"
 
-#: admin/modules/customizer/views/_customize_properties.php:864
+#: admin/modules/customizer/views/_customize_properties.php:883
 msgid "Upgrade to premium"
 msgstr "Premiuma yükselt"
 
-#: admin/modules/customizer/views/_customize_properties.php:923
-#: admin/views/premium_extension_page.php:142
+#: admin/modules/customizer/views/_customize_properties.php:942
+#: admin/views/premium_extension_page.php:728
+#: admin/views/premium_extension_page.php:729
 #: public/modules/deliverynote/views/general.php:157
 #: public/modules/dispatchlabel/views/general.php:142
 #: public/modules/invoice/views/invoice-admin-settings.php:94
@@ -2219,8 +2351,8 @@ msgstr "Premiuma yükselt"
 msgid "Show More"
 msgstr "Daha Fazla Göster"
 
-#: admin/modules/customizer/views/_customize_properties.php:924
-#: admin/views/premium_extension_page.php:143
+#: admin/modules/customizer/views/_customize_properties.php:943
+#: admin/views/premium_extension_page.php:729
 #: public/modules/deliverynote/views/general.php:158
 #: public/modules/dispatchlabel/views/general.php:143
 #: public/modules/invoice/views/invoice-admin-settings.php:95
@@ -2229,8 +2361,7 @@ msgstr "Daha Fazla Göster"
 msgid "Show Less"
 msgstr "Az göster"
 
-#: admin/modules/customizer/views/_customize_properties.php:928
-#: admin/views/premium_extension_page.php:147
+#: admin/modules/customizer/views/_customize_properties.php:947
 msgid "Checkout Premium"
 msgstr "Premiuma yükselt"
 
@@ -2249,153 +2380,62 @@ msgstr "Sipariş"
 #: admin/modules/customizer/views/_pdf_preview.php:35
 #: admin/modules/customizer/views/_pdf_preview.php:36
 #: admin/partials/form_wizard/form_wizard.php:509
-#: admin/views/_form_field_generator_new.php:873
+#: admin/views/_form_field_generator_new.php:872
 #: public/modules/invoice/views/qrcode_promote.php:38
 msgid "Order number"
 msgstr "Sipariş Numarası"
 
-#: admin/modules/customizer/views/customize.php:730
-#: admin/views/admin-settings-debug.php:160
-msgid "Templates"
-msgstr "Şablonlar"
-
-#: admin/modules/customizer/views/customize.php:735
-msgid "Type template name to search"
-msgstr "Aranacak şablon adını yazın"
-
-#: admin/modules/customizer/views/customize.php:747
-msgid "Choose a layout."
-msgstr "Bir görünüm seçin."
-
-#: admin/modules/customizer/views/customize.php:753
-msgid "All unsaved changes will be lost upon switching to a new layout."
-msgstr ""
-"Yeni bir düzene geçildiğinde kaydedilmemiş tüm değişiklikler kaybolacak."
-
-#: admin/modules/customizer/views/customize.php:755
-msgid "Save before you proceed."
-msgstr "Devam etmeden önce kaydedin."
-
-#: admin/modules/customizer/views/customize.php:756
-msgid "Saving..."
-msgstr "Kaydediliyor..."
-
-#: admin/modules/customizer/views/customize.php:799
-msgid "Get access to more shipping label templates."
-msgstr "Daha fazla nakliye etiketi şablonuna erişin."
-
-#: admin/modules/customizer/views/customize.php:800
-msgid "Get access to more invoice templates."
-msgstr "Daha fazla fatura şablonuna erişin."
-
-#: admin/modules/customizer/views/customize.php:921
-msgid "This preview reflects your current settings from the General tab."
-msgstr "Bu önizleme, Genel sekmesindeki mevcut ayarlarınızı yansıtır."
-
-#: admin/modules/customizer/views/customize.php:930
-msgid "Update template"
-msgstr "Şablonu güncelle"
-
-#: admin/modules/customizer/views/customize.php:933
-msgid "Save template"
-msgstr "Şablonu kaydet"
-
-#: admin/modules/customizer/views/customize.php:936
-msgid "Save and activate"
-msgstr "Gönder & Devre Dışı Bırak"
-
-#: admin/modules/customizer/views/customize.php:947
-msgid "Create new"
-msgstr "Yeni oluştur"
-
-#: admin/modules/customizer/views/customize.php:948
-msgid "My templates"
-msgstr "Şablonlarım"
-
-#: admin/modules/customizer/views/customize.php:958
-msgid "This template is not comaptible with QR Code addon plugin"
-msgstr "Bu şablon, QR Code eklenti eklentisi ile uyumlu değil"
-
-#. translators: %s: Template display name (invoice, packing list, etc.)
-#: admin/modules/customizer/views/customize.php:987
-#, php-format
-msgid "Unlock limitless possibilities of %s customization with the addon -"
-msgstr "Eklentiyle %s özelleştirmenin sınırsız olasılıklarının kilidini açın -"
-
-#: admin/modules/customizer/views/customize.php:988
-msgid "Customizer for WooCommerce PDF Invoices Plugin"
-msgstr "WooCommerce PDF Faturalar Eklentisi için Özelleştirici"
-
-#: admin/modules/customizer/views/customize.php:995
-#: admin/modules/customizer/views/customize.php:1006
-msgid "Visual"
-msgstr "Görsel"
-
-#: admin/modules/customizer/views/customize.php:996
-#: admin/modules/customizer/views/customize.php:1009
-msgid "Code"
-msgstr "Kod"
-
-#: admin/modules/customizer/views/customize.php:1032
-msgid "Premium features"
-msgstr "Ayrıcalıklı özellikler"
-
-#. translators: %s: document type name (e.g. packing slip, invoice, credit note)
-#: admin/modules/customizer/views/customize.php:1035
-#, php-format
-msgid "Toggle the pro features on and off to see how they transform your %s."
-msgstr ""
-"Profesyonel özellikleri açıp kapatarak %s'ınızın nasıl dönüştüğünü görün."
-
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:41
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:42
 msgid "I couldn't understand how to make it work"
 msgstr "Nasıl çalıştığını anlayamıyorum"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:43
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:44
 msgid "Would you like us to assist you?"
 msgstr "Size yardımcı olmamızı ister misiniz?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:47
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:48
 msgid "Language support issues"
 msgstr "Dil desteği sorunları"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:52
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:53
 msgid "Plugin settings not available in my language"
 msgstr "Eklenti ayarları benim dilimde mevcut değil"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:54
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:61
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:62
 msgid "Which language?"
 msgstr "Hangi eklenti?"
 
 #. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 msgid ""
 "Missing RTL/Unicode language(e.g Chinese, Arabic etc) support for PDF "
 "document."
 msgstr ""
 "PDF belgesi için eksik RTL/Unicode dili (ör. Çince, Arapça vb.) desteği."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 #, php-format
 msgid "Already tried the free %1$s WebToffee mPDF addon %2$s."
 msgstr "Ücretsiz %1$s WebToffee mPDF eklentisini %2$s zaten denedim."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 msgid ""
 " Click the link to activate the plugin and try printing the document again."
 msgstr ""
 "Eklentiyi etkinleştirmek için bağlantıya tıklayın ve belgeyi tekrar "
 "yazdırmayı deneyin."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:67
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:68
 msgid ""
 "I am unable to add customer VAT(or GSTIN or ABN or any other tax id etc)"
 msgstr ""
 "Müşteri KDV'sini (veya GSTIN veya ABN'yi veya başka bir vergi kimliğini vb.) "
 "ekleyemiyorum"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:72
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:73
 msgid ""
 "Unable to add from third party plugin that collects customer VAT(or GSTIN or "
 "ABN etc)"
@@ -2403,72 +2443,72 @@ msgstr ""
 "Müşteri KDV'sini (veya GSTIN veya ABN vb.) tahsil eden üçüncü taraf "
 "eklentisinden eklenemiyor"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:74
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:75
 msgid "Mention the name of the plugin or meta key if any"
 msgstr "Varsa eklentinin veya meta anahtarın adını belirtin"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:78
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:79
 msgid "Need a field to add the tax id on checkout page"
 msgstr "Ödeme sayfasına vergi kimliğini eklemek için bir alana ihtiyacınız var"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:86
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:87
 msgid "I found a better plugin"
 msgstr "Daha iyi bir eklenti buldum"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:88
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:89
 msgid "Which plugin?"
 msgstr "Hangi eklenti?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:92
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:93
 msgid "The plugin is great, but I need specific feature that you don't support"
 msgstr ""
 "Eklenti harika, ancak desteklemediğiniz belirli bir özelliğe ihtiyacım var"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:94
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:95
 msgid "Could you tell us more about that feature?"
 msgstr "Bize bu özellik hakkında daha fazla bilgi verebilir misiniz?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:98
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:99
 msgid "The plugin didn't work as expected"
 msgstr "Eklenti beklendiği gibi çalışmadı"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:100
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:101
 msgid "What did you expect?"
 msgstr "Ne bekliyordun?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:104
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:105
 msgid "Other"
 msgstr "Diğer"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:106
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:107
 msgid "Could you tell us a bit more?"
 msgstr "Bize biraz daha söyleyebilir misiniz?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:125
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:126
 msgid "If you have a moment, please let us know why you are deactivating:"
 msgstr ""
 "Biraz zamanınız varsa lütfen neden devre dışı bıraktığınızı bize bildirin:"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:163
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:164
 msgid "WebToffee can contact me about this feedback."
 msgstr ""
 "WebToffee bu geri bildirimle ilgili olarak benimle iletişime geçebilir."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:166
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:167
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:106
 msgid "Enter your email address."
 msgstr "E-posta adresinizi yazın."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:168
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:169
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:107
 msgid "Enter email address"
 msgstr "E-Mail Adresiniz"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:171
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:172
 msgid "Delete all the settings made by this plugin"
 msgstr "Bu eklenti tarafından yapılan tüm ayarları silin"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:173
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:174
 msgid ""
 "We do not collect any personal data when you submit this form. It's your "
 "feedback that we value."
@@ -2476,23 +2516,23 @@ msgstr ""
 "Bu formu gönderdiğinizde herhangi bir kişisel veri toplamıyoruz. Değer "
 "verdiğimiz geri bildirimlerinizdir."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:174
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:175
 msgid "Privacy Policy"
 msgstr "Gizlilik Politikası"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:180
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:181
 msgid "Go to support"
 msgstr "Desteğe git"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:181
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:182
 msgid "Submit & Deactivate"
 msgstr "Gönder & Devre Dışı Bırak"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:183
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:184
 msgid "I rather wouldn't say"
 msgstr "Belirtmemeyi tercih ederim"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:309
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:310
 msgid "Please enter a valid email address."
 msgstr "Lütfen geçerli bir e-posta adresi girin."
 
@@ -2700,7 +2740,7 @@ msgid "Complete the invoice number format to suit your requirements"
 msgstr "İhtiyaçlarınıza uyacak şekilde fatura numarası biçimini doldurun"
 
 #: admin/partials/form_wizard/form_wizard.php:510
-#: admin/views/_form_field_generator_new.php:877
+#: admin/views/_form_field_generator_new.php:876
 msgid "Custom number"
 msgstr "Özel numara"
 
@@ -2710,7 +2750,7 @@ msgid "Type in prefix/ suffix / date format if required"
 msgstr "Gerekirse önek/sonek/tarih biçimini yazın"
 
 #: admin/partials/form_wizard/form_wizard.php:535
-#: admin/views/_form_field_generator_new.php:787
+#: admin/views/_form_field_generator_new.php:786
 msgid "Supported shortcodes for date"
 msgstr "Tarih için desteklenen kısayol kodları"
 
@@ -2743,8 +2783,8 @@ msgid "the %s number would be"
 msgstr "%s sayısı şöyle olurdu"
 
 #. translators: %s: Document type (invoice, packing list, etc.)
-#: admin/partials/form_wizard/form_wizard.php:658
-#: admin/views/_form_field_generator_new.php:952
+#: admin/partials/form_wizard/form_wizard.php:657
+#: admin/views/_form_field_generator_new.php:951
 #: public/modules/invoice/views/invoice_number_preview.php:43
 #, php-format
 msgid "Your next %s number would be"
@@ -2795,6 +2835,7 @@ msgid "Invoices"
 msgstr "Faturalar"
 
 #: admin/partials/marketing-cta/marketing-cta.php:46
+#: admin/views/premium_extension_page.php:188
 msgid "Packing Slips"
 msgstr "Sevk irsaliyeleri"
 
@@ -2803,22 +2844,27 @@ msgid "Credit Notes"
 msgstr "İadeler"
 
 #: admin/partials/marketing-cta/marketing-cta.php:48
+#: admin/views/premium_extension_page.php:189
 msgid "Address Labels"
 msgstr "Adres Etiketleri"
 
 #: admin/partials/marketing-cta/marketing-cta.php:49
+#: admin/views/premium_extension_page.php:192
 msgid "Delivery Notes"
 msgstr "Teslimat Notları"
 
 #: admin/partials/marketing-cta/marketing-cta.php:50
+#: admin/views/premium_extension_page.php:190
 msgid "Dispatch Labels"
 msgstr "Sevk Etiketleri"
 
 #: admin/partials/marketing-cta/marketing-cta.php:51
+#: admin/views/premium_extension_page.php:191
 msgid "Shipping Labels"
 msgstr "Nakliye etiketleri"
 
 #: admin/partials/marketing-cta/marketing-cta.php:52
+#: admin/views/premium_extension_page.php:193
 msgid "Picklists"
 msgstr "Seçim listeleri"
 
@@ -2831,170 +2877,9 @@ msgid "Get Bundle Now"
 msgstr "Paketi Hemen Alın"
 
 #: admin/partials/marketing-cta/marketing-cta.php:61
+#: admin/views/premium_extension_page.php:182
 msgid "Invoice Bundle"
 msgstr "Fatura Paketi"
-
-#: admin/views/_custom_field_editor_form.php:20
-#: admin/views/_custom_field_editor_form.php:23
-#: admin/views/_custom_field_editor_form.php:32
-#: admin/views/_custom_field_editor_form_product.php:24
-#: admin/views/_custom_field_editor_form_product.php:27
-#: admin/views/_custom_field_editor_form_product.php:36
-msgid "Add new"
-msgstr "Yeni ekle"
-
-#: admin/views/_custom_field_editor_form.php:41
-msgid "You can add custom/predefined order meta using its key"
-msgstr ""
-"Anahtarını kullanarak özel/önceden tanımlanmış sipariş meta ekleyebilirsiniz"
-
-#: admin/views/_custom_field_editor_form.php:48
-#: admin/views/_custom_field_editor_form_product.php:52
-msgid "Field Name"
-msgstr "Alan Adı"
-
-#: admin/views/_custom_field_editor_form.php:49
-#: admin/views/_custom_field_editor_form_product.php:53
-msgid "Meta Key"
-msgstr "Anahtar Kelimeler"
-
-#: admin/views/_custom_field_editor_form.php:54
-msgid "To add more than one custom order meta,"
-msgstr "Birden fazla özel sipariş metası eklemek için,"
-
-#: admin/views/_custom_field_editor_form.php:54
-#: admin/views/_custom_field_editor_form_product.php:58
-msgid "upgrade to premium version"
-msgstr "premium sürüme yükseltin"
-
-#: admin/views/_custom_field_editor_form_product.php:45
-msgid "You can add custom/predefined product meta using its key"
-msgstr ""
-"Anahtarını kullanarak özel/önceden tanımlanmış ürün meta verilerini "
-"ekleyebilirsiniz"
-
-#: admin/views/_custom_field_editor_form_product.php:58
-msgid "To add more than one custom product meta,"
-msgstr "Birden fazla özel ürün meta eklemek için,"
-
-#: admin/views/_form_field_generator_new.php:469
-msgid "Order Meta"
-msgstr "Sipariş Metası"
-
-#: admin/views/_form_field_generator_new.php:471
-msgid "Add/Edit Order Meta Field"
-msgstr "Sipariş Meta Alanı Ekle/Düzenle"
-
-#: admin/views/_form_field_generator_new.php:522
-msgid "Product Meta"
-msgstr "Ürün Metası"
-
-#: admin/views/_form_field_generator_new.php:524
-msgid "Add/Edit Product Meta Field"
-msgstr "Ürün Meta Alanını Ekle/Düzenle"
-
-#: admin/views/_form_field_generator_new.php:545
-msgid "Upload your image"
-msgstr "Resminizi yükleyin"
-
-#: admin/views/_form_field_generator_new.php:607
-#: admin/views/admin-settings-debug.php:201
-#: admin/views/admin-settings-debug.php:244
-msgid "Reset"
-msgstr "Sıfırla"
-
-#: admin/views/_form_field_generator_new.php:680
-msgid "Document"
-msgstr "Belge"
-
-#: admin/views/_form_field_generator_new.php:681
-msgid "PDF"
-msgstr "PDF"
-
-#: admin/views/_form_field_generator_new.php:682
-msgid "HTML"
-msgstr "HTML"
-
-#: admin/views/_form_field_generator_new.php:683
-msgid "Action"
-msgstr "Eylem"
-
-#: admin/views/_form_field_generator_new.php:749
-msgid "Add date to invoice number"
-msgstr "Fatura numarasına tarih ekleyin"
-
-#: admin/views/_form_field_generator_new.php:750
-msgid "Invoice number format"
-msgstr "Fatura numarası formatı"
-
-#: admin/views/_form_field_generator_new.php:752
-msgid "Invoice starting number"
-msgstr "Fatura başlangıç numarası"
-
-#: admin/views/_form_field_generator_new.php:753
-msgid "Invoice number length"
-msgstr "Fatura numarası uzunluğu"
-
-#: admin/views/_form_field_generator_new.php:757
-#: admin/views/_form_field_generator_new.php:770
-msgid "Use order date as input instead."
-msgstr "Bunun yerine giriş olarak sipariş tarihini kullanın."
-
-#: admin/views/_form_field_generator_new.php:762
-msgid "Add date to credit note number"
-msgstr "Kredi notu numarasına tarih ekleyin"
-
-#: admin/views/_form_field_generator_new.php:763
-msgid "Creditnote number format"
-msgstr "Kredi notu numarası biçimi"
-
-#: admin/views/_form_field_generator_new.php:764
-msgid "What should be the starting number for your credit notes?"
-msgstr "Kredi notlarınızın başlangıç numarası ne olmalıdır?"
-
-#: admin/views/_form_field_generator_new.php:765
-msgid "What length would you prefer for your credit note"
-msgstr "Kredi notunuz için hangi uzunluğu tercih edersiniz"
-
-#: admin/views/_form_field_generator_new.php:773
-msgid "Add date to proforma invoice number"
-msgstr "Proforma fatura numarasına tarih ekleyin"
-
-#: admin/views/_form_field_generator_new.php:774
-msgid "Proforma invoice number format"
-msgstr "Proforma fatura numarası biçimi"
-
-#: admin/views/_form_field_generator_new.php:775
-msgid "What should be the starting number for your proforma invoices?"
-msgstr "Proforma faturalarınızın başlangıç numarası ne olmalıdır?"
-
-#: admin/views/_form_field_generator_new.php:776
-msgid "What length would you prefer for your proforma invoice"
-msgstr "Proforma faturanız için hangi uzunluğu tercih edersiniz"
-
-#: admin/views/_form_field_generator_new.php:864
-msgid ""
-"Removing year [Y] from the prefix will disable the annual reset functionality"
-msgstr ""
-"[Y] yılını önekten kaldırmak, yıllık sıfırlama işlevini devre dışı "
-"bırakacaktır"
-
-#: admin/views/_form_field_generator_new.php:871
-msgid "Switching to order number will disable the annual reset functionality"
-msgstr ""
-"Sipariş numarasına geçiş, yıllık sıfırlama işlevini devre dışı bırakacaktır"
-
-#: admin/views/_form_field_generator_new.php:887
-msgid ""
-"Removing year [Y] from the suffix will disable the annual reset functionality"
-msgstr ""
-"Son ekten [Y] yılını kaldırmak, yıllık sıfırlama işlevini devre dışı "
-"bırakacaktır"
-
-#: admin/views/_form_field_generator_new.php:915
-msgid "The latest specified starting number will be used after reset"
-msgstr ""
-"Sıfırlamadan sonra belirtilen en son başlangıç numarası kullanılacaktır"
 
 #: admin/views/admin-settings-branding.php:6
 msgid "Developed by"
@@ -3063,6 +2948,12 @@ msgstr ""
 #: admin/views/admin-settings-debug.php:199
 msgid "Reset all settings to default"
 msgstr "Tüm ayarları varsayılana sıfırla"
+
+#: admin/views/admin-settings-debug.php:201
+#: admin/views/admin-settings-debug.php:244
+#: admin/views/_form_field_generator_new.php:607
+msgid "Reset"
+msgstr "Sıfırla"
 
 #: admin/views/admin-settings-debug.php:207
 msgid "Last updated on:"
@@ -3283,6 +3174,7 @@ msgstr ""
 "Gönderi etiketleri, sevk etiketleri ve teslimat notları için <span>%s</span> "
 "seçenek alın."
 
+#. translators: %s: highlighted phrase
 #: admin/views/customizer-promotion-popup.php:175
 #: admin/views/customizer-promotion-popup.php:187
 #: admin/views/customizer-promotion-popup.php:199
@@ -3382,7 +3274,7 @@ msgstr "Ücretsiz"
 msgid "Premium"
 msgstr "Premium"
 
-#: admin/views/freevspro.php:139
+#: admin/views/freevspro.php:139 admin/views/premium_extension_page.php:606
 msgid "30 Day Money Back Guarantee"
 msgstr "30-gün para iade garantisi"
 
@@ -3458,7 +3350,7 @@ msgstr ""
 #: public/modules/dispatchlabel/dispatchlabel.php:165
 #: public/modules/invoice/invoice.php:1329
 #: public/modules/invoice/invoice.php:1333
-#: public/modules/packinglist/packinglist.php:208
+#: public/modules/packinglist/packinglist.php:209
 #: public/modules/shippinglabel/shippinglabel.php:167
 msgid "Footer"
 msgstr "Altbilgi"
@@ -3690,6 +3582,8 @@ msgstr "Belge düzenini ve özelliklerini özelleştirme"
 #: admin/views/premium_extension_listing.php:25
 #: admin/views/premium_extension_listing.php:43
 #: admin/views/premium_extension_listing.php:60
+#: admin/views/premium_extension_page.php:46
+#: admin/views/premium_extension_page.php:65
 #: admin/views/wt_ipc_free_pro.php:286 admin/views/wt_pl_free_pro.php:67
 #: admin/views/wt_pro_addons_list.php:21 admin/views/wt_pro_addons_list.php:41
 #: admin/views/wt_pro_addons_list.php:60 admin/views/wt_sdd_free_pro.php:121
@@ -3708,6 +3602,7 @@ msgstr "Paket ürünler için çoklu görüntüleme seçenekleri"
 
 #: admin/views/premium_extension_listing.php:28
 #: admin/views/premium_extension_listing.php:46
+#: admin/views/premium_extension_page.php:49
 #: admin/views/wt_ipc_free_pro.php:232 admin/views/wt_pl_free_pro.php:39
 #: admin/views/wt_pro_addons_list.php:24 admin/views/wt_pro_addons_list.php:44
 #: admin/views/wt_sdd_free_pro.php:105
@@ -3724,6 +3619,10 @@ msgstr "Başlıca eklentilerle doğrulanmış uyumluluk"
 #: admin/views/premium_extension_listing.php:64
 #: admin/views/premium_extension_listing.php:78
 #: admin/views/premium_extension_listing.php:96
+#: admin/views/premium_extension_page.php:51
+#: admin/views/premium_extension_page.php:69
+#: admin/views/premium_extension_page.php:101
+#: admin/views/premium_extension_page.php:121
 #: admin/views/wt_pi_free_pro.php:394 admin/views/wt_pro_addons_list.php:26
 #: admin/views/wt_pro_addons_list.php:46 admin/views/wt_pro_addons_list.php:64
 #: admin/views/wt_pro_addons_list.php:84 admin/views/wt_pro_addons_list.php:104
@@ -3736,82 +3635,98 @@ msgid "WooCommerce Shipping labels, Dispatch labels and Delivery Notes plugin"
 msgstr "WooCommerce Shipping labels, Dispatch labels and Delivery Notes plugin"
 
 #: admin/views/premium_extension_listing.php:39
+#: admin/views/premium_extension_page.php:42
 #: admin/views/wt_pro_addons_list.php:37
 msgid "Create delivery notes, shipping & dispatch labels"
 msgstr "Sevk etiketine müşteri notu ekle"
 
 #: admin/views/premium_extension_listing.php:40
+#: admin/views/premium_extension_page.php:43
 #: admin/views/wt_pro_addons_list.php:38
 msgid "Enable customers to print the documents from order emails"
 msgstr "Belgede müşterinin notunu görüntülemeyi etkinleştirin."
 
 #: admin/views/premium_extension_listing.php:41
+#: admin/views/premium_extension_page.php:44
 #: admin/views/wt_pro_addons_list.php:39
 msgid "Customize shipping label size"
 msgstr "Nakliye etiketi boyutu"
 
 #: admin/views/premium_extension_listing.php:42
+#: admin/views/premium_extension_page.php:45
 #: admin/views/wt_pro_addons_list.php:40
 msgid "Add multiple shipping labels on one page"
 msgstr "Nakliye etiketine altbilgi ekle"
 
 #: admin/views/premium_extension_listing.php:44
+#: admin/views/premium_extension_page.php:47
 #: admin/views/wt_pro_addons_list.php:42
 msgid "Add extra product & order data fields"
 msgstr "Ekstra ürün ve sipariş veri alanları ekleyin"
 
 #: admin/views/premium_extension_listing.php:45
+#: admin/views/premium_extension_page.php:48
 #: admin/views/wt_pro_addons_list.php:43
 msgid "Pre-built layouts & customizable templates"
 msgstr "Önceden oluşturulmuş düzenler ve özelleştirilebilir şablonlar"
 
 #: admin/views/premium_extension_listing.php:47
+#: admin/views/premium_extension_page.php:50
 #: admin/views/wt_pro_addons_list.php:45
 msgid "Sort products based on Name or SKU"
 msgstr "Ürünleri Ada veya SKU'ya göre sıralayın"
 
 #: admin/views/premium_extension_listing.php:54
+#: admin/views/premium_extension_page.php:58
 #: admin/views/wt_pro_addons_list.php:52
 msgid "WooCommerce Picklists plugin"
 msgstr "WooCommerce vergi ayarları"
 
 #: admin/views/premium_extension_listing.php:57
+#: admin/views/premium_extension_page.php:62
 #: admin/views/wt_pro_addons_list.php:57
 msgid "Bulk print picklists from the admin order page"
 msgstr "Siparişler sayfasından tüm belgeleri toplu olarak yazdırın"
 
 #: admin/views/premium_extension_listing.php:58
-#: admin/views/wt_pl_free_pro.php:25 admin/views/wt_pro_addons_list.php:58
+#: admin/views/premium_extension_page.php:63 admin/views/wt_pl_free_pro.php:25
+#: admin/views/wt_pro_addons_list.php:58
 msgid "Automatically email picklists based on order status"
 msgstr ""
 "Sipariş durumuna göre seçim listelerini otomatik olarak e-postayla gönderin"
 
 #: admin/views/premium_extension_listing.php:59
+#: admin/views/premium_extension_page.php:64
 #: admin/views/wt_pro_addons_list.php:59
 msgid "Create or customize picklist templates"
 msgstr "Nakliye etiketi boyutu"
 
 #: admin/views/premium_extension_listing.php:61
+#: admin/views/premium_extension_page.php:66
 #: admin/views/wt_pro_addons_list.php:61
 msgid "Group products in picklist by order/category"
 msgstr "Seçim listesindeki ürünleri siparişe/kategoriye göre gruplayın"
 
 #: admin/views/premium_extension_listing.php:62
+#: admin/views/premium_extension_page.php:67
 #: admin/views/wt_pro_addons_list.php:62
 msgid "Add product meta fields & attributes"
 msgstr "Ödeme, sipariş ve ürün meta alanlarını (SSN, KDV vb.) Destekler."
 
 #: admin/views/premium_extension_listing.php:63
+#: admin/views/premium_extension_page.php:68
 #: admin/views/wt_pro_addons_list.php:63
 msgid "Exclude virtual products from picklists"
 msgstr "Sanal ürünleri seçim listelerinden hariç tut"
 
 #: admin/views/premium_extension_listing.php:70
-#: admin/views/wt_pi_free_pro.php:293 admin/views/wt_pro_addons_list.php:90
+#: admin/views/premium_extension_page.php:92 admin/views/wt_pi_free_pro.php:293
+#: admin/views/wt_pro_addons_list.php:90
 msgid "WooCommerce Address Labels plugin"
 msgstr "WooCommerce Adres Etiketleri eklentisi"
 
 #: admin/views/premium_extension_listing.php:73
+#: admin/views/premium_extension_page.php:96
 msgid ""
 "Generate ‘Shipping Address’, ‘Billing Address’, ‘From Address’, and ‘Return "
 "Address’ labels"
@@ -3820,20 +3735,24 @@ msgstr ""
 "etiketleri oluşturun"
 
 #: admin/views/premium_extension_listing.php:74
+#: admin/views/premium_extension_page.php:97
 #: admin/views/wt_pro_addons_list.php:99
 msgid "Customize label sizes"
 msgstr "Nakliye etiketi boyutu"
 
 #: admin/views/premium_extension_listing.php:75
+#: admin/views/premium_extension_page.php:98
 #: admin/views/wt_pro_addons_list.php:100
 msgid "Bulk print address labels"
 msgstr "Adres Satırı"
 
 #: admin/views/premium_extension_listing.php:76
+#: admin/views/premium_extension_page.php:99
 msgid "Offers built-in label templates"
 msgstr "Adsız şablon"
 
 #: admin/views/premium_extension_listing.php:77
+#: admin/views/premium_extension_page.php:100
 #: admin/views/wt_pro_addons_list.php:102
 msgid "Change address label layout"
 msgstr "Görünümü Değiştir"
@@ -3843,72 +3762,88 @@ msgid "WooCommerce Proforma Invoices"
 msgstr "WooCommerce Proforma Invoices"
 
 #: admin/views/premium_extension_listing.php:87
+#: admin/views/premium_extension_page.php:112
 #: admin/views/wt_pro_addons_list.php:75
 msgid "Create proforma invoices automatically"
 msgstr "Otomatik olarak fatura oluştur"
 
 #: admin/views/premium_extension_listing.php:88
+#: admin/views/premium_extension_page.php:113
 #: admin/views/wt_pro_addons_list.php:76
 msgid "Pre-built proforma invoice layouts"
 msgstr "Proforma Fatura"
 
 #: admin/views/premium_extension_listing.php:89
 #: admin/views/premium_extension_listing.php:107
+#: admin/views/premium_extension_page.php:82
+#: admin/views/premium_extension_page.php:114
 #: admin/views/wt_pro_addons_list.php:77
 msgid "Easy invoice layout customization"
 msgstr "Kolay fatura düzeni özelleştirmesi"
 
 #: admin/views/premium_extension_listing.php:90
+#: admin/views/premium_extension_page.php:115
 #: admin/views/wt_pro_addons_list.php:78
 msgid "Attach proforma invoice PDF to order emails"
 msgstr "Fatura PDF'sini e-postaya ekle"
 
 #: admin/views/premium_extension_listing.php:91
+#: admin/views/premium_extension_page.php:116
 #: admin/views/wt_pro_addons_list.php:79
 msgid "Allow customers to print invoices"
 msgstr "Faturaya müşteri notu ekle"
 
 #: admin/views/premium_extension_listing.php:92
-#: admin/views/wt_pi_free_pro.php:62 admin/views/wt_pro_addons_list.php:80
+#: admin/views/premium_extension_page.php:117 admin/views/wt_pi_free_pro.php:62
+#: admin/views/wt_pro_addons_list.php:80
 msgid "Set custom proforma invoice number"
 msgstr "Sipariş numarasını fatura numarası olarak kullan"
 
 #: admin/views/premium_extension_listing.php:93
+#: admin/views/premium_extension_page.php:118
 #: admin/views/wt_pro_addons_list.php:81
 msgid "Add additional product & order data fields"
 msgstr "Ürün tablosuna ek sütun ekle"
 
 #: admin/views/premium_extension_listing.php:94
+#: admin/views/premium_extension_page.php:119
 #: admin/views/wt_pi_free_pro.php:207 admin/views/wt_pro_addons_list.php:82
 msgid "Attach special notes with proforma invoices"
 msgstr "Proforma faturalara özel notlar ekleyin"
 
 #: admin/views/premium_extension_listing.php:95
+#: admin/views/premium_extension_page.php:120
 #: admin/views/wt_pro_addons_list.php:83
 msgid "Attach transport & sales terms"
 msgstr "Taşıma ve satış şartlarını ekleyin"
 
 #: admin/views/premium_extension_listing.php:102
+#: admin/views/premium_extension_page.php:76
 msgid "Customizer for WooCommerce PDF Invoices"
 msgstr "WooCommerce PDF Faturaları için Özelleştirici"
 
 #: admin/views/premium_extension_listing.php:105
+#: admin/views/premium_extension_page.php:80
 msgid "Drag-and-drop easy customization"
 msgstr "Sürükle ve bırak özelliğiyle kolay özelleştirme"
 
 #: admin/views/premium_extension_listing.php:106
+#: admin/views/premium_extension_page.php:81
 msgid "Advanced visual and code editor"
 msgstr "Gelişmiş görsel ve kod düzenleyici"
 
 #: admin/views/premium_extension_listing.php:108
+#: admin/views/premium_extension_page.php:83
 msgid "Customize individual elements using block editors"
 msgstr "Blok düzenleyicileri kullanarak bireysel öğeleri özelleştirin"
 
 #: admin/views/premium_extension_listing.php:109
+#: admin/views/premium_extension_page.php:84
 msgid "View live preview of customization"
 msgstr "Özelleştirmenin canlı önizlemesini görüntüleyin"
 
 #: admin/views/premium_extension_listing.php:110
+#: admin/views/premium_extension_page.php:85
 msgid "Change color, text, background, border & more"
 msgstr "Rengi, metni, arka planı, kenarlığı ve daha fazlasını değiştirin"
 
@@ -3919,21 +3854,25 @@ msgid "QR Code Addon for WooCommerce PDF Invoices"
 msgstr "WooCommerce PDF Faturaları için QR Kod Eklentisi"
 
 #: admin/views/premium_extension_listing.php:119
+#: admin/views/premium_extension_page.php:132
 #: admin/views/wt_pro_addons_list.php:115
 msgid "Assign QR codes to all generated invoices"
 msgstr "Oluşturulan tüm fatura numaralarını sil"
 
 #: admin/views/premium_extension_listing.php:120
+#: admin/views/premium_extension_page.php:133
 #: admin/views/wt_pro_addons_list.php:116
 msgid "Create QR code that reads order or invoice number"
 msgstr "Sipariş numarasını fatura numarası olarak kullan"
 
 #: admin/views/premium_extension_listing.php:121
+#: admin/views/premium_extension_page.php:134
 #: admin/views/wt_pro_addons_list.php:117
 msgid "Add custom data to invoices"
 msgstr "Fatura için özel logo"
 
 #: admin/views/premium_extension_listing.php:122
+#: admin/views/premium_extension_page.php:135
 msgid ""
 "Compatible with WooCommerce PDF Invoice, Packing Slip & Credit Note (Premium)"
 msgstr ""
@@ -3941,6 +3880,7 @@ msgstr ""
 "ile uyumlu (Ücretsiz ve Pro sürümleri)"
 
 #: admin/views/premium_extension_listing.php:123
+#: admin/views/premium_extension_page.php:136
 #: admin/views/wt_pro_addons_list.php:119
 msgid ""
 "Compatible with WooCommerce PDF Invoices, Packing Slips, Delivery Notes, and "
@@ -3986,38 +3926,47 @@ msgid "WebToffee WooCommerce Request A Quote"
 msgstr "WebToffee WooCommerce Fiyat Teklifi İste"
 
 #: admin/views/premium_extension_listing.php:147
+#: admin/views/premium_extension_page.php:147
 msgid "Add quote button to the product & shop pages"
 msgstr "Ürün ve mağaza sayfalarına teklif butonu ekleyin"
 
 #: admin/views/premium_extension_listing.php:148
+#: admin/views/premium_extension_page.php:148
 msgid "Enable quotation request for selected products"
 msgstr "Ürün tablosunda fiyatı göster"
 
 #: admin/views/premium_extension_listing.php:149
+#: admin/views/premium_extension_page.php:149
 msgid "Automatically send quotes to users"
 msgstr "Teklifleri kullanıcılara otomatik olarak gönder"
 
 #: admin/views/premium_extension_listing.php:150
+#: admin/views/premium_extension_page.php:150
 msgid "Disable guest users from asking for quote"
 msgstr "Konuk kullanıcıların fiyat teklifi istemesini devre dışı bırakın"
 
 #: admin/views/premium_extension_listing.php:151
+#: admin/views/premium_extension_page.php:151
 msgid "Hide prices and ‘add to cart’ button"
 msgstr "Fiyatları gizle ve 'sepete ekle' düğmesi"
 
 #: admin/views/premium_extension_listing.php:152
+#: admin/views/premium_extension_page.php:152
 msgid "Automatic email alerts for admin & users"
 msgstr "Yönetici ve kullanıcılar için otomatik e-posta uyarıları"
 
 #: admin/views/premium_extension_listing.php:153
+#: admin/views/premium_extension_page.php:153
 msgid "Easy button and form customization"
 msgstr "Kolay düğme ve form özelleştirmesi"
 
 #: admin/views/premium_extension_listing.php:154
+#: admin/views/premium_extension_page.php:154
 msgid "Set quote expiry period"
 msgstr "Teklifin geçerlilik süresini ayarlayın"
 
 #: admin/views/premium_extension_listing.php:155
+#: admin/views/premium_extension_page.php:155
 msgid "Limit spams with reCAPTCHA"
 msgstr "reCAPTCHA ile spam'leri sınırlayın"
 
@@ -4026,30 +3975,37 @@ msgid "Sequential Order Number for WooCommerce"
 msgstr "WooCommerce için Sıralı Sipariş Numarası"
 
 #: admin/views/premium_extension_listing.php:164
+#: admin/views/premium_extension_page.php:166
 msgid "Auto reset sequence per month/year etc"
 msgstr "Ay/yıl vb. başına otomatik sıfırlama sırası"
 
 #: admin/views/premium_extension_listing.php:165
+#: admin/views/premium_extension_page.php:167
 msgid "Add a custom suffix for order numbers"
 msgstr "Sipariş numaraları için özel bir sonek ekleyin"
 
 #: admin/views/premium_extension_listing.php:166
+#: admin/views/premium_extension_page.php:168
 msgid "Date suffix in order numbers"
 msgstr "Lütfen isim giriniz"
 
 #: admin/views/premium_extension_listing.php:167
+#: admin/views/premium_extension_page.php:169
 msgid "Custom sequence for free orders"
 msgstr "Ücretsiz siparişler için fatura oluşturmayı etkinleştirin."
 
 #: admin/views/premium_extension_listing.php:168
+#: admin/views/premium_extension_page.php:170
 msgid "Increment sequence in custom series"
 msgstr "Özel serilerdeki artış sırası"
 
 #: admin/views/premium_extension_listing.php:169
+#: admin/views/premium_extension_page.php:171
 msgid "More order number templates"
 msgstr "Yeni şablon oluştur"
 
 #: admin/views/premium_extension_listing.php:175
+#: admin/views/premium_extension_page.php:392
 msgid "Data Import & Export"
 msgstr "Verileri İçe ve Dışa Aktarma"
 
@@ -4062,10 +4018,12 @@ msgstr ""
 "taşıma çözümleri"
 
 #: admin/views/premium_extension_listing.php:182
+#: admin/views/premium_extension_page.php:483
 msgid "Import Export Suite for WooCommerce"
 msgstr "Import Export Suite for WooCommerce"
 
 #: admin/views/premium_extension_listing.php:185
+#: admin/views/premium_extension_page.php:487
 msgid ""
 "Import/export Products, Orders, Subscriptions, Coupons, Customers, WordPress "
 "Users, Categories & Tags, Reviews"
@@ -4077,6 +4035,10 @@ msgstr ""
 #: admin/views/premium_extension_listing.php:203
 #: admin/views/premium_extension_listing.php:221
 #: admin/views/premium_extension_listing.php:240
+#: admin/views/premium_extension_page.php:403
+#: admin/views/premium_extension_page.php:423
+#: admin/views/premium_extension_page.php:444
+#: admin/views/premium_extension_page.php:488
 msgid "Supports Excel, XML, CSV, and TSV file formats"
 msgstr "Excel, XML, CSV ve TSV dosya formatlarını destekler"
 
@@ -4084,6 +4046,10 @@ msgstr "Excel, XML, CSV ve TSV dosya formatlarını destekler"
 #: admin/views/premium_extension_listing.php:207
 #: admin/views/premium_extension_listing.php:226
 #: admin/views/premium_extension_listing.php:246
+#: admin/views/premium_extension_page.php:407
+#: admin/views/premium_extension_page.php:428
+#: admin/views/premium_extension_page.php:450
+#: admin/views/premium_extension_page.php:490
 msgid "Import from URL, Google Sheets, FTP/SFTP"
 msgstr "URL'den, Google E-Tablolardan, FTP/SFTP'den içe aktar"
 
@@ -4091,21 +4057,31 @@ msgstr "URL'den, Google E-Tablolardan, FTP/SFTP'den içe aktar"
 #: admin/views/premium_extension_listing.php:208
 #: admin/views/premium_extension_listing.php:227
 #: admin/views/premium_extension_listing.php:247
+#: admin/views/premium_extension_page.php:408
+#: admin/views/premium_extension_page.php:429
+#: admin/views/premium_extension_page.php:451
+#: admin/views/premium_extension_page.php:491
 msgid "Export to FTP/SFTP"
 msgstr "FTP/SFTP'ye aktar"
 
 #: admin/views/premium_extension_listing.php:190
+#: admin/views/premium_extension_page.php:492
 msgid "Import & export custom fields and values"
 msgstr "Özel alanları ve değerleri içe ve dışa aktarın"
 
 #: admin/views/premium_extension_listing.php:191
 #: admin/views/premium_extension_listing.php:228
 #: admin/views/premium_extension_listing.php:248
+#: admin/views/premium_extension_page.php:430
+#: admin/views/premium_extension_page.php:452
+#: admin/views/premium_extension_page.php:493
 msgid "Advanced filters and customizations for import & export"
 msgstr "Kod düzenleyici ile birlikte gelişmiş özelleştirme seçenekleri"
 
 #: admin/views/premium_extension_listing.php:192
 #: admin/views/premium_extension_listing.php:210
+#: admin/views/premium_extension_page.php:410
+#: admin/views/premium_extension_page.php:494
 msgid "Add and update data while importing"
 msgstr "İçe aktarma sırasında veri ekleme ve güncelleme"
 
@@ -4113,6 +4089,10 @@ msgstr "İçe aktarma sırasında veri ekleme ve güncelleme"
 #: admin/views/premium_extension_listing.php:211
 #: admin/views/premium_extension_listing.php:230
 #: admin/views/premium_extension_listing.php:250
+#: admin/views/premium_extension_page.php:411
+#: admin/views/premium_extension_page.php:432
+#: admin/views/premium_extension_page.php:454
+#: admin/views/premium_extension_page.php:495
 msgid "Maintains action history and debug logs"
 msgstr "Eylem geçmişini ve hata ayıklama günlüklerini korur"
 
@@ -4120,6 +4100,10 @@ msgstr "Eylem geçmişini ve hata ayıklama günlüklerini korur"
 #: admin/views/premium_extension_listing.php:212
 #: admin/views/premium_extension_listing.php:231
 #: admin/views/premium_extension_listing.php:251
+#: admin/views/premium_extension_page.php:412
+#: admin/views/premium_extension_page.php:433
+#: admin/views/premium_extension_page.php:455
+#: admin/views/premium_extension_page.php:496
 msgid "Compatible with major 3rd-party plugins"
 msgstr "Başlıca eklentilerle doğrulanmış uyumluluk"
 
@@ -4129,18 +4113,23 @@ msgstr "Product Import Export Plugin For WooCommerce"
 
 #: admin/views/premium_extension_listing.php:204
 #: admin/views/premium_extension_listing.php:241
+#: admin/views/premium_extension_page.php:404
+#: admin/views/premium_extension_page.php:445
 msgid "Schedule automated import and export"
 msgstr "Otomatik içe ve dışa aktarmayı zamanlayın"
 
 #: admin/views/premium_extension_listing.php:205
+#: admin/views/premium_extension_page.php:405
 msgid "Support for multiple product types"
 msgstr "Çoklu paketleme türlerini destekler"
 
 #: admin/views/premium_extension_listing.php:206
+#: admin/views/premium_extension_page.php:406
 msgid "Export product images in a separate zip file"
 msgstr "Ürün görsellerini ayrı bir zip dosyasına aktarın"
 
 #: admin/views/premium_extension_listing.php:209
+#: admin/views/premium_extension_page.php:409
 msgid "Advanced filters and customizations for import and export"
 msgstr "Kod düzenleyici ile birlikte gelişmiş özelleştirme seçenekleri"
 
@@ -4149,14 +4138,17 @@ msgid "Order, Coupon, Subscription Export Import for WooCommerce"
 msgstr "Order, Coupon, Subscription Export Import for WooCommerce"
 
 #: admin/views/premium_extension_listing.php:223
+#: admin/views/premium_extension_page.php:425
 msgid "Email customers on order status change"
 msgstr "Sipariş durumu değişikliğinde müşterilere e-posta gönderin"
 
 #: admin/views/premium_extension_listing.php:224
+#: admin/views/premium_extension_page.php:426
 msgid "Create users on order import"
 msgstr "Lütfen isim giriniz"
 
 #: admin/views/premium_extension_listing.php:225
+#: admin/views/premium_extension_page.php:427
 msgid "Filter export by products, order status, email, date, etc"
 msgstr ""
 "Dışa aktarmayı ürünlere, sipariş durumuna, e-postaya, tarihe vb. göre "
@@ -4164,6 +4156,8 @@ msgstr ""
 
 #: admin/views/premium_extension_listing.php:229
 #: admin/views/premium_extension_listing.php:249
+#: admin/views/premium_extension_page.php:431
+#: admin/views/premium_extension_page.php:453
 msgid "Add & update data while importing"
 msgstr "İçe aktarma sırasında veri ekleme ve güncelleme"
 
@@ -4172,19 +4166,23 @@ msgid "WordPress Users & WooCommerce Customers Import Export"
 msgstr "WordPress Users & WooCommerce Customers Import Export"
 
 #: admin/views/premium_extension_listing.php:242
+#: admin/views/premium_extension_page.php:446
 msgid "Customize and send emails to new users on import"
 msgstr ""
 "İçe aktarma sırasında e-postaları özelleştirin ve yeni kullanıcılara gönderin"
 
 #: admin/views/premium_extension_listing.php:243
+#: admin/views/premium_extension_page.php:447
 msgid "Retain user passwords on import/export"
 msgstr "İçe/dışa aktarmada kullanıcı şifrelerini koruyun"
 
 #: admin/views/premium_extension_listing.php:244
+#: admin/views/premium_extension_page.php:448
 msgid "Export and import custom fields and third-party plugin fields"
 msgstr "Özel alanları ve üçüncü taraf eklenti alanlarını dışa ve içe aktarın"
 
 #: admin/views/premium_extension_listing.php:245
+#: admin/views/premium_extension_page.php:449
 msgid "Filter by user role, email, date, etc"
 msgstr "Kullanıcı rolüne, e-postaya, tarihe vb. göre filtreleyin"
 
@@ -4193,6 +4191,7 @@ msgid "WebToffee WooCommerce Product Feed & Sync Manager"
 msgstr "WebToffee WooCommerce Product Feed & Sync Manager"
 
 #: admin/views/premium_extension_listing.php:260
+#: admin/views/premium_extension_page.php:466
 msgid ""
 "Generate WooCommerce product feeds for Google Shopping, Facebook Shop, and "
 "Instagram Shop"
@@ -4201,14 +4200,17 @@ msgstr ""
 "ürün yayınları oluşturun"
 
 #: admin/views/premium_extension_listing.php:261
+#: admin/views/premium_extension_page.php:467
 msgid "Sync WooCommerce products to Facebook catalog"
 msgstr "WooCommerce ürünlerini Facebook kataloğuyla senkronize edin"
 
 #: admin/views/premium_extension_listing.php:262
+#: admin/views/premium_extension_page.php:468
 msgid "Additional feed intervals (30 minutes, 6 hours, 12 hours)"
 msgstr "Ek besleme aralıkları (30 dakika, 6 saat, 12 saat)"
 
 #: admin/views/premium_extension_listing.php:263
+#: admin/views/premium_extension_page.php:469
 msgid "Support for additional fields that can be added to the feed"
 msgstr "Feed'e eklenebilecek ek alanlar için destek"
 
@@ -4217,30 +4219,37 @@ msgid "WPML multilingual and multicurrency support "
 msgstr "WPML çok dilli ve çoklu para birimi desteği "
 
 #: admin/views/premium_extension_listing.php:265
+#: admin/views/premium_extension_page.php:471
 msgid "Google local product inventory feed"
 msgstr "Google yerel ürün envanteri feed'i"
 
 #: admin/views/premium_extension_listing.php:266
+#: admin/views/premium_extension_page.php:472
 msgid "Exclude specific products"
 msgstr "Belirli ürünleri hariç tut"
 
 #: admin/views/premium_extension_listing.php:267
+#: admin/views/premium_extension_page.php:473
 msgid "Include or exclude specific categories"
 msgstr "Belirli kategorileri dahil edin veya hariç tutun"
 
 #: admin/views/premium_extension_listing.php:268
+#: admin/views/premium_extension_page.php:474
 msgid "Exclude out-of-stock products"
 msgstr "Stokta olmayan ürünleri hariç tutun"
 
 #: admin/views/premium_extension_listing.php:269
+#: admin/views/premium_extension_page.php:475
 msgid "Filter products based on product type"
 msgstr "Ürünleri ürün türüne göre filtreleyin"
 
 #: admin/views/premium_extension_listing.php:270
+#: admin/views/premium_extension_page.php:476
 msgid "Map categories on product level"
 msgstr "Kategorileri ürün düzeyinde haritalayın"
 
 #: admin/views/premium_extension_listing.php:277
+#: admin/views/premium_extension_page.php:212
 msgid "E-commerce Promotions"
 msgstr "E-ticaret Promosyonları"
 
@@ -4257,42 +4266,52 @@ msgid "WebToffee WooCommerce Gift Cards"
 msgstr "WebToffee WooCommerce Gift Cards"
 
 #: admin/views/premium_extension_listing.php:287
+#: admin/views/premium_extension_page.php:290
 msgid "Create unlimited gift cards"
 msgstr "Sınırsız hediye kartları oluşturun"
 
 #: admin/views/premium_extension_listing.php:288
+#: admin/views/premium_extension_page.php:291
 msgid "Email gift cards to customers"
 msgstr "Müşterilere hediye kartlarını e-postayla gönderin"
 
 #: admin/views/premium_extension_listing.php:289
+#: admin/views/premium_extension_page.php:292
 msgid "Provide refunds to store credit"
 msgstr "Mağaza kredisine geri ödeme sağlayın"
 
 #: admin/views/premium_extension_listing.php:290
+#: admin/views/premium_extension_page.php:293
 msgid "20+ predefined gift card templates"
 msgstr "Yeni şablon oluştur"
 
 #: admin/views/premium_extension_listing.php:291
+#: admin/views/premium_extension_page.php:294
 msgid "Category wise template listing"
 msgstr "Yeni şablon oluştur"
 
 #: admin/views/premium_extension_listing.php:292
+#: admin/views/premium_extension_page.php:295
 msgid "Add custom templates for gift cards"
 msgstr "Fatura için özel logo"
 
 #: admin/views/premium_extension_listing.php:293
+#: admin/views/premium_extension_page.php:296
 msgid "Generate gift cards based on order status"
 msgstr "Seçilen sipariş durumları için faturalar oluşturur."
 
 #: admin/views/premium_extension_listing.php:294
+#: admin/views/premium_extension_page.php:297
 msgid "Manage user credit balance"
 msgstr "Kullanıcı kredi bakiyesini yönet"
 
 #: admin/views/premium_extension_listing.php:295
+#: admin/views/premium_extension_page.php:298
 msgid "Fixed and custom gift card amounts"
 msgstr "Sabit ve özel hediye kartı tutarları"
 
 #: admin/views/premium_extension_listing.php:296
+#: admin/views/premium_extension_page.php:299
 msgid "Add usage restrictions for gift cards"
 msgstr "Hediye kartları için kullanım kısıtlamaları ekleyin"
 
@@ -4301,30 +4320,37 @@ msgid "Frequently Bought Together for WooCommerce"
 msgstr "WooCommerce için Sıralı Sipariş Numarası"
 
 #: admin/views/premium_extension_listing.php:305
+#: admin/views/premium_extension_page.php:259
 msgid "Automatically generate suggestions based on order history"
 msgstr "Seçilen sipariş durumları için faturalar oluşturur."
 
 #: admin/views/premium_extension_listing.php:306
+#: admin/views/premium_extension_page.php:260
 msgid "Display recommended products on the product pages"
 msgstr "Ürün tablosunda fiyatı göster"
 
 #: admin/views/premium_extension_listing.php:307
+#: admin/views/premium_extension_page.php:261
 msgid "Quick setup page to add & edit recommendations"
 msgstr "Önerileri eklemek ve düzenlemek için hızlı kurulum sayfası"
 
 #: admin/views/premium_extension_listing.php:308
+#: admin/views/premium_extension_page.php:262
 msgid "Multiple product recommendation layouts"
 msgstr "Çoklu ürün öneri düzenleri"
 
 #: admin/views/premium_extension_listing.php:309
+#: admin/views/premium_extension_page.php:263
 msgid "Set up discounts on the recommended product bundle"
 msgstr "Önerilen ürün paketinde indirimler ayarlayın"
 
 #: admin/views/premium_extension_listing.php:310
+#: admin/views/premium_extension_page.php:264
 msgid "Manually create a bought-together list"
 msgstr "Birlikte satın alınanlar listesini manuel olarak oluşturma"
 
 #: admin/views/premium_extension_listing.php:311
+#: admin/views/premium_extension_page.php:265
 msgid ""
 "Use upsells, cross-sells, & related products as frequently bought products"
 msgstr ""
@@ -4332,22 +4358,27 @@ msgstr ""
 "olarak kullanın"
 
 #: admin/views/premium_extension_listing.php:312
+#: admin/views/premium_extension_page.php:266
 msgid "Customize the title, button, and label texts"
 msgstr "Başlık, düğme ve etiket metinlerini özelleştirin"
 
 #: admin/views/premium_extension_listing.php:313
+#: admin/views/premium_extension_page.php:267
 msgid "Customize the display of the recommended products"
 msgstr "Önerilen ürünlerin görünümünü özelleştirin"
 
 #: admin/views/premium_extension_listing.php:319
+#: admin/views/premium_extension_page.php:219
 msgid "Smart Coupons for WooCommerce"
 msgstr "WooCommerce için Akıllı Kuponlar"
 
 #: admin/views/premium_extension_listing.php:322
+#: admin/views/premium_extension_page.php:223
 msgid "Advanced BOGO Coupons"
 msgstr "Gelişmiş seçenekler"
 
 #: admin/views/premium_extension_listing.php:323
+#: admin/views/premium_extension_page.php:224
 msgid "Offer store credits"
 msgstr "Mağaza kredileri teklif edin"
 
@@ -4356,54 +4387,67 @@ msgid "Create attractive gift cards "
 msgstr "Çekici hediye kartları oluşturun "
 
 #: admin/views/premium_extension_listing.php:325
+#: admin/views/premium_extension_page.php:226
 msgid "Give away product coupons"
 msgstr "Ürün kuponlarını dağıtın"
 
 #: admin/views/premium_extension_listing.php:326
+#: admin/views/premium_extension_page.php:227
 msgid "Coupons based on past purchases"
 msgstr "Geçmişteki satın alımlara dayalı kuponlar"
 
 #: admin/views/premium_extension_listing.php:327
+#: admin/views/premium_extension_page.php:228
 msgid "Restrict coupons by country"
 msgstr "Kuponları ülkeye göre kısıtla"
 
 #: admin/views/premium_extension_listing.php:328
+#: admin/views/premium_extension_page.php:229
 msgid "Create and offer sign-up discount coupons"
 msgstr "Kayıt indirim kuponları oluşturun ve sunun"
 
 #: admin/views/premium_extension_listing.php:330
+#: admin/views/premium_extension_page.php:231
 msgid "Customizable countdown sales banner"
 msgstr "Özelleştirilebilir geri sayım satış banner'ı"
 
 #: admin/views/premium_extension_listing.php:332
+#: admin/views/premium_extension_page.php:233
 msgid "Import and export coupons"
 msgstr "Kuponları içe ve dışa aktarma"
 
 #: admin/views/premium_extension_listing.php:333
+#: admin/views/premium_extension_page.php:234
 msgid "Coupon embeds"
 msgstr "Kupon Kullanılmış"
 
 #: admin/views/premium_extension_listing.php:334
+#: admin/views/premium_extension_page.php:235
 msgid "Allow coupon combinations"
 msgstr "Kupon kombinasyonlarına izin ver"
 
 #: admin/views/premium_extension_listing.php:340
+#: admin/views/premium_extension_page.php:242
 msgid "URL Coupons for WooCommerce"
 msgstr "WooCommerce için Akıllı Kuponlar"
 
 #: admin/views/premium_extension_listing.php:343
+#: admin/views/premium_extension_page.php:246
 msgid "Generate custom coupon URLs"
 msgstr "Özel kupon URL'leri oluşturun"
 
 #: admin/views/premium_extension_listing.php:344
+#: admin/views/premium_extension_page.php:247
 msgid "Set up a redirect page"
 msgstr "Yönlendirme sayfası ayarlama"
 
 #: admin/views/premium_extension_listing.php:345
+#: admin/views/premium_extension_page.php:248
 msgid "Automatically add products"
 msgstr "Ürünleri otomatik olarak ekle"
 
 #: admin/views/premium_extension_listing.php:346
+#: admin/views/premium_extension_page.php:249
 msgid "Create QR code coupons"
 msgstr "QR kodu kuponları oluşturun"
 
@@ -4420,6 +4464,7 @@ msgstr ""
 "CNIL ve Daha Fazlası) Uyumluluğu Sağlama Konusunda Yardım Alın."
 
 #: admin/views/premium_extension_listing.php:359
+#: admin/views/premium_extension_page.php:347
 msgid "GDPR Cookie Consent Plugin (CCPA Ready)"
 msgstr "GDPR Cookie Consent Plugin (CCPA Ready)"
 
@@ -4491,14 +4536,264 @@ msgstr "WCAG uyumluluğunu sağlayın"
 msgid "Inclusive web design made simple"
 msgstr "Kapsayıcı web tasarımı basitleştirildi"
 
-#: admin/views/premium_extension_page.php:82
-msgid "You are covered by our 30-Day Money Back Guarantee"
-msgstr "30-gün para iade garantisi"
-
-#: admin/views/premium_extension_page.php:92
-msgid "Supported by a team with 99% Customer Satisfaction Score"
+#: admin/views/premium_extension_page.php:19
+msgid "Accounting & Invoicing"
 msgstr ""
-"%99 Müşteri Memnuniyeti Skoruna sahip bir ekip tarafından desteklenmektedir"
+
+#: admin/views/premium_extension_page.php:20
+msgid ""
+"Automatically generate professional WooCommerce invoices and documents for "
+"all your orders."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:24
+msgid "PDF Invoices, Packing Slips, & Credit Notes"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:30
+msgid ""
+"Automatically generate, customize, and manage professional WooCommerce "
+"invoices, packing slips, and credit notes with advanced automation and tax "
+"compliance features."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:38
+msgid "Shipping Labels, Dispatch Labels, & Delivery Notes"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:108
+#: admin/views/premium_extension_page.php:194
+msgid "Proforma Invoice"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:128
+msgid "QR Code Add-on for WooCommerce PDF Invoices"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:143
+msgid "WooCommerce Request a Quote"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:162
+msgid "Sequential Order Numbers"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:183
+msgid "All in one Invoice bundle"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:185
+msgid ""
+"A complete suite of invoices and shipping documents bundle to create and "
+"print PDF invoices, packing slips, shipping and delivery documents in "
+"WooCommerce."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:198
+#: admin/views/premium_extension_page.php:330
+msgid "Save up to 30% off"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:213
+msgid ""
+"Create and run successful promotional campaigns with the best marketing "
+"tools for WooCommerce"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:225
+msgid "Create attractive gift cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:255
+msgid "WooCommerce Product Recommendations"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:274
+msgid "WooCommerce Coupon Generator"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:278
+msgid "Bulk generate WooCommerce coupons"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:279
+msgid "Bulk export WooCommerce coupons to CSV"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:280
+msgid "Add usage restrictions to coupons"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:286
+msgid "WooCommerce Gift Cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:309
+msgid "ECommerce Marketing Automation App"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:311
+msgid ""
+"Create signup forms, popups, and automated email campaigns with pre-built "
+"workflow templates to capture leads, recover abandoned carts, and grow sales."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:314
+msgid "Try now"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:319
+msgid "Promotion Bundle"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:320
+msgid "WooCommerce Promotion Bundle"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:322
+msgid ""
+"Make powerful promotional campaigns with our WooCommerce promotion bundle. "
+"Create coupon promotions, set up gift cards, and implement popular product "
+"recommendation strategies."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:324
+msgid "Smart Coupons"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:325
+msgid "Product recommendation"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:326
+msgid "Gift cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:342
+msgid "Privacy Compliance"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:343
+msgid ""
+"Ensure compliance with major cookie laws, including, GDPR, CCPA, LGPD, CNIL, "
+"and more."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:353
+msgid ""
+"This Google-certified CMP lets you create a customizable cookie banner, "
+"manage user consent, and ensure global privacy compliance with automatic "
+"script blocking."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:363
+msgid "EU Order Withdrawal Button Plugin for WooCommerce"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:370
+msgid "Add a \"Request Withdrawal\" button to WooCommerce orders"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:371
+msgid "Supports guest withdrawal without an account"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:372
+msgid "Two-step confirmation to prevent errors"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:373
+msgid "Full or partial order withdrawal support"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:374
+msgid "Set the withdrawal period to 2, 7, 14, or 30 days"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:375
+msgid "Exclude products, categories, and product types"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:376
+msgid "Dedicated admin dashboard for all requests"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:377
+msgid "Auto-approve requests, issue refunds, and restock items"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:378
+msgid "Show the withdrawal button only to EU customers"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:379
+msgid "Generate a withdrawal terms and conditions page"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:380
+msgid "Send email confirmation to customers"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:393
+msgid ""
+"The best-in-class import, export, and migration solutions for your "
+"WooCommerce data."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:399
+msgid "Product Import Export Plugin"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:419
+msgid "Order, Coupon, Subscription Export Import"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:440
+msgid "User Import Export Plugin"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:462
+msgid "Product Feed & Sync Manager"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:470
+msgid "WPML multilingual and multicurrency support"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:565
+msgid ""
+"You already have every solution we recommend. Thank you for your support!"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:607
+msgid "30 Day No Risk Money Back Guarantee"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:611
+msgid "99% Satisfaction Rating"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:612
+msgid "Fast Support with 99% Satisfaction Rating"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:659
+#: admin/views/premium_extension_page.php:737
+#: admin/views/premium_extension_page.php:830
+msgid "Get premium"
+msgstr ""
+
+#. translators: 1: strikethrough original price, 2: bold sale price, 3: savings text
+#: admin/views/premium_extension_page.php:795
+#, php-format
+msgid ""
+"Total : <s>%1$s</s> <strong>%2$s</strong> <span class=\"wt-pklist-os-"
+"savings\">(%3$s)</span>"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:812
+msgid "View Bundle"
+msgstr ""
 
 #: admin/views/wt_ipc_free_pro.php:11 admin/views/wt_sdd_free_pro.php:11
 msgid "Supported documents"
@@ -4912,6 +5207,162 @@ msgid ""
 "labels"
 msgstr "Birden çok vergi seçeneği için ürün tablosunda ayrı vergi sütunu"
 
+#: admin/views/_custom_field_editor_form.php:20
+#: admin/views/_custom_field_editor_form.php:23
+#: admin/views/_custom_field_editor_form.php:32
+#: admin/views/_custom_field_editor_form_product.php:24
+#: admin/views/_custom_field_editor_form_product.php:27
+#: admin/views/_custom_field_editor_form_product.php:36
+msgid "Add new"
+msgstr "Yeni ekle"
+
+#: admin/views/_custom_field_editor_form.php:41
+msgid "You can add custom/predefined order meta using its key"
+msgstr ""
+"Anahtarını kullanarak özel/önceden tanımlanmış sipariş meta ekleyebilirsiniz"
+
+#: admin/views/_custom_field_editor_form.php:48
+#: admin/views/_custom_field_editor_form_product.php:52
+msgid "Field Name"
+msgstr "Alan Adı"
+
+#: admin/views/_custom_field_editor_form.php:49
+#: admin/views/_custom_field_editor_form_product.php:53
+msgid "Meta Key"
+msgstr "Anahtar Kelimeler"
+
+#: admin/views/_custom_field_editor_form.php:54
+msgid "To add more than one custom order meta,"
+msgstr "Birden fazla özel sipariş metası eklemek için,"
+
+#: admin/views/_custom_field_editor_form.php:54
+#: admin/views/_custom_field_editor_form_product.php:58
+msgid "upgrade to premium version"
+msgstr "premium sürüme yükseltin"
+
+#: admin/views/_custom_field_editor_form_product.php:45
+msgid "You can add custom/predefined product meta using its key"
+msgstr ""
+"Anahtarını kullanarak özel/önceden tanımlanmış ürün meta verilerini "
+"ekleyebilirsiniz"
+
+#: admin/views/_custom_field_editor_form_product.php:58
+msgid "To add more than one custom product meta,"
+msgstr "Birden fazla özel ürün meta eklemek için,"
+
+#: admin/views/_form_field_generator_new.php:469
+msgid "Order Meta"
+msgstr "Sipariş Metası"
+
+#: admin/views/_form_field_generator_new.php:471
+msgid "Add/Edit Order Meta Field"
+msgstr "Sipariş Meta Alanı Ekle/Düzenle"
+
+#: admin/views/_form_field_generator_new.php:522
+msgid "Product Meta"
+msgstr "Ürün Metası"
+
+#: admin/views/_form_field_generator_new.php:524
+msgid "Add/Edit Product Meta Field"
+msgstr "Ürün Meta Alanını Ekle/Düzenle"
+
+#: admin/views/_form_field_generator_new.php:545
+msgid "Upload your image"
+msgstr "Resminizi yükleyin"
+
+#: admin/views/_form_field_generator_new.php:680
+msgid "Document"
+msgstr "Belge"
+
+#: admin/views/_form_field_generator_new.php:681
+msgid "PDF"
+msgstr "PDF"
+
+#: admin/views/_form_field_generator_new.php:682
+msgid "HTML"
+msgstr "HTML"
+
+#: admin/views/_form_field_generator_new.php:683
+msgid "Action"
+msgstr "Eylem"
+
+#: admin/views/_form_field_generator_new.php:749
+msgid "Add date to invoice number"
+msgstr "Fatura numarasına tarih ekleyin"
+
+#: admin/views/_form_field_generator_new.php:750
+msgid "Invoice number format"
+msgstr "Fatura numarası formatı"
+
+#: admin/views/_form_field_generator_new.php:752
+msgid "Invoice starting number"
+msgstr "Fatura başlangıç numarası"
+
+#: admin/views/_form_field_generator_new.php:753
+msgid "Invoice number length"
+msgstr "Fatura numarası uzunluğu"
+
+#: admin/views/_form_field_generator_new.php:757
+#: admin/views/_form_field_generator_new.php:770
+msgid "Use order date as input instead."
+msgstr "Bunun yerine giriş olarak sipariş tarihini kullanın."
+
+#: admin/views/_form_field_generator_new.php:762
+msgid "Add date to credit note number"
+msgstr "Kredi notu numarasına tarih ekleyin"
+
+#: admin/views/_form_field_generator_new.php:763
+msgid "Creditnote number format"
+msgstr "Kredi notu numarası biçimi"
+
+#: admin/views/_form_field_generator_new.php:764
+msgid "What should be the starting number for your credit notes?"
+msgstr "Kredi notlarınızın başlangıç numarası ne olmalıdır?"
+
+#: admin/views/_form_field_generator_new.php:765
+msgid "What length would you prefer for your credit note"
+msgstr "Kredi notunuz için hangi uzunluğu tercih edersiniz"
+
+#: admin/views/_form_field_generator_new.php:773
+msgid "Add date to proforma invoice number"
+msgstr "Proforma fatura numarasına tarih ekleyin"
+
+#: admin/views/_form_field_generator_new.php:774
+msgid "Proforma invoice number format"
+msgstr "Proforma fatura numarası biçimi"
+
+#: admin/views/_form_field_generator_new.php:775
+msgid "What should be the starting number for your proforma invoices?"
+msgstr "Proforma faturalarınızın başlangıç numarası ne olmalıdır?"
+
+#: admin/views/_form_field_generator_new.php:776
+msgid "What length would you prefer for your proforma invoice"
+msgstr "Proforma faturanız için hangi uzunluğu tercih edersiniz"
+
+#: admin/views/_form_field_generator_new.php:864
+msgid ""
+"Removing year [Y] from the prefix will disable the annual reset functionality"
+msgstr ""
+"[Y] yılını önekten kaldırmak, yıllık sıfırlama işlevini devre dışı "
+"bırakacaktır"
+
+#: admin/views/_form_field_generator_new.php:871
+msgid "Switching to order number will disable the annual reset functionality"
+msgstr ""
+"Sipariş numarasına geçiş, yıllık sıfırlama işlevini devre dışı bırakacaktır"
+
+#: admin/views/_form_field_generator_new.php:887
+msgid ""
+"Removing year [Y] from the suffix will disable the annual reset functionality"
+msgstr ""
+"Son ekten [Y] yılını kaldırmak, yıllık sıfırlama işlevini devre dışı "
+"bırakacaktır"
+
+#: admin/views/_form_field_generator_new.php:915
+msgid "The latest specified starting number will be used after reset"
+msgstr ""
+"Sıfırlamadan sonra belirtilen en son başlangıç numarası kullanılacaktır"
+
 #: common/class-wt-pklist-common.php:661
 msgid "Admin email"
 msgstr "Yönetici e-postası"
@@ -5077,7 +5528,7 @@ msgid "Checkout"
 msgstr "Ödeme"
 
 #. translators: 1: plugin title, 2: uploads folder path
-#: includes/class-wt-pklist-non-apache-info.php:62
+#: includes/class-wt-pklist-non-apache-info.php:63
 #, php-format
 msgid ""
 "The <b>%1$s</b> plugin stores generated PDF files inside the <b>%2$s</b> "
@@ -5088,7 +5539,7 @@ msgstr ""
 "içine kaydeder. Lütfen sunucunuzda bu klasör için genel erişim "
 "kısıtlamalarının ayarlandığından emin olun."
 
-#: includes/class-wt-pklist-non-apache-info.php:81
+#: includes/class-wt-pklist-non-apache-info.php:82
 msgid ""
 "In case of an Nginx server, copy the below snippet into your server config "
 "to restrict public access to the plugin uploads folder, or contact your "
@@ -5098,11 +5549,11 @@ msgstr ""
 "kısıtlamak için aşağıdaki kod parçasını sunucu yapılandırmanıza kopyalayın "
 "veya uygun şekilde yardım almak için sunucu ekibinizle iletişime geçin."
 
-#: includes/class-wt-pklist-promo-banners.php:105
+#: includes/class-wt-pklist-promo-banners.php:106
 msgid "🚀 Your Store Is Growing! Power It With PRO"
 msgstr "🚀 Mağazanız Büyüyor! PRO ile Güçlendirin!"
 
-#: includes/class-wt-pklist-promo-banners.php:106
+#: includes/class-wt-pklist-promo-banners.php:107
 msgid ""
 "Processing 50 or more orders daily? Upgrade to Pro for advanced invoice "
 "customization, automated credit notes and flexible invoice numbering formats "
@@ -5113,12 +5564,12 @@ msgstr ""
 "esnek fatura numaralandırma biçimleri için Pro sürüme yükseltin."
 
 #. translators: %s: coupon code
-#: includes/class-wt-pklist-promo-banners.php:119
+#: includes/class-wt-pklist-promo-banners.php:120
 #, php-format
 msgid "Use coupon code %s at checkout."
 msgstr "Ödeme sırasında %s kupon kodunu kullanın."
 
-#: includes/class-wt-pklist-promo-banners.php:125
+#: includes/class-wt-pklist-promo-banners.php:126
 msgid ""
 "🎉 Congratulations! You've been using the free WebToffee PDF Invoices plugin "
 "for a while, and we'd love to reward you."
@@ -5126,7 +5577,7 @@ msgstr ""
 "🎉 Tebrikler! Bir süredir ücretsiz WebToffee PDF Faturaları eklentisini "
 "kullanıyorsunuz ve sizi ödüllendirmek istiyoruz."
 
-#: includes/class-wt-pklist-promo-banners.php:127
+#: includes/class-wt-pklist-promo-banners.php:128
 msgid ""
 "Enjoy an exclusive 15% discount on the PRO plugin and unlock premium "
 "templates, advanced customization, bulk export tools, priority support, and "
@@ -5136,12 +5587,12 @@ msgstr ""
 "gelişmiş özelleştirme seçeneklerinin, toplu dışa aktarma araçlarının, "
 "öncelikli desteğin ve eksiksiz bir sipariş belgesi iş akışının kilidini açın."
 
-#: includes/class-wt-pklist-promo-banners.php:156
+#: includes/class-wt-pklist-promo-banners.php:157
 msgid "Your Shipping Labels Are Basic. The Pro Add-on Makes Them Powerful."
 msgstr ""
 "Gönderi etiketleriniz basit. Pro eklentisi onları güçlü hale getiriyor."
 
-#: includes/class-wt-pklist-promo-banners.php:157
+#: includes/class-wt-pklist-promo-banners.php:158
 msgid ""
 "The Shipping Pro add-on slots right in and unlocks everything your free "
 "shipping labels can't do - custom sizes, dispatch docs, multiple templates, "
@@ -5150,7 +5601,7 @@ msgstr ""
 "Shipping Pro eklentisi, ücretsiz kargo etiketlerinizin yapamadığı her şeyi "
 "sunar: özel boyutlar, sevk belgeleri, birden fazla şablon ve daha fazlası."
 
-#: includes/class-wt-pklist-promo-banners.php:158
+#: includes/class-wt-pklist-promo-banners.php:159
 msgid "Checkout plugin"
 msgstr "Ödeme eklentisi"
 
@@ -5164,6 +5615,7 @@ msgstr ""
 "%1$s ve %2$s eklentileri mağazanızda aynı anda aktif olamaz. Lütfen "
 "bunlardan birini devre dışı bırakmadan diğerini etkinleştirmeyin."
 
+#. translators: 1$s: Active plugin name, 2$s: Current plugin name
 #: print-invoices-packing-slip-labels-for-woocommerce.php:52
 msgid "Go to plugins page"
 msgstr "Eklentiler sayfasına git"
@@ -5198,14 +5650,14 @@ msgstr "Teslimat notuna altbilgi ekle"
 #: public/modules/deliverynote/deliverynote.php:181
 #: public/modules/dispatchlabel/dispatchlabel.php:163
 #: public/modules/invoice/invoice.php:1315
-#: public/modules/packinglist/packinglist.php:206
+#: public/modules/packinglist/packinglist.php:207
 msgid "Shipping Address"
 msgstr "Teslimat Adresi"
 
 #: public/modules/deliverynote/deliverynote.php:184
 #: public/modules/dispatchlabel/dispatchlabel.php:167
 #: public/modules/invoice/invoice.php:1319
-#: public/modules/packinglist/packinglist.php:210
+#: public/modules/packinglist/packinglist.php:211
 #: public/modules/shippinglabel/shippinglabel.php:165
 msgid "SSN number"
 msgstr "Kimlik numarası"
@@ -5213,7 +5665,7 @@ msgstr "Kimlik numarası"
 #: public/modules/deliverynote/deliverynote.php:185
 #: public/modules/dispatchlabel/dispatchlabel.php:168
 #: public/modules/invoice/invoice.php:1320
-#: public/modules/packinglist/packinglist.php:211
+#: public/modules/packinglist/packinglist.php:212
 #: public/modules/shippinglabel/shippinglabel.php:164
 msgid "VAT number"
 msgstr "Vergi numarası"
@@ -5243,8 +5695,8 @@ msgstr "Teslim notunu yazdır"
 #: public/modules/dispatchlabel/dispatchlabel.php:423
 #: public/modules/invoice/invoice.php:1541
 #: public/modules/invoice/invoice.php:2186
-#: public/modules/packinglist/packinglist.php:316
-#: public/modules/packinglist/packinglist.php:485
+#: public/modules/packinglist/packinglist.php:317
+#: public/modules/packinglist/packinglist.php:486
 #: public/modules/shippinglabel/shippinglabel.php:348
 #: public/modules/shippinglabel/shippinglabel.php:553
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:344
@@ -5486,6 +5938,7 @@ msgid "Invoice Date"
 msgstr "Fatura tarihi"
 
 #: public/modules/invoice/invoice.php:1311
+#: public/modules/packinglist/packinglist.php:206
 #: public/modules/shippinglabel/shippinglabel.php:159
 msgid "Order Date"
 msgstr "Sipariş Tarihi"
@@ -5540,7 +5993,7 @@ msgid "Download Invoice"
 msgstr "Faturayı İndir"
 
 #: public/modules/invoice/invoice.php:1542
-#: public/modules/packinglist/packinglist.php:323
+#: public/modules/packinglist/packinglist.php:324
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:352
 msgid "Download"
 msgstr "İndir"
@@ -5570,7 +6023,7 @@ msgstr "gerekli olduğunu gösterir"
 msgid "Enter your email address"
 msgstr "E-posta adresinizi girin"
 
-#: public/modules/invoice/views/general.php:58
+#: public/modules/invoice/views/general.php:57
 #, php-format
 msgid ""
 "I consent to receive newsletters and exclusive offers from WebToffee and "
@@ -5880,24 +6333,24 @@ msgstr "Ambalaj listesine müşteri notu ekleyin"
 msgid "Adds Footer to the packing slip"
 msgstr "Paket listesine altbilgi ekle"
 
-#: public/modules/packinglist/packinglist.php:296
-#: public/modules/packinglist/packinglist.php:317
-#: public/modules/packinglist/packinglist.php:334
+#: public/modules/packinglist/packinglist.php:297
+#: public/modules/packinglist/packinglist.php:318
 #: public/modules/packinglist/packinglist.php:335
+#: public/modules/packinglist/packinglist.php:336
 msgid "Print Packing slip"
 msgstr "Ambalaj fişini yazdır"
 
-#: public/modules/packinglist/packinglist.php:311
+#: public/modules/packinglist/packinglist.php:312
 msgid "Print/Download Packing slip"
 msgstr "Ambalaj Kağıdı"
 
-#: public/modules/packinglist/packinglist.php:324
-#: public/modules/packinglist/packinglist.php:341
+#: public/modules/packinglist/packinglist.php:325
 #: public/modules/packinglist/packinglist.php:342
+#: public/modules/packinglist/packinglist.php:343
 msgid "Download Packing slip"
 msgstr "Ambalaj Kağıdı"
 
-#: public/modules/packinglist/packinglist.php:417
+#: public/modules/packinglist/packinglist.php:418
 msgid "Unable to print packling slip. Please check the items in the order."
 msgstr ""
 "Paketleme fişi yazdırılamıyor. Lütfen siparişteki ürünleri kontrol edin."
@@ -6416,31 +6869,25 @@ msgstr "Tonaj vergileri"
 msgid "Valuation deposit"
 msgstr "Değerleme depozitosu"
 
-#. Plugin Name of the plugin/theme
-msgid ""
-"WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and "
-"Shipping Labels"
-msgstr ""
-"WebToffee WooCommerce PDF Faturaları, Paketleme Fişleri, Teslimat Notları ve "
-"Nakliye Etiketleri"
+#~ msgid "This preview reflects your current settings from the General tab."
+#~ msgstr "Bu önizleme, Genel sekmesindeki mevcut ayarlarınızı yansıtır."
 
-#. Plugin URI of the plugin/theme
-msgid ""
-"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
-msgstr ""
-"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+#~ msgid "Premium features"
+#~ msgstr "Ayrıcalıklı özellikler"
 
-#. Description of the plugin/theme
-msgid "Prints Packing List,Invoice,Delivery Note and Shipping Label."
-msgstr "Paket Listesi, Fatura, İrsaliye ve Sevkiyat Etiketini yazdırır."
+#, php-format
+#~ msgid ""
+#~ "Toggle the pro features on and off to see how they transform your %s."
+#~ msgstr ""
+#~ "Profesyonel özellikleri açıp kapatarak %s'ınızın nasıl dönüştüğünü görün."
 
-#. Author of the plugin/theme
-msgid "WebToffee"
-msgstr "Teknik Servis Uzmanı | Premium Servis Hizmeti"
+#~ msgid "You are covered by our 30-Day Money Back Guarantee"
+#~ msgstr "30-gün para iade garantisi"
 
-#. Author URI of the plugin/theme
-msgid "https://www.webtoffee.com/"
-msgstr "https://www.webtoffee.com/"
+#~ msgid "Supported by a team with 99% Customer Satisfaction Score"
+#~ msgstr ""
+#~ "%99 Müşteri Memnuniyeti Skoruna sahip bir ekip tarafından "
+#~ "desteklenmektedir"
 
 #~ msgid "Black Friday Cyber Monday 2025"
 #~ msgstr "Kara Cuma Siber Pazartesi 2025"

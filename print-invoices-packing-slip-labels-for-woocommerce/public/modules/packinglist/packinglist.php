@@ -203,6 +203,7 @@ class Wf_Woocommerce_Packing_List_Packinglist {
 			// these fields are the classname in template Eg: `company_logo` will point to `wfte_company_logo`
 			$settings = array(
 				'product_table'               => __( 'Product Table', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+				'order_date'                  => __( 'Order Date', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 				'shipping_address'            => __( 'Shipping Address', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 				'customer_note'               => __( 'Customer note', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 				'footer'                      => __( 'Footer', 'print-invoices-packing-slip-labels-for-woocommerce' ),

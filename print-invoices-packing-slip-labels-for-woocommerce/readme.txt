@@ -1,11 +1,11 @@
 === WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels ===
 Contributors: WebToffee
-Version: 5.0.1
+Version: 5.0.2
 Donate link:https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
 Tags: WooCommerce PDF invoices, WooCommerce invoice, packing slips, shipping label, woocommerce print invoice
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 5.0.1
+Stable tag: 5.0.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -76,7 +76,7 @@ For international sales, many countries require invoices as part of their standa
 Beyond compliance, these documents enhance customer experience by adding a human touch and serving as an additional communication channel between you and your buyer.
 
 
-&#9989; Tested OK with WooCommerce 11.0.1
+&#9989; Tested OK with WooCommerce 11.1.1
 &#9989; Tested OK up to PHP 8.4
 
 
@@ -299,13 +299,19 @@ Yes. The plugin addresses the needs of a multilingual website and is compatible 
 
 == Changelog ==
 
-= 5.0.1 2026-08-20 =
-* [Fix] - Bulk Printing Invoices not detecting selected orders from the Order Listing page.
+= 5.0.2 2026-09-22 =
+* [Add] - Added date format option for the order date on the packing slip.
+* [Add] - Added support for customizing the product table font size.
+* [Compatibility] - Tested OK with Plugin Check plugin v2.1.0
+* [Compatibility] - WooCommerce 11.1.1 
 
 [See changelog for all versions](https://plugins.svn.wordpress.org/print-invoices-packing-slip-labels-for-woocommerce/trunk/changelog.txt)
 
  
 == Upgrade Notice ==
 
-= 5.0.1 =
-* [Fix] - Bulk Printing Invoices not detecting selected orders from the Order Listing page.
+= 5.0.2 =
+* [Add] - Added date format option for the order date on the packing slip.
+* [Add] - Added support for customizing the product table font size.
+* [Compatibility] - Tested OK with Plugin Check plugin v2.1.0
+* [Compatibility] - WooCommerce 11.1.1 

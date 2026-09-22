@@ -226,8 +226,16 @@ var pklist_customize = {};
 			});
 		},
 		saveTheme: function (do_current_theme_activate = false, silentSuccess = false, skipLoader = false) {
-			let templateName = $('.wf_template_name_field').val();
-			if (templateName === '') {
+			/*
+			 * The name input is only rendered on the full customizer; preview-only screens
+			 * (e.g. Packing slip in the free version) have none, so fall back to a default
+			 * rather than sending an undefined name.
+			 */
+			var $templateNameField = $('.wf_template_name_field');
+			var templateName = $templateNameField.length
+				? $templateNameField.val()
+				: (wf_woocommerce_packing_list_customizer.labels.default_template_name || 'Default template');
+			if ($templateNameField.length && templateName === '') {
 				wf_notify_msg.error(wf_woocommerce_packing_list_customizer.labels.template_required);
 				return;
 			}
@@ -239,7 +247,7 @@ var pklist_customize = {};
 				template_id: pklist_customize.template_id,
 				codeview_html: pklist_customize.getCodeViewHtml(),
 				def_template: pklist_customize.template_base,
-				name: $('.wf_template_name_field').val(),
+				name: templateName,
 			};
 			if (!skipLoader) {
 				this.setLoader();
@@ -694,6 +702,16 @@ var pklist_customize = {};
 								vl = tgt_elm.attr(prop);
 								 if (typeof vl !== 'undefined') {
 									elm.val(vl);
+									if ("data-head-font-size" === prop || "data-body-font-size" === prop) /* mirror the product table size on the canvas */
+									{
+										var pt_cell = ("data-head-font-size" === prop) ? 'th' : 'td';
+										var pt_size = parseFloat(vl);
+										tgt_elm.find(pt_cell).css({
+											'font-size': (pt_size > 0) ? pt_size + 'px' : '',
+											'word-wrap': (pt_size > 0) ? 'break-word' : '',
+											'overflow-wrap': (pt_size > 0) ? 'break-word' : ''
+										});
+									}
 								} else {
 									/* Use default value if attribute is not set */
 									var default_val = elm.attr('data-default');
@@ -738,6 +756,36 @@ var pklist_customize = {};
 			});
 
 			/* show missing text  */
+			/* Column toggles carry no css property, so the loop above never reaches them.
+			   Hide the ones whose column is absent from the template, otherwise they keep
+			   their width and push the rows that follow out of alignment. */
+			$('.wf_side_panel .wf_cst_toggler').each(function () {
+				var toggle_elm = $(this);
+				var toggle_tgt = toggle_elm.attr('data-elm');
+				if (typeof toggle_tgt == 'undefined') {
+					return;
+				}
+				toggle_tgt = pklist_customize.getAttributItems(toggle_tgt)[0].trim();
+				var toggle_frmgrp = toggle_elm.closest('.wf_side_panel_frmgrp');
+				if ($('.wf_customize_container').find('.wfte_' + toggle_tgt).length > 0) {
+					toggle_frmgrp.show();
+				} else {
+					toggle_frmgrp.hide();
+				}
+			});
+
+			/* A spacer holds no input, so neither loop above reaches it. It exists only to
+			   indent the field that follows, hide it when that field is hidden. */
+			$('.wf_side_panel .wt_cst_spacer').each(function () {
+				var spacer_grp = $(this);
+				var spaced_grp = spacer_grp.next('.wf_side_panel_frmgrp');
+				if (spaced_grp.length > 0 && 'none' === spaced_grp.css('display')) {
+					spacer_grp.hide();
+				} else {
+					spacer_grp.show();
+				}
+			});
+
 			this.missingWarning();
 
 			/* binding events */
@@ -1175,6 +1223,16 @@ var pklist_customize = {};
 								}
 								tgt_elm.attr(prop, prop_val);
 								code_tgt_elm.attr(prop, prop_val);
+								if ("data-head-font-size" === prop || "data-body-font-size" === prop) /* mirror the product table size on the canvas */
+								{
+									var pt_cell = ("data-head-font-size" === prop) ? 'th' : 'td';
+									var pt_size = parseFloat(prop_val);
+									tgt_elm.find(pt_cell).css({
+										'font-size': (pt_size > 0) ? pt_size + 'px' : '',
+										'word-wrap': (pt_size > 0) ? 'break-word' : '',
+										'overflow-wrap': (pt_size > 0) ? 'break-word' : ''
+									});
+								}
 								if ("th" === tgt_elm.prop('nodeName').toLowerCase()) {
 									var img_col_ind = tgt_elm.index() + 1;
 									var img_css_prop = ("data-img-width" === prop) ? 'width' : 'height';
@@ -1241,6 +1299,13 @@ var pklist_customize = {};
 					}
 				}
 				this.updateCodeViewHtml(code_view_dom);
+
+				/*
+				 * Property edits (e.g. the Order Date "Format" dropdown) only updated the preview.
+				 * Preview-only documents have no Save button, so persist them the same way the
+				 * show/hide toggles do. The scheduler debounces, so keyup-driven inputs are safe.
+				 */
+				this.scheduleAutosaveAfterVisibilityToggle();
 			}
 		},
 		updateCodeViewHtml: function (htmlDom) {
@@ -1376,14 +1441,22 @@ var pklist_customize = {};
 			if (!autosaveTypes[tt]) {
 				return;
 			}
-			if (!pklist_customize.template_id || 0 === pklist_customize.template_id || '0' === pklist_customize.template_id) {
-				return;
-			}
+			/*
+			 * A template_id of 0 means this document type has no saved template yet, which is the
+			 * default state for Packing slip. Bailing out here left the toggle unsaved and showed
+			 * no message; save_theme already creates (and activates) a template when the id is 0,
+			 * so let the save through instead.
+			 */
+			/*
+			 * Wait for editing to settle before saving. Each save reports success, so a short
+			 * delay made the message appear on every toggle and keystroke. Rapid changes now
+			 * collapse into a single save, and a single message once the user pauses.
+			 */
 			clearTimeout(pklist_customize._visibilityToggleAutosaveTimer);
 			pklist_customize._visibilityToggleAutosaveTimer = setTimeout(function () {
 				/* skipLoader: avoid full-screen overlay on each toggle; show standard success message from server */
 				pklist_customize.saveTheme(false, false, true);
-			}, 600);
+			}, 2000);
 		},
 		render_page_properties_from_main_div: function () {
 			// temporary div for applying the page attributes from adc_main div

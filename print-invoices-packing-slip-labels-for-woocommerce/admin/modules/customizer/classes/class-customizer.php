@@ -35,7 +35,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 			// order date
 			$order_date_match  = array();
 			$order_date_format = 'm/d/Y';
-			if ( preg_match( '/data-order_date-format="(.*?)"/s', $html, $order_date_match ) ) {
+			if ( preg_match( '/data-order_date-format="(.*?)"/s', $html, $order_date_match ) && '' !== trim( $order_date_match[1] ) ) {
 				$order_date_format = $order_date_match[1];
 			}
 			$order_date                        = get_the_date( $order_date_format, $order_id );
@@ -61,7 +61,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 			// dispatch date
 			$dispatch_date_match  = array();
 			$dispatch_date_format = 'm/d/Y';
-			if ( preg_match( '/data-dispatch_date-format="(.*?)"/s', $html, $dispatch_date_match ) ) {
+			if ( preg_match( '/data-dispatch_date-format="(.*?)"/s', $html, $dispatch_date_match ) && '' !== trim( $dispatch_date_match[1] ) ) {
 				$dispatch_date_format = $dispatch_date_match[1];
 			}
 			$dispatch_date                        = get_the_date( $dispatch_date_format, $order_id );
@@ -643,7 +643,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 			$tbody_tag       = '';
 			if ( preg_match( '/<tbody(.*?)>/s', $product_tb_html, $tbody_tag_match ) ) {
 				if ( ! is_null( $box_packing ) ) {
-					$find_replace[ $tbody_tag_match[0] ] = $tbody_tag_match[0] . self::generate_package_product_table_product_row_html( $column_list_options, $template_type, $order, $box_packing, $order_package );
+					$find_replace[ $tbody_tag_match[0] ] = $tbody_tag_match[0] . self::generate_package_product_table_product_row_html( $column_list_options, $template_type, $order, $box_packing, $order_package, $column_list_options_value );
 				} else {
 					$find_replace[ $tbody_tag_match[0] ] = $tbody_tag_match[0] . self::generate_product_table_product_row_html( $column_list_options, $template_type, $order, $column_list_options_value );
 				}
@@ -678,7 +678,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 	* Render product table column data for package type documents
 	*
 	*/
-	private static function generate_package_product_table_product_column_html( $wc_version, $the_options, $order, $template_type, $_product, $item, $columns_list_arr ) {
+	private static function generate_package_product_table_product_column_html( $wc_version, $the_options, $order, $template_type, $_product, $item, $columns_list_arr, $column_list_options_value = array() ) {
 		$html                = '';
 		$product_row_columns = array(); // for html generation
 		$product_id          = 0;
@@ -706,7 +706,8 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 					$img_url     = plugin_dir_url( plugin_dir_path( __FILE__ ) ) . 'assets/images/thumbnail-preview.png';
 					$column_data = '<img src="' . esc_attr( $img_url ) . '" style="max-width:30px; max-height:30px; border-radius:25%;" class="wfte_product_image_thumb"/>';
 				} else {
-					$column_data = self::generate_product_image_column_data( $product_id, $variation_id, $parent_id );
+					$img_style   = isset( $column_list_options_value[ $columns_key ] ) ? $column_list_options_value[ $columns_key ] : array();
+					$column_data = self::generate_product_image_column_data( $product_id, $variation_id, $parent_id, $img_style );
 				}
 			} elseif ( 'sku' === $columns_key || '-sku' === $columns_key ) {
 				if ( empty( $_product ) ) {
@@ -833,7 +834,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 	* Render product table row HTML for package type documents
 	*
 	*/
-	private static function generate_package_product_table_product_row_html( $columns_list_arr, $template_type, $order = null, $box_packing = null, $order_package = null ) {
+	private static function generate_package_product_table_product_row_html( $columns_list_arr, $template_type, $order = null, $box_packing = null, $order_package = null, $column_list_options_value = array() ) {
 		$html = '';
 		if ( ! is_null( $order ) ) {
 			$order_package = apply_filters( 'wf_pklist_alter_package_order_items', $order_package, $template_type, $order );
@@ -851,7 +852,7 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 				}
 
 				$item['serial_no'] = $serial_no;
-				$html             .= self::generate_package_product_table_product_column_html( $wc_version, $the_options, $order, $template_type, $_product, $item, $columns_list_arr );
+				$html             .= self::generate_package_product_table_product_column_html( $wc_version, $the_options, $order, $template_type, $_product, $item, $columns_list_arr, $column_list_options_value );
 				++$serial_no;
 
 			}
@@ -916,7 +917,9 @@ class Wf_Woocommerce_Packing_List_CustomizerLib {
 	private static function get_image_dimension_css( $value ) {
 		$value = trim( $value );
 		if ( is_numeric( $value ) ) {
-			return $value . 'px';
+			/* A negative size is not a valid dimension; ignore it rather than emitting
+			   invalid CSS that collapses the image. */
+			return ( (float) $value > 0 ) ? $value . 'px' : '';
 		}
 		return $value;
 	}

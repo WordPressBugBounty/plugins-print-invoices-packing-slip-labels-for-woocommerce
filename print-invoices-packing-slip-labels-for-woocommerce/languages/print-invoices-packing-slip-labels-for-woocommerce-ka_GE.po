@@ -1,8 +1,11 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, "
 "Delivery Notes and Shipping Labels\n"
-"POT-Creation-Date: 2026-07-17 10:44+0530\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/print-invoices-"
+"packing-slip-labels-for-woocommerce\n"
+"POT-Creation-Date: 2026-09-18T03:35:34+00:00\n"
 "PO-Revision-Date: 2026-07-17 10:46+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,8 +16,6 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
 "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -22,6 +23,39 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: tests\n"
 "X-Poedit-SearchPathExcluded-2: includes/vendor\n"
 "X-Poedit-SearchPathExcluded-3: vendor\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
+
+#. Plugin Name of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid ""
+"WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and "
+"Shipping Labels"
+msgstr ""
+"WebToffee WooCommerce PDF ინვოისები, შეფუთვის ბილეთები, მიწოდების შენიშვნები "
+"და მიწოდების ეტიკეტები"
+
+#. Plugin URI of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+msgstr ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+
+#. Description of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "Prints Packing List,Invoice,Delivery Note and Shipping Label."
+msgstr "Ბეჭდავს შეფუთვის სიას,ინვოისს,მიტანის შენიშვნას და გადაზიდვის ეტიკეტს."
+
+#. Author of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "WebToffee"
+msgstr "WebToffee"
+
+#. Author URI of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "https://www.webtoffee.com/"
+msgstr "https://www.webtoffee.com/"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:142
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:66
@@ -55,13 +89,13 @@ msgid "One or more order do not have invoice generated. Generate manually?"
 msgstr "Ერთ ან მეტ შეკვეთას არ აქვს ინვოისი. გამოიმუშავეთ ხელით?"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:148
-#: admin/class-wf-woocommerce-packing-list-admin.php:1659
-#: admin/class-wf-woocommerce-packing-list-admin.php:2315
-#: admin/class-wf-woocommerce-packing-list-admin.php:4674
-#: admin/class-wf-woocommerce-packing-list-admin.php:4785
-#: admin/class-wf-woocommerce-packing-list-admin.php:4968
+#: admin/class-wf-woocommerce-packing-list-admin.php:1667
+#: admin/class-wf-woocommerce-packing-list-admin.php:2323
+#: admin/class-wf-woocommerce-packing-list-admin.php:4682
+#: admin/class-wf-woocommerce-packing-list-admin.php:4793
+#: admin/class-wf-woocommerce-packing-list-admin.php:4976
 #: admin/modules/customizer/customizer.php:58
-#: admin/modules/customizer/customizer.php:257
+#: admin/modules/customizer/customizer.php:258
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:132
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:72
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:92
@@ -81,8 +115,9 @@ msgid "is required"
 msgstr "აუცილებელია"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:151
-#: admin/class-wf-woocommerce-packing-list-admin.php:4613
+#: admin/class-wf-woocommerce-packing-list-admin.php:4621
 #: admin/views/documents.php:19 admin/views/freevspro.php:7
+#: admin/views/premium_extension_page.php:187
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:75
 #: public/modules/invoice/invoice.php:150
 #: public/modules/invoice/invoice.php:164
@@ -147,7 +182,7 @@ msgid "Save"
 msgstr "შენახვა"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:160
-#: admin/class-wf-woocommerce-packing-list-admin.php:2317
+#: admin/class-wf-woocommerce-packing-list-admin.php:2325
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:82
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:93
 msgid "Please enter mandatory fields"
@@ -305,6 +340,7 @@ msgstr "ზოგადი პარამეტრები"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:884
 #: admin/class-wf-woocommerce-packing-list-admin.php:885
+#: admin/views/premium_extension_page.php:564
 msgid "Extensions"
 msgstr "გაფართოებები"
 
@@ -325,11 +361,11 @@ msgstr "წვდომა აკრძალულია."
 #: admin/class-wf-woocommerce-packing-list-admin.php:1020
 #: admin/class-wf-woocommerce-packing-list-admin.php:1072
 #: admin/class-wf-woocommerce-packing-list-admin.php:1160
-#: admin/class-wf-woocommerce-packing-list-admin.php:2743
-#: admin/class-wf-woocommerce-packing-list-admin.php:4229
-#: admin/class-wf-woocommerce-packing-list-admin.php:4349
-#: admin/class-wf-woocommerce-packing-list-admin.php:4405
-#: admin/class-wf-woocommerce-packing-list-admin.php:4532
+#: admin/class-wf-woocommerce-packing-list-admin.php:2751
+#: admin/class-wf-woocommerce-packing-list-admin.php:4237
+#: admin/class-wf-woocommerce-packing-list-admin.php:4357
+#: admin/class-wf-woocommerce-packing-list-admin.php:4413
+#: admin/class-wf-woocommerce-packing-list-admin.php:4540
 msgid "You are not allowed to do this action"
 msgstr "Ამ ქმედების განხორციელების უფლება არ გაქვთ"
 
@@ -382,31 +418,31 @@ msgstr "Ცარიელი შეკვეთა"
 msgid "It seems this order is not yours."
 msgstr "Როგორც ჩანს, ეს შეკვეთა თქვენი არ არის."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1788
-#: admin/class-wf-woocommerce-packing-list-admin.php:5028
-#: admin/modules/customizer/customizer.php:452
+#: admin/class-wf-woocommerce-packing-list-admin.php:1796
+#: admin/class-wf-woocommerce-packing-list-admin.php:5036
+#: admin/modules/customizer/customizer.php:454
 msgid "Settings Updated"
 msgstr "Პარამეტრები განახლდა"
 
 #. translators: %s: method
 #. translators: %s: Shipping method name
-#: admin/class-wf-woocommerce-packing-list-admin.php:2241
+#: admin/class-wf-woocommerce-packing-list-admin.php:2249
 #: public/modules/invoice/invoice.php:1112
 #, php-format
 msgid "via %s"
 msgstr "%s"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2246
+#: admin/class-wf-woocommerce-packing-list-admin.php:2254
 msgid "Free!"
 msgstr "უფასო!"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2404
+#: admin/class-wf-woocommerce-packing-list-admin.php:2412
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:182
 msgid "Item with same meta key already exists"
 msgstr "Ელემენტი იგივე მეტა ღილაკით უკვე არსებობს"
 
 #. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 msgid ""
 "This will remove all invoice numbers created by WooCommerce PDF Invoices, "
 "Packing Slips, Delivery Notes & Shipping Labels by WebToffee."
@@ -415,11 +451,13 @@ msgstr ""
 "ინვოისების, შეფუთვის ბილეთების, მიწოდების შენიშვნებისა და WebToffee-ს მიერ "
 "მიწოდების ეტიკეტების მიერ."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 msgid "Note:"
 msgstr "შენიშვნა:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 #, php-format
 msgid ""
 "Before using this tool, please make sure you followed the steps described in "
@@ -428,107 +466,107 @@ msgstr ""
 "Ამ ხელსაწყოს გამოყენებამდე დარწმუნდით, რომ მიჰყევით %1$s სტატიაში აღწერილ "
 "ნაბიჯებს, თუ როგორ გადააყენოთ/წაშალოთ არსებული ინვოისის ნომრები %2$s."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2479
+#: admin/class-wf-woocommerce-packing-list-admin.php:2487
 msgid "Delete all generated invoice numbers"
 msgstr "Ყველა გენერირებული ინვოისის ნომრის წაშლა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2480
-#: admin/modules/customizer/views/customize.php:946
+#: admin/class-wf-woocommerce-packing-list-admin.php:2488
+#: admin/modules/customizer/views/customize.php:944
 msgid "Delete"
 msgstr "წაშლა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2758
+#: admin/class-wf-woocommerce-packing-list-admin.php:2766
 msgid "Updated"
 msgstr "განახლდა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2764
+#: admin/class-wf-woocommerce-packing-list-admin.php:2772
 msgid "No modules"
 msgstr "Მოდულების გარეშე"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4149
-#: admin/class-wf-woocommerce-packing-list-admin.php:4180
+#: admin/class-wf-woocommerce-packing-list-admin.php:4157
+#: admin/class-wf-woocommerce-packing-list-admin.php:4188
 msgid "Do not show again"
 msgstr "აღარ მაჩვენო"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4155
-#: admin/class-wf-woocommerce-packing-list-admin.php:4168
-#: admin/class-wf-woocommerce-packing-list-admin.php:4186
-#: admin/modules/customizer/views/customize.php:928
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:182
+#: admin/class-wf-woocommerce-packing-list-admin.php:4163
+#: admin/class-wf-woocommerce-packing-list-admin.php:4176
+#: admin/class-wf-woocommerce-packing-list-admin.php:4194
+#: admin/modules/customizer/views/customize.php:926
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:183
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:113
 #: admin/views/admin-settings-debug.php:185
 #: admin/views/admin-settings-debug.php:241
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4158
-#: admin/class-wf-woocommerce-packing-list-admin.php:4189
+#: admin/class-wf-woocommerce-packing-list-admin.php:4166
+#: admin/class-wf-woocommerce-packing-list-admin.php:4197
 msgid "Generate"
 msgstr "გენერაცია"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4165
+#: admin/class-wf-woocommerce-packing-list-admin.php:4173
 msgid "Generating the document..."
 msgstr "Დოკუმენტის გენერირება..."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4249
-#: admin/modules/customizer/customizer.php:258
+#: admin/class-wf-woocommerce-packing-list-admin.php:4257
+#: admin/modules/customizer/customizer.php:259
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:176
 msgid "Success"
 msgstr "წარმატება"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4254
+#: admin/class-wf-woocommerce-packing-list-admin.php:4262
 msgid "Cannot close this banner"
 msgstr "Ამ ბანერის დახურვა ვერ მოხერხდა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4431
+#: admin/class-wf-woocommerce-packing-list-admin.php:4439
 msgid "Settings are empty"
 msgstr "Პარამეტრები ცარიელია"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4478
+#: admin/class-wf-woocommerce-packing-list-admin.php:4486
 msgid "Imported successfully"
 msgstr "შემოტანა წარმატებულია"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4482
+#: admin/class-wf-woocommerce-packing-list-admin.php:4490
 msgid "Incorrect file"
 msgstr "Ფაილი არასწორია"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4486
+#: admin/class-wf-woocommerce-packing-list-admin.php:4494
 msgid "Error: Empty JSON file"
 msgstr "Შეცდომა: ცარიელი JSON ფაილი"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4490
+#: admin/class-wf-woocommerce-packing-list-admin.php:4498
 msgid "Error: Invalid JSON data"
 msgstr "Შეცდომა: JSON-ის არასწორი მონაცემები"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4494
+#: admin/class-wf-woocommerce-packing-list-admin.php:4502
 msgid "Error uploading the file"
 msgstr "Ფაილის ატვირთვის შეცდომა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4564
+#: admin/class-wf-woocommerce-packing-list-admin.php:4572
 msgid "Error:"
 msgstr "შეცდომა:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4564
+#: admin/class-wf-woocommerce-packing-list-admin.php:4572
 msgid "Truncation did not complete as expected."
 msgstr "Შეკვეცა არ დასრულებულა, როგორც მოსალოდნელი იყო."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4612
+#: admin/class-wf-woocommerce-packing-list-admin.php:4620
 #: admin/views/general.php:360
 msgid "Total files"
 msgstr "Სულ ფაილები"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4614
+#: admin/class-wf-woocommerce-packing-list-admin.php:4622
 #: admin/views/documents.php:23 admin/views/freevspro.php:8
 #: public/modules/packinglist/packinglist.php:70
 #: public/modules/packinglist/packinglist.php:92
 #: public/modules/packinglist/packinglist.php:93
-#: public/modules/packinglist/packinglist.php:310
-#: public/modules/packinglist/packinglist.php:453
+#: public/modules/packinglist/packinglist.php:311
+#: public/modules/packinglist/packinglist.php:454
 #: public/modules/packinglist/views/admin-settings.php:41
 msgid "Packing slip"
 msgstr "შესაფუთი ფურცელი"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4615
+#: admin/class-wf-woocommerce-packing-list-admin.php:4623
 #: admin/views/documents.php:40 admin/views/freevspro.php:10
 #: public/modules/shippinglabel/shippinglabel.php:66
 #: public/modules/shippinglabel/shippinglabel.php:221
@@ -538,7 +576,7 @@ msgstr "შესაფუთი ფურცელი"
 msgid "Shipping label"
 msgstr "გადაზიდვის ეტიკეტი"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4616
+#: admin/class-wf-woocommerce-packing-list-admin.php:4624
 #: admin/views/documents.php:48 admin/views/freevspro.php:12
 #: public/modules/deliverynote/deliverynote.php:65
 #: public/modules/deliverynote/deliverynote.php:87
@@ -549,7 +587,7 @@ msgstr "გადაზიდვის ეტიკეტი"
 msgid "Delivery note"
 msgstr "Შენიშვნა მიტანის შესახებ"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4617
+#: admin/class-wf-woocommerce-packing-list-admin.php:4625
 #: admin/views/documents.php:44 admin/views/freevspro.php:11
 #: public/modules/dispatchlabel/dispatchlabel.php:65
 #: public/modules/dispatchlabel/dispatchlabel.php:87
@@ -559,31 +597,31 @@ msgstr "Შენიშვნა მიტანის შესახებ"
 msgid "Dispatch label"
 msgstr "Დისპეტჩერიზაციის ეტიკეტი"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4618
+#: admin/class-wf-woocommerce-packing-list-admin.php:4626
 #: admin/views/documents.php:62
 msgid "Picklist"
 msgstr "Ასარჩევი სია"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4619
+#: admin/class-wf-woocommerce-packing-list-admin.php:4627
 #: admin/views/documents.php:88 admin/views/freevspro.php:13
 msgid "Proforma invoice"
 msgstr "პროფორმა ინვოისი"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4620
+#: admin/class-wf-woocommerce-packing-list-admin.php:4628
 #: admin/views/documents.php:27 admin/views/freevspro.php:9
 msgid "Credit note"
 msgstr "საკრედიტო შენიშვნა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4806
+#: admin/class-wf-woocommerce-packing-list-admin.php:4814
 #: admin/views/_form_field_generator_new.php:688
 msgid "No temporary file found"
 msgstr "Დროებითი ფაილი ვერ მოიძებნა"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4811
+#: admin/class-wf-woocommerce-packing-list-admin.php:4819
 msgid "Successfully cleared all temp files."
 msgstr "Დროების ყველა ფაილი წარმატებით გასუფთავდა."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4812
+#: admin/class-wf-woocommerce-packing-list-admin.php:4820
 msgid "No files found."
 msgstr "ფაილები ვერ მოიძებნა."
 
@@ -1041,9 +1079,9 @@ msgstr "Მიიღეთ პლაგინი"
 #: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:126
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:138
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:126
-#: includes/class-wt-pklist-promo-banners.php:104
-#: includes/class-wt-pklist-promo-banners.php:124
-#: includes/class-wt-pklist-promo-banners.php:155
+#: includes/class-wt-pklist-promo-banners.php:105
+#: includes/class-wt-pklist-promo-banners.php:125
+#: includes/class-wt-pklist-promo-banners.php:156
 msgid "Dismiss"
 msgstr "მოსილება"
 
@@ -1083,6 +1121,8 @@ msgstr "FTP/SFTP და URL-ით შემოტანა"
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:129
 #: admin/views/premium_extension_listing.php:187
 #: admin/views/premium_extension_listing.php:222
+#: admin/views/premium_extension_page.php:424
+#: admin/views/premium_extension_page.php:489
 msgid "Schedule automated import & export"
 msgstr "Ავტომატური იმპორტისა და ექსპორტის დაგეგმვა"
 
@@ -1130,6 +1170,7 @@ msgstr "Დააწესეთ ვაუჩერის დამატებ�
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:112
 #: admin/views/premium_extension_listing.php:331
+#: admin/views/premium_extension_page.php:232
 msgid "Bulk generate coupons"
 msgstr "Დაუფასოებელი ვაუჩერების გენერირება"
 
@@ -1143,6 +1184,7 @@ msgstr "Ვაუჩერების რეგისტრაცია"
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:115
 #: admin/views/premium_extension_listing.php:329
+#: admin/views/premium_extension_page.php:230
 msgid "Cart abandonment coupons"
 msgstr "Კალათის მიტოვების ვაუჩერები"
 
@@ -1170,16 +1212,16 @@ msgstr "გადასახადის ჩათვლით"
 msgid "Tax items"
 msgstr "საგადასახადო პუნქტები"
 
-#: admin/modules/customizer/classes/class-customizer.php:782
-#: admin/modules/customizer/classes/class-customizer.php:1405
+#: admin/modules/customizer/classes/class-customizer.php:783
+#: admin/modules/customizer/classes/class-customizer.php:1408
 msgid "n/a"
 msgstr "მიუწვდომელია"
 
-#: admin/modules/customizer/classes/class-customizer.php:1187
+#: admin/modules/customizer/classes/class-customizer.php:1190
 msgid "Tax"
 msgstr "გადასახადი"
 
-#: admin/modules/customizer/classes/class-customizer.php:2139
+#: admin/modules/customizer/classes/class-customizer.php:2142
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas."
@@ -1187,7 +1229,7 @@ msgstr ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas."
 
-#: admin/modules/customizer/classes/class-customizer.php:2157
+#: admin/modules/customizer/classes/class-customizer.php:2160
 msgid ""
 "Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
 "porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
@@ -1199,7 +1241,7 @@ msgstr ""
 "mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
 "lectus vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:2162
+#: admin/modules/customizer/classes/class-customizer.php:2165
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
 "purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, "
@@ -1217,32 +1259,32 @@ msgstr "PDF-ის გენერაცია ვერ მოხერხდ�
 msgid "There is no order with this given id"
 msgstr "Მოცემული პირადობის დამადასტურებელი დოკუმენტით შეკვეთა არ არსებობს"
 
-#: admin/modules/customizer/customizer.php:191
-#: admin/modules/customizer/customizer.php:196
+#: admin/modules/customizer/customizer.php:192
+#: admin/modules/customizer/customizer.php:197
 msgid "Customize"
 msgstr "მორგება"
 
-#: admin/modules/customizer/customizer.php:259
+#: admin/modules/customizer/customizer.php:260
 msgid "You can't undo this action. Are you sure?"
 msgstr "Ამ ქმედების გაუქმება შეუძლებელია. დარწმუნებული ხართ?"
 
-#: admin/modules/customizer/customizer.php:260
+#: admin/modules/customizer/customizer.php:261
 msgid "Click here to add Company logo"
 msgstr "Კომპანიის ლოგოს დასამატებლად დააწკაპუნეთ აქ"
 
-#: admin/modules/customizer/customizer.php:261
+#: admin/modules/customizer/customizer.php:262
 msgid "Click here to add Company name"
 msgstr "Კომპანიის სახელის დასამატებლად დააწკაპუნეთ აქ"
 
-#: admin/modules/customizer/customizer.php:262
+#: admin/modules/customizer/customizer.php:263
 msgid "Click here to add From address"
 msgstr "Მისამართიდან დასამატებლად დააწკაპუნეთ აქ"
 
-#: admin/modules/customizer/customizer.php:263
+#: admin/modules/customizer/customizer.php:264
 msgid "Click here to add Signature"
 msgstr "Ხელმოწერის დასამატებლად დააწკაპუნეთ აქ"
 
-#: admin/modules/customizer/customizer.php:264
+#: admin/modules/customizer/customizer.php:265
 msgid ""
 "Please save all data before leaving this page. All unsaved data will be "
 "lost. Are you sure?"
@@ -1250,36 +1292,36 @@ msgstr ""
 "Გთხოვთ, შეინახოთ ყველა მონაცემი ამ გვერდიდან გასვლამდე. ყველა შეუნახავი "
 "მონაცემი დაიკარგება. დარწმუნებული ხართ?"
 
-#: admin/modules/customizer/customizer.php:265
+#: admin/modules/customizer/customizer.php:266
 #: admin/modules/customizer/views/customize.php:919
 msgid "Change template"
 msgstr "Შაბლონის შეცვლა"
 
-#: admin/modules/customizer/customizer.php:266
+#: admin/modules/customizer/customizer.php:267
 msgid "Change layout"
 msgstr "გვერდის განლაგების შეცვლა"
 
-#: admin/modules/customizer/customizer.php:267
+#: admin/modules/customizer/customizer.php:268
 msgid "Saving"
 msgstr "Შენახვა"
 
-#: admin/modules/customizer/customizer.php:268
+#: admin/modules/customizer/customizer.php:269
 #: public/modules/invoice/invoice.php:200
 #: public/modules/shippinglabel/shippinglabel.php:248
 msgid "Please enter order number"
 msgstr "გთხოვთ აკრიფოთ ნომერი..."
 
-#: admin/modules/customizer/customizer.php:269
+#: admin/modules/customizer/customizer.php:270
 #: public/modules/invoice/invoice.php:201
 #: public/modules/shippinglabel/shippinglabel.php:249
 msgid "Generating"
 msgstr "გენერაცია"
 
-#: admin/modules/customizer/customizer.php:270
+#: admin/modules/customizer/customizer.php:271
 msgid "This is premium template which is not compatible with the basic plugin"
 msgstr "Ეს არის პრემიუმ შაბლონი, რომელიც არ შეესაბამება ძირითად პლაგინს"
 
-#: admin/modules/customizer/customizer.php:271
+#: admin/modules/customizer/customizer.php:272
 msgid ""
 "This is basic template. In order to use premium feature, you need to switch "
 "and activate the premium template"
@@ -1287,302 +1329,306 @@ msgstr ""
 "Ეს არის ძირითადი შაბლონი. პრემიუმის ფუნქციის გამოსაყენებლად საჭიროა "
 "პრემიუმის შაბლონის გადართვა და გააქტიურება"
 
-#: admin/modules/customizer/customizer.php:272
+#: admin/modules/customizer/customizer.php:273
 msgid "Template Name Required"
 msgstr "Საჭიროა შაბლონის სახელი"
 
-#: admin/modules/customizer/customizer.php:324
-#: admin/modules/customizer/customizer.php:789
+#: admin/modules/customizer/customizer.php:274
+msgid "Default template"
+msgstr ""
+
+#: admin/modules/customizer/customizer.php:326
+#: admin/modules/customizer/customizer.php:799
 msgid "Active"
 msgstr "აქტიური"
 
-#: admin/modules/customizer/customizer.php:421
+#: admin/modules/customizer/customizer.php:423
 msgid "Unable to update setting."
 msgstr "Პარამეტრის განახლება ვერ მოხერხდა."
 
-#: admin/modules/customizer/customizer.php:430
+#: admin/modules/customizer/customizer.php:432
 msgid "Invalid value."
 msgstr "არასწორი მნიშვნელობა."
 
-#: admin/modules/customizer/customizer.php:765
+#: admin/modules/customizer/customizer.php:775
 msgid "Error."
 msgstr "შეცდომა."
 
-#: admin/modules/customizer/customizer.php:791
-#: admin/modules/customizer/views/customize.php:945
+#: admin/modules/customizer/customizer.php:801
+#: admin/modules/customizer/views/customize.php:943
 msgid "Activate"
 msgstr "აქტივაცია"
 
-#: admin/modules/customizer/customizer.php:817
+#: admin/modules/customizer/customizer.php:827
 msgid "No template found."
 msgstr "Შაბლონი ვერ მოიძებნა."
 
-#: admin/modules/customizer/customizer.php:834
+#: admin/modules/customizer/customizer.php:844
 msgid "Unable to save theme."
 msgstr "თემის შენახვა შეუძლებელია."
 
-#: admin/modules/customizer/customizer.php:853
+#: admin/modules/customizer/customizer.php:863
 msgid "Template with same name already exists."
 msgstr "ნიმუში ამ სახელით უკვე არსებობს."
 
-#: admin/modules/customizer/customizer.php:895
+#: admin/modules/customizer/customizer.php:905
 msgid "Template created."
 msgstr "ნიმუში შეიქმნა."
 
-#: admin/modules/customizer/customizer.php:901
+#: admin/modules/customizer/customizer.php:911
 msgid "Template created and activated."
 msgstr "Შაბლონი შექმნილია და გააქტიურებულია."
 
-#: admin/modules/customizer/customizer.php:956
+#: admin/modules/customizer/customizer.php:973
 msgid "Template updated."
 msgstr "Შაბლონი განახლდა."
 
-#: admin/modules/customizer/customizer.php:959
+#: admin/modules/customizer/customizer.php:976
 msgid "Template updated and activated."
 msgstr "Შაბლონი განახლდა და გააქტიურდა."
 
-#: admin/modules/customizer/customizer.php:1007
+#: admin/modules/customizer/customizer.php:1024
 msgid "Unable to switch view."
 msgstr "Ხედის გადართვა ვერ მოხერხდა."
 
-#: admin/modules/customizer/customizer.php:1618
+#: admin/modules/customizer/customizer.php:1820
 msgid "Unable to load template."
 msgstr "Შაბლონის ჩატვირთვა ვერ მოხერხდა."
 
-#: admin/modules/customizer/customizer.php:1669
+#: admin/modules/customizer/customizer.php:1871
 msgid "Untitled template"
 msgstr "Უსათაურო შაბლონი"
 
-#: admin/modules/customizer/customizer.php:1817
+#: admin/modules/customizer/customizer.php:2020
 msgid "Add the order's"
 msgstr "Დაამატეთ შეკვეთის მონაცემები"
 
-#: admin/modules/customizer/customizer.php:1817
-#: admin/modules/customizer/customizer.php:1827
+#: admin/modules/customizer/customizer.php:2020
+#: admin/modules/customizer/customizer.php:2030
 #: public/modules/deliverynote/deliverynote.php:186
 #: public/modules/dispatchlabel/dispatchlabel.php:169
 #: public/modules/invoice/invoice.php:1338
-#: public/modules/packinglist/packinglist.php:212
+#: public/modules/packinglist/packinglist.php:213
 #: public/modules/shippinglabel/shippinglabel.php:169
 msgid "Tracking Number"
 msgstr "გადაზიდვის ნომერი"
 
-#: admin/modules/customizer/customizer.php:1817
+#: admin/modules/customizer/customizer.php:2020
 msgid ""
 "to your invoices so customers can easily view and track delivery details."
 msgstr ""
 "თქვენს ინვოისებზე, რათა მომხმარებლებმა მარტივად ნახონ და თვალყური ადევნონ "
 "მიტანის დეტალებს."
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 msgid "Display a combined"
 msgstr "Კომბინირებული ეკრანის ჩვენება"
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 #: admin/modules/customizer/data/data.translation_strings.php:24
-#: admin/modules/customizer/views/_customize_properties.php:818
+#: admin/modules/customizer/views/_customize_properties.php:837
 #: public/modules/invoice/invoice.php:1343
 msgid "Total Tax"
 msgstr "Ჯამური გადასახადი"
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 msgid ""
 "amount on the invoice to simplify how tax breakdown appears for customers."
 msgstr ""
 "თანხა ინვოისზე, რათა გაამარტივოს საგადასახადო დეტალიზაცია მომხმარებლებისთვის."
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid "Show"
 msgstr "ჩვენება"
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid "Coupon Details"
 msgstr "Ვაუჩერის დეტალები"
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid ""
 "to give customers a clear summary of the discounts applied to their order."
 msgstr ""
 "მომხმარებელს მისცეს მათ შეკვეთაზე გამოყენებული ფასდაკლებების მკაფიო შეჯამება."
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 msgid "Add your"
 msgstr "Დაამატეთ თქვენი"
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 #: admin/modules/customizer/views/_customize_properties.php:162
 #: public/modules/shippinglabel/shippinglabel.php:155
 msgid "Company Logo"
 msgstr "კომპანიის ლოგო"
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 msgid "to the shipping label for professional, branded packages."
 msgstr "პროფესიონალური, ბრენდირებული პაკეტების გადაზიდვის ეტიკეტზე."
 
-#: admin/modules/customizer/customizer.php:1826
-#: admin/modules/customizer/customizer.php:1832
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2029
+#: admin/modules/customizer/customizer.php:2035
+#: admin/modules/customizer/customizer.php:2036
 msgid "Add a"
 msgstr "Დამატება"
 
-#: admin/modules/customizer/customizer.php:1826
+#: admin/modules/customizer/customizer.php:2029
 #: public/modules/invoice/invoice.php:1327
 #: public/modules/shippinglabel/shippinglabel.php:168
 msgid "Barcode"
 msgstr "შტრიხკოდი"
 
-#: admin/modules/customizer/customizer.php:1826
+#: admin/modules/customizer/customizer.php:2029
 msgid ""
 "to your shipping label for quicker scanning and smoother order handling."
 msgstr ""
 "გადაზიდვის ეტიკეტზე უფრო სწრაფი სკანირებისა და შეკვეთის უფრო გამარტივებული "
 "დამუშავებისთვის."
 
-#: admin/modules/customizer/customizer.php:1827
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2030
+#: admin/modules/customizer/customizer.php:2037
 msgid "Add the"
 msgstr "Დაამატეთ"
 
-#: admin/modules/customizer/customizer.php:1827
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2030
+#: admin/modules/customizer/customizer.php:2037
 msgid "to the shipping label for easy shipment tracking."
 msgstr "გადაზიდვის ეტიკეტზე მარტივი გადაზიდვის თვალყურის დევნებისთვის."
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 msgid "Show the"
 msgstr "Აჩვენეთ"
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 #: public/modules/shippinglabel/shippinglabel.php:170
 msgid "Package Number"
 msgstr "Პაკეტის ნომერი"
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 msgid "on each shipping label for accurate multi-package orders."
 msgstr "თითოეულ გადაზიდვის ეტიკეტზე ზუსტი მრავალფუნქციური შეკვეთებისთვის."
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 msgid "Display the"
 msgstr "Ეკრანის ჩვენება"
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 #: public/modules/shippinglabel/shippinglabel.php:171
 msgid "Box name"
 msgstr "Ყუთის სახელი"
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 msgid "on the label so recipients can identify contents quickly."
 msgstr "ეტიკეტზე, რათა მიმღებმა სწრაფად შეძლოს შიგთავსის იდენტიფიცირება."
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "Show how"
 msgstr "Აჩვენეთ, როგორ"
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "Many Items"
 msgstr "რამდენი საკითხია"
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "are in the order on the shipping label."
 msgstr "გადაზიდვის ეტიკეტზე მოცემულია შეკვეთა."
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 msgid "Mark packages as"
 msgstr "Პაკეტების მონიშვნა, როგორც"
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 #: public/modules/shippinglabel/shippinglabel.php:173
 msgid "Fragile"
 msgstr " მყიფე"
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 msgid "so carriers know to handle them with extra care."
 msgstr ""
 "ასე რომ, გადამზიდავებმა იციან, რომ გაუმკლავდნენ მათ დამატებითი სიფრთხილით."
 
-#: admin/modules/customizer/customizer.php:1832
+#: admin/modules/customizer/customizer.php:2035
 #: public/modules/shippinglabel/shippinglabel.php:174
 msgid "This way up"
 msgstr "Ამ გზით ზემოთ"
 
-#: admin/modules/customizer/customizer.php:1832
+#: admin/modules/customizer/customizer.php:2035
 msgid "indicator to help prevent damage during shipping."
 msgstr "მაჩვენებელი ტრანსპორტირების დროს დაზიანების თავიდან ასაცილებლად."
 
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2036
 #: public/modules/shippinglabel/shippinglabel.php:175
 msgid "Keep dry"
 msgstr "Შეინახეთ მშრალად"
 
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2036
 msgid "notice for moisture-sensitive shipments."
 msgstr "ყურადღება მიაქციეთ ტენიანობისადმი მგრძნობიარე გადაზიდვებს."
 
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2037
 #: public/modules/shippinglabel/shippinglabel.php:177
 msgid "Return Policy"
 msgstr "Დაბრუნების წესები"
 
-#: admin/modules/customizer/customizer.php:1849
+#: admin/modules/customizer/customizer.php:2052
 #: admin/modules/customizer/views/customize.php:812
-#: includes/class-wt-pklist-promo-banners.php:107
-#: includes/class-wt-pklist-promo-banners.php:131
+#: includes/class-wt-pklist-promo-banners.php:108
+#: includes/class-wt-pklist-promo-banners.php:132
 msgid "Upgrade to Pro"
 msgstr "პრემიუმზე გადასვლა"
 
-#: admin/modules/customizer/customizer.php:1864
+#: admin/modules/customizer/customizer.php:2067
 msgid "Lighter"
 msgstr "ღია"
 
-#: admin/modules/customizer/customizer.php:1865
+#: admin/modules/customizer/customizer.php:2068
 msgid "Normal"
 msgstr "ნორმალური"
 
-#: admin/modules/customizer/customizer.php:1866
+#: admin/modules/customizer/customizer.php:2069
 msgid "Bold"
 msgstr "გასქელება"
 
-#: admin/modules/customizer/customizer.php:1867
+#: admin/modules/customizer/customizer.php:2070
 msgid "Bolder"
 msgstr "Ბოლდერი"
 
-#: admin/modules/customizer/customizer.php:1879
+#: admin/modules/customizer/customizer.php:2082
 msgid "Select One"
 msgstr "მონიშნეთ ერთი"
 
-#: admin/modules/customizer/customizer.php:1897
+#: admin/modules/customizer/customizer.php:2100
 msgid "Left"
 msgstr "მარცხენა"
 
-#: admin/modules/customizer/customizer.php:1898
+#: admin/modules/customizer/customizer.php:2101
 msgid "Right"
 msgstr "მარჯვენა"
 
-#: admin/modules/customizer/customizer.php:1899
+#: admin/modules/customizer/customizer.php:2102
 msgid "Center"
 msgstr "ცენტრი"
 
-#: admin/modules/customizer/customizer.php:1900
+#: admin/modules/customizer/customizer.php:2103
 msgid "Start"
 msgstr "გაშვება"
 
-#: admin/modules/customizer/customizer.php:1901
+#: admin/modules/customizer/customizer.php:2104
 msgid "End"
 msgstr "დასასრული"
 
-#: admin/modules/customizer/customizer.php:1908
+#: admin/modules/customizer/customizer.php:2111
 msgid "None"
 msgstr "არაფერი"
 
-#: admin/modules/customizer/customizer.php:1920
+#: admin/modules/customizer/customizer.php:2123
 msgid "Solid"
 msgstr "მყარი"
 
-#: admin/modules/customizer/customizer.php:1921
+#: admin/modules/customizer/customizer.php:2124
 msgid "Dotted"
 msgstr "წერტილოვანი"
 
-#: admin/modules/customizer/customizer.php:1922
+#: admin/modules/customizer/customizer.php:2125
 msgid "Dashed"
 msgstr "ტირეებით"
 
@@ -1669,33 +1715,33 @@ msgid "Total Price"
 msgstr "Ჯამური ღირებულება"
 
 #: admin/modules/customizer/data/data.translation_strings.php:20
-#: admin/modules/customizer/views/_customize_properties.php:792
+#: admin/modules/customizer/views/_customize_properties.php:811
 #: admin/views/wt_ipc_free_pro.php:753 admin/views/wt_ipc_free_pro.php:795
 #: public/modules/invoice/invoice.php:1339
 msgid "Subtotal"
 msgstr "ჯამი"
 
 #: admin/modules/customizer/data/data.translation_strings.php:21
-#: admin/modules/customizer/views/_customize_properties.php:798
+#: admin/modules/customizer/views/_customize_properties.php:817
 #: admin/views/wt_ipc_free_pro.php:757 admin/views/wt_ipc_free_pro.php:799
 #: public/modules/invoice/invoice.php:1340
 msgid "Shipping"
 msgstr "მიწოდება"
 
 #: admin/modules/customizer/data/data.translation_strings.php:22
-#: admin/modules/customizer/views/_customize_properties.php:805
+#: admin/modules/customizer/views/_customize_properties.php:824
 #: public/modules/invoice/invoice.php:1341
 msgid "Cart Discount"
 msgstr "Ფასდაკლება კალათაზე"
 
 #: admin/modules/customizer/data/data.translation_strings.php:23
-#: admin/modules/customizer/views/_customize_properties.php:811
+#: admin/modules/customizer/views/_customize_properties.php:830
 #: public/modules/invoice/invoice.php:1342
 msgid "Order Discount"
 msgstr "Ფასდაკლების შეკვეთა"
 
 #: admin/modules/customizer/data/data.translation_strings.php:25
-#: admin/modules/customizer/views/_customize_properties.php:824
+#: admin/modules/customizer/views/_customize_properties.php:843
 #: admin/views/wt_ipc_free_pro.php:769 admin/views/wt_ipc_free_pro.php:811
 #: public/modules/invoice/invoice.php:1344
 msgid "Fee"
@@ -1706,7 +1752,7 @@ msgid "Coupon Used"
 msgstr "Გამოყენებულია ვაუჩერი"
 
 #: admin/modules/customizer/data/data.translation_strings.php:27
-#: admin/modules/customizer/views/_customize_properties.php:837
+#: admin/modules/customizer/views/_customize_properties.php:856
 #: admin/views/wt_ipc_free_pro.php:781 admin/views/wt_ipc_free_pro.php:823
 #: public/modules/invoice/invoice.php:1347
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:68
@@ -1759,7 +1805,7 @@ msgid "Payment Method:"
 msgstr "გადახდის მეთოდი:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:39
-#: admin/modules/customizer/views/_customize_properties.php:831
+#: admin/modules/customizer/views/_customize_properties.php:850
 #: public/modules/invoice/invoice.php:1346
 msgid "Payment Method"
 msgstr "გადახდის მეთოდი"
@@ -1865,7 +1911,7 @@ msgstr "მომხმარებლის შენიშვნა"
 #: public/modules/deliverynote/deliverynote.php:182
 #: public/modules/dispatchlabel/dispatchlabel.php:164
 #: public/modules/invoice/invoice.php:1318
-#: public/modules/packinglist/packinglist.php:207
+#: public/modules/packinglist/packinglist.php:208
 #: public/modules/shippinglabel/shippinglabel.php:166
 msgid "Customer note"
 msgstr "მომხმარებლის შენიშვნა"
@@ -1902,10 +1948,97 @@ msgstr "მიწოდების მეთოდი"
 msgid "Phone:"
 msgstr "ტელეფონი:"
 
+#: admin/modules/customizer/views/customize.php:730
+#: admin/views/admin-settings-debug.php:160
+msgid "Templates"
+msgstr "შაბლონები"
+
+#: admin/modules/customizer/views/customize.php:735
+msgid "Type template name to search"
+msgstr "Შეიყვანეთ მოსაძებნი შაბლონის სახელი"
+
+#: admin/modules/customizer/views/customize.php:747
+msgid "Choose a layout."
+msgstr "განლაგების არჩევა"
+
+#: admin/modules/customizer/views/customize.php:753
+msgid "All unsaved changes will be lost upon switching to a new layout."
+msgstr "Ყველა შეუნახავი ცვლილება დაიკარგება ახალ განლაგებაზე გადასვლისას."
+
+#: admin/modules/customizer/views/customize.php:755
+msgid "Save before you proceed."
+msgstr "Დაზოგეთ გაგრძელებამდე."
+
+#: admin/modules/customizer/views/customize.php:756
+msgid "Saving..."
+msgstr "Შენახვა..."
+
+#: admin/modules/customizer/views/customize.php:799
+msgid "Get access to more shipping label templates."
+msgstr "Მიიღეთ წვდომა გადაზიდვის ეტიკეტის სხვა შაბლონებზე."
+
+#: admin/modules/customizer/views/customize.php:800
+msgid "Get access to more invoice templates."
+msgstr "Ისარგებლეთ ინვოისის სხვა შაბლონებით."
+
+#: admin/modules/customizer/views/customize.php:928
+msgid "Update template"
+msgstr "Განაახლეთ შაბლონი"
+
+#: admin/modules/customizer/views/customize.php:931
+msgid "Save template"
+msgstr "შაბლონის შენახვა"
+
+#: admin/modules/customizer/views/customize.php:934
+msgid "Save and activate"
+msgstr "Შენახვა და გააქტიურება"
+
+#: admin/modules/customizer/views/customize.php:945
+msgid "Create new"
+msgstr "ახლის შექმნა"
+
+#: admin/modules/customizer/views/customize.php:946
+msgid "My templates"
+msgstr "შაბლონები"
+
+#: admin/modules/customizer/views/customize.php:956
+msgid "This template is not comaptible with QR Code addon plugin"
+msgstr "Ეს შაბლონი არ შეესაბამება QR კოდის დამატების დამატებას"
+
+#. translators: %s: Template display name (invoice, packing list, etc.)
+#: admin/modules/customizer/views/customize.php:985
+#, php-format
+msgid "Unlock limitless possibilities of %s customization with the addon -"
+msgstr "Გახსენით %s -ის მორგების უსაზღვრო შესაძლებლობები დამატების მეშვეობით -"
+
+#: admin/modules/customizer/views/customize.php:986
+msgid "Customizer for WooCommerce PDF Invoices Plugin"
+msgstr "Მორგება WooCommerce PDF ინვოისების დამატებისთვის"
+
+#: admin/modules/customizer/views/customize.php:993
+#: admin/modules/customizer/views/customize.php:1004
+msgid "Visual"
+msgstr "ვიზუალი"
+
+#: admin/modules/customizer/views/customize.php:994
+#: admin/modules/customizer/views/customize.php:1007
+msgid "Code"
+msgstr "კოდი"
+
+#: admin/modules/customizer/views/customize.php:1007
+#: admin/modules/customizer/views/_customize_properties.php:385
+#: public/modules/deliverynote/deliverynote.php:178
+#: public/modules/dispatchlabel/dispatchlabel.php:160
+#: public/modules/invoice/invoice.php:1301
+#: public/modules/packinglist/packinglist.php:202
+#: public/modules/shippinglabel/shippinglabel.php:152
+msgid "Pro version"
+msgstr "Pro ვერსია"
+
 #: admin/modules/customizer/views/_customize_properties.php:123
 #: admin/modules/customizer/views/_customize_properties.php:323
 #: admin/modules/customizer/views/_customize_properties.php:361
-#: admin/modules/customizer/views/_customize_properties.php:751
+#: admin/modules/customizer/views/_customize_properties.php:770
 #: admin/views/wt_ipc_free_pro.php:479 admin/views/wt_ipc_free_pro.php:493
 #: public/modules/shippinglabel/shippinglabel.php:107
 #: public/modules/shippinglabel/shippinglabel.php:130
@@ -1917,7 +2050,7 @@ msgstr "სათაური"
 #: admin/modules/customizer/views/_customize_properties.php:294
 #: admin/modules/customizer/views/_customize_properties.php:350
 #: admin/modules/customizer/views/_customize_properties.php:366
-#: admin/modules/customizer/views/_customize_properties.php:756
+#: admin/modules/customizer/views/_customize_properties.php:775
 #: public/modules/invoice/invoice.php:386
 msgid "Font size"
 msgstr "ფონტის ზომა"
@@ -2016,16 +2149,6 @@ msgstr "ფორმატი"
 msgid "Title font size"
 msgstr "საიტის სათაურის ფონტის ზომა"
 
-#: admin/modules/customizer/views/_customize_properties.php:385
-#: admin/modules/customizer/views/customize.php:1009
-#: public/modules/deliverynote/deliverynote.php:178
-#: public/modules/dispatchlabel/dispatchlabel.php:160
-#: public/modules/invoice/invoice.php:1301
-#: public/modules/packinglist/packinglist.php:202
-#: public/modules/shippinglabel/shippinglabel.php:152
-msgid "Pro version"
-msgstr "Pro ვერსია"
-
 #: admin/modules/customizer/views/_customize_properties.php:387
 #: public/modules/invoice/invoice.php:1309
 #: public/modules/shippinglabel/shippinglabel.php:158
@@ -2062,131 +2185,139 @@ msgstr "Მაგიდის თავის ტექსტის ფერი
 msgid "Table body text color"
 msgstr "Მაგიდის სხეულის ტექსტის ფერი"
 
-#: admin/modules/customizer/views/_customize_properties.php:449
+#: admin/modules/customizer/views/_customize_properties.php:442
+msgid "Table head font size"
+msgstr ""
+
+#: admin/modules/customizer/views/_customize_properties.php:451
+msgid "Table body font size"
+msgstr ""
+
+#: admin/modules/customizer/views/_customize_properties.php:467
 msgid "Serial No label"
 msgstr "Სერიალი ეტიკეტის გარეშე"
 
-#: admin/modules/customizer/views/_customize_properties.php:455
+#: admin/modules/customizer/views/_customize_properties.php:473
 msgid "Serial no text align"
 msgstr "Სერიალი ტექსტის გასწორების გარეშე"
 
-#: admin/modules/customizer/views/_customize_properties.php:472
+#: admin/modules/customizer/views/_customize_properties.php:490
 msgid "Image label"
 msgstr "Გამოსახულების ეტიკეტი"
 
-#: admin/modules/customizer/views/_customize_properties.php:478
+#: admin/modules/customizer/views/_customize_properties.php:496
 msgid "Image text align"
 msgstr "Გამოსახულების ტექსტის სწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:493
+#: admin/modules/customizer/views/_customize_properties.php:512
 msgid "Image width"
 msgstr "სურათის სიგანე"
 
-#: admin/modules/customizer/views/_customize_properties.php:502
+#: admin/modules/customizer/views/_customize_properties.php:521
 msgid "Image height"
 msgstr "გამოსახულების სიმაღლე"
 
-#: admin/modules/customizer/views/_customize_properties.php:519
+#: admin/modules/customizer/views/_customize_properties.php:538
 msgid "SKU label"
 msgstr "აღნიშვნა"
 
-#: admin/modules/customizer/views/_customize_properties.php:525
+#: admin/modules/customizer/views/_customize_properties.php:544
 msgid "SKU text align"
 msgstr "ტექსტის მდებარეობა"
 
-#: admin/modules/customizer/views/_customize_properties.php:542
+#: admin/modules/customizer/views/_customize_properties.php:561
 msgid "Product label"
 msgstr "პროდუქტის ჭდე"
 
-#: admin/modules/customizer/views/_customize_properties.php:548
+#: admin/modules/customizer/views/_customize_properties.php:567
 msgid "Product text align"
 msgstr "Პროდუქტის ტექსტის გასწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:565
+#: admin/modules/customizer/views/_customize_properties.php:584
 msgid "GTIN label"
 msgstr "აღნიშვნა"
 
-#: admin/modules/customizer/views/_customize_properties.php:571
+#: admin/modules/customizer/views/_customize_properties.php:590
 msgid "GTIN text align"
 msgstr "ტექსტის მდებარეობა"
 
-#: admin/modules/customizer/views/_customize_properties.php:588
+#: admin/modules/customizer/views/_customize_properties.php:607
 msgid "Qty label"
 msgstr "აღნიშვნა"
 
-#: admin/modules/customizer/views/_customize_properties.php:594
+#: admin/modules/customizer/views/_customize_properties.php:613
 msgid "Qty text align"
 msgstr "ტექსტის მდებარეობა"
 
-#: admin/modules/customizer/views/_customize_properties.php:611
+#: admin/modules/customizer/views/_customize_properties.php:630
 msgid "Price label"
 msgstr "Ფასის ეტიკეტი"
 
-#: admin/modules/customizer/views/_customize_properties.php:617
+#: admin/modules/customizer/views/_customize_properties.php:636
 msgid "Price text align"
 msgstr "Ფასის ტექსტის გასწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:637
+#: admin/modules/customizer/views/_customize_properties.php:656
 msgid "Tax items value"
 msgstr "საგადასახადო ნივთების ღირებულება"
 
-#: admin/modules/customizer/views/_customize_properties.php:640
+#: admin/modules/customizer/views/_customize_properties.php:659
 msgid "Amount"
 msgstr "რაოდენობა"
 
-#: admin/modules/customizer/views/_customize_properties.php:649
+#: admin/modules/customizer/views/_customize_properties.php:668
 msgid "Tax items text align"
 msgstr "საგადასახადო პუნქტების ტექსტის გასწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:666
+#: admin/modules/customizer/views/_customize_properties.php:685
 msgid "Tax label"
 msgstr "აღნიშვნა"
 
-#: admin/modules/customizer/views/_customize_properties.php:672
+#: admin/modules/customizer/views/_customize_properties.php:691
 msgid "Tax text align"
 msgstr "ტექსტის მდებარეობა"
 
-#: admin/modules/customizer/views/_customize_properties.php:689
+#: admin/modules/customizer/views/_customize_properties.php:708
 msgid "Total weight label"
 msgstr "Ჯამური წონის ეტიკეტი"
 
-#: admin/modules/customizer/views/_customize_properties.php:695
+#: admin/modules/customizer/views/_customize_properties.php:714
 msgid "Total weight text align"
 msgstr "Მთლიანი წონის ტექსტის სწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:712
+#: admin/modules/customizer/views/_customize_properties.php:731
 msgid "Total label"
 msgstr "Მთლიანი ეტიკეტი"
 
-#: admin/modules/customizer/views/_customize_properties.php:718
+#: admin/modules/customizer/views/_customize_properties.php:737
 msgid "Total text align"
 msgstr "Ტექსტის სრული სწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:742
+#: admin/modules/customizer/views/_customize_properties.php:761
 msgid "Signature type"
 msgstr "Ხელმოწერის ტიპი"
 
-#: admin/modules/customizer/views/_customize_properties.php:746
+#: admin/modules/customizer/views/_customize_properties.php:765
 msgid "Manual Signature"
 msgstr "Ხელით ხელმოწერა"
 
-#: admin/modules/customizer/views/_customize_properties.php:747
+#: admin/modules/customizer/views/_customize_properties.php:766
 msgid "Image Signature"
 msgstr "Სურათის ხელმოწერა"
 
-#: admin/modules/customizer/views/_customize_properties.php:764
+#: admin/modules/customizer/views/_customize_properties.php:783
 msgid "Align"
 msgstr "სწორება"
 
-#: admin/modules/customizer/views/_customize_properties.php:781
+#: admin/modules/customizer/views/_customize_properties.php:800
 msgid "Label"
 msgstr "ჭდე"
 
-#: admin/modules/customizer/views/_customize_properties.php:860
+#: admin/modules/customizer/views/_customize_properties.php:879
 msgid "Note"
 msgstr "შენიშვნა"
 
-#: admin/modules/customizer/views/_customize_properties.php:861
+#: admin/modules/customizer/views/_customize_properties.php:880
 msgid ""
 "Displays customer`s VAT number saved in the order details by third-party "
 "plugins in this document. Supported meta keys are"
@@ -2194,16 +2325,17 @@ msgstr ""
 "Ამ დოკუმენტში ნაჩვენებია მესამე მხარის პლაგინების მიერ შეკვეთის დეტალებში "
 "შენახული მომხმარებლის დღგ-ის ნომერი. მხარდაჭერილი მეტა ღილაკებია"
 
-#: admin/modules/customizer/views/_customize_properties.php:863
+#: admin/modules/customizer/views/_customize_properties.php:882
 msgid "To add a different meta key"
 msgstr "Სხვა მეტა ღილაკის დასამატებლად"
 
-#: admin/modules/customizer/views/_customize_properties.php:864
+#: admin/modules/customizer/views/_customize_properties.php:883
 msgid "Upgrade to premium"
 msgstr "Პრემიუმზე გადასვლა"
 
-#: admin/modules/customizer/views/_customize_properties.php:923
-#: admin/views/premium_extension_page.php:142
+#: admin/modules/customizer/views/_customize_properties.php:942
+#: admin/views/premium_extension_page.php:728
+#: admin/views/premium_extension_page.php:729
 #: public/modules/deliverynote/views/general.php:157
 #: public/modules/dispatchlabel/views/general.php:142
 #: public/modules/invoice/views/invoice-admin-settings.php:94
@@ -2212,8 +2344,8 @@ msgstr "Პრემიუმზე გადასვლა"
 msgid "Show More"
 msgstr "მეტის ჩვენება"
 
-#: admin/modules/customizer/views/_customize_properties.php:924
-#: admin/views/premium_extension_page.php:143
+#: admin/modules/customizer/views/_customize_properties.php:943
+#: admin/views/premium_extension_page.php:729
 #: public/modules/deliverynote/views/general.php:158
 #: public/modules/dispatchlabel/views/general.php:143
 #: public/modules/invoice/views/invoice-admin-settings.php:95
@@ -2222,8 +2354,7 @@ msgstr "მეტის ჩვენება"
 msgid "Show Less"
 msgstr "ნაკლების ჩვენება"
 
-#: admin/modules/customizer/views/_customize_properties.php:928
-#: admin/views/premium_extension_page.php:147
+#: admin/modules/customizer/views/_customize_properties.php:947
 msgid "Checkout Premium"
 msgstr "Გასვლის პრემიუმი"
 
@@ -2242,127 +2373,34 @@ msgstr "დალაგება"
 #: admin/modules/customizer/views/_pdf_preview.php:35
 #: admin/modules/customizer/views/_pdf_preview.php:36
 #: admin/partials/form_wizard/form_wizard.php:509
-#: admin/views/_form_field_generator_new.php:873
+#: admin/views/_form_field_generator_new.php:872
 #: public/modules/invoice/views/qrcode_promote.php:38
 msgid "Order number"
 msgstr "Შეკვეთის ნომერი"
 
-#: admin/modules/customizer/views/customize.php:730
-#: admin/views/admin-settings-debug.php:160
-msgid "Templates"
-msgstr "შაბლონები"
-
-#: admin/modules/customizer/views/customize.php:735
-msgid "Type template name to search"
-msgstr "Შეიყვანეთ მოსაძებნი შაბლონის სახელი"
-
-#: admin/modules/customizer/views/customize.php:747
-msgid "Choose a layout."
-msgstr "განლაგების არჩევა"
-
-#: admin/modules/customizer/views/customize.php:753
-msgid "All unsaved changes will be lost upon switching to a new layout."
-msgstr "Ყველა შეუნახავი ცვლილება დაიკარგება ახალ განლაგებაზე გადასვლისას."
-
-#: admin/modules/customizer/views/customize.php:755
-msgid "Save before you proceed."
-msgstr "Დაზოგეთ გაგრძელებამდე."
-
-#: admin/modules/customizer/views/customize.php:756
-msgid "Saving..."
-msgstr "Შენახვა..."
-
-#: admin/modules/customizer/views/customize.php:799
-msgid "Get access to more shipping label templates."
-msgstr "Მიიღეთ წვდომა გადაზიდვის ეტიკეტის სხვა შაბლონებზე."
-
-#: admin/modules/customizer/views/customize.php:800
-msgid "Get access to more invoice templates."
-msgstr "Ისარგებლეთ ინვოისის სხვა შაბლონებით."
-
-#: admin/modules/customizer/views/customize.php:921
-msgid "This preview reflects your current settings from the General tab."
-msgstr "Ეს გადახედვა ასახავს თქვენს მიმდინარე პარამეტრებს ზოგადი ჩანართიდან."
-
-#: admin/modules/customizer/views/customize.php:930
-msgid "Update template"
-msgstr "Განაახლეთ შაბლონი"
-
-#: admin/modules/customizer/views/customize.php:933
-msgid "Save template"
-msgstr "შაბლონის შენახვა"
-
-#: admin/modules/customizer/views/customize.php:936
-msgid "Save and activate"
-msgstr "Შენახვა და გააქტიურება"
-
-#: admin/modules/customizer/views/customize.php:947
-msgid "Create new"
-msgstr "ახლის შექმნა"
-
-#: admin/modules/customizer/views/customize.php:948
-msgid "My templates"
-msgstr "შაბლონები"
-
-#: admin/modules/customizer/views/customize.php:958
-msgid "This template is not comaptible with QR Code addon plugin"
-msgstr "Ეს შაბლონი არ შეესაბამება QR კოდის დამატების დამატებას"
-
-#. translators: %s: Template display name (invoice, packing list, etc.)
-#: admin/modules/customizer/views/customize.php:987
-#, php-format
-msgid "Unlock limitless possibilities of %s customization with the addon -"
-msgstr "Გახსენით %s -ის მორგების უსაზღვრო შესაძლებლობები დამატების მეშვეობით -"
-
-#: admin/modules/customizer/views/customize.php:988
-msgid "Customizer for WooCommerce PDF Invoices Plugin"
-msgstr "Მორგება WooCommerce PDF ინვოისების დამატებისთვის"
-
-#: admin/modules/customizer/views/customize.php:995
-#: admin/modules/customizer/views/customize.php:1006
-msgid "Visual"
-msgstr "ვიზუალი"
-
-#: admin/modules/customizer/views/customize.php:996
-#: admin/modules/customizer/views/customize.php:1009
-msgid "Code"
-msgstr "კოდი"
-
-#: admin/modules/customizer/views/customize.php:1032
-msgid "Premium features"
-msgstr "Პრემიუმის ფუნქციები"
-
-#. translators: %s: document type name (e.g. packing slip, invoice, credit note)
-#: admin/modules/customizer/views/customize.php:1035
-#, php-format
-msgid "Toggle the pro features on and off to see how they transform your %s."
-msgstr ""
-"Ჩართეთ და გამორთეთ პროფესიონალის ფუნქციები, რომ ნახოთ, როგორ გარდაქმნის "
-"თქვენს %s -ს."
-
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:41
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:42
 msgid "I couldn't understand how to make it work"
 msgstr "Ვერ გავიგე, როგორ გამეკეთებინა"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:43
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:44
 msgid "Would you like us to assist you?"
 msgstr "Გსურთ, დაგეხმაროთ?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:47
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:48
 msgid "Language support issues"
 msgstr "Ენის მხარდაჭერის პრობლემები"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:52
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:53
 msgid "Plugin settings not available in my language"
 msgstr "Ჩადგმის პარამეტრები ჩემს ენაზე მიუწვდომელია"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:54
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:61
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:62
 msgid "Which language?"
 msgstr "რომელი ენის მცოდნე?"
 
 #. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 msgid ""
 "Missing RTL/Unicode language(e.g Chinese, Arabic etc) support for PDF "
 "document."
@@ -2370,26 +2408,28 @@ msgstr ""
 "Გამოტოვებულია RTL/Unicode ენის(მაგ. ჩინური, არაბული და ა.შ.) მხარდაჭერა PDF "
 "დოკუმენტისთვის."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 #, php-format
 msgid "Already tried the free %1$s WebToffee mPDF addon %2$s."
 msgstr "Უკვე სცადეთ უფასო %1$s WebToffee mPDF დამატება %2$s."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 msgid ""
 " Click the link to activate the plugin and try printing the document again."
 msgstr ""
 "Დააჭირეთ ბმულს პლაგინის გასააქტიურებლად და სცადეთ დოკუმენტის ხელახლა "
 "დაბეჭდვა."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:67
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:68
 msgid ""
 "I am unable to add customer VAT(or GSTIN or ABN or any other tax id etc)"
 msgstr ""
 "Ვერ დავამატებ მომხმარებლის დღგ-ს(ან GSTIN-ს ან ABN-ს ან სხვა საგადასახადო "
 "საიდენტიფიკაციო ნომერს და ა.შ.)"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:72
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:73
 msgid ""
 "Unable to add from third party plugin that collects customer VAT(or GSTIN or "
 "ABN etc)"
@@ -2397,73 +2437,73 @@ msgstr ""
 "Მესამე მხარის პლაგინიდან დამატების შეცდომა, რომელიც აგროვებს მომხმარებლის "
 "დღგ-ს(ან GSTIN ან ABN და ა.შ.)"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:74
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:75
 msgid "Mention the name of the plugin or meta key if any"
 msgstr "Ახსენეთ პლაგინის ან მეტა ღილაკის სახელი, ასეთის არსებობის შემთხვევაში"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:78
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:79
 msgid "Need a field to add the tax id on checkout page"
 msgstr ""
 "Გადასახადის გადამხდელის პირადობის დამადასტურებელი დოკუმენტის ანგარიშსწორების "
 "გვერდზე დასამატებლად საჭიროა ველი"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:86
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:87
 msgid "I found a better plugin"
 msgstr "Უკეთესი პლაგინი ვიპოვე"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:88
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:89
 msgid "Which plugin?"
 msgstr "Რომელი პლაგინი?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:92
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:93
 msgid "The plugin is great, but I need specific feature that you don't support"
 msgstr ""
 "Პლაგინი შესანიშნავია, მაგრამ მჭირდება კონკრეტული ფუნქცია, რომელსაც არ უჭერთ "
 "მხარს"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:94
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:95
 msgid "Could you tell us more about that feature?"
 msgstr "Შეგიძლიათ გვითხრათ ვრცლად ამ ფუნქციის შესახებ?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:98
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:99
 msgid "The plugin didn't work as expected"
 msgstr "Პლაგინი არ მუშაობდა ისე, როგორც მოსალოდნელი იყო"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:100
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:101
 msgid "What did you expect?"
 msgstr "კაკგჲ ჲფაკგაქვ?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:104
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:105
 msgid "Other"
 msgstr "სხვა"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:106
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:107
 msgid "Could you tell us a bit more?"
 msgstr "Შეგიძლიათ ცოტა მეტი გვითხრათ?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:125
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:126
 msgid "If you have a moment, please let us know why you are deactivating:"
 msgstr "Თუ დრო გაქვთ, შეგვატყობინეთ მოქმედების შეწყვეტის მიზეზი:"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:163
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:164
 msgid "WebToffee can contact me about this feedback."
 msgstr "WebToffee შეგიძლიათ დამიკავშირდეთ ამ გამოხმაურების შესახებ."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:166
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:167
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:106
 msgid "Enter your email address."
 msgstr "შეიყვანეთ თქვენი ელფოსტის მისამართი."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:168
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:169
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:107
 msgid "Enter email address"
 msgstr "შეიყვანეთ ელფოსტის მისამართი"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:171
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:172
 msgid "Delete all the settings made by this plugin"
 msgstr "Წაშალეთ ამ პლაგინის მიერ გაკეთებული ყველა პარამეტრი"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:173
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:174
 msgid ""
 "We do not collect any personal data when you submit this form. It's your "
 "feedback that we value."
@@ -2471,23 +2511,23 @@ msgstr ""
 "Ამ ფორმის გადმოგზავნისას ჩვენ არ ვაგროვებთ პერსონალურ მონაცემებს. ჩვენ "
 "ვაფასებთ თქვენს გამოხმაურებას."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:174
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:175
 msgid "Privacy Policy"
 msgstr "პირადულობის დაცვა"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:180
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:181
 msgid "Go to support"
 msgstr "Მხარდაჭერის გუნდზე გადასვლა"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:181
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:182
 msgid "Submit & Deactivate"
 msgstr "Გადაგზავნა და მოქმედების შეწყვეტა"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:183
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:184
 msgid "I rather wouldn't say"
 msgstr "Მე უფრო არ ვიტყოდი"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:309
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:310
 msgid "Please enter a valid email address."
 msgstr "გთხოვთ შეიყვანოთ სწორი ელფოსტის მისამართი."
 
@@ -2691,7 +2731,7 @@ msgid "Complete the invoice number format to suit your requirements"
 msgstr "Შეავსეთ ინვოისის ნომრის ფორმატი თქვენი მოთხოვნების შესაბამისად"
 
 #: admin/partials/form_wizard/form_wizard.php:510
-#: admin/views/_form_field_generator_new.php:877
+#: admin/views/_form_field_generator_new.php:876
 msgid "Custom number"
 msgstr "Ინდივიდუალური ნომერი"
 
@@ -2701,7 +2741,7 @@ msgid "Type in prefix/ suffix / date format if required"
 msgstr "Საჭიროების შემთხვევაში ჩაწერეთ პრეფიქსი/ სუფიქსი / თარიღის ფორმატი"
 
 #: admin/partials/form_wizard/form_wizard.php:535
-#: admin/views/_form_field_generator_new.php:787
+#: admin/views/_form_field_generator_new.php:786
 msgid "Supported shortcodes for date"
 msgstr "Მხარდაჭერილი მოკლე კოდები თარიღისთვის"
 
@@ -2734,8 +2774,8 @@ msgid "the %s number would be"
 msgstr "%s რიცხვი იქნება"
 
 #. translators: %s: Document type (invoice, packing list, etc.)
-#: admin/partials/form_wizard/form_wizard.php:658
-#: admin/views/_form_field_generator_new.php:952
+#: admin/partials/form_wizard/form_wizard.php:657
+#: admin/views/_form_field_generator_new.php:951
 #: public/modules/invoice/views/invoice_number_preview.php:43
 #, php-format
 msgid "Your next %s number would be"
@@ -2787,6 +2827,7 @@ msgid "Invoices"
 msgstr "ანგარიშფაქტურები"
 
 #: admin/partials/marketing-cta/marketing-cta.php:46
+#: admin/views/premium_extension_page.php:188
 msgid "Packing Slips"
 msgstr "Შეფუთვის გადანაწილებები"
 
@@ -2795,22 +2836,27 @@ msgid "Credit Notes"
 msgstr "Საკრედიტო შენიშვნები"
 
 #: admin/partials/marketing-cta/marketing-cta.php:48
+#: admin/views/premium_extension_page.php:189
 msgid "Address Labels"
 msgstr "Მისამართის ჭდეები"
 
 #: admin/partials/marketing-cta/marketing-cta.php:49
+#: admin/views/premium_extension_page.php:192
 msgid "Delivery Notes"
 msgstr "Მიტანის შენიშვნები"
 
 #: admin/partials/marketing-cta/marketing-cta.php:50
+#: admin/views/premium_extension_page.php:190
 msgid "Dispatch Labels"
 msgstr "Დისპეტჩერიზაციის ეტიკეტები"
 
 #: admin/partials/marketing-cta/marketing-cta.php:51
+#: admin/views/premium_extension_page.php:191
 msgid "Shipping Labels"
 msgstr "Გადაზიდვის ეტიკეტები"
 
 #: admin/partials/marketing-cta/marketing-cta.php:52
+#: admin/views/premium_extension_page.php:193
 msgid "Picklists"
 msgstr "Პიკლისტები"
 
@@ -2823,166 +2869,9 @@ msgid "Get Bundle Now"
 msgstr "Შეფუთვის მიღება"
 
 #: admin/partials/marketing-cta/marketing-cta.php:61
+#: admin/views/premium_extension_page.php:182
 msgid "Invoice Bundle"
 msgstr "Ინვოისის პაკეტი"
-
-#: admin/views/_custom_field_editor_form.php:20
-#: admin/views/_custom_field_editor_form.php:23
-#: admin/views/_custom_field_editor_form.php:32
-#: admin/views/_custom_field_editor_form_product.php:24
-#: admin/views/_custom_field_editor_form_product.php:27
-#: admin/views/_custom_field_editor_form_product.php:36
-msgid "Add new"
-msgstr "ახლის დამატება"
-
-#: admin/views/_custom_field_editor_form.php:41
-msgid "You can add custom/predefined order meta using its key"
-msgstr ""
-"Თქვენ შეგიძლიათ დაამატოთ ინდივიდუალური/წინასწარ განსაზღვრული შეკვეთის მეტა "
-"მისი ღილაკის გამოყენებით"
-
-#: admin/views/_custom_field_editor_form.php:48
-#: admin/views/_custom_field_editor_form_product.php:52
-msgid "Field Name"
-msgstr "ველის სახელი"
-
-#: admin/views/_custom_field_editor_form.php:49
-#: admin/views/_custom_field_editor_form_product.php:53
-msgid "Meta Key"
-msgstr "Meta Key"
-
-#: admin/views/_custom_field_editor_form.php:54
-msgid "To add more than one custom order meta,"
-msgstr "Ერთზე მეტი ინდივიდუალური შეკვეთის მეტა-ს დასამატებლად,"
-
-#: admin/views/_custom_field_editor_form.php:54
-#: admin/views/_custom_field_editor_form_product.php:58
-msgid "upgrade to premium version"
-msgstr "პრემიუმ ვერსიაზე გადასვლა"
-
-#: admin/views/_custom_field_editor_form_product.php:45
-msgid "You can add custom/predefined product meta using its key"
-msgstr ""
-"Თქვენ შეგიძლიათ დაამატოთ ინდივიდუალური/წინასწარ განსაზღვრული პროდუქტის მეტა "
-"მისი გასაღების გამოყენებით"
-
-#: admin/views/_custom_field_editor_form_product.php:58
-msgid "To add more than one custom product meta,"
-msgstr "Ერთზე მეტი ინდივიდუალური პროდუქტის მეტა-ს დასამატებლად,"
-
-#: admin/views/_form_field_generator_new.php:469
-msgid "Order Meta"
-msgstr "Meta-ს შეკვეთა"
-
-#: admin/views/_form_field_generator_new.php:471
-msgid "Add/Edit Order Meta Field"
-msgstr "Შეკვეთის მეტა ველის დამატება/რედაქტირება"
-
-#: admin/views/_form_field_generator_new.php:522
-msgid "Product Meta"
-msgstr "Პროდუქტის მეტა"
-
-#: admin/views/_form_field_generator_new.php:524
-msgid "Add/Edit Product Meta Field"
-msgstr "Პროდუქტის მეტა ველის დამატება/რედაქტირება"
-
-#: admin/views/_form_field_generator_new.php:545
-msgid "Upload your image"
-msgstr "Ატვირთეთ თქვენი სურათი"
-
-#: admin/views/_form_field_generator_new.php:607
-#: admin/views/admin-settings-debug.php:201
-#: admin/views/admin-settings-debug.php:244
-msgid "Reset"
-msgstr "საწყის მნიშვნელობაზე დაბრუნება"
-
-#: admin/views/_form_field_generator_new.php:680
-msgid "Document"
-msgstr "დოკუმენტი"
-
-#: admin/views/_form_field_generator_new.php:681
-msgid "PDF"
-msgstr "PDF"
-
-#: admin/views/_form_field_generator_new.php:682
-msgid "HTML"
-msgstr "HTML"
-
-#: admin/views/_form_field_generator_new.php:683
-msgid "Action"
-msgstr "ქმედება"
-
-#: admin/views/_form_field_generator_new.php:749
-msgid "Add date to invoice number"
-msgstr "Მიუთითეთ თარიღი ინვოისის ნომერზე"
-
-#: admin/views/_form_field_generator_new.php:750
-msgid "Invoice number format"
-msgstr "Ინვოისის ნომრის ფორმატი"
-
-#: admin/views/_form_field_generator_new.php:752
-msgid "Invoice starting number"
-msgstr "Ინვოისის საწყისი ნომერი"
-
-#: admin/views/_form_field_generator_new.php:753
-msgid "Invoice number length"
-msgstr "Ინვოისის ნომრის სიგრძე"
-
-#: admin/views/_form_field_generator_new.php:757
-#: admin/views/_form_field_generator_new.php:770
-msgid "Use order date as input instead."
-msgstr "Სანაცვლოდ გამოიყენეთ შეკვეთის თარიღი შეყვანის სახით."
-
-#: admin/views/_form_field_generator_new.php:762
-msgid "Add date to credit note number"
-msgstr "Მიუთითეთ თარიღი საკრედიტო შენიშვნის ნომერში"
-
-#: admin/views/_form_field_generator_new.php:763
-msgid "Creditnote number format"
-msgstr "Საკრედიტო ნომრის ფორმატი"
-
-#: admin/views/_form_field_generator_new.php:764
-msgid "What should be the starting number for your credit notes?"
-msgstr "Რა უნდა იყოს თქვენი საკრედიტო შენიშვნების საწყისი ნომერი?"
-
-#: admin/views/_form_field_generator_new.php:765
-msgid "What length would you prefer for your credit note"
-msgstr "Რა ხანგრძლივობის საკრედიტო შენიშვნას მიანიჭებდით უპირატესობას"
-
-#: admin/views/_form_field_generator_new.php:773
-msgid "Add date to proforma invoice number"
-msgstr "Მიუთითეთ თარიღი პროფორმის ინვოისის ნომერზე"
-
-#: admin/views/_form_field_generator_new.php:774
-msgid "Proforma invoice number format"
-msgstr "Პროფორმის ინვოისის ნომრის ფორმატი"
-
-#: admin/views/_form_field_generator_new.php:775
-msgid "What should be the starting number for your proforma invoices?"
-msgstr "Რა უნდა იყოს თქვენი პროფორმის ინვოისების საწყისი ნომერი?"
-
-#: admin/views/_form_field_generator_new.php:776
-msgid "What length would you prefer for your proforma invoice"
-msgstr "Პროფორმის ინვოისისთვის რა ხანგრძლივობას მიანიჭებდით უპირატესობას"
-
-#: admin/views/_form_field_generator_new.php:864
-msgid ""
-"Removing year [Y] from the prefix will disable the annual reset functionality"
-msgstr "Პრეფიქსიდან [Y] წლის ამოღება გამორთავს გადატვირთვის წლიურ ფუნქციონალს"
-
-#: admin/views/_form_field_generator_new.php:871
-msgid "Switching to order number will disable the annual reset functionality"
-msgstr "Შეკვეთის ნომერზე გადასვლა გამორთავს წლიური გადატვირთვის ფუნქციონალს"
-
-#: admin/views/_form_field_generator_new.php:887
-msgid ""
-"Removing year [Y] from the suffix will disable the annual reset functionality"
-msgstr "Სუფიქსიდან [Y] წლის ამოღება გამორთავს გადატვირთვის წლიურ ფუნქციონალს"
-
-#: admin/views/_form_field_generator_new.php:915
-msgid "The latest specified starting number will be used after reset"
-msgstr ""
-"Უახლესი მითითებული საწყისი ნომერი გამოყენებული იქნება გადატვირთვის შემდეგ"
 
 #: admin/views/admin-settings-branding.php:6
 msgid "Developed by"
@@ -3050,6 +2939,12 @@ msgstr "Იმპორტის გასაგრძელებლად ქ�
 #: admin/views/admin-settings-debug.php:199
 msgid "Reset all settings to default"
 msgstr "Ყველა პარამეტრის ნაგულისხმევად გადაყენება"
+
+#: admin/views/admin-settings-debug.php:201
+#: admin/views/admin-settings-debug.php:244
+#: admin/views/_form_field_generator_new.php:607
+msgid "Reset"
+msgstr "საწყის მნიშვნელობაზე დაბრუნება"
 
 #: admin/views/admin-settings-debug.php:207
 msgid "Last updated on:"
@@ -3273,6 +3168,7 @@ msgstr ""
 "მიიღეთ <span>%s</span> ვარიანტები გადაზიდვის ეტიკეტებისთვის, გაგზავნის "
 "ეტიკეტებისთვის და მიწოდების შენიშვნებისთვის"
 
+#. translators: %s: highlighted phrase
 #: admin/views/customizer-promotion-popup.php:175
 #: admin/views/customizer-promotion-popup.php:187
 #: admin/views/customizer-promotion-popup.php:199
@@ -3291,7 +3187,6 @@ msgstr "Პრემიუმზე გადასვლა"
 
 #: admin/views/customizer-promotion-popup.php:312
 #, fuzzy
-#| msgid "Upgrade to premium"
 msgid "Upgrade to Premium"
 msgstr "Პრემიუმზე გადასვლა"
 
@@ -3371,7 +3266,7 @@ msgstr "თავისუფალი"
 msgid "Premium"
 msgstr "პრემიუმი"
 
-#: admin/views/freevspro.php:139
+#: admin/views/freevspro.php:139 admin/views/premium_extension_page.php:606
 msgid "30 Day Money Back Guarantee"
 msgstr "თანხის დაბრუნების 30-დღიანი გარანტია"
 
@@ -3449,14 +3344,14 @@ msgstr ""
 #: public/modules/dispatchlabel/dispatchlabel.php:165
 #: public/modules/invoice/invoice.php:1329
 #: public/modules/invoice/invoice.php:1333
-#: public/modules/packinglist/packinglist.php:208
+#: public/modules/packinglist/packinglist.php:209
 #: public/modules/shippinglabel/shippinglabel.php:167
 msgid "Footer"
 msgstr "ქვესართი"
 
 #: admin/views/general.php:85
 msgid "Set up a footer which will be used across the respective documents."
-msgstr ""
+msgstr "Დააყენეთ ძირი, რომელიც გამოყენებული იქნება შესაბამის დოკუმენტებში."
 
 #: admin/views/general.php:98
 msgid "Address details"
@@ -3687,6 +3582,8 @@ msgstr "Დოკუმენტის განლაგებისა და 
 #: admin/views/premium_extension_listing.php:25
 #: admin/views/premium_extension_listing.php:43
 #: admin/views/premium_extension_listing.php:60
+#: admin/views/premium_extension_page.php:46
+#: admin/views/premium_extension_page.php:65
 #: admin/views/wt_ipc_free_pro.php:286 admin/views/wt_pl_free_pro.php:67
 #: admin/views/wt_pro_addons_list.php:21 admin/views/wt_pro_addons_list.php:41
 #: admin/views/wt_pro_addons_list.php:60 admin/views/wt_sdd_free_pro.php:121
@@ -3705,6 +3602,7 @@ msgstr "Პაკეტური პროდუქტების მრავ�
 
 #: admin/views/premium_extension_listing.php:28
 #: admin/views/premium_extension_listing.php:46
+#: admin/views/premium_extension_page.php:49
 #: admin/views/wt_ipc_free_pro.php:232 admin/views/wt_pl_free_pro.php:39
 #: admin/views/wt_pro_addons_list.php:24 admin/views/wt_pro_addons_list.php:44
 #: admin/views/wt_sdd_free_pro.php:105
@@ -3721,6 +3619,10 @@ msgstr "Დადასტურებული თავსებადობ�
 #: admin/views/premium_extension_listing.php:64
 #: admin/views/premium_extension_listing.php:78
 #: admin/views/premium_extension_listing.php:96
+#: admin/views/premium_extension_page.php:51
+#: admin/views/premium_extension_page.php:69
+#: admin/views/premium_extension_page.php:101
+#: admin/views/premium_extension_page.php:121
 #: admin/views/wt_pi_free_pro.php:394 admin/views/wt_pro_addons_list.php:26
 #: admin/views/wt_pro_addons_list.php:46 admin/views/wt_pro_addons_list.php:64
 #: admin/views/wt_pro_addons_list.php:84 admin/views/wt_pro_addons_list.php:104
@@ -3735,82 +3637,98 @@ msgstr ""
 "შენიშვნების მოდული"
 
 #: admin/views/premium_extension_listing.php:39
+#: admin/views/premium_extension_page.php:42
 #: admin/views/wt_pro_addons_list.php:37
 msgid "Create delivery notes, shipping & dispatch labels"
 msgstr "Შექმენით მიტანის შენიშვნები, გადაზიდვისა და გაგზავნის ეტიკეტები"
 
 #: admin/views/premium_extension_listing.php:40
+#: admin/views/premium_extension_page.php:43
 #: admin/views/wt_pro_addons_list.php:38
 msgid "Enable customers to print the documents from order emails"
 msgstr ""
 "Მიეცით მომხმარებლებს საშუალება, ამობეჭდონ დოკუმენტები შეკვეთის ელწერილებიდან"
 
 #: admin/views/premium_extension_listing.php:41
+#: admin/views/premium_extension_page.php:44
 #: admin/views/wt_pro_addons_list.php:39
 msgid "Customize shipping label size"
 msgstr "Გადაზიდვის ეტიკეტის ზომის მორგება"
 
 #: admin/views/premium_extension_listing.php:42
+#: admin/views/premium_extension_page.php:45
 #: admin/views/wt_pro_addons_list.php:40
 msgid "Add multiple shipping labels on one page"
 msgstr "Დაამატეთ რამდენიმე გადაზიდვის ეტიკეტი ერთ გვერდზე"
 
 #: admin/views/premium_extension_listing.php:44
+#: admin/views/premium_extension_page.php:47
 #: admin/views/wt_pro_addons_list.php:42
 msgid "Add extra product & order data fields"
 msgstr "Დაამატეთ დამატებითი პროდუქტისა და შეკვეთის მონაცემების ველები"
 
 #: admin/views/premium_extension_listing.php:45
+#: admin/views/premium_extension_page.php:48
 #: admin/views/wt_pro_addons_list.php:43
 msgid "Pre-built layouts & customizable templates"
 msgstr "Წინასწარ აშენებული განლაგებები და მორგებადი შაბლონები"
 
 #: admin/views/premium_extension_listing.php:47
+#: admin/views/premium_extension_page.php:50
 #: admin/views/wt_pro_addons_list.php:45
 msgid "Sort products based on Name or SKU"
 msgstr "Პროდუქტების დალაგება სახელის ან SKU-ს მიხედვით"
 
 #: admin/views/premium_extension_listing.php:54
+#: admin/views/premium_extension_page.php:58
 #: admin/views/wt_pro_addons_list.php:52
 msgid "WooCommerce Picklists plugin"
 msgstr "WooCommerce-ის პიკ-ლისტების დამატება"
 
 #: admin/views/premium_extension_listing.php:57
+#: admin/views/premium_extension_page.php:62
 #: admin/views/wt_pro_addons_list.php:57
 msgid "Bulk print picklists from the admin order page"
 msgstr "Დაუფასოებელი ბეჭდვის სიები ადმინისტრატორის შეკვეთის გვერდიდან"
 
 #: admin/views/premium_extension_listing.php:58
-#: admin/views/wt_pl_free_pro.php:25 admin/views/wt_pro_addons_list.php:58
+#: admin/views/premium_extension_page.php:63 admin/views/wt_pl_free_pro.php:25
+#: admin/views/wt_pro_addons_list.php:58
 msgid "Automatically email picklists based on order status"
 msgstr "Ელფოსტის ავტომატური ასარჩევი სიები შეკვეთის სტატუსის მიხედვით"
 
 #: admin/views/premium_extension_listing.php:59
+#: admin/views/premium_extension_page.php:64
 #: admin/views/wt_pro_addons_list.php:59
 msgid "Create or customize picklist templates"
 msgstr "Შექმენით ან მოირგეთ ასარჩევი სიის შაბლონები"
 
 #: admin/views/premium_extension_listing.php:61
+#: admin/views/premium_extension_page.php:66
 #: admin/views/wt_pro_addons_list.php:61
 msgid "Group products in picklist by order/category"
 msgstr "Პროდუქტების ჯგუფი შერჩევის სიაში შეკვეთის/კატეგორიის მიხედვით"
 
 #: admin/views/premium_extension_listing.php:62
+#: admin/views/premium_extension_page.php:67
 #: admin/views/wt_pro_addons_list.php:62
 msgid "Add product meta fields & attributes"
 msgstr "Დაამატეთ პროდუქტის მეტა ველები და ატრიბუტები"
 
 #: admin/views/premium_extension_listing.php:63
+#: admin/views/premium_extension_page.php:68
 #: admin/views/wt_pro_addons_list.php:63
 msgid "Exclude virtual products from picklists"
 msgstr "Გამორიცხეთ ვირტუალური პროდუქტები სიებიდან"
 
 #: admin/views/premium_extension_listing.php:70
-#: admin/views/wt_pi_free_pro.php:293 admin/views/wt_pro_addons_list.php:90
+#: admin/views/premium_extension_page.php:92 admin/views/wt_pi_free_pro.php:293
+#: admin/views/wt_pro_addons_list.php:90
 msgid "WooCommerce Address Labels plugin"
 msgstr "WooCommerce-ის მისამართის ჭდეების დამატება"
 
 #: admin/views/premium_extension_listing.php:73
+#: admin/views/premium_extension_page.php:96
 msgid ""
 "Generate ‘Shipping Address’, ‘Billing Address’, ‘From Address’, and ‘Return "
 "Address’ labels"
@@ -3819,20 +3737,24 @@ msgstr ""
 "„დაბრუნების მისამართი“ ეტიკეტები"
 
 #: admin/views/premium_extension_listing.php:74
+#: admin/views/premium_extension_page.php:97
 #: admin/views/wt_pro_addons_list.php:99
 msgid "Customize label sizes"
 msgstr "Მოარგეთ ეტიკეტის ზომები"
 
 #: admin/views/premium_extension_listing.php:75
+#: admin/views/premium_extension_page.php:98
 #: admin/views/wt_pro_addons_list.php:100
 msgid "Bulk print address labels"
 msgstr "Ნაყარი ბეჭდვის მისამართის ეტიკეტები"
 
 #: admin/views/premium_extension_listing.php:76
+#: admin/views/premium_extension_page.php:99
 msgid "Offers built-in label templates"
 msgstr "Გთავაზობთ ჩაშენებულ ეტიკეტების შაბლონებს"
 
 #: admin/views/premium_extension_listing.php:77
+#: admin/views/premium_extension_page.php:100
 #: admin/views/wt_pro_addons_list.php:102
 msgid "Change address label layout"
 msgstr "Მისამართის ჭდის განლაგების შეცვლა"
@@ -3842,72 +3764,88 @@ msgid "WooCommerce Proforma Invoices"
 msgstr "WooCommerce Proforma ინვოისები"
 
 #: admin/views/premium_extension_listing.php:87
+#: admin/views/premium_extension_page.php:112
 #: admin/views/wt_pro_addons_list.php:75
 msgid "Create proforma invoices automatically"
 msgstr "Ავტომატურად შექმენით პროფორმის ინვოისები"
 
 #: admin/views/premium_extension_listing.php:88
+#: admin/views/premium_extension_page.php:113
 #: admin/views/wt_pro_addons_list.php:76
 msgid "Pre-built proforma invoice layouts"
 msgstr "Წინასწარ აშენებული პროფორმის ინვოისის მაკეტები"
 
 #: admin/views/premium_extension_listing.php:89
 #: admin/views/premium_extension_listing.php:107
+#: admin/views/premium_extension_page.php:82
+#: admin/views/premium_extension_page.php:114
 #: admin/views/wt_pro_addons_list.php:77
 msgid "Easy invoice layout customization"
 msgstr "Ინვოისის განლაგების მარტივი მორგება"
 
 #: admin/views/premium_extension_listing.php:90
+#: admin/views/premium_extension_page.php:115
 #: admin/views/wt_pro_addons_list.php:78
 msgid "Attach proforma invoice PDF to order emails"
 msgstr "Მიამაგრეთ პროფორმის ინვოისი PDF ელფოსტის შესაკვეთად"
 
 #: admin/views/premium_extension_listing.php:91
+#: admin/views/premium_extension_page.php:116
 #: admin/views/wt_pro_addons_list.php:79
 msgid "Allow customers to print invoices"
 msgstr "Მიეცით მომხმარებლებს ინვოისების დაბეჭდვის საშუალება"
 
 #: admin/views/premium_extension_listing.php:92
-#: admin/views/wt_pi_free_pro.php:62 admin/views/wt_pro_addons_list.php:80
+#: admin/views/premium_extension_page.php:117 admin/views/wt_pi_free_pro.php:62
+#: admin/views/wt_pro_addons_list.php:80
 msgid "Set custom proforma invoice number"
 msgstr "Პროფორმის ინდივიდუალური ინვოისის ნომრის დაყენება"
 
 #: admin/views/premium_extension_listing.php:93
+#: admin/views/premium_extension_page.php:118
 #: admin/views/wt_pro_addons_list.php:81
 msgid "Add additional product & order data fields"
 msgstr "Დაამატეთ დამატებითი პროდუქტისა და შეკვეთის მონაცემების ველები"
 
 #: admin/views/premium_extension_listing.php:94
+#: admin/views/premium_extension_page.php:119
 #: admin/views/wt_pi_free_pro.php:207 admin/views/wt_pro_addons_list.php:82
 msgid "Attach special notes with proforma invoices"
 msgstr "Მიამაგრეთ სპეციალური შენიშვნები პროფორმის ინვოისებით"
 
 #: admin/views/premium_extension_listing.php:95
+#: admin/views/premium_extension_page.php:120
 #: admin/views/wt_pro_addons_list.php:83
 msgid "Attach transport & sales terms"
 msgstr "Ტრანსპორტისა და გაყიდვების პირობების მიმაგრება"
 
 #: admin/views/premium_extension_listing.php:102
+#: admin/views/premium_extension_page.php:76
 msgid "Customizer for WooCommerce PDF Invoices"
 msgstr "Მორგება WooCommerce PDF ინვოისებისთვის"
 
 #: admin/views/premium_extension_listing.php:105
+#: admin/views/premium_extension_page.php:80
 msgid "Drag-and-drop easy customization"
 msgstr "Გადათრევა-გადმოთრევის მარტივი მორგება"
 
 #: admin/views/premium_extension_listing.php:106
+#: admin/views/premium_extension_page.php:81
 msgid "Advanced visual and code editor"
 msgstr "Ვიზუალური და კოდის დამატებითი რედაქტორი"
 
 #: admin/views/premium_extension_listing.php:108
+#: admin/views/premium_extension_page.php:83
 msgid "Customize individual elements using block editors"
 msgstr "Ცალკეული ელემენტების მორგება ბლოკის რედაქტორების გამოყენებით"
 
 #: admin/views/premium_extension_listing.php:109
+#: admin/views/premium_extension_page.php:84
 msgid "View live preview of customization"
 msgstr "Ინდივიდუალიზაციის გადახედვა პირდაპირ ეთერში"
 
 #: admin/views/premium_extension_listing.php:110
+#: admin/views/premium_extension_page.php:85
 msgid "Change color, text, background, border & more"
 msgstr "Შეცვალეთ ფერი, ტექსტი, ფონი, საზღვარი და სხვა"
 
@@ -3918,21 +3856,25 @@ msgid "QR Code Addon for WooCommerce PDF Invoices"
 msgstr "QR კოდის დამატება WooCommerce PDF ინვოისებისთვის"
 
 #: admin/views/premium_extension_listing.php:119
+#: admin/views/premium_extension_page.php:132
 #: admin/views/wt_pro_addons_list.php:115
 msgid "Assign QR codes to all generated invoices"
 msgstr "Მიანიჭეთ QR კოდები ყველა გენერირებულ ინვოისს"
 
 #: admin/views/premium_extension_listing.php:120
+#: admin/views/premium_extension_page.php:133
 #: admin/views/wt_pro_addons_list.php:116
 msgid "Create QR code that reads order or invoice number"
 msgstr "Შექმენით QR-კოდი, რომელზეც იკითხება შეკვეთის ან ინვოისის ნომერი"
 
 #: admin/views/premium_extension_listing.php:121
+#: admin/views/premium_extension_page.php:134
 #: admin/views/wt_pro_addons_list.php:117
 msgid "Add custom data to invoices"
 msgstr "Ინვოისებში დაამატეთ ინდივიდუალური მონაცემები"
 
 #: admin/views/premium_extension_listing.php:122
+#: admin/views/premium_extension_page.php:135
 msgid ""
 "Compatible with WooCommerce PDF Invoice, Packing Slip & Credit Note (Premium)"
 msgstr ""
@@ -3940,6 +3882,7 @@ msgstr ""
 "შენიშვნასთან (პრემიუმი)"
 
 #: admin/views/premium_extension_listing.php:123
+#: admin/views/premium_extension_page.php:136
 #: admin/views/wt_pro_addons_list.php:119
 msgid ""
 "Compatible with WooCommerce PDF Invoices, Packing Slips, Delivery Notes, and "
@@ -3986,39 +3929,48 @@ msgid "WebToffee WooCommerce Request A Quote"
 msgstr "WebToffee WooCommerce მოითხოვეთ შეთავაზება"
 
 #: admin/views/premium_extension_listing.php:147
+#: admin/views/premium_extension_page.php:147
 msgid "Add quote button to the product & shop pages"
 msgstr "Დაამატეთ შეთავაზების ღილაკი პროდუქტის და მაღაზიის გვერდებს"
 
 #: admin/views/premium_extension_listing.php:148
+#: admin/views/premium_extension_page.php:148
 msgid "Enable quotation request for selected products"
 msgstr "Შერჩეული პროდუქტებისთვის შეთავაზების მოთხოვნის ჩართვა"
 
 #: admin/views/premium_extension_listing.php:149
+#: admin/views/premium_extension_page.php:149
 msgid "Automatically send quotes to users"
 msgstr "Ავტომატურად გაუგზავნეთ შეთავაზებები მომხმარებლებს"
 
 #: admin/views/premium_extension_listing.php:150
+#: admin/views/premium_extension_page.php:150
 msgid "Disable guest users from asking for quote"
 msgstr "Გამორთეთ სტუმრების მიერ შეთავაზების მოთხოვნა"
 
 #: admin/views/premium_extension_listing.php:151
+#: admin/views/premium_extension_page.php:151
 msgid "Hide prices and ‘add to cart’ button"
 msgstr "Დამალეთ ფასები და ღილაკი „კალათაში დამატება“"
 
 #: admin/views/premium_extension_listing.php:152
+#: admin/views/premium_extension_page.php:152
 msgid "Automatic email alerts for admin & users"
 msgstr ""
 "Ელფოსტის ავტომატური გაფრთხილებები ადმინისტრატორისა და მომხმარებლებისთვის"
 
 #: admin/views/premium_extension_listing.php:153
+#: admin/views/premium_extension_page.php:153
 msgid "Easy button and form customization"
 msgstr "Მარტივი ღილაკი და მორგება"
 
 #: admin/views/premium_extension_listing.php:154
+#: admin/views/premium_extension_page.php:154
 msgid "Set quote expiry period"
 msgstr "Მიუთითეთ შეთავაზების მოქმედების ვადის ამოწურვის პერიოდი"
 
 #: admin/views/premium_extension_listing.php:155
+#: admin/views/premium_extension_page.php:155
 msgid "Limit spams with reCAPTCHA"
 msgstr "Შეზღუდეთ სპამები reCAPTCHA-თ"
 
@@ -4027,30 +3979,37 @@ msgid "Sequential Order Number for WooCommerce"
 msgstr "WooCommerce-ის რიგითი ნომერი"
 
 #: admin/views/premium_extension_listing.php:164
+#: admin/views/premium_extension_page.php:166
 msgid "Auto reset sequence per month/year etc"
 msgstr "Ავტომატური გადატვირთვის თანმიმდევრობა თვეში/წელიწადში და ა.შ."
 
 #: admin/views/premium_extension_listing.php:165
+#: admin/views/premium_extension_page.php:167
 msgid "Add a custom suffix for order numbers"
 msgstr "Დაამატეთ ინდივიდუალური სუფიქსი შეკვეთის ნომრებისთვის"
 
 #: admin/views/premium_extension_listing.php:166
+#: admin/views/premium_extension_page.php:168
 msgid "Date suffix in order numbers"
 msgstr "Თარიღის სუფიქსი რიცხვების თანმიმდევრობით"
 
 #: admin/views/premium_extension_listing.php:167
+#: admin/views/premium_extension_page.php:169
 msgid "Custom sequence for free orders"
 msgstr "Ინდივიდუალური თანმიმდევრობა უფასო შეკვეთებისთვის"
 
 #: admin/views/premium_extension_listing.php:168
+#: admin/views/premium_extension_page.php:170
 msgid "Increment sequence in custom series"
 msgstr "Ინდივიდუალური სერიების გაზრდის თანმიმდევრობა"
 
 #: admin/views/premium_extension_listing.php:169
+#: admin/views/premium_extension_page.php:171
 msgid "More order number templates"
 msgstr "Შეკვეთის ნომრის სხვა შაბლონები"
 
 #: admin/views/premium_extension_listing.php:175
+#: admin/views/premium_extension_page.php:392
 msgid "Data Import & Export"
 msgstr "&შეტანა/გატანა"
 
@@ -4063,10 +4022,12 @@ msgstr ""
 "WooCommerce მონაცემებისთვის"
 
 #: admin/views/premium_extension_listing.php:182
+#: admin/views/premium_extension_page.php:483
 msgid "Import Export Suite for WooCommerce"
 msgstr "WooCommerce-ის ექსპორტის აპარტამენტის შემოტანა"
 
 #: admin/views/premium_extension_listing.php:185
+#: admin/views/premium_extension_page.php:487
 msgid ""
 "Import/export Products, Orders, Subscriptions, Coupons, Customers, WordPress "
 "Users, Categories & Tags, Reviews"
@@ -4078,6 +4039,10 @@ msgstr ""
 #: admin/views/premium_extension_listing.php:203
 #: admin/views/premium_extension_listing.php:221
 #: admin/views/premium_extension_listing.php:240
+#: admin/views/premium_extension_page.php:403
+#: admin/views/premium_extension_page.php:423
+#: admin/views/premium_extension_page.php:444
+#: admin/views/premium_extension_page.php:488
 msgid "Supports Excel, XML, CSV, and TSV file formats"
 msgstr "Მხარს უჭერს Excel, XML, CSV და TSV ფაილის ფორმატებს"
 
@@ -4085,6 +4050,10 @@ msgstr "Მხარს უჭერს Excel, XML, CSV და TSV ფაილ�
 #: admin/views/premium_extension_listing.php:207
 #: admin/views/premium_extension_listing.php:226
 #: admin/views/premium_extension_listing.php:246
+#: admin/views/premium_extension_page.php:407
+#: admin/views/premium_extension_page.php:428
+#: admin/views/premium_extension_page.php:450
+#: admin/views/premium_extension_page.php:490
 msgid "Import from URL, Google Sheets, FTP/SFTP"
 msgstr "URL-დან, Google Sheets-დან, FTP/SFTP-დან შემოტანა"
 
@@ -4092,21 +4061,31 @@ msgstr "URL-დან, Google Sheets-დან, FTP/SFTP-დან შემო�
 #: admin/views/premium_extension_listing.php:208
 #: admin/views/premium_extension_listing.php:227
 #: admin/views/premium_extension_listing.php:247
+#: admin/views/premium_extension_page.php:408
+#: admin/views/premium_extension_page.php:429
+#: admin/views/premium_extension_page.php:451
+#: admin/views/premium_extension_page.php:491
 msgid "Export to FTP/SFTP"
 msgstr "ექსპორტი"
 
 #: admin/views/premium_extension_listing.php:190
+#: admin/views/premium_extension_page.php:492
 msgid "Import & export custom fields and values"
 msgstr "Ინდივიდუალური ველებისა და მნიშვნელობების შემოტანა და გატანა"
 
 #: admin/views/premium_extension_listing.php:191
 #: admin/views/premium_extension_listing.php:228
 #: admin/views/premium_extension_listing.php:248
+#: admin/views/premium_extension_page.php:430
+#: admin/views/premium_extension_page.php:452
+#: admin/views/premium_extension_page.php:493
 msgid "Advanced filters and customizations for import & export"
 msgstr "Გაფართოებული ფილტრები და მორგება იმპორტისა და ექსპორტისთვის"
 
 #: admin/views/premium_extension_listing.php:192
 #: admin/views/premium_extension_listing.php:210
+#: admin/views/premium_extension_page.php:410
+#: admin/views/premium_extension_page.php:494
 msgid "Add and update data while importing"
 msgstr "Მონაცემების დამატება და განახლება იმპორტისას"
 
@@ -4114,6 +4093,10 @@ msgstr "Მონაცემების დამატება და გა
 #: admin/views/premium_extension_listing.php:211
 #: admin/views/premium_extension_listing.php:230
 #: admin/views/premium_extension_listing.php:250
+#: admin/views/premium_extension_page.php:411
+#: admin/views/premium_extension_page.php:432
+#: admin/views/premium_extension_page.php:454
+#: admin/views/premium_extension_page.php:495
 msgid "Maintains action history and debug logs"
 msgstr "Ინარჩუნებს მოქმედების ისტორიას და გამართვის ჟურნალებს"
 
@@ -4121,6 +4104,10 @@ msgstr "Ინარჩუნებს მოქმედების ისტ�
 #: admin/views/premium_extension_listing.php:212
 #: admin/views/premium_extension_listing.php:231
 #: admin/views/premium_extension_listing.php:251
+#: admin/views/premium_extension_page.php:412
+#: admin/views/premium_extension_page.php:433
+#: admin/views/premium_extension_page.php:455
+#: admin/views/premium_extension_page.php:496
 msgid "Compatible with major 3rd-party plugins"
 msgstr "Თავსებადია ძირითად მესამე მხარის პლაგინებთან"
 
@@ -4130,18 +4117,23 @@ msgstr "Პროდუქტის იმპორტის ექსპორ�
 
 #: admin/views/premium_extension_listing.php:204
 #: admin/views/premium_extension_listing.php:241
+#: admin/views/premium_extension_page.php:404
+#: admin/views/premium_extension_page.php:445
 msgid "Schedule automated import and export"
 msgstr "Ავტომატური იმპორტისა და ექსპორტის დაგეგმვა"
 
 #: admin/views/premium_extension_listing.php:205
+#: admin/views/premium_extension_page.php:405
 msgid "Support for multiple product types"
 msgstr "Მრავალჯერადი ტიპის პროდუქციის მხარდაჭერა"
 
 #: admin/views/premium_extension_listing.php:206
+#: admin/views/premium_extension_page.php:406
 msgid "Export product images in a separate zip file"
 msgstr "Პროდუქტის სურათების ცალკე ZIP ფაილში გატანა"
 
 #: admin/views/premium_extension_listing.php:209
+#: admin/views/premium_extension_page.php:409
 msgid "Advanced filters and customizations for import and export"
 msgstr "Გაფართოებული ფილტრები და მორგება იმპორტისა და ექსპორტისთვის"
 
@@ -4150,14 +4142,17 @@ msgid "Order, Coupon, Subscription Export Import for WooCommerce"
 msgstr "Შეკვეთა, ვაუჩერი, გამოწერის ექსპორტის იმპორტი WooCommerce-სთვის"
 
 #: admin/views/premium_extension_listing.php:223
+#: admin/views/premium_extension_page.php:425
 msgid "Email customers on order status change"
 msgstr "Ელფოსტის მომხმარებლები შეკვეთის სტატუსის ცვლილების შესახებ"
 
 #: admin/views/premium_extension_listing.php:224
+#: admin/views/premium_extension_page.php:426
 msgid "Create users on order import"
 msgstr "Შექმენით მომხმარებლები შეკვეთის იმპორტისას"
 
 #: admin/views/premium_extension_listing.php:225
+#: admin/views/premium_extension_page.php:427
 msgid "Filter export by products, order status, email, date, etc"
 msgstr ""
 "Ექსპორტის გაფილტვრა პროდუქციის, შეკვეთის სტატუსის, ელფოსტის, თარიღის და ა.შ. "
@@ -4165,6 +4160,8 @@ msgstr ""
 
 #: admin/views/premium_extension_listing.php:229
 #: admin/views/premium_extension_listing.php:249
+#: admin/views/premium_extension_page.php:431
+#: admin/views/premium_extension_page.php:453
 msgid "Add & update data while importing"
 msgstr "Მონაცემების დამატება და განახლება იმპორტისას"
 
@@ -4175,19 +4172,23 @@ msgstr ""
 "ექსპორტი"
 
 #: admin/views/premium_extension_listing.php:242
+#: admin/views/premium_extension_page.php:446
 msgid "Customize and send emails to new users on import"
 msgstr "Მოარგეთ და გაუგზავნეთ ელწერილი ახალ მომხმარებლებს იმპორტზე"
 
 #: admin/views/premium_extension_listing.php:243
+#: admin/views/premium_extension_page.php:447
 msgid "Retain user passwords on import/export"
 msgstr "Შეინახეთ მომხმარებლის პაროლები იმპორტზე/ექსპორტზე"
 
 #: admin/views/premium_extension_listing.php:244
+#: admin/views/premium_extension_page.php:448
 msgid "Export and import custom fields and third-party plugin fields"
 msgstr ""
 "Გაიტანეთ და შემოიტანეთ მორგებული ველები და მესამე მხარის დამატებების ველები"
 
 #: admin/views/premium_extension_listing.php:245
+#: admin/views/premium_extension_page.php:449
 msgid "Filter by user role, email, date, etc"
 msgstr "Გაფილტრეთ მომხმარებლის როლის, ელფოსტის, თარიღის და ა.შ. მიხედვით"
 
@@ -4196,6 +4197,7 @@ msgid "WebToffee WooCommerce Product Feed & Sync Manager"
 msgstr "WebToffee WooCommerce პროდუქტის ლენტი და სინქრონიზაციის მენეჯერი"
 
 #: admin/views/premium_extension_listing.php:260
+#: admin/views/premium_extension_page.php:466
 msgid ""
 "Generate WooCommerce product feeds for Google Shopping, Facebook Shop, and "
 "Instagram Shop"
@@ -4204,14 +4206,17 @@ msgstr ""
 "ისა და Instagram Shop-ისთვის"
 
 #: admin/views/premium_extension_listing.php:261
+#: admin/views/premium_extension_page.php:467
 msgid "Sync WooCommerce products to Facebook catalog"
 msgstr "WooCommerce პროდუქტების Facebook კატალოგთან სინქრონიზაცია"
 
 #: admin/views/premium_extension_listing.php:262
+#: admin/views/premium_extension_page.php:468
 msgid "Additional feed intervals (30 minutes, 6 hours, 12 hours)"
 msgstr "Დამატებითი კვების ინტერვალები (30 წუთი, 6 საათი, 12 საათი)"
 
 #: admin/views/premium_extension_listing.php:263
+#: admin/views/premium_extension_page.php:469
 msgid "Support for additional fields that can be added to the feed"
 msgstr "Მხარდაჭერა დამატებითი ველებისთვის, რომლებიც შეიძლება დაემატოს არხებს"
 
@@ -4220,30 +4225,37 @@ msgid "WPML multilingual and multicurrency support "
 msgstr "WPML მულტილინგვური და მულტისავალუტო მხარდაჭერა"
 
 #: admin/views/premium_extension_listing.php:265
+#: admin/views/premium_extension_page.php:471
 msgid "Google local product inventory feed"
 msgstr "Google-ის ადგილობრივი პროდუქციის მარაგების არხი"
 
 #: admin/views/premium_extension_listing.php:266
+#: admin/views/premium_extension_page.php:472
 msgid "Exclude specific products"
 msgstr "Კონკრეტული პროდუქტების გამორიცხვა"
 
 #: admin/views/premium_extension_listing.php:267
+#: admin/views/premium_extension_page.php:473
 msgid "Include or exclude specific categories"
 msgstr "Კონკრეტული კატეგორიების ჩართვა ან გამორიცხვა"
 
 #: admin/views/premium_extension_listing.php:268
+#: admin/views/premium_extension_page.php:474
 msgid "Exclude out-of-stock products"
 msgstr "Მარაგის გარეშე პროდუქტების გამორიცხვა"
 
 #: admin/views/premium_extension_listing.php:269
+#: admin/views/premium_extension_page.php:475
 msgid "Filter products based on product type"
 msgstr "Პროდუქტების გაფილტვრა პროდუქტის ტიპის მიხედვით"
 
 #: admin/views/premium_extension_listing.php:270
+#: admin/views/premium_extension_page.php:476
 msgid "Map categories on product level"
 msgstr "Კატეგორიების რუკა პროდუქტის დონეზე"
 
 #: admin/views/premium_extension_listing.php:277
+#: admin/views/premium_extension_page.php:212
 msgid "E-commerce Promotions"
 msgstr "Ელექტრონული კომერციის პრომოაქციები"
 
@@ -4260,42 +4272,52 @@ msgid "WebToffee WooCommerce Gift Cards"
 msgstr "WebToffee WooCommerce სასაჩუქრე ბარათები"
 
 #: admin/views/premium_extension_listing.php:287
+#: admin/views/premium_extension_page.php:290
 msgid "Create unlimited gift cards"
 msgstr "Შექმენით ულიმიტო სასაჩუქრე ბარათები"
 
 #: admin/views/premium_extension_listing.php:288
+#: admin/views/premium_extension_page.php:291
 msgid "Email gift cards to customers"
 msgstr "Გაუგზავნეთ სასაჩუქრე ბარათები მომხმარებლებს"
 
 #: admin/views/premium_extension_listing.php:289
+#: admin/views/premium_extension_page.php:292
 msgid "Provide refunds to store credit"
 msgstr "Ბონუსის შესანახად თანხის დაბრუნება"
 
 #: admin/views/premium_extension_listing.php:290
+#: admin/views/premium_extension_page.php:293
 msgid "20+ predefined gift card templates"
 msgstr "20-ზემეტი წინასწარ განსაზღვრული სასაჩუქრე ბარათის შაბლონი"
 
 #: admin/views/premium_extension_listing.php:291
+#: admin/views/premium_extension_page.php:294
 msgid "Category wise template listing"
 msgstr "Კატეგორიის ბრძნული შაბლონების ჩამონათვალი"
 
 #: admin/views/premium_extension_listing.php:292
+#: admin/views/premium_extension_page.php:295
 msgid "Add custom templates for gift cards"
 msgstr "Დაამატეთ ინდივიდუალური შაბლონები სასაჩუქრე ბარათებისთვის"
 
 #: admin/views/premium_extension_listing.php:293
+#: admin/views/premium_extension_page.php:296
 msgid "Generate gift cards based on order status"
 msgstr "Სასაჩუქრე ბარათების გენერირება შეკვეთის სტატუსის მიხედვით"
 
 #: admin/views/premium_extension_listing.php:294
+#: admin/views/premium_extension_page.php:297
 msgid "Manage user credit balance"
 msgstr "Მომხმარებლის ბონუსის ბალანსის მართვა"
 
 #: admin/views/premium_extension_listing.php:295
+#: admin/views/premium_extension_page.php:298
 msgid "Fixed and custom gift card amounts"
 msgstr "Სასაჩუქრე ბარათის ფიქსირებული და ინდივიდუალური ოდენობები"
 
 #: admin/views/premium_extension_listing.php:296
+#: admin/views/premium_extension_page.php:299
 msgid "Add usage restrictions for gift cards"
 msgstr "Დაამატეთ სასაჩუქრე ბარათებით სარგებლობის შეზღუდვები"
 
@@ -4304,31 +4326,38 @@ msgid "Frequently Bought Together for WooCommerce"
 msgstr "Ხშირად ყიდულობენ ერთად WooCommerce-სთვის"
 
 #: admin/views/premium_extension_listing.php:305
+#: admin/views/premium_extension_page.php:259
 msgid "Automatically generate suggestions based on order history"
 msgstr "Შემოთავაზებების ავტომატური გენერირება შეკვეთების ისტორიის საფუძველზე"
 
 #: admin/views/premium_extension_listing.php:306
+#: admin/views/premium_extension_page.php:260
 msgid "Display recommended products on the product pages"
 msgstr "Რეკომენდებული პროდუქტების ჩვენება პროდუქტის გვერდებზე"
 
 #: admin/views/premium_extension_listing.php:307
+#: admin/views/premium_extension_page.php:261
 msgid "Quick setup page to add & edit recommendations"
 msgstr ""
 "Სწრაფი პარამეტრების გვერდი რეკომენდაციების დასამატებლად და ჩასასწორებლად"
 
 #: admin/views/premium_extension_listing.php:308
+#: admin/views/premium_extension_page.php:262
 msgid "Multiple product recommendation layouts"
 msgstr "Პროდუქტის რამდენიმე რეკომენდაციის განლაგება"
 
 #: admin/views/premium_extension_listing.php:309
+#: admin/views/premium_extension_page.php:263
 msgid "Set up discounts on the recommended product bundle"
 msgstr "Დააწესეთ ფასდაკლებები რეკომენდებული პროდუქტის პაკეტზე"
 
 #: admin/views/premium_extension_listing.php:310
+#: admin/views/premium_extension_page.php:264
 msgid "Manually create a bought-together list"
 msgstr "Ხელით შექმენით ერთად შეძენილი სია"
 
 #: admin/views/premium_extension_listing.php:311
+#: admin/views/premium_extension_page.php:265
 msgid ""
 "Use upsells, cross-sells, & related products as frequently bought products"
 msgstr ""
@@ -4336,22 +4365,27 @@ msgstr ""
 "პროდუქტები, როგორც ხშირად ნაყიდი პროდუქტები"
 
 #: admin/views/premium_extension_listing.php:312
+#: admin/views/premium_extension_page.php:266
 msgid "Customize the title, button, and label texts"
 msgstr "Სათაურის, ღილაკისა და ჭდის ტექსტების მორგება"
 
 #: admin/views/premium_extension_listing.php:313
+#: admin/views/premium_extension_page.php:267
 msgid "Customize the display of the recommended products"
 msgstr "Მოირგეთ რეკომენდებული პროდუქტების ჩვენება"
 
 #: admin/views/premium_extension_listing.php:319
+#: admin/views/premium_extension_page.php:219
 msgid "Smart Coupons for WooCommerce"
 msgstr "Გონივრული ვაუჩერები WooCommerce-სთვის"
 
 #: admin/views/premium_extension_listing.php:322
+#: admin/views/premium_extension_page.php:223
 msgid "Advanced BOGO Coupons"
 msgstr "Დამატებითი BOGO ვაუჩერები"
 
 #: admin/views/premium_extension_listing.php:323
+#: admin/views/premium_extension_page.php:224
 msgid "Offer store credits"
 msgstr "Შესთავაზეთ მაღაზიას ბონუსები"
 
@@ -4360,54 +4394,67 @@ msgid "Create attractive gift cards "
 msgstr "Შექმენით მიმზიდველი სასაჩუქრე ბარათები"
 
 #: admin/views/premium_extension_listing.php:325
+#: admin/views/premium_extension_page.php:226
 msgid "Give away product coupons"
 msgstr "Უარი თქვით პროდუქტის ვაუჩერებზე"
 
 #: admin/views/premium_extension_listing.php:326
+#: admin/views/premium_extension_page.php:227
 msgid "Coupons based on past purchases"
 msgstr "Ვაუჩერები წინა შენაძენების საფუძველზე"
 
 #: admin/views/premium_extension_listing.php:327
+#: admin/views/premium_extension_page.php:228
 msgid "Restrict coupons by country"
 msgstr "Ვაუჩერების შეზღუდვა ქვეყნების მიხედვით"
 
 #: admin/views/premium_extension_listing.php:328
+#: admin/views/premium_extension_page.php:229
 msgid "Create and offer sign-up discount coupons"
 msgstr "Შექმენით და შესთავაზეთ სარეგისტრაციო ფასდაკლების ვაუჩერები"
 
 #: admin/views/premium_extension_listing.php:330
+#: admin/views/premium_extension_page.php:231
 msgid "Customizable countdown sales banner"
 msgstr "Კონფიგურირებადი უკუთვლის სარეალიზაციო ბანერი"
 
 #: admin/views/premium_extension_listing.php:332
+#: admin/views/premium_extension_page.php:233
 msgid "Import and export coupons"
 msgstr "Ვაუჩერების შემოტანა და გატანა"
 
 #: admin/views/premium_extension_listing.php:333
+#: admin/views/premium_extension_page.php:234
 msgid "Coupon embeds"
 msgstr "Ვაუჩერის ჩანერგვა"
 
 #: admin/views/premium_extension_listing.php:334
+#: admin/views/premium_extension_page.php:235
 msgid "Allow coupon combinations"
 msgstr "Ვაუჩერის კომბინაციების დაშვება"
 
 #: admin/views/premium_extension_listing.php:340
+#: admin/views/premium_extension_page.php:242
 msgid "URL Coupons for WooCommerce"
 msgstr "URL ვაუჩერები WooCommerce-სთვის"
 
 #: admin/views/premium_extension_listing.php:343
+#: admin/views/premium_extension_page.php:246
 msgid "Generate custom coupon URLs"
 msgstr "Ვაუჩერის ინდივიდუალური მისამართების გენერაცია"
 
 #: admin/views/premium_extension_listing.php:344
+#: admin/views/premium_extension_page.php:247
 msgid "Set up a redirect page"
 msgstr "Გადამისამართების გვერდის შექმნა"
 
 #: admin/views/premium_extension_listing.php:345
+#: admin/views/premium_extension_page.php:248
 msgid "Automatically add products"
 msgstr "Პროდუქტების ავტომატური დამატება"
 
 #: admin/views/premium_extension_listing.php:346
+#: admin/views/premium_extension_page.php:249
 msgid "Create QR code coupons"
 msgstr "Შექმენით QR კოდის ვაუჩერები"
 
@@ -4424,6 +4471,7 @@ msgstr ""
 "ძირითადი კონფიდენციალურობის კანონების დაცვის უზრუნველსაყოფად."
 
 #: admin/views/premium_extension_listing.php:359
+#: admin/views/premium_extension_page.php:347
 msgid "GDPR Cookie Consent Plugin (CCPA Ready)"
 msgstr "GDPR ქუქი-ჩანაწერების თანხმობის დამატება (CCPA მზადაა)"
 
@@ -4495,14 +4543,264 @@ msgstr "WCAG-ის შესაბამისობის უზრუნვ�
 msgid "Inclusive web design made simple"
 msgstr "Ინკლუზიური ვებდიზაინი გამარტივდა"
 
-#: admin/views/premium_extension_page.php:82
-msgid "You are covered by our 30-Day Money Back Guarantee"
-msgstr "Თქვენზე ვრცელდება თანხის დაბრუნების 30-დღიანი გარანტია"
-
-#: admin/views/premium_extension_page.php:92
-msgid "Supported by a team with 99% Customer Satisfaction Score"
+#: admin/views/premium_extension_page.php:19
+msgid "Accounting & Invoicing"
 msgstr ""
-"Მხარდაჭერილია 99% -იანი მომხმარებლის კმაყოფილების ქულის მქონე გუნდის მიერ"
+
+#: admin/views/premium_extension_page.php:20
+msgid ""
+"Automatically generate professional WooCommerce invoices and documents for "
+"all your orders."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:24
+msgid "PDF Invoices, Packing Slips, & Credit Notes"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:30
+msgid ""
+"Automatically generate, customize, and manage professional WooCommerce "
+"invoices, packing slips, and credit notes with advanced automation and tax "
+"compliance features."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:38
+msgid "Shipping Labels, Dispatch Labels, & Delivery Notes"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:108
+#: admin/views/premium_extension_page.php:194
+msgid "Proforma Invoice"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:128
+msgid "QR Code Add-on for WooCommerce PDF Invoices"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:143
+msgid "WooCommerce Request a Quote"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:162
+msgid "Sequential Order Numbers"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:183
+msgid "All in one Invoice bundle"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:185
+msgid ""
+"A complete suite of invoices and shipping documents bundle to create and "
+"print PDF invoices, packing slips, shipping and delivery documents in "
+"WooCommerce."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:198
+#: admin/views/premium_extension_page.php:330
+msgid "Save up to 30% off"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:213
+msgid ""
+"Create and run successful promotional campaigns with the best marketing "
+"tools for WooCommerce"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:225
+msgid "Create attractive gift cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:255
+msgid "WooCommerce Product Recommendations"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:274
+msgid "WooCommerce Coupon Generator"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:278
+msgid "Bulk generate WooCommerce coupons"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:279
+msgid "Bulk export WooCommerce coupons to CSV"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:280
+msgid "Add usage restrictions to coupons"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:286
+msgid "WooCommerce Gift Cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:309
+msgid "ECommerce Marketing Automation App"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:311
+msgid ""
+"Create signup forms, popups, and automated email campaigns with pre-built "
+"workflow templates to capture leads, recover abandoned carts, and grow sales."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:314
+msgid "Try now"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:319
+msgid "Promotion Bundle"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:320
+msgid "WooCommerce Promotion Bundle"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:322
+msgid ""
+"Make powerful promotional campaigns with our WooCommerce promotion bundle. "
+"Create coupon promotions, set up gift cards, and implement popular product "
+"recommendation strategies."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:324
+msgid "Smart Coupons"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:325
+msgid "Product recommendation"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:326
+msgid "Gift cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:342
+msgid "Privacy Compliance"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:343
+msgid ""
+"Ensure compliance with major cookie laws, including, GDPR, CCPA, LGPD, CNIL, "
+"and more."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:353
+msgid ""
+"This Google-certified CMP lets you create a customizable cookie banner, "
+"manage user consent, and ensure global privacy compliance with automatic "
+"script blocking."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:363
+msgid "EU Order Withdrawal Button Plugin for WooCommerce"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:370
+msgid "Add a \"Request Withdrawal\" button to WooCommerce orders"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:371
+msgid "Supports guest withdrawal without an account"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:372
+msgid "Two-step confirmation to prevent errors"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:373
+msgid "Full or partial order withdrawal support"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:374
+msgid "Set the withdrawal period to 2, 7, 14, or 30 days"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:375
+msgid "Exclude products, categories, and product types"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:376
+msgid "Dedicated admin dashboard for all requests"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:377
+msgid "Auto-approve requests, issue refunds, and restock items"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:378
+msgid "Show the withdrawal button only to EU customers"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:379
+msgid "Generate a withdrawal terms and conditions page"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:380
+msgid "Send email confirmation to customers"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:393
+msgid ""
+"The best-in-class import, export, and migration solutions for your "
+"WooCommerce data."
+msgstr ""
+
+#: admin/views/premium_extension_page.php:399
+msgid "Product Import Export Plugin"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:419
+msgid "Order, Coupon, Subscription Export Import"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:440
+msgid "User Import Export Plugin"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:462
+msgid "Product Feed & Sync Manager"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:470
+msgid "WPML multilingual and multicurrency support"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:565
+msgid ""
+"You already have every solution we recommend. Thank you for your support!"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:607
+msgid "30 Day No Risk Money Back Guarantee"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:611
+msgid "99% Satisfaction Rating"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:612
+msgid "Fast Support with 99% Satisfaction Rating"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:659
+#: admin/views/premium_extension_page.php:737
+#: admin/views/premium_extension_page.php:830
+msgid "Get premium"
+msgstr ""
+
+#. translators: 1: strikethrough original price, 2: bold sale price, 3: savings text
+#: admin/views/premium_extension_page.php:795
+#, php-format
+msgid ""
+"Total : <s>%1$s</s> <strong>%2$s</strong> <span class=\"wt-pklist-os-"
+"savings\">(%3$s)</span>"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:812
+msgid "View Bundle"
+msgstr ""
 
 #: admin/views/wt_ipc_free_pro.php:11 admin/views/wt_sdd_free_pro.php:11
 msgid "Supported documents"
@@ -4923,6 +5221,158 @@ msgstr ""
 "Გამოყავით საგადასახადო სვეტი პროდუქტის ცხრილში რამდენიმე საგადასახადო "
 "ვარიანტისთვის დისპეტჩერიზაციის ეტიკეტებზე"
 
+#: admin/views/_custom_field_editor_form.php:20
+#: admin/views/_custom_field_editor_form.php:23
+#: admin/views/_custom_field_editor_form.php:32
+#: admin/views/_custom_field_editor_form_product.php:24
+#: admin/views/_custom_field_editor_form_product.php:27
+#: admin/views/_custom_field_editor_form_product.php:36
+msgid "Add new"
+msgstr "ახლის დამატება"
+
+#: admin/views/_custom_field_editor_form.php:41
+msgid "You can add custom/predefined order meta using its key"
+msgstr ""
+"Თქვენ შეგიძლიათ დაამატოთ ინდივიდუალური/წინასწარ განსაზღვრული შეკვეთის მეტა "
+"მისი ღილაკის გამოყენებით"
+
+#: admin/views/_custom_field_editor_form.php:48
+#: admin/views/_custom_field_editor_form_product.php:52
+msgid "Field Name"
+msgstr "ველის სახელი"
+
+#: admin/views/_custom_field_editor_form.php:49
+#: admin/views/_custom_field_editor_form_product.php:53
+msgid "Meta Key"
+msgstr "Meta Key"
+
+#: admin/views/_custom_field_editor_form.php:54
+msgid "To add more than one custom order meta,"
+msgstr "Ერთზე მეტი ინდივიდუალური შეკვეთის მეტა-ს დასამატებლად,"
+
+#: admin/views/_custom_field_editor_form.php:54
+#: admin/views/_custom_field_editor_form_product.php:58
+msgid "upgrade to premium version"
+msgstr "პრემიუმ ვერსიაზე გადასვლა"
+
+#: admin/views/_custom_field_editor_form_product.php:45
+msgid "You can add custom/predefined product meta using its key"
+msgstr ""
+"Თქვენ შეგიძლიათ დაამატოთ ინდივიდუალური/წინასწარ განსაზღვრული პროდუქტის მეტა "
+"მისი გასაღების გამოყენებით"
+
+#: admin/views/_custom_field_editor_form_product.php:58
+msgid "To add more than one custom product meta,"
+msgstr "Ერთზე მეტი ინდივიდუალური პროდუქტის მეტა-ს დასამატებლად,"
+
+#: admin/views/_form_field_generator_new.php:469
+msgid "Order Meta"
+msgstr "Meta-ს შეკვეთა"
+
+#: admin/views/_form_field_generator_new.php:471
+msgid "Add/Edit Order Meta Field"
+msgstr "Შეკვეთის მეტა ველის დამატება/რედაქტირება"
+
+#: admin/views/_form_field_generator_new.php:522
+msgid "Product Meta"
+msgstr "Პროდუქტის მეტა"
+
+#: admin/views/_form_field_generator_new.php:524
+msgid "Add/Edit Product Meta Field"
+msgstr "Პროდუქტის მეტა ველის დამატება/რედაქტირება"
+
+#: admin/views/_form_field_generator_new.php:545
+msgid "Upload your image"
+msgstr "Ატვირთეთ თქვენი სურათი"
+
+#: admin/views/_form_field_generator_new.php:680
+msgid "Document"
+msgstr "დოკუმენტი"
+
+#: admin/views/_form_field_generator_new.php:681
+msgid "PDF"
+msgstr "PDF"
+
+#: admin/views/_form_field_generator_new.php:682
+msgid "HTML"
+msgstr "HTML"
+
+#: admin/views/_form_field_generator_new.php:683
+msgid "Action"
+msgstr "ქმედება"
+
+#: admin/views/_form_field_generator_new.php:749
+msgid "Add date to invoice number"
+msgstr "Მიუთითეთ თარიღი ინვოისის ნომერზე"
+
+#: admin/views/_form_field_generator_new.php:750
+msgid "Invoice number format"
+msgstr "Ინვოისის ნომრის ფორმატი"
+
+#: admin/views/_form_field_generator_new.php:752
+msgid "Invoice starting number"
+msgstr "Ინვოისის საწყისი ნომერი"
+
+#: admin/views/_form_field_generator_new.php:753
+msgid "Invoice number length"
+msgstr "Ინვოისის ნომრის სიგრძე"
+
+#: admin/views/_form_field_generator_new.php:757
+#: admin/views/_form_field_generator_new.php:770
+msgid "Use order date as input instead."
+msgstr "Სანაცვლოდ გამოიყენეთ შეკვეთის თარიღი შეყვანის სახით."
+
+#: admin/views/_form_field_generator_new.php:762
+msgid "Add date to credit note number"
+msgstr "Მიუთითეთ თარიღი საკრედიტო შენიშვნის ნომერში"
+
+#: admin/views/_form_field_generator_new.php:763
+msgid "Creditnote number format"
+msgstr "Საკრედიტო ნომრის ფორმატი"
+
+#: admin/views/_form_field_generator_new.php:764
+msgid "What should be the starting number for your credit notes?"
+msgstr "Რა უნდა იყოს თქვენი საკრედიტო შენიშვნების საწყისი ნომერი?"
+
+#: admin/views/_form_field_generator_new.php:765
+msgid "What length would you prefer for your credit note"
+msgstr "Რა ხანგრძლივობის საკრედიტო შენიშვნას მიანიჭებდით უპირატესობას"
+
+#: admin/views/_form_field_generator_new.php:773
+msgid "Add date to proforma invoice number"
+msgstr "Მიუთითეთ თარიღი პროფორმის ინვოისის ნომერზე"
+
+#: admin/views/_form_field_generator_new.php:774
+msgid "Proforma invoice number format"
+msgstr "Პროფორმის ინვოისის ნომრის ფორმატი"
+
+#: admin/views/_form_field_generator_new.php:775
+msgid "What should be the starting number for your proforma invoices?"
+msgstr "Რა უნდა იყოს თქვენი პროფორმის ინვოისების საწყისი ნომერი?"
+
+#: admin/views/_form_field_generator_new.php:776
+msgid "What length would you prefer for your proforma invoice"
+msgstr "Პროფორმის ინვოისისთვის რა ხანგრძლივობას მიანიჭებდით უპირატესობას"
+
+#: admin/views/_form_field_generator_new.php:864
+msgid ""
+"Removing year [Y] from the prefix will disable the annual reset functionality"
+msgstr "Პრეფიქსიდან [Y] წლის ამოღება გამორთავს გადატვირთვის წლიურ ფუნქციონალს"
+
+#: admin/views/_form_field_generator_new.php:871
+msgid "Switching to order number will disable the annual reset functionality"
+msgstr "Შეკვეთის ნომერზე გადასვლა გამორთავს წლიური გადატვირთვის ფუნქციონალს"
+
+#: admin/views/_form_field_generator_new.php:887
+msgid ""
+"Removing year [Y] from the suffix will disable the annual reset functionality"
+msgstr "Სუფიქსიდან [Y] წლის ამოღება გამორთავს გადატვირთვის წლიურ ფუნქციონალს"
+
+#: admin/views/_form_field_generator_new.php:915
+msgid "The latest specified starting number will be used after reset"
+msgstr ""
+"Უახლესი მითითებული საწყისი ნომერი გამოყენებული იქნება გადატვირთვის შემდეგ"
+
 #: common/class-wt-pklist-common.php:661
 msgid "Admin email"
 msgstr "ადმინისტრაციის ელ-ფოსტა"
@@ -5087,7 +5537,7 @@ msgid "Checkout"
 msgstr "წამოღება"
 
 #. translators: 1: plugin title, 2: uploads folder path
-#: includes/class-wt-pklist-non-apache-info.php:62
+#: includes/class-wt-pklist-non-apache-info.php:63
 #, php-format
 msgid ""
 "The <b>%1$s</b> plugin stores generated PDF files inside the <b>%2$s</b> "
@@ -5098,7 +5548,7 @@ msgstr ""
 "ინახავს. გთხოვთ, დარწმუნდეთ, რომ თქვენს სერვერზე ამ საქაღალდისთვის საჯარო "
 "წვდომის შეზღუდვებია დაყენებული."
 
-#: includes/class-wt-pklist-non-apache-info.php:81
+#: includes/class-wt-pklist-non-apache-info.php:82
 msgid ""
 "In case of an Nginx server, copy the below snippet into your server config "
 "to restrict public access to the plugin uploads folder, or contact your "
@@ -5108,11 +5558,11 @@ msgstr ""
 "სერვერის კონფიგურაციაში, რათა შეზღუდოთ საჯარო წვდომა დანამატების ატვირთვის "
 "საქაღალდეზე, ან დაუკავშირდით თქვენი სერვერის გუნდს დახმარებისთვის."
 
-#: includes/class-wt-pklist-promo-banners.php:105
+#: includes/class-wt-pklist-promo-banners.php:106
 msgid "🚀 Your Store Is Growing! Power It With PRO"
 msgstr "🚀 თქვენი მაღაზია იზრდება! გააძლიერეთ იგი პროფესიონალური რესურსებით"
 
-#: includes/class-wt-pklist-promo-banners.php:106
+#: includes/class-wt-pklist-promo-banners.php:107
 msgid ""
 "Processing 50 or more orders daily? Upgrade to Pro for advanced invoice "
 "customization, automated credit notes and flexible invoice numbering formats "
@@ -5123,12 +5573,12 @@ msgstr ""
 "ინვოისების მოქნილი ნუმერაციის ფორმატებისთვის ავტომატური გადატვირთვის ოფციით."
 
 #. translators: %s: coupon code
-#: includes/class-wt-pklist-promo-banners.php:119
+#: includes/class-wt-pklist-promo-banners.php:120
 #, php-format
 msgid "Use coupon code %s at checkout."
 msgstr "შეკვეთის გაფორმებისას გამოიყენეთ კუპონის კოდი %s."
 
-#: includes/class-wt-pklist-promo-banners.php:125
+#: includes/class-wt-pklist-promo-banners.php:126
 msgid ""
 "🎉 Congratulations! You've been using the free WebToffee PDF Invoices plugin "
 "for a while, and we'd love to reward you."
@@ -5136,7 +5586,7 @@ msgstr ""
 "🎉 გილოცავთ! თქვენ უკვე დიდი ხანია იყენებთ უფასო WebToffee PDF Invoices "
 "დანამატს და სიამოვნებით დაგჯილდოვებთ."
 
-#: includes/class-wt-pklist-promo-banners.php:127
+#: includes/class-wt-pklist-promo-banners.php:128
 msgid ""
 "Enjoy an exclusive 15% discount on the PRO plugin and unlock premium "
 "templates, advanced customization, bulk export tools, priority support, and "
@@ -5146,12 +5596,12 @@ msgstr ""
 "შაბლონები, გაფართოებული პერსონალიზაცია, მასობრივი ექსპორტის ინსტრუმენტები, "
 "პრიორიტეტული მხარდაჭერა და შეკვეთის დოკუმენტების სრული სამუშაო პროცესი."
 
-#: includes/class-wt-pklist-promo-banners.php:156
+#: includes/class-wt-pklist-promo-banners.php:157
 msgid "Your Shipping Labels Are Basic. The Pro Add-on Makes Them Powerful."
 msgstr ""
 "თქვენი გადაზიდვის ეტიკეტები საბაზისოა. Pro დანამატი მათ უფრო ძლიერს ხდის."
 
-#: includes/class-wt-pklist-promo-banners.php:157
+#: includes/class-wt-pklist-promo-banners.php:158
 msgid ""
 "The Shipping Pro add-on slots right in and unlocks everything your free "
 "shipping labels can't do - custom sizes, dispatch docs, multiple templates, "
@@ -5161,7 +5611,7 @@ msgstr ""
 "რისი გაკეთებაც თქვენს უფასო მიწოდების ეტიკეტებს არ შეუძლიათ - მორგებული "
 "ზომები, გაგზავნის დოკუმენტები, მრავალი შაბლონი და სხვა."
 
-#: includes/class-wt-pklist-promo-banners.php:158
+#: includes/class-wt-pklist-promo-banners.php:159
 msgid "Checkout plugin"
 msgstr "გადახდის დანამატი"
 
@@ -5175,6 +5625,7 @@ msgstr ""
 "Პლაგინები %1$s და %2$s ვერ გააქტიურდება თქვენს მაღაზიაში ერთდროულად. მეორეს "
 "გააქტიურებამდე შეწყვიტეთ ერთ-ერთი მათგანის მოქმედება."
 
+#. translators: 1$s: Active plugin name, 2$s: Current plugin name
 #: print-invoices-packing-slip-labels-for-woocommerce.php:52
 msgid "Go to plugins page"
 msgstr "გადასვლა პლაგინების გვერდზე"
@@ -5209,14 +5660,14 @@ msgstr "Დაამატეთ ქვესართი მიტანის 
 #: public/modules/deliverynote/deliverynote.php:181
 #: public/modules/dispatchlabel/dispatchlabel.php:163
 #: public/modules/invoice/invoice.php:1315
-#: public/modules/packinglist/packinglist.php:206
+#: public/modules/packinglist/packinglist.php:207
 msgid "Shipping Address"
 msgstr "მისატანი მისამართი"
 
 #: public/modules/deliverynote/deliverynote.php:184
 #: public/modules/dispatchlabel/dispatchlabel.php:167
 #: public/modules/invoice/invoice.php:1319
-#: public/modules/packinglist/packinglist.php:210
+#: public/modules/packinglist/packinglist.php:211
 #: public/modules/shippinglabel/shippinglabel.php:165
 msgid "SSN number"
 msgstr "ნომერი"
@@ -5224,7 +5675,7 @@ msgstr "ნომერი"
 #: public/modules/deliverynote/deliverynote.php:185
 #: public/modules/dispatchlabel/dispatchlabel.php:168
 #: public/modules/invoice/invoice.php:1320
-#: public/modules/packinglist/packinglist.php:211
+#: public/modules/packinglist/packinglist.php:212
 #: public/modules/shippinglabel/shippinglabel.php:164
 msgid "VAT number"
 msgstr "Დღგ-ის გადამხდელის ნომერი"
@@ -5254,8 +5705,8 @@ msgstr "Მიტანის ჩანაწერის ამობეჭდ�
 #: public/modules/dispatchlabel/dispatchlabel.php:423
 #: public/modules/invoice/invoice.php:1541
 #: public/modules/invoice/invoice.php:2186
-#: public/modules/packinglist/packinglist.php:316
-#: public/modules/packinglist/packinglist.php:485
+#: public/modules/packinglist/packinglist.php:317
+#: public/modules/packinglist/packinglist.php:486
 #: public/modules/shippinglabel/shippinglabel.php:348
 #: public/modules/shippinglabel/shippinglabel.php:553
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:344
@@ -5499,6 +5950,7 @@ msgid "Invoice Date"
 msgstr "თარიღი:"
 
 #: public/modules/invoice/invoice.php:1311
+#: public/modules/packinglist/packinglist.php:206
 #: public/modules/shippinglabel/shippinglabel.php:159
 msgid "Order Date"
 msgstr "შეკვეთის თარიღი"
@@ -5553,7 +6005,7 @@ msgid "Download Invoice"
 msgstr "Ინვოისის ჩამოტვირთვა"
 
 #: public/modules/invoice/invoice.php:1542
-#: public/modules/packinglist/packinglist.php:323
+#: public/modules/packinglist/packinglist.php:324
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:352
 msgid "Download"
 msgstr "გადმოწერა"
@@ -5585,7 +6037,7 @@ msgstr "მიუთითებს, რომ აუცილებელია
 msgid "Enter your email address"
 msgstr "შეიყვანეთ თქვენი ელფოსტის მისამართი"
 
-#: public/modules/invoice/views/general.php:58
+#: public/modules/invoice/views/general.php:57
 #, php-format
 msgid ""
 "I consent to receive newsletters and exclusive offers from WebToffee and "
@@ -5897,24 +6349,24 @@ msgstr "Ამატებს მომხმარებლის შენი�
 msgid "Adds Footer to the packing slip"
 msgstr "Დაამატეთ ქვესართი შესაფუთ ბილეთს"
 
-#: public/modules/packinglist/packinglist.php:296
-#: public/modules/packinglist/packinglist.php:317
-#: public/modules/packinglist/packinglist.php:334
+#: public/modules/packinglist/packinglist.php:297
+#: public/modules/packinglist/packinglist.php:318
 #: public/modules/packinglist/packinglist.php:335
+#: public/modules/packinglist/packinglist.php:336
 msgid "Print Packing slip"
 msgstr "Შეფუთვის ბილეთის ამობეჭდვა"
 
-#: public/modules/packinglist/packinglist.php:311
+#: public/modules/packinglist/packinglist.php:312
 msgid "Print/Download Packing slip"
 msgstr "Შეფუთვის ბილეთის ამობეჭდვა/ჩამოტვირთვა"
 
-#: public/modules/packinglist/packinglist.php:324
-#: public/modules/packinglist/packinglist.php:341
+#: public/modules/packinglist/packinglist.php:325
 #: public/modules/packinglist/packinglist.php:342
+#: public/modules/packinglist/packinglist.php:343
 msgid "Download Packing slip"
 msgstr "Შეფუთვის ბილეთის ჩამოტვირთვა"
 
-#: public/modules/packinglist/packinglist.php:417
+#: public/modules/packinglist/packinglist.php:418
 msgid "Unable to print packling slip. Please check the items in the order."
 msgstr ""
 "Შეფუთვის შრიფტის დაბეჭდვა ვერ მოხერხდა. გთხოვთ, შეამოწმოთ ნივთები შეკვეთაში."
@@ -6434,31 +6886,26 @@ msgstr "Ტონალობის გადასახადები"
 msgid "Valuation deposit"
 msgstr "Შესაფასებელი დეპოზიტი"
 
-#. Plugin Name of the plugin/theme
-msgid ""
-"WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and "
-"Shipping Labels"
-msgstr ""
-"WebToffee WooCommerce PDF ინვოისები, შეფუთვის ბილეთები, მიწოდების შენიშვნები "
-"და მიწოდების ეტიკეტები"
+#~ msgid "This preview reflects your current settings from the General tab."
+#~ msgstr ""
+#~ "Ეს გადახედვა ასახავს თქვენს მიმდინარე პარამეტრებს ზოგადი ჩანართიდან."
 
-#. Plugin URI of the plugin/theme
-msgid ""
-"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
-msgstr ""
-"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+#~ msgid "Premium features"
+#~ msgstr "Პრემიუმის ფუნქციები"
 
-#. Description of the plugin/theme
-msgid "Prints Packing List,Invoice,Delivery Note and Shipping Label."
-msgstr "Ბეჭდავს შეფუთვის სიას,ინვოისს,მიტანის შენიშვნას და გადაზიდვის ეტიკეტს."
+#, php-format
+#~ msgid ""
+#~ "Toggle the pro features on and off to see how they transform your %s."
+#~ msgstr ""
+#~ "Ჩართეთ და გამორთეთ პროფესიონალის ფუნქციები, რომ ნახოთ, როგორ გარდაქმნის "
+#~ "თქვენს %s -ს."
 
-#. Author of the plugin/theme
-msgid "WebToffee"
-msgstr "WebToffee"
+#~ msgid "You are covered by our 30-Day Money Back Guarantee"
+#~ msgstr "Თქვენზე ვრცელდება თანხის დაბრუნების 30-დღიანი გარანტია"
 
-#. Author URI of the plugin/theme
-msgid "https://www.webtoffee.com/"
-msgstr "https://www.webtoffee.com/"
+#~ msgid "Supported by a team with 99% Customer Satisfaction Score"
+#~ msgstr ""
+#~ "Მხარდაჭერილია 99% -იანი მომხმარებლის კმაყოფილების ქულის მქონე გუნდის მიერ"
 
 #~ msgid "Something went wrong. Please try again."
 #~ msgstr "მოხდა შეცდომა. სცადეთ თავიდან."

@@ -917,8 +917,6 @@ if (!defined('ABSPATH')) {
 		$tooltip_conf = Wf_Woocommerce_Packing_List_Admin::get_tooltip_configs('create_new_template', Wf_Woocommerce_Packing_List_Customizer::$module_id_static);
 		?>
 		<a class="wf_pklist_new_template <?php echo esc_attr($tooltip_conf['class']); ?>" style="float:left; width:100%; padding-left:15px; cursor:pointer;" <?php echo wp_kses_post($tooltip_conf['text']); ?>><?php esc_html_e('Change template', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></a>
-		<?php else : ?>
-		<span style="margin-left: 15px; color: #666; font-size: 13px;"><?php esc_html_e('This preview reflects your current settings from the General tab.', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></span>
 		<?php endif; ?>
 	</div>
 	<?php if (!isset($preview_only) || !$preview_only) : ?>
@@ -926,7 +924,7 @@ if (!defined('ABSPATH')) {
 
 		<button type="button" name="" class="wf-btn-plain" onclick="window.location.reload(true);">
 			<?php esc_html_e('Cancel', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></button>
-		<button type="button" name="" class="wf-btn-primary wf_pklist_save_theme btn-disable" style="margin-right: 5px;">
+		<button type="button" name="" class="wf-btn-primary wf_pklist_save_theme" style="margin-right: 5px;">
 			<?php esc_html_e('Update template', 'print-invoices-packing-slip-labels-for-woocommerce'); ?>
 		</button>
 		<button type="button" name="" class="wf-btn-primary wf_template_create_btn" style="display:none; margin-right: 15px;">
@@ -1022,23 +1020,7 @@ if (!defined('ABSPATH')) {
 		$enable_pdf_preview = apply_filters('wf_pklist_intl_customizer_enable_pdf_preview', false, $template_type);
 		if ($enable_pdf_preview) {
 			include "_pdf_preview.php";
-		} else { 
-			$premium_addon_key = Wf_Woocommerce_Packing_List_Pro_Addons::wt_get_addon_key_by_template_type( $template_type );
-			$premium_addon_key = ( false === $premium_addon_key ) ? '' : $premium_addon_key;
-			if ( 'shippinglabel' !== $template_type && 'creditnote' !== $template_type && false === Wf_Woocommerce_Packing_List_Admin::wt_plugin_active( $premium_addon_key ) ) {
-				$template_display_name = get_template_display_name($template_type);
-			?>
-			<div class="wf_customizer_premium_feature wt_pklist_premium_features_panel">
-				<div class="wt_pklist_premium_features_header">
-					<img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'assets/images/Crown.png'); ?>" class="crown-icon" alt="">
-					<h3><?php esc_html_e('Premium features', 'print-invoices-packing-slip-labels-for-woocommerce'); ?></h3>
-				</div>
-				<?php /* translators: %s: document type name (e.g. packing slip, invoice, credit note) */ ?>
-					<p class="wt_pklist_premium_features_desc"><?php echo sprintf( esc_html__( 'Toggle the pro features on and off to see how they transform your %s.', 'print-invoices-packing-slip-labels-for-woocommerce' ), esc_html( $template_display_name ) ); ?></p>
-			</div>
-				<?php
-				}
-			}
+		}
 			?>
 	</div>
 

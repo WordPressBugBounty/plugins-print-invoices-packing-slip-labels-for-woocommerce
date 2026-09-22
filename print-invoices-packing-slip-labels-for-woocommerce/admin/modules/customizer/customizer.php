@@ -271,6 +271,7 @@ class Wf_Woocommerce_Packing_List_Customizer {
 				'pro_template_wrn'     => __( 'This is premium template which is not compatible with the basic plugin', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 				'basic_template_wrn'   => __( 'This is basic template. In order to use premium feature, you need to switch and activate the premium template', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 				'template_required'    => __( 'Template Name Required', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+				'default_template_name' => __( 'Default template', 'print-invoices-packing-slip-labels-for-woocommerce' ),
 			),
 			'urls'                           => array(
 				'images_path'             => $images_path,
@@ -954,7 +955,14 @@ class Wf_Woocommerce_Packing_List_Customizer {
 				'%d',
 				'%s'
 			);
-			if ($wpdb->update($table_name, $update_data, $update_where, $update_data_type, $update_where_type)) {
+			/*
+			 * $wpdb->update() returns the number of rows changed, and false on error. An
+			 * unchanged row returns 0, which is falsy but not a failure: saving the same
+			 * markup twice within the same second (autosave followed by the Update button)
+			 * left updated_at identical and reported "Unable to save theme" on a good save.
+			 */
+			$update_result = $wpdb->update($table_name, $update_data, $update_where, $update_data_type, $update_where_type);
+			if (false !== $update_result) {
 				$name_arr = $wpdb->get_row("SELECT template_name,is_active FROM $table_name WHERE id_wfpklist_template_data=$template_id");
 				$name = '';
 				$is_active = 0;
@@ -1281,7 +1289,77 @@ class Wf_Woocommerce_Packing_List_Customizer {
 			$html = $this->convert_images_to_base64($html);
 		}
 		
+		$html = $this->add_product_table_font_size_css($html);
+
 		return apply_filters('wt_pklist_alter_final_order_template_html', $html, $template_type, $order, $box_packing, $order_package, $this->template_for_pdf);
+	}
+
+	/**
+	 * Apply the product table font sizes selected in the customizer.
+	 *
+	 * The sizes are stored as `data-head-font-size` and `data-body-font-size` attributes
+	 * on the product table head and body. Rows are built while rendering the document,
+	 * so the sizes are applied as CSS rules on the finished HTML, not as inline styles.
+	 *
+	 * @param string $html Final document HTML.
+	 * @return string Document HTML with the font size rules applied.
+	 */
+	public function add_product_table_font_size_css( $html ) {
+		if ( ! is_string( $html ) || '' === $html ) {
+			return $html;
+		}
+
+		/* the document can pass through this more than once, only add the block once */
+		if ( false !== strpos( $html, 'wt_product_table_font_size' ) ) {
+			return $html;
+		}
+
+		$css  = $this->get_product_table_font_size_rule( $html, 'thead', 'wfte_product_table_head', 'data-head-font-size', '.wfte_product_table_head th' );
+		$css .= $this->get_product_table_font_size_rule( $html, 'tbody', 'wfte_product_table_body', 'data-body-font-size', '.wfte_product_table_body td' );
+
+		/* nothing configured, keep the sizes defined by the template stylesheet */
+		if ( '' === $css ) {
+			return $html;
+		}
+
+		/* Appended last on purpose. mPDF ignores !important and applies whichever rule
+		   comes last, so a rule placed in the head loses to the template stylesheet. */
+		return $html . '<style type="text/css" id="wt_product_table_font_size">' . $css . '</style>';
+	}
+
+	/**
+	 * Build the CSS rule for one product table font size setting.
+	 *
+	 * @param string $html Document HTML to read the size from.
+	 * @param string $tag Tag holding the attribute, `thead` or `tbody`.
+	 * @param string $class CSS class identifying that tag.
+	 * @param string $attribute Attribute holding the configured size.
+	 * @param string $selector Selector the size applies to.
+	 * @return string CSS rule, empty when no valid size is configured.
+	 */
+	private function get_product_table_font_size_rule( $html, $tag, $class, $attribute, $selector ) {
+		if ( ! preg_match_all( '/<' . $tag . '\b[^>]*>/i', $html, $tag_matches ) ) {
+			return '';
+		}
+
+		foreach ( $tag_matches[0] as $single_tag ) {
+			if ( false === strpos( $single_tag, $class ) ) {
+				continue;
+			}
+			if ( ! preg_match( '/' . $attribute . '=["\']([^"\']*)["\']/i', $single_tag, $size_match ) ) {
+				continue;
+			}
+
+			$font_size = (float) trim( $size_match[1] );
+			if ( $font_size <= 0 || $font_size > 100 ) {
+				return '';
+			}
+
+			/* long words must be allowed to break, otherwise a large size stretches the table past the page */
+			return $selector . '{ font-size:' . $font_size . 'px !important; word-wrap:break-word; overflow-wrap:break-word; }';
+		}
+
+		return '';
 	}
 
 	/**

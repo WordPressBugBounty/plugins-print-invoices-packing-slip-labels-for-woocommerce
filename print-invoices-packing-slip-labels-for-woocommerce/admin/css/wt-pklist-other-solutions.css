@@ -193,11 +193,11 @@
 
 /* CTA crown — 13.7 x 11.4 white, 6px to the left of the label. */
 /* CTA star — sits before the button label. */
-.wt-pklist-os-btn-star {
+.wt-pklist-os-btn-crown {
 	flex-shrink: 0;
-	font-size: 14px;
-	line-height: 1;
-	color: #FFFFFF;
+	display: block;
+	width: 18px;
+	height: 15px;
 }
 
 /* Bundle H2 external-link arrow — 11 x 11, #033BFF 2px stroke. */

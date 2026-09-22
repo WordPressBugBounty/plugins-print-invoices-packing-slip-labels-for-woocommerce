@@ -1,8 +1,9 @@
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, "
-"Delivery Notes and Shipping Labels\n"
-"POT-Creation-Date: 2026-07-17 10:48+0530\n"
+"Project-Id-Version: WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/print-invoices-packing-slip-labels-for-woocommerce\n"
+"POT-Creation-Date: 2026-09-18T03:35:34+00:00\n"
 "PO-Revision-Date: 2026-07-17 10:51+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,15 +14,45 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: tests\n"
 "X-Poedit-SearchPathExcluded-2: includes/vendor\n"
 "X-Poedit-SearchPathExcluded-3: vendor\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
+
+#. Plugin Name of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid ""
+"WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and "
+"Shipping Labels"
+msgstr ""
+"WebToffee WooCommerce PDF-facturen, pakbonnen, leveringsbonnen en "
+"verzendlabels"
+
+#. Plugin URI of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+msgstr ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+
+#. Description of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "Prints Packing List,Invoice,Delivery Note and Shipping Label."
+msgstr "Drukt paklijst, factuur, afleveringsbon en verzendlabel af."
+
+#. Author of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "WebToffee"
+msgstr "WebToffee"
+
+#. Author URI of the plugin
+#: print-invoices-packing-slip-labels-for-woocommerce.php
+msgid "https://www.webtoffee.com/"
+msgstr "https://www.webtoffee.com/"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:142
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:66
@@ -33,7 +64,8 @@ msgstr "Instellingen bijgewerkt."
 msgid "All fields are mandatory"
 msgstr "Alle velden zijn verplicht"
 
-#. translators: 1$s: HTML line break, 2$s: HTML link opening tag, 3$s: HTML link closing tag
+#. translators: 1$s: HTML line break, 2$s: HTML link opening tag, 3$s: HTML
+#. link closing tag
 #: admin/class-wf-woocommerce-packing-list-admin.php:145
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:69
 #, php-format
@@ -57,13 +89,13 @@ msgstr ""
 "handmatig?"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:148
-#: admin/class-wf-woocommerce-packing-list-admin.php:1659
-#: admin/class-wf-woocommerce-packing-list-admin.php:2315
-#: admin/class-wf-woocommerce-packing-list-admin.php:4674
-#: admin/class-wf-woocommerce-packing-list-admin.php:4785
-#: admin/class-wf-woocommerce-packing-list-admin.php:4968
+#: admin/class-wf-woocommerce-packing-list-admin.php:1667
+#: admin/class-wf-woocommerce-packing-list-admin.php:2323
+#: admin/class-wf-woocommerce-packing-list-admin.php:4682
+#: admin/class-wf-woocommerce-packing-list-admin.php:4793
+#: admin/class-wf-woocommerce-packing-list-admin.php:4976
 #: admin/modules/customizer/customizer.php:58
-#: admin/modules/customizer/customizer.php:257
+#: admin/modules/customizer/customizer.php:258
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:132
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:72
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:92
@@ -83,8 +115,9 @@ msgid "is required"
 msgstr "is verplicht"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:151
-#: admin/class-wf-woocommerce-packing-list-admin.php:4613
+#: admin/class-wf-woocommerce-packing-list-admin.php:4621
 #: admin/views/documents.php:19 admin/views/freevspro.php:7
+#: admin/views/premium_extension_page.php:187
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:75
 #: public/modules/invoice/invoice.php:150
 #: public/modules/invoice/invoice.php:164
@@ -150,7 +183,7 @@ msgid "Save"
 msgstr "Opslaan"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:160
-#: admin/class-wf-woocommerce-packing-list-admin.php:2317
+#: admin/class-wf-woocommerce-packing-list-admin.php:2325
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:82
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:93
 msgid "Please enter mandatory fields"
@@ -311,6 +344,7 @@ msgstr "Algemene instellingen"
 
 #: admin/class-wf-woocommerce-packing-list-admin.php:884
 #: admin/class-wf-woocommerce-packing-list-admin.php:885
+#: admin/views/premium_extension_page.php:564
 msgid "Extensions"
 msgstr "Extensies"
 
@@ -331,11 +365,11 @@ msgstr "Toegang geweigerd !!!."
 #: admin/class-wf-woocommerce-packing-list-admin.php:1020
 #: admin/class-wf-woocommerce-packing-list-admin.php:1072
 #: admin/class-wf-woocommerce-packing-list-admin.php:1160
-#: admin/class-wf-woocommerce-packing-list-admin.php:2743
-#: admin/class-wf-woocommerce-packing-list-admin.php:4229
-#: admin/class-wf-woocommerce-packing-list-admin.php:4349
-#: admin/class-wf-woocommerce-packing-list-admin.php:4405
-#: admin/class-wf-woocommerce-packing-list-admin.php:4532
+#: admin/class-wf-woocommerce-packing-list-admin.php:2751
+#: admin/class-wf-woocommerce-packing-list-admin.php:4237
+#: admin/class-wf-woocommerce-packing-list-admin.php:4357
+#: admin/class-wf-woocommerce-packing-list-admin.php:4413
+#: admin/class-wf-woocommerce-packing-list-admin.php:4540
 msgid "You are not allowed to do this action"
 msgstr "Het is niet toegestaan deze pagina te bekijken"
 
@@ -388,31 +422,32 @@ msgstr "Lege bestelling"
 msgid "It seems this order is not yours."
 msgstr "Het lijkt erop dat deze bestelling niet van jou is."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:1788
-#: admin/class-wf-woocommerce-packing-list-admin.php:5028
-#: admin/modules/customizer/customizer.php:452
+#: admin/class-wf-woocommerce-packing-list-admin.php:1796
+#: admin/class-wf-woocommerce-packing-list-admin.php:5036
+#: admin/modules/customizer/customizer.php:454
 msgid "Settings Updated"
 msgstr "Instellingen bijgewerkt"
 
 #. translators: %s: method
 #. translators: %s: Shipping method name
-#: admin/class-wf-woocommerce-packing-list-admin.php:2241
+#: admin/class-wf-woocommerce-packing-list-admin.php:2249
 #: public/modules/invoice/invoice.php:1112
 #, php-format
 msgid "via %s"
 msgstr "via %s"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2246
+#: admin/class-wf-woocommerce-packing-list-admin.php:2254
 msgid "Free!"
 msgstr "Gratis!"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2404
+#: admin/class-wf-woocommerce-packing-list-admin.php:2412
 #: includes/class-wf-woocommerce-packing-list-basic-func.php:182
 msgid "Item with same meta key already exists"
 msgstr "Item met dezelfde metasleutel bestaat al"
 
-#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link opening tag, 4$s: Article link closing tag
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link
+#. opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 msgid ""
 "This will remove all invoice numbers created by WooCommerce PDF Invoices, "
 "Packing Slips, Delivery Notes & Shipping Labels by WebToffee."
@@ -421,121 +456,125 @@ msgstr ""
 "WooCommerce PDF-facturen, pakbonnen, leveringsnota's en verzendlabels door "
 "WebToffee."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link
+#. opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 msgid "Note:"
 msgstr "Notitie:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2476
+#. translators: 1$s: Tool description text, 2$s: Note label, 3$s: Article link
+#. opening tag, 4$s: Article link closing tag
+#: admin/class-wf-woocommerce-packing-list-admin.php:2484
 #, php-format
 msgid ""
-"Before using this tool, please make sure you followed the steps described in "
-"this article %1$s how to reset/delete existing invoice numbers%2$s."
+"Before using this tool, please make sure you followed the steps described in"
+" this article %1$s how to reset/delete existing invoice numbers%2$s."
 msgstr ""
 "Voordat u dit hulpprogramma gebruikt, moet u ervoor zorgen dat u de stappen "
 "heeft gevolgd die in dit artikel worden beschreven %1$s hoe u bestaande "
 "factuurnummers opnieuw instelt/verwijdert%2$s."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2479
+#: admin/class-wf-woocommerce-packing-list-admin.php:2487
 msgid "Delete all generated invoice numbers"
 msgstr "Alle gegenereerde factuurnummers verwijderen"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2480
-#: admin/modules/customizer/views/customize.php:946
+#: admin/class-wf-woocommerce-packing-list-admin.php:2488
+#: admin/modules/customizer/views/customize.php:944
 msgid "Delete"
 msgstr "Verwijder"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2758
+#: admin/class-wf-woocommerce-packing-list-admin.php:2766
 msgid "Updated"
 msgstr "Bijgewerkt"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:2764
+#: admin/class-wf-woocommerce-packing-list-admin.php:2772
 msgid "No modules"
 msgstr "Modules"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4149
-#: admin/class-wf-woocommerce-packing-list-admin.php:4180
+#: admin/class-wf-woocommerce-packing-list-admin.php:4157
+#: admin/class-wf-woocommerce-packing-list-admin.php:4188
 msgid "Do not show again"
 msgstr "Niet meer laten zien"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4155
-#: admin/class-wf-woocommerce-packing-list-admin.php:4168
-#: admin/class-wf-woocommerce-packing-list-admin.php:4186
-#: admin/modules/customizer/views/customize.php:928
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:182
+#: admin/class-wf-woocommerce-packing-list-admin.php:4163
+#: admin/class-wf-woocommerce-packing-list-admin.php:4176
+#: admin/class-wf-woocommerce-packing-list-admin.php:4194
+#: admin/modules/customizer/views/customize.php:926
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:183
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:113
 #: admin/views/admin-settings-debug.php:185
 #: admin/views/admin-settings-debug.php:241
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4158
-#: admin/class-wf-woocommerce-packing-list-admin.php:4189
+#: admin/class-wf-woocommerce-packing-list-admin.php:4166
+#: admin/class-wf-woocommerce-packing-list-admin.php:4197
 msgid "Generate"
 msgstr "Genereer"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4165
+#: admin/class-wf-woocommerce-packing-list-admin.php:4173
 msgid "Generating the document..."
 msgstr "Het document genereren..."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4249
-#: admin/modules/customizer/customizer.php:258
+#: admin/class-wf-woocommerce-packing-list-admin.php:4257
+#: admin/modules/customizer/customizer.php:259
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:176
 msgid "Success"
 msgstr "Succes"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4254
+#: admin/class-wf-woocommerce-packing-list-admin.php:4262
 msgid "Cannot close this banner"
 msgstr "Kan deze banner niet sluiten"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4431
+#: admin/class-wf-woocommerce-packing-list-admin.php:4439
 msgid "Settings are empty"
 msgstr "Instellingen zijn leeg"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4478
+#: admin/class-wf-woocommerce-packing-list-admin.php:4486
 msgid "Imported successfully"
 msgstr "Succesvol geïmporteerd"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4482
+#: admin/class-wf-woocommerce-packing-list-admin.php:4490
 msgid "Incorrect file"
 msgstr "Onjuist bestand"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4486
+#: admin/class-wf-woocommerce-packing-list-admin.php:4494
 msgid "Error: Empty JSON file"
 msgstr "Fout: Leeg JSON-bestand"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4490
+#: admin/class-wf-woocommerce-packing-list-admin.php:4498
 msgid "Error: Invalid JSON data"
 msgstr "Fout: ongeldige JSON-gegevens"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4494
+#: admin/class-wf-woocommerce-packing-list-admin.php:4502
 msgid "Error uploading the file"
 msgstr "Fout bij het uploaden van het bestand"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4564
+#: admin/class-wf-woocommerce-packing-list-admin.php:4572
 msgid "Error:"
 msgstr "Fout:"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4564
+#: admin/class-wf-woocommerce-packing-list-admin.php:4572
 msgid "Truncation did not complete as expected."
 msgstr "Het afkappen is niet voltooid zoals verwacht."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4612
+#: admin/class-wf-woocommerce-packing-list-admin.php:4620
 #: admin/views/general.php:360
 msgid "Total files"
 msgstr "Totaal bestanden"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4614
+#: admin/class-wf-woocommerce-packing-list-admin.php:4622
 #: admin/views/documents.php:23 admin/views/freevspro.php:8
 #: public/modules/packinglist/packinglist.php:70
 #: public/modules/packinglist/packinglist.php:92
 #: public/modules/packinglist/packinglist.php:93
-#: public/modules/packinglist/packinglist.php:310
-#: public/modules/packinglist/packinglist.php:453
+#: public/modules/packinglist/packinglist.php:311
+#: public/modules/packinglist/packinglist.php:454
 #: public/modules/packinglist/views/admin-settings.php:41
 msgid "Packing slip"
 msgstr "Pakbon"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4615
+#: admin/class-wf-woocommerce-packing-list-admin.php:4623
 #: admin/views/documents.php:40 admin/views/freevspro.php:10
 #: public/modules/shippinglabel/shippinglabel.php:66
 #: public/modules/shippinglabel/shippinglabel.php:221
@@ -545,7 +584,7 @@ msgstr "Pakbon"
 msgid "Shipping label"
 msgstr "Shipping label"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4616
+#: admin/class-wf-woocommerce-packing-list-admin.php:4624
 #: admin/views/documents.php:48 admin/views/freevspro.php:12
 #: public/modules/deliverynote/deliverynote.php:65
 #: public/modules/deliverynote/deliverynote.php:87
@@ -556,7 +595,7 @@ msgstr "Shipping label"
 msgid "Delivery note"
 msgstr "Afleveringsbewijs"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4617
+#: admin/class-wf-woocommerce-packing-list-admin.php:4625
 #: admin/views/documents.php:44 admin/views/freevspro.php:11
 #: public/modules/dispatchlabel/dispatchlabel.php:65
 #: public/modules/dispatchlabel/dispatchlabel.php:87
@@ -566,31 +605,31 @@ msgstr "Afleveringsbewijs"
 msgid "Dispatch label"
 msgstr "Verzendlabel"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4618
+#: admin/class-wf-woocommerce-packing-list-admin.php:4626
 #: admin/views/documents.php:62
 msgid "Picklist"
 msgstr "Keuzelijst"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4619
+#: admin/class-wf-woocommerce-packing-list-admin.php:4627
 #: admin/views/documents.php:88 admin/views/freevspro.php:13
 msgid "Proforma invoice"
 msgstr "Pro-formafactuur"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4620
+#: admin/class-wf-woocommerce-packing-list-admin.php:4628
 #: admin/views/documents.php:27 admin/views/freevspro.php:9
 msgid "Credit note"
 msgstr "Creditnota"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4806
+#: admin/class-wf-woocommerce-packing-list-admin.php:4814
 #: admin/views/_form_field_generator_new.php:688
 msgid "No temporary file found"
 msgstr "Geen tijdelijk bestand gevonden"
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4811
+#: admin/class-wf-woocommerce-packing-list-admin.php:4819
 msgid "Successfully cleared all temp files."
 msgstr "Alle tijdelijke bestanden zijn gewist."
 
-#: admin/class-wf-woocommerce-packing-list-admin.php:4812
+#: admin/class-wf-woocommerce-packing-list-admin.php:4820
 msgid "No files found."
 msgstr "Geen bestanden gevonden."
 
@@ -751,7 +790,8 @@ msgstr "Productvariatie toevoegen"
 
 #: admin/data/data.filters-help.php:192
 msgid "Add product variation. (Works with Invoice and Dispatch label only)"
-msgstr "Productvariatie toevoegen. (Werkt alleen met factuur- en verzendlabel)"
+msgstr ""
+"Productvariatie toevoegen. (Werkt alleen met factuur- en verzendlabel)"
 
 #: admin/data/data.filters-help.php:201
 msgid "Alter item quantity"
@@ -775,9 +815,11 @@ msgid "Alter item price format"
 msgstr "Formaat artikelprijs wijzigen"
 
 #: admin/data/data.filters-help.php:220
-msgid "Alter formated item price. (Works with Invoice and Dispatch label only)"
+msgid ""
+"Alter formated item price. (Works with Invoice and Dispatch label only)"
 msgstr ""
-"Opgemaakte artikelprijs wijzigen. (Werkt alleen met factuur- en verzendlabel)"
+"Opgemaakte artikelprijs wijzigen. (Werkt alleen met factuur- en "
+"verzendlabel)"
 
 #: admin/data/data.filters-help.php:228
 msgid "Alter item total"
@@ -792,7 +834,8 @@ msgid "Alter item total format"
 msgstr "Totaal formaat van item wijzigen"
 
 #: admin/data/data.filters-help.php:238
-msgid "Alter formated item total. (Works with Invoice and Dispatch label only)"
+msgid ""
+"Alter formated item total. (Works with Invoice and Dispatch label only)"
 msgstr ""
 "Opgemaakt itemtotaal wijzigen. (Werkt alleen met factuur- en verzendlabel)"
 
@@ -911,8 +954,8 @@ msgid ""
 "uninterrupted ad monetization with the <b>WebToffee GDPR Cookie Consent "
 "Plugin</b> – fully supporting <b>TCF v2.3</b>."
 msgstr ""
-"Volgens het TCF-beleid van IAB Europe moeten uitgevers die deelnemen aan TCF "
-"vóór <b>28 februari 2026</b> upgraden naar TCF v2.3 om aan de vereisten te "
+"Volgens het TCF-beleid van IAB Europe moeten uitgevers die deelnemen aan TCF"
+" vóór <b>28 februari 2026</b> upgraden naar TCF v2.3 om aan de vereisten te "
 "blijven voldoen.<br> Zorg voor ononderbroken advertentie-inkomsten met de "
 "<b>WebToffee GDPR Cookie Consent Plugin</b> – volledige ondersteuning voor "
 "<b>TCF v2.3</b> ."
@@ -922,8 +965,8 @@ msgid ""
 "<b>Important Update:</b> Starting October 31, 2025, Microsoft requires "
 "websites to use Clarity Consent V2 to continue collecting analytical data. "
 "<br>Ensure compliance by upgrading to the GDPR Cookie Consent Plugin, now "
-"fully compatible with <b>Clarity Consent V2</b> and <b>Google Consent Mode</"
-"b>."
+"fully compatible with <b>Clarity Consent V2</b> and <b>Google Consent "
+"Mode</b>."
 msgstr ""
 "<b>Belangrijke update:</b> Vanaf 31 oktober 2025 vereist Microsoft dat "
 "websites Clarity Consent V2 gebruiken om analytische gegevens te blijven "
@@ -938,8 +981,8 @@ msgid ""
 "Mode</b> and <b>Google Consent Mode</b> support."
 msgstr ""
 "Voldoe aan de AVG en de Amerikaanse privacywetgeving met onze door Google "
-"gecertificeerde CMP-plug-in – nu met <b>Microsoft Clarity Consent V2</b> ."
-"<br> Ondersteuning <b>voor UET-toestemmingsmodus</b> en <b>Google-"
+"gecertificeerde CMP-plug-in – nu met <b>Microsoft Clarity Consent V2</b> "
+".<br> Ondersteuning <b>voor UET-toestemmingsmodus</b> en <b>Google-"
 "toestemmingsmodus</b> ."
 
 #: admin/modules/banner/class-wt-gdpr-cta-banner.php:297
@@ -1042,9 +1085,9 @@ msgstr "Download de plugin"
 #: admin/modules/cross-promotion-banners/class-wt-invoice-cta-banner.php:126
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:138
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:126
-#: includes/class-wt-pklist-promo-banners.php:104
-#: includes/class-wt-pklist-promo-banners.php:124
-#: includes/class-wt-pklist-promo-banners.php:155
+#: includes/class-wt-pklist-promo-banners.php:105
+#: includes/class-wt-pklist-promo-banners.php:125
+#: includes/class-wt-pklist-promo-banners.php:156
 msgid "Dismiss"
 msgstr "Afwijzen"
 
@@ -1084,12 +1127,15 @@ msgstr "Importeren via FTP/SFTP en URL"
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:129
 #: admin/views/premium_extension_listing.php:187
 #: admin/views/premium_extension_listing.php:222
+#: admin/views/premium_extension_page.php:424
+#: admin/views/premium_extension_page.php:489
 msgid "Schedule automated import & export"
 msgstr "Plan automatische import en export"
 
 #: admin/modules/cross-promotion-banners/class-wt-p-iew-cta-banner.php:130
 msgid "Export and Import custom fields and third-party plugin fields"
-msgstr "Aangepaste velden en plug-invelden van derden exporteren en importeren"
+msgstr ""
+"Aangepaste velden en plug-invelden van derden exporteren en importeren"
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:97
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:102
@@ -1128,6 +1174,7 @@ msgstr "Geavanceerde couponregels en -voorwaarden instellen"
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:112
 #: admin/views/premium_extension_listing.php:331
+#: admin/views/premium_extension_page.php:232
 msgid "Bulk generate coupons"
 msgstr "Bulk kortingscodes genereren"
 
@@ -1142,6 +1189,7 @@ msgstr "Aanmeldingsbonnen"
 
 #: admin/modules/cross-promotion-banners/class-wt-smart-coupon-cta-banner.php:115
 #: admin/views/premium_extension_listing.php:329
+#: admin/views/premium_extension_page.php:230
 msgid "Cart abandonment coupons"
 msgstr "Coupons voor het verlaten van de winkelwagen"
 
@@ -1169,36 +1217,36 @@ msgstr "incl. belasting"
 msgid "Tax items"
 msgstr "Belastingposten"
 
-#: admin/modules/customizer/classes/class-customizer.php:782
-#: admin/modules/customizer/classes/class-customizer.php:1405
+#: admin/modules/customizer/classes/class-customizer.php:783
+#: admin/modules/customizer/classes/class-customizer.php:1408
 msgid "n/a"
 msgstr "n.v.t."
 
-#: admin/modules/customizer/classes/class-customizer.php:1187
+#: admin/modules/customizer/classes/class-customizer.php:1190
 msgid "Tax"
 msgstr "BTW"
 
-#: admin/modules/customizer/classes/class-customizer.php:2139
+#: admin/modules/customizer/classes/class-customizer.php:2142
 msgid ""
-"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
-"porta lectus id augue interdum egestas."
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras"
+" porta lectus id augue interdum egestas."
 msgstr ""
-"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
-"porta lectus id augue interdum egestas."
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras"
+" porta lectus id augue interdum egestas."
 
-#: admin/modules/customizer/classes/class-customizer.php:2157
+#: admin/modules/customizer/classes/class-customizer.php:2160
 msgid ""
-"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
-"porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
-"mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
-"lectus vel"
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras"
+" porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
+"mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum"
+" lectus vel"
 msgstr ""
-"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
-"porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
-"mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
-"lectus vel"
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras"
+" porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
+"mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum"
+" lectus vel"
 
-#: admin/modules/customizer/classes/class-customizer.php:2162
+#: admin/modules/customizer/classes/class-customizer.php:2165
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
 "purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, "
@@ -1216,32 +1264,32 @@ msgstr "Kan geen pdf genereren."
 msgid "There is no order with this given id"
 msgstr "Er is geen bestelling met deze opgegeven ID"
 
-#: admin/modules/customizer/customizer.php:191
-#: admin/modules/customizer/customizer.php:196
+#: admin/modules/customizer/customizer.php:192
+#: admin/modules/customizer/customizer.php:197
 msgid "Customize"
 msgstr "Aanpassen"
 
-#: admin/modules/customizer/customizer.php:259
+#: admin/modules/customizer/customizer.php:260
 msgid "You can't undo this action. Are you sure?"
 msgstr "Je kunt deze actie niet ongedaan maken. Weet je het zeker?"
 
-#: admin/modules/customizer/customizer.php:260
+#: admin/modules/customizer/customizer.php:261
 msgid "Click here to add Company logo"
 msgstr "Klik hier om een bedrijfslogo toe te voegen"
 
-#: admin/modules/customizer/customizer.php:261
+#: admin/modules/customizer/customizer.php:262
 msgid "Click here to add Company name"
 msgstr "Klik hier om de bedrijfsnaam toe te voegen"
 
-#: admin/modules/customizer/customizer.php:262
+#: admin/modules/customizer/customizer.php:263
 msgid "Click here to add From address"
 msgstr "Klik hier om het Van-adres toe te voegen"
 
-#: admin/modules/customizer/customizer.php:263
+#: admin/modules/customizer/customizer.php:264
 msgid "Click here to add Signature"
 msgstr "Klik hier om een handtekening toe te voegen"
 
-#: admin/modules/customizer/customizer.php:264
+#: admin/modules/customizer/customizer.php:265
 msgid ""
 "Please save all data before leaving this page. All unsaved data will be "
 "lost. Are you sure?"
@@ -1249,36 +1297,37 @@ msgstr ""
 "Sla alle gegevens op voordat u deze pagina verlaat. Alle niet-opgeslagen "
 "gegevens gaan verloren. Weet je zeker dat?"
 
-#: admin/modules/customizer/customizer.php:265
+#: admin/modules/customizer/customizer.php:266
 #: admin/modules/customizer/views/customize.php:919
 msgid "Change template"
 msgstr "Template wijzigen"
 
-#: admin/modules/customizer/customizer.php:266
+#: admin/modules/customizer/customizer.php:267
 msgid "Change layout"
 msgstr "Layout wijzigen"
 
-#: admin/modules/customizer/customizer.php:267
+#: admin/modules/customizer/customizer.php:268
 msgid "Saving"
 msgstr "Opslaan"
 
-#: admin/modules/customizer/customizer.php:268
+#: admin/modules/customizer/customizer.php:269
 #: public/modules/invoice/invoice.php:200
 #: public/modules/shippinglabel/shippinglabel.php:248
 msgid "Please enter order number"
 msgstr "A.u.b. ordernummer ingeven"
 
-#: admin/modules/customizer/customizer.php:269
+#: admin/modules/customizer/customizer.php:270
 #: public/modules/invoice/invoice.php:201
 #: public/modules/shippinglabel/shippinglabel.php:249
 msgid "Generating"
 msgstr "Genereren"
 
-#: admin/modules/customizer/customizer.php:270
-msgid "This is premium template which is not compatible with the basic plugin"
-msgstr "Dit is een premium-sjabloon die niet compatibel is met de basisplug-in"
-
 #: admin/modules/customizer/customizer.php:271
+msgid "This is premium template which is not compatible with the basic plugin"
+msgstr ""
+"Dit is een premium-sjabloon die niet compatibel is met de basisplug-in"
+
+#: admin/modules/customizer/customizer.php:272
 msgid ""
 "This is basic template. In order to use premium feature, you need to switch "
 "and activate the premium template"
@@ -1286,147 +1335,151 @@ msgstr ""
 "Dit is een basissjabloon. Om de premium-functie te gebruiken, moet u "
 "overschakelen en de premium-sjabloon activeren"
 
-#: admin/modules/customizer/customizer.php:272
+#: admin/modules/customizer/customizer.php:273
 msgid "Template Name Required"
 msgstr "Sjabloonnaam vereist"
 
-#: admin/modules/customizer/customizer.php:324
-#: admin/modules/customizer/customizer.php:789
+#: admin/modules/customizer/customizer.php:274
+msgid "Default template"
+msgstr "Standaard sjabloon"
+
+#: admin/modules/customizer/customizer.php:326
+#: admin/modules/customizer/customizer.php:799
 msgid "Active"
 msgstr "Actief"
 
-#: admin/modules/customizer/customizer.php:421
+#: admin/modules/customizer/customizer.php:423
 msgid "Unable to update setting."
 msgstr "Instellingen kunnen niet worden bijgewerkt."
 
-#: admin/modules/customizer/customizer.php:430
+#: admin/modules/customizer/customizer.php:432
 msgid "Invalid value."
 msgstr "Ongeldige waarde."
 
-#: admin/modules/customizer/customizer.php:765
+#: admin/modules/customizer/customizer.php:775
 msgid "Error."
 msgstr "Fout."
 
-#: admin/modules/customizer/customizer.php:791
-#: admin/modules/customizer/views/customize.php:945
+#: admin/modules/customizer/customizer.php:801
+#: admin/modules/customizer/views/customize.php:943
 msgid "Activate"
 msgstr "Activeren"
 
-#: admin/modules/customizer/customizer.php:817
+#: admin/modules/customizer/customizer.php:827
 msgid "No template found."
 msgstr "Geen sjabloon gevonden."
 
-#: admin/modules/customizer/customizer.php:834
+#: admin/modules/customizer/customizer.php:844
 msgid "Unable to save theme."
 msgstr "Kan thema niet opslaan."
 
-#: admin/modules/customizer/customizer.php:853
+#: admin/modules/customizer/customizer.php:863
 msgid "Template with same name already exists."
 msgstr "Sjabloon met dezelfde naam bestaat al."
 
-#: admin/modules/customizer/customizer.php:895
+#: admin/modules/customizer/customizer.php:905
 msgid "Template created."
 msgstr "Sjabloon gemaakt."
 
-#: admin/modules/customizer/customizer.php:901
+#: admin/modules/customizer/customizer.php:911
 msgid "Template created and activated."
 msgstr "Sjabloon gemaakt."
 
-#: admin/modules/customizer/customizer.php:956
+#: admin/modules/customizer/customizer.php:973
 msgid "Template updated."
 msgstr "Sjabloon bijgewerkt."
 
-#: admin/modules/customizer/customizer.php:959
+#: admin/modules/customizer/customizer.php:976
 msgid "Template updated and activated."
 msgstr "Sjabloon bijgewerkt."
 
-#: admin/modules/customizer/customizer.php:1007
+#: admin/modules/customizer/customizer.php:1024
 msgid "Unable to switch view."
 msgstr "Kan de weergave niet wijzigen."
 
-#: admin/modules/customizer/customizer.php:1618
+#: admin/modules/customizer/customizer.php:1820
 msgid "Unable to load template."
 msgstr "Kan sjabloon niet laden."
 
-#: admin/modules/customizer/customizer.php:1669
+#: admin/modules/customizer/customizer.php:1871
 msgid "Untitled template"
 msgstr "Naamloze sjabloon"
 
-#: admin/modules/customizer/customizer.php:1817
+#: admin/modules/customizer/customizer.php:2020
 msgid "Add the order's"
 msgstr "Voeg de bestelling toe"
 
-#: admin/modules/customizer/customizer.php:1817
-#: admin/modules/customizer/customizer.php:1827
+#: admin/modules/customizer/customizer.php:2020
+#: admin/modules/customizer/customizer.php:2030
 #: public/modules/deliverynote/deliverynote.php:186
 #: public/modules/dispatchlabel/dispatchlabel.php:169
 #: public/modules/invoice/invoice.php:1338
-#: public/modules/packinglist/packinglist.php:212
+#: public/modules/packinglist/packinglist.php:213
 #: public/modules/shippinglabel/shippinglabel.php:169
 msgid "Tracking Number"
 msgstr "Volg nummer"
 
-#: admin/modules/customizer/customizer.php:1817
+#: admin/modules/customizer/customizer.php:2020
 msgid ""
 "to your invoices so customers can easily view and track delivery details."
 msgstr ""
-"Voeg deze informatie toe aan uw facturen, zodat klanten de leveringsgegevens "
-"gemakkelijk kunnen bekijken en volgen."
+"Voeg deze informatie toe aan uw facturen, zodat klanten de leveringsgegevens"
+" gemakkelijk kunnen bekijken en volgen."
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 msgid "Display a combined"
 msgstr "Toon een gecombineerde waarde"
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 #: admin/modules/customizer/data/data.translation_strings.php:24
-#: admin/modules/customizer/views/_customize_properties.php:818
+#: admin/modules/customizer/views/_customize_properties.php:837
 #: public/modules/invoice/invoice.php:1343
 msgid "Total Tax"
 msgstr "Totale belasting"
 
-#: admin/modules/customizer/customizer.php:1818
+#: admin/modules/customizer/customizer.php:2021
 msgid ""
 "amount on the invoice to simplify how tax breakdown appears for customers."
 msgstr ""
-"Het bedrag op de factuur wordt aangepast om de btw-specificatie voor klanten "
-"overzichtelijker te maken."
+"Het bedrag op de factuur wordt aangepast om de btw-specificatie voor klanten"
+" overzichtelijker te maken."
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid "Show"
 msgstr "Toon"
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid "Coupon Details"
 msgstr "Kortingsbon details"
 
-#: admin/modules/customizer/customizer.php:1819
+#: admin/modules/customizer/customizer.php:2022
 msgid ""
 "to give customers a clear summary of the discounts applied to their order."
 msgstr ""
 "Om klanten een duidelijk overzicht te geven van de kortingen die op hun "
 "bestelling zijn toegepast."
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 msgid "Add your"
 msgstr "Voeg uw"
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 #: admin/modules/customizer/views/_customize_properties.php:162
 #: public/modules/shippinglabel/shippinglabel.php:155
 msgid "Company Logo"
 msgstr "Bedrijfslogo"
 
-#: admin/modules/customizer/customizer.php:1825
+#: admin/modules/customizer/customizer.php:2028
 msgid "to the shipping label for professional, branded packages."
 msgstr "voor het verzendlabel voor professionele, merkgebonden pakketten."
 
-#: admin/modules/customizer/customizer.php:1826
-#: admin/modules/customizer/customizer.php:1832
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2029
+#: admin/modules/customizer/customizer.php:2035
+#: admin/modules/customizer/customizer.php:2036
 msgid "Add a"
 msgstr "Voeg een"
 
-#: admin/modules/customizer/customizer.php:1826
+#: admin/modules/customizer/customizer.php:2029
 #: public/modules/invoice/invoice.php:1327
 #: public/modules/shippinglabel/shippinglabel.php:168
 msgid "Barcode"
@@ -1434,162 +1487,162 @@ msgstr ""
 "Bar\n"
 "code"
 
-#: admin/modules/customizer/customizer.php:1826
+#: admin/modules/customizer/customizer.php:2029
 msgid ""
 "to your shipping label for quicker scanning and smoother order handling."
 msgstr ""
 "Voeg dit toe aan uw verzendlabel voor snellere scanning en een soepelere "
 "orderverwerking."
 
-#: admin/modules/customizer/customizer.php:1827
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2030
+#: admin/modules/customizer/customizer.php:2037
 msgid "Add the"
 msgstr "Voeg de toe"
 
-#: admin/modules/customizer/customizer.php:1827
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2030
+#: admin/modules/customizer/customizer.php:2037
 msgid "to the shipping label for easy shipment tracking."
 msgstr ""
 "Voeg dit toe aan het verzendlabel voor eenvoudige tracking van de zending."
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 msgid "Show the"
 msgstr "Toon de"
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 #: public/modules/shippinglabel/shippinglabel.php:170
 msgid "Package Number"
 msgstr "Pakketnummer"
 
-#: admin/modules/customizer/customizer.php:1828
+#: admin/modules/customizer/customizer.php:2031
 msgid "on each shipping label for accurate multi-package orders."
 msgstr ""
 "op elk verzendlabel voor nauwkeurige gegevens bij bestellingen met meerdere "
 "pakketten."
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 msgid "Display the"
 msgstr "Toon de"
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 #: public/modules/shippinglabel/shippinglabel.php:171
 msgid "Box name"
 msgstr "Boxnaam"
 
-#: admin/modules/customizer/customizer.php:1829
+#: admin/modules/customizer/customizer.php:2032
 msgid "on the label so recipients can identify contents quickly."
 msgstr ""
 "Op het etiket staat vermeld dat de ontvanger de inhoud snel kan herkennen."
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "Show how"
 msgstr "Laat zien hoe"
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "Many Items"
 msgstr "Veel artikelen"
 
-#: admin/modules/customizer/customizer.php:1830
+#: admin/modules/customizer/customizer.php:2033
 msgid "are in the order on the shipping label."
 msgstr "liggen in de volgorde zoals vermeld op het verzendetiket."
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 msgid "Mark packages as"
 msgstr "Markeer pakketten als"
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 #: public/modules/shippinglabel/shippinglabel.php:173
 msgid "Fragile"
 msgstr "Breekbaar"
 
-#: admin/modules/customizer/customizer.php:1831
+#: admin/modules/customizer/customizer.php:2034
 msgid "so carriers know to handle them with extra care."
 msgstr ""
 "zodat vervoerders weten dat ze er extra voorzichtig mee om moeten gaan."
 
-#: admin/modules/customizer/customizer.php:1832
+#: admin/modules/customizer/customizer.php:2035
 #: public/modules/shippinglabel/shippinglabel.php:174
 msgid "This way up"
 msgstr "Deze kant omhoog"
 
-#: admin/modules/customizer/customizer.php:1832
+#: admin/modules/customizer/customizer.php:2035
 msgid "indicator to help prevent damage during shipping."
 msgstr "Indicator om schade tijdens verzending te voorkomen."
 
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2036
 #: public/modules/shippinglabel/shippinglabel.php:175
 msgid "Keep dry"
 msgstr "Blijf droog"
 
-#: admin/modules/customizer/customizer.php:1833
+#: admin/modules/customizer/customizer.php:2036
 msgid "notice for moisture-sensitive shipments."
 msgstr "Let op: dit geldt voor vochtgevoelige zendingen."
 
-#: admin/modules/customizer/customizer.php:1834
+#: admin/modules/customizer/customizer.php:2037
 #: public/modules/shippinglabel/shippinglabel.php:177
 msgid "Return Policy"
 msgstr "TERUGSTUURBELEID"
 
-#: admin/modules/customizer/customizer.php:1849
+#: admin/modules/customizer/customizer.php:2052
 #: admin/modules/customizer/views/customize.php:812
-#: includes/class-wt-pklist-promo-banners.php:107
-#: includes/class-wt-pklist-promo-banners.php:131
+#: includes/class-wt-pklist-promo-banners.php:108
+#: includes/class-wt-pklist-promo-banners.php:132
 msgid "Upgrade to Pro"
 msgstr "Upgraden naar de Pro-versie"
 
-#: admin/modules/customizer/customizer.php:1864
+#: admin/modules/customizer/customizer.php:2067
 msgid "Lighter"
 msgstr "Aansteker"
 
-#: admin/modules/customizer/customizer.php:1865
+#: admin/modules/customizer/customizer.php:2068
 msgid "Normal"
 msgstr "Normaal"
 
-#: admin/modules/customizer/customizer.php:1866
+#: admin/modules/customizer/customizer.php:2069
 msgid "Bold"
 msgstr "Stoutmoedig"
 
-#: admin/modules/customizer/customizer.php:1867
+#: admin/modules/customizer/customizer.php:2070
 msgid "Bolder"
 msgstr "Bolder"
 
-#: admin/modules/customizer/customizer.php:1879
+#: admin/modules/customizer/customizer.php:2082
 msgid "Select One"
 msgstr "Kies er een"
 
-#: admin/modules/customizer/customizer.php:1897
+#: admin/modules/customizer/customizer.php:2100
 msgid "Left"
 msgstr "Links"
 
-#: admin/modules/customizer/customizer.php:1898
+#: admin/modules/customizer/customizer.php:2101
 msgid "Right"
 msgstr "Menu rechtsboven"
 
-#: admin/modules/customizer/customizer.php:1899
+#: admin/modules/customizer/customizer.php:2102
 msgid "Center"
 msgstr "Midden"
 
-#: admin/modules/customizer/customizer.php:1900
+#: admin/modules/customizer/customizer.php:2103
 msgid "Start"
 msgstr "Start"
 
-#: admin/modules/customizer/customizer.php:1901
+#: admin/modules/customizer/customizer.php:2104
 msgid "End"
 msgstr "Tot"
 
-#: admin/modules/customizer/customizer.php:1908
+#: admin/modules/customizer/customizer.php:2111
 msgid "None"
 msgstr "Geen"
 
-#: admin/modules/customizer/customizer.php:1920
+#: admin/modules/customizer/customizer.php:2123
 msgid "Solid"
 msgstr "Solid"
 
-#: admin/modules/customizer/customizer.php:1921
+#: admin/modules/customizer/customizer.php:2124
 msgid "Dotted"
 msgstr "Gestippeld"
 
-#: admin/modules/customizer/customizer.php:1922
+#: admin/modules/customizer/customizer.php:2125
 msgid "Dashed"
 msgstr "Gestreept"
 
@@ -1605,7 +1658,8 @@ msgstr "Maak een nieuwe sjabloon of bewerk een bestaande sjabloon."
 msgid ""
 "Displays the currently chosen document template with provisions to modify."
 msgstr ""
-"Geeft het huidig gekozen documentsjabloon weer met bepalingen om te wijzigen."
+"Geeft het huidig gekozen documentsjabloon weer met bepalingen om te "
+"wijzigen."
 
 #: admin/modules/customizer/data/data.tooltip.php:10
 msgid ""
@@ -1677,33 +1731,33 @@ msgid "Total Price"
 msgstr "Totaalprijs"
 
 #: admin/modules/customizer/data/data.translation_strings.php:20
-#: admin/modules/customizer/views/_customize_properties.php:792
+#: admin/modules/customizer/views/_customize_properties.php:811
 #: admin/views/wt_ipc_free_pro.php:753 admin/views/wt_ipc_free_pro.php:795
 #: public/modules/invoice/invoice.php:1339
 msgid "Subtotal"
 msgstr "Subtotaal"
 
 #: admin/modules/customizer/data/data.translation_strings.php:21
-#: admin/modules/customizer/views/_customize_properties.php:798
+#: admin/modules/customizer/views/_customize_properties.php:817
 #: admin/views/wt_ipc_free_pro.php:757 admin/views/wt_ipc_free_pro.php:799
 #: public/modules/invoice/invoice.php:1340
 msgid "Shipping"
 msgstr "Verzenden"
 
 #: admin/modules/customizer/data/data.translation_strings.php:22
-#: admin/modules/customizer/views/_customize_properties.php:805
+#: admin/modules/customizer/views/_customize_properties.php:824
 #: public/modules/invoice/invoice.php:1341
 msgid "Cart Discount"
 msgstr "Winkelwagen korting"
 
 #: admin/modules/customizer/data/data.translation_strings.php:23
-#: admin/modules/customizer/views/_customize_properties.php:811
+#: admin/modules/customizer/views/_customize_properties.php:830
 #: public/modules/invoice/invoice.php:1342
 msgid "Order Discount"
 msgstr "Bestel Korting"
 
 #: admin/modules/customizer/data/data.translation_strings.php:25
-#: admin/modules/customizer/views/_customize_properties.php:824
+#: admin/modules/customizer/views/_customize_properties.php:843
 #: admin/views/wt_ipc_free_pro.php:769 admin/views/wt_ipc_free_pro.php:811
 #: public/modules/invoice/invoice.php:1344
 msgid "Fee"
@@ -1714,7 +1768,7 @@ msgid "Coupon Used"
 msgstr "Gebruikte coupon"
 
 #: admin/modules/customizer/data/data.translation_strings.php:27
-#: admin/modules/customizer/views/_customize_properties.php:837
+#: admin/modules/customizer/views/_customize_properties.php:856
 #: admin/views/wt_ipc_free_pro.php:781 admin/views/wt_ipc_free_pro.php:823
 #: public/modules/invoice/invoice.php:1347
 #: public/modules/ubl/lib/class-wt-pklist-pdf-ubl-tax-schema.php:68
@@ -1767,7 +1821,7 @@ msgid "Payment Method:"
 msgstr "Betaalmethode:"
 
 #: admin/modules/customizer/data/data.translation_strings.php:39
-#: admin/modules/customizer/views/_customize_properties.php:831
+#: admin/modules/customizer/views/_customize_properties.php:850
 #: public/modules/invoice/invoice.php:1346
 msgid "Payment Method"
 msgstr "Betalingsmiddel"
@@ -1873,7 +1927,7 @@ msgstr "Klant opmerking:"
 #: public/modules/deliverynote/deliverynote.php:182
 #: public/modules/dispatchlabel/dispatchlabel.php:164
 #: public/modules/invoice/invoice.php:1318
-#: public/modules/packinglist/packinglist.php:207
+#: public/modules/packinglist/packinglist.php:208
 #: public/modules/shippinglabel/shippinglabel.php:166
 msgid "Customer note"
 msgstr "Klant opmerking"
@@ -1910,10 +1964,99 @@ msgstr "Verzendmethode:"
 msgid "Phone:"
 msgstr "Telefoon:"
 
+#: admin/modules/customizer/views/customize.php:730
+#: admin/views/admin-settings-debug.php:160
+msgid "Templates"
+msgstr "Templates"
+
+#: admin/modules/customizer/views/customize.php:735
+msgid "Type template name to search"
+msgstr "Typ sjabloonnaam om te zoeken"
+
+#: admin/modules/customizer/views/customize.php:747
+msgid "Choose a layout."
+msgstr "Kies een lay-out."
+
+#: admin/modules/customizer/views/customize.php:753
+msgid "All unsaved changes will be lost upon switching to a new layout."
+msgstr ""
+"Alle niet-opgeslagen wijzigingen gaan verloren bij het overschakelen naar "
+"een nieuwe lay-out."
+
+#: admin/modules/customizer/views/customize.php:755
+msgid "Save before you proceed."
+msgstr "Bewaar voordat u verder gaat."
+
+#: admin/modules/customizer/views/customize.php:756
+msgid "Saving..."
+msgstr "Opslaan…"
+
+#: admin/modules/customizer/views/customize.php:799
+msgid "Get access to more shipping label templates."
+msgstr "Krijg toegang tot meer sjablonen voor verzendlabels."
+
+#: admin/modules/customizer/views/customize.php:800
+msgid "Get access to more invoice templates."
+msgstr "Krijg toegang tot meer factuursjablonen."
+
+#: admin/modules/customizer/views/customize.php:928
+msgid "Update template"
+msgstr "Sjabloon bijwerken"
+
+#: admin/modules/customizer/views/customize.php:931
+msgid "Save template"
+msgstr "Template opslaan"
+
+#: admin/modules/customizer/views/customize.php:934
+msgid "Save and activate"
+msgstr "Opslaan en activeren"
+
+#: admin/modules/customizer/views/customize.php:945
+msgid "Create new"
+msgstr "Maak nieuw"
+
+#: admin/modules/customizer/views/customize.php:946
+msgid "My templates"
+msgstr "Mijn templates"
+
+#: admin/modules/customizer/views/customize.php:956
+msgid "This template is not comaptible with QR Code addon plugin"
+msgstr "Deze sjabloon is niet compatibel met de add-on-plug-in voor QR-codes"
+
+#. translators: %s: Template display name (invoice, packing list, etc.)
+#: admin/modules/customizer/views/customize.php:985
+#, php-format
+msgid "Unlock limitless possibilities of %s customization with the addon -"
+msgstr "Ontgrendel eindeloze aanpassingsmogelijkheden voor %s met de add-on -"
+
+#: admin/modules/customizer/views/customize.php:986
+msgid "Customizer for WooCommerce PDF Invoices Plugin"
+msgstr "Aanpasser voor WooCommerce PDF-facturenplug-in"
+
+#: admin/modules/customizer/views/customize.php:993
+#: admin/modules/customizer/views/customize.php:1004
+msgid "Visual"
+msgstr "Visueel"
+
+#: admin/modules/customizer/views/customize.php:994
+#: admin/modules/customizer/views/customize.php:1007
+msgid "Code"
+msgstr "Code"
+
+#: admin/modules/customizer/views/customize.php:1007
+#: admin/modules/customizer/views/_customize_properties.php:385
+#: public/modules/deliverynote/deliverynote.php:178
+#: public/modules/dispatchlabel/dispatchlabel.php:160
+#: public/modules/invoice/invoice.php:1301
+#: public/modules/packinglist/packinglist.php:202
+#: public/modules/shippinglabel/shippinglabel.php:152
+msgid "Pro version"
+msgstr "Pro-versie"
+
 #: admin/modules/customizer/views/_customize_properties.php:123
 #: admin/modules/customizer/views/_customize_properties.php:323
 #: admin/modules/customizer/views/_customize_properties.php:361
-#: admin/modules/customizer/views/_customize_properties.php:751
+#: admin/modules/customizer/views/_customize_properties.php:770
 #: admin/views/wt_ipc_free_pro.php:479 admin/views/wt_ipc_free_pro.php:493
 #: public/modules/shippinglabel/shippinglabel.php:107
 #: public/modules/shippinglabel/shippinglabel.php:130
@@ -1925,7 +2068,7 @@ msgstr "Titel"
 #: admin/modules/customizer/views/_customize_properties.php:294
 #: admin/modules/customizer/views/_customize_properties.php:350
 #: admin/modules/customizer/views/_customize_properties.php:366
-#: admin/modules/customizer/views/_customize_properties.php:756
+#: admin/modules/customizer/views/_customize_properties.php:775
 #: public/modules/invoice/invoice.php:386
 msgid "Font size"
 msgstr "Lettertypegrootte"
@@ -2024,16 +2167,6 @@ msgstr "Formaat"
 msgid "Title font size"
 msgstr "Titel lettergrootte"
 
-#: admin/modules/customizer/views/_customize_properties.php:385
-#: admin/modules/customizer/views/customize.php:1009
-#: public/modules/deliverynote/deliverynote.php:178
-#: public/modules/dispatchlabel/dispatchlabel.php:160
-#: public/modules/invoice/invoice.php:1301
-#: public/modules/packinglist/packinglist.php:202
-#: public/modules/shippinglabel/shippinglabel.php:152
-msgid "Pro version"
-msgstr "Pro-versie"
-
 #: admin/modules/customizer/views/_customize_properties.php:387
 #: public/modules/invoice/invoice.php:1309
 #: public/modules/shippinglabel/shippinglabel.php:158
@@ -2070,148 +2203,157 @@ msgstr "Tekstkleur hoofdtekst"
 msgid "Table body text color"
 msgstr "Tabel bodytekstkleur"
 
-#: admin/modules/customizer/views/_customize_properties.php:449
+#: admin/modules/customizer/views/_customize_properties.php:442
+msgid "Table head font size"
+msgstr "Lettergrootte tabelkop"
+
+#: admin/modules/customizer/views/_customize_properties.php:451
+msgid "Table body font size"
+msgstr "Lettergrootte tabellichaam"
+
+#: admin/modules/customizer/views/_customize_properties.php:467
 msgid "Serial No label"
 msgstr "Serienummer label"
 
-#: admin/modules/customizer/views/_customize_properties.php:455
+#: admin/modules/customizer/views/_customize_properties.php:473
 msgid "Serial no text align"
 msgstr "Serieel geen tekstuitlijning"
 
-#: admin/modules/customizer/views/_customize_properties.php:472
+#: admin/modules/customizer/views/_customize_properties.php:490
 msgid "Image label"
 msgstr "Afbeelding label"
 
-#: admin/modules/customizer/views/_customize_properties.php:478
+#: admin/modules/customizer/views/_customize_properties.php:496
 msgid "Image text align"
 msgstr "Afbeeldingstekst aligneren"
 
-#: admin/modules/customizer/views/_customize_properties.php:493
+#: admin/modules/customizer/views/_customize_properties.php:512
 msgid "Image width"
 msgstr "Afbeelding breedte"
 
-#: admin/modules/customizer/views/_customize_properties.php:502
+#: admin/modules/customizer/views/_customize_properties.php:521
 msgid "Image height"
 msgstr "Afbeelding hoogte"
 
-#: admin/modules/customizer/views/_customize_properties.php:519
+#: admin/modules/customizer/views/_customize_properties.php:538
 msgid "SKU label"
 msgstr "SKU-label"
 
-#: admin/modules/customizer/views/_customize_properties.php:525
+#: admin/modules/customizer/views/_customize_properties.php:544
 msgid "SKU text align"
 msgstr "SKU-tekst uitlijnen"
 
-#: admin/modules/customizer/views/_customize_properties.php:542
+#: admin/modules/customizer/views/_customize_properties.php:561
 msgid "Product label"
 msgstr "Etiket"
 
-#: admin/modules/customizer/views/_customize_properties.php:548
+#: admin/modules/customizer/views/_customize_properties.php:567
 msgid "Product text align"
 msgstr "Producttekst uitgelijnd"
 
-#: admin/modules/customizer/views/_customize_properties.php:565
+#: admin/modules/customizer/views/_customize_properties.php:584
 msgid "GTIN label"
 msgstr "GTIN-label"
 
-#: admin/modules/customizer/views/_customize_properties.php:571
+#: admin/modules/customizer/views/_customize_properties.php:590
 msgid "GTIN text align"
 msgstr "GTIN-tekstuitlijning"
 
-#: admin/modules/customizer/views/_customize_properties.php:588
+#: admin/modules/customizer/views/_customize_properties.php:607
 msgid "Qty label"
 msgstr "Qty label"
 
-#: admin/modules/customizer/views/_customize_properties.php:594
+#: admin/modules/customizer/views/_customize_properties.php:613
 msgid "Qty text align"
 msgstr "Qty tekst align"
 
-#: admin/modules/customizer/views/_customize_properties.php:611
+#: admin/modules/customizer/views/_customize_properties.php:630
 msgid "Price label"
 msgstr "Prijskaartje"
 
-#: admin/modules/customizer/views/_customize_properties.php:617
+#: admin/modules/customizer/views/_customize_properties.php:636
 msgid "Price text align"
 msgstr "Prijstekst align"
 
-#: admin/modules/customizer/views/_customize_properties.php:637
+#: admin/modules/customizer/views/_customize_properties.php:656
 msgid "Tax items value"
 msgstr "Belastingwaarde"
 
-#: admin/modules/customizer/views/_customize_properties.php:640
+#: admin/modules/customizer/views/_customize_properties.php:659
 msgid "Amount"
 msgstr "Bedrag"
 
-#: admin/modules/customizer/views/_customize_properties.php:649
+#: admin/modules/customizer/views/_customize_properties.php:668
 msgid "Tax items text align"
 msgstr "Tekstuitlijning van belastingposten"
 
-#: admin/modules/customizer/views/_customize_properties.php:666
+#: admin/modules/customizer/views/_customize_properties.php:685
 msgid "Tax label"
 msgstr "BTW Label"
 
-#: admin/modules/customizer/views/_customize_properties.php:672
+#: admin/modules/customizer/views/_customize_properties.php:691
 msgid "Tax text align"
 msgstr "Tekst uitlijning"
 
-#: admin/modules/customizer/views/_customize_properties.php:689
+#: admin/modules/customizer/views/_customize_properties.php:708
 msgid "Total weight label"
 msgstr "Total weight label"
 
-#: admin/modules/customizer/views/_customize_properties.php:695
+#: admin/modules/customizer/views/_customize_properties.php:714
 msgid "Total weight text align"
 msgstr "Totale gewicht tekst uitlijnen"
 
-#: admin/modules/customizer/views/_customize_properties.php:712
+#: admin/modules/customizer/views/_customize_properties.php:731
 msgid "Total label"
 msgstr "Totaal label"
 
-#: admin/modules/customizer/views/_customize_properties.php:718
+#: admin/modules/customizer/views/_customize_properties.php:737
 msgid "Total text align"
 msgstr "Totale tekstuitlijning"
 
-#: admin/modules/customizer/views/_customize_properties.php:742
+#: admin/modules/customizer/views/_customize_properties.php:761
 msgid "Signature type"
 msgstr "Handtekeningstype"
 
-#: admin/modules/customizer/views/_customize_properties.php:746
+#: admin/modules/customizer/views/_customize_properties.php:765
 msgid "Manual Signature"
 msgstr "Handtekening"
 
-#: admin/modules/customizer/views/_customize_properties.php:747
+#: admin/modules/customizer/views/_customize_properties.php:766
 msgid "Image Signature"
 msgstr "Afbeelding signatuur"
 
-#: admin/modules/customizer/views/_customize_properties.php:764
+#: admin/modules/customizer/views/_customize_properties.php:783
 msgid "Align"
 msgstr "Uitlijnen"
 
-#: admin/modules/customizer/views/_customize_properties.php:781
+#: admin/modules/customizer/views/_customize_properties.php:800
 msgid "Label"
 msgstr "Label"
 
-#: admin/modules/customizer/views/_customize_properties.php:860
+#: admin/modules/customizer/views/_customize_properties.php:879
 msgid "Note"
 msgstr "Opmerking"
 
-#: admin/modules/customizer/views/_customize_properties.php:861
+#: admin/modules/customizer/views/_customize_properties.php:880
 msgid ""
 "Displays customer`s VAT number saved in the order details by third-party "
 "plugins in this document. Supported meta keys are"
 msgstr ""
-"Toont het BTW-nummer van de klant, opgeslagen in de bestelgegevens door plug-"
-"ins van derden in dit document. Ondersteunde metasleutels zijn"
+"Toont het BTW-nummer van de klant, opgeslagen in de bestelgegevens door "
+"plug-ins van derden in dit document. Ondersteunde metasleutels zijn"
 
-#: admin/modules/customizer/views/_customize_properties.php:863
+#: admin/modules/customizer/views/_customize_properties.php:882
 msgid "To add a different meta key"
 msgstr "Om een andere metasleutel toe te voegen"
 
-#: admin/modules/customizer/views/_customize_properties.php:864
+#: admin/modules/customizer/views/_customize_properties.php:883
 msgid "Upgrade to premium"
 msgstr "Upgrade naar premium"
 
-#: admin/modules/customizer/views/_customize_properties.php:923
-#: admin/views/premium_extension_page.php:142
+#: admin/modules/customizer/views/_customize_properties.php:942
+#: admin/views/premium_extension_page.php:728
+#: admin/views/premium_extension_page.php:729
 #: public/modules/deliverynote/views/general.php:157
 #: public/modules/dispatchlabel/views/general.php:142
 #: public/modules/invoice/views/invoice-admin-settings.php:94
@@ -2220,8 +2362,8 @@ msgstr "Upgrade naar premium"
 msgid "Show More"
 msgstr "Toon meer"
 
-#: admin/modules/customizer/views/_customize_properties.php:924
-#: admin/views/premium_extension_page.php:143
+#: admin/modules/customizer/views/_customize_properties.php:943
+#: admin/views/premium_extension_page.php:729
 #: public/modules/deliverynote/views/general.php:158
 #: public/modules/dispatchlabel/views/general.php:143
 #: public/modules/invoice/views/invoice-admin-settings.php:95
@@ -2230,8 +2372,7 @@ msgstr "Toon meer"
 msgid "Show Less"
 msgstr "Minder weergeven"
 
-#: admin/modules/customizer/views/_customize_properties.php:928
-#: admin/views/premium_extension_page.php:147
+#: admin/modules/customizer/views/_customize_properties.php:947
 msgid "Checkout Premium"
 msgstr "Afrekenen Premium"
 
@@ -2250,129 +2391,34 @@ msgstr "Bestelling"
 #: admin/modules/customizer/views/_pdf_preview.php:35
 #: admin/modules/customizer/views/_pdf_preview.php:36
 #: admin/partials/form_wizard/form_wizard.php:509
-#: admin/views/_form_field_generator_new.php:873
+#: admin/views/_form_field_generator_new.php:872
 #: public/modules/invoice/views/qrcode_promote.php:38
 msgid "Order number"
 msgstr "Ordernummer"
 
-#: admin/modules/customizer/views/customize.php:730
-#: admin/views/admin-settings-debug.php:160
-msgid "Templates"
-msgstr "Templates"
-
-#: admin/modules/customizer/views/customize.php:735
-msgid "Type template name to search"
-msgstr "Typ sjabloonnaam om te zoeken"
-
-#: admin/modules/customizer/views/customize.php:747
-msgid "Choose a layout."
-msgstr "Kies een lay-out."
-
-#: admin/modules/customizer/views/customize.php:753
-msgid "All unsaved changes will be lost upon switching to a new layout."
-msgstr ""
-"Alle niet-opgeslagen wijzigingen gaan verloren bij het overschakelen naar "
-"een nieuwe lay-out."
-
-#: admin/modules/customizer/views/customize.php:755
-msgid "Save before you proceed."
-msgstr "Bewaar voordat u verder gaat."
-
-#: admin/modules/customizer/views/customize.php:756
-msgid "Saving..."
-msgstr "Opslaan…"
-
-#: admin/modules/customizer/views/customize.php:799
-msgid "Get access to more shipping label templates."
-msgstr "Krijg toegang tot meer sjablonen voor verzendlabels."
-
-#: admin/modules/customizer/views/customize.php:800
-msgid "Get access to more invoice templates."
-msgstr "Krijg toegang tot meer factuursjablonen."
-
-#: admin/modules/customizer/views/customize.php:921
-msgid "This preview reflects your current settings from the General tab."
-msgstr "Deze preview toont uw huidige instellingen van het tabblad Algemeen."
-
-#: admin/modules/customizer/views/customize.php:930
-msgid "Update template"
-msgstr "Sjabloon bijwerken"
-
-#: admin/modules/customizer/views/customize.php:933
-msgid "Save template"
-msgstr "Template opslaan"
-
-#: admin/modules/customizer/views/customize.php:936
-msgid "Save and activate"
-msgstr "Opslaan en activeren"
-
-#: admin/modules/customizer/views/customize.php:947
-msgid "Create new"
-msgstr "Maak nieuw"
-
-#: admin/modules/customizer/views/customize.php:948
-msgid "My templates"
-msgstr "Mijn templates"
-
-#: admin/modules/customizer/views/customize.php:958
-msgid "This template is not comaptible with QR Code addon plugin"
-msgstr "Deze sjabloon is niet compatibel met de add-on-plug-in voor QR-codes"
-
-#. translators: %s: Template display name (invoice, packing list, etc.)
-#: admin/modules/customizer/views/customize.php:987
-#, php-format
-msgid "Unlock limitless possibilities of %s customization with the addon -"
-msgstr "Ontgrendel eindeloze aanpassingsmogelijkheden voor %s met de add-on -"
-
-#: admin/modules/customizer/views/customize.php:988
-msgid "Customizer for WooCommerce PDF Invoices Plugin"
-msgstr "Aanpasser voor WooCommerce PDF-facturenplug-in"
-
-#: admin/modules/customizer/views/customize.php:995
-#: admin/modules/customizer/views/customize.php:1006
-msgid "Visual"
-msgstr "Visueel"
-
-#: admin/modules/customizer/views/customize.php:996
-#: admin/modules/customizer/views/customize.php:1009
-msgid "Code"
-msgstr "Code"
-
-#: admin/modules/customizer/views/customize.php:1032
-msgid "Premium features"
-msgstr "Premiumfuncties"
-
-#. translators: %s: document type name (e.g. packing slip, invoice, credit note)
-#: admin/modules/customizer/views/customize.php:1035
-#, php-format
-msgid "Toggle the pro features on and off to see how they transform your %s."
-msgstr ""
-"Schakel de professionele functies in en uit om te zien hoe ze je %s "
-"transformeren."
-
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:41
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:42
 msgid "I couldn't understand how to make it work"
 msgstr "Ik begreep niet hoe ik het werkend kon krijgen"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:43
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:44
 msgid "Would you like us to assist you?"
 msgstr "Wil je dat wij je helpen?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:47
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:48
 msgid "Language support issues"
 msgstr "Problemen met taalondersteuning"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:52
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:53
 msgid "Plugin settings not available in my language"
 msgstr "Plugin-instellingen niet beschikbaar in mijn taal"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:54
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:61
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:62
 msgid "Which language?"
 msgstr "Welke taal?"
 
 #. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 msgid ""
 "Missing RTL/Unicode language(e.g Chinese, Arabic etc) support for PDF "
 "document."
@@ -2380,98 +2426,101 @@ msgstr ""
 "Ontbrekende RTL/Unicode-taal (bijv. Chinees, Arabisch, enz.) Ondersteuning "
 "voor PDF-document."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 #, php-format
 msgid "Already tried the free %1$s WebToffee mPDF addon %2$s."
 msgstr "Heb de gratis %1$s WebToffee mPDF-add-on %2$s al geprobeerd."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:59
+#. translators: 1$s: HTML link opening tag, 2$s: HTML link closing tag
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:60
 msgid ""
 " Click the link to activate the plugin and try printing the document again."
 msgstr ""
 "Klik op de link om de plug-in te activeren en probeer het document opnieuw "
 "af te drukken."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:67
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:68
 msgid ""
 "I am unable to add customer VAT(or GSTIN or ABN or any other tax id etc)"
 msgstr ""
 "Ik kan geen btw van de klant toevoegen (of GSTIN of ABN of een ander "
 "belastingnummer, enz.)"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:72
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:73
 msgid ""
-"Unable to add from third party plugin that collects customer VAT(or GSTIN or "
-"ABN etc)"
+"Unable to add from third party plugin that collects customer VAT(or GSTIN or"
+" ABN etc)"
 msgstr ""
 "Kan geen plug-in van derden toevoegen die btw van klanten int (of GSTIN of "
 "ABN enz.)"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:74
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:75
 msgid "Mention the name of the plugin or meta key if any"
 msgstr "Noem de naam van de plug-in of metasleutel indien aanwezig"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:78
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:79
 msgid "Need a field to add the tax id on checkout page"
 msgstr "Een veld nodig om het btw-nummer op de afrekenpagina toe te voegen"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:86
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:87
 msgid "I found a better plugin"
 msgstr "Ik heb een betere plugin gevonden"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:88
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:89
 msgid "Which plugin?"
 msgstr "Welke plugin?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:92
-msgid "The plugin is great, but I need specific feature that you don't support"
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:93
+msgid ""
+"The plugin is great, but I need specific feature that you don't support"
 msgstr ""
 "Deze plugin is goed, maar ik heb een specifieke functie nodig die jullie "
 "niet ondersteunen"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:94
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:95
 msgid "Could you tell us more about that feature?"
 msgstr "Kan je ons meer vertellen over die functie?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:98
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:99
 msgid "The plugin didn't work as expected"
 msgstr "De plugin werkte niet zoals verwacht"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:100
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:101
 msgid "What did you expect?"
 msgstr "Wat was verwachting?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:104
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:105
 msgid "Other"
 msgstr "Anders"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:106
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:107
 msgid "Could you tell us a bit more?"
 msgstr "Kun je ons wat meer vertellen?"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:125
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:126
 msgid "If you have a moment, please let us know why you are deactivating:"
 msgstr "Wij horen graag waarom u ervoor kiest om te deactiveren:"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:163
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:164
 msgid "WebToffee can contact me about this feedback."
 msgstr "WebToffee mag contact met mij opnemen over deze feedback."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:166
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:167
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:106
 msgid "Enter your email address."
 msgstr "Vul uw e-mail adres in."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:168
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:169
 #: admin/modules/wt-pdf-request-feature/class-wt-pdf-request-feature.php:107
 msgid "Enter email address"
 msgstr "Voer uw emailadres in"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:171
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:172
 msgid "Delete all the settings made by this plugin"
 msgstr "Verwijder alle instellingen die door deze plug-in zijn gemaakt"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:173
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:174
 msgid ""
 "We do not collect any personal data when you submit this form. It's your "
 "feedback that we value."
@@ -2479,23 +2528,23 @@ msgstr ""
 "We verzamelen geen persoonlijke gegevens wanneer u dit formulier indient. "
 "Het is uw feedback die we waarderen."
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:174
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:175
 msgid "Privacy Policy"
 msgstr "Privacybeleid"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:180
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:181
 msgid "Go to support"
 msgstr "Ga naar ondersteuning"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:181
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:182
 msgid "Submit & Deactivate"
 msgstr "Inzenden & Deactiveren"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:183
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:184
 msgid "I rather wouldn't say"
 msgstr "Zeg ik liever niet"
 
-#: admin/modules/uninstall-feedback/uninstall-feedback.php:309
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:310
 msgid "Please enter a valid email address."
 msgstr "Voer een geldig e-mailadres in."
 
@@ -2696,7 +2745,7 @@ msgid "Complete the invoice number format to suit your requirements"
 msgstr "Vul het formaat van het factuurnummer in volgens uw wensen"
 
 #: admin/partials/form_wizard/form_wizard.php:510
-#: admin/views/_form_field_generator_new.php:877
+#: admin/views/_form_field_generator_new.php:876
 msgid "Custom number"
 msgstr "Aangepast nummer"
 
@@ -2706,7 +2755,7 @@ msgid "Type in prefix/ suffix / date format if required"
 msgstr "Typ indien nodig het voorvoegsel/achtervoegsel/datumformaat"
 
 #: admin/partials/form_wizard/form_wizard.php:535
-#: admin/views/_form_field_generator_new.php:787
+#: admin/views/_form_field_generator_new.php:786
 msgid "Supported shortcodes for date"
 msgstr "Ondersteunde shortcodes voor datum"
 
@@ -2739,8 +2788,8 @@ msgid "the %s number would be"
 msgstr "het getal %s zou zijn"
 
 #. translators: %s: Document type (invoice, packing list, etc.)
-#: admin/partials/form_wizard/form_wizard.php:658
-#: admin/views/_form_field_generator_new.php:952
+#: admin/partials/form_wizard/form_wizard.php:657
+#: admin/views/_form_field_generator_new.php:951
 #: public/modules/invoice/views/invoice_number_preview.php:43
 #, php-format
 msgid "Your next %s number would be"
@@ -2792,6 +2841,7 @@ msgid "Invoices"
 msgstr "Facturen"
 
 #: admin/partials/marketing-cta/marketing-cta.php:46
+#: admin/views/premium_extension_page.php:188
 msgid "Packing Slips"
 msgstr "Pakbonnen"
 
@@ -2800,22 +2850,27 @@ msgid "Credit Notes"
 msgstr "Creditnota's"
 
 #: admin/partials/marketing-cta/marketing-cta.php:48
+#: admin/views/premium_extension_page.php:189
 msgid "Address Labels"
 msgstr "Adreslabels"
 
 #: admin/partials/marketing-cta/marketing-cta.php:49
+#: admin/views/premium_extension_page.php:192
 msgid "Delivery Notes"
 msgstr "Leveringnota's"
 
 #: admin/partials/marketing-cta/marketing-cta.php:50
+#: admin/views/premium_extension_page.php:190
 msgid "Dispatch Labels"
 msgstr "Verzendlabels"
 
 #: admin/partials/marketing-cta/marketing-cta.php:51
+#: admin/views/premium_extension_page.php:191
 msgid "Shipping Labels"
 msgstr "Verzendlabels"
 
 #: admin/partials/marketing-cta/marketing-cta.php:52
+#: admin/views/premium_extension_page.php:193
 msgid "Picklists"
 msgstr "Keuzelijsten"
 
@@ -2828,175 +2883,9 @@ msgid "Get Bundle Now"
 msgstr "Koop nu een bundel"
 
 #: admin/partials/marketing-cta/marketing-cta.php:61
+#: admin/views/premium_extension_page.php:182
 msgid "Invoice Bundle"
 msgstr "Factuurbundel"
-
-#: admin/views/_custom_field_editor_form.php:20
-#: admin/views/_custom_field_editor_form.php:23
-#: admin/views/_custom_field_editor_form.php:32
-#: admin/views/_custom_field_editor_form_product.php:24
-#: admin/views/_custom_field_editor_form_product.php:27
-#: admin/views/_custom_field_editor_form_product.php:36
-msgid "Add new"
-msgstr "Nieuwe toevoegen"
-
-#: admin/views/_custom_field_editor_form.php:41
-msgid "You can add custom/predefined order meta using its key"
-msgstr ""
-"U kunt aangepaste/vooraf gedefinieerde meta voor bestellingen toevoegen met "
-"behulp van de bijbehorende sleutel"
-
-#: admin/views/_custom_field_editor_form.php:48
-#: admin/views/_custom_field_editor_form_product.php:52
-msgid "Field Name"
-msgstr "Veldnaam"
-
-#: admin/views/_custom_field_editor_form.php:49
-#: admin/views/_custom_field_editor_form_product.php:53
-msgid "Meta Key"
-msgstr "Meta Data Sleutel"
-
-#: admin/views/_custom_field_editor_form.php:54
-msgid "To add more than one custom order meta,"
-msgstr "Als u meer dan één meta voor aangepaste bestellingen wilt toevoegen,"
-
-#: admin/views/_custom_field_editor_form.php:54
-#: admin/views/_custom_field_editor_form_product.php:58
-msgid "upgrade to premium version"
-msgstr "upgrade naar premium-versie"
-
-#: admin/views/_custom_field_editor_form_product.php:45
-msgid "You can add custom/predefined product meta using its key"
-msgstr ""
-"U kunt aangepaste/vooraf gedefinieerde productmetagegevens toevoegen met "
-"behulp van de sleutel"
-
-#: admin/views/_custom_field_editor_form_product.php:58
-msgid "To add more than one custom product meta,"
-msgstr "Om meer dan één aangepaste productmeta toe te voegen,"
-
-#: admin/views/_form_field_generator_new.php:469
-msgid "Order Meta"
-msgstr "Bestel Meta"
-
-#: admin/views/_form_field_generator_new.php:471
-msgid "Add/Edit Order Meta Field"
-msgstr "Metaveld order toevoegen / bewerken"
-
-#: admin/views/_form_field_generator_new.php:522
-msgid "Product Meta"
-msgstr "Product Meta"
-
-#: admin/views/_form_field_generator_new.php:524
-msgid "Add/Edit Product Meta Field"
-msgstr "Productmetaveld toevoegen/bewerken"
-
-#: admin/views/_form_field_generator_new.php:545
-msgid "Upload your image"
-msgstr "Upload uw afbeelding"
-
-#: admin/views/_form_field_generator_new.php:607
-#: admin/views/admin-settings-debug.php:201
-#: admin/views/admin-settings-debug.php:244
-msgid "Reset"
-msgstr "Reset"
-
-#: admin/views/_form_field_generator_new.php:680
-msgid "Document"
-msgstr "Document"
-
-#: admin/views/_form_field_generator_new.php:681
-msgid "PDF"
-msgstr "PDF"
-
-#: admin/views/_form_field_generator_new.php:682
-msgid "HTML"
-msgstr "HTML"
-
-#: admin/views/_form_field_generator_new.php:683
-msgid "Action"
-msgstr "Actie"
-
-#: admin/views/_form_field_generator_new.php:749
-msgid "Add date to invoice number"
-msgstr "Datum toevoegen aan factuurnummer"
-
-#: admin/views/_form_field_generator_new.php:750
-msgid "Invoice number format"
-msgstr "Formaat factuurnummer"
-
-#: admin/views/_form_field_generator_new.php:752
-msgid "Invoice starting number"
-msgstr "Factuur startnummer"
-
-#: admin/views/_form_field_generator_new.php:753
-msgid "Invoice number length"
-msgstr "Lengte factuurnummer"
-
-#: admin/views/_form_field_generator_new.php:757
-#: admin/views/_form_field_generator_new.php:770
-msgid "Use order date as input instead."
-msgstr ""
-"In plaats daarvan de datum van de bestelling van de gebruiker als invoer."
-
-#: admin/views/_form_field_generator_new.php:762
-msgid "Add date to credit note number"
-msgstr "Datum toevoegen aan creditnotanummer"
-
-#: admin/views/_form_field_generator_new.php:763
-msgid "Creditnote number format"
-msgstr "Formaat van creditnotanummer"
-
-#: admin/views/_form_field_generator_new.php:764
-msgid "What should be the starting number for your credit notes?"
-msgstr "Wat moet het startnummer zijn voor uw creditnota's?"
-
-#: admin/views/_form_field_generator_new.php:765
-msgid "What length would you prefer for your credit note"
-msgstr "Welke lengte wilt u voor uw creditnota?"
-
-#: admin/views/_form_field_generator_new.php:773
-msgid "Add date to proforma invoice number"
-msgstr "Datum toevoegen aan proforma factuurnummer"
-
-#: admin/views/_form_field_generator_new.php:774
-msgid "Proforma invoice number format"
-msgstr ""
-"Selecteer een proforma factuurnummerformaat in de vervolgkeuzelijst. U kunt "
-"ervoor kiezen om een voorvoegsel, achtervoegsel of beide te gebruiken voor "
-"uw proforma-factuurnummer."
-
-#: admin/views/_form_field_generator_new.php:775
-msgid "What should be the starting number for your proforma invoices?"
-msgstr "Wat moet het startnummer zijn voor uw proforma-facturen?"
-
-#: admin/views/_form_field_generator_new.php:776
-msgid "What length would you prefer for your proforma invoice"
-msgstr "Welke lengte wilt u voor uw proformafactuur?"
-
-#: admin/views/_form_field_generator_new.php:864
-msgid ""
-"Removing year [Y] from the prefix will disable the annual reset functionality"
-msgstr ""
-"Als u jaar [Y] uit het voorvoegsel verwijdert, wordt de functionaliteit voor "
-"jaarlijkse reset uitgeschakeld"
-
-#: admin/views/_form_field_generator_new.php:871
-msgid "Switching to order number will disable the annual reset functionality"
-msgstr ""
-"Als u overschakelt naar het bestelnummer, wordt de jaarlijkse reset-"
-"functionaliteit uitgeschakeld"
-
-#: admin/views/_form_field_generator_new.php:887
-msgid ""
-"Removing year [Y] from the suffix will disable the annual reset functionality"
-msgstr ""
-"Als u jaar [Y] uit het achtervoegsel verwijdert, wordt de functionaliteit "
-"voor jaarlijkse reset uitgeschakeld"
-
-#: admin/views/_form_field_generator_new.php:915
-msgid "The latest specified starting number will be used after reset"
-msgstr "Na reset wordt het laatst opgegeven startnummer gebruikt"
 
 #: admin/views/admin-settings-branding.php:6
 msgid "Developed by"
@@ -3065,14 +2954,20 @@ msgstr "Om door te gaan met importeren, typt u %1$s in het onderstaande veld"
 msgid "Reset all settings to default"
 msgstr "Zet alle instellingen terug naar de standaardinstellingen"
 
+#: admin/views/admin-settings-debug.php:201
+#: admin/views/admin-settings-debug.php:244
+#: admin/views/_form_field_generator_new.php:607
+msgid "Reset"
+msgstr "Reset"
+
 #: admin/views/admin-settings-debug.php:207
 msgid "Last updated on:"
 msgstr "Laatst geupdate op:"
 
 #: admin/views/admin-settings-debug.php:219
 msgid ""
-"Reset will delete all the settings, saved templates and reset to the default "
-"settings"
+"Reset will delete all the settings, saved templates and reset to the default"
+" settings"
 msgstr ""
 "Met Reset worden alle instellingen en opgeslagen sjablonen verwijderd en "
 "teruggezet naar de standaardinstellingen"
@@ -3174,10 +3069,11 @@ msgstr "Voor betere prestaties"
 
 #: admin/views/admin-settings-system-info.php:65
 msgid ""
-"Required to detect custom templates and to clear the temp folder periodically"
+"Required to detect custom templates and to clear the temp folder "
+"periodically"
 msgstr ""
-"Vereist om aangepaste sjablonen te detecteren en de tijdelijke map periodiek "
-"te wissen"
+"Vereist om aangepaste sjablonen te detecteren en de tijdelijke map periodiek"
+" te wissen"
 
 #: admin/views/admin-settings-system-info.php:68
 msgid "Check PHP disable_functions"
@@ -3288,6 +3184,7 @@ msgid ""
 msgstr ""
 "Krijg <span>%s</span> opties voor verzendlabels, pakbonnen en pakbonnen."
 
+#. translators: %s: highlighted phrase
 #: admin/views/customizer-promotion-popup.php:175
 #: admin/views/customizer-promotion-popup.php:187
 #: admin/views/customizer-promotion-popup.php:199
@@ -3300,7 +3197,8 @@ msgstr "geavanceerde aanpassing"
 msgid "Add additional fields to shipping labels"
 msgstr "Voeg extra velden toe aan verzendlabels"
 
-#: admin/views/customizer-promotion-popup.php:259 admin/views/freevspro.php:147
+#: admin/views/customizer-promotion-popup.php:259
+#: admin/views/freevspro.php:147
 msgid "Upgrade To Premium"
 msgstr "Upgrade naar premium"
 
@@ -3336,7 +3234,8 @@ msgstr "Gratis versie"
 msgid "Premium version"
 msgstr "Premium versie"
 
-#. translators: 1$s: Document module title, 2$s: HTML link opening tag, 3$s: HTML link closing tag
+#. translators: 1$s: Document module title, 2$s: HTML link opening tag, 3$s:
+#. HTML link closing tag
 #: admin/views/documents.php:153
 #, php-format
 msgid "You are using free version of %1$s. %2$s Checkout premium here %3$s."
@@ -3383,7 +3282,7 @@ msgstr "Gratis"
 msgid "Premium"
 msgstr "Premium"
 
-#: admin/views/freevspro.php:139
+#: admin/views/freevspro.php:139 admin/views/premium_extension_page.php:606
 msgid "30 Day Money Back Guarantee"
 msgstr "30-dagen-geld-terug-garantie"
 
@@ -3414,7 +3313,8 @@ msgstr "Naam"
 #: admin/views/general.php:51
 msgid "To include the keyed in name to the Invoice, ensure to select"
 msgstr ""
-"Zorg ervoor dat u selecteert om de ingetoetste naam op de factuur op te nemen"
+"Zorg ervoor dat u selecteert om de ingetoetste naam op de factuur op te "
+"nemen"
 
 #: admin/views/general.php:52
 msgid "Company name"
@@ -3460,7 +3360,7 @@ msgstr ""
 #: public/modules/dispatchlabel/dispatchlabel.php:165
 #: public/modules/invoice/invoice.php:1329
 #: public/modules/invoice/invoice.php:1333
-#: public/modules/packinglist/packinglist.php:208
+#: public/modules/packinglist/packinglist.php:209
 #: public/modules/shippinglabel/shippinglabel.php:167
 msgid "Footer"
 msgstr "Footer"
@@ -3468,7 +3368,8 @@ msgstr "Footer"
 #: admin/views/general.php:85
 msgid "Set up a footer which will be used across the respective documents."
 msgstr ""
-"Stel een voettekst in die in alle betreffende documenten gebruikt zal worden."
+"Stel een voettekst in die in alle betreffende documenten gebruikt zal "
+"worden."
 
 #: admin/views/general.php:98
 msgid "Address details"
@@ -3505,7 +3406,8 @@ msgstr "Valutacode weergeven"
 #: admin/views/general.php:202
 msgid "Enable to show currency code instead of currency symbol"
 msgstr ""
-"Schakel dit in om de valutacode weer te geven in plaats van het valutasymbool"
+"Schakel dit in om de valutacode weer te geven in plaats van het "
+"valutasymbool"
 
 #: admin/views/general.php:210
 msgid "Preview before printing"
@@ -3587,7 +3489,8 @@ msgstr "Bestandspad"
 msgid "Automatic cleanup"
 msgstr "Automatische opschoning"
 
-#: admin/views/general.php:369 public/modules/deliverynote/views/general.php:31
+#: admin/views/general.php:369
+#: public/modules/deliverynote/views/general.php:31
 #: public/modules/deliverynote/views/general.php:46
 #: public/modules/deliverynote/views/general.php:61
 #: public/modules/dispatchlabel/views/general.php:32
@@ -3599,7 +3502,8 @@ msgstr "Automatische opschoning"
 msgid "Yes"
 msgstr "Ja"
 
-#: admin/views/general.php:370 public/modules/deliverynote/views/general.php:32
+#: admin/views/general.php:370
+#: public/modules/deliverynote/views/general.php:32
 #: public/modules/deliverynote/views/general.php:47
 #: public/modules/deliverynote/views/general.php:62
 #: public/modules/dispatchlabel/views/general.php:33
@@ -3693,6 +3597,8 @@ msgstr "Pas de documentlay-out en -eigenschappen aan"
 #: admin/views/premium_extension_listing.php:25
 #: admin/views/premium_extension_listing.php:43
 #: admin/views/premium_extension_listing.php:60
+#: admin/views/premium_extension_page.php:46
+#: admin/views/premium_extension_page.php:65
 #: admin/views/wt_ipc_free_pro.php:286 admin/views/wt_pl_free_pro.php:67
 #: admin/views/wt_pro_addons_list.php:21 admin/views/wt_pro_addons_list.php:41
 #: admin/views/wt_pro_addons_list.php:60 admin/views/wt_sdd_free_pro.php:121
@@ -3711,6 +3617,7 @@ msgstr "Meerdere weergavemogelijkheden voor bundelproducten"
 
 #: admin/views/premium_extension_listing.php:28
 #: admin/views/premium_extension_listing.php:46
+#: admin/views/premium_extension_page.php:49
 #: admin/views/wt_ipc_free_pro.php:232 admin/views/wt_pl_free_pro.php:39
 #: admin/views/wt_pro_addons_list.php:24 admin/views/wt_pro_addons_list.php:44
 #: admin/views/wt_sdd_free_pro.php:105
@@ -3727,9 +3634,14 @@ msgstr "Geverifieerde compatibiliteit met belangrijke plug-ins"
 #: admin/views/premium_extension_listing.php:64
 #: admin/views/premium_extension_listing.php:78
 #: admin/views/premium_extension_listing.php:96
+#: admin/views/premium_extension_page.php:51
+#: admin/views/premium_extension_page.php:69
+#: admin/views/premium_extension_page.php:101
+#: admin/views/premium_extension_page.php:121
 #: admin/views/wt_pi_free_pro.php:394 admin/views/wt_pro_addons_list.php:26
 #: admin/views/wt_pro_addons_list.php:46 admin/views/wt_pro_addons_list.php:64
-#: admin/views/wt_pro_addons_list.php:84 admin/views/wt_pro_addons_list.php:104
+#: admin/views/wt_pro_addons_list.php:84
+#: admin/views/wt_pro_addons_list.php:104
 msgid "Multilingual support"
 msgstr "Meertalige support"
 
@@ -3739,11 +3651,13 @@ msgid "WooCommerce Shipping labels, Dispatch labels and Delivery Notes plugin"
 msgstr "WooCommerce Verzendlabels, Verzendlabels en Leveringsnotities plug-in"
 
 #: admin/views/premium_extension_listing.php:39
+#: admin/views/premium_extension_page.php:42
 #: admin/views/wt_pro_addons_list.php:37
 msgid "Create delivery notes, shipping & dispatch labels"
 msgstr "Maak leveringsbonnen, verzend- en verzendlabels"
 
 #: admin/views/premium_extension_listing.php:40
+#: admin/views/premium_extension_page.php:43
 #: admin/views/wt_pro_addons_list.php:38
 msgid "Enable customers to print the documents from order emails"
 msgstr ""
@@ -3751,71 +3665,85 @@ msgstr ""
 "drukken"
 
 #: admin/views/premium_extension_listing.php:41
+#: admin/views/premium_extension_page.php:44
 #: admin/views/wt_pro_addons_list.php:39
 msgid "Customize shipping label size"
 msgstr "Pas het formaat van het verzendlabel aan"
 
 #: admin/views/premium_extension_listing.php:42
+#: admin/views/premium_extension_page.php:45
 #: admin/views/wt_pro_addons_list.php:40
 msgid "Add multiple shipping labels on one page"
 msgstr "Voeg meerdere verzendlabels toe op één pagina"
 
 #: admin/views/premium_extension_listing.php:44
+#: admin/views/premium_extension_page.php:47
 #: admin/views/wt_pro_addons_list.php:42
 msgid "Add extra product & order data fields"
 msgstr "Voeg extra product- en bestelgegevensvelden toe"
 
 #: admin/views/premium_extension_listing.php:45
+#: admin/views/premium_extension_page.php:48
 #: admin/views/wt_pro_addons_list.php:43
 msgid "Pre-built layouts & customizable templates"
 msgstr "Vooraf gebouwde lay-outs en aanpasbare sjablonen"
 
 #: admin/views/premium_extension_listing.php:47
+#: admin/views/premium_extension_page.php:50
 #: admin/views/wt_pro_addons_list.php:45
 msgid "Sort products based on Name or SKU"
 msgstr "Sorteer producten op basis van Naam of SKU"
 
 #: admin/views/premium_extension_listing.php:54
+#: admin/views/premium_extension_page.php:58
 #: admin/views/wt_pro_addons_list.php:52
 msgid "WooCommerce Picklists plugin"
 msgstr "WooCommerce Picklists-plug-in"
 
 #: admin/views/premium_extension_listing.php:57
+#: admin/views/premium_extension_page.php:62
 #: admin/views/wt_pro_addons_list.php:57
 msgid "Bulk print picklists from the admin order page"
 msgstr "Keuzelijsten in bulk afdrukken vanaf de admin-bestelpagina"
 
 #: admin/views/premium_extension_listing.php:58
-#: admin/views/wt_pl_free_pro.php:25 admin/views/wt_pro_addons_list.php:58
+#: admin/views/premium_extension_page.php:63 admin/views/wt_pl_free_pro.php:25
+#: admin/views/wt_pro_addons_list.php:58
 msgid "Automatically email picklists based on order status"
 msgstr "Automatisch keuzelijsten e-mailen op basis van de bestelstatus"
 
 #: admin/views/premium_extension_listing.php:59
+#: admin/views/premium_extension_page.php:64
 #: admin/views/wt_pro_addons_list.php:59
 msgid "Create or customize picklist templates"
 msgstr "Keuzelijstsjablonen maken of aanpassen"
 
 #: admin/views/premium_extension_listing.php:61
+#: admin/views/premium_extension_page.php:66
 #: admin/views/wt_pro_addons_list.php:61
 msgid "Group products in picklist by order/category"
 msgstr "Groepeer producten in keuzelijst op bestelling/categorie"
 
 #: admin/views/premium_extension_listing.php:62
+#: admin/views/premium_extension_page.php:67
 #: admin/views/wt_pro_addons_list.php:62
 msgid "Add product meta fields & attributes"
 msgstr "Voeg productmetavelden en -kenmerken toe"
 
 #: admin/views/premium_extension_listing.php:63
+#: admin/views/premium_extension_page.php:68
 #: admin/views/wt_pro_addons_list.php:63
 msgid "Exclude virtual products from picklists"
 msgstr "Sluit virtuele producten uit van keuzelijsten"
 
 #: admin/views/premium_extension_listing.php:70
+#: admin/views/premium_extension_page.php:92
 #: admin/views/wt_pi_free_pro.php:293 admin/views/wt_pro_addons_list.php:90
 msgid "WooCommerce Address Labels plugin"
 msgstr "WooCommerce Adreslabels plug-in"
 
 #: admin/views/premium_extension_listing.php:73
+#: admin/views/premium_extension_page.php:96
 msgid ""
 "Generate ‘Shipping Address’, ‘Billing Address’, ‘From Address’, and ‘Return "
 "Address’ labels"
@@ -3824,20 +3752,24 @@ msgstr ""
 "‘Retouradres’"
 
 #: admin/views/premium_extension_listing.php:74
+#: admin/views/premium_extension_page.php:97
 #: admin/views/wt_pro_addons_list.php:99
 msgid "Customize label sizes"
 msgstr "Pas de etiketformaten aan"
 
 #: admin/views/premium_extension_listing.php:75
+#: admin/views/premium_extension_page.php:98
 #: admin/views/wt_pro_addons_list.php:100
 msgid "Bulk print address labels"
 msgstr "Adreslabels in bulk afdrukken"
 
 #: admin/views/premium_extension_listing.php:76
+#: admin/views/premium_extension_page.php:99
 msgid "Offers built-in label templates"
 msgstr "Biedt ingebouwde labelsjablonen"
 
 #: admin/views/premium_extension_listing.php:77
+#: admin/views/premium_extension_page.php:100
 #: admin/views/wt_pro_addons_list.php:102
 msgid "Change address label layout"
 msgstr "Wijzig de lay-out van het adreslabel"
@@ -3847,72 +3779,88 @@ msgid "WooCommerce Proforma Invoices"
 msgstr "WooCommerce Proforma-facturen"
 
 #: admin/views/premium_extension_listing.php:87
+#: admin/views/premium_extension_page.php:112
 #: admin/views/wt_pro_addons_list.php:75
 msgid "Create proforma invoices automatically"
 msgstr "Automatisch pro-formafacturen maken"
 
 #: admin/views/premium_extension_listing.php:88
+#: admin/views/premium_extension_page.php:113
 #: admin/views/wt_pro_addons_list.php:76
 msgid "Pre-built proforma invoice layouts"
 msgstr "Vooraf gebouwde proforma-factuurlay-outs"
 
 #: admin/views/premium_extension_listing.php:89
 #: admin/views/premium_extension_listing.php:107
+#: admin/views/premium_extension_page.php:82
+#: admin/views/premium_extension_page.php:114
 #: admin/views/wt_pro_addons_list.php:77
 msgid "Easy invoice layout customization"
 msgstr "Gemakkelijke aanpassing van de factuurlay-out"
 
 #: admin/views/premium_extension_listing.php:90
+#: admin/views/premium_extension_page.php:115
 #: admin/views/wt_pro_addons_list.php:78
 msgid "Attach proforma invoice PDF to order emails"
 msgstr "Voeg een proforma-factuur-pdf toe aan bestel-e-mails"
 
 #: admin/views/premium_extension_listing.php:91
+#: admin/views/premium_extension_page.php:116
 #: admin/views/wt_pro_addons_list.php:79
 msgid "Allow customers to print invoices"
 msgstr "Laat klanten facturen afdrukken"
 
 #: admin/views/premium_extension_listing.php:92
+#: admin/views/premium_extension_page.php:117
 #: admin/views/wt_pi_free_pro.php:62 admin/views/wt_pro_addons_list.php:80
 msgid "Set custom proforma invoice number"
 msgstr "Stel een aangepast proforma-factuurnummer in"
 
 #: admin/views/premium_extension_listing.php:93
+#: admin/views/premium_extension_page.php:118
 #: admin/views/wt_pro_addons_list.php:81
 msgid "Add additional product & order data fields"
 msgstr "Voeg extra product- en bestelgegevensvelden toe"
 
 #: admin/views/premium_extension_listing.php:94
+#: admin/views/premium_extension_page.php:119
 #: admin/views/wt_pi_free_pro.php:207 admin/views/wt_pro_addons_list.php:82
 msgid "Attach special notes with proforma invoices"
 msgstr "Voeg speciale opmerkingen toe aan proforma-facturen"
 
 #: admin/views/premium_extension_listing.php:95
+#: admin/views/premium_extension_page.php:120
 #: admin/views/wt_pro_addons_list.php:83
 msgid "Attach transport & sales terms"
 msgstr "Transport- en verkoopvoorwaarden bijvoegen"
 
 #: admin/views/premium_extension_listing.php:102
+#: admin/views/premium_extension_page.php:76
 msgid "Customizer for WooCommerce PDF Invoices"
 msgstr "Aanpasser voor WooCommerce PDF-facturen"
 
 #: admin/views/premium_extension_listing.php:105
+#: admin/views/premium_extension_page.php:80
 msgid "Drag-and-drop easy customization"
 msgstr "Eenvoudige aanpassing via slepen en neerzetten"
 
 #: admin/views/premium_extension_listing.php:106
+#: admin/views/premium_extension_page.php:81
 msgid "Advanced visual and code editor"
 msgstr "Geavanceerde visuele en code-editor"
 
 #: admin/views/premium_extension_listing.php:108
+#: admin/views/premium_extension_page.php:83
 msgid "Customize individual elements using block editors"
 msgstr "Pas individuele elementen aan met behulp van blokeditors"
 
 #: admin/views/premium_extension_listing.php:109
+#: admin/views/premium_extension_page.php:84
 msgid "View live preview of customization"
 msgstr "Bekijk live preview van maatwerk"
 
 #: admin/views/premium_extension_listing.php:110
+#: admin/views/premium_extension_page.php:85
 msgid "Change color, text, background, border & more"
 msgstr "Verander kleur, tekst, achtergrond, rand en meer"
 
@@ -3923,30 +3871,37 @@ msgid "QR Code Addon for WooCommerce PDF Invoices"
 msgstr "QR-code-add-on voor WooCommerce PDF-facturen"
 
 #: admin/views/premium_extension_listing.php:119
+#: admin/views/premium_extension_page.php:132
 #: admin/views/wt_pro_addons_list.php:115
 msgid "Assign QR codes to all generated invoices"
 msgstr "Wijs QR-codes toe aan alle gegenereerde facturen"
 
 #: admin/views/premium_extension_listing.php:120
+#: admin/views/premium_extension_page.php:133
 #: admin/views/wt_pro_addons_list.php:116
 msgid "Create QR code that reads order or invoice number"
 msgstr "Maak een QR-code die het order- of factuurnummer leest"
 
 #: admin/views/premium_extension_listing.php:121
+#: admin/views/premium_extension_page.php:134
 #: admin/views/wt_pro_addons_list.php:117
 msgid "Add custom data to invoices"
 msgstr "Voeg aangepaste gegevens toe aan facturen"
 
 #: admin/views/premium_extension_listing.php:122
+#: admin/views/premium_extension_page.php:135
 msgid ""
-"Compatible with WooCommerce PDF Invoice, Packing Slip & Credit Note (Premium)"
-msgstr "Compatibel met WooCommerce PDF-factuur, pakbon en creditnota (Premium)"
+"Compatible with WooCommerce PDF Invoice, Packing Slip & Credit Note "
+"(Premium)"
+msgstr ""
+"Compatibel met WooCommerce PDF-factuur, pakbon en creditnota (Premium)"
 
 #: admin/views/premium_extension_listing.php:123
+#: admin/views/premium_extension_page.php:136
 #: admin/views/wt_pro_addons_list.php:119
 msgid ""
-"Compatible with WooCommerce PDF Invoices, Packing Slips, Delivery Notes, and "
-"Shipping Labels (Free)"
+"Compatible with WooCommerce PDF Invoices, Packing Slips, Delivery Notes, and"
+" Shipping Labels (Free)"
 msgstr ""
 "Compatibel met WooCommerce PDF-facturen, pakbonnen, leveringsbonnen en "
 "verzendlabels (gratis)"
@@ -3988,38 +3943,47 @@ msgid "WebToffee WooCommerce Request A Quote"
 msgstr "WebToffee WooCommerce Vraag een offerte aan"
 
 #: admin/views/premium_extension_listing.php:147
+#: admin/views/premium_extension_page.php:147
 msgid "Add quote button to the product & shop pages"
 msgstr "Voeg een offerteknop toe aan de product- en winkelpagina's"
 
 #: admin/views/premium_extension_listing.php:148
+#: admin/views/premium_extension_page.php:148
 msgid "Enable quotation request for selected products"
 msgstr "Offerteaanvraag inschakelen voor geselecteerde producten"
 
 #: admin/views/premium_extension_listing.php:149
+#: admin/views/premium_extension_page.php:149
 msgid "Automatically send quotes to users"
 msgstr "Stuur automatisch offertes naar gebruikers"
 
 #: admin/views/premium_extension_listing.php:150
+#: admin/views/premium_extension_page.php:150
 msgid "Disable guest users from asking for quote"
 msgstr "Schakel gastgebruikers uit om om een offerte te vragen"
 
 #: admin/views/premium_extension_listing.php:151
+#: admin/views/premium_extension_page.php:151
 msgid "Hide prices and ‘add to cart’ button"
 msgstr "Verberg prijzen en ‘voeg toe aan winkelwagen’ knop"
 
 #: admin/views/premium_extension_listing.php:152
+#: admin/views/premium_extension_page.php:152
 msgid "Automatic email alerts for admin & users"
 msgstr "Automatische e-mailwaarschuwingen voor beheerders en gebruikers"
 
 #: admin/views/premium_extension_listing.php:153
+#: admin/views/premium_extension_page.php:153
 msgid "Easy button and form customization"
 msgstr "Eenvoudige aanpassing van knoppen en formulieren"
 
 #: admin/views/premium_extension_listing.php:154
+#: admin/views/premium_extension_page.php:154
 msgid "Set quote expiry period"
 msgstr "Stel de vervalperiode voor offertes in"
 
 #: admin/views/premium_extension_listing.php:155
+#: admin/views/premium_extension_page.php:155
 msgid "Limit spams with reCAPTCHA"
 msgstr "Beperk spam met reCAPTCHA"
 
@@ -4028,30 +3992,37 @@ msgid "Sequential Order Number for WooCommerce"
 msgstr "Volgnummer voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:164
+#: admin/views/premium_extension_page.php:166
 msgid "Auto reset sequence per month/year etc"
 msgstr "Automatische resetsequentie per maand/jaar etc"
 
 #: admin/views/premium_extension_listing.php:165
+#: admin/views/premium_extension_page.php:167
 msgid "Add a custom suffix for order numbers"
 msgstr "Voeg een aangepast achtervoegsel toe voor bestelnummers"
 
 #: admin/views/premium_extension_listing.php:166
+#: admin/views/premium_extension_page.php:168
 msgid "Date suffix in order numbers"
 msgstr "Datumtoevoeging in bestelnummers"
 
 #: admin/views/premium_extension_listing.php:167
+#: admin/views/premium_extension_page.php:169
 msgid "Custom sequence for free orders"
 msgstr "Aangepaste volgorde voor gratis bestellingen"
 
 #: admin/views/premium_extension_listing.php:168
+#: admin/views/premium_extension_page.php:170
 msgid "Increment sequence in custom series"
 msgstr "Volgorde verhogen in aangepaste reeksen"
 
 #: admin/views/premium_extension_listing.php:169
+#: admin/views/premium_extension_page.php:171
 msgid "More order number templates"
 msgstr "Meer bestelnummersjablonen"
 
 #: admin/views/premium_extension_listing.php:175
+#: admin/views/premium_extension_page.php:392
 msgid "Data Import & Export"
 msgstr "Gegevens importeren en exporteren"
 
@@ -4064,21 +4035,27 @@ msgstr ""
 "WooCommerce-gegevens"
 
 #: admin/views/premium_extension_listing.php:182
+#: admin/views/premium_extension_page.php:483
 msgid "Import Export Suite for WooCommerce"
 msgstr "Import Export Suite voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:185
+#: admin/views/premium_extension_page.php:487
 msgid ""
-"Import/export Products, Orders, Subscriptions, Coupons, Customers, WordPress "
-"Users, Categories & Tags, Reviews"
+"Import/export Products, Orders, Subscriptions, Coupons, Customers, WordPress"
+" Users, Categories & Tags, Reviews"
 msgstr ""
-"Producten importeren/exporteren, bestellingen, abonnementen, kortingsbonnen, "
-"klanten, WordPress-gebruikers, categorieën en tags, recensies"
+"Producten importeren/exporteren, bestellingen, abonnementen, kortingsbonnen,"
+" klanten, WordPress-gebruikers, categorieën en tags, recensies"
 
 #: admin/views/premium_extension_listing.php:186
 #: admin/views/premium_extension_listing.php:203
 #: admin/views/premium_extension_listing.php:221
 #: admin/views/premium_extension_listing.php:240
+#: admin/views/premium_extension_page.php:403
+#: admin/views/premium_extension_page.php:423
+#: admin/views/premium_extension_page.php:444
+#: admin/views/premium_extension_page.php:488
 msgid "Supports Excel, XML, CSV, and TSV file formats"
 msgstr "Ondersteunt Excel-, XML-, CSV- en TSV-bestandsformaten"
 
@@ -4086,6 +4063,10 @@ msgstr "Ondersteunt Excel-, XML-, CSV- en TSV-bestandsformaten"
 #: admin/views/premium_extension_listing.php:207
 #: admin/views/premium_extension_listing.php:226
 #: admin/views/premium_extension_listing.php:246
+#: admin/views/premium_extension_page.php:407
+#: admin/views/premium_extension_page.php:428
+#: admin/views/premium_extension_page.php:450
+#: admin/views/premium_extension_page.php:490
 msgid "Import from URL, Google Sheets, FTP/SFTP"
 msgstr "Importeren vanuit URL, Google Spreadsheets, FTP/SFTP"
 
@@ -4093,21 +4074,31 @@ msgstr "Importeren vanuit URL, Google Spreadsheets, FTP/SFTP"
 #: admin/views/premium_extension_listing.php:208
 #: admin/views/premium_extension_listing.php:227
 #: admin/views/premium_extension_listing.php:247
+#: admin/views/premium_extension_page.php:408
+#: admin/views/premium_extension_page.php:429
+#: admin/views/premium_extension_page.php:451
+#: admin/views/premium_extension_page.php:491
 msgid "Export to FTP/SFTP"
 msgstr "Exporteren naar FTP/SFTP"
 
 #: admin/views/premium_extension_listing.php:190
+#: admin/views/premium_extension_page.php:492
 msgid "Import & export custom fields and values"
 msgstr "Aangepaste velden en waarden importeren en exporteren"
 
 #: admin/views/premium_extension_listing.php:191
 #: admin/views/premium_extension_listing.php:228
 #: admin/views/premium_extension_listing.php:248
+#: admin/views/premium_extension_page.php:430
+#: admin/views/premium_extension_page.php:452
+#: admin/views/premium_extension_page.php:493
 msgid "Advanced filters and customizations for import & export"
 msgstr "Geavanceerde filters en aanpassingen voor import en export"
 
 #: admin/views/premium_extension_listing.php:192
 #: admin/views/premium_extension_listing.php:210
+#: admin/views/premium_extension_page.php:410
+#: admin/views/premium_extension_page.php:494
 msgid "Add and update data while importing"
 msgstr "Gegevens toevoegen en bijwerken tijdens het importeren"
 
@@ -4115,6 +4106,10 @@ msgstr "Gegevens toevoegen en bijwerken tijdens het importeren"
 #: admin/views/premium_extension_listing.php:211
 #: admin/views/premium_extension_listing.php:230
 #: admin/views/premium_extension_listing.php:250
+#: admin/views/premium_extension_page.php:411
+#: admin/views/premium_extension_page.php:432
+#: admin/views/premium_extension_page.php:454
+#: admin/views/premium_extension_page.php:495
 msgid "Maintains action history and debug logs"
 msgstr "Houdt actiegeschiedenis en foutopsporingslogboeken bij"
 
@@ -4122,6 +4117,10 @@ msgstr "Houdt actiegeschiedenis en foutopsporingslogboeken bij"
 #: admin/views/premium_extension_listing.php:212
 #: admin/views/premium_extension_listing.php:231
 #: admin/views/premium_extension_listing.php:251
+#: admin/views/premium_extension_page.php:412
+#: admin/views/premium_extension_page.php:433
+#: admin/views/premium_extension_page.php:455
+#: admin/views/premium_extension_page.php:496
 msgid "Compatible with major 3rd-party plugins"
 msgstr "Compatibel met belangrijke plug-ins van derden"
 
@@ -4131,18 +4130,23 @@ msgstr "Plug-in voor productimport en export voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:204
 #: admin/views/premium_extension_listing.php:241
+#: admin/views/premium_extension_page.php:404
+#: admin/views/premium_extension_page.php:445
 msgid "Schedule automated import and export"
 msgstr "Plan automatische import en export"
 
 #: admin/views/premium_extension_listing.php:205
+#: admin/views/premium_extension_page.php:405
 msgid "Support for multiple product types"
 msgstr "Ondersteuning voor meerdere producttypen"
 
 #: admin/views/premium_extension_listing.php:206
+#: admin/views/premium_extension_page.php:406
 msgid "Export product images in a separate zip file"
 msgstr "Exporteer productafbeeldingen in een apart zip-bestand"
 
 #: admin/views/premium_extension_listing.php:209
+#: admin/views/premium_extension_page.php:409
 msgid "Advanced filters and customizations for import and export"
 msgstr "Geavanceerde filters en aanpassingen voor import en export"
 
@@ -4151,19 +4155,24 @@ msgid "Order, Coupon, Subscription Export Import for WooCommerce"
 msgstr "Bestelling, coupon, abonnement Export Import voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:223
+#: admin/views/premium_extension_page.php:425
 msgid "Email customers on order status change"
 msgstr "E-mail klanten over wijzigingen in de bestelstatus"
 
 #: admin/views/premium_extension_listing.php:224
+#: admin/views/premium_extension_page.php:426
 msgid "Create users on order import"
 msgstr "Maak gebruikers aan bij het importeren van bestellingen"
 
 #: admin/views/premium_extension_listing.php:225
+#: admin/views/premium_extension_page.php:427
 msgid "Filter export by products, order status, email, date, etc"
 msgstr "Filter de export op producten, bestelstatus, e-mail, datum, etc"
 
 #: admin/views/premium_extension_listing.php:229
 #: admin/views/premium_extension_listing.php:249
+#: admin/views/premium_extension_page.php:431
+#: admin/views/premium_extension_page.php:453
 msgid "Add & update data while importing"
 msgstr "Gegevens toevoegen en bijwerken tijdens het importeren"
 
@@ -4172,19 +4181,23 @@ msgid "WordPress Users & WooCommerce Customers Import Export"
 msgstr "WordPress-gebruikers en WooCommerce-klanten importeren exporteren"
 
 #: admin/views/premium_extension_listing.php:242
+#: admin/views/premium_extension_page.php:446
 msgid "Customize and send emails to new users on import"
 msgstr ""
 "Pas e-mails aan en stuur deze naar nieuwe gebruikers bij het importeren"
 
 #: admin/views/premium_extension_listing.php:243
+#: admin/views/premium_extension_page.php:447
 msgid "Retain user passwords on import/export"
 msgstr "Bewaar gebruikerswachtwoorden bij import/export"
 
 #: admin/views/premium_extension_listing.php:244
+#: admin/views/premium_extension_page.php:448
 msgid "Export and import custom fields and third-party plugin fields"
 msgstr "Exporteer en importeer aangepaste velden en plug-invelden van derden"
 
 #: admin/views/premium_extension_listing.php:245
+#: admin/views/premium_extension_page.php:449
 msgid "Filter by user role, email, date, etc"
 msgstr "Filter op gebruikersrol, e-mailadres, datum, etc"
 
@@ -4193,6 +4206,7 @@ msgid "WebToffee WooCommerce Product Feed & Sync Manager"
 msgstr "WebToffee WooCommerce Productfeed en synchronisatiebeheer"
 
 #: admin/views/premium_extension_listing.php:260
+#: admin/views/premium_extension_page.php:466
 msgid ""
 "Generate WooCommerce product feeds for Google Shopping, Facebook Shop, and "
 "Instagram Shop"
@@ -4201,14 +4215,17 @@ msgstr ""
 "Instagram Shop"
 
 #: admin/views/premium_extension_listing.php:261
+#: admin/views/premium_extension_page.php:467
 msgid "Sync WooCommerce products to Facebook catalog"
 msgstr "Synchroniseer WooCommerce-producten met de Facebook-catalogus"
 
 #: admin/views/premium_extension_listing.php:262
+#: admin/views/premium_extension_page.php:468
 msgid "Additional feed intervals (30 minutes, 6 hours, 12 hours)"
 msgstr "Extra voerintervallen (30 minuten, 6 uur, 12 uur)"
 
 #: admin/views/premium_extension_listing.php:263
+#: admin/views/premium_extension_page.php:469
 msgid "Support for additional fields that can be added to the feed"
 msgstr ""
 "Ondersteuning voor extra velden die aan de feed kunnen worden toegevoegd"
@@ -4218,30 +4235,37 @@ msgid "WPML multilingual and multicurrency support "
 msgstr "WPML meertalige en meerdere valuta-ondersteuning"
 
 #: admin/views/premium_extension_listing.php:265
+#: admin/views/premium_extension_page.php:471
 msgid "Google local product inventory feed"
 msgstr "Google-feed met lokale productvoorraad"
 
 #: admin/views/premium_extension_listing.php:266
+#: admin/views/premium_extension_page.php:472
 msgid "Exclude specific products"
 msgstr "Sluit specifieke producten uit"
 
 #: admin/views/premium_extension_listing.php:267
+#: admin/views/premium_extension_page.php:473
 msgid "Include or exclude specific categories"
 msgstr "Specifieke categorieën opnemen of uitsluiten"
 
 #: admin/views/premium_extension_listing.php:268
+#: admin/views/premium_extension_page.php:474
 msgid "Exclude out-of-stock products"
 msgstr "Sluit producten die niet op voorraad zijn uit"
 
 #: admin/views/premium_extension_listing.php:269
+#: admin/views/premium_extension_page.php:475
 msgid "Filter products based on product type"
 msgstr "Filter producten op basis van producttype"
 
 #: admin/views/premium_extension_listing.php:270
+#: admin/views/premium_extension_page.php:476
 msgid "Map categories on product level"
 msgstr "Breng categorieën in kaart op productniveau"
 
 #: admin/views/premium_extension_listing.php:277
+#: admin/views/premium_extension_page.php:212
 msgid "E-commerce Promotions"
 msgstr "E-commerce promoties"
 
@@ -4258,42 +4282,52 @@ msgid "WebToffee WooCommerce Gift Cards"
 msgstr "WebToffee WooCommerce-cadeaubonnen"
 
 #: admin/views/premium_extension_listing.php:287
+#: admin/views/premium_extension_page.php:290
 msgid "Create unlimited gift cards"
 msgstr "Creëer onbeperkt cadeaubonnen"
 
 #: admin/views/premium_extension_listing.php:288
+#: admin/views/premium_extension_page.php:291
 msgid "Email gift cards to customers"
 msgstr "E-mail cadeaubonnen naar klanten"
 
 #: admin/views/premium_extension_listing.php:289
+#: admin/views/premium_extension_page.php:292
 msgid "Provide refunds to store credit"
 msgstr "Geef restituties voor winkeltegoed"
 
 #: admin/views/premium_extension_listing.php:290
+#: admin/views/premium_extension_page.php:293
 msgid "20+ predefined gift card templates"
 msgstr "20+ vooraf gedefinieerde cadeaubonsjablonen"
 
 #: admin/views/premium_extension_listing.php:291
+#: admin/views/premium_extension_page.php:294
 msgid "Category wise template listing"
 msgstr "Categorie-gewijze sjabloonlijst"
 
 #: admin/views/premium_extension_listing.php:292
+#: admin/views/premium_extension_page.php:295
 msgid "Add custom templates for gift cards"
 msgstr "Voeg aangepaste sjablonen voor cadeaubonnen toe"
 
 #: admin/views/premium_extension_listing.php:293
+#: admin/views/premium_extension_page.php:296
 msgid "Generate gift cards based on order status"
 msgstr "Genereer cadeaubonnen op basis van de bestelstatus"
 
 #: admin/views/premium_extension_listing.php:294
+#: admin/views/premium_extension_page.php:297
 msgid "Manage user credit balance"
 msgstr "Beheer het gebruikerstegoed"
 
 #: admin/views/premium_extension_listing.php:295
+#: admin/views/premium_extension_page.php:298
 msgid "Fixed and custom gift card amounts"
 msgstr "Vaste en aangepaste cadeaubonbedragen"
 
 #: admin/views/premium_extension_listing.php:296
+#: admin/views/premium_extension_page.php:299
 msgid "Add usage restrictions for gift cards"
 msgstr "Voeg gebruiksbeperkingen toe voor cadeaubonnen"
 
@@ -4302,30 +4336,38 @@ msgid "Frequently Bought Together for WooCommerce"
 msgstr "Vaak samen gekocht voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:305
+#: admin/views/premium_extension_page.php:259
 msgid "Automatically generate suggestions based on order history"
 msgstr "Genereer automatisch suggesties op basis van de bestelgeschiedenis"
 
 #: admin/views/premium_extension_listing.php:306
+#: admin/views/premium_extension_page.php:260
 msgid "Display recommended products on the product pages"
 msgstr "Toon aanbevolen producten op de productpagina's"
 
 #: admin/views/premium_extension_listing.php:307
+#: admin/views/premium_extension_page.php:261
 msgid "Quick setup page to add & edit recommendations"
-msgstr "Snelle installatiepagina om aanbevelingen toe te voegen en te bewerken"
+msgstr ""
+"Snelle installatiepagina om aanbevelingen toe te voegen en te bewerken"
 
 #: admin/views/premium_extension_listing.php:308
+#: admin/views/premium_extension_page.php:262
 msgid "Multiple product recommendation layouts"
 msgstr "Meerdere lay-outs voor productaanbevelingen"
 
 #: admin/views/premium_extension_listing.php:309
+#: admin/views/premium_extension_page.php:263
 msgid "Set up discounts on the recommended product bundle"
 msgstr "Stel kortingen in op de aanbevolen productbundel"
 
 #: admin/views/premium_extension_listing.php:310
+#: admin/views/premium_extension_page.php:264
 msgid "Manually create a bought-together list"
 msgstr "Maak handmatig een samengekochte lijst"
 
 #: admin/views/premium_extension_listing.php:311
+#: admin/views/premium_extension_page.php:265
 msgid ""
 "Use upsells, cross-sells, & related products as frequently bought products"
 msgstr ""
@@ -4333,22 +4375,27 @@ msgstr ""
 "producten"
 
 #: admin/views/premium_extension_listing.php:312
+#: admin/views/premium_extension_page.php:266
 msgid "Customize the title, button, and label texts"
 msgstr "Pas de titel-, knop- en labelteksten aan"
 
 #: admin/views/premium_extension_listing.php:313
+#: admin/views/premium_extension_page.php:267
 msgid "Customize the display of the recommended products"
 msgstr "Pas de weergave van de aanbevolen producten aan"
 
 #: admin/views/premium_extension_listing.php:319
+#: admin/views/premium_extension_page.php:219
 msgid "Smart Coupons for WooCommerce"
 msgstr "Slimme coupons voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:322
+#: admin/views/premium_extension_page.php:223
 msgid "Advanced BOGO Coupons"
 msgstr "Geavanceerde BOGO-coupons"
 
 #: admin/views/premium_extension_listing.php:323
+#: admin/views/premium_extension_page.php:224
 msgid "Offer store credits"
 msgstr "Bied winkeltegoeden aan"
 
@@ -4357,54 +4404,67 @@ msgid "Create attractive gift cards "
 msgstr "Maak aantrekkelijke cadeaubonnen"
 
 #: admin/views/premium_extension_listing.php:325
+#: admin/views/premium_extension_page.php:226
 msgid "Give away product coupons"
 msgstr "Geef productbonnen weg"
 
 #: admin/views/premium_extension_listing.php:326
+#: admin/views/premium_extension_page.php:227
 msgid "Coupons based on past purchases"
 msgstr "Coupons op basis van eerdere aankopen"
 
 #: admin/views/premium_extension_listing.php:327
+#: admin/views/premium_extension_page.php:228
 msgid "Restrict coupons by country"
 msgstr "Beperk kortingsbonnen per land"
 
 #: admin/views/premium_extension_listing.php:328
+#: admin/views/premium_extension_page.php:229
 msgid "Create and offer sign-up discount coupons"
 msgstr "Maak kortingsbonnen voor aanmelding en bied deze aan"
 
 #: admin/views/premium_extension_listing.php:330
+#: admin/views/premium_extension_page.php:231
 msgid "Customizable countdown sales banner"
 msgstr "Aanpasbare aftelverkoopbanner"
 
 #: admin/views/premium_extension_listing.php:332
+#: admin/views/premium_extension_page.php:233
 msgid "Import and export coupons"
 msgstr "Import- en exportcoupons"
 
 #: admin/views/premium_extension_listing.php:333
+#: admin/views/premium_extension_page.php:234
 msgid "Coupon embeds"
 msgstr "Coupon-insluitingen"
 
 #: admin/views/premium_extension_listing.php:334
+#: admin/views/premium_extension_page.php:235
 msgid "Allow coupon combinations"
 msgstr "Couponcombinaties toestaan"
 
 #: admin/views/premium_extension_listing.php:340
+#: admin/views/premium_extension_page.php:242
 msgid "URL Coupons for WooCommerce"
 msgstr "URL-coupons voor WooCommerce"
 
 #: admin/views/premium_extension_listing.php:343
+#: admin/views/premium_extension_page.php:246
 msgid "Generate custom coupon URLs"
 msgstr "Genereer aangepaste coupon-URL's"
 
 #: admin/views/premium_extension_listing.php:344
+#: admin/views/premium_extension_page.php:247
 msgid "Set up a redirect page"
 msgstr "Stel een omleidingspagina in"
 
 #: admin/views/premium_extension_listing.php:345
+#: admin/views/premium_extension_page.php:248
 msgid "Automatically add products"
 msgstr "Voeg automatisch producten toe"
 
 #: admin/views/premium_extension_listing.php:346
+#: admin/views/premium_extension_page.php:249
 msgid "Create QR code coupons"
 msgstr "Maak QR-codecoupons"
 
@@ -4421,6 +4481,7 @@ msgstr ""
 "privacywetten voor uw WordPress-website - AVG, CCPA, LGPD, CNIL en meer."
 
 #: admin/views/premium_extension_listing.php:359
+#: admin/views/premium_extension_page.php:347
 msgid "GDPR Cookie Consent Plugin (CCPA Ready)"
 msgstr "Plug-in voor AVG-cookietoestemming (CCPA gereed)"
 
@@ -4492,13 +4553,292 @@ msgstr "Zorg voor WCAG-naleving"
 msgid "Inclusive web design made simple"
 msgstr "Inclusief webdesign eenvoudig gemaakt"
 
-#: admin/views/premium_extension_page.php:82
-msgid "You are covered by our 30-Day Money Back Guarantee"
-msgstr "U valt onder onze 30 dagen geld-terug-garantie"
+#: admin/views/premium_extension_page.php:19
+msgid "Accounting & Invoicing"
+msgstr "Boekhouding en facturering"
 
-#: admin/views/premium_extension_page.php:92
-msgid "Supported by a team with 99% Customer Satisfaction Score"
-msgstr "Ondersteund door een team met een klanttevredenheidsscore van 99%"
+#: admin/views/premium_extension_page.php:20
+msgid ""
+"Automatically generate professional WooCommerce invoices and documents for "
+"all your orders."
+msgstr ""
+"Genereer automatisch professionele WooCommerce-facturen en -documenten voor "
+"al je bestellingen."
+
+#: admin/views/premium_extension_page.php:24
+msgid "PDF Invoices, Packing Slips, & Credit Notes"
+msgstr "PDF-facturen, pakbonnen en creditnota's"
+
+#: admin/views/premium_extension_page.php:30
+msgid ""
+"Automatically generate, customize, and manage professional WooCommerce "
+"invoices, packing slips, and credit notes with advanced automation and tax "
+"compliance features."
+msgstr ""
+"Automatisch professionele WooCommerce-facturen, pakbonnen en creditnota's "
+"genereren, aanpassen en beheren met geavanceerde functies voor "
+"automatisering en belastingnaleving."
+
+#: admin/views/premium_extension_page.php:38
+msgid "Shipping Labels, Dispatch Labels, & Delivery Notes"
+msgstr "Verzendetiketten, verzendetiketten en leveringsnotities"
+
+#: admin/views/premium_extension_page.php:108
+#: admin/views/premium_extension_page.php:194
+msgid "Proforma Invoice"
+msgstr "Išankstinė sąskaita faktūra"
+
+#: admin/views/premium_extension_page.php:128
+msgid "QR Code Add-on for WooCommerce PDF Invoices"
+msgstr "QR-code-invoegtoepassing voor WooCommerce PDF-facturen"
+
+#: admin/views/premium_extension_page.php:143
+msgid "WooCommerce Request a Quote"
+msgstr "YITH WooCommerce Request a Quote"
+
+#: admin/views/premium_extension_page.php:162
+msgid "Sequential Order Numbers"
+msgstr "Opeenvolgende Bestel nummers"
+
+#: admin/views/premium_extension_page.php:183
+msgid "All in one Invoice bundle"
+msgstr "Alles in één Factuurbundel"
+
+#: admin/views/premium_extension_page.php:185
+msgid ""
+"A complete suite of invoices and shipping documents bundle to create and "
+"print PDF invoices, packing slips, shipping and delivery documents in "
+"WooCommerce."
+msgstr ""
+"Een complete bundel met facturen en verzenddocumenten om PDF-facturen, "
+"pakbonnen, verzend- en leveringsdocumenten in WooCommerce te maken en af te "
+"drukken."
+
+#: admin/views/premium_extension_page.php:198
+#: admin/views/premium_extension_page.php:330
+msgid "Save up to 30% off"
+msgstr "Besparing op transport tot 30 %"
+
+#: admin/views/premium_extension_page.php:213
+msgid ""
+"Create and run successful promotional campaigns with the best marketing "
+"tools for WooCommerce"
+msgstr ""
+"Creëer en voer succesvolle promotiecampagnes uit met de beste marketingtools"
+" voor WooCommerce"
+
+#: admin/views/premium_extension_page.php:225
+msgid "Create attractive gift cards"
+msgstr "Maak aantrekkelijke cadeaubonnen"
+
+#: admin/views/premium_extension_page.php:255
+msgid "WooCommerce Product Recommendations"
+msgstr "WooCommerce Productaanbevelingen"
+
+#: admin/views/premium_extension_page.php:274
+msgid "WooCommerce Coupon Generator"
+msgstr "WooCommerce-coupongenerator"
+
+#: admin/views/premium_extension_page.php:278
+msgid "Bulk generate WooCommerce coupons"
+msgstr "Bulk genereer WooCommerce kortingsbonnen"
+
+#: admin/views/premium_extension_page.php:279
+msgid "Bulk export WooCommerce coupons to CSV"
+msgstr "Bulk export WooCommerce coupons naar CSV"
+
+#: admin/views/premium_extension_page.php:280
+msgid "Add usage restrictions to coupons"
+msgstr "Gebruiksbeperkingen toevoegen aan tegoedbonnen"
+
+#: admin/views/premium_extension_page.php:286
+msgid "WooCommerce Gift Cards"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:309
+msgid "ECommerce Marketing Automation App"
+msgstr "ECommerce Marketing Automation-app"
+
+#: admin/views/premium_extension_page.php:311
+msgid ""
+"Create signup forms, popups, and automated email campaigns with pre-built "
+"workflow templates to capture leads, recover abandoned carts, and grow "
+"sales."
+msgstr ""
+"Maak aanmeldingsformulieren, pop-ups en geautomatiseerde e-mailcampagnes met"
+" vooraf gebouwde workflowsjablonen om leads vast te leggen, verlaten "
+"winkelwagentjes te herstellen en de verkoop te laten groeien."
+
+#: admin/views/premium_extension_page.php:314
+msgid "Try now"
+msgstr "Probeer het nu"
+
+#: admin/views/premium_extension_page.php:319
+msgid "Promotion Bundle"
+msgstr "Promotiebundel"
+
+#: admin/views/premium_extension_page.php:320
+msgid "WooCommerce Promotion Bundle"
+msgstr "WooCommerce Promotiebundel"
+
+#: admin/views/premium_extension_page.php:322
+msgid ""
+"Make powerful promotional campaigns with our WooCommerce promotion bundle. "
+"Create coupon promotions, set up gift cards, and implement popular product "
+"recommendation strategies."
+msgstr ""
+"Maak krachtige promotiecampagnes met onze WooCommerce promotiebundel. Maak "
+"tegoedbonpromoties, stel cadeaubonnen in en implementeer populaire "
+"strategieën voor productaanbevelingen."
+
+#: admin/views/premium_extension_page.php:324
+msgid "Smart Coupons"
+msgstr "Bloomsite Kortingscodes"
+
+#: admin/views/premium_extension_page.php:325
+msgid "Product recommendation"
+msgstr "Productaanbeveling"
+
+#: admin/views/premium_extension_page.php:326
+msgid "Gift cards"
+msgstr "Giftcards"
+
+#: admin/views/premium_extension_page.php:342
+msgid "Privacy Compliance"
+msgstr "Naleving Van Privacy"
+
+#: admin/views/premium_extension_page.php:343
+msgid ""
+"Ensure compliance with major cookie laws, including, GDPR, CCPA, LGPD, CNIL,"
+" and more."
+msgstr ""
+"Zorg voor naleving van belangrijke cookiewetten, waaronder GDPR, CCPA, LGPD,"
+" CNIL en meer."
+
+#: admin/views/premium_extension_page.php:353
+msgid ""
+"This Google-certified CMP lets you create a customizable cookie banner, "
+"manage user consent, and ensure global privacy compliance with automatic "
+"script blocking."
+msgstr ""
+"Met deze door Google gecertificeerde CMP kunt u een aanpasbare cookiebanner "
+"maken, de toestemming van de gebruiker beheren en zorgen voor wereldwijde "
+"privacynaleving met automatische scriptblokkering."
+
+#: admin/views/premium_extension_page.php:363
+msgid "EU Order Withdrawal Button Plugin for WooCommerce"
+msgstr "EU Order Intrekking Knop Plugin voor WooCommerce"
+
+#: admin/views/premium_extension_page.php:370
+msgid "Add a \"Request Withdrawal\" button to WooCommerce orders"
+msgstr "Voeg een knop 'Opname aanvragen' toe aan WooCommerce-bestellingen"
+
+#: admin/views/premium_extension_page.php:371
+msgid "Supports guest withdrawal without an account"
+msgstr "Ondersteunt het terugtrekken van gasten zonder account"
+
+#: admin/views/premium_extension_page.php:372
+msgid "Two-step confirmation to prevent errors"
+msgstr "Bevestiging in twee stappen om fouten te voorkomen"
+
+#: admin/views/premium_extension_page.php:373
+msgid "Full or partial order withdrawal support"
+msgstr "Ondersteuning voor volledige of gedeeltelijke opname van bestellingen"
+
+#: admin/views/premium_extension_page.php:374
+msgid "Set the withdrawal period to 2, 7, 14, or 30 days"
+msgstr "Stel de herroepingstermijn in op 2, 7, 14 of 30 dagen"
+
+#: admin/views/premium_extension_page.php:375
+msgid "Exclude products, categories, and product types"
+msgstr "Sluit producten, categorieën en producttypen uit"
+
+#: admin/views/premium_extension_page.php:376
+msgid "Dedicated admin dashboard for all requests"
+msgstr "Speciaal beheerdersdashboard voor alle aanvragen"
+
+#: admin/views/premium_extension_page.php:377
+msgid "Auto-approve requests, issue refunds, and restock items"
+msgstr ""
+"Automatisch aanvragen goedkeuren, restituties verstrekken en items aanvullen"
+
+#: admin/views/premium_extension_page.php:378
+msgid "Show the withdrawal button only to EU customers"
+msgstr "Toon de opnameknop alleen aan EU-klanten"
+
+#: admin/views/premium_extension_page.php:379
+msgid "Generate a withdrawal terms and conditions page"
+msgstr "Genereer een opnamevoorwaardenpagina"
+
+#: admin/views/premium_extension_page.php:380
+msgid "Send email confirmation to customers"
+msgstr "E-mailbevestiging naar klanten sturen"
+
+#: admin/views/premium_extension_page.php:393
+msgid ""
+"The best-in-class import, export, and migration solutions for your "
+"WooCommerce data."
+msgstr ""
+"De beste import-, export- en migratieoplossingen voor je WooCommerce-"
+"gegevens."
+
+#: admin/views/premium_extension_page.php:399
+msgid "Product Import Export Plugin"
+msgstr "Plugin voor export van productimport"
+
+#: admin/views/premium_extension_page.php:419
+msgid "Order, Coupon, Subscription Export Import"
+msgstr "Order, Coupon, Abonnement Exporteren Importeren"
+
+#: admin/views/premium_extension_page.php:440
+msgid "User Import Export Plugin"
+msgstr "Gebruiker Import Export Plugin"
+
+#: admin/views/premium_extension_page.php:462
+msgid "Product Feed & Sync Manager"
+msgstr "Productfeed & Sync Manager"
+
+#: admin/views/premium_extension_page.php:470
+msgid "WPML multilingual and multicurrency support"
+msgstr "WPML meertalige en multicurrency ondersteuning"
+
+#: admin/views/premium_extension_page.php:565
+msgid ""
+"You already have every solution we recommend. Thank you for your support!"
+msgstr "Je hebt alle oplossingen die we aanbevelen al. Bedankt voor je steun!"
+
+#: admin/views/premium_extension_page.php:607
+msgid "30 Day No Risk Money Back Guarantee"
+msgstr "30-dagen-geld-terug-garantie"
+
+#: admin/views/premium_extension_page.php:611
+msgid "99% Satisfaction Rating"
+msgstr ""
+
+#: admin/views/premium_extension_page.php:612
+msgid "Fast Support with 99% Satisfaction Rating"
+msgstr "Snelle ondersteuning met een tevredenheidsscore van 99%"
+
+#: admin/views/premium_extension_page.php:659
+#: admin/views/premium_extension_page.php:737
+#: admin/views/premium_extension_page.php:830
+msgid "Get premium"
+msgstr "Opwaarderen naar Premium"
+
+#. translators: 1: strikethrough original price, 2: bold sale price, 3:
+#. savings text
+#: admin/views/premium_extension_page.php:795
+#, php-format
+msgid ""
+"Total : <s>%1$s</s> <strong>%2$s</strong> <span class=\"wt-pklist-os-"
+"savings\">(%3$s)</span>"
+msgstr ""
+"Totaal : <s>%1$s</s> <strong>%2$s</strong> <span class=\"wt-pklist-os-"
+"savings\">(%3$s)</span>"
+
+#: admin/views/premium_extension_page.php:812
+msgid "View Bundle"
+msgstr "Bundel bekijken"
 
 #: admin/views/wt_ipc_free_pro.php:11 admin/views/wt_sdd_free_pro.php:11
 msgid "Supported documents"
@@ -4568,7 +4908,8 @@ msgstr "Optie om belasting op te nemen/uit te sluiten op factuur"
 
 #: admin/views/wt_ipc_free_pro.php:379
 msgid ""
-"Separate tax column in the product table for multiple tax options in invoices"
+"Separate tax column in the product table for multiple tax options in "
+"invoices"
 msgstr ""
 "Aparte belastingkolom in de producttabel voor meerdere belastingopties op "
 "facturen"
@@ -4917,6 +5258,169 @@ msgstr ""
 "Aparte belastingkolom in producttabel voor meerdere belastingopties in "
 "verzendlabels"
 
+#: admin/views/_custom_field_editor_form.php:20
+#: admin/views/_custom_field_editor_form.php:23
+#: admin/views/_custom_field_editor_form.php:32
+#: admin/views/_custom_field_editor_form_product.php:24
+#: admin/views/_custom_field_editor_form_product.php:27
+#: admin/views/_custom_field_editor_form_product.php:36
+msgid "Add new"
+msgstr "Nieuwe toevoegen"
+
+#: admin/views/_custom_field_editor_form.php:41
+msgid "You can add custom/predefined order meta using its key"
+msgstr ""
+"U kunt aangepaste/vooraf gedefinieerde meta voor bestellingen toevoegen met "
+"behulp van de bijbehorende sleutel"
+
+#: admin/views/_custom_field_editor_form.php:48
+#: admin/views/_custom_field_editor_form_product.php:52
+msgid "Field Name"
+msgstr "Veldnaam"
+
+#: admin/views/_custom_field_editor_form.php:49
+#: admin/views/_custom_field_editor_form_product.php:53
+msgid "Meta Key"
+msgstr "Meta Data Sleutel"
+
+#: admin/views/_custom_field_editor_form.php:54
+msgid "To add more than one custom order meta,"
+msgstr "Als u meer dan één meta voor aangepaste bestellingen wilt toevoegen,"
+
+#: admin/views/_custom_field_editor_form.php:54
+#: admin/views/_custom_field_editor_form_product.php:58
+msgid "upgrade to premium version"
+msgstr "upgrade naar premium-versie"
+
+#: admin/views/_custom_field_editor_form_product.php:45
+msgid "You can add custom/predefined product meta using its key"
+msgstr ""
+"U kunt aangepaste/vooraf gedefinieerde productmetagegevens toevoegen met "
+"behulp van de sleutel"
+
+#: admin/views/_custom_field_editor_form_product.php:58
+msgid "To add more than one custom product meta,"
+msgstr "Om meer dan één aangepaste productmeta toe te voegen,"
+
+#: admin/views/_form_field_generator_new.php:469
+msgid "Order Meta"
+msgstr "Bestel Meta"
+
+#: admin/views/_form_field_generator_new.php:471
+msgid "Add/Edit Order Meta Field"
+msgstr "Metaveld order toevoegen / bewerken"
+
+#: admin/views/_form_field_generator_new.php:522
+msgid "Product Meta"
+msgstr "Product Meta"
+
+#: admin/views/_form_field_generator_new.php:524
+msgid "Add/Edit Product Meta Field"
+msgstr "Productmetaveld toevoegen/bewerken"
+
+#: admin/views/_form_field_generator_new.php:545
+msgid "Upload your image"
+msgstr "Upload uw afbeelding"
+
+#: admin/views/_form_field_generator_new.php:680
+msgid "Document"
+msgstr "Document"
+
+#: admin/views/_form_field_generator_new.php:681
+msgid "PDF"
+msgstr "PDF"
+
+#: admin/views/_form_field_generator_new.php:682
+msgid "HTML"
+msgstr "HTML"
+
+#: admin/views/_form_field_generator_new.php:683
+msgid "Action"
+msgstr "Actie"
+
+#: admin/views/_form_field_generator_new.php:749
+msgid "Add date to invoice number"
+msgstr "Datum toevoegen aan factuurnummer"
+
+#: admin/views/_form_field_generator_new.php:750
+msgid "Invoice number format"
+msgstr "Formaat factuurnummer"
+
+#: admin/views/_form_field_generator_new.php:752
+msgid "Invoice starting number"
+msgstr "Factuur startnummer"
+
+#: admin/views/_form_field_generator_new.php:753
+msgid "Invoice number length"
+msgstr "Lengte factuurnummer"
+
+#: admin/views/_form_field_generator_new.php:757
+#: admin/views/_form_field_generator_new.php:770
+msgid "Use order date as input instead."
+msgstr ""
+"In plaats daarvan de datum van de bestelling van de gebruiker als invoer."
+
+#: admin/views/_form_field_generator_new.php:762
+msgid "Add date to credit note number"
+msgstr "Datum toevoegen aan creditnotanummer"
+
+#: admin/views/_form_field_generator_new.php:763
+msgid "Creditnote number format"
+msgstr "Formaat van creditnotanummer"
+
+#: admin/views/_form_field_generator_new.php:764
+msgid "What should be the starting number for your credit notes?"
+msgstr "Wat moet het startnummer zijn voor uw creditnota's?"
+
+#: admin/views/_form_field_generator_new.php:765
+msgid "What length would you prefer for your credit note"
+msgstr "Welke lengte wilt u voor uw creditnota?"
+
+#: admin/views/_form_field_generator_new.php:773
+msgid "Add date to proforma invoice number"
+msgstr "Datum toevoegen aan proforma factuurnummer"
+
+#: admin/views/_form_field_generator_new.php:774
+msgid "Proforma invoice number format"
+msgstr ""
+"Selecteer een proforma factuurnummerformaat in de vervolgkeuzelijst. U kunt "
+"ervoor kiezen om een voorvoegsel, achtervoegsel of beide te gebruiken voor "
+"uw proforma-factuurnummer."
+
+#: admin/views/_form_field_generator_new.php:775
+msgid "What should be the starting number for your proforma invoices?"
+msgstr "Wat moet het startnummer zijn voor uw proforma-facturen?"
+
+#: admin/views/_form_field_generator_new.php:776
+msgid "What length would you prefer for your proforma invoice"
+msgstr "Welke lengte wilt u voor uw proformafactuur?"
+
+#: admin/views/_form_field_generator_new.php:864
+msgid ""
+"Removing year [Y] from the prefix will disable the annual reset "
+"functionality"
+msgstr ""
+"Als u jaar [Y] uit het voorvoegsel verwijdert, wordt de functionaliteit voor"
+" jaarlijkse reset uitgeschakeld"
+
+#: admin/views/_form_field_generator_new.php:871
+msgid "Switching to order number will disable the annual reset functionality"
+msgstr ""
+"Als u overschakelt naar het bestelnummer, wordt de jaarlijkse reset-"
+"functionaliteit uitgeschakeld"
+
+#: admin/views/_form_field_generator_new.php:887
+msgid ""
+"Removing year [Y] from the suffix will disable the annual reset "
+"functionality"
+msgstr ""
+"Als u jaar [Y] uit het achtervoegsel verwijdert, wordt de functionaliteit "
+"voor jaarlijkse reset uitgeschakeld"
+
+#: admin/views/_form_field_generator_new.php:915
+msgid "The latest specified starting number will be used after reset"
+msgstr "Na reset wordt het laatst opgegeven startnummer gebruikt"
+
 #: common/class-wt-pklist-common.php:661
 msgid "Admin email"
 msgstr "Administrator e-mail"
@@ -4961,7 +5465,9 @@ msgstr ""
 msgid "View progress"
 msgstr "Bekijk voortgang"
 
-#. translators: 1$s: HTML bold opening tag, 2$s: HTML bold closing tag, 3$s: HTML bold opening tag, 4$s: Plugin title, 5$s: HTML bold closing tag, 6$s: HTML line break
+#. translators: 1$s: HTML bold opening tag, 2$s: HTML bold closing tag, 3$s:
+#. HTML bold opening tag, 4$s: Plugin title, 5$s: HTML bold closing tag, 6$s:
+#. HTML line break
 #: includes/class-wf-woocommerce-packing-list-review_request.php:62
 #, php-format
 msgid ""
@@ -4971,12 +5477,13 @@ msgid ""
 "quick review that motivate us to keep going."
 msgstr ""
 "Hallo, wij van %1$s WebToffee %2$s willen u bedanken voor het gebruik van "
-"%3$s %4$s %5$s. %6$s Minder dan een minuut van uw tijd motiveert ons om door "
-"te gaan met wat we doen. We stellen het zeer op prijs als u even de tijd zou "
-"willen nemen om een korte review achter te laten die ons motiveert om door "
-"te gaan."
+"%3$s %4$s %5$s. %6$s Minder dan een minuut van uw tijd motiveert ons om door"
+" te gaan met wat we doen. We stellen het zeer op prijs als u even de tijd "
+"zou willen nemen om een korte review achter te laten die ons motiveert om "
+"door te gaan."
 
-#. translators: 1$s: Star emoji, 2$s: HTML span opening tag, 3$s: HTML span closing tag, 4$s: HTML span opening tag, 5$s: HTML span closing tag
+#. translators: 1$s: Star emoji, 2$s: HTML span opening tag, 3$s: HTML span
+#. closing tag, 4$s: HTML span opening tag, 5$s: HTML span closing tag
 #: includes/class-wf-woocommerce-packing-list-review_request.php:64
 #, php-format
 msgid ""
@@ -5044,16 +5551,20 @@ msgstr "Beoordeel ons nu"
 msgid "there"
 msgstr "daar"
 
-#. translators: 1$s: User name in bold HTML, 2$s: HTML line break, 3$s: HTML bold opening tag, 4$s: HTML bold closing tag, 5$s: HTML bold opening tag, 6$s: HTML bold closing tag, 7$s: Double HTML line break, 8$s: HTML bold opening tag, 9$s: HTML bold closing tag, 10$s: Double HTML line break, 11$s: HTML line break with bold opening tag, 12$s: HTML bold closing tag
+#. translators: 1$s: User name in bold HTML, 2$s: HTML line break, 3$s: HTML
+#. bold opening tag, 4$s: HTML bold closing tag, 5$s: HTML bold opening tag,
+#. 6$s: HTML bold closing tag, 7$s: Double HTML line break, 8$s: HTML bold
+#. opening tag, 9$s: HTML bold closing tag, 10$s: Double HTML line break,
+#. 11$s: HTML line break with bold opening tag, 12$s: HTML bold closing tag
 #: includes/class-wf-woocommerce-packing-list-review_request.php:192
 #, php-format
 msgid ""
-"Hi  %1$s, %2$s We're thrilled to see you making great use of our WooCommerce "
-"PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels plugin! It's "
-"our mission to make %3$s invoicing as seamless %4$s and %5$s efficient %6$s "
-"as possible for you. %7$s If you found the plugin helpful, please leave us a "
-"quick %8$s 5-star review. %9$s It would mean the world to us. %10$s Warm "
-"regards, %11$s Team WebToffee %12$s"
+"Hi  %1$s, %2$s We're thrilled to see you making great use of our WooCommerce"
+" PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels plugin! "
+"It's our mission to make %3$s invoicing as seamless %4$s and %5$s efficient "
+"%6$s as possible for you. %7$s If you found the plugin helpful, please leave"
+" us a quick %8$s 5-star review. %9$s It would mean the world to us. %10$s "
+"Warm regards, %11$s Team WebToffee %12$s"
 msgstr ""
 "Hallo %1$s, %2$s We zijn blij dat je onze WooCommerce PDF-facturen, "
 "pakbonnen, leveringsbonnen en verzendlabels-plugin zo goed gebruikt! Het is "
@@ -5079,18 +5590,18 @@ msgid "Checkout"
 msgstr "Afrekenen"
 
 #. translators: 1: plugin title, 2: uploads folder path
-#: includes/class-wt-pklist-non-apache-info.php:62
+#: includes/class-wt-pklist-non-apache-info.php:63
 #, php-format
 msgid ""
 "The <b>%1$s</b> plugin stores generated PDF files inside the <b>%2$s</b> "
-"folder. Please ensure that public access restrictions are set in your server "
-"for this folder."
+"folder. Please ensure that public access restrictions are set in your server"
+" for this folder."
 msgstr ""
-"De <b>%1$s</b> -plugin slaat gegenereerde PDF-bestanden op in de <b>%2$s</b> "
-"-map. Zorg ervoor dat er op uw server toegangsbeperkingen voor deze map zijn "
-"ingesteld."
+"De <b>%1$s</b> -plugin slaat gegenereerde PDF-bestanden op in de <b>%2$s</b>"
+" -map. Zorg ervoor dat er op uw server toegangsbeperkingen voor deze map "
+"zijn ingesteld."
 
-#: includes/class-wt-pklist-non-apache-info.php:81
+#: includes/class-wt-pklist-non-apache-info.php:82
 msgid ""
 "In case of an Nginx server, copy the below snippet into your server config "
 "to restrict public access to the plugin uploads folder, or contact your "
@@ -5100,27 +5611,27 @@ msgstr ""
 "naar uw serverconfiguratie om de openbare toegang tot de map met plugin-"
 "uploads te beperken, of neem contact op met uw serverteam voor assistentie."
 
-#: includes/class-wt-pklist-promo-banners.php:105
+#: includes/class-wt-pklist-promo-banners.php:106
 msgid "🚀 Your Store Is Growing! Power It With PRO"
 msgstr "🚀 Jouw winkel groeit! Geef hem een boost met PRO"
 
-#: includes/class-wt-pklist-promo-banners.php:106
+#: includes/class-wt-pklist-promo-banners.php:107
 msgid ""
 "Processing 50 or more orders daily? Upgrade to Pro for advanced invoice "
-"customization, automated credit notes and flexible invoice numbering formats "
-"with auto-reset option."
+"customization, automated credit notes and flexible invoice numbering formats"
+" with auto-reset option."
 msgstr ""
 "Verwerkt u dagelijks 50 of meer bestellingen? Upgrade naar Pro voor "
 "geavanceerde factuuraanpassing, geautomatiseerde creditnota's en flexibele "
 "factuurnummeringsformaten met automatische resetoptie."
 
 #. translators: %s: coupon code
-#: includes/class-wt-pklist-promo-banners.php:119
+#: includes/class-wt-pklist-promo-banners.php:120
 #, php-format
 msgid "Use coupon code %s at checkout."
 msgstr "Gebruik kortingscode %s bij het afrekenen."
 
-#: includes/class-wt-pklist-promo-banners.php:125
+#: includes/class-wt-pklist-promo-banners.php:126
 msgid ""
 "🎉 Congratulations! You've been using the free WebToffee PDF Invoices plugin "
 "for a while, and we'd love to reward you."
@@ -5128,7 +5639,7 @@ msgstr ""
 "🎉 Gefeliciteerd! Je gebruikt de gratis WebToffee PDF-facturenplugin al een "
 "tijdje en we willen je daar graag voor belonen."
 
-#: includes/class-wt-pklist-promo-banners.php:127
+#: includes/class-wt-pklist-promo-banners.php:128
 msgid ""
 "Enjoy an exclusive 15% discount on the PRO plugin and unlock premium "
 "templates, advanced customization, bulk export tools, priority support, and "
@@ -5139,11 +5650,11 @@ msgstr ""
 "bulkexport, prioriteitsondersteuning en een complete workflow voor "
 "orderdocumenten."
 
-#: includes/class-wt-pklist-promo-banners.php:156
+#: includes/class-wt-pklist-promo-banners.php:157
 msgid "Your Shipping Labels Are Basic. The Pro Add-on Makes Them Powerful."
 msgstr "Uw verzendlabels zijn eenvoudig. De Pro-add-on maakt ze krachtig."
 
-#: includes/class-wt-pklist-promo-banners.php:157
+#: includes/class-wt-pklist-promo-banners.php:158
 msgid ""
 "The Shipping Pro add-on slots right in and unlocks everything your free "
 "shipping labels can't do - custom sizes, dispatch docs, multiple templates, "
@@ -5153,7 +5664,7 @@ msgstr ""
 "gratis verzendlabels niet kunnen: aangepaste formaten, verzenddocumenten, "
 "meerdere sjablonen en meer."
 
-#: includes/class-wt-pklist-promo-banners.php:158
+#: includes/class-wt-pklist-promo-banners.php:159
 msgid "Checkout plugin"
 msgstr "Checkout-plugin"
 
@@ -5164,19 +5675,21 @@ msgid ""
 "The plugins %1$s and %2$s cannot be active in your store at the same time. "
 "Kindly deactivate one of these prior to activating the other."
 msgstr ""
-"De plugins %1$s en %2$s kunnen niet tegelijkertijd actief zijn in uw winkel. "
-"Deactiveer er één voordat u de andere activeert."
+"De plugins %1$s en %2$s kunnen niet tegelijkertijd actief zijn in uw winkel."
+" Deactiveer er één voordat u de andere activeert."
 
+#. translators: 1$s: Active plugin name, 2$s: Current plugin name
 #: print-invoices-packing-slip-labels-for-woocommerce.php:52
 msgid "Go to plugins page"
 msgstr "Ga naar de plugins pagina"
 
-#. translators: 1$s: Plugin name, 2$s: Plugin name, 3$s: WooCommerce link opening tag, 4$s: WooCommerce link closing tag
+#. translators: 1$s: Plugin name, 2$s: Plugin name, 3$s: WooCommerce link
+#. opening tag, 4$s: WooCommerce link closing tag
 #: print-invoices-packing-slip-labels-for-woocommerce.php:220
 #, php-format
 msgid ""
-"%1$s %2$s is enabled but not effective. It requires %3$s WooCommerce %4$s in "
-"order to work."
+"%1$s %2$s is enabled but not effective. It requires %3$s WooCommerce %4$s in"
+" order to work."
 msgstr ""
 "%1$s %2$s is ingeschakeld maar niet effectief. Er is %3$s WooCommerce %4$s "
 "nodig om te kunnen werken."
@@ -5201,14 +5714,14 @@ msgstr "Voegt voettekst toe aan de pakbon"
 #: public/modules/deliverynote/deliverynote.php:181
 #: public/modules/dispatchlabel/dispatchlabel.php:163
 #: public/modules/invoice/invoice.php:1315
-#: public/modules/packinglist/packinglist.php:206
+#: public/modules/packinglist/packinglist.php:207
 msgid "Shipping Address"
 msgstr "Verzendingsadres"
 
 #: public/modules/deliverynote/deliverynote.php:184
 #: public/modules/dispatchlabel/dispatchlabel.php:167
 #: public/modules/invoice/invoice.php:1319
-#: public/modules/packinglist/packinglist.php:210
+#: public/modules/packinglist/packinglist.php:211
 #: public/modules/shippinglabel/shippinglabel.php:165
 msgid "SSN number"
 msgstr "SSN-nummer"
@@ -5216,7 +5729,7 @@ msgstr "SSN-nummer"
 #: public/modules/deliverynote/deliverynote.php:185
 #: public/modules/dispatchlabel/dispatchlabel.php:168
 #: public/modules/invoice/invoice.php:1320
-#: public/modules/packinglist/packinglist.php:211
+#: public/modules/packinglist/packinglist.php:212
 #: public/modules/shippinglabel/shippinglabel.php:164
 msgid "VAT number"
 msgstr "BTW nummer"
@@ -5246,8 +5759,8 @@ msgstr "Afleveringsbon afdrukken / downloaden"
 #: public/modules/dispatchlabel/dispatchlabel.php:423
 #: public/modules/invoice/invoice.php:1541
 #: public/modules/invoice/invoice.php:2186
-#: public/modules/packinglist/packinglist.php:316
-#: public/modules/packinglist/packinglist.php:485
+#: public/modules/packinglist/packinglist.php:317
+#: public/modules/packinglist/packinglist.php:486
 #: public/modules/shippinglabel/shippinglabel.php:348
 #: public/modules/shippinglabel/shippinglabel.php:553
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:344
@@ -5394,11 +5907,12 @@ msgstr "Basis - 0"
 #: public/modules/invoice/data/data.tooltip.php:7
 msgid ""
 "Admins and customers both can leverage this feature wherever applicable. "
-"Disabling will remove all the provisions. Yet, the invoices are customizable."
+"Disabling will remove all the provisions. Yet, the invoices are "
+"customizable."
 msgstr ""
 "Beheerders en klanten kunnen deze functie beide gebruiken waar van "
-"toepassing. Door uit te schakelen worden alle voorzieningen verwijderd. Toch "
-"zijn de facturen aanpasbaar."
+"toepassing. Door uit te schakelen worden alle voorzieningen verwijderd. Toch"
+" zijn de facturen aanpasbaar."
 
 #: public/modules/invoice/data/data.tooltip.php:8
 msgid ""
@@ -5421,7 +5935,8 @@ msgstr "Factuur afdrukken"
 msgid "Download invoice"
 msgstr "Download factuur"
 
-#. translators: 1: Opening anchor tag for the documentation link, 2: Closing anchor tag.
+#. translators: 1: Opening anchor tag for the documentation link, 2: Closing
+#. anchor tag.
 #: public/modules/invoice/invoice.php:340
 #, php-format
 msgid ""
@@ -5492,6 +6007,7 @@ msgid "Invoice Date"
 msgstr "Factuur datum"
 
 #: public/modules/invoice/invoice.php:1311
+#: public/modules/packinglist/packinglist.php:206
 #: public/modules/shippinglabel/shippinglabel.php:159
 msgid "Order Date"
 msgstr "Besteldatum"
@@ -5546,7 +6062,7 @@ msgid "Download Invoice"
 msgstr "Factuur downloaden"
 
 #: public/modules/invoice/invoice.php:1542
-#: public/modules/packinglist/packinglist.php:323
+#: public/modules/packinglist/packinglist.php:324
 #: public/modules/ubl/invoice/class-wt-pklist-pdf-ubl-invoice.php:352
 msgid "Download"
 msgstr "Download"
@@ -5561,7 +6077,8 @@ msgstr "Customizer-module is niet actief."
 
 #: public/modules/invoice/views/general.php:42
 msgid "Subscribe to our newsletter for exclusive offers & updates"
-msgstr "Abonneer u op onze nieuwsbrief voor exclusieve aanbiedingen en updates"
+msgstr ""
+"Abonneer u op onze nieuwsbrief voor exclusieve aanbiedingen en updates"
 
 #: public/modules/invoice/views/general.php:49
 #: public/modules/invoice/views/general.php:72
@@ -5576,7 +6093,7 @@ msgstr "is verplicht"
 msgid "Enter your email address"
 msgstr "Vul uw e-mailadres in"
 
-#: public/modules/invoice/views/general.php:58
+#: public/modules/invoice/views/general.php:57
 #, php-format
 msgid ""
 "I consent to receive newsletters and exclusive offers from WebToffee and "
@@ -5638,8 +6155,8 @@ msgid ""
 "invoice creation option. If none are selected, invoices must be generated "
 "manually to be attached to emails."
 msgstr ""
-"Selecteer e-mailtypen die overeenkomen met de bestelstatussen onder de optie "
-"Factuurcreatie automatiseren. Als er geen is geselecteerd, moeten facturen "
+"Selecteer e-mailtypen die overeenkomen met de bestelstatussen onder de optie"
+" Factuurcreatie automatiseren. Als er geen is geselecteerd, moeten facturen "
 "handmatig worden gegenereerd om aan e-mails te worden toegevoegd."
 
 #: public/modules/invoice/views/general.php:183
@@ -5658,8 +6175,8 @@ msgid ""
 "payment methods."
 msgstr ""
 "Selecteer betaalmethoden die overeenkomen met de orderstatussen onder de "
-"optie 'Factuur automatisch aanmaken' waarvoor de factuurbijlage beperkt moet "
-"worden. Als er geen zijn geselecteerd, wordt de factuur voor alle "
+"optie 'Factuur automatisch aanmaken' waarvoor de factuurbijlage beperkt moet"
+" worden. Als er geen zijn geselecteerd, wordt de factuur voor alle "
 "betaalmethoden bijgevoegd."
 
 #: public/modules/invoice/views/general.php:223
@@ -5678,8 +6195,8 @@ msgstr "Bestel metavelden"
 
 #: public/modules/invoice/views/general.php:253
 msgid ""
-"Select/add order meta to display additional information related to the order "
-"on the invoice."
+"Select/add order meta to display additional information related to the order"
+" on the invoice."
 msgstr ""
 "Selecteer/voeg bestelmeta toe om aanvullende informatie met betrekking tot "
 "de bestelling op de factuur weer te geven."
@@ -5704,7 +6221,8 @@ msgid ""
 msgstr ""
 "Indien leeg gelaten, standaard het logo uit Algemene instellingen. Zorg "
 "ervoor dat u het bedrijfslogo selecteert via 'Factuur > Aanpassen > "
-"Bedrijfslogo' om op de factuur weer te geven. Aanbevolen formaat is 150×50px."
+"Bedrijfslogo' om op de factuur weer te geven. Aanbevolen formaat is "
+"150×50px."
 
 #: public/modules/invoice/views/general.php:291
 msgid "Generate invoices for existing orders"
@@ -5714,8 +6232,8 @@ msgstr "Facturen maken voor bestaande bestellingen"
 msgid ""
 "Enable to create invoice for orders generated before plugin installation"
 msgstr ""
-"Schakel in om een factuur te maken voor bestellingen die vóór de installatie "
-"van de plug-in zijn gegenereerd"
+"Schakel in om een factuur te maken voor bestellingen die vóór de installatie"
+" van de plug-in zijn gegenereerd"
 
 #: public/modules/invoice/views/general.php:306
 msgid "Enable to create invoices for free orders"
@@ -5777,9 +6295,9 @@ msgid ""
 msgstr ""
 "Schakel deze optie in om de meest recente instellingen toe te passen op "
 "eerdere orderfacturen. Dit zal de vorige facturen matchen met de komende "
-"facturen. Het wijzigen van het bedrijfsadres, de naam of andere instellingen "
-"in de toekomst kunnen eerder aangemaakte facturen overschrijven met de meest "
-"up-to-date informatie."
+"facturen. Het wijzigen van het bedrijfsadres, de naam of andere instellingen"
+" in de toekomst kunnen eerder aangemaakte facturen overschrijven met de "
+"meest up-to-date informatie."
 
 #: public/modules/invoice/views/general.php:385
 msgid "Date formats"
@@ -5796,8 +6314,8 @@ msgstr "Meerdere premium factuursjablonen om uit te kiezen"
 #: public/modules/invoice/views/invoice-admin-settings.php:21
 msgid "Add custom data like product meta, order meta, attributes etc"
 msgstr ""
-"Voeg aangepaste gegevens toe, zoals productmetagegevens, bestelmetagegevens, "
-"kenmerken, enz."
+"Voeg aangepaste gegevens toe, zoals productmetagegevens, bestelmetagegevens,"
+" kenmerken, enz."
 
 #: public/modules/invoice/views/invoice-admin-settings.php:22
 msgid "Enable customers to Pay Later at checkout"
@@ -5893,24 +6411,24 @@ msgstr "Voegt klantnotitie toe aan de pakbon"
 msgid "Adds Footer to the packing slip"
 msgstr "Voegt voettekst toe aan de pakbon"
 
-#: public/modules/packinglist/packinglist.php:296
-#: public/modules/packinglist/packinglist.php:317
-#: public/modules/packinglist/packinglist.php:334
+#: public/modules/packinglist/packinglist.php:297
+#: public/modules/packinglist/packinglist.php:318
 #: public/modules/packinglist/packinglist.php:335
+#: public/modules/packinglist/packinglist.php:336
 msgid "Print Packing slip"
 msgstr "Print pakbon"
 
-#: public/modules/packinglist/packinglist.php:311
+#: public/modules/packinglist/packinglist.php:312
 msgid "Print/Download Packing slip"
 msgstr "Print / Download pakbon"
 
-#: public/modules/packinglist/packinglist.php:324
-#: public/modules/packinglist/packinglist.php:341
+#: public/modules/packinglist/packinglist.php:325
 #: public/modules/packinglist/packinglist.php:342
+#: public/modules/packinglist/packinglist.php:343
 msgid "Download Packing slip"
 msgstr "Download pakbon"
 
-#: public/modules/packinglist/packinglist.php:417
+#: public/modules/packinglist/packinglist.php:418
 msgid "Unable to print packling slip. Please check the items in the order."
 msgstr "Kan pakbon niet afdrukken. Controleer de artikelen in de bestelling."
 
@@ -6120,12 +6638,12 @@ msgstr "Selecteer e-mailadres(sen) om UBL-factuur bij te voegen"
 msgid ""
 "Select email classes to send UBL invoice as attachment. This option depends "
 "on the order statuses selected under the `Automate invoice creation` "
-"(Invoice/Packing > Invoice >General) setting. Ensure that the selected email "
-"classes match the order statuses for the invoice to be sent correctly."
+"(Invoice/Packing > Invoice >General) setting. Ensure that the selected email"
+" classes match the order statuses for the invoice to be sent correctly."
 msgstr ""
 "Selecteer e-mailklassen om de UBL-factuur als bijlage te verzenden. Deze "
-"optie is afhankelijk van de geselecteerde orderstatussen onder de instelling "
-"'Factuur automatisch aanmaken' (Factuur/Verpakking > Factuur > Algemeen). "
+"optie is afhankelijk van de geselecteerde orderstatussen onder de instelling"
+" 'Factuur automatisch aanmaken' (Factuur/Verpakking > Factuur > Algemeen). "
 "Zorg ervoor dat de geselecteerde e-mailklassen overeenkomen met de "
 "orderstatussen, zodat de factuur correct wordt verzonden."
 
@@ -6434,31 +6952,23 @@ msgstr "Tonnagebelastingen"
 msgid "Valuation deposit"
 msgstr "Waarderingsaanbetaling"
 
-#. Plugin Name of the plugin/theme
-msgid ""
-"WebToffee WooCommerce PDF Invoices, Packing Slips, Delivery Notes and "
-"Shipping Labels"
-msgstr ""
-"WebToffee WooCommerce PDF-facturen, pakbonnen, leveringsbonnen en "
-"verzendlabels"
+#~ msgid "This preview reflects your current settings from the General tab."
+#~ msgstr "Deze preview toont uw huidige instellingen van het tabblad Algemeen."
 
-#. Plugin URI of the plugin/theme
-msgid ""
-"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
-msgstr ""
-"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+#~ msgid "Premium features"
+#~ msgstr "Premiumfuncties"
 
-#. Description of the plugin/theme
-msgid "Prints Packing List,Invoice,Delivery Note and Shipping Label."
-msgstr "Drukt paklijst, factuur, afleveringsbon en verzendlabel af."
+#, php-format
+#~ msgid "Toggle the pro features on and off to see how they transform your %s."
+#~ msgstr ""
+#~ "Schakel de professionele functies in en uit om te zien hoe ze je %s "
+#~ "transformeren."
 
-#. Author of the plugin/theme
-msgid "WebToffee"
-msgstr "WebToffee"
+#~ msgid "You are covered by our 30-Day Money Back Guarantee"
+#~ msgstr "U valt onder onze 30 dagen geld-terug-garantie"
 
-#. Author URI of the plugin/theme
-msgid "https://www.webtoffee.com/"
-msgstr "https://www.webtoffee.com/"
+#~ msgid "Supported by a team with 99% Customer Satisfaction Score"
+#~ msgstr "Ondersteund door een team met een klanttevredenheidsscore van 99%"
 
 #~ msgid "Black Friday Cyber Monday 2025"
 #~ msgstr "Black Friday Cybermaandag 2025"
@@ -6535,8 +7045,7 @@ msgstr "https://www.webtoffee.com/"
 #~ msgstr "Pas de documentindeling aan en voeg een voettekstsectie toe"
 
 #~ msgid "Add print button to order emails for faster access"
-#~ msgstr ""
-#~ "Voeg een afdrukknop toe om e-mails te bestellen voor snellere toegang"
+#~ msgstr "Voeg een afdrukknop toe om e-mails te bestellen voor snellere toegang"
 
 #~ msgid "Handle order fulfillment with more control and precision."
 #~ msgstr "Verwerk uw orders met meer controle en precisie."
@@ -6571,8 +7080,7 @@ msgstr "https://www.webtoffee.com/"
 #~ "voorwaarden"
 
 #~ msgid ""
-#~ "Create fully personalized packing slips that fit your brand — with "
-#~ "Premium."
+#~ "Create fully personalized packing slips that fit your brand — with Premium."
 #~ msgstr ""
 #~ "Maak volledig gepersonaliseerde pakbonnen die passen bij uw merk - met "
 #~ "Premium."
@@ -6584,7 +7092,6 @@ msgstr "https://www.webtoffee.com/"
 #~ msgstr "Hoe uw leveringsbon eruitziet voor klanten."
 
 #, fuzzy
-#~| msgid "Adds footer in dispatch label"
 #~ msgid "Your current dispatch label."
 #~ msgstr "Voegt voettekst toe aan verzendlabel"
 
@@ -6592,7 +7099,6 @@ msgstr "https://www.webtoffee.com/"
 #~ msgstr "Hoe uw verzendlabel eruitziet voor klanten."
 
 #, fuzzy
-#~| msgid "Show print packing slip button to customers"
 #~ msgid "How your packing slip will appear to customers."
 #~ msgstr "Toon de knop voor het afdrukken van de pakbon aan klanten"
 
@@ -6603,11 +7109,11 @@ msgstr "https://www.webtoffee.com/"
 #~ msgstr "Betaling & abonnement"
 
 #~ msgid ""
-#~ "The most popular payment gateways and subscription solutions to scale "
-#~ "your business"
+#~ "The most popular payment gateways and subscription solutions to scale your "
+#~ "business"
 #~ msgstr ""
-#~ "De populairste betalingsgateways en abonnementsoplossingen om uw bedrijf "
-#~ "op te schalen"
+#~ "De populairste betalingsgateways en abonnementsoplossingen om uw bedrijf op "
+#~ "te schalen"
 
 #~ msgid "WooCommerce Stripe Payment Gateway"
 #~ msgstr "WooCommerce Stripe-betalingsgateway"
@@ -6742,8 +7248,8 @@ msgstr "https://www.webtoffee.com/"
 #~ msgstr "Type een naam in voor uw nieuwe sjabloon"
 
 #~ msgid ""
-#~ "Invoice in PDF format will be attached with the order email for chosen "
-#~ "order statuses."
+#~ "Invoice in PDF format will be attached with the order email for chosen order"
+#~ " statuses."
 #~ msgstr ""
 #~ "Factuur in PDF-formaat wordt bijgevoegd bij de bestellings-e-mail voor de "
 #~ "gekozen bestelstatussen."
@@ -6758,19 +7264,18 @@ msgstr "https://www.webtoffee.com/"
 #~ msgstr "Welke lengte wilt u voor uw factuur?"
 
 #~ msgid ""
-#~ "You can add additional column head via "
-#~ "`wf_pklist_alter_product_table_head` filter. You need to add column data "
-#~ "via this filter. (Works with Invoice and Dispatch label only)"
+#~ "You can add additional column head via `wf_pklist_alter_product_table_head` "
+#~ "filter. You need to add column data via this filter. (Works with Invoice and"
+#~ " Dispatch label only)"
 #~ msgstr ""
 #~ "U kunt een extra kolomkop toevoegen via het filter "
 #~ "`wf_pklist_alter_product_table_head`. Via dit filter moet u kolomgegevens "
 #~ "toevoegen. (Werkt alleen met factuur- en verzendlabel)"
 
 #~ msgid ""
-#~ "You can add additional column head via "
-#~ "`wf_pklist_alter_product_table_head` filter. You need to add column data "
-#~ "via this filter. (Works with Packing List, Shipping Label and Delivery "
-#~ "note only)"
+#~ "You can add additional column head via `wf_pklist_alter_product_table_head` "
+#~ "filter. You need to add column data via this filter. (Works with Packing "
+#~ "List, Shipping Label and Delivery note only)"
 #~ msgstr ""
 #~ "U kunt een extra kolomkop toevoegen via het filter "
 #~ "`wf_pklist_alter_product_table_head`. Via dit filter moet u kolomgegevens "
