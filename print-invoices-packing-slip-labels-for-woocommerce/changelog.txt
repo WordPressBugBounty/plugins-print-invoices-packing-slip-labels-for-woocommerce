@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 5.0.3 2026-09-29 =
+* [Fix] - Vulnerability fix for Insecure Direct Object Reference reported by Wordfence.
+* [Fix] - Fixed slow loading of the WooCommerce Orders page caused by the automatic invoice number generation.
+* [Compatibility] - WooCommerce 11.1.2
+
 = 5.0.2 2026-09-22 =
 * [Add] - Added date format option for the order date on the packing slip.
 * [Add] - Added support for customizing the product table font size.

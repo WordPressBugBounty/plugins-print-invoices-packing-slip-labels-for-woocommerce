@@ -986,6 +986,19 @@ class Wf_Woocommerce_Packing_List_Admin {
 					self::wt_pklist_safe_redirect_or_die( $redirect_url, __( 'You are not allowed to access this page', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
 				}
 			} else {
+				/*
+				 * Guest document access is enabled. Require proof of authorisation before the
+				 * mail-link handler is reachable at all: either a valid nonce (an in-session
+				 * request) or an order key (a mailed link). The handler still verifies the key
+				 * against the order; this only stops it being entered without any credential.
+				 */
+				$mail_link_nonce = isset( $_REQUEST['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['_wpnonce'] ) ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				$mail_link_key   = isset( $_REQUEST['access_key'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['access_key'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				if ( '' === $mail_link_key && ! wp_verify_nonce( $mail_link_nonce, WF_PKLIST_PLUGIN_NAME ) ) {
+					$redirect_url = self::get_page_url_for_denied_document_access();
+					self::wt_pklist_safe_redirect_or_die( $redirect_url, __( 'You are not allowed to access this page', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
+				}
+
 				// allow both user to access the document if it is the link from mail
 				$this->print_document_from_the_mail_link();
 			}
@@ -1125,18 +1138,19 @@ class Wf_Woocommerce_Packing_List_Admin {
 	public function print_document_from_the_mail_link() {
 		$access_key       = isset( $_REQUEST['access_key'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['access_key'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$encoded_order_id = isset( $_REQUEST['post'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['post'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$mail_id          = isset( $_REQUEST['email'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['email'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if ( empty( $encoded_order_id ) ) {
 			self::wt_pklist_safe_redirect_or_die( null, __( 'Invalid order id', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
 		}
 
+		/*
+		 * The order key is the only secret in this link. The billing email is not a
+		 * credential: it is printed on the order, shared with the customer and often
+		 * guessable, so it must never by itself authorise access to a document.
+		 */
 		if ( empty( $access_key ) ) {
-			if ( empty( $mail_id ) ) {
-				self::wt_pklist_safe_redirect_or_die( null, __( 'Invalid access key and mail id', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
-			}
+			self::wt_pklist_safe_redirect_or_die( null, __( 'Invalid access key', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
 		}
 
-		$decoded_mail_id  = Wf_Woocommerce_Packing_List::wf_decode( sanitize_text_field( $mail_id ) );
 		$decoded_order_id = Wf_Woocommerce_Packing_List::wf_decode( sanitize_text_field( $encoded_order_id ) );
 		$order            = wc_get_order( $decoded_order_id );
 		$orders           = array();
@@ -1146,8 +1160,6 @@ class Wf_Woocommerce_Packing_List_Admin {
 		if ( ! empty( $order ) ) {
 			if ( hash_equals( $order->get_order_key(), $access_key ) ) {
 				$orders = explode( ',', $decoded_order_id );
-			} elseif ( $decoded_mail_id === ( $order->get_billing_email() ) ) {
-					$orders = explode( ',', $decoded_order_id );
 			} else {
 				self::wt_pklist_safe_redirect_or_die( null, __( 'It seems this order is not yours.', 'print-invoices-packing-slip-labels-for-woocommerce' ) );
 			}
@@ -2525,10 +2537,9 @@ class Wf_Woocommerce_Packing_List_Admin {
 		$data  = self::check_before_auto_generating_invoice_no();
 		$group = 'wt_pklist_invoice_number_auto_generation';
 		if ( true === $data['invoice_enabled'] && $data['order_empty_invoice_count'] > 0 ) {
-			if ( ( true === $data['auto_generate'] ) && ( 10 < $data['order_empty_invoice_count'] ) && ( as_next_scheduled_action( 'wt_pklist_schedule_auto_generate_invoice_number', array(), $group ) === false ) ) {
+			// Always background the backfill, regardless of how many orders are pending.
+			if ( true === $data['auto_generate'] && ( as_next_scheduled_action( 'wt_pklist_schedule_auto_generate_invoice_number', array(), $group ) === false ) ) {
 				as_enqueue_async_action( 'wt_pklist_schedule_auto_generate_invoice_number', array(), $group );
-			} elseif ( true === $data['auto_generate'] && ( 10 >= $data['order_empty_invoice_count'] && 0 < $data['order_empty_invoice_count'] ) ) {
-				do_action( 'wt_pklist_auto_generate_invoice_number_module' );
 			}
 		} elseif ( as_next_scheduled_action( 'wt_pklist_schedule_auto_generate_invoice_number', array(), $group ) === true && false === $data['invoice_enabled'] ) {
 				as_unschedule_all_actions( 'wt_pklist_schedule_auto_generate_invoice_number', array(), $group );
@@ -2577,7 +2588,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 		}
 
 		if ( true === $result['auto_generate'] && true === $result['invoice_enabled'] ) {
-			$result['order_empty_invoice_count'] = (int) get_option( 'invoice_empty_count', true );
+			$result['order_empty_invoice_count'] = (int) get_option( 'invoice_empty_count', 0 );
 		}
 		return $result;
 	}
@@ -2607,10 +2618,6 @@ class Wf_Woocommerce_Packing_List_Admin {
 					array(
 					'key'   => 'wf_invoice_number',
 					'value' => '',
-					),
-					array(
-					'key'   => 'wf_invoice_number',
-					'value' => null,
 					),
 				),
 			);

@@ -1400,7 +1400,7 @@ class Wf_Woocommerce_Packing_List_Invoice
 				'woocommerce_wf_add_invoice_in_mail' => 'No',
 				'woocommerce_wf_packinglist_frontend_info' => 'Yes',
 				'woocommerce_wf_invoice_number_format' => "[number]",
-				'woocommerce_wf_Current_Invoice_number' => 1,
+				'woocommerce_wf_Current_Invoice_number' => 0,
 				'woocommerce_wf_invoice_start_number' => 1,
 				'woocommerce_wf_invoice_number_prefix' => '',
 				'woocommerce_wf_invoice_padding_number' => 0,
