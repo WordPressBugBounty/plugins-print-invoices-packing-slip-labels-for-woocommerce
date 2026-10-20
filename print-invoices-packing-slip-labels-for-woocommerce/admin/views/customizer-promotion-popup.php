@@ -20,8 +20,27 @@ if ( isset( $template_type ) && !empty( $template_type ) ) {
 <?php
 if ( $template_type === 'packinglist' ) {
 ?>
-.wt_pklist_customizer_promotion_content_list_row{width: 65%;}
-.wt_pklist_customizer_promotion_content_list_row p{width: 100%;margin: 0.5em;}
+.wt_pklist_promo_ps { box-sizing: border-box; width: 520px; padding: 0; border: 0; border-radius: 16px; box-shadow: 0 12px 40px rgba(16, 24, 40, 0.18); text-align: left; font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.wt_pklist_promo_ps *, .wt_pklist_promo_ps *::before { box-sizing: border-box; }
+.wt_pklist_promo_ps .wf_pklist_popup_close { position: absolute; top: -12px; right: -12px; display: flex; align-items: center; justify-content: center; float: none; width: 30px; height: 30px; padding: 0; line-height: 1; background: #fff; border: 1px solid #E5E7EB; border-radius: 50%; box-shadow: 0 2px 8px rgba(16, 24, 40, 0.12); z-index: 2; }
+.wt_pklist_promo_ps__main { padding: 22px 24px 20px; }
+.wt_pklist_promo_ps__head { display: flex; align-items: center; gap: 14px; padding: 10px 14px; background: #F7F8FA; border: 1px solid #E5E7EB; border-radius: 12px; }
+.wt_pklist_promo_ps__crown { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: 58px; height: 46px; background: #fff; border-radius: 8px; }
+.wt_pklist_promo_ps__crown img { width: 36px; height: auto; }
+.wt_pklist_promo_ps__title { max-width: 320px; margin: 0; color: #111827; font-size: 17px; font-weight: 600; line-height: 1.4; }
+.wt_pklist_promo_ps__unlock { margin: 18px 0 8px; color: #111827; font-size: 14px; font-weight: 600; }
+.wt_pklist_promo_ps__features { margin: 0; padding: 0; list-style: none; }
+.wt_pklist_promo_ps__features li { display: flex; align-items: center; gap: 12px; margin: 0 0 7px; padding: 8px 14px; border: 1px solid #E5E7EB; border-radius: 12px; color: #374151; font-size: 13px; font-weight: 500; line-height: 1.5; }
+.wt_pklist_promo_ps__features li:last-child { margin-bottom: 0; }
+.wt_pklist_promo_ps__tick { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #EBFAF0; border-radius: 50%; }
+.wt_pklist_promo_ps__cta { padding: 16px 24px; border-top: 1px solid #E5E7EB; }
+.wt_pklist_promo_ps__cta a, .wt_pklist_promo_ps__cta a:visited { display: flex; align-items: center; justify-content: center; height: 44px; background: #3B6CF6; border-radius: 10px; color: #fff; font-size: 15px; font-weight: 600; text-decoration: none; }
+.wt_pklist_promo_ps__cta a:hover, .wt_pklist_promo_ps__cta a:focus { background: #2F58D6; color: #fff; }
+.wt_pklist_promo_ps__deal { display: flex; align-items: center; gap: 14px; padding: 14px 20px 16px; border-top: 1px solid #E5E7EB; }
+.wt_pklist_promo_ps__deal-badge { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 44px; height: 40px; background: #EF5466; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 700; line-height: 1.05; }
+.wt_pklist_promo_ps__deal-badge small { font-size: 10px; font-weight: 600; }
+.wt_pklist_promo_ps__deal p { margin: 0; color: #374151; font-size: 12px; line-height: 1.6; }
+.wt_pklist_promo_ps__deal strong { color: #EF5466; font-weight: 600; }
 <?php
 } else {
 ?>
@@ -30,11 +49,16 @@ if ( $template_type === 'packinglist' ) {
 
 /* ── v2 popup: fixed width, two-column layout ── */
 .wt_pklist_customizer_promo_v2 {
-	width: 620px !important;
+	box-sizing: border-box;
+	width: 540px !important;
 	overflow: hidden;
 	text-align: left;
 	padding: 0 !important;
 	position: fixed;
+	border: 0;
+	border-radius: 20px;
+	box-shadow: 0 12px 40px rgba(16, 24, 40, 0.18);
+	font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 /* suppress the floated header row entirely — we position the X ourselves */
 .wt_pklist_customizer_promo_v2 .wt_pklist_customizer_promotion_header {
@@ -45,8 +69,8 @@ if ( $template_type === 'packinglist' ) {
 }
 .wt_pklist_customizer_promo_v2 .wf_pklist_popup_close {
 	position: absolute !important;
-	top: 14px !important;
-	right: 16px !important;
+	top: 22px !important;
+	right: 24px !important;
 	float: none !important;
 	width: auto !important;
 	height: auto !important;
@@ -57,40 +81,49 @@ if ( $template_type === 'packinglist' ) {
 }
 /* two-column flex wrapper */
 .wt_pklist_promo_v2_inner {
-	display: flex;
-	min-height: 420px;
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: auto 1fr;
+	min-height: 380px;
 	position: relative;
 	overflow: hidden;
 }
+/* the light blue title band runs across both columns, at whatever height the title needs */
+.wt_pklist_promo_v2_inner::before {
+	content: "";
+	grid-column: 2;
+	grid-row: 1;
+	background: #F2F9FF;
+}
 /* LEFT column — 60% */
 .wt_pklist_promo_v2_left {
-	flex: 0 0 60%;
-	max-width: 60%;
-	display: flex;
-	flex-direction: column;
+	display: contents;
 }
 /* top area: light blue, title */
 .wt_pklist_promo_v2_top {
 	background: #F2F9FF;
-	padding: 44px 32px 36px 32px;
-	flex: 0 0 auto;
+	box-sizing: border-box;
+	grid-column: 1;
+	grid-row: 1;
+	min-height: 155px;
+	padding: 30px 20px 24px 32px;
 }
 .wt_pklist_promo_v2_title {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 700;
-	line-height: 1.35;
+	line-height: 1.5;
 	color: #111111;
 	margin: 0;
 	padding: 0;
 	text-align: left;
 }
-.wt_pklist_promo_v2_title span { color: #2270B1; }
+.wt_pklist_promo_v2_title span { color: #3B6CF6; }
 /* bottom area: white, features + button */
 .wt_pklist_promo_v2_bottom {
 	background: #ffffff;
-	padding: 20px 32px 28px 32px;
-	flex: 1;
-	border-top: 1px solid #e4e8f5;
+	grid-column: 1;
+	grid-row: 2;
+	padding: 18px 20px 28px 32px;
 }
 .wt_pklist_promo_v2_features {
 	list-style: none;
@@ -100,9 +133,9 @@ if ( $template_type === 'packinglist' ) {
 .wt_pklist_promo_v2_features li {
 	display: flex;
 	align-items: center;
-	gap: 12px;
-	font-size: 14px;
-	font-weight: 500;
+	gap: 16px;
+	font-size: 15px;
+	font-weight: 400;
 	color: #111111;
 	padding: 9px 0;
 }
@@ -113,29 +146,35 @@ if ( $template_type === 'packinglist' ) {
 	justify-content: center;
 	gap: 8px;
 	box-sizing: border-box;
-	width: 241px;
-	height: 42px;
-	background: #2270B1;
+	width: 252px;
+	height: 44px;
+	background: #3B6CF6;
 	color: #ffffff;
-	font-weight: 700;
-	font-size: 15px;
+	font-weight: 500;
+	font-size: 16px;
 	text-decoration: none;
 	padding: 0 16px;
-	border-radius: 8px;
+	border-radius: 12px;
 }
-.wt_pklist_promo_v2_btn:hover { background: #1a5a92; color: #ffffff; }
+.wt_pklist_promo_v2_btn:hover, .wt_pklist_promo_v2_btn:focus { background: #2F58D6; color: #ffffff; }
 .wt_pklist_promo_v2_btn img { width: 16px; height: 14px; }
 /* RIGHT column — 40%, top matches title bg, bottom matches features bg */
 .wt_pklist_promo_v2_right {
-	flex: 0 0 40%;
-	background: linear-gradient(to bottom, #F2F9FF 175px, #ffffff 175px);
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	z-index: 1;
 	position: relative;
 	overflow: visible;
 }
+.wt_pklist_promo_v2_deal { display: flex; align-items: center; gap: 14px; padding: 16px 14px 18px 20px; background: #F7F8FA; border-top: 1px solid #E5E7EB; }
+.wt_pklist_promo_v2_deal-badge { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 50px; height: 44px; background: #EF5466; border-radius: 8px; color: #fff; font-size: 14px; font-weight: 700; line-height: 1.05; }
+.wt_pklist_promo_v2_deal-badge small { font-size: 10px; font-weight: 600; }
+.wt_pklist_promo_v2_deal p { margin: 0; color: #374151; font-size: 13px; line-height: 1.6; }
+.wt_pklist_promo_v2_deal strong { color: #EF5466; font-weight: 600; }
 .wt_pklist_promo_v2_right img {
 	position: absolute;
-	top: 74px;
-	left: -33px;
+	top: 52px;
+	left: -34px;
 	width: 290px;
 	height: 396px;
 	display: block;
@@ -148,7 +187,8 @@ if ( $template_type === 'packinglist' ) {
 <?php
 	$customizer_promotion_content = array(
 		'invoice' => array(
-			'title' 	=> '<span>' . __( 'Unlock Advanced Customization', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '</span> ' . __( 'with PDF Invoice Pro', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+			/* translators: %s: highlighted phrase */
+			'title' 	=> sprintf( __( 'Unlock %s with PDF Invoice Pro', 'print-invoices-packing-slip-labels-for-woocommerce' ), '<span>' . __( 'Advanced Customization', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '</span>' ),
 			'features' 	=> array(
 				__('Add additional fields to invoices', 'print-invoices-packing-slip-labels-for-woocommerce'),
 				__('Customize using Code Editor','print-invoices-packing-slip-labels-for-woocommerce'),
@@ -211,66 +251,46 @@ if ( $template_type === 'packinglist' ) {
 
 	if ( 'packinglist' === $template_type ) {
 	?>
-	<div class="wt_pklist_customizer_promotion wf_pklist_popup">
-    <div class="wt_pklist_customizer_promotion_bg" style=" position: absolute; top: 0; left: 0;">
-        <svg width="114" height="98" viewBox="0 0 114 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 1.74084V94.1024C8.06275 96.546 16.6093 97.8618 25.4613 97.8618C74.2113 97.8618 113.727 58.0806 113.727 9.00331C113.727 5.67966 113.541 2.40301 113.188 -0.822388H2.54613C1.14152 -0.822388 0 0.326792 0 1.74084Z" fill="#E9F5FF" fill-opacity="0.67"></path>
-        </svg>
-    </div>
-    <div class="wt_pklist_customizer_promotion_bg" style=" position: absolute; right: 0; bottom: 0;">
-        <svg width="98" height="82" viewBox="0 0 98 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M73.1859 0C32.7672 0 0 32.6498 0 72.9237C0 75.9971 0.194744 79.0267 0.565385 82H94.2308C96.3101 82 98 80.3162 98 78.2443V4.30031C90.2542 1.51481 81.8991 0 73.1859 0Z" fill="#E9F5FF" fill-opacity="0.67"></path>
-        </svg>
-    </div>
-		<div class="wt_pklist_customizer_promotion_header">
-			<div class="wf_pklist_popup_close">
-			<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M1 1L10 10" stroke="black"/>
-				<path d="M10 1L1 10" stroke="black"/>
+	<div class="wt_pklist_customizer_promotion wf_pklist_popup wt_pklist_promo_ps">
+		<div class="wf_pklist_popup_close" aria-label="<?php esc_attr_e( 'Close', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?>">
+			<svg width="12" height="12" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1 1L10 10" stroke="#374151" stroke-width="1.4" stroke-linecap="round"/>
+				<path d="M10 1L1 10" stroke="#374151" stroke-width="1.4" stroke-linecap="round"/>
 			</svg>
-			</div>
 		</div>
-		<div class="wt_pklist_customizer_promotion_content">
-			<div class="wt_pklist_customizer_promotion_content_image">
-				<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL.'assets/images/promotion_crown.png' ); ?>" alt="promotion_crown">
+		<div class="wt_pklist_promo_ps__main">
+			<div class="wt_pklist_promo_ps__head">
+				<span class="wt_pklist_promo_ps__crown"><img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL . 'assets/images/promotion_crown.png' ); ?>" alt=""></span>
+				<p class="wt_pklist_promo_ps__title"><?php echo wp_kses_post( $customizer_promotion_content[ $template_type ]['title'] ); ?></p>
 			</div>
-			<div class="wt_pklist_customizer_promotion_content_title">
-				<p>
-					<?php
-						echo wp_kses_post( $customizer_promotion_content[$template_type]['title'] );
-					?>
-				</p>
-			</div>
+			<p class="wt_pklist_promo_ps__unlock"><?php esc_html_e( 'What you’ll unlock', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?></p>
+			<ul class="wt_pklist_promo_ps__features">
+				<?php foreach ( $customizer_promotion_content[ $template_type ]['features'] as $point ) { ?>
+				<li><span class="wt_pklist_promo_ps__tick"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 5L4.5 8L10.5 2" stroke="#22A55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><?php echo esc_html( $point ); ?></li>
+				<?php } ?>
+			</ul>
 		</div>
-		<div class="wt_pklist_customizer_promotion_content_list" style="width: 100%;">
+		<div class="wt_pklist_promo_ps__cta">
+			<a href="<?php echo esc_url( $customizer_promotion_content[ $template_type ]['link'] ); ?>" class="wt_pklist_customizer_promotion_premium_btn" target="_blank"><?php esc_html_e( 'Upgrade to Premium', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?></a>
+		</div>
+		<?php
+		if ( Wt_Pklist_Common::is_bfcm_season() ) {
+			?>
+		<div class="wt_pklist_promo_ps__deal">
+			<span class="wt_pklist_promo_ps__deal-badge"><?php echo esc_html__( '30%', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?><small><?php echo esc_html__( 'OFF', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?></small></span>
+			<p>
 			<?php
-				$feature_list = array_chunk( $customizer_promotion_content[$template_type]['features'], 1 );
-				foreach( $feature_list as $feature_chunk ){
+				printf(
+					// translators: 1: "Black Friday and Cyber Monday" in bold, 2: "30%" in bold.
+					esc_html__( 'Get huge savings this %1$s with WebToffee! Grab any of our premium plugins at an exclusive %2$s discount.', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					'<strong>' . esc_html__( 'Black Friday and Cyber Monday', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '</strong>',
+					'<strong>' . esc_html__( '30%', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '</strong>'
+				);
 			?>
-				<div class="wt_pklist_customizer_promotion_content_list_row">
-					<?php foreach ( $feature_chunk as $point ) { ?>
-						<p><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4L5 7L10 2" stroke="#6ABE45" stroke-width="3"/></svg> <?php echo esc_html($point); ?></p>
-					<?php } ?>
-				</div>
-			<?php } ?>
+			</p>
 		</div>
-		<div class="wt_pklist_customizer_promotion_footer">
-				<a href="<?php echo esc_url($customizer_promotion_content[$template_type]['link']) ?>" class="wt_pklist_customizer_promotion_premium_btn" target="_blank">
-				<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL.'admin/images/other_solutions/promote_crown.png' ); ?>" style="width: 14px;height: 13px;margin-right: 7px;"><?php  echo esc_html__( 'Upgrade To Premium', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?>
-			</a>
-		</div>
-		<?php
-		/**
-		 * @since 4.7.0 - Add offer for Black Friday Cyber Monday 2024
-		 */
-		if( Wt_Pklist_Common::is_bfcm_season() ) {
-			?>
-		<div class="wt_pklist_customizer_promotion_footer_bfcm_banner" style="position:relative;">
-				<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL.'admin/modules/banner/assets/images/bfcm-packingslip-customizer.svg' ); ?>" style="vertical-align:bottom;">
-			</a>
-		</div>
-		<?php
-			}
+			<?php
+		}
 		?>
 	</div>
 	<?php
@@ -318,6 +338,25 @@ if ( $template_type === 'packinglist' ) {
 				<img src="<?php echo esc_url( WF_PKLIST_PLUGIN_URL . 'admin/images/customizer-preview.svg' ); ?>" alt=""<?php echo ( 'invoice' === $template_type ) ? ' style="height:360px;"' : ''; ?>>
 			</div>
 		</div>
+		<?php
+		if ( Wt_Pklist_Common::is_bfcm_season() ) {
+			?>
+		<div class="wt_pklist_promo_v2_deal">
+			<span class="wt_pklist_promo_v2_deal-badge"><?php echo esc_html__( '30%', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?><small><?php echo esc_html__( 'OFF', 'print-invoices-packing-slip-labels-for-woocommerce' ); ?></small></span>
+			<p>
+			<?php
+				printf(
+					// translators: 1: "Black Friday and Cyber Monday" in bold, 2: "30%" in bold.
+					esc_html__( 'Get huge savings this %1$s with WebToffee! Grab any of our premium plugins at an exclusive %2$s discount.', 'print-invoices-packing-slip-labels-for-woocommerce' ),
+					'<strong>' . esc_html__( 'Black Friday and Cyber Monday', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '</strong>',
+					'<strong>' . esc_html__( '30%', 'print-invoices-packing-slip-labels-for-woocommerce' ) . '</strong>'
+				);
+			?>
+			</p>
+		</div>
+			<?php
+		}
+		?>
 	</div>
 	<?php
 	} // end else (v2 design)

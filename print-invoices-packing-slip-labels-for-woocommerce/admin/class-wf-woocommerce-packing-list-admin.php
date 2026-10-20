@@ -1902,7 +1902,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 		$wc_currency_symbol = apply_filters( 'woocommerce_currency_symbol', $wc_currency_symbol, $user_currency );
 		$decimal            = get_option( 'woocommerce_price_num_decimals' ) ? wc_get_price_decimals() : 0;
 		$decimal_sep        = get_option( 'woocommerce_price_decimal_sep' ) ? wc_get_price_decimal_separator() : '.';
-		$thousand_sep       = get_option( 'woocommerce_price_thousand_sep' ) ? wc_get_price_thousand_separator() : ',';
+		$thousand_sep       = wc_get_price_thousand_separator();
 
 		if ( is_plugin_active( 'woocommerce-currency-switcher/index.php' ) && class_exists( 'WOOCS' ) ) {
 			global $WOOCS;
@@ -1946,9 +1946,8 @@ class Wf_Woocommerce_Packing_List_Admin {
 			}
 		}
 
-		$decimal      = ( '' === trim( $decimal ) ) ? 0 : $decimal;
-		$decimal_sep  = ( '' === trim( $decimal_sep ) ) ? '.' : $decimal_sep;
-		$thousand_sep = ( '' === trim( $thousand_sep ) ) ? ',' : $thousand_sep;
+		$decimal     = ( '' === trim( $decimal ) ) ? 0 : $decimal;
+		$decimal_sep = ( '' === trim( $decimal_sep ) ) ? '.' : $decimal_sep;
 
 		$wc_currency_symbol = apply_filters( 'wt_pklist_alter_currency_symbol', $wc_currency_symbol, $symbols, $user_currency, $order, $price );
 
@@ -1991,11 +1990,7 @@ class Wf_Woocommerce_Packing_List_Admin {
 
 	public static function wf_get_decimal_price( $user_currency, $order ) {
 		$order_id = $order->get_id();
-		if ( true === get_option( 'woocommerce_price_num_decimals' ) ) {
-			$decimal = wc_get_price_decimals();
-		} else {
-			$decimal = 0;
-		}
+		$decimal  = get_option( 'woocommerce_price_num_decimals' ) ? wc_get_price_decimals() : 0;
 
 		if ( is_plugin_active( 'woocommerce-currency-switcher/index.php' ) ) {
 			if ( class_exists( 'WOOCS' ) ) {

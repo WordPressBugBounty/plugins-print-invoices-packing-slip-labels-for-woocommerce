@@ -71,50 +71,14 @@ $pro_installed = false;
             );
         ?>
         <div style="position:relative;width:30%;float:left;">
-            <div class="wt_pro_addon_tile_doc" style="<?php echo is_rtl() ? 'left:0;' : 'right:0;'; ?>">
-                <div class="wt_pro_addon_widget_doc">
-                    <?php
-                        /**
-                         * @since 4.7.0 - Add offer for Black Friday Cyber Monday 2024
-                         */
-                        if( Wt_Pklist_Common::is_bfcm_season() ) {
-                        ?>
-                    <div class="bfcm_doc_settings">
-                        <img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'admin/modules/banner/assets/images/bfcm-doc-settings-coupon.svg'); ?>">
-                    </div>
-                        <?php
-                        }
-                    ?>
-                    <div class="wt_pro_addon_widget_wrapper_doc">
-                        <p><?php esc_html_e('Get advanced features for your','print-invoices-packing-slip-labels-for-woocommerce'); ?></p>
-                        <div class="wt_pro_addon_widget_wrapper_doc_logo_title">
-                            <div class="wt_pro_addon_widget_wrapper_doc_logo_title_col_1">
-                                <img src="<?php echo esc_url(WF_PKLIST_PLUGIN_URL . 'admin/images/wt_sdd_logo.png'); ?>">
-                            </div>
-                            <div class="wt_pro_addon_widget_wrapper_doc_logo_title_col_2">
-                                <h4><?php echo esc_html__("Shipping labels, Dispatch labels and Delivery notes","print-invoices-packing-slip-labels-for-woocommerce"); ?></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wt_pro_addon_features_list_doc">
-                        <ul>
-                            <?php
-                                foreach($sl_pro_features_list as $p_feature){
-                                    ?>
-                                    <li><?php echo esc_html($p_feature); ?></li>
-                                    <?php
-                                }
-                            ?>
-                        </ul>
-                    </div>
-                    <div class="wt_pro_show_more_less_doc">
-                        <a class="wt_pro_addon_show_more_doc"><p><?php echo esc_html__("Show More","print-invoices-packing-slip-labels-for-woocommerce"); ?></p></a>
-                        <a class="wt_pro_addon_show_less_doc"><p><?php echo esc_html__("Show Less","print-invoices-packing-slip-labels-for-woocommerce"); ?></p></a>
-                    </div>
-                    <a class="wt_pro_addon_premium_link_div_doc" href="<?php echo esc_url($sidebar_pro_link); ?>" target="_blank">
-                        <?php esc_html_e("View add-on","print-invoices-packing-slip-labels-for-woocommerce"); ?> <span class="dashicons dashicons-arrow-right-alt"></span>
-                    </a>
-                </div>
+            <div class="wt_pro_addon_tile_doc wt-pklist-cta-tile" style="<?php echo is_rtl() ? 'left:0;' : 'right:0;'; ?>">
+                <?php
+                $cta_card_title    = __( 'Shipping labels, Dispatch labels and Delivery notes', 'print-invoices-packing-slip-labels-for-woocommerce' );
+                $cta_card_logo     = WF_PKLIST_PLUGIN_URL . 'admin/images/wt_sdd_logo.png';
+                $cta_card_features = $sl_pro_features_list;
+                $cta_card_link     = $sidebar_pro_link;
+                include WF_PKLIST_PLUGIN_PATH . 'admin/views/pro-cta-card.php';
+                ?>
             </div>
         </div>
         <?php

@@ -125,3 +125,10 @@
         max-height: 48px;
     }
 }
+/* Line up with the settings box (.wt_wrap) on the plugin settings pages. */
+body.toplevel_page_wf_woocommerce_packing_list .wt-gdpr-promotion-banner-cta.notice,
+body[class*="_page_wf_woocommerce_packing_list_"]:not([class*="premium_extension"]) .wt-gdpr-promotion-banner-cta.notice {
+    box-sizing: border-box;
+    width: 98%;
+    margin: 20px 20px 16px 2px;
+}

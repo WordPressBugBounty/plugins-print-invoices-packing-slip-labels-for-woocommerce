@@ -904,7 +904,6 @@ class Wf_Woocommerce_Packing_List_Invoice
 		$user_currency = Wt_Pklist_Common::get_order_meta($order_id, 'currency', true);
 		$new_total = 0;
 		$new_tax = 0;
-		$decimal = Wf_Woocommerce_Packing_List_Admin::wf_get_decimal_price($user_currency, $order);
 
 		$incl_tax_text = '';
 		if (true === $incl_tax) {

@@ -728,17 +728,17 @@ if ( ! class_exists( 'Wt_Pklist_Common' ) ) {
 
 
 		/**
-		 * To Check if the current date is on or between the start and end date of black friday and cyber monday banner for 2024.
+		 * To Check if the current date is on or between the start and end date of black friday and cyber monday banner for 2026.
 		 *
 		 * @since 4.7.0
 		 */
 		public static function is_bfcm_season() {
-			$start_date   = new DateTime( '25-NOV-2024, 12:00 AM', new DateTimeZone( 'Asia/Kolkata' ) ); // Start date.
+			$start_date   = new DateTime( '11-NOV-2026, 12:00 AM', new DateTimeZone( 'Asia/Kolkata' ) ); // Start date.
 			$current_date = new DateTime( 'now', new DateTimeZone( 'Asia/Kolkata' ) ); // Current date.
-			$end_date     = new DateTime( '02-DEC-2024, 11:59 PM', new DateTimeZone( 'Asia/Kolkata' ) ); // End date.
+			$end_date     = new DateTime( '04-DEC-2026, 11:59 PM', new DateTimeZone( 'Asia/Kolkata' ) ); // End date.
 
 			/**
-			 * check if the date is on or between the start and end date of black friday and cyber monday banner for 2024.
+			 * check if the date is on or between the start and end date of black friday and cyber monday banner for 2026.
 			 */
 			if ( $current_date < $start_date || $current_date >= $end_date ) {
 				return false;

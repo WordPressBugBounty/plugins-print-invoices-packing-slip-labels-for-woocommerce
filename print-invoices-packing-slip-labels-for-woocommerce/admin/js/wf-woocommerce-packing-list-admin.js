@@ -1528,6 +1528,11 @@ var wt_pklist_pro_addon_show_more_less = {
 			jQuery(this).parent().parent().children('.wt_pro_addon_widget_doc .wt_pro_addon_features_list_doc').find('ul li').slice(3).hide('slide');
 		});
 
+		jQuery(".wt-pklist-cta-card__toggle").on('click', function () {
+			const expanded = jQuery(this).closest('.wt-pklist-cta-card').toggleClass('is-expanded').hasClass('is-expanded');
+			jQuery(this).attr('aria-expanded', expanded).text(jQuery(this).data(expanded ? 'less' : 'more'));
+		});
+
 		jQuery(".wt_pro_addon_show_more_pro_ad").on('click', function () {
 			jQuery(this).hide();
 			jQuery(this).next('.wt_pro_addon_show_less_pro_ad').show();

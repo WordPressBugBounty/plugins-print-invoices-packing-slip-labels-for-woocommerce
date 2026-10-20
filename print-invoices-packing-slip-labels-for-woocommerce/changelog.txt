@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 5.0.4 2026-10-20 =
+* [Fix] - Fixed prices showing a comma as the thousand separator when the WooCommerce thousand separator was set to blank or a space.
+* [Compatibility] - WooCommerce 11.2.1
+
 = 5.0.3 2026-09-29 =
 * [Fix] - Vulnerability fix for Insecure Direct Object Reference reported by Wordfence.
 * [Fix] - Fixed slow loading of the WooCommerce Orders page caused by the automatic invoice number generation.
